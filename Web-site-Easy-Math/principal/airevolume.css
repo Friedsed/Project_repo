@@ -1,0 +1,56 @@
+
+main {
+   
+    background-color:  #333;
+
+} 
+
+header{
+    border-top: dashed 10px;
+    border-bottom: dashed 10px;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    padding: 10px;
+    
+    /* margin: 50px; */
+    /* background: linear-gradient(45deg, red, yellow, green, blue); */
+    border-radius: 50%;
+
+}
+header h1{
+    text-align: center;
+    
+
+}
+
+section{
+    border-top: dashed;
+    border-left: solid 0px;
+    border-right: solid 0px;
+    border-color: #333;
+    padding: 50px;
+    margin: 50px;
+    margin-top: 10px ;
+    /* background-color: cadetblue; */
+    border-radius: 10%;
+
+    
+}
+
+
+main section{
+    border-top: dashed 10px;
+    border-left: solid 0px;
+    border-right: solid 0px;
+
+    padding: 50px;
+    margin: 50px;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    border-radius: 10%;
+
+    
+}
+
+main section h2{
+    text-align: center;
+    /* color: aqua; */
+}

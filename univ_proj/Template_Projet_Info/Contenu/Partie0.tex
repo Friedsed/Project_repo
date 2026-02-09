@@ -1,0 +1,317 @@
+\clearpage
+\section{Présentation du template}
+
+Cette première partie (ou section) vous permettra de prendre en main ce \textit{template} lors de la rédaction de votre compte-rendu.
+
+
+
+\subsection{Quelques notions \LaTeX{} de base}
+
+\subsubsection{Instructions}
+
+Le fichier source \LaTeX{} comporte du \textit{texte}, simplement tapé, et des \textit{instructions} (ou \textit{commandes}). Ces instructions commencent par une barre de fraction inversée \mintinline{latex}|\| (anti-slash ou backslash). Lorsqu'elles nécessitent des paramètres, ceux-ci figurent entre crochets \mintinline{latex}|[ ]| ou accolades \mintinline{latex}|{ }|. La zone sur laquelle s'exercent ces commandes est encadrée par des accolades \mintinline{latex}|{| et \mintinline{latex}|}|.
+
+\begin{itemize}
+    \item[$\hookrightarrow$] Certaines instructions \textbf{influencent tout le texte qui suit}, elles doivent donc être\linebreak \textit{incluses} dans des accolades (dans un \textit{bloc}) avec le texte qu'elles modifient, pour\linebreak \textbf{limiter} l'étendue de leur action (par exemple, la commande \mintinline{latex}|\huge| dans l'expression\linebreak \mintinline{latex}|{\huge texte \'enorme}|).
+    \item[$\hookrightarrow$] D'autres n'agissent que sur \textbf{le texte qui est entre accolades, placé après la fonction} (par exemple la commande \mintinline{latex}|\textbf{ }| dans l'expression \mintinline{latex}|\textbf{texte en gras}|).
+\end{itemize}
+\medbreak
+
+Pour ce qui est du retour à la ligne, sachez que \LaTeX{} ne \textit{compte} pas les sauts de lignes de votre code. Ainsi, un retour à la ligne de votre code ne se traduira pas directement dans le texte compilé. Il est nécessaire de \textbf{laisser une ligne vide} au niveau de votre code (ou plus, peut importe), ou de terminer votre ligne par \mintinline{latex}|\\| ou \mintinline{latex}|\newline|.
+
+Si vous souhaitez ajouter un saut de ligne entre vos paragraphes, des commandes telles que \mintinline{latex}|\smallbreak|, \mintinline{latex}|\medbreak|, \mintinline{latex}|\bigbreak| vous permettront de laisser plus ou moins d'espace. Elles sont à placer à la fin du paragraphe.
+\medbreak
+
+Enfin, vous pourrez constatez sur le code de cette section que certaines parties sont\linebreak \textbf{indentées}. Contrairement à Python, l'indentation dans \LaTeX{} est surtout esthétique, et un espace oublié ou ajouté, engendrera rarement une erreur.
+
+
+
+
+\subsubsection{Mise en forme du texte}
+
+En terme de mise en forme, plusieurs commandes vous permettent d'agir sur la taille des caractère, leur \textit{graisse}, etc. La taille peut ainsi se définir via les commandes suivantes :
+\begin{itemize}
+    \item \mintinline{latex}|\tiny| : {\tiny 6pt}
+    \item \mintinline{latex}|\scriptsize| : {\scriptsize 8pt}
+    \item \mintinline{latex}|\footnotesize| : {\footnotesize 9pt}
+    \item \mintinline{latex}|\small| : {\small 10pt}
+    \item \mintinline{latex}|\normalsize| : {\normalsize 11pt}
+    \item \mintinline{latex}|\large| : {\large 12pt}
+    \item \mintinline{latex}|\Large| : {\Large 14.5pt}
+    \item \mintinline{latex}|\LARGE| : {\LARGE 17pt}
+    \item \mintinline{latex}|\huge| : {\huge 21pt}
+    \item \mintinline{latex}|\Huge| : {\Huge 25pt}
+\end{itemize}
+\medbreak
+
+Ensuite, il vous est possible d'écrire \textbf{en gras}  via la commande \mintinline{latex}|\textbf{votre mot}|, \textit{en}\linebreak \textit{italique} (\mintinline{latex}|\textit{votre mot}|), ou encore \uline{de manière soulignée} (\mintinline{latex}|\uline{votre mot}|). D'autre type de mises en formes sont possibles, n'hésitez pas à cherchez sur internet !
+\medbreak
+
+Enfin, pour ce qui est de la mise en couleur de votre texte, cela passe par des commandes telles que \mintinline{latex}|{\color{couleur}votre texte}| ou \mintinline{latex}|\textcolor{couleur}{votre texte}| :
+\begin{itemize}
+    \item \mintinline{latex}|\textcolor{Orange-UPS}{votre texte}| produira du \textcolor{Orange-UPS}{\textbf{texte en orange}}
+    \item \mintinline{latex}|{\color{Jaune-UPS}votre texte}| produira du {\color{Jaune-UPS}texte en jaune}
+    \item \mintinline{latex}|\textcolor{Gris-UPS}{votre texte}| produira du \textcolor{Gris-UPS}{\textbf{texte en gris}}
+\end{itemize}
+
+Des couleurs plus basiques sont disponibles via les options {\color{red}[red]},{\color{blue}[blue]},{\color{green}[green]}, etc. Il est également possible de créer ses propres couleurs à partir de codes RGB ou HTML.
+
+
+
+
+\subsubsection{Sections d'un document}
+
+Dans \LaTeX{}, et vous pourrez le voir dans ce \textit{template}, les parties d'un document sont hiérarchisées de la manière suivante :
+\begin{enumerate}
+    \item[$\rightarrow$ 1.] \mintinline{latex}|\section{Nom de la section}|
+    \begin{enumerate}
+        \item[$\hookrightarrow$ 1.1] \mintinline{latex}|\subsection{Nom de la sous-section}| 
+        \begin{enumerate}
+            \item[$\hookrightarrow$ 1.1.1] \mintinline{latex}|\subsubsection{Nom de la sous-sous-section}| 
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+
+Pour écrire votre compte rendu, il suffira donc de \textbf{placer correctement ces balises}. Il est possible de \textbf{retirer la numérotation d'une section} (par exemple pour une introduction ou une conclusion. Dans ce cas, il suffit d'ajouter un astérisque {*} à la commande, de la manière suivante : \mintinline{latex}|\section*{Section non numérotée}|.
+\uline{N'hésitez pas à parcourir le code correspondant à cette section} (dans le fichier \texttt{Contenu/Partie0.tex}) pour en apprendre plus.
+
+
+
+
+\subsubsection{Travailler sur Overleaf}
+
+\textit{Overleaf} est une plateforme en ligne gratuite permettant d'éditer du texte en \LaTeX{} sans aucun téléchargement d'application. Elle offre également la possibilité de rédiger des documents de manière \textit{collaborative}, de proposer ses documents directement à différents éditeurs (IEEE Journal, Springer, etc.) ou plateformes d'archives ouvertes (arXiv, engrxiv, etc.) pour une éventuelle publication.
+\medbreak
+
+Si vous utilisez \LaTeX{} de manière occasionnelle, le travail sur \href{https://fr.overleaf.com/}{https://fr.overleaf.com/} offre de \textbf{nombreux avantages} :
+
+\begin{itemize}[label=$\hookrightarrow$]
+    \item Cela vous épargnera d'abord l'installation de \LaTeX{} sur votre PC, et vous permettra de travailler plus efficacement en collaboration avec votre binôme (outils de partage par liens comme sur \textit{Google Drive}).
+    \item Le site contient plusieurs options dont un \textbf{affichage enrichi}, permettant de se familiariser avec \LaTeX{}.
+\end{itemize}
+
+Dans \textit{Overleaf}, la création et la gestion des fichiers s'effectuent dans différents dossiers appelés \textbf{Projects}. Ainsi, un document à rédiger avec des photos, ou images, fera l'objet d'un même dossier contenant plusieurs fichiers nécessitant d'être importés.
+\medbreak
+
+$\Rightarrow$ Le site contient une \href{https://fr.overleaf.com/learn}{aide très fournie} (en anglais). De plus, il répertorie de nombreux \textit{templates} (C.V., présentations, documents, etc.) qui pourraient vous être utile.
+
+$\hookrightarrow$ \uline{N'hésitez pas à vous rapprochez de vos enseignants si besoin.}
+
+
+
+
+\subsection{Les flottants : Tableaux et figures}
+
+Les éléments flottants se rapportent à tout ce qui ne peut pas être \textit{inséré} dans une page. Ils se ramènent fondamentalement à tout ce qui se rapport aux figures, tableaux, \ldots Le \textit{problème} le plus courant est la manifestation d'un manque de place sur le reste d'une page donnée, pour placer une figure particulière. Pour surmonter cela, \LaTeX{} fera \textit{flotter} celle-ci jusqu'à la page suivante, tout en remplissant la page courante avec le corps du texte.
+\medbreak
+
+De manière concrète, un flottant est défini dans un \textit{environnement} qui lui est propre et qui se présente de la manière suivante (figure~\ref{fig:Flottant}) :
+\medbreak
+
+\begin{figure}[ht!]
+    \centering
+    \begin{minted}{latex}
+    \begin{type de flottant}[options de disposition]
+        Commandes propres au tableau, figure, extrait de code, etc.
+        \caption{Contenu de la légende de votre flottant}
+        \label{étiquette de votre figure}
+    \end{type de flottant}
+    \end{minted}
+    \caption{Exemple de commande propre à un flottant}
+    \label{fig:Flottant}
+\end{figure}
+
+$\rightarrow$ Comme pour de nombreuses commandes,  l'\textit{environnement de commandes} débute par \mintinline{latex}|\begin{ }| et se termine par \mintinline{latex}|\end{ }|. Les \textbf{[options de disposition]}, permettent de laisser à \LaTeX{} plus ou moins de liberté pour le placement du flottant. Les options les plus courantes sont :
+
+\begin{itemize}
+    \item \mintinline{latex}|[h]|, pour \textit{here}.\\
+    {\color{darkgray}Le flottant est placé à \textit{proximité} de l'endroit où il est décrit.}
+    \item \mintinline{latex}|[t]|, pour \textit{top}.\\
+    {\color{darkgray}Le flottant est placé en haut de la page.}
+    \item \mintinline{latex}|[b]|, pour \textit{bottom}.\\
+    {\color{darkgray}Le flottant est placé en bas de page.}
+    \item \mintinline{latex}|[!]|\\
+    {\color{darkgray}Pour \textit{forcer} \LaTeX à disposer le flottant à l'endroit indiqué.}
+\end{itemize}
+
+$\hookrightarrow$ Pour un document tel qu'un rapport de TP, vous utiliserez l'option \mintinline{latex}|[ht!]| la plupart du temps, de manière à placer le flottant à l'endroit où il est déclaré, ou en haut de la page suivante.
+\medbreak
+
+$\Rightarrow$ Deux autres commandes de cet \textit{environnement} sont \textbf{importantes}. La première, \mintinline{latex}|\caption|, permet d'inscrire le nom de la \textbf{légende de la figure} (pour la figure~\ref{fig:Flottant}, cela correspond au texte \textit{environnement d'un flottant}). La seconde commande est \mintinline{latex}|\label| qui permet de \textbf{référencer la figure}, via une \textit{étiquette} pour y faire appel dans le texte, via un \textit{renvoi}. L'exemple de la figure~\ref{fig:Flottant} comportant \mintinline{latex}|\label{étiquette de votre figure}|, le fait d'utiliser la commande \mintinline{latex}|\ref{étiquette de votre figure}| vous permettra d'\textbf{insérer le numéro de cette figure} dans le texte. Cela vous permet donc de déplacer vos figures sans avoir à vous soucier de leur numéro, \LaTeX{} se chargeant de les numéroter et d'en faire les renvois.
+ 
+
+
+
+
+\subsubsection{Figures}
+
+La figure~\ref{fig:Figure} vous donne un exemple d'environnement de commandes permettant d'insérer une figure au sein de votre document.
+\medbreak
+
+\begin{figure}[ht!]
+    \centering
+    \begin{minted}{latex}
+    \begin{figure}[ht!] % Début de l'environnement figure
+        \centering % Permet de centrer la figure
+        \includegraphics[width=0.5\linewidth]{figure.jpg} % Chemin vers votre fichier
+        \caption{Légende de la figure} % Contenu de votre légende
+        \label{fig:Étiquette} % Étiquette de votre figure
+    \end{figure} % Fin de l'environnement figure
+    \end{minted}
+    \caption{Exemple type d'insertion d'une figure}
+    \label{fig:Figure}
+\end{figure}
+
+$\hookrightarrow$ Comme vous pouvez le constater sur cette figure~\ref{fig:Figure}, l'\textit{environnement figure} fait appel à une \textbf{commande spécifique} : \mintinline{latex}|\includegraphics[2]{1}|. Cette commande vous permet de spécifier dans \mintinline{latex}|{1}| le chemin et nom de votre fichier image (de type \mintinline{latex}|{NomDuDossier/NomDuFichier.jpg}|.\medbreak
+
+L'option \mintinline{latex}|[2]| vous permet ensuite de spécifier la hauteur (height) ou la largeur (width) de l'image. Dans l'exemple, la commande est \mintinline{latex}|[width=0.5\linewidth]|, permettant d'obtenir une image faisant 50\% de la largeur d'une ligne de texte.
+
+
+
+
+\subsubsection{Extraits de codes}
+
+Insérer un extrait de code dans votre document se fait via l'environnement \texttt{listing} comme présenté dans la figure~\ref{fig:ExtraitCode}. Cet environnement permet de spécifier à \LaTeX{} que ce flottant est un extrait de code. Un second environnement, \texttt{pythoncode}, permet de spécifier le langage de votre code (ici python) et de le \textit{coloriser} de manière adéquate.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{minted}{latex}
+    \begin{listing}[ht!] % Début de l'environnement listing
+        \begin{pythoncode} % Début du sous-environnement pythoncode
+            Tapez votre code python ici
+        \end{pythoncode} % Fin du sous-environnement pythoncode
+    \caption{Légende de l'extrait de code} % Contenu de votre légende
+    \label{code:Étiquette} % Étiquette de votre extrait de code
+    \end{listing} % Fin de l'environnement listing
+    \end{minted}
+    \caption{Exemple type d'insertion d'un extrait de code}
+    \label{fig:ExtraitCode}
+\end{figure}
+
+$\hookrightarrow$ Ce type de code vous permettra de réaliser des figures similaires à la figure~\ref{code:Exemple} ci-dessous.
+
+\begin{listing}[ht!]
+    \begin{minted}{python}
+x = 1
+while x < 10: # Commentaire
+    print("x a pour valeur", x)
+    x = x * 2
+print("Fin")
+    \end{minted}
+    \caption{Exemple de code python inseré tel que décrit dans la figure~\ref{fig:ExtraitCode}}
+    \label{code:Exemple}
+\end{listing}
+
+
+
+
+\subsubsection{Tableaux}
+
+L'insertion de tableaux dans \LaTeX{} peut se faire de multiples manières. Pour un compte rendu de TP tel que celui-ci, le plus simple est d'utiliser l'environnement \texttt{table} comme montré dans la figure~\ref{fig:Tableau} :\medbreak
+
+\begin{figure}[ht!]
+    \centering
+    \begin{minted}{latex}
+    \begin{table}[ht!] % Début de l'environnement table
+        \centering % Commande pour centrer votre tableau
+        \begin{tabular}{lcc} % Début du sous-environnement tabular + options
+            \toprule % Ligne supérieure du tableau
+            \textbf{Noms} & \textbf{Valeur 1} & \textbf{Valeur 2}  \\ % Ligne 1
+            \midrule % Ligne intermédiaire du tableau
+            \textit{Sample1} & 0 & 23 \\ % Ligne 2
+            \textit{Sample2} & 9 & 9 \\ % Ligne 3
+            \textit{Sample3} & 4 & 132 \\ % Ligne 4
+            \textit{Sample4} & 8 & 77 \\ % Ligne 5
+            \bottomrule % Ligne inférieure du tableau
+        \end{tabular} % Fin du sous-environnement tabular
+        \caption{Légende} % Contenu de votre légende
+        \label{tab:Étiquette} % Étiquette de votre tableau
+    \end{table} % Fin de l'environnement table
+    \end{minted}
+    \caption{Caption}
+    \label{fig:Tableau}
+\end{figure}
+
+L'exemple décrit sur la figure~\ref{fig:Tableau} permet d'obtenir le tableau~\ref{tab:Exemple} ci-dessous. Les paramètres importants sont ceux du sous-environnement \texttt{tabular} (lcc dans la figure~\ref{fig:Tableau}). Ces options vous permettront d'indiquer à \LaTeX{} le \textbf{nombre de colonnes} de votre tableau, ainsi que la disposition de leur contenu :
+\begin{itemize}
+    \item \texttt{l} pour \textit{left} : Alignement à gauche
+    \item \texttt{r} pour \textit{right} : Alignement à droite
+    \item \texttt{c} pour \textit{center} : Texte centré
+\end{itemize}
+$\hookrightarrow$ Le \textbf{nombre de caractère} (ici 3) indiquent que le tableau aura trois colonnes.
+\medbreak
+
+Le remplissage de vos données se fait ensuite tel que décrit pour les lignes 1-5 dans la figure~\ref{fig:Tableau} (par exemple \mintinline{latex}|\textit{Sample2} & 9 & 9 \\ % Ligne 3|).
+Ainsi, pour la ligne décrite, le \textbf{contenu de chaque case est séparé} de celui des autres par un symbole \&, et \textbf{chaque ligne doit se terminer par} \mintinline{latex}|\\|.
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{lcc}
+    \toprule
+        \textbf{Noms} & \textbf{Valeur 1} & \textbf{Valeur 2}  \\
+    \midrule
+        \textit{Sample1} & 0 & 23 \\
+        \textit{Sample2} & 9 & 9 \\
+        \textit{Sample3} & 4 & 132 \\
+        \textit{Sample4} & 8 & 77 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Tableau interprêté à partir du code de la figure~\ref{fig:Tableau}}
+    \label{tab:Exemple}
+\end{table}
+
+
+
+\subsubsection{Listes de flottants}
+
+Bien que cela ne soit pas obligatoire dans ce type de rapport, il vous est ensuite possible d'insérer des listes de flottants (figures, extraits de codes, tableaux) en début de document (juste après la table des matières).\medbreak
+
+Dans votre cas, l'insertion de ce type de liste se fera en retirant le symbole commentaire (\%) des lignes 30 à 33 du fichier \texttt{main.tex} :
+\begin{itemize}
+    \item \mintinline{latex}|\listoffigures| : Insertion d'une liste des figures
+    \item \mintinline{latex}|\listoftables| : Insertion d'une liste des tableaux
+    \item \mintinline{latex}|\listoflistings| : Insertion d'une liste des extraits de code
+\end{itemize}
+
+
+
+
+\subsection{Renvois en bas de page}
+
+Au cas où vous auriez besoin d'insérer un élément de bibliographie ou une définition au corps de votre texte, la commande \mintinline{latex}|\footnote{contenu de votre note en bas de page}| vous le permettra. Ainsi utilisé, la note en bas de page se verra attribué une numérotation en fonction de l'ordre d'apparition dans le document\footnote{ceci est une note de bas de page}.
+
+\subsection{Utilisation concrète du \textit{template}}
+
+Lorsque vous aurez \textbf{téléchargé} puis \uline{\textbf{décompressé}}\footnote{Sous windows, clic droit sur le fichier $\rightarrow$ 7-zip $\rightarrow$ extraire vers "nomdufichier"} le fichier \texttt{.zip} du template, vous pourrez directement procéder à sa compilation (si vous avez installé \LaTeX{}) ou alors vous devrez les \textit{uploader} dans un nouveau projet vide sur Overleaf.\medbreak
+
+Une fois ces premières étapes franchies, vous pourrez constater que le \textit{template} se divise en plusieurs fichiers qui sont répartis selon l'arborescence suivante :
+\begin{itemize}[label=$\rightarrow$]
+    \item \faFolderOpenO~Contenu
+    \begin{itemize}[label=$\hookrightarrow$]
+        \item \faFileTextO~Partie0.tex
+        \item \faFileTextO~Partie1.tex
+        \item \faFileTextO~Partie2.tex
+        \item \faFileTextO~Partie3.tex
+    \end{itemize}
+    \item \faFolderOpenO~Template
+    \begin{itemize}[label=$\hookrightarrow$]
+        \item \faFileImageO~UT3\_B.png
+        \item \faFileImageO~UT3\_BJ\_petit.png
+        \item \faFileImageO~UT3\_N.png
+        \item \faFileImageO~UT3\_PRES.png
+    \end{itemize}
+    \item \faFileImageO~basic\_image.jpg
+    \item \faFileTextO~CRinfo.sty
+    \item \faFileTextO~main.tex
+\end{itemize}
+\medbreak
+
+Le fichier \texttt{main.tex} est \textbf{le fichier central du template}. Il centralise l'ensemble des informations et c'est celui qui sera compilé par \LaTeX{}. Dans ce fichier, vous devrez notamment \textbf{renseigner vos noms/prénoms} (ligne 10) \textbf{et noms seuls} (ligne 11), ainsi que le \textbf{titre de votre document} (lignes 8 et 9).\medbreak
+
+Par ailleurs, \textbf{l'image de la page de garde peut être modifiée}, en éditant la ligne 14, qui contient la commande \mintinline{latex}|\pgimage{basic_image.jpg}|. Vous pouvez ainsi importer une autre image et renseigner le champ de cette commande.\medbreak
+
+Les \textbf{lignes 35 à 38} permettent d'\textbf{importer les fichiers} \texttt{Partie0.tex} (le présent tutoriel), et \texttt{Partie1.tex} à \texttt{Partie3.tex}. \uline{\textbf{Attention :}} \textbf{Avant de compiler votre rapport final}, il faudra veiller à mettre la ligne 35 \mintinline{latex}|\input{Contenu/Partie0}| en commentaire afin de retirer cette partie \textit{Présentation du template} de votre rapport.
+
+Ensuite, \textbf{vous veillerez à ne faire figurer} les \mintinline{latex}|\input{Contenu/Partie}| (lignes 36-38) \textbf{que des parties que vous aurez réellement utilisé} pour votre rapport. \textbf{Si vous avez besoin de faire plus de 3 parties}, il suffit de créer un fichier \texttt{Partie4.tex} et d'ajouter la commande\linebreak \mintinline{latex}|\input{Contenu/Partie4}| sous les autres.\medbreak
+
+Le texte de votre première partie sera devra ensuite être tapé dans le fichier \texttt{Partie1.tex}, et ainsi de suite. Bonne rédaction !

@@ -1,0 +1,1326 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L17">17. Analyse de programmes concrets</a><ul class="nav-sommaire-ul Indentation17">
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L17-A">17-A. Jeu des bombardes</a><ul class="nav-sommaire-ul Indentation17-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L17-A-1">17-A-1. Prototypage d'une classe Canon</a><ul class="nav-sommaire-ul Indentation17-A-1">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L17-A-1-A">17-A-1-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L17-A-2">17-A-2. Ajout de méthodes au prototype</a><ul class="nav-sommaire-ul Indentation17-A-2">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L17-A-2-A">17-A-2-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L17-A-3">17-A-3. Développement de l'application</a><ul class="nav-sommaire-ul Indentation17-A-3">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L17-A-3-A">17-A-3-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L17-A-4">17-A-4. Développements complémentaires</a><ul class="nav-sommaire-ul Indentation17-A-4">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L17-A-4-A">17-A-4-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L17-B">17-B. Jeu de Ping</a><ul class="nav-sommaire-ul Indentation17-B">
+        
+        
+        <li><a class="summaryIndent2" href="#L17-B-1">17-B-1. Principe</a></li>
+        <li><a class="summaryIndent2" href="#L17-B-2">17-B-2. Programmation</a><ul class="nav-sommaire-ul Indentation17-B-2">
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L17-B-2-A">17-B-2-A. Cahier des charges du logiciel à développer</a></li>
+        </ul></li>
+      </ul></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_16.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_18.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L17">17. Analyse de programmes concrets<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span class="italique">Dans ce chapitre, nous allons nous efforcer d'illustrer la démarche de conception d'un programme graphique, depuis ses premières ébauches jusqu'à un
+	  stade de développement relativement avancé. Nous souhaitons montrer ainsi combien la programmation orientée objet peut faciliter et surtout sécuriser
+	  la stratégie de développement incrémental que nous préconisons</span>
+        <a class="signetNoteBasPage" id="signetNoteBasPage85" href="#noteBasPage85">(85)</a>
+        <span class="italique">.</span>
+      </p>
+      <p>
+        <span class="italique">L'utilisation de classes s'impose, lorsque l'on constate qu'un projet en cours de réalisation se révèle nettement plus complexe que ce que l'on avait
+	  imaginé au départ. Vous vivrez certainement vous-même des cheminements similaires à celui que nous décrivons ci-dessous. </span>
+      </p>
+      
+		<h3 class="TitreSection1" id="L17-A">17-A. Jeu des bombardes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Ce projet de jeu<a class="signetNoteBasPage" id="signetNoteBasPage86" href="#noteBasPage86">(86)</a> s'inspire d'un travail similaire
+	  réalisé par des élèves de Terminale.</p>
+        <p>
+Il est vivement recommandé de commencer l'ébauche d'un tel projet par une série de petits dessins et de schémas, 
+dans lesquels seront décrits les différents éléments graphiques à construire, ainsi qu'un maximum de cas 
+d'utilisations. Si vous rechignez à utiliser pour cela la bonne vieille technologie papier/crayon 
+(laquelle a pourtant bien fait ses preuves), vous pouvez tirer profit d'un logiciel de dessin technique, tel 
+l'utilitaire <span class="italique">Draw</span> de la suite bureautique <span class="italique">OpenOffice.org</span><a class="signetNoteBasPage" id="signetNoteBasPage87" href="#noteBasPage87">(87)</a> qui nous a servi pour réaliser le schéma de la page suivante.					
+				</p>
+        <p>L'idée de départ est simple : deux joueurs s'affrontent au canon. Chacun doit ajuster son angle de tir pour tâcher d'atteindre son
+	  adversaire, les obus décrivant des trajectoires balistiques.</p>
+        <p>L'emplacement des canons est défini au début du jeu de manière aléatoire (tout au moins en hauteur). Après chaque tir, les canons se
+	  déplacent (afin d'accroître l'intérêt du jeu, l'ajustement des tirs étant ainsi rendu plus difficile). Les coups au but sont
+	  comptabilisés.</p>
+        <p>Le dessin préliminaire que nous avons reproduit ci-dessus est l'une des formes que peut prendre votre <span class="italique">travaild'analyse</span>. Avant de commencer le
+	  développement d'un projet de programmation, il vous faut en effet toujours vous efforcer d'établir un <span class="italique">cahierdescharges</span> détaillé. Cette
+	  étude préalable est très importante. La plupart des débutants commencent bien trop vite à écrire de nombreuses lignes de code au
+	  départ d'une vague idée, en négligeant de rechercher la structure d'ensemble. Leur programmation risque alors de devenir chaotique, parce qu'ils devront
+	  de toute façon mettre en place cette structure tôt ou tard. Il s'apercevront alors bien souvent qu'il leur faut supprimer et ré-écrire des pans
+	  entiers d'un projet qu'ils ont conçu d'une manière <span class="italique">tropmonolithique</span> et/ou <span class="italique">malparamétrée</span>.</p>
+        <ul class="ListeDVP">
+          <li><span class="italique">Tropmonolithique</span> : cela signifie que l'on a négligé de décomposer un problème complexe en plusieurs sous-problèmes plus
+	    simples. Par exemple, on a imbriqué plusieurs niveaux successifs d'instructions composées, au lieu de faire appel à des fonctions ou à des
+	    classes.</li>
+          <li><span class="italique">Malparamétrée</span> : cela signifie que l'on a traité seulement un cas particulier, au lieu d'envisager le cas général. Par
+	    exemple, on a donné à un objet graphique des dimensions fixes, au lieu de prévoir des variables pour permettre son redimensionnement.</li>
+        </ul>
+        <p>Vous devez donc toujours commencer le développement d'un projet par une phase d'analyse aussi fouillée que possible, et concrétiser le
+	  résultat de cette analyse dans un ensemble de documents (schémas, plans, descriptions...) qui constitueront le cahier des charges. Pour les projets de grande
+	  envergure, il existe d'ailleurs des méthodes d'analyse très élaborées (<span class="italique">UML</span>, <span class="italique">Merise</span>...) que nous ne pouvons nous permettre de
+	  décrire ici car elles font l'objet de livres entiers. </p>
+        <p>Cela étant dit, il faut malheureusement admettre qu'il est très difficile (et même probablement impossible) de réaliser dès le
+	  départ l'analyse tout à fait complète d'un projet de programmation. C'est seulement lorsqu'il commence à fonctionner véritablement qu'un
+	  programme révèle ses faiblesses. On constate alors qu'il reste des cas d'utilisation ou des contraintes qui n'avaient pas été prévues au
+	  départ. D'autre part, un projet logiciel est pratiquement toujours destiné à évoluer : il vous arrivera fréquemment de devoir modifier le
+	  cahier des charges au cours du développement lui-même, pas nécessairement parce que l'analyse initiale a été mal faite, mais tout simplement
+	  parce que l'on souhaite ajouter des fonctionnalités supplémentaires.</p>
+        <p>En conclusion, tâchez de toujours aborder un nouveau projet de programmation en respectant les deux consignes suivantes :</p>
+        <ul class="ListeDVP">
+          <li>Décrivez votre projet en profondeur avant de commencer la rédaction des premières lignes de code, en vous efforçant de mettre en
+	    évidence les composants principaux et les relations qui les lient (pensez notamment à décrire les différents cas d'utilisation de votre
+	    programme).</li>
+          <li>Lorsque vous commencerez sa réalisation effective, évitez de vous laisser entraîner à rédiger de trop grands blocs d'instructions.
+	    Veillez au contraire à découper votre application en un certain nombre de composants <span class="italique">paramétrables</span> bien <span class="italique">encapsulés</span>, de telle
+	    manière que vous puissiez aisément modifier l'un ou l'autre d'entre eux sans compromettre le fonctionnement des autres, et peut-être même les
+	    réutiliser dans différents contextes si le besoin s'en fait sentir.</li>
+        </ul>
+        <p>
+          <span class="italique">C'est pour satisfaire cette exigence que la programmation orientée objets est a été inventée.</span>
+        </p>
+        <p>Considérons par exemple l'ébauche dessinée à la page précédente.</p>
+        <p>L'apprenti programmeur sera peut-être tenté de commencer la réalisation de ce jeu en n'utilisant que la seule programmation procédurale
+	  (c'est-à-dire en omettant de définir de nouvelles classes). C'est d'ailleurs ainsi que nous avons procédé nous-même lors de notre première
+	  approche des interfaces graphiques, tout au long du chapitre 8. Cette façon de procéder ne se justifie cependant que pour de tout petits programmes (des
+	  exercices ou des tests préliminaires). Lorsque l'on s'attaque à un projet d'une certaine importance, la complexité des problèmes qui se
+	  présentent se révèle rapidement trop importante, et il devient alors indispensable de fragmenter et de compartimenter.</p>
+        <p>L'outil logiciel qui va permettre cette fragmentation est la <span class="italique">classe</span>.</p>
+        <p>Nous pouvons peut-être mieux comprendre son utilité en nous aidant d'une analogie.</p>
+        <p>Tous les appareils électroniques sont constitués d'un petit nombre de composants de base, à savoir des transistors, des diodes, des
+	  résistances, des condensateurs, etc. Les premiers ordinateurs ont été construits directement à partir de ces composants. Ils étaient volumineux,
+	  très chers, et pourtant ils n'avaient que très peu de fonctionnalités et tombaient fréquemment en panne.</p>
+        <p>On a alors développé différentes techniques pour encapsuler dans un même boîtier un certain nombre de composants électroniques de
+	  base. Pour utiliser ces nouveaux <span class="italique">circuits intégrés</span>, il n'était plus nécessaire de connaître leur contenu exact : seule importait
+	  leur fonction globale. Les premières fonctions intégrées étaient encore relativement simples : c'étaient par exemple des portes logiques,
+	  des bascules, etc. En combinant ces circuits entre eux, on obtenait des caractéristiques plus élaborées, telles que des registres ou des décodeurs,
+	  qui purent à leur tour être intégrés, et ainsi de suite, jusqu'aux microprocesseurs actuels. Ceux-ci contiennent dorénavant plusieurs millions
+	  de composants, et pourtant leur fiabilité reste extrêmement élevée.</p>
+        <p>En conséquence, pour l'électronicien moderne qui veut construire par exemple un compteur binaire (circuit qui nécessite un certain nombre de
+	  bascules), il est évidemment bien plus simple, plus rapide et plus sûr de se servir de bascules intégrées, plutôt que de s'échiner à
+	  combiner sans erreur plusieurs centaines de transistors et de résistances.</p>
+        <p>D'une manière analogue, le programmeur moderne que vous êtes peut bénéficier du travail accumulé par ses prédécesseurs en
+	  utilisant la fonctionnalité intégrée dans les nombreuses bibliothèques de classes déjà disponibles pour Python. Mieux encore, il peut
+	  aisément créer lui-même de nouvelles classes pour encapsuler les principaux composants de son application, particulièrement ceux qui y apparaissent
+	  en plusieurs exemplaires. Procéder ainsi est plus simple, plus rapide et plus sûr que de multiplier les blocs d'instructions similaires dans un corps de
+	  programme monolithique, de plus en plus volumineux et de moins en moins compréhensible.</p>
+        <p>Examinons à présent notre ébauche dessinée. Les composants les plus importants de ce jeu sont bien évidemment les petits canons, qu'il
+	  faudra pouvoir dessiner à différents emplacements et dans différentes orientations, et dont il nous faudra au moins deux exemplaires.</p>
+        <p>Plutôt que de les dessiner morceau par morceau dans le canevas au fur et à mesure du déroulement du jeu, nous avons intérêt à les
+	  considérer comme des objets logiciels à part entière, dotés de plusieurs propriétés ainsi que d'un certain comportement (ce que nous
+	  voulons exprimer par là est le fait qu'il devront être dotés de divers mécanismes, que nous pourrons activer par programme à l'aide de
+	  <span class="italique">méthodes</span> particulières). Il est donc certainement judicieux de leur consacrer une classe spécifique.</p>
+        
+		<h4 class="TitreSection2" id="L17-A-1">17-A-1. Prototypage d'une classe Canon<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>En définissant une telle classe, nous gagnons sur plusieurs tableaux. Non seulement nous rassemblons ainsi tout le code correspondant au dessin et au
+	    fonctionnement du canon dans une même « capsule », bien à l'écart du reste du programme, mais de surcroît nous nous donnons la
+	    possibilité d'instancier aisément un nombre quelconque de ces canons dans le jeu, ce qui nous ouvre des perspectives de développements
+	    ultérieurs.</p>
+          <p>Lorsqu'une première implémentation de la classe <b>Canon()</b> aura été construite et testée, il sera également possible de la
+	    perfectionner en la dotant de caractéristiques supplémentaires, sans modifier (ou très peu) son interface, c'est-à-dire en quelque sorte son
+	    « mode d'emploi » : à savoir les instructions nécessaires pour l'instancier et l'utiliser dans des applications diverses. </p>
+          <p>Entrons à présent dans le vif du sujet.</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/canon.png"><img class="ImgCliquable figure-img-caption" src="./images/canon.png" alt="Canon" width="495" height="325"/></a></figure></div>
+          <p>Le dessin de notre canon peut être simplifié à l'extrême. Nous avons estimé qu'il pouvait se résumer à un cercle
+	    combiné avec un rectangle, celui-ci pouvant d'ailleurs être lui-même considéré comme un simple segment de ligne droite particulièrement
+	    épais.</p>
+          <p>Si l'ensemble est rempli d'une couleur uniforme (en noir, par exemple), nous obtiendrons ainsi une sorte de petite bombarde suffisamment
+	    crédible.</p>
+          <p>Dans la suite du raisonnement, nous admettrons que la position du canon est en fait la position du centre du cercle (coordonnées x et y dans le dessin
+	    ci-contre). Ce point clé indique également l'axe de rotation de la buse du canon, ainsi que l'une des extrémités de la ligne épaisse qui
+	    représentera cette buse.</p>
+          <p>Pour terminer notre dessin, il nous restera alors à déterminer les coordonnées de l'autre extrémité de cette ligne. Ces
+	    coordonnées peuvent être calculées sans grande difficulté, à la condition de nous remémorer deux concepts fondamentaux de la
+	    trigonométrie (le sinus et le cosinus) que vous devez certainement bien connaître :</p>
+          <div class="imgtext-perso-bordure" style="background: url(./images/triangle-rectangle.png) no-repeat scroll 10px center;padding-left:70px;padding-top:20px;padding-bottom:20px;">
+            <p>
+              <span class="italique">Dans un triangle rectangle, le rapport entre le coté opposé à un angle et l'hypoténuse du triangle 
+			est une propriété spécifique de cet angle qu'on appelle sinus de l'angle. Le cosinus du même angle 
+			est le rapport entre le côté adjacent à l'angle et l'hypoténuse.</span>
+            </p>
+            <p>Ainsi, dans le schéma ci-contre : kitxmlcodeinlinelatexdvp\sin\alpha=(\frac{a}{h})finkitxmlcodeinlinelatexdvp et 
+					  kitxmlcodeinlinelatexdvp\cos\alpha=(\frac{a}{h})finkitxmlcodeinlinelatexdvp.</p>
+          </div>
+          <p>Pour représenter la buse de notre canon, en supposant que nous connaissions sa longueur l et l'angle de tir α , il nous faut donc tracer un segment
+	    de ligne droite épaisse, à partir des coordonnées du centre du cercle (x et y), jusqu'à un autre point situé plus à droite et plus haut,
+	    l'écart horizontal Δx étant égal à l.cos α , et l'écart vertical Δy étant égal à l.sin α .</p>
+          <p>En résumant tout ce qui précède, dessiner un canon au point x, y consistera simplement à : </p>
+          <ul class="ListeDVP">
+            <li>tracer un cercle noir centré sur x, y ;</li>
+            <li>tracer une ligne noire épaisse depuis le point x, y jusqu'au point x + l.cos α, y + l.sin α.</li>
+          </ul>
+          <p>Nous pouvons à présent commencer à envisager une ébauche de programmation correspondant à une classe « Canon ».
+	    Il n'est pas encore question ici de programmer le jeu proprement dit. Nous voulons seulement vérifier si l'analyse que nous avons faite jusqu'à présent
+	    « tient la route », en réalisant un premier <span class="italique">prototype</span> fonctionnel. </p>
+          <p>Un prototype est un petit programme destiné à expérimenter une idée, que l'on se propose d'intégrer ensuite dans une application plus
+	    vaste. Du fait de sa simplicité et de sa concision, Python se prête fort bien à l'élaboration de prototypes, et de nombreux programmeurs
+	    l'utilisent pour mettre au point divers composants logiciels qu'ils reprogrammeront éventuellement ensuite dans d'autres langages plus
+	    « lourds », tels que le C par exemple.</p>
+          <p>Dans notre premier prototype, la classe <b>Canon()</b> ne comporte que deux méthodes : un constructeur qui crée les éléments de base
+	    du dessin, et une méthode permettant de modifier celui-ci à volonté pour ajuster l'angle de tir (l'inclinaison de la buse). Comme nous l'avons souvent
+	    fait dans d'autres exemples, nous inclurons quelques lignes de code à la fin du script afin de pouvoir tester la classe tout de suite :<br/></p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e47710">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e47710" onclick="selectionCode('contenuCoded0e47710', 'IdTitreCode-d0e47710');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e47710"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> pi, sin, cos
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Canon</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_literal2">"""Petit canon graphique"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, x, y):
+      self.boss <code class="python_operator">=</code> boss	     <code class="python_comment1"># référence du canevas</code>
+      self.x1, self.y1 <code class="python_operator">=</code> x, y	   <code class="python_comment1"># axe de rotation du canon</code>
+      <code class="python_comment1"># dessiner la buse du canon, à l'horizontale pour commencer :</code>
+      self.lbu <code class="python_operator">=</code> <code class="python_digit">50</code>	     <code class="python_comment1"># longueur de la buse</code>
+      self.x2, self.y2 <code class="python_operator">=</code> x <code class="python_operator">+</code> self.lbu, y
+      self.buse <code class="python_operator">=</code> boss.<code class="python_function">create_line</code><code class="python_operator">(</code>self.x1, self.y1, self.x2, self.y2,
+		   width <code class="python_operator">=</code><code class="python_digit">10</code>)
+      <code class="python_comment1"># dessiner ensuite le corps du canon par-dessus :</code>
+      r <code class="python_operator">=</code> <code class="python_digit">15</code>		  <code class="python_comment1"># rayon du cercle </code>
+      boss.<code class="python_function">create_oval</code><code class="python_operator">(</code>x<code class="python_operator">-</code>r, y<code class="python_operator">-</code>r, x<code class="python_operator">+</code>r, y<code class="python_operator">+</code>r, fill<code class="python_operator">=</code><code class="python_literal1">'blue'</code>, width <code class="python_operator">=</code><code class="python_digit">3</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">orienter</code><code class="python_operator">(</code>self, angle):
+      <code class="python_literal1">"choisir l'angle de tir du canon"</code>
+      <code class="python_comment1"># rem : le paramètre &lt;angle&gt; est reçu en tant que chaîne de car.</code>
+      <code class="python_comment1"># il faut le traduire en nombre réel, puis convertir en radians :</code>
+      self.angle <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>angle)<code class="python_operator">*</code><code class="python_digit">2</code><code class="python_operator">*</code>pi<code class="python_operator">/</code><code class="python_digit">360</code>      
+      self.x2 <code class="python_operator">=</code> self.x1 <code class="python_operator">+</code> self.lbu<code class="python_operator">*</code><code class="python_function">cos</code><code class="python_operator">(</code>self.angle)
+      self.y2 <code class="python_operator">=</code> self.y1 <code class="python_operator">-</code> self.lbu<code class="python_operator">*</code><code class="python_function">sin</code><code class="python_operator">(</code>self.angle)
+      self.boss.<code class="python_function">coords</code><code class="python_operator">(</code>self.buse, self.x1, self.y1, self.x2, self.y2)
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code> <code class="python_literal1">'__main__'</code>:
+  <code class="python_comment1"># Code pour tester sommairement la classe Canon :</code>
+  f <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+  can <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>f,width <code class="python_operator">=</code><code class="python_digit">250</code>, height <code class="python_operator">=</code><code class="python_digit">250</code>, bg <code class="python_operator">=</code><code class="python_literal1">'ivory'</code>)
+  can.<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">10</code>, pady <code class="python_operator">=</code><code class="python_digit">10</code>)
+  c1 <code class="python_operator">=</code> <code class="python_function">Canon</code><code class="python_operator">(</code>can, <code class="python_digit">50</code>, <code class="python_digit">200</code>)
+ 
+  s1 <code class="python_operator">=</code><code class="python_function">Scale</code><code class="python_operator">(</code>f, label<code class="python_operator">=</code><code class="python_literal1">'hausse'</code>, from_<code class="python_operator">=</code><code class="python_digit">90</code>, to<code class="python_operator">=</code><code class="python_digit">0</code>, command<code class="python_operator">=</code>c1.orienter)
+  s1.<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT, pady <code class="python_operator">=</code><code class="python_digit">5</code>, padx <code class="python_operator">=</code><code class="python_digit">20</code>)
+  s1.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=set#set"><span>set</span></a><code class="python_operator">(</code><code class="python_digit">25</code>)		      <code class="python_comment1"># angle de tir initial</code>
+ 
+  f.<code class="python_function">mainloop</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L17-A-1-A">17-A-1-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Ligne 6 : Dans la liste des paramètres qui devront être transmis au constructeur lors de l'instanciation, nous prévoyons les
+		coordonnées <b>x</b> et <b>y</b>, qui indiqueront l'emplacement du canon dans le canevas, mais également une référence au canevas lui-même
+		(la variable <b>boss</b>). Cette référence est indispensable : elle sera utilisée pour invoquer les méthodes du canevas.<br/>
+		 Nous pourrions inclure aussi un paramètre pour choisir un angle de tir initial, mais puisque nous avons l'intention d'implémenter une méthode
+		   spécifique pour régler cette orientation, il sera plus judicieux de faire appel à celle-ci au moment voulu.</li>
+              <li>Lignes 7-8 : Ces références seront utilisées un peu partout dans les différentes méthodes que nous allons développer
+		dans la classe. Il faut donc en faire des attributs d'instance.</li>
+              <li>Lignes 9 à 16 : Nous dessinons la buse d'abord, et le corps du canon ensuite. Ainsi une partie de la buse reste cachée. Cela
+		nous permet de colorer éventuellement le corps du canon.</li>
+              <li>Lignes 18 à 25 : Cette méthode sera invoquée avec un argument <b>angle</b>, lequel sera fourni en degrés
+		(comptés à partir de l'horizontale). S'il est produit à l'aide d'un widget tel que <b>Entry</b> ou <b>Scale</b>, il sera transmis sous la forme
+		d'une chaîne de caractères, et nous devrons donc le convertir d'abord en nombre réel avant de l'utiliser dans nos calculs (ceux-ci ont été
+		décrits à la page précédente).</li>
+              <li>Lignes 27 à 38 : Pour tester notre nouvelle classe, nous ferons usage d'un widget <b>Scale</b>. Pour définir la position
+		initiale de son curseur, et donc fixer l'angle de hausse initial du canon, nous devons faire appel à sa méthode <b>set()</b> (ligne 36).</li>
+            </ul>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L17-A-2">17-A-2. Ajout de méthodes au prototype<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/100000000000011B0000019D3E1D0558.png"><img class="ImgCliquable figure-img-caption" src="./images/100000000000011B0000019D3E1D0558.png" alt="Image non disponible" width="222" height="325"/></a></figure></div>
+          <p>Notre prototype est fonctionnel, mais beaucoup trop rudimentaire. Nous devons à présent le perfectionner pour lui ajouter la capacité de tirer
+	    des obus.</p>
+          <p>Ceux-ci seront traités plutôt comme des « boulets » : ce seront de simples petits cercles que nous ferons partir de la
+	    bouche du canon avec une vitesse initiale d'orientation identique à celle de sa buse. Pour leur faire suivre une trajectoire réaliste, nous devons à
+	    présent nous rappeler quelques éléments de physique.</p>
+          <p>
+            <span class="italique">Comment un objet lancé et laissé à lui-même évolue-t-il dans l'espace, si l'on néglige les phénomènes secondaires tels que
+	      la résistance de l'air ?</span>
+          </p>
+          <p>Ce problème peut vous paraître complexe, mais en réalité sa résolution est très simple : il vous suffit d'admettre que le
+	    boulet se déplace à la fois horizontalement et verticalement, et que ces deux mouvements, quoique simultanés, sont tout à fait indépendants
+	    l'un de l'autre.</p>
+          <p>Vous allez donc établir une boucle d'animation, dans laquelle vous recalculez les nouvelles coordonnées <b>x</b> et <b>y</b> du boulet à
+	    intervalles de temps réguliers, en sachant que : </p>
+          <ul class="ListeDVP">
+            <li>Le mouvement horizontal est <span class="italique">uniforme</span>. À chaque itération, il vous suffit d'augmenter graduellement la coordonnée <b>x</b> du boulet, en
+	      lui ajoutant toujours un même déplacement Δx.</li>
+            <li>Le mouvement vertical est <span class="italique">uniformément accéléré</span>. Cela signifie simplement qu'à chaque itération, vous devez ajouter
+	      à la coordonnée <b>y</b> un déplacement Δy qui augmente lui-même graduellement, toujours de la même quantité.</li>
+          </ul>
+          <p>Voyons cela dans le script :</p>
+          <p>Pour commencer, il faut ajouter les lignes suivantes à la fin de la méthode constructeur. Elles vont servir à créer l'objet
+	    « obus », et à préparer une variable d'instance qui servira d'interrupteur de l'animation. L'obus est créé au départ avec
+	    des dimensions minimales (un cercle d'un seul pixel) afin de rester presque invisible :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e48236">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e48236" onclick="selectionCode('contenuCoded0e48236', 'IdTitreCode-d0e48236');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e48236" class="contenuCode">     <code class="python_comment1"># dessiner un obus (réduit à un simple point, avant animation) :</code>
+     self.obus <code class="python_operator">=</code>boss.<code class="python_function">create_oval</code><code class="python_operator">(</code>x, y, x, y, fill<code class="python_operator">=</code><code class="python_literal1">'red'</code>)
+     self.anim <code class="python_operator">=</code><code class="python_keyword3">False</code>		  <code class="python_comment1"># interrupteur d'animation</code>
+     <code class="python_comment1"># retrouver la largeur et la hauteur du canevas :</code>
+     self.xMax <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>boss.<code class="python_function">cget</code><code class="python_operator">(</code><code class="python_literal1">'width'</code>))
+     self.yMax <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>boss.<code class="python_function">cget</code><code class="python_operator">(</code><code class="python_literal1">'height'</code>))</code></pre></div>
+          <p>Les deux dernières lignes utilisent la méthode <b>cget()</b> du widget « maître » (le canevas, ici), afin de retrouver
+	    certaines de ses caractéristiques. Nous voulons en effet que notre classe <b>Canon</b> soit généraliste, c'est-à-dire réutilisable dans
+	    n'importe quel contexte, et nous ne pouvons donc pas tabler à l'avance sur des dimensions particulières pour le canevas dans lequel ce canon sera
+	    utilisé.</p>
+          <blockquote class="citation"><div>tkinter renvoie ces valeurs sous la forme de chaînes de caractères. Il faut donc les convertir dans un type numérique si nous voulons pouvoir
+	    les utiliser dans un calcul.</div></blockquote>
+          <p>Ensuite, nous devons ajouter deux nouvelles méthodes : l'une pour déclencher le tir, et l'autre pour gérer l'animation du boulet une fois
+	    que celui-ci aura été lancé :<br/></p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e48310">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e48310" onclick="selectionCode('contenuCoded0e48310', 'IdTitreCode-d0e48310');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e48310">	   <code class="python_keyword1">def</code> <code class="python_function">feu</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"déclencher le tir d'un obus"</code>
+      <code class="python_keyword1">if</code> <code class="python_keyword1">not</code> self.anim:
+      self.anim <code class="python_operator">=</code><code class="python_keyword3">True</code>
+      <code class="python_comment1"># position de départ de l'obus (c'est la bouche du canon) :</code>
+      self.boss.<code class="python_function">coords</code><code class="python_operator">(</code>self.obus, self.x2 <code class="python_operator">-</code><code class="python_digit">3</code>, self.y2 <code class="python_operator">-</code><code class="python_digit">3</code>,
+		      self.x2 <code class="python_operator">+</code><code class="python_digit">3</code>, self.y2 <code class="python_operator">+</code><code class="python_digit">3</code>)
+      v <code class="python_operator">=</code><code class="python_digit">15</code>	    <code class="python_comment1"># vitesse initiale</code>
+      <code class="python_comment1"># composantes verticale et horizontale de cette vitesse :</code>
+      self.vy <code class="python_operator">=</code> <code class="python_operator">-</code>v <code class="python_operator">*</code><code class="python_function">sin</code><code class="python_operator">(</code>self.angle)
+      self.vx <code class="python_operator">=</code> v <code class="python_operator">*</code><code class="python_function">cos</code><code class="python_operator">(</code>self.angle)
+      self.<code class="python_function">animer_obus</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">animer_obus</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"animation de l'obus (trajectoire balistique)"</code>
+      <code class="python_keyword1">if</code> self.anim:
+      self.boss.<code class="python_function">move</code><code class="python_operator">(</code>self.obus, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.vx), <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.vy))
+      c <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=tuple#tuple"><span>tuple</span></a><code class="python_operator">(</code>self.boss.<code class="python_function">coords</code><code class="python_operator">(</code>self.obus))   <code class="python_comment1"># coord. résultantes</code>
+      xo, yo <code class="python_operator">=</code> c[<code class="python_digit">0</code>] <code class="python_operator">+</code><code class="python_digit">3</code>, c[<code class="python_digit">1</code>] <code class="python_operator">+</code><code class="python_digit">3</code> 	  <code class="python_comment1"># coord. du centre de l'obus</code>
+      <code class="python_keyword1">if</code> yo <code class="python_operator">&gt;</code> self.yMax <code class="python_keyword1">or</code> xo <code class="python_operator">&gt;</code> self.xMax:
+	  self.anim <code class="python_operator">=</code><code class="python_keyword3">False</code>	      <code class="python_comment1"># arrêter l'animation</code>
+      self.vy <code class="python_operator">+=</code> <code class="python_digit">.5</code>
+      self.boss.<code class="python_function">after</code><code class="python_operator">(</code><code class="python_digit">30</code>, self.animer_obus)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L17-A-2-A">17-A-2-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Lignes 1 à 4 : Cette méthode sera invoquée par appui sur un bouton. Elle déclenche le mouvement de l'obus, et
+		attribue une valeur « vraie » à notre « interrupteur d'animation » (la variable <b>self.anim</b> : voir
+		ci-après). Il faut cependant nous assurer que pendant toute la durée de cette animation, un nouvel appui sur le bouton ne puisse pas activer d'autres
+		boucles d'animation parasites. C'est le rôle du test effectué à la ligne 3 : le bloc d'instruction qui suit ne peut s'exécuter que si
+		la variable <b>self.anim</b> possède la valeur « faux », ce qui signifie que l'animation n'a pas encore commencé.</li>
+              <li>Lignes 5 à 7 : Le canevas tkinter dispose de deux méthodes pour déplacer les objets
+		graphiques :<ul class="ListeDVP"><li>La méthode <b>coords()</b> (utilisée à la ligne 6) effectue un positionnement absolu ; il faut cependant lui
+		fournir toutes les coordonnées de l'objet (comme si on le redessinait).</li><li>La méthode <b>move()</b> (utilisée plus loin, à la
+		ligne 17), provoque un déplacement relatif ; elle s'utilise avec deux arguments seulement, à savoir les composantes horizontale et verticale du
+		déplacement souhaité. </li></ul></li>
+              <li>Lignes 8 à 12 : La vitesse initiale de l'obus est choisie à la ligne 8. Comme nous l'avons expliqué à la page
+		précédente, le mouvement du boulet est la résultante d'un mouvement horizontal et d'un mouvement vertical. Nous connaissons la valeur de la vitesse
+		initiale ainsi que son inclinaison (c'est-à-dire l'angle de tir). Pour déterminer les composantes horizontale et verticale de cette vitesse, il nous
+		suffit d'utiliser des relations trigonométriques tout à fait similaires à celles que nous avons déjà exploitées pour dessiner la buse
+		du canon. Le signe <b>-</b> utilisé à la ligne 10 provient du fait que les coordonnées verticales se comptent de haut en bas.<br/>
+		 La ligne 12 active l'animation proprement dite.</li>
+              <li>Lignes 14 à 23 : Cette procédure se ré-appelle elle-même toutes les 30 millisecondes par l'intermédiaire de la
+		méthode <b>after()</b> invoquée à la ligne 23. Cela continue aussi longtemps que la variable <b>self</b>.<b>anim</b> (notre « interrupteur
+		d'animation ») reste « vraie », condition qui changera lorsque les coordonnées de l'obus sortiront des limites imposées
+		(test de la ligne 20).</li>
+              <li>Lignes 18-19 : Pour retrouver ces coordonnées après chaque déplacement, on fait appel encore une fois à la méthode
+		<b>coords()</b> du canevas : utilisée cette fois avec la référence d'un objet graphique comme unique argument, elle renvoie ses quatre
+		coordonnées dans un objet itérable que l'on peut convertir en une liste ou un tuple à l'aide des fonctions intégrées <b>list()</b> et
+		<b>tuple()</b>.</li>
+              <li>Lignes 17-22 : La coordonnée horizontale de l'obus augmente toujours de la même quantité (mouvement uniforme), tandis que la
+		coordonnée verticale augmente d'une quantité qui est elle-même augmentée à chaque fois à la ligne 24 (mouvement uniformément
+		accéléré). Le résultat est une trajectoire parabolique.</li>
+            </ul>
+            <blockquote class="citation"><div>L<span class="italique">'</span>opérateur <b><span style="color:#000080;">+=</span></b> permet d<span class="italique">'</span>incrémenter une variable :<br/>
+		 ainsi <b><span style="color:#000080;">a += 3 </span></b>équivaut à <b><span style="color:#000080;">a = a + 3</span></b>. Veuillez noter au passage que
+		   l<span class="italique">'</span>utilisation de cet opérateur spécifique est plus efficace que la ré-affectation utilisée jusqu<span class="italique">'</span>ici.</div></blockquote>
+            <blockquote class="citation"><div>À partir de la version 2.3, Python initialise automatiquement deux variables nommées <b><span style="color:#000080;">True</span></b> et <b><span style="color:#000080;">False</span></b> pour représenter la véracité et la fausseté d<span class="italique">'</span>une expression (notez bien que ces noms commencent tous
+	      deux par une majuscule). Comme nous l<span class="italique">'</span>avons fait dans le script ci-dessus, vous pouvez utiliser ces variables dans les expressions conditionnelles afin
+	      d<span class="italique">'</span>augmenter la lisibilité de votre code. Si vous préférez, vous pouvez cependant continuer à utiliser aussi des valeurs numériques,
+	      comme nous l<span class="italique">'</span>avons fait précédemment. (cf. « Véracité/Fausseté d<span class="italique">'</span>une expression », page ).</div></blockquote>
+            <p>Il reste enfin à ajouter un bouton déclencheur dans la fenêtre principale. Une ligne telle que la suivante (à insérer dans le code
+	      de test) fera parfaitement l'affaire :</p>
+            <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e48683">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e48683" onclick="selectionCode('contenuCoded0e48683', 'IdTitreCode-d0e48683');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e48683" class="contenuCode">	<code class="python_function">Button</code><code class="python_operator">(</code>f, text<code class="python_operator">=</code><code class="python_literal1">'Feu !'</code>, command <code class="python_operator">=</code>c1.feu).<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT)</code></pre></div>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L17-A-3">17-A-3. Développement de l'application<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Disposant désormais d'une classe d'objets « canon » assez bien dégrossie, nous pouvons envisager l'élaboration de
+	    l'application proprement dite. Et puisque nous sommes décidés à exploiter la méthodologie de la programmation orientée objet, nous devons
+	    concevoir cette application comme <span class="italique">un ensemble d'objets qui interagissent par l'intermédiaire de leurs méthodes</span>.</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/10000000000001B3000001ABB44494B2.png"><img class="ImgCliquable figure-img-caption" src="./images/10000000000001B3000001ABB44494B2.png" alt="Image non disponible" width="331" height="325"/></a></figure></div>
+          <p>Plusieurs de ces objets proviendront de classes préexistantes, bien entendu : ainsi le canevas, les boutons, etc. Mais nous avons vu dans les pages
+	    précédentes que nous avons intérêt à regrouper des ensembles bien délimités de ces objets basiques dans de nouvelles classes, chaque
+	    fois que nous pouvons identifier pour ces ensembles une fonctionnalité particulière. C'était le cas par exemple pour cet ensemble de cercles et de
+	    lignes mobiles que nous avons décidé d'appeler « canon ».</p>
+          <p>Pouvons-nous encore distinguer dans notre projet initial d'autres composants qui mériteraient d'être encapsulés dans des nouvelles
+	    classes ? Certainement. Il y a par exemple le pupitre de contrôle que nous voulons associer à chaque canon : nous pouvons y rassembler le
+	    dispositif de réglage de la hausse (l'angle de tir), le bouton de mise à feu, le score réalisé, et peut-être d'autres indications encore,
+	    comme le nom du joueur. Il est d'autant plus intéressant de lui consacrer une classe particulière, que nous savons d'emblée qu'il nous en faudra deux
+	    instances.</p>
+          <p>Il y a aussi l'application elle-même, bien sûr. En l'encapsulant dans une classe, nous en ferons notre objet principal, celui qui dirigera tous les
+	    autres.</p>
+          <p>Veuillez à présent analyser le script ci-dessous. Vous y retrouverez la classe <b>Canon()</b> encore davantage développée : nous y
+	    avons ajouté quelques attributs et trois méthodes supplémentaires, afin de pouvoir gérer les déplacements du canon lui-même, ainsi que
+	    les coups au but.</p>
+          <p>La classe <b>Application()</b> remplace désormais le code de test des prototypes précédents. Nous y instancions deux objets <b>Canon()</b>, et
+	    deux objets de la nouvelle classe <b>Pupitre()</b>, que nous plaçons dans des dictionnaires en prévision de développements ultérieurs (nous pouvons
+	    en effet imaginer d'augmenter le nombre de canons et donc de pupitres). Le jeu est à présent fonctionnel : les canons se déplacent après
+	    chaque tir, et les coups au but sont comptabilisés.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e48749">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e48749" onclick="selectionCode('contenuCoded0e48749', 'IdTitreCode-d0e48749');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/>74.<br/>75.<br/>76.<br/>77.<br/>78.<br/>79.<br/>80.<br/>81.<br/>82.<br/>83.<br/>84.<br/>85.<br/>86.<br/>87.<br/>88.<br/>89.<br/>90.<br/>91.<br/>92.<br/>93.<br/>94.<br/>95.<br/>96.<br/>97.<br/>98.<br/>99.<br/>100.<br/>101.<br/>102.<br/>103.<br/>104.<br/>105.<br/>106.<br/>107.<br/>108.<br/>109.<br/>110.<br/>111.<br/>112.<br/>113.<br/>114.<br/>115.<br/>116.<br/>117.<br/>118.<br/>119.<br/>120.<br/>121.<br/>122.<br/>123.<br/>124.<br/>125.<br/>126.<br/>127.<br/>128.<br/>129.<br/>130.<br/>131.<br/>132.<br/>133.<br/>134.<br/>135.<br/>136.<br/>137.<br/>138.<br/>139.<br/>140.<br/>141.<br/>142.<br/>143.<br/>144.<br/>145.<br/>146.<br/>147.<br/>148.<br/>149.<br/>150.<br/>151.<br/>152.<br/>153.<br/>154.<br/>155.<br/>156.<br/>157.<br/>158.<br/>159.<br/>160.<br/>161.<br/>162.<br/>163.<br/>164.<br/>165.<br/>166.<br/>167.<br/>168.<br/>169.<br/>170.<br/>171.<br/>172.<br/>173.<br/>174.<br/>175.<br/>176.<br/>177.<br/>178.<br/>179.<br/>180.<br/>181.<br/>182.<br/>183.<br/>184.<br/>185.<br/>186.<br/>187.<br/>188.<br/>189.<br/>190.<br/>191.<br/>192.<br/>193.<br/>194.<br/>195.<br/>196.<br/>197.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e48749"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> sin, cos, pi
+<code class="python_keyword1">from</code> random <code class="python_keyword1">import</code> randrange
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Canon</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_literal2">"""Petit canon graphique"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, x, y, sens, coul):
+      self.boss <code class="python_operator">=</code> boss	     <code class="python_comment1"># réf. du canevas</code>
+      self.appli <code class="python_operator">=</code> boss.master	  <code class="python_comment1"># réf. de la fenêtre d'application</code>
+      self.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>	    <code class="python_comment1"># identifiant du canon (chaîne)</code>
+      self.coul <code class="python_operator">=</code> coul	     <code class="python_comment1"># couleur associée au canon</code>
+      self.x1, self.y1 <code class="python_operator">=</code> x, y	   <code class="python_comment1"># axe de rotation du canon</code>
+      self.sens <code class="python_operator">=</code> sens	     <code class="python_comment1"># sens de tir (-1:gauche, +1:droite)</code>
+      self.lbu <code class="python_operator">=</code> <code class="python_digit">30</code>	     <code class="python_comment1"># longueur de la buse</code>
+      self.angle <code class="python_operator">=</code> <code class="python_digit">0</code>	      <code class="python_comment1"># hausse par défaut (angle de tir)</code>
+      <code class="python_comment1"># retrouver la largeur et la hauteur du canevas :</code>
+      self.xMax <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>boss.<code class="python_function">cget</code><code class="python_operator">(</code><code class="python_literal1">'width'</code>))
+      self.yMax <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>boss.<code class="python_function">cget</code><code class="python_operator">(</code><code class="python_literal1">'height'</code>))
+      <code class="python_comment1"># dessiner la buse du canon (horizontale) :</code>
+      self.x2, self.y2 <code class="python_operator">=</code> x <code class="python_operator">+</code> self.lbu <code class="python_operator">*</code> sens, y
+      self.buse <code class="python_operator">=</code> boss.<code class="python_function">create_line</code><code class="python_operator">(</code>self.x1, self.y1,
+		   self.x2, self.y2, width <code class="python_operator">=</code><code class="python_digit">10</code>)
+      <code class="python_comment1"># dessiner le corps du canon (cercle de couleur) :</code>
+      self.rc <code class="python_operator">=</code> <code class="python_digit">15</code>	    <code class="python_comment1"># rayon du cercle </code>
+      self.corps <code class="python_operator">=</code> boss.<code class="python_function">create_oval</code><code class="python_operator">(</code>x <code class="python_operator">-</code>self.rc, y <code class="python_operator">-</code>self.rc, x <code class="python_operator">+</code>self.rc,
+		    y <code class="python_operator">+</code>self.rc, fill <code class="python_operator">=</code>coul)
+      <code class="python_comment1"># pré-dessiner un obus caché (point en dehors du canevas) :</code>
+      self.obus <code class="python_operator">=</code> boss.<code class="python_function">create_oval</code><code class="python_operator">(-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>, fill<code class="python_operator">=</code><code class="python_literal1">'red'</code>)
+      self.anim <code class="python_operator">=</code> <code class="python_keyword3">False</code>      <code class="python_comment1"># indicateurs d'animation </code>
+      self.explo <code class="python_operator">=</code> <code class="python_keyword3">False</code>      <code class="python_comment1">#    et d'explosion</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">orienter</code><code class="python_operator">(</code>self, angle):
+      <code class="python_literal1">"régler la hausse du canon"</code>
+      <code class="python_comment1"># rem: le paramètre &lt;angle&gt; est reçu en tant que chaîne.</code>
+      <code class="python_comment1"># Il faut donc le traduire en réel, puis le convertir en radians :</code>
+      self.angle <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>angle)<code class="python_operator">*</code>pi<code class="python_operator">/</code><code class="python_digit">180</code>
+      <code class="python_comment1"># rem: utiliser la méthode coords de préférence avec des entiers :      </code>
+      self.x2 <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.x1 <code class="python_operator">+</code> self.lbu <code class="python_operator">*</code> <code class="python_function">cos</code><code class="python_operator">(</code>self.angle) <code class="python_operator">*</code> self.sens)
+      self.y2 <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.y1 <code class="python_operator">-</code> self.lbu <code class="python_operator">*</code> <code class="python_function">sin</code><code class="python_operator">(</code>self.angle))
+      self.boss.<code class="python_function">coords</code><code class="python_operator">(</code>self.buse, self.x1, self.y1, self.x2, self.y2)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">deplacer</code><code class="python_operator">(</code>self, x, y):
+      <code class="python_literal1">"amener le canon dans une nouvelle position x, y"</code>
+      dx, dy <code class="python_operator">=</code> x <code class="python_operator">-</code>self.x1, y <code class="python_operator">-</code>self.y1	   <code class="python_comment1"># valeur du déplacement</code>
+      self.boss.<code class="python_function">move</code><code class="python_operator">(</code>self.buse, dx, dy) 
+      self.boss.<code class="python_function">move</code><code class="python_operator">(</code>self.corps, dx, dy)
+      self.x1 <code class="python_operator">+=</code> dx
+      self.y1 <code class="python_operator">+=</code> dy
+      self.x2 <code class="python_operator">+=</code> dx
+      self.y2 <code class="python_operator">+=</code> dy
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">feu</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"tir d'un obus - seulement si le précédent a fini son vol"</code>
+      <code class="python_keyword1">if</code> <code class="python_keyword1">not</code> <code class="python_operator">(</code>self.anim <code class="python_keyword1">or</code> self.explo):
+      self.anim <code class="python_operator">=</code><code class="python_keyword3">True</code>
+      <code class="python_comment1"># récupérer la description de tous les canons présents :</code>
+      self.guns <code class="python_operator">=</code> self.appli.<code class="python_function">dictionnaireCanons</code><code class="python_operator">(</code>)
+      <code class="python_comment1"># position de départ de l'obus (c'est la bouche du canon) :</code>
+      self.boss.<code class="python_function">coords</code><code class="python_operator">(</code>self.obus, self.x2 <code class="python_operator">-</code><code class="python_digit">3</code>, self.y2 <code class="python_operator">-</code><code class="python_digit">3</code>,
+		      self.x2 <code class="python_operator">+</code><code class="python_digit">3</code>, self.y2 <code class="python_operator">+</code><code class="python_digit">3</code>)
+      v <code class="python_operator">=</code> <code class="python_digit">17</code>	      <code class="python_comment1"># vitesse initiale</code>
+      <code class="python_comment1"># composantes verticale et horizontale de cette vitesse :</code>
+      self.vy <code class="python_operator">=</code> <code class="python_operator">-</code>v <code class="python_operator">*</code><code class="python_function">sin</code><code class="python_operator">(</code>self.angle)
+      self.vx <code class="python_operator">=</code> v <code class="python_operator">*</code><code class="python_function">cos</code><code class="python_operator">(</code>self.angle) <code class="python_operator">*</code>self.sens
+      self.<code class="python_function">animer_obus</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">return</code> <code class="python_keyword3">True</code>      <code class="python_comment1"># =&gt; signaler que le coup est parti</code>
+      <code class="python_keyword1">else</code>:
+      <code class="python_keyword1">return</code> <code class="python_keyword3">False</code>    <code class="python_comment1"># =&gt; le coup n'a pas pu être tiré</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">animer_obus</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"animer l'obus (trajectoire balistique)"</code>
+      <code class="python_keyword1">if</code> self.anim:
+      self.boss.<code class="python_function">move</code><code class="python_operator">(</code>self.obus, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.vx), <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.vy))
+      c <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=tuple#tuple"><span>tuple</span></a><code class="python_operator">(</code>self.boss.<code class="python_function">coords</code><code class="python_operator">(</code>self.obus))	 <code class="python_comment1"># coord. résultantes</code>
+      xo, yo <code class="python_operator">=</code> c[<code class="python_digit">0</code>] <code class="python_operator">+</code><code class="python_digit">3</code>, c[<code class="python_digit">1</code>] <code class="python_operator">+</code><code class="python_digit">3</code>     <code class="python_comment1"># coord. du centre de l'obus</code>
+      self.<code class="python_function">test_obstacle</code><code class="python_operator">(</code>xo, yo)     <code class="python_comment1"># a-t-on atteint un obstacle ?</code>
+      self.vy <code class="python_operator">+=</code> <code class="python_digit">.4</code>	    <code class="python_comment1"># accélération verticale</code>
+      self.boss.<code class="python_function">after</code><code class="python_operator">(</code><code class="python_digit">20</code>, self.animer_obus)
+      <code class="python_keyword1">else</code>:
+      <code class="python_comment1"># animation terminée - cacher l'obus et déplacer les canons :</code>
+      self.<code class="python_function">fin_animation</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">test_obstacle</code><code class="python_operator">(</code>self, xo, yo):
+      <code class="python_literal1">"évaluer si l'obus a atteint une cible ou les limites du jeu"</code>
+      <code class="python_keyword1">if</code> yo <code class="python_operator">&gt;</code>self.yMax <code class="python_keyword1">or</code> xo <code class="python_operator">&lt;</code><code class="python_digit">0</code> <code class="python_keyword1">or</code> xo <code class="python_operator">&gt;</code>self.xMax:
+      self.anim <code class="python_operator">=</code><code class="python_keyword3">False</code>
+      <code class="python_keyword1">return</code>
+      <code class="python_comment1"># analyser le dictionnaire des canons pour voir si les coord.</code>
+      <code class="python_comment1"># de l'un d'entre eux sont proches de celles de l'obus :</code>
+      <code class="python_keyword1">for</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_keyword1">in</code> self.guns:	   <code class="python_comment1"># id = clef dans dictionn.</code>
+      gun <code class="python_operator">=</code> self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>]	  <code class="python_comment1"># valeur correspondante</code>
+      <code class="python_keyword1">if</code> xo <code class="python_operator">&lt;</code> gun.x1 <code class="python_operator">+</code>self.rc <code class="python_keyword1">and</code> xo <code class="python_operator">&gt;</code> gun.x1 <code class="python_operator">-</code>self.rc \
+      <code class="python_keyword1">and</code> yo <code class="python_operator">&lt;</code> gun.y1 <code class="python_operator">+</code>self.rc <code class="python_keyword1">and</code> yo <code class="python_operator">&gt;</code> gun.y1 <code class="python_operator">-</code>self.rc :
+	  self.anim <code class="python_operator">=</code><code class="python_keyword3">False</code>
+	  <code class="python_comment1"># dessiner l'explosion de l'obus (cercle jaune) :</code>
+	  self.explo <code class="python_operator">=</code> self.boss.<code class="python_function">create_oval</code><code class="python_operator">(</code>xo <code class="python_operator">-</code><code class="python_digit">12</code>, yo <code class="python_operator">-</code><code class="python_digit">12</code>,
+	       xo <code class="python_operator">+</code><code class="python_digit">12</code>, yo <code class="python_operator">+</code><code class="python_digit">12</code>, fill <code class="python_operator">=</code><code class="python_literal1">'yellow'</code>, width <code class="python_operator">=</code><code class="python_digit">0</code>)
+	  self.hit <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>	   <code class="python_comment1"># référence de la cible touchée</code>
+	  self.boss.<code class="python_function">after</code><code class="python_operator">(</code><code class="python_digit">150</code>, self.fin_explosion)
+	  <code class="python_keyword1">break</code>        
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">fin_explosion</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"effacer l'explosion ; ré-initaliser l'obus ; gérer le score"</code>
+      self.boss.<code class="python_function">delete</code><code class="python_operator">(</code>self.explo)    <code class="python_comment1"># effacer l'explosion</code>
+      self.explo <code class="python_operator">=</code><code class="python_keyword3">False</code> 	 <code class="python_comment1"># autoriser un nouveau tir</code>
+      <code class="python_comment1"># signaler le succès à la fenêtre maîtresse :</code>
+      self.appli.<code class="python_function">goal</code><code class="python_operator">(</code>self.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, self.hit)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">fin_animation</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"actions à accomplir lorsque l'obus a terminé sa trajectoire"</code>
+      self.appli.<code class="python_function">disperser</code><code class="python_operator">(</code>)	      <code class="python_comment1"># déplacer les canons</code>
+      <code class="python_comment1"># cacher l'obus (en l'expédiant hors du canevas) :</code>
+      self.boss.<code class="python_function">coords</code><code class="python_operator">(</code>self.obus, <code class="python_operator">-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>)
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Pupitre</code><code class="python_operator">(</code>Frame):
+  <code class="python_literal2">"""Pupitre de pointage associé à un canon"""</code> 
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, canon):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, bd <code class="python_operator">=</code><code class="python_digit">3</code>, relief <code class="python_operator">=</code>GROOVE)
+      self.score <code class="python_operator">=</code><code class="python_digit">0</code>
+      self.appli <code class="python_operator">=</code>boss		 <code class="python_comment1"># réf. de l'application</code>
+      self.canon <code class="python_operator">=</code>canon 	 <code class="python_comment1"># réf. du canon associé</code>
+      <code class="python_comment1"># Système de réglage de l'angle de tir :</code>
+      self.regl <code class="python_operator">=</code><code class="python_function">Scale</code><code class="python_operator">(</code>self, from_ <code class="python_operator">=</code><code class="python_digit">85</code>, to <code class="python_operator">=-</code><code class="python_digit">15</code>, troughcolor<code class="python_operator">=</code>canon.coul,
+	    command <code class="python_operator">=</code>self.orienter)
+      self.regl.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=set#set"><span>set</span></a><code class="python_operator">(</code><code class="python_digit">45</code>) 	 <code class="python_comment1"># angle initial de tir</code>
+      self.regl.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT)
+      <code class="python_comment1"># Étiquette d'identification du canon :</code>
+      <code class="python_function">Label</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code>canon.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>).<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>TOP, anchor <code class="python_operator">=</code>W, pady <code class="python_operator">=</code><code class="python_digit">5</code>)
+      <code class="python_comment1"># Bouton de tir :</code>
+      self.bTir <code class="python_operator">=</code><code class="python_function">Button</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code><code class="python_literal1">'Feu !'</code>, command <code class="python_operator">=</code>self.tirer)
+      self.bTir.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>BOTTOM, padx <code class="python_operator">=</code><code class="python_digit">5</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>)
+      <code class="python_function">Label</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code><code class="python_literal1">"points"</code>).<code class="python_function">pack</code><code class="python_operator">(</code>)
+      self.points <code class="python_operator">=</code><code class="python_function">Label</code><code class="python_operator">(</code>self, text<code class="python_operator">=</code><code class="python_literal1">' 0 '</code>, bg <code class="python_operator">=</code><code class="python_literal1">'white'</code>)
+      self.points.<code class="python_function">pack</code><code class="python_operator">(</code>)
+      <code class="python_comment1"># positionner à gauche ou à droite suivant le sens du canon :</code>
+      <code class="python_keyword1">if</code> canon.sens <code class="python_operator">==</code> <code class="python_operator">-</code><code class="python_digit">1</code>:
+      self.<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">5</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>, side <code class="python_operator">=</code>RIGHT)
+      <code class="python_keyword1">else</code>:
+      self.<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">5</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>, side <code class="python_operator">=</code>LEFT)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">tirer</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"déclencher le tir du canon associé"</code>
+      self.canon.<code class="python_function">feu</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">orienter</code><code class="python_operator">(</code>self, angle):
+      <code class="python_literal1">"ajuster la hausse du canon associé"</code>
+      self.canon.<code class="python_function">orienter</code><code class="python_operator">(</code>angle)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">attribuerPoint</code><code class="python_operator">(</code>self, p):
+      <code class="python_literal1">"incrémenter ou décrémenter le score, de &lt;p&gt; points"</code>
+      self.score <code class="python_operator">+=</code> p
+      self.points.<code class="python_function">config</code><code class="python_operator">(</code>text <code class="python_operator">=</code> <code class="python_literal1">' </code><code class="python_literal4">%s</code><code class="python_literal1"> '</code> <code class="python_operator">%</code> self.score)
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Application</code><code class="python_operator">(</code>Frame):
+  <code class="python_literal2">'''Fenêtre principale de l'application'''</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.master.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">'&gt;&gt;&gt;&gt;&gt; Boum ! Boum ! &lt;&lt;&lt;&lt;&lt;'</code>)
+      self.<code class="python_function">pack</code><code class="python_operator">(</code>)
+      self.jeu <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>self, width <code class="python_operator">=</code><code class="python_digit">400</code>, height <code class="python_operator">=</code><code class="python_digit">250</code>, bg <code class="python_operator">=</code><code class="python_literal1">'ivory'</code>,
+	     bd <code class="python_operator">=</code><code class="python_digit">3</code>, relief <code class="python_operator">=</code>SUNKEN)
+      self.jeu.<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">8</code>, pady <code class="python_operator">=</code><code class="python_digit">8</code>, side <code class="python_operator">=</code>TOP)
+ 
+      self.guns <code class="python_operator">=</code>{}	     <code class="python_comment1"># dictionnaire des canons présents</code>
+      self.pupi <code class="python_operator">=</code>{}	     <code class="python_comment1"># dictionnaire des pupitres présents</code>
+      <code class="python_comment1"># Instanciation de 2 objets canons (+1, -1 = sens opposés) :</code>
+      self.guns[<code class="python_literal1">"Billy"</code>] <code class="python_operator">=</code> <code class="python_function">Canon</code><code class="python_operator">(</code>self.jeu, <code class="python_literal1">"Billy"</code>, <code class="python_digit">30</code>, <code class="python_digit">200</code>, <code class="python_digit">1</code>, <code class="python_literal1">"red"</code>)
+      self.guns[<code class="python_literal1">"Linus"</code>] <code class="python_operator">=</code> <code class="python_function">Canon</code><code class="python_operator">(</code>self.jeu, <code class="python_literal1">"Linus"</code>, <code class="python_digit">370</code>,<code class="python_digit">200</code>,<code class="python_operator">-</code><code class="python_digit">1</code>, <code class="python_literal1">"blue"</code>)
+      <code class="python_comment1"># Instanciation de 2 pupitres de pointage associés à ces canons :</code>
+      self.pupi[<code class="python_literal1">"Billy"</code>] <code class="python_operator">=</code> <code class="python_function">Pupitre</code><code class="python_operator">(</code>self, self.guns[<code class="python_literal1">"Billy"</code>])
+      self.pupi[<code class="python_literal1">"Linus"</code>] <code class="python_operator">=</code> <code class="python_function">Pupitre</code><code class="python_operator">(</code>self, self.guns[<code class="python_literal1">"Linus"</code>])
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">disperser</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"déplacer aléatoirement les canons"</code>
+      <code class="python_keyword1">for</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_keyword1">in</code> self.guns:
+      gun <code class="python_operator">=</code>self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>]
+      <code class="python_comment1"># positionner à gauche ou à droite, suivant sens du canon :</code>
+      <code class="python_keyword1">if</code> gun.sens <code class="python_operator">==</code> <code class="python_operator">-</code><code class="python_digit">1</code> :
+	  x <code class="python_operator">=</code> <code class="python_function">randrange</code><code class="python_operator">(</code><code class="python_digit">320</code>,<code class="python_digit">380</code>)
+      <code class="python_keyword1">else</code>:
+	  x <code class="python_operator">=</code> <code class="python_function">randrange</code><code class="python_operator">(</code><code class="python_digit">20</code>,<code class="python_digit">80</code>)
+      <code class="python_comment1"># déplacement proprement dit :</code>
+      gun.<code class="python_function">deplacer</code><code class="python_operator">(</code>x, <code class="python_function">randrange</code><code class="python_operator">(</code><code class="python_digit">150</code>,<code class="python_digit">240</code>))
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">goal</code><code class="python_operator">(</code>self, i, j):
+      <code class="python_literal1">"le canon &lt;i&gt; signale qu'il a atteint l'adversaire &lt;j&gt;"</code>
+      <code class="python_keyword1">if</code> i <code class="python_operator">!=</code> j:
+      self.pupi[i].<code class="python_function">attribuerPoint</code><code class="python_operator">(</code><code class="python_digit">1</code>)	
+      <code class="python_keyword1">else</code>:
+      self.pupi[i].<code class="python_function">attribuerPoint</code><code class="python_operator">(-</code><code class="python_digit">1</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">dictionnaireCanons</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"renvoyer le dictionnaire décrivant les canons présents"</code> 
+      <code class="python_keyword1">return</code> self.guns
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code><code class="python_literal1">'__main__'</code>:
+  <code class="python_function">Application</code><code class="python_operator">(</code>).<code class="python_function">mainloop</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L17-A-3-A">17-A-3-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Ligne 7 : Par rapport au prototype, trois paramètres ont été ajoutés à la méthode constructeur. Le paramètre
+		<b>id</b> nous permet d'identifier chaque instance de la classe <b>Canon()</b> à l'aide d'un nom quelconque. Le paramètre <b>sens</b> indique s'il s'agit
+		d'un canon qui tire vers la droite (sens = 1) ou vers la gauche (sens = -1). Le paramètre <b>coul</b> spécifie la couleur associée au
+		canon.</li>
+              <li>Ligne 9 : Tous les widgets <span class="italique">tkinter</span> possèdent un attribut <b>master</b> qui contient la référence leur widget maître
+		éventuel (leur « contenant »). Cette référence est donc pour nous celle de l'application principale. Nous avons
+		implémenté nous-mêmes une technique similaire pour référencer le canevas, à l'aide de l'attribut <b>boss</b>.</li>
+              <li>Lignes 42 à 50 : Cette méthode permet d'amener le canon dans un nouvel emplacement. Elle servira à repositionner les
+		canons au hasard après chaque tir, ce qui augmente l'intérêt du jeu.</li>
+              <li>Lignes 56-57 : Nous essayons de construire notre classe canon de telle manière qu'elle puisse être réutilisée dans des projets
+		plus vastes, impliquant un nombre quelconque d'objets canons qui pourront apparaître et disparaître au fil des combats. Dans cette perspective, il faut
+		que nous puissions disposer d'une description de tous les canons présents, avant chaque tir, de manière à pouvoir déterminer si une cible a
+		été touchée ou non. Cette description est gérée par l'application principale, dans un dictionnaire, dont on peut demander une copie par
+		l'intermédiaire de sa méthode <b>dictionnaireCanons()</b>.</li>
+              <li>Lignes 66 à 68 : Dans cette même perspective généraliste, il peut être utile d'informer éventuellement le
+		programme appelant que le coup a effectivement été tiré ou non.</li>
+              <li>Ligne 76 : L'animation de l'obus est désormais traitée par deux méthodes complémentaires. Afin de clarifier le code, nous
+		avons placé dans une méthode distincte les instructions servant à déterminer si une cible a été atteinte (méthode
+		<b>test_obstacle()</b>).</li>
+              <li>Lignes 79 à 81 : Nous avons vu précédemment que l'on interrompt l'animation de l'obus en attribuant une valeur
+		« fausse » à la variable <b>self</b>.<b>anim</b>. La méthode <b>animer_obus()</b> cesse alors de boucler et exécute le code de
+		la ligne 81.</li>
+              <li>Lignes 83 à 100 : Cette méthode évalue si les coordonnées actuelles de l'obus sortent des limites de la
+		fenêtre, ou encore si elles s'approchent de celles d'un autre canon. Dans les deux cas, l'interrupteur d'animation est actionné, mais dans le second, on
+		dessine une « explosion » jaune, et la référence du canon touché est mémorisée. La méthode annexe
+		<b>fin_explosion</b>() est invoquée après un court laps de temps pour terminer le travail, c'est-à-dire effacer le cercle d'explosion et envoyer un
+		message à la fenêtre maîtresse pour signaler le coup au but.</li>
+              <li>Lignes 115 à 152 : La classe <b>Pupitre()</b> définit un nouveau widget par dérivation de la classe <b>Frame()</b>, selon
+		une technique qui doit désormais vous être devenue familière. Ce nouveau widget regroupe les commandes de hausse et de tir, ainsi que l'afficheur de
+		points associés à un canon bien déterminé. La correspondance visuelle entre les deux est assurée par l'adoption d'une couleur commune. Les
+		méthodes <b>tirer()</b> et <b>orienter()</b> communiquent avec l'objet <b>Canon()</b> associé, par l'intermédiaire des méthodes de
+		celui-ci.</li>
+              <li>Lignes 154 à 171 : La fenêtre d'application est elle aussi un widget dérivé de <b>Frame()</b>. Son constructeur
+		instancie les deux canons et leurs pupitres de pointage, en plaçant ces objets dans les deux dictionnaires <b>self</b>.<b>guns</b> et <b>self</b>.<b>pupi</b>.
+		Cela permet d'effectuer ensuite divers traitements systématiques sur chacun d'eux (comme par exemple à la méthode suivante). En procédant
+		ainsi, on se réserve en outre la possibilité d'augmenter sans effort le nombre de ces canons si nécessaire, dans les développements
+		ultérieurs du programme.</li>
+              <li>Lignes 173 à 183 : Cette méthode est invoquée après chaque tir pour déplacer aléatoirement les deux
+		canons, ce qui augmente la difficulté du jeu.</li>
+            </ul>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L17-A-4">17-A-4. Développements complémentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Tel qu'il vient d'être décrit, notre programme correspond déjà plus ou moins au cahier des charges initial, mais il est évident que
+	    nous pouvons continuer à le perfectionner.</p>
+          <p>A) Nous devrions par exemple <span class="italique">mieux le paramétrer</span>. Qu'est-ce à dire ? Dans sa forme actuelle, notre jeu comporte un canevas de taille
+	    prédéterminée (400 × 250 pixels, voir ligne 161). Si nous voulons modifier ces valeurs, nous devons veiller à modifier aussi les autres lignes
+	    du script où ces dimensions interviennent (comme par exemple aux lignes 168-169, ou 179-184). De telles lignes interdépendantes risquent de devenir
+	    nombreuses si nous ajoutons encore d'autres fonctionnalités. Il serait donc plus judicieux de dimensionner le canevas <span class="italique">à l'aide de variables</span>, dont la
+	    valeur serait définie en un seul endroit. Ces variables seraient ensuite exploitées dans toutes les lignes d'instructions où les dimensions du canevas
+	    interviennent.</p>
+          <p>Nous avons déjà effectué une partie de ce travail : dans la classe <b>Canon()</b>, en effet, les dimensions du canevas sont
+	    récupérées à l'aide d'une méthode prédéfinie (voir lignes 17-18), et placées dans des attributs d'instance qui peuvent
+	    être utilisés partout dans la classe.</p>
+          <p>B) Après chaque tir, nous provoquons un déplacement aléatoire des canons, en redéfinissant leurs coordonnées au hasard. Il serait
+	    probablement plus réaliste de provoquer de véritables <span class="italique">déplacements relatifs</span>, plutôt que de redéfinir au hasard des positions absolues.
+	    Pour ce faire, il suffit de retravailler la méthode <b>deplacer()</b> de la classe <b>Canon()</b>. En fait, il serait encore plus intéressant de faire en
+	    sorte que cette méthode puisse produire à volonté, aussi bien un déplacement relatif qu'un positionnement absolu, en fonction d'une valeur
+	    transmise en argument.</p>
+          <p>C) Le système de commande des tirs devrait être amélioré : puisque nous ne disposons que d'une seule souris, il faut demander aux
+	    joueurs de tirer à tour de rôle, et nous n'avons mis en place aucun mécanisme pour les forcer à le faire. Une meilleure approche consisterait
+	    à prévoir des commandes de hausse et de tir utilisant certaines touches du clavier, qui soient distinctes pour les deux joueurs.</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/10000000000002A5000001D57D0D1D80.png"><img class="ImgCliquable figure-img-caption" src="./images/10000000000002A5000001D57D0D1D80.png" alt="Image non disponible" width="469" height="325"/></a></figure></div>
+          <p>Ce type de développement suppose cependant que nous ayons appris à maîtriser au préalable deux domaines de programmation qui
+	    débordent un peu le cadre de ce cours :</p>
+          <ul class="ListeDVP">
+            <li>la technique des <span class="italique">sockets</span>, qui permet d'établir une communication entre deux ordinateurs ;</li>
+            <li>la technique des <span class="italique">threads</span>, qui permet à un même programme d'effectuer plusieurs tâches simultanément (cela nous sera
+	      nécessaire, si nous voulons construire une application capable de communiquer en même temps avec plusieurs partenaires).</li>
+          </ul>
+          <p>Ces matières ne font pas strictement partie des objectifs que nous nous sommes fixés pour ce cours, et leur traitement nécessite à lui
+	    seul un chapitre entier. Nous n'aborderons donc pas cette question ici. Que ceux que le sujet intéresse se rassurent cependant : ce chapitre existe, mais
+	    sous la forme d'un complément à la fin du livre (chapitre 18) : vous y trouverez la version réseau de notre jeu de bombardes.</p>
+          <p>En attendant, voyons tout de même comment nous pouvons encore progresser, en apportant à notre projet quelques améliorations qui en feront un
+	    jeu pour 4 joueurs. Nous nous efforcerons aussi de mettre en place une programmation bien compartimentée, de manière à ce que les méthodes de nos
+	    classes soient réutilisables dans une large mesure. Nous allons voir au passage comment cette évolution peut se faire sans modifier le code existant, en
+	    utilisant <span class="italique">l'héritage</span> pour produire de nouvelles classes à partir de celles qui sont déjà écrites.</p>
+          <p>Commençons par sauvegarder notre ouvrage précédent dans un fichier, dont nous admettrons pour la suite de ce texte que le nom est :
+	    <b>canon03.py</b>.</p>
+          <p>Nous disposons ainsi d'un véritable <span class="italique">module</span> Python, que nous pouvons importer dans un nouveau script à l'aide d'une seule ligne d'instruction.
+	    En exploitant cette technique, nous continuons à perfectionner notre application, en ne conservant sous les yeux que les nouveautés :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e50964">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e50964" onclick="selectionCode('contenuCoded0e50964', 'IdTitreCode-d0e50964');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/>74.<br/>75.<br/>76.<br/>77.<br/>78.<br/>79.<br/>80.<br/>81.<br/>82.<br/>83.<br/>84.<br/>85.<br/>86.<br/>87.<br/>88.<br/>89.<br/>90.<br/>91.<br/>92.<br/>93.<br/>94.<br/>95.<br/>96.<br/>97.<br/>98.<br/>99.<br/>100.<br/>101.<br/>102.<br/>103.<br/>104.<br/>105.<br/>106.<br/>107.<br/>108.<br/>109.<br/>110.<br/>111.<br/>112.<br/>113.<br/>114.<br/>115.<br/>116.<br/>117.<br/>118.<br/>119.<br/>120.<br/>121.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e50964"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> sin, cos, pi
+<code class="python_keyword1">from</code> random <code class="python_keyword1">import</code> randrange
+<code class="python_keyword1">import</code> canon03
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Canon</code><code class="python_operator">(</code>canon03.Canon):
+  <code class="python_literal2">"""Canon amélioré"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, x, y, sens, coul):
+      canon03.Canon.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, x, y, sens, coul)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">deplacer</code><code class="python_operator">(</code>self, x, y, rel <code class="python_operator">=</code><code class="python_keyword3">False</code>):
+      <code class="python_literal1">"déplacement, relatif si &lt;rel&gt; est vrai, absolu si &lt;rel&gt; est faux"</code>
+      <code class="python_keyword1">if</code> rel:
+      dx, dy <code class="python_operator">=</code> x, y
+      <code class="python_keyword1">else</code>:
+      dx, dy <code class="python_operator">=</code> x <code class="python_operator">-</code>self.x1, y <code class="python_operator">-</code>self.y1
+      <code class="python_comment1"># limites horizontales :</code>
+      <code class="python_keyword1">if</code> self.sens <code class="python_operator">==</code><code class="python_digit">1</code>:
+      xa, xb <code class="python_operator">=</code> <code class="python_digit">20</code>, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.xMax <code class="python_operator">*</code><code class="python_digit">.33</code>)
+      <code class="python_keyword1">else</code>:
+      xa, xb <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.xMax <code class="python_operator">*</code><code class="python_digit">.66</code>), self.xMax <code class="python_operator">-</code><code class="python_digit">20</code>
+      <code class="python_comment1"># ne déplacer que dans ces limites :</code>
+      <code class="python_keyword1">if</code> self.x1 <code class="python_operator">+</code>dx <code class="python_operator">&lt;</code> xa:
+      dx <code class="python_operator">=</code> xa <code class="python_operator">-</code>self.x1
+      <code class="python_keyword1">elif</code> self.x1 <code class="python_operator">+</code>dx <code class="python_operator">&gt;</code> xb:
+      dx <code class="python_operator">=</code> xb <code class="python_operator">-</code>self.x1
+      <code class="python_comment1"># limites verticales :</code>
+      ya, yb <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.yMax <code class="python_operator">*</code><code class="python_digit">.4</code>), self.yMax <code class="python_operator">-</code><code class="python_digit">20</code>
+      <code class="python_comment1"># ne déplacer que dans ces limites :</code>
+      <code class="python_keyword1">if</code> self.y1 <code class="python_operator">+</code>dy <code class="python_operator">&lt;</code> ya:
+      dy <code class="python_operator">=</code> ya <code class="python_operator">-</code>self.y1
+      <code class="python_keyword1">elif</code> self.y1 <code class="python_operator">+</code>dy <code class="python_operator">&gt;</code> yb:
+      dy <code class="python_operator">=</code> yb <code class="python_operator">-</code>self.y1
+      <code class="python_comment1"># déplacement de la buse et du corps du canon :	  </code>
+      self.boss.<code class="python_function">move</code><code class="python_operator">(</code>self.buse, dx, dy) 
+      self.boss.<code class="python_function">move</code><code class="python_operator">(</code>self.corps, dx, dy) 
+      <code class="python_comment1"># renvoyer les nouvelles coord. au programme appelant :</code>
+      self.x1 <code class="python_operator">+=</code> dx
+      self.y1 <code class="python_operator">+=</code> dy
+      self.x2 <code class="python_operator">+=</code> dx
+      self.y2 <code class="python_operator">+=</code> dy
+      <code class="python_keyword1">return</code> self.x1, self.y1
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">fin_animation</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"actions à accomplir lorsque l'obus a terminé sa trajectoire"</code>
+      <code class="python_comment1"># déplacer le canon qui vient de tirer :</code>
+      self.appli.<code class="python_function">depl_aleat_canon</code><code class="python_operator">(</code>self.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>)
+      <code class="python_comment1"># cacher l'obus (en l'expédiant hors du canevas) :</code>
+      self.boss.<code class="python_function">coords</code><code class="python_operator">(</code>self.obus, <code class="python_operator">-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>, <code class="python_operator">-</code><code class="python_digit">10</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">effacer</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"faire disparaître le canon du canevas"</code>
+      self.boss.<code class="python_function">delete</code><code class="python_operator">(</code>self.buse)
+      self.boss.<code class="python_function">delete</code><code class="python_operator">(</code>self.corps)
+      self.boss.<code class="python_function">delete</code><code class="python_operator">(</code>self.obus)     
+ 
+<code class="python_keyword1">class</code> <code class="python_function">AppBombardes</code><code class="python_operator">(</code>Frame):
+  <code class="python_literal2">'''Fenêtre principale de l'application'''</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, larg_c, haut_c):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.<code class="python_function">pack</code><code class="python_operator">(</code>)
+      self.xm, self.ym <code class="python_operator">=</code> larg_c, haut_c
+      self.jeu <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>self, width <code class="python_operator">=</code>self.xm, height <code class="python_operator">=</code>self.ym,
+	     bg <code class="python_operator">=</code><code class="python_literal1">'ivory'</code>, bd <code class="python_operator">=</code><code class="python_digit">3</code>, relief <code class="python_operator">=</code>SUNKEN)
+      self.jeu.<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">4</code>, pady <code class="python_operator">=</code><code class="python_digit">4</code>, side <code class="python_operator">=</code>TOP)
+ 
+      self.guns <code class="python_operator">=</code>{}	     <code class="python_comment1"># dictionnaire des canons présents</code>
+      self.pupi <code class="python_operator">=</code>{}	     <code class="python_comment1"># dictionnaire des pupitres présents</code>
+      self.<code class="python_function">specificites</code><code class="python_operator">(</code>)     <code class="python_comment1"># objets différents dans classes dérivées</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">specificites</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"instanciation des canons et des pupitres de pointage"</code>
+      self.master.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">'&lt;&lt;&lt; Jeu des bombardes &gt;&gt;&gt;'</code>)
+      id_list <code class="python_operator">=</code>[<code class="python_operator">(</code><code class="python_literal1">"Paul"</code>,<code class="python_literal1">"red"</code>),<code class="python_operator">(</code><code class="python_literal1">"Roméo"</code>,<code class="python_literal1">"cyan"</code>),
+	 <code class="python_operator">(</code><code class="python_literal1">"Virginie"</code>,<code class="python_literal1">"orange"</code>),<code class="python_operator">(</code><code class="python_literal1">"Juliette"</code>,<code class="python_literal1">"blue"</code>)]
+      s <code class="python_operator">=</code> <code class="python_keyword3">False</code>
+      <code class="python_keyword1">for</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, coul <code class="python_keyword1">in</code> id_list:
+      <code class="python_keyword1">if</code> s:
+	  sens <code class="python_operator">=</code><code class="python_digit">1</code>
+      <code class="python_keyword1">else</code>:
+	  sens <code class="python_operator">=-</code><code class="python_digit">1</code>
+      x, y <code class="python_operator">=</code> self.<code class="python_function">coord_aleat</code><code class="python_operator">(</code>sens)
+      self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>] <code class="python_operator">=</code> <code class="python_function">Canon</code><code class="python_operator">(</code>self.jeu, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, x, y, sens, coul)
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>] <code class="python_operator">=</code> canon03.<code class="python_function">Pupitre</code><code class="python_operator">(</code>self, self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>])
+      s <code class="python_operator">=</code> <code class="python_keyword1">not</code> s 	 <code class="python_comment1"># changer de côté à chaque itération</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">depl_aleat_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>):
+      <code class="python_literal1">"déplacer aléatoirement le canon &lt;id&gt;"</code>
+      gun <code class="python_operator">=</code>self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>]
+      dx, dy <code class="python_operator">=</code> <code class="python_function">randrange</code><code class="python_operator">(-</code><code class="python_digit">60</code>, <code class="python_digit">61</code>), <code class="python_function">randrange</code><code class="python_operator">(-</code><code class="python_digit">60</code>, <code class="python_digit">61</code>)
+      <code class="python_comment1"># déplacement (avec récupération des nouvelles coordonnées) :</code>
+      x, y <code class="python_operator">=</code> gun.<code class="python_function">deplacer</code><code class="python_operator">(</code>dx, dy, <code class="python_keyword3">True</code>)
+      <code class="python_keyword1">return</code> x, y
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">coord_aleat</code><code class="python_operator">(</code>self, s):
+      <code class="python_literal1">"coordonnées aléatoires, à gauche (s =1) ou à droite (s =-1)"</code> 
+      y <code class="python_operator">=</code><code class="python_function">randrange</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.ym <code class="python_operator">/</code><code class="python_digit">2</code>), self.ym <code class="python_operator">-</code><code class="python_digit">20</code>)
+      <code class="python_keyword1">if</code> s <code class="python_operator">==</code> <code class="python_operator">-</code><code class="python_digit">1</code>:
+      x <code class="python_operator">=</code><code class="python_function">randrange</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.xm <code class="python_operator">*</code><code class="python_digit">.7</code>), self.xm <code class="python_operator">-</code><code class="python_digit">20</code>)
+      <code class="python_keyword1">else</code>:
+      x <code class="python_operator">=</code><code class="python_function">randrange</code><code class="python_operator">(</code><code class="python_digit">20</code>, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>self.xm <code class="python_operator">*</code><code class="python_digit">.3</code>))
+      <code class="python_keyword1">return</code> x, y
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">goal</code><code class="python_operator">(</code>self, i, j):
+      <code class="python_literal1">"le canon n°i signale qu'il a atteint l'adversaire n°j"</code>
+      <code class="python_comment1"># de quel camp font-ils partie chacun ?</code>
+      ti, tj <code class="python_operator">=</code> self.guns[i].sens, self.guns[j].sens	  
+      <code class="python_keyword1">if</code> ti <code class="python_operator">!=</code> tj :	     <code class="python_comment1"># ils sont de sens opposés :</code>
+      p <code class="python_operator">=</code> <code class="python_digit">1</code>	     <code class="python_comment1"># on gagne 1 point</code>
+      <code class="python_keyword1">else</code>:		 <code class="python_comment1"># ils sont dans le même sens :</code>
+      p <code class="python_operator">=</code> <code class="python_operator">-</code><code class="python_digit">2</code>	      <code class="python_comment1"># on a touché un allié !!</code>
+      self.pupi[i].<code class="python_function">attribuerPoint</code><code class="python_operator">(</code>p)
+      <code class="python_comment1"># celui qui est touché perd de toute façon un point :</code>
+      self.pupi[j].<code class="python_function">attribuerPoint</code><code class="python_operator">(-</code><code class="python_digit">1</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">dictionnaireCanons</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"renvoyer le dictionnaire décrivant les canons présents"</code> 
+      <code class="python_keyword1">return</code> self.guns
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code><code class="python_literal1">'__main__'</code>:
+  <code class="python_function">AppBombardes</code><code class="python_operator">(</code><code class="python_digit">650</code>,<code class="python_digit">300</code>).<code class="python_function">mainloop</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L17-A-4-A">17-A-4-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/10000000000002980000012C7E1E8330.png"><img class="ImgCliquable figure-img-caption" src="./images/10000000000002980000012C7E1E8330.png" alt="Image non disponible" width="550" height="248"/></a></figure></div>
+            <ul class="ListeDVP">
+              <li>Ligne 6 : La forme d'importation utilisée à la ligne 4 nous permet de redéfinir une nouvelle classe <b>Canon()</b>
+		dérivée de la précédente, tout en lui conservant le même nom. De cette manière, les portions de code qui utilisent cette classe ne
+		devront pas être modifiées (cela n'aurait pas été possible si nous avions utilisé par exemple « <b><span style="color:#000080;">from
+		canon03 import *</span></b> ».)</li>
+              <li>Lignes 11 à 16 : La méthode définie ici porte le même nom qu'une méthode de la classe parente. <span class="italique">Elle va donc
+		remplacer celle-ci dans la nouvelle classe</span> (on pourra dire également que la méthode <b>deplacer()</b> a été <span class="italique">sur chargée</span>). Lorsque l'on réalise ce genre de modification, on s'efforce en général de faire en sorte que
+		la nouvelle méthode effectue le même travail que l'ancienne quand elle est invoquée de la même façon que l'était cette dernière.
+		On s'assure ainsi que les applications qui utilisaient la classe parente pourront aussi utiliser la classe fille, sans devoir être elles-mêmes
+		modifiées.<br/>
+		 Nous obtenons ce résultat en ajoutant un ou plusieurs paramètres, dont les valeurs par défaut forceront l'ancien comportement. Ainsi, lorsque l'on
+		   ne fournit aucun argument pour le paramètre <b>rel</b>, les paramètres <b>x</b> et <b>y</b> sont utilisés comme des coordonnées absolues
+		   (ancien comportement de la méthode). Par contre, si l'on fournit pour <b>rel</b> un argument « vrai », alors les paramètres
+		   <b>x</b> et <b>y</b> sont traités comme des déplacements relatifs (nouveau comportement).</li>
+              <li>Lignes 17 à 33 : Les déplacements demandés seront produits aléatoirement. Il nous faut donc prévoir un
+		système de barrières logicielles, afin d'éviter que l'objet ainsi déplacé ne sorte du canevas.</li>
+              <li>Ligne 42 : Nous renvoyons les coordonnées résultantes au programme appelant. Il se peut en effet que celui-ci commande un
+		déplacement du canon sans connaître sa position initiale.</li>
+              <li>Lignes 44 à 49 : Il s'agit encore une fois de <span class="italique">surcharger</span> une méthode qui existait dans la classe parente, de
+		manière à obtenir un comportement différent : après chaque tir, désormais on ne disperse plus tous les canons présents, mais
+		seulement celui qui vient de tirer.</li>
+              <li>Lignes 51 à 55 : Méthode ajoutée en prévision d'applications qui souhaiteraient installer ou retirer des canons au
+		fil du déroulement du jeu.</li>
+              <li>Lignes 57 et suivantes : Cette nouvelle classe est conçue dès le départ de telle manière qu'elle puisse
+		aisément être dérivée. C'est la raison pour laquelle nous avons fragmenté son constructeur en deux parties : la méthode
+		<b>__init__()</b> contient le code commun à tous les objets, aussi bien ceux qui seront instanciés à partir de cette classe que ceux qui seront
+		instanciés à partir d'une classe dérivée éventuelle. La méthode <b>specificites()</b> contient des portions de code plus
+		spécifiques : cette méthode est clairement destinée à être <span class="italique">surchargée</span> dans les classes dérivées
+		éventuelles.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L17-B">17-B. Jeu de Ping<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans les pages qui suivent, vous trouverez le script correspondant à un petit programme complet. Ce programme vous est fourni à titre d'exemple de ce
+	  que vous pouvez envisager de développer vous-même comme projet personnel de synthèse. Il vous montre encore une fois comment vous pouvez utiliser
+	  plusieurs classes afin de construire un script bien structuré. Il vous montre également comment vous pouvez paramétrer une application graphique de
+	  manière à ce que tout y soit <span class="italique">redimensionnable</span>.</p>
+        
+		<h4 class="TitreSection2" id="L17-B-1">17-B-1. Principe<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le «jeu» mis en œuvre ici est plutôt une sorte d'exercice mathématique. Il se joue sur un panneau où est représenté un
+	    quadrillage de dimensions variables, dont toutes les cases sont occupées par des pions. Ces pions possèdent chacun une face blanche et une face noire (comme
+	    les pions du jeu <span class="italique">Othello/Reversi</span>), et au début de l'exercice ils présentent tous leur face blanche par-dessus.</p>
+          <p>Lorsque l'on clique sur un pion à l'aide de la souris, les 8 pions adjacents se retournent. Le jeu consiste alors à essayer de retourner tous les
+	    pions, en cliquant sur certains d'entre eux.</p>
+          <p>L'exercice est très facile avec une grille de 2 × 2 cases (il suffit de cliquer sur chacun des 4 pions). Il devient plus difficile avec des grilles
+	    plus grandes, et est même tout à fait impossible avec certaines d'entre elles. À vous de déterminer lesquelles !</p>
+          <p>Ne négligez pas d'étudier le cas des grilles 1 × n.</p>
+          <blockquote class="citation"><div>Vous trouverez la discussion complète du jeu de Ping, sa théorie et ses extensions, dans la revue « Pour la science »
+	    n<sup>o</sup> 298 du mois d'Août 2002, pages 98 à 102. Une copie de cet article est disponible en ligne, sur :<br/>
+		 http://www2.lifl.fr/~delahaye/dnalor/JeuAEpisodes.pdf </div></blockquote>
+        </div>
+        
+		<h4 class="TitreSection2" id="L17-B-2">17-B-2. Programmation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Lorsque vous développez un projet logiciel, veillez toujours à faire l'effort de décrire votre démarche le plus clairement possible.
+	    Commencez par établir un cahier des charges détaillé, et ne négligez pas de commenter ensuite très soigneusement votre code, au fur et à
+	    mesure de son élaboration (et non après coup !).</p>
+          <p>En procédant ainsi, vous vous forcez vous-même à exprimer ce que vous souhaitez que la machine fasse, ce qui vous aide à analyser les
+	    problèmes et à structurer convenablement votre code.</p>
+          
+		<h5 class="TitreSection3" id="L17-B-2-A">17-B-2-A. Cahier des charges du logiciel à développer<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>L'application sera construite sur la base d'une fenêtre principale comportant le panneau de jeu et une barre de menus. </li>
+              <li>L'ensemble devra être extensible à volonté par l'utilisateur, les cases du panneau devant cependant rester carrées.</li>
+              <li>Les options du menu permettront de :</li>
+              <li>La programmation fera appel à trois classes :</li>
+              <li>Le panneau de jeu sera dessiné dans un canevas, lui-même installé dans un cadre (<span class="italique">frame</span>). En fonction des redimensionnements
+		opérés par l'utilisateur, le cadre occupera à chaque fois toute la place disponible : il se présentera donc au programmeur comme un
+		rectangle quelconque, dont les dimensions doivent servir de base au calcul des dimensions de la grille à dessiner.</li>
+              <li>Puisque les cases de cette grille doivent rester carrées, il est facile de commencer par calculer leur taille maximale, puis d'établir les
+		dimensions du canevas en fonction de celle-ci.</li>
+              <li>Gestion du clic de souris : on liera au canevas une méthode-gestionnaire pour l'événement &lt;clic du bouton gauche&gt;. Les
+		coordonnées de l'événement serviront à déterminer dans quelle case de la grille (n<sup>o</sup> de ligne et n<sup>o</sup> de colonne) le
+		clic a été effectué, quelles que soient les dimensions de cette grille. Dans les 8 cases adjacentes, les pions présents seront alors
+		« retournés » (échange des couleurs noire et blanche).</li>
+              <li>choisir les dimensions de la grille (en nombre de cases) ;</li>
+              <li>réinitialiser le jeu (c'est-à-dire disposer tous les pions avec leur face blanche au-dessus) ;</li>
+              <li>afficher le principe du jeu dans une fenêtre d'aide ;</li>
+              <li>terminer (fermer l'application).</li>
+              <li>une classe principale ;</li>
+              <li>une classe pour la barre de menus ;</li>
+              <li>une classe pour le panneau de jeu.</li>
+            </ul>
+            <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e52292">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e52292" onclick="selectionCode('contenuCoded0e52292', 'IdTitreCode-d0e52292');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e52292" class="contenuCode"><code class="python_comment1">###########################################</code>
+<code class="python_comment1">#  Jeu de ping		       #</code>
+<code class="python_comment1">#  Références : Voir article de la revue  #</code>
+<code class="python_comment1">#  &lt;Pour la science&gt;, Aout 2002      #</code>
+<code class="python_comment1">#		      #</code>
+<code class="python_comment1"># (C) Gérard Swinnen (Verviers, Belgique) #</code>
+<code class="python_comment1"># http://www.ulg.ac.be/cifen/inforef/swi  #</code>
+<code class="python_comment1">#		      #</code>
+<code class="python_comment1">#  Version du 29/09/2002 - Licence : GPL  #</code>
+<code class="python_comment1">###########################################</code>
+ 
+<code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_keyword1">class</code> <code class="python_function">MenuBar</code><code class="python_operator">(</code>Frame):
+  <code class="python_literal2">"""Barre de menus déroulants"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss <code class="python_operator">=</code><code class="python_keyword3">None</code>):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, borderwidth <code class="python_operator">=</code><code class="python_digit">2</code>, relief <code class="python_operator">=</code>GROOVE)
+      <code class="python_comment1">##### Menu &lt;Fichier&gt; #####</code>
+      fileMenu <code class="python_operator">=</code> <code class="python_function">Menubutton</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code><code class="python_literal1">'Fichier'</code>)
+      fileMenu.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT, padx <code class="python_operator">=</code><code class="python_digit">5</code>)
+      me1 <code class="python_operator">=</code> <code class="python_function">Menu</code><code class="python_operator">(</code>fileMenu)
+      me1.<code class="python_function">add_command</code><code class="python_operator">(</code>label <code class="python_operator">=</code><code class="python_literal1">'Options'</code>, underline <code class="python_operator">=</code><code class="python_digit">0</code>,
+	      command <code class="python_operator">=</code> boss.options)
+      me1.<code class="python_function">add_command</code><code class="python_operator">(</code>label <code class="python_operator">=</code><code class="python_literal1">'Restart'</code>, underline <code class="python_operator">=</code><code class="python_digit">0</code>,
+	      command <code class="python_operator">=</code> boss.reset)
+      me1.<code class="python_function">add_command</code><code class="python_operator">(</code>label <code class="python_operator">=</code><code class="python_literal1">'Terminer'</code>, underline <code class="python_operator">=</code><code class="python_digit">0</code>,
+	      command <code class="python_operator">=</code> boss.quit)
+      fileMenu.<code class="python_function">configure</code><code class="python_operator">(</code>menu <code class="python_operator">=</code> me1)	
+ 
+      <code class="python_comment1">##### Menu &lt;Aide&gt; #####</code>
+      helpMenu <code class="python_operator">=</code> <code class="python_function">Menubutton</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code><code class="python_literal1">'Aide'</code>)
+      helpMenu.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT, padx <code class="python_operator">=</code><code class="python_digit">5</code>)
+      me1 <code class="python_operator">=</code> <code class="python_function">Menu</code><code class="python_operator">(</code>helpMenu)
+      me1.<code class="python_function">add_command</code><code class="python_operator">(</code>label <code class="python_operator">=</code><code class="python_literal1">'Principe du jeu'</code>, underline <code class="python_operator">=</code><code class="python_digit">0</code>,
+	      command <code class="python_operator">=</code> boss.principe)
+      me1.<code class="python_function">add_command</code><code class="python_operator">(</code>label <code class="python_operator">=</code><code class="python_literal1">'A propos ...'</code>, underline <code class="python_operator">=</code><code class="python_digit">0</code>,
+	      command <code class="python_operator">=</code> boss.aPropos)
+      helpMenu.<code class="python_function">configure</code><code class="python_operator">(</code>menu <code class="python_operator">=</code> me1)	    
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Panneau</code><code class="python_operator">(</code>Frame):
+  <code class="python_literal2">"""Panneau de jeu (grille de n x m cases)"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss <code class="python_operator">=</code><code class="python_keyword3">None</code>):
+      <code class="python_comment1"># Ce panneau de jeu est constitué d'un cadre redimensionnable</code>
+      <code class="python_comment1"># contenant lui-même un canevas. A chaque redimensionnement du</code>
+      <code class="python_comment1"># cadre, on calcule la plus grande taille possible pour les</code>
+      <code class="python_comment1"># cases (carrées) de la grille, et on adapte les dimensions du</code>
+      <code class="python_comment1"># canevas en conséquence.</code>
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.nlig, self.ncol <code class="python_operator">=</code> <code class="python_digit">4</code>, <code class="python_digit">4</code>      <code class="python_comment1"># Grille initiale = 4 x 4</code>
+      <code class="python_comment1"># Liaison de l'événement &lt;resize&gt; à un gestionnaire approprié :</code>
+      self.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">"&lt;Configure&gt;"</code>, self.redim)
+      <code class="python_comment1"># Canevas :</code>
+      self.can <code class="python_operator">=</code><code class="python_function">Canvas</code><code class="python_operator">(</code>self, bg <code class="python_operator">=</code><code class="python_literal1">"dark olive green"</code>, borderwidth <code class="python_operator">=</code><code class="python_digit">0</code>,
+	    highlightthickness <code class="python_operator">=</code><code class="python_digit">1</code>, highlightbackground <code class="python_operator">=</code><code class="python_literal1">"white"</code>)
+      <code class="python_comment1"># Liaison de l'événement &lt;clic de souris&gt; à son gestionnaire :</code>
+      self.can.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">"&lt;Button-1&gt;"</code>, self.clic)
+      self.can.<code class="python_function">pack</code><code class="python_operator">(</code>)
+      self.<code class="python_function">initJeu</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">initJeu</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"Initialisation de la liste mémorisant l'état du jeu"</code>
+      self.etat <code class="python_operator">=</code>[]		<code class="python_comment1"># construction d'une liste de listes</code>
+      <code class="python_keyword1">for</code> i <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code><code class="python_digit">12</code>):	  <code class="python_comment1"># (équivalente à un tableau </code>
+      self.etat.<code class="python_function">append</code><code class="python_operator">(</code>[<code class="python_digit">0</code>]<code class="python_operator">*</code><code class="python_digit">12</code>)	 <code class="python_comment1">#  de 12 lignes x 12 colonnes) </code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">redim</code><code class="python_operator">(</code>self, event):
+      <code class="python_literal1">"Opérations effectuées à chaque redimensionnement"</code>
+      <code class="python_comment1"># Les propriétés associées à l'événement de reconfiguration</code>
+      <code class="python_comment1"># contiennent les nouvelles dimensions du cadre :</code>
+      self.width, self.height <code class="python_operator">=</code> event.width <code class="python_operator">-</code><code class="python_digit">4</code>, event.height <code class="python_operator">-</code><code class="python_digit">4</code>
+      <code class="python_comment1"># La différence de 4 pixels sert à compenser l'épaisseur</code>
+      <code class="python_comment1"># de la 'highlightbordure" entourant le canevas</code>
+      self.<code class="python_function">traceGrille</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">traceGrille</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"Dessin de la grille, en fonction des options &amp; dimensions"</code>
+      <code class="python_comment1"># largeur et hauteur maximales possibles pour les cases :</code>
+      lmax <code class="python_operator">=</code> self.width<code class="python_operator">/</code>self.ncol     
+      hmax <code class="python_operator">=</code> self.height<code class="python_operator">/</code>self.nlig
+      <code class="python_comment1"># Le coté d'une case sera égal à la plus petite de ces dimensions :</code>
+      self.cote <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=min#min"><span>min</span></a><code class="python_operator">(</code>lmax, hmax)
+      <code class="python_comment1"># -&gt; établissement de nouvelles dimensions pour le canevas :</code>
+      larg, haut <code class="python_operator">=</code> self.cote<code class="python_operator">*</code>self.ncol, self.cote<code class="python_operator">*</code>self.nlig
+      self.can.<code class="python_function">configure</code><code class="python_operator">(</code>width <code class="python_operator">=</code>larg, height <code class="python_operator">=</code>haut)
+      <code class="python_comment1"># Tracé de la grille :</code>
+      self.can.<code class="python_function">delete</code><code class="python_operator">(</code>ALL)	    <code class="python_comment1"># Effacement dessins antérieurs</code>
+      s <code class="python_operator">=</code>self.cote	       
+      <code class="python_keyword1">for</code> l <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code>self.nlig <code class="python_operator">-</code><code class="python_digit">1</code>):	 <code class="python_comment1"># lignes horizontales</code>
+      self.can.<code class="python_function">create_line</code><code class="python_operator">(</code><code class="python_digit">0</code>, s, larg, s, fill<code class="python_operator">=</code><code class="python_literal1">"white"</code>)
+      s <code class="python_operator">+=</code>self.cote
+      s <code class="python_operator">=</code>self.cote
+      <code class="python_keyword1">for</code> c <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code>self.ncol <code class="python_operator">-</code><code class="python_digit">1</code>):	 <code class="python_comment1"># lignes verticales</code>
+      self.can.<code class="python_function">create_line</code><code class="python_operator">(</code>s, <code class="python_digit">0</code>, s, haut, fill <code class="python_operator">=</code><code class="python_literal1">"white"</code>)
+      s <code class="python_operator">+=</code>self.cote
+      <code class="python_comment1"># Tracé de tous les pions, blancs ou noirs suivant l'état du jeu :   </code>
+      <code class="python_keyword1">for</code> l <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code>self.nlig):
+      <code class="python_keyword1">for</code> c <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code>self.ncol):
+	  x1 <code class="python_operator">=</code> c <code class="python_operator">*</code>self.cote <code class="python_operator">+</code><code class="python_digit">5</code>		<code class="python_comment1"># taille des pions = </code>
+	  x2 <code class="python_operator">=</code> <code class="python_operator">(</code>c <code class="python_operator">+</code><code class="python_digit">1</code>)<code class="python_operator">*</code>self.cote <code class="python_operator">-</code><code class="python_digit">5</code>	  <code class="python_comment1"># taille de la case -10</code>
+	  y1 <code class="python_operator">=</code> l <code class="python_operator">*</code>self.cote <code class="python_operator">+</code><code class="python_digit">5</code>		<code class="python_comment1">#</code>
+	  y2 <code class="python_operator">=</code> <code class="python_operator">(</code>l <code class="python_operator">+</code><code class="python_digit">1</code>)<code class="python_operator">*</code>self.cote <code class="python_operator">-</code><code class="python_digit">5</code>
+	  coul <code class="python_operator">=</code>[<code class="python_literal1">"white"</code>,<code class="python_literal1">"black"</code>][self.etat[l][c]]
+	  self.can.<code class="python_function">create_oval</code><code class="python_operator">(</code>x1, y1, x2, y2, outline <code class="python_operator">=</code><code class="python_literal1">"grey"</code>,
+		   width <code class="python_operator">=</code><code class="python_digit">1</code>, fill <code class="python_operator">=</code>coul)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">clic</code><code class="python_operator">(</code>self, event):
+      <code class="python_literal1">"Gestion du clic de souris : retournement des pions"</code>
+      <code class="python_comment1"># On commence par déterminer la ligne et la colonne :</code>
+      lig, col <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>event.y<code class="python_operator">/</code>self.cote), <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>event.x<code class="python_operator">/</code>self.cote)
+      <code class="python_comment1"># On traite ensuite les 8 cases adjacentes :</code>
+      <code class="python_keyword1">for</code> l <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code>lig <code class="python_operator">-</code><code class="python_digit">1</code>, lig<code class="python_operator">+</code><code class="python_digit">2</code>):
+      <code class="python_keyword1">if</code> l <code class="python_operator">&lt;</code><code class="python_digit">0</code> <code class="python_keyword1">or</code> l <code class="python_operator">&gt;=</code> self.nlig:
+	  <code class="python_keyword1">continue</code>
+      <code class="python_keyword1">for</code> c <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code>col <code class="python_operator">-</code><code class="python_digit">1</code>, col <code class="python_operator">+</code><code class="python_digit">2</code>):
+	  <code class="python_keyword1">if</code> c <code class="python_operator">&lt;</code><code class="python_digit">0</code> <code class="python_keyword1">or</code> c <code class="python_operator">&gt;=</code> self.ncol:
+	  <code class="python_keyword1">continue</code>
+	  <code class="python_keyword1">if</code> l <code class="python_operator">==</code>lig <code class="python_keyword1">and</code> c <code class="python_operator">==</code>col:
+	  <code class="python_keyword1">continue</code>
+	  <code class="python_comment1"># Retournement du pion par inversion logique :</code>
+	  self.etat[l][c] <code class="python_operator">=</code> <code class="python_keyword1">not</code> <code class="python_operator">(</code>self.etat[l][c])
+      self.<code class="python_function">traceGrille</code><code class="python_operator">(</code>) 
+ 
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Ping</code><code class="python_operator">(</code>Frame):
+  <code class="python_literal2">"""corps principal du programme"""</code>	
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.master.<code class="python_function">geometry</code><code class="python_operator">(</code><code class="python_literal1">"400x300"</code>)
+      self.master.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">" Jeu de Ping"</code>)
+ 
+      self.mbar <code class="python_operator">=</code> <code class="python_function">MenuBar</code><code class="python_operator">(</code>self)
+      self.mbar.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>TOP, expand <code class="python_operator">=</code>NO, fill <code class="python_operator">=</code>X)
+ 
+      self.jeu <code class="python_operator">=</code><code class="python_function">Panneau</code><code class="python_operator">(</code>self)
+      self.jeu.<code class="python_function">pack</code><code class="python_operator">(</code>expand <code class="python_operator">=</code>YES, fill<code class="python_operator">=</code>BOTH, padx <code class="python_operator">=</code><code class="python_digit">8</code>, pady <code class="python_operator">=</code><code class="python_digit">8</code>)
+ 
+      self.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">options</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"Choix du nombre de lignes et de colonnes pour la grille"</code>
+      opt <code class="python_operator">=</code><code class="python_function">Toplevel</code><code class="python_operator">(</code>self)
+      curL <code class="python_operator">=</code><code class="python_function">Scale</code><code class="python_operator">(</code>opt, length <code class="python_operator">=</code><code class="python_digit">200</code>, label <code class="python_operator">=</code><code class="python_literal1">"Nombre de lignes :"</code>,
+	orient <code class="python_operator">=</code>HORIZONTAL,
+	from_ <code class="python_operator">=</code><code class="python_digit">1</code>, to <code class="python_operator">=</code><code class="python_digit">12</code>, command <code class="python_operator">=</code>self.majLignes)
+      curL.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=set#set"><span>set</span></a><code class="python_operator">(</code>self.jeu.nlig)	   <code class="python_comment1"># position initiale du curseur </code>
+      curL.<code class="python_function">pack</code><code class="python_operator">(</code>)
+      curH <code class="python_operator">=</code><code class="python_function">Scale</code><code class="python_operator">(</code>opt, length <code class="python_operator">=</code><code class="python_digit">200</code>, label <code class="python_operator">=</code><code class="python_literal1">"Nombre de colonnes :"</code>,
+	orient <code class="python_operator">=</code>HORIZONTAL,
+	from_ <code class="python_operator">=</code><code class="python_digit">1</code>, to <code class="python_operator">=</code><code class="python_digit">12</code>, command <code class="python_operator">=</code>self.majColonnes)
+      curH.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=set#set"><span>set</span></a><code class="python_operator">(</code>self.jeu.ncol)	    
+      curH.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">majColonnes</code><code class="python_operator">(</code>self, n):
+      self.jeu.ncol <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>n)
+      self.jeu.<code class="python_function">traceGrille</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">majLignes</code><code class="python_operator">(</code>self, n):
+      self.jeu.nlig <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>n)	  
+      self.jeu.<code class="python_function">traceGrille</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">reset</code><code class="python_operator">(</code>self):
+      self.jeu.<code class="python_function">initJeu</code><code class="python_operator">(</code>)
+      self.jeu.<code class="python_function">traceGrille</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">principe</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"Fenêtre-message contenant la description sommaire du principe du jeu"</code> 
+      msg <code class="python_operator">=</code><code class="python_function">Toplevel</code><code class="python_operator">(</code>self)
+      <code class="python_function">Message</code><code class="python_operator">(</code>msg, bg <code class="python_operator">=</code><code class="python_literal1">"navy"</code>, fg <code class="python_operator">=</code><code class="python_literal1">"ivory"</code>, width <code class="python_operator">=</code><code class="python_digit">400</code>,
+      font <code class="python_operator">=</code><code class="python_literal1">"Helvetica 10 bold"</code>, 
+      text <code class="python_operator">=</code><code class="python_literal1">"Les pions de ce jeu possèdent chacun une face blanche et "</code>\
+      <code class="python_literal1">"une face noire. Lorsque l'on clique sur un pion, les 8 "</code>\
+      <code class="python_literal1">"pions adjacents se retournent.</code><code class="python_literal4">\n</code><code class="python_literal1">Le jeu consiste a essayer "</code>\
+      <code class="python_literal1">"de les retouner tous.</code><code class="python_literal4">\n\n</code><code class="python_literal1">Si l'exercice se révèle très facile "</code>\
+      <code class="python_literal1">"avec une grille de 2 x 2 cases. Il devient plus difficile avec "</code>\
+      <code class="python_literal1">"des grilles plus grandes. Il est même tout à fait impossible "</code>\
+      <code class="python_literal1">"avec certaines grilles.</code><code class="python_literal4">\n</code><code class="python_literal1">A vous de déterminer lesquelles !</code><code class="python_literal4">\n\n</code><code class="python_literal1">"</code>\
+      <code class="python_literal1">"Réf : revue 'Pour la Science' - Aout 2002"</code>)\
+      .<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">10</code>, pady <code class="python_operator">=</code><code class="python_digit">10</code>)       
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">aPropos</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"Fenêtre-message indiquant l'auteur et le type de licence"</code> 
+      msg <code class="python_operator">=</code><code class="python_function">Toplevel</code><code class="python_operator">(</code>self)
+      <code class="python_function">Message</code><code class="python_operator">(</code>msg, width <code class="python_operator">=</code><code class="python_digit">200</code>, aspect <code class="python_operator">=</code><code class="python_digit">100</code>, justify <code class="python_operator">=</code>CENTER,
+      text <code class="python_operator">=</code><code class="python_literal1">"Jeu de Ping</code><code class="python_literal4">\n\n</code><code class="python_literal1">(C) Gérard Swinnen, Aout 2002.</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+      <code class="python_literal1">"Licence = GPL"</code>).<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">10</code>, pady <code class="python_operator">=</code><code class="python_digit">10</code>)
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code> <code class="python_literal1">'__main__'</code>:
+  <code class="python_function">Ping</code><code class="python_operator">(</code>).<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+            <blockquote class="citation"><div>- Rappel -</div></blockquote>
+            <blockquote class="citation"><div>Si vous souhaitez expérimenter ces programmes sans avoir à les réécrire, vous pouvez trouver leur code source à
+	      l<span class="italique">'</span>adresse :<br/>
+		 http://www.inforef.be/swi/python.htm.</div></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_16.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_18.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage85" href="#signetNoteBasPage85">(85)</a></div><div class="ContenuUneNoteBasPage">
+          <span style="color:#000000;">Voir page  : </span>
+          <span class="italique">
+            <span style="color:#000000;">recherche des erreurs et expérimentation</span>
+          </span>
+          <span style="color:#000000;">, et aussi page  : </span>
+          <span class="italique">
+            <span style="color:#000000;">fenêtres avec menus.</span>
+          </span>
+        </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage86" href="#signetNoteBasPage86">(86)</a></div><div class="ContenuUneNoteBasPage">Nous n'hésitons pas à discuter ici le développement d'un 
+		logiciel de jeu, parce qu'il s'agit d'un domaine directement accessible à tous, et dans lequel 
+		les objectifs concrets sont aisément identifiables. Il va de soi que les mêmes techniques de
+	  développement peuvent s'appliquer à d'autres applications plus « sérieuses ».</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage87" href="#signetNoteBasPage87">(87)</a></div><div class="ContenuUneNoteBasPage">Il s'agit d'une suite bureautique complète, 
+libre et gratuite, largement compatible avec MS-Office, disponible pour <span class="italique">Linux, Windows, Mac OS, Solaris</span>... 
+Le présent manuel a été entièrement rédigé avec son traitement de texte. Vous pouvez vous 
+la procurer par téléchargement depuis le site web : <a class=" tooltip blue-tooltip lienArticle simple" href="http://www.openoffice.org" target="_blank">http://www.openoffice.org<span>openoffice.org</span></a></div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

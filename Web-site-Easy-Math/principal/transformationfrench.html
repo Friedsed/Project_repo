@@ -1,0 +1,634 @@
+<html>
+    <head>
+        <meta src="utf-8" >
+        <title> Easy math</title>
+        <link rel="stylesheet" href="transformation.css">
+        <link rel="icon" href="logo1.bmp">
+    </head>
+    <body>
+        <script type="text/javascript" src="trans.js"></script>
+        <header>
+            <h1>Space Transformations</h1>
+        </header>
+            <main>
+               
+                <section class="solution">
+
+                    <section>
+
+                        <h1>Courses Summary:</h1>      <br>
+                        <a href="https://maths-france.fr/wp-content/uploads/Espace_fiche.pdf"> Summary 01</a> <br>
+                        <a href="https://maths-france.fr/wp-content/uploads/DroitesPlansEspace_fiche.pdf"> Summary 02</a> <br>
+                    </section>
+
+
+                <section>
+                    <p>
+                        1- <a href="#v1">Vector in the Plane</a><br/>
+                        2- <a href="#v2">Image of a Point by Plane Vector Translation</a><br/>
+                        3- <a href="#v3">Image of a Point by Plane Homothety</a><br/>
+                        4- <a href="#v4">Image by Plane Projection</a><br/>
+                        5- <a href="#v5">Image by Orthogonal Plan Symmetry</a><br/>
+                        6- <a href="#v6">Scalar Product in Space</a><br/>
+                        7- <a href="#v7">Vector Product in Space</a><br/>
+                        8- <a href="#v8">Distance Between Two Points in Space</a><br/>
+                        9- <a href="#v9">Distance from a Point to a Plane</a><br/>
+                        10- <a href="#v10">Vector in Space</a><br/>
+                        11- <a href="#v11">Plane Equation Using Three Distinct Points on the Plane</a><br/>
+                        12- <a href="#v12">Image of a Point by Space Vector Translation</a><br/>
+                        13- <a href="#v13">Image of a Point by Space Homothety</a><br/>
+                        14- <a href="#v14">Image by Space Projection</a><br/>
+                        15- <a href="#v15">Image by Space Reflection</a><br/>
+                        16- <a href="#v16">Second Degree Equation Resolution</a><br/>
+                        17- <a href="#v17">Resolution of a System of Equations with Two Unknowns</a><br/>
+                        18- <a href="#v18">Resolution of a System of Equations with Three Unknowns</a><br/>
+                        
+                                    </p>
+                </section>
+                    <section>
+                        <h1>Deux dimension</h1>
+                        
+                       
+                        <section>
+                            <h2 id="v1">Vector of the Plane Formed by Two Points</h2>
+                            <p>Let's assume we want to calculate the vector AB.</p><br>
+                            Abscissa of A: <input type="number" id="e4" size="20">
+                            Ordinate of A: <input type="number" id="e5" size="20"><br><br>
+                            Abscissa of B: <input type="number" id="e6" size="20">
+                            Ordinate of B: <input type="number" id="e7" size="20"><br><br>
+                            <button onclick="find_vector()">Result</button><br>
+                            <p>The vector AB has coordinates: <span id="vector2D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v2">Plan Translation</h2>
+                            <p>Let's find the coordinates of point A after translating it by vector u.</p><br>
+                            Abscissa of A: <input type="number" id="e8" size="20">
+                            Ordinate of A: <input type="number" id="e9" size="20"><br><br>
+                            Abscissa of vector U: <input type="number" id="e10" size="20">
+                            Ordinate of vector U: <input type="number" id="e11" size="20"><br><br>
+                            <button onclick="find_translation()">Result</button><br>
+                            <p>The image has coordinates: <span id="trans2D"></span></p>
+                        </section>
+                        
+                    
+                    
+                    <section>
+                        <h2 id="v3"> Homothetie du plan                </h2>
+                        <p>Trouvons les coordornnées du point A par l'Homothetie de centre C et de rapport k   </p><br>
+                        Abscisse de A           :<input type="number" id="e12" size="20">
+                        Ordonne de A            :<input type="number" id="e13" size="20"><br><br>
+                        Abscisse du centre C    :<input type="number" id="e14" size="20">
+                        Ordonne du centre C     :<input type="number" id="e15" size="20">
+                        Rapport k               :<input type="number" id="e16" size="20"><br><br>
+                        <button onclick="find_homothetie()"> Resultat</button><br>
+                        <p> L'image est de coordornnée : <span id="homo2D"></span></p>
+                        
+                    </section>
+                    
+                    
+                    
+                    
+                    <section>
+                        <h2 id="v4"> Projection sur une doite du plan      </h2>
+                        <p>Trouvons les coordornnées du point M par la projection sur la droite d'equation
+                            ax+by+c=0  </p><br>
+                            Abscisse de M       :<input type="number" id="e17" size="20">
+                    Ordonne de M        :<input type="number" id="e18" size="20"><br><br>
+                    Entrer a            :<input type="number" id="e19" size="20">
+                    Entrer b            :<input type="number" id="e20" size="20">
+                    Entrer c            :<input type="number" id="e21" size="20"><br><br>
+                    <button onclick="find_projection()"> Resultat</button><br>
+                    <p> L'image est de coordornnée : <span id="proj2D"></span></p>
+                    
+                </section>
+                
+                
+                
+                <section>
+                    <h2 id="v5"> Symetrie orthogonal du plan                </h2>
+                    <p>Trouvons les coordornnées du point M par la symetrie orthogonal sur la droite d'equation
+                        ax+by+c=0  </p><br>
+                        Abscisse de M<input type="number" id="e22" size="20">
+                        Ordonne de M <input type="number" id="e23" size="20"><br><br>
+                        Entrer a <input type="number" id="e24" size="20">
+                        Entrer b<input type="number" id="e25" size="20">
+                        Entrer c<input type="number" id="e26" size="20"><br><br>
+                        <button onclick="find_symetrie_orthogonal()"> Resultat</button><br>
+                        <p> L'image est de coordornnée : <span id="so"></span></p>
+                        
+                    </section>
+                    
+                    
+                    
+                    </section>
+
+
+                    <section>
+                    <h1>Trois dimension</h1>
+                    <section>
+                        <h2 id="v6"> Produit scalaire</h2>
+                        <p>Supossons A scalaire B </p><br><br>
+                            Ax  :<input type="number" id="n7" size="20">
+                            Ay  :<input type="number" id="n8" size="20">
+                            Az  :<input type="number" id="n9" size="20"><br><br>
+                            Bx  :<input type="number" id="n10" size="20">
+                            By  :<input type="number" id="n11" size="20">
+                            Bz  :<input type="number" id="n12" size="20"><br><br>
+    
+                            <button onclick="find_scalaire3D()"> Resultat</button><br>
+                            <p> Le produit vectoriel est :  <span id="pscalaire"></span></p>
+                            
+                        </section>
+                        
+                        
+                    <section>
+                                <h2 id="v7"> Produit vectoriel</h2>
+                                <p>Suposons A vectoriel B</p><br><br>
+                                Ax  :<input type="number" id="n1" size="20">
+                                Ay :<input type="number" id="n2" size="20">
+                                Az :<input type="number" id="n3" size="20"><br><br>
+                                Bx :<input type="number" id="n4" size="20">
+                                By :<input type="number" id="n5" size="20">
+                                Bz :<input type="number" id="n6" size="20"><br><br>
+                                
+                                <button onclick="find_pvectoriel3D()"> Resultat</button><br>
+                                <p> Le produit vectoriel est :  <span id="pvectoriel"></span></p>
+                                
+                    </section>
+                            
+                            
+                    <section>
+                                <h2 id="v8">Distance entre deux points</h2>
+                                Abscisse de A   :<input type="number" id="n26" size="20">
+                                Ordonne de A    :<input type="number" id="n27" size="20">
+                                Cote de A       :<input type="number" id="n28" size="20"><br><br>
+                                Abscisse B      :<input type="number" id="n29" size="20">
+                                    Ordonne B       :<input type="number" id="n30" size="20">
+                                    Cote de B       :<input type="number" id="n31" size="20"><br><br>
+        
+                            <button onclick="find_distance3D()"> Resultat</button><br>
+                            <p> La distance AB est :  <span id="dist3D"></span></p>
+                            
+                    </section>
+                        
+                        
+                    <section>
+                            <h2 id="v9"> Distance d'un point a un plan     </h2>
+                                <p>Trouvons les coordornnées du point M par la projection sur le plan d'equation
+                                    ax+by+cz+d=0  </p><br>
+                                    Abscisse de M   :<input type="number" id="n32" size="20">
+                                    Ordonne de M    :<input type="number" id="n33" size="20">
+                                    Cote de M       :<input type="number" id="n34" size="20"><br><br>
+                                    Entrer a        :<input type="number" id="n35" size="20">
+                                    Entrer b        :<input type="number" id="n36" size="20">
+                                    Entrer c        :<input type="number" id="n37" size="20">
+                                    Entrer d          :<input type="number" id="n38" size="20"><br><br>
+                                    <button onclick="find_point_plan3D()"> Resultat</button><br>
+                                    <p> La distance entre M et le plan est : <span id="dpp"></span></p>
+                                    
+                    </section>
+                                
+                                
+                    <section>
+                                    <h2 id="v10"> Vecteur de l'espace forme par deux point   </h2>
+                                    <p>Supposons on veut calculer le vecteur AB  </p><br>
+                                    Abscisse de A   :<input type="number" id="n39" size="20">
+                                Ordonne de A    :<input type="number" id="n40" size="20">
+                                Cote de A       :<input type="number" id="n41" size="20"><br><br>
+                                Abscisse B      :<input type="number" id="n42" size="20">
+                                Ordonne B       :<input type="number" id="n43" size="20">
+                                Cote de B       :<input type="number" id="n44" size="20"><br><br>
+            
+                                <button onclick="find_vecteur3D()"> Resultat</button><br>
+                                <p> Le vecteur AB est de coordornnées <span id="vecteur3D"></span></p>
+                                
+                                
+                    </section>
+                    <section>
+                                    <h2 id="v11"> Equation de plan </h2>
+                                    <p>Supposons les points A B et C distinct su plan  </p><br>
+                                    Abscisse de A   :<input type="number" id="n95" size="20">
+                                    Ordonne de A    :<input type="number" id="n96" size="20">
+                                    Cote de A       :<input type="number" id="n97" size="20"><br><br>
+                                    Abscisse B      :<input type="number" id="n98" size="20">
+                                    Ordonne B       :<input type="number" id="n99" size="20">
+                                    Cote de B       :<input type="number" id="n100" size="20"><br><br>
+                                    Abscisse C      :<input type="number" id="n101" size="20">
+                                    Ordonne C       :<input type="number" id="n102" size="20">
+                                    Cote de C       :<input type="number" id="n103" size="20"><br><br>
+            
+                                <button onclick="find_equ_droite3D()"> Resultat</button><br>
+                                <p> L'equation du plan est : <span id="t39"></span></p>
+                                
+                                
+                    </section>
+
+                    <section>
+                                <h2 id="v12"> Translation de l'espace            </h2>
+                                <p>Trouvons les coordornnées du point A par la translation du vecteur u   </p><br>
+                                Abscisse de A       :<input type="number" id="n45" size="20">
+                                Ordonne de A        :<input type="number" id="n46" size="20">
+                                Cote de A           :<input type="number" id="n47" size="20"><br><br>
+                                Abscisse vecteur U  :<input type="number" id="n48" size="20">
+                                Ordonne vecteur U   :<input type="number" id="n49" size="20">
+                                Cote de U           :<input type="number" id="n50" size="20"><br><br>
+                                <button onclick="find_translation3D()"> Resultat</button><br>
+                                <p> L'image est dce coordornnée : <span id="trans3D"></span></p>
+                    </section>
+                                
+                                
+                    <section>
+                                    <h2 id="v13"> Homothetie de l'espace               </h2>
+                                    <p>Trouvons les coordornnées du point A par l'Homothetie de centre C et de rapport k   </p><br>
+                                    Abscisse de A           :<input type="number" id="n51" size="20">
+                                    Ordonne de A            :<input type="number" id="n52" size="20">
+                                    Cote de A               :<input type="number" id="n53" size="20"><br><br>
+                                    Abscisse du centre C    :<input type="number" id="n54" size="20">
+                                    Ordonne du centre C     :<input type="number" id="n55" size="20">
+                                    Cote de C               :<input type="number" id="n56" size="20"><br><br>
+                                    Rapport k               :<input type="number" id="n57" size="20"><br><br>
+                                    <button onclick="find_homothetie3D()"> Resultat</button><br>
+                                    <p> L'image est de coordornnée : <span id="homo3D"></span></p>
+                            
+                    </section>
+
+                                    
+                    <section>
+                                        <h2 id="v14"> Projection sur un plan de l'espace      </h2>
+                                        <p>Trouvons les coordornnées du point M par la projection sur le plan d'equation
+                                            ax+by+cz+d=0  </p><br>
+                                            Abscisse de M   :<input type="number" id="n58" size="20">
+                                            Ordonne de M    :<input type="number" id="n59" size="20">
+                                            Cote de M       :<input type="number" id="n60" size="20"><br><br>
+                                            Entrer a        :<input type="number" id="n61" size="20">
+                                            Entrer b        :<input type="number" id="n62" size="20">
+                                            Entrer c        :<input type="number" id="n63" size="20">
+                                            Entrer d          :<input type="number" id="n64" size="20"><br><br>
+                                    <button onclick="find_projection3D()"> Resultat</button><br>
+                                    <p> L'image est de coordornnée : <span id="proj3D"></span></p>
+                                        
+                    </section>
+                                
+                                
+                    <section>
+                                        <h2 id="v15"> Reflexion                </h2>
+                                        <p>Trouvons les coordornnées du point M par la reflexion du plan d'equation
+                                            ax+by+cz+d=0  </p><br>
+                                            Abscisse de M       :<input type="number" id="n65" size="20">
+                                            Ordonne de M        :<input type="number" id="n66" size="20">
+                                            Cote de M           :<input type="number" id="n67" size="20"><br><br>
+                                            Entrer a            :<input type="number" id="n68" size="20">
+                                            Entrer b            :<input type="number" id="n69" size="20">
+                                            Entrer c            :<input type="number" id="n70" size="20">
+                                            Entrer d            :<input type="number" id="n71" size="20"><br><br>
+                                            <button onclick="find_reflexion3D()"> Resultat</button><br>
+                                            <p> L'image est de coordornnée : <span id="refl3D"></span></p>
+                                            
+                    </section>
+                    <section>
+                                            <h2 id="v16">Equation du second degret</h2>
+                                            <p>On supposse une equation de la forme ax^2 + bx + c=0</p>
+                                            a   : <input type="number" id="n115" size="20">
+                                            b   : <input type="number" id="n116" size="20">
+                                            c   : <input type="number" id="n117" size="20">
+
+                                            <button onclick="find_resolution()"> Resultat</button>
+                                            <p> <span id="res"></span></p>
+                    </section>
+
+
+                    <section>
+                                    <h2 id="v17"> Systeme d'equation à deux inconnues              </h2>
+                                    <p>Trouvons les soloution d'un systeme d'quation a deux inconnues  </p><br>
+                                            a    :<input type="number" id="n20" size="20">
+                                            b    :<input type="number" id="n21" size="20">
+                                            c    :<input type="number" id="n22" size="20"><br><br>
+                                            a'   :<input type="number" id="n23" size="20">
+                                            b'   :<input type="number" id="n24" size="20">
+                                            c'   :<input type="number" id="n25" size="20"><br>
+                                            
+                                            <button onclick="find_sol2I()"> Resultat</button><br>
+                                            <p> La solution est: <span id="p24"></span></p>
+                                            
+                    </section>
+                                        
+                                        
+                    <section>
+                                            <h2 id="v18"> Systeme d'equation à trois inconnues              </h2>
+                                            <p>Trouvons les soloution d'un systeme d'quation a trois inconnues  </p><br>
+                                            a    :<input type="number" id="n72" size="20">
+                                            b    :<input type="number" id="n73" size="20">
+                                            c    :<input type="number" id="n74" size="20">
+                                            d    :<input type="number" id="n75" size="20"><br><br>
+                                            a'   :<input type="number" id="n76" size="20">
+                                            b'   :<input type="number" id="n77" size="20">
+                                            c'    :<input type="number" id="n78" size="20">
+                                            d'   :<input type="number" id="n79" size="20"><br><br>
+                                        a"    :<input type="number" id="n80" size="20">
+                                        b"    :<input type="number" id="n81" size="20">
+                                        b"    :<input type="number" id="n82" size="20">
+                                        c"    :<input type="number" id="n83" size="20"><br><br>
+                                       
+                                        
+                                        <button onclick="find_sol3I()"> Resultat</button><br>
+                                        
+                                        <p> La solution est la droite d'equation : <br> <span id="t27"></span></p>
+                                        <p>  <span id="t26"></span></p><br><br>
+                                        <p> La solution est: <span id="t28"></span></p>
+                                        
+                    </section>
+
+
+                        
+
+
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                    </section>
+
+
+                    
+                </section>
+            </main>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+    <head>
+        <meta src="utf-8">
+        <title> Easy math </title>
+        <link rel="stylesheet" href="arithmetique.css">
+        <link rel="icon" href="logo1.bmp">
+        
+    </head>
+    <body>
+        <script type="text/javascript" src="arithmetique.js"></script>
+            <section class="titre"><h1>Arithmetique</h1></section>
+
+        <section class="resume">
+            
+            <section>
+
+                <h1>Résumer de cours D'arithmetique:</h1>      <br>
+                <a href="resumAR.pdf"> Résume cours Arithmétique</a> <br> <br> <br>
+                <a href="https://maths-france.fr/wp-content/uploads/Arithmetique_fiche.pdf"> Résume cours Arithmétique</a> <br> <br> <br>
+            </section>
+            
+        </section>
+
+
+
+
+        <section class="solution">
+            <section>
+                        1- <a href="#v1">  Factorielle</a><br/>
+                        2- <a href="#v2">  Arrangement </a><br/>
+                        3- <a href="#v3">  Combinaison</a><br/> 
+                        4- <a href="#v4">  PGCD et PPCM</a><br/>
+                        5- <a href="#v5">  Verification nombre premier </a><br/>
+                        6- <a href="#v6">  Diviseur d'un nombre </a><br/> 
+                        7- <a href="#v7">  Diviseur commun deux nombres</a><br/>
+                        8- <a href="#v8">  Divisions eucludienne </a><br/>
+                        9- <a href="#v9">  Equation diophontène ax+by=1 </a><br/> 
+                        10- <a href="#v10">Equation diophontène ax+by=c</a><br/> 
+                       
+                        
+            </section>
+
+            <section>
+                <h2 id="v1">Factorielle</h2>
+                <p> Supposons le calcul de le factirielle de a</p><br>
+                a <input type="numbre" id="n" size="20"><br>
+                <button onclick="find_factorielle()"> Factorielle</button>
+                <p>Le factorielle est  :  <span id="fac"></span></p>
+
+            </section>
+
+            <section>
+                <h2 id="v2">Arrangement</h2>
+                <p> Supposons le calcul de l'arrangement de a dans p</p><br>
+                a <input type="numbre" id="n1" size="20"><br>
+                a <input type="numbre" id="p" size="20"><br>
+                <button onclick="find_arrangement()"> Arrangement</button>
+                <p>L'arrangement de a dans p est  :  <span id="arrag"></span></p>
+
+            </section>
+
+            <section>
+                <h2 id="v3">Combinaison</h2>
+                <p> Calcule de combinaison de a dans p</p><br>
+                a <input type="numbre" id="n2" size="20"><br>
+                p <input type="numbre" id="p1" size="20"><br>
+                <button onclick="find_combinaison()"> Combinaison</button>
+                <p>La combinaison de a dans p est  :  <span id="combi"></span></p>
+
+            </section>
+
+            <section>
+
+                <h2 id="v4">Calcule du pgcd (a,b) et le ppcm(a,b)</h2>
+                a <input type="number" id="a" size="20"/><br>
+                b <input type="number" id="b" size="20"/><br>
+                <button onclick="pgcd_ppcm()"> Calculate</button><br>
+                <p> PGCD(a,b) est: <span id="d"></span></p><br>
+                <p>PPCM(a,b) est : <span id="e"></span></p><br>
+        </section>
+
+        <section>
+            <h2 id="v5">Verification si un nombre est premier ou pas </h2>
+            r <input type="number" id="r" size="20"><br>
+            <button onclick="nombre_premier()"> Verification</button>
+            <p>Votre nombre <span id="result"></span></p>
+        </section>
+
+        
+        <section>
+            <h2 id="v6"> Divisors a numbers</h2>
+            n <input type="number" id="n0" size="20"><br>
+            <button onclick="find_divisors()" > Find divisors</button>
+            <p>The divisors of the numbers are: </p>
+            <p id="answer"></p>
+            
+            
+        </section>
+        
+        
+        <section>
+            <h2 id="v7"> Diviseur commun de deux nombres            </h2>
+            a1 <input type="number" id="a1" size="20"><br>
+            a2 <input type="number" id="a2" size="20"><br>
+            <button onclick="commundivisors()"> Find the commun divisors</button>
+            <p id="answer1"> </p>
+        </section>
+
+
+        <section>
+            <h2 id="v8"> Division euclidienne          </h2>
+            a3 <input type="number" id="a3" size="20"><br>
+            a4 <input type="number" id="a4" size="20"><br>
+         
+
+            <button onclick="diveuclid()"> division euclidienne</button>
+            <p> the reste de la division eucludienne est:</p>
+            <p id="a6"> </p>
+            <p> Le quotient de la division euclidienne est :</p>
+            <p id="a7"></p>
+            <p> Le quotient de la division euclidienne est :</p>
+            <p id="a5"></p>
+        </section>
+
+
+        <section>
+            <h2 id="v9"> Equation diophontène         </h2>
+            <p>Supposons l'équation de la forme ax+by=1</p>
+            Entrer le a <input type="number" id="a9" size="20"><br>
+            Entrer le b <input type="number" id="a10" size="20"><br>
+         
+
+            <button onclick="find_equdio()"> division euclidienne</button>
+           <br><br>
+            <p>X =  : <span  id="a12"></span> </p>
+            <p > Y =  : <span id="a13"></span> </p>
+            <p> Le quotient de la division euclidienne est :</p>
+            <p id="a11"></p>
+        </section>
+
+
+
+        <section>
+            <h2 id="v10"> Equation diophontène 2         </h2>
+            <p>Supposons l'équation de la forme ax+by=c</p>
+            Entrer le a <input type="number" id="a15" size="20"><br>
+            Entrer le b <input type="number" id="a16" size="20"><br>
+            Entrer le c <input type="number" id="a17" size="20"><br>
+            
+         
+
+            <button onclick="find_equdiop()"> division euclidienne</button>
+           <br><br>
+            <p>X =  : <span  id="a19"></span> </p>
+            <p > Y =  : <span id="a20"></span> </p>
+            <p> Le quotient de la division euclidienne est :</p>
+            <p id="a18"></p>
+        </section>
+
+        
+        
+        
+        
+        
+    </section>
+        
+        
+    </body>
+    </html>

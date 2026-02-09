@@ -1,0 +1,140 @@
+\documentclass[11pt]{report}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+% ---------- Code listing style ----------
+\lstdefinestyle{csstyle}{
+	language=Python,
+	basicstyle=\ttfamily\small,
+	numbers=left,
+	numberstyle=\tiny,
+	stepnumber=1,
+	showstringspaces=false,
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	stringstyle=\color{red},
+	frame=single,
+	breaklines=true
+}
+\lstset{style=csstyle}
+
+% ---------- Meta data ----------
+\title{Project Title in Computer Science}
+\author{Your Name \\
+	Department of Computer Science \\
+	Your University}
+\date{\today}
+
+\begin{document}
+	
+	
+	$/home/friedly/Documents/General_git_hub_file/all_latex_projet/info_project/Images/contour3.png$
+	
+	\pagenumbering{roman}
+	\maketitle
+	
+	\begin{abstract}
+		This document describes the structure of a typical computer science
+		project report written in \LaTeX. Replace this text with your own abstract.
+	\end{abstract}
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	\clearpage
+	\pagenumbering{arabic}
+	
+
+	% ---------- 2. Background ----------
+	\chapter{Background}
+	Describe the theoretical background, related work, and key concepts.
+	
+	\section{Related Work}
+	Summarize existing approaches and why they are not sufficient.
+	
+	\section{Theoretical Concepts}
+	Introduce the main algorithms, data structures, or models.
+	
+	% ---------- 3. System Design ----------
+	\chapter{System Design}
+	Explain the architecture and design decisions of your system.
+	
+	\section{Architecture Overview}
+	Describe the system components and how they interact.
+	
+	\section{Data Structures and Algorithms}
+	Detail the main data structures and algorithms used.
+	
+	% ---------- 4. Implementation ----------
+	\chapter{Implementation}
+	Describe how the system was implemented, including tools and languages.
+	
+	\section{Technologies Used}
+	List programming languages, frameworks, libraries, and tools.
+	
+	\section{Example Code}
+	Example of including source code (Python here):
+	
+	\begin{lstlisting}[caption={Sample function}, label={lst:sample-func}]
+		def factorial(n: int) -> int:
+		"""Compute n! recursively."""
+		if n <= 1:
+		return 1
+		return n * factorial(n - 1)
+	\end{lstlisting}
+	
+	
+	\begin{figure}[h!]
+		\centering
+%		\includegraphics[width=0.7\textwidth]{/home/friedly/Documents/General_git_hub_file/all_latex_projet/info_project/Images/contour3.png}
+		\caption{affichage de contour}
+		\label{fig:Contours}
+	\end{figure}
+	
+	
+	% ---------- 5. Results and Evaluation ----------
+	\chapter{Results and Evaluation}
+	Present experimental setup, datasets, metrics, and results.
+	
+	\section{Experimental Setup}
+	Describe hardware, software versions, and datasets used.
+	
+	\section{Results}
+	Summarize your results, including tables and figures if needed.
+	
+	\section{Discussion}
+	Interpret the results and discuss limitations.
+	
+	% ---------- 6. Conclusion ----------
+	\chapter{Conclusion}
+	Recap the work, main contributions, and possible future improvements.
+	
+	\section{Future Work}
+	List possible extensions or improvements of the project.
+	
+	% ---------- Bibliography ----------
+	\begin{thebibliography}{9}
+		
+		\bibitem{lamport}
+		Leslie Lamport.
+		\textit{\LaTeX: A Document Preparation System}.
+		Addison-Wesley, 2nd edition, 1994.
+		
+	\end{thebibliography}
+	
+\end{document}

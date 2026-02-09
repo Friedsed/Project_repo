@@ -1,0 +1,40 @@
+\documentclass[french,12pt,a4paper]{article} %Définition du type de document
+\usepackage{CRinfo} %Import du fichier de style (format du document)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Titre, auteurs, date, etc. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titre{Compte Rendu} %Insérez ici le titre de votre document
+\soustitre{Projet Info}
+\etudiants{WOLI Sedjro \\ Nom2 Prénom2} %Insérez ici vos noms et prénoms
+\noms{Nom1, Nom2}
+% Retirez le "%" en début de ligne pour spécifier une date différente de celle du jour
+%\date{21 Brumaire de l'an II} 
+\pgimage{basic_image.jpg} %nom de l'image en page de garde
+\matiere{Informatique Scientifique 3}
+\UEcourt{Meca3-Info3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Début du document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\pagedegarde % Insertion de la page de garde
+
+\newpage
+\tableofcontents % Table des matières
+\newpage
+
+%\listoffigures
+%\listoftables
+%\listoflistings
+%\newpage
+
+\input{Contenu/Partie0} % Appel de la partie 0 (à retirer par la suite)
+\input{Contenu/Partie1} % Appel de la partie 1
+\input{Contenu/Partie2} % Appel de la partie 2
+\input{Contenu/Partie3} % Appel de la partie 3
+
+\end{document}

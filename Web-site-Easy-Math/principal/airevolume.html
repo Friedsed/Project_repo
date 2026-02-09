@@ -1,0 +1,119 @@
+<html>
+
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Zozor - Le Site Web</title>
+        <link rel="stylesheet" href="airevolume.css">
+        <link rel="icon" href="logo1.bmp">
+        
+
+    </head>
+
+
+    <body>
+        <main>
+           
+            <header>
+                <h1> Calculate des perimètres des aires et des volumes</h1>
+            </header>
+            
+            <script type="text/javascript" src="airevolume.js"></script>
+            <section>
+                <section>
+
+                    <h1>Résumer de cours sur les Aires et Perimetre:</h1>     
+                    <a href="https://maths-france.fr/wp-content/uploads/AiresVolumes_fiche.pdf"> Résumé</a> <br>
+                </section>
+                <section>
+                    1- <a href="#v1">Carrée</a><br/>
+                    2- <a href="#v2">Rectangle</a><br/>
+                    3- <a href="#v3">Cercle</a><br/>
+                    4- <a href="#v4">Cube</a><br/>
+                    5- <a href="#v5">Pave droit</a><br/>
+                    6- <a href="#v6">Cylindre</a><br/>
+                    7- <a href="#v7">Cone de revolution</a><br/>
+                    
+                </section>
+
+                
+                <section>
+                    <h2 id="v4">Cube</h2>
+                    <p>
+                        A cube is a geometric solid with all its faces being squares. <br><br>
+                        Taking 'a' as the length of the cube's edge, we have: <br> Ab=a*a; Al=4*a*a; At=Ab+Al; V=a*a*a <br><br>
+                    </p>
+                    Edge<input type="number" id="a" size="20" /><br><br>
+                    <button  onclick="cube()"> Calculate</button>
+                    <p>Base perimeter is: <span id="perimetredebase"></span> </p>
+                    <p>Base area is: <span id="airedebase"></span> </p>
+                    <p>Lateral surface area is: <span id="airelaterale"></span> </p>
+                    <p>Total surface area is: <span id="airetotale"></span> </p>
+                    <p>Volume is: <span id="volume"></span> </p><br><br><br>
+                </section>
+                <section>
+                    <h2 id="v5">Right Rectangular Prism</h2>
+                    <p>
+                        A right rectangular prism is a geometric solid with all its faces being rectangles. <br><br>
+                        Taking 'L' as the length, 'l' as the width, and 'h' as the height, we have: <br> Ab=L*l; Al=2*(L*h+l*h); At=Ab+Al; V=L*l*h <br><br>
+                    </p>
+                    Length <input type="number" id="lo" size="20"/><br><br>
+                    Width <input type="number" id="la" size="20"><br><br>
+                    Height <input type="number"  id="h" size="20"><br><br>
+                    <button onclick="pave_droit()"> Calculate</button>
+                    <p>Base perimeter of the right rectangular prism is: <span id="Pbpv"></span> </p>
+                    <p>Base area of the right rectangular prism is: <span id="Abpv"></span> </p>
+                    <p>Lateral surface area of the right rectangular prism is: <span id="Alpv"></span> </p>
+                    <p>Total surface area of the right rectangular prism is: <span id="Atpv"></span> </p>
+                    <p>Volume of the right rectangular prism is: <span id="Vpv"></span> </p><br><br><br>
+                </section>
+        
+                <section>
+                    <h2 id="v6">Cylinder</h2>
+                    <p>
+                        A cylinder is a geometric solid with a circular lateral face and two circular bases. <br><br>
+                        Taking 'r' as the radius and 'h' as the height, we have: <br> Ab=r*r*pi; Al=2*r*pi*h; At=Ab+Al; V=Ab*h <br><br>
+                        Enter the radius of the cylinder's base and the height of the cylinder. <br><br>
+                    </p>
+                    Radius <input type="number" id="r" size="20"/><br><br>
+                    Height <input type="number"  id="h" size="20"><br><br>
+                                    
+                    <button onclick="cylindre()"> Calculate</button>
+                    <p>Base perimeter of the cylinder is: <span id="Pbc"></span> </p>
+                    <p>Base area of the cylinder is: <span id="Abc"></span> </p>
+                    <p>Lateral surface area of the cylinder is: <span id="Alc"></span> </p>
+                    <p>Total surface area of the cylinder is: <span id="Atc"></span> </p>
+                    <p>Volume of the cylinder is: <span id="Vc"></span> </p><br><br><br>
+                            
+                </section>
+                <section>
+                    <h2 id="v7">Revolution Cone</h2>
+                    <p>
+                        A revolution cone is a geometric solid with a curved lateral face and a circular base. <br><br>
+                        Taking 'r' as the radius and 'a' as the apothem, we have: <br> Ab=r*r*pi; Al=r*a*pi; At=Ab+Al; V=Ab*h/3 <br><br>
+                        Enter the radius of the cone's base and the apothem of the cone. <br><br>
+                    </p>
+                    Radius <input type="number" id="r1" size="20"/><br><br>
+                    Apothem  <input type="number"  id="a1" size="20"><br><br>
+                    <button onclick="cone_revolution()"> Calculate</button>
+                    <p>Base perimeter of the revolution cone is: <span id="Pbcr"></span> </p>
+                    <p>Base area of the revolution cone is: <span id="Abcr"></span> </p>
+                    <p>Lateral surface area of the revolution cone is: <span id="Alcr"></span> </p>
+                    <p>Total surface area of the revolution cone is: <span id="Atcr"></span> </p>
+                    <p>Volume of the revolution cone is: <span id="Vcr"></span> </p><br><br><br>
+                </section>
+                
+        
+    </section>
+        
+        
+        
+    </main>
+    
+        
+    </body>
+    
+
+
+
+</html>

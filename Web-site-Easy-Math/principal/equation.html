@@ -1,0 +1,145 @@
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration and Login</title>
+</head>
+<body>
+    <h1>User Registration and Login</h1>
+    
+     
+    <h2>Registration</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br>
+    
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname"><br>
+    
+    <label for="regEmail">Email:</label>
+    <input type="email" id="regEmail"><br>
+    
+    <label for="regPassword">Password:</label>
+    <input type="password" id="regPassword"><br>
+    
+    <button onclick="register()">Register</button>
+
+    <hr>
+
+    
+    <h2>Login</h2>
+    <label for="loginEmail">Email:</label>
+    <input type="email" id="loginEmail"><br>
+    
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword"><br>
+    
+    <button onclick="login()">Login</button>
+
+    <div id="content" style="display: none;">
+        <h2>Welcome to the Logged-in Area!</h2>
+        <p>This is the content that's accessible after logging in.</p>
+    </div>
+
+    <script>
+        // User database
+        const users = [];
+
+        function register() {
+            const name = document.getElementById("name").value;
+            const surname = document.getElementById("surname").value;
+            const address = document.getElementById("address").value;
+            const email = document.getElementById("regEmail").value;
+            const password = document.getElementById("regPassword").value;
+
+            users.push({ name, surname, address, email, password });
+
+            alert("Registration successful!");
+        }
+
+        function login() {
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<html>
+    <head>
+        <meta src="utf-8" >
+        <title> EasyMath</title>
+        <link rel="stylesheet" href="equation.css">
+        <link rel="icon" href="logo1.bmp">
+    </head>
+    <body>
+        <script type="text/javascript" src="equation.js"></script>
+
+        <header>
+            <h1> Equations</h1>        </header>
+        <main>
+    
+            <section>
+                <h2> Equation du second degret</h2>
+                <p>Suposons les equation de la forme ax^2+bx+c=0</p><br><br>
+                a <input type="number" id="a" size="20">
+                b <input type="number" id="b" size="20">
+                c <input type="number" id="c" size="20"><br><br>
+                <button onclick="find_resolution()">Resolution</button>
+                <p><span id="result"></span></p>
+
+
+
+            </section>
+            <section>
+                <h2> Resolution d'equation a deux inconnues</h2>
+                <p>Suposons les equations de la forme ax+by+c=0</p><br><br>
+                k1 <input type="number" id="k1" size="20">
+                k2 <input type="number" id="k2" size="20">
+                k3 <input type="number" id="k3" size="20"><br><br>
+                k4 <input type="number" id="k4" size="20">
+                k5 <input type="number" id="k5" size="20">
+                k6 <input type="number" id="k6" size="20"><br><br>
+                <button onclick="find_solution()">Solution</button><br>
+                <p><span id="resultat"></span></p>
+
+
+
+            </section>
+            <section>
+                <h2> Resolution d'equation a trois inconnues</h2>
+                <p>Suposons les equations de la forme ax+by+cz+d=0</p><br><br>
+                a  :<input type="number" id="a0" size="20">
+                b  :<input type="number" id="b0" size="20">
+                c  :<input type="number" id="c0" size="20">
+                d  :<input type="number" id="d0" size="20"><br><br>
+                a  :<input type="number" id="a1" size="20">
+                b  :<input type="number" id="b1" size="20">
+                c  :<input type="number" id="c1" size="20">
+                d  :<input type="number" id="d1" size="20"><br><br>
+                a  :<input type="number" id="a2" size="20">
+                b  :<input type="number" id="b2" size="20">
+                c  :<input type="number" id="c2" size="20">
+                d  :<input type="number" id="d2" size="20"><br><br>
+                <button onclick="find_solutiont()">Solution</button>
+                <p><span id="resultatt"></span></p>
+
+
+
+            </section>
+
+
+        </main>
+
+    </body>
+</html>

@@ -1,0 +1,870 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L11">11. Manipuler des fichiers</a><ul class="nav-sommaire-ul Indentation11">
+      
+      
+      <li><a class="summaryIndent1" href="#L11-A">11-A. Utilité des fichiers</a></li>
+      <li><a class="summaryIndent1" href="#L11-B">11-B. Travailler avec des fichiers</a></li>
+      <li><a class="summaryIndent1" href="#L11-C">11-C. Noms de fichiers - le répertoire courant</a></li>
+      <li><a class="summaryIndent1" href="#L11-D">11-D. Les deux formes d'importation</a></li>
+      <li><a class="summaryIndent1" href="#L11-E">11-E. Écriture séquentielle dans un fichier</a><ul class="nav-sommaire-ul Indentation11-E">
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L11-E-1">11-E-1. Notes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L11-F">11-F. Lecture séquentielle d'un fichier</a><ul class="nav-sommaire-ul Indentation11-F">
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L11-F-1">11-F-1. Notes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L11-G">11-G. L'instruction break pour sortir d'une boucle</a></li>
+      <li><a class="summaryIndent1" href="#L11-H">11-H. Fichiers texte</a><ul class="nav-sommaire-ul Indentation11-H">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L11-H-1">11-H-1. Remarques</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L11-I">11-I. Enregistrement et restitution de variables diverses</a></li>
+      <li><a class="summaryIndent1" href="#L11-J">11-J. Gestion des exceptions : les instructions try - except - else</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_10.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_12.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L11">11. Manipuler des fichiers<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span style="color:#000000;">Jusqu'à présent, les programmes que nous avons réalisés ne traitaient qu'un très petit nombre de données. Nous pouvions
+	  donc à chaque fois inclure ces données dans le corps du programme lui-même (par exemple dans une liste). Cette façon de procéder devient
+	  cependant tout à fait inadéquate lorsque l'on souhaite traiter une quantité d'informations plus importante.</span>
+      </p>
+      
+		<h3 class="TitreSection1" id="L11-A">11-A. Utilité des fichiers<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Imaginons par exemple que nous voulions écrire un petit programme exerciseur qui fasse apparaître à l'écran des questions à choix
+	  multiple, avec traitement automatique des réponses de l'utilisateur. Comment allons-nous mémoriser le texte des questions elles-mêmes ?</p>
+        <p><span style="color:#000000;">L</span>'<span style="color:#000000;">idée la plus simple consiste à placer chacun de ces textes dans une variable, en début de
+	  programme, avec des instructions d</span>'<span style="color:#000000;">affectation du genre :</span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e16496">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e16496" onclick="selectionCode('contenuCoded0e16496', 'IdTitreCode-d0e16496');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e16496" class="contenuCode">a <code class="python_operator">=</code> <code class="python_literal1">"Quelle est la capitale du Guatemala ?"</code>
+b <code class="python_operator">=</code> <code class="python_literal1">"Qui à succédé à Henri IV ?"</code>
+c <code class="python_operator">=</code> <code class="python_literal1">"Combien font 26 x 43 ?"</code>
+     ... etc.</code></pre></div>
+        <p><span style="color:#000000;">Cette idée est malheureusement beaucoup trop simpliste. Tout va se compliquer en effet lorsque nous essayerons d</span>'<span style="color:#000000;">élaborer la suite du programme, c</span>'<span style="color:#000000;">est-à-dire les instructions qui devront servir à sélectionner au
+	  hasard l</span>'<span style="color:#000000;">une ou l</span>'<span style="color:#000000;">autre de ces questions pour les présenter à l</span>'<span style="color:#000000;">utilisateur. Employer par exemple une longue suite d</span>'<span style="color:#000000;">instructions </span><b>if</b><span style="color:#000000;"> ...
+	  </span><b>elif</b><span style="color:#000000;"> ... </span><b>elif</b><span style="color:#000000;"> ... comme dans l</span>'<span style="color:#000000;">exemple ci-dessous n</span>'<span style="color:#000000;">est certainement pas la bonne solution (ce serait d</span>'<span style="color:#000000;">ailleurs bien pénible à écrire : n</span>'<span style="color:#000000;">oubliez pas que nous souhaitons traiter un grand nombre de questions !) :</span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e16563">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e16563" onclick="selectionCode('contenuCoded0e16563', 'IdTitreCode-d0e16563');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e16563" class="contenuCode"><code class="python_keyword1">if</code> choix <code class="python_operator">==</code> <code class="python_digit">1</code>:
+ selection <code class="python_operator">=</code> a
+<code class="python_keyword1">elif</code> choix <code class="python_operator">==</code> <code class="python_digit">2</code>:
+ selection <code class="python_operator">=</code> b
+<code class="python_keyword1">elif</code> choix <code class="python_operator">==</code> <code class="python_digit">3</code>:
+ selection <code class="python_operator">=</code> c
+     ... etc.</code></pre></div>
+        <p>
+          <span style="color:#000000;">La situation se présente déjà beaucoup mieux si nous faisons appel à une liste :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e16607">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e16607" onclick="selectionCode('contenuCoded0e16607', 'IdTitreCode-d0e16607');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e16607" class="contenuCode">liste <code class="python_operator">=</code> [<code class="python_literal1">"Qui a vaincu Napoléon à Waterloo ?"</code>,
+      <code class="python_literal1">"Comment traduit-on 'informatique' en anglais ?"</code>,
+      <code class="python_literal1">"Quelle est la formule chimique du méthane ?"</code>, ... etc ...]</code></pre></div>
+        <p><span style="color:#000000;">On peut en effet extraire n</span>'<span style="color:#000000;">importe quel élément de cette liste à l</span>'<span style="color:#000000;">aide de son indice. Exemple :</span></p>
+        <p>
+          <span style="color:#000000;">Rappel -</span>
+        </p>
+        <blockquote class="citation"><div><span style="color:#000000;">L</span>'<span style="color:#000000;">indiçage commence toujours à partir de zéro.</span></div></blockquote>
+        <p>Même si cette façon de procéder est déjà nettement meilleure que la précédente, nous sommes toujours confrontés à
+	  plusieurs problèmes gênants :</p>
+        <ul class="ListeDVP">
+          <li>La lisibilité du programme va se détériorer très vite lorsque le nombre de questions deviendra important. En corollaire, nous
+	    accroîtrons la probabilité d'insérer une erreur de syntaxe dans la définition de cette longue liste. De telles erreurs seront bien difficiles
+	    à débusquer.</li>
+          <li>L'ajout de nouvelles questions, ou la modification de certaines d'entre elles, imposeront à chaque fois de rouvrir le code source du programme. En
+	    corollaire, il deviendra malaisé de retravailler ce même code source, puisqu'il comportera de nombreuses lignes de données encombrantes.</li>
+          <li>L'échange de données avec d'autres programmes (peut-être écrits dans d'autres langages) est tout simplement impossible, puisque ces
+	    données font partie du programme lui-même.</li>
+        </ul>
+        <p>Cette dernière remarque nous suggère la direction à prendre : il est temps que nous apprenions à <span class="italique">séparer les données et
+	  les programmes qui les traitent dans des fichiers différents</span>.</p>
+        <p>Pour que cela devienne possible, nous devrons doter nos programmes de divers mécanismes permettant de créer des fichiers, d'y envoyer des données
+	  et de les récupérer par la suite.</p>
+        <p><span style="color:#000000;">Les langages de programmation proposent des jeux d</span>'<span style="color:#000000;">instructions plus ou moins sophistiqués pour
+	  effectuer ces tâches. Lorsque les quantités de données deviennent très importantes, il devient d</span>'<span style="color:#000000;">ailleurs rapidement
+	  nécessaire de structurer les relations entre ces données, et l</span>'<span style="color:#000000;">on doit alors élaborer des systèmes appelés
+	  </span><span class="italique">basesdedonnéesrelationnelles</span><span style="color:#000000;">, dont la gestion peut s</span>'<span style="color:#000000;">avérer très complexe. Lorsque
+	  l</span>'<span style="color:#000000;">on est confronté à ce genre de problème, il est d</span>'<span style="color:#000000;">usage de déléguer une bonne part
+	  du travail à des logiciels très spécialisés tels que </span><span class="italique">Oracle</span><span style="color:#000000;">, </span><span class="italique">IBMDB2</span><span style="color:#000000;">,
+	  </span><span class="italique">Sybase</span><span style="color:#000000;">, </span><span class="italique">Adabas</span><span style="color:#000000;">, </span><span class="italique">PostgreSQL</span><span style="color:#000000;">, </span><span class="italique">MySQL</span><span style="color:#000000;">, etc. Python est parfaitement capable de dialoguer avec ces systèmes, mais nous laisserons cela pour un peu plus tard (voir : </span><span class="italique"><span style="color:#000000;">gestion</span><span style="color:#000000;"> d</span>'<span style="color:#000000;">une base de données</span></span><span style="color:#000000;">.</span></p>
+        <p>
+          <span style="color:#000000;">Nos ambitions présentes sont plus modestes. Nos données ne se comptent pas encore par centaines de milliers, aussi nous pouvons nous
+	    contenter de mécanismes simples pour les enregistrer dans un fichier de taille moyenne, et les en extraire ensuite.</span>
+        </p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-B">11-B. Travailler avec des fichiers<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>L'utilisation d'un fichier ressemble beaucoup à l'utilisation d'un livre. Pour utiliser un livre, vous devez d'abord le trouver (à l'aide de son
+	  titre), puis l'ouvrir. Lorsque vous avez fini de l'utiliser, vous le refermez. Tant qu'il est ouvert, vous pouvez y lire des informations diverses, et vous pouvez aussi
+	  y écrire des annotations, mais généralement vous ne faites pas les deux à la fois. Dans tous les cas, vous pouvez vous situer à l'intérieur
+	  du livre, notamment en vous aidant des numéros de pages. Vous lisez la plupart des livres en suivant l'ordre normal des pages, mais vous pouvez aussi décider
+	  de consulter n'importe quel paragraphe dans le désordre.</p>
+        <p><span style="color:#000000;">Tout ce que nous venons de dire des livres s</span>'<span style="color:#000000;">applique également aux fichiers informatiques. Un fichier
+	  se compose de données enregistrées sur votre disque dur, sur une disquette, une clef USB ou un CD. Vous y accédez grâce à son nom (lequel peut
+	  inclure aussi un nom de répertoire). Vous pouvez en première approximation considérer le contenu d</span>'<span style="color:#000000;">un fichier comme une suite
+	  de caractères, ce qui signifie que vous pouvez traiter ce contenu, ou une partie quelconque de celui-ci, à l</span>'<span style="color:#000000;">aide des fonctions
+	  servant à traiter les chaînes de caractères</span><a class="signetNoteBasPage" id="signetNoteBasPage50" href="#noteBasPage50">(50)</a><span style="color:#000000;">.</span></p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-C">11-C. Noms de fichiers - le répertoire courant<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Pour simplifier les explications qui vont suivre, nous indiquerons seulement des noms simples pour les fichiers que nous allons manipuler. Si vous procédez
+	  ainsi dans vos exercices, les fichiers en question seront créés et/ou recherchés par Python <span class="italique">dans le répertoire courant</span>. Celui-ci est
+	  habituellement le répertoire où se trouve le script lui-même, sauf si vous lancez ce script depuis la fenêtre d'un shell <span class="italique">IDLE</span>, auquel cas le
+	  répertoire courant est défini au lancement de <span class="italique">IDLE</span> lui-même (sous <span class="italique">Windows</span>, la définition de ce répertoire fait partie des
+	  propriétés de l'icône de lancement).</p>
+        <p><span style="color:#000000;">Si vous travaillez avec </span><span class="italique">IDLE</span><span style="color:#000000;">, vous souhaiterez donc certainement forcer Python à changer son
+	  répertoire courant, afin que celui-ci corresponde à vos attentes. Pour ce faire, utilisez les commandes suivantes en début de session. Nous supposons pour
+	  la démonstration que le répertoire visé est le répertoire </span><b><span style="color:#000080;">/home/jules/exercices</span></b><span style="color:#000000;"> .
+	  Même si vous travaillez sous </span><span class="italique">Windows</span><span style="color:#000000;"> (où ce n</span>'<span style="color:#000000;">est pas la règle), vous pouvez utiliser
+	  cette syntaxe (c</span>'<span style="color:#000000;">est-à-dire des caractères </span><b>/</b><span style="color:#000000;"> et non </span><b>\</b><span style="color:#000000;"> en
+	  guise de séparateurs : c</span>'<span style="color:#000000;">est la convention en vigueur dans le monde </span><span class="italique">Unix</span><span style="color:#000000;">). Python effectuera
+	  automatiquement les conversions nécessaires, suivant que vous travaillez sous </span><span class="italique">Mac OS</span><span style="color:#000000;">, </span><span class="italique">Linux</span><span style="color:#000000;">, ou </span><span class="italique">Windows</span><a class="signetNoteBasPage" id="signetNoteBasPage51" href="#noteBasPage51">(51)</a><span style="color:#000000;">.</span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e16843">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e16843" onclick="selectionCode('contenuCoded0e16843', 'IdTitreCode-d0e16843');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e16843" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">from</code> os <code class="python_keyword1">import</code> chdir
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">chdir</code><code class="python_operator">(</code><code class="python_literal1">"/home/jules/exercices"</code>)</code></pre></div>
+        <p>La première commande importe la fonction <b>chdir()</b> du module <b>os</b>. Le module <b>os</b> contient toute une série de fonctions permettant de
+	  dialoguer avec le système d'exploitation (<b>os</b> = <span class="italique">operatingsystem</span>), quel que soit celui-ci.</p>
+        <p>
+          <span style="color:#000000;">La seconde commande provoque le changement de répertoire (</span>
+          <b>chdir =</b>
+          <span class="italique">changedirectory</span>
+          <span style="color:#000000;">).</span>
+        </p>
+        <ul class="ListeDVP">
+          <li>Vous avez également la possibilité d'insérer ces commandes en début de script, ou encore d'indiquer le chemin d'accès complet dans le
+	    nom des fichiers que vous manipulez, mais cela risque peut-être d'alourdir l'écriture de vos programmes.</li>
+          <li>
+            <span style="color:#000000;">Choisissez de préférence des noms de fichiers courts. Évitez dans toute la mesure du possible les caractères accentués,
+	      les espaces et les signes typographiques spéciaux. Dans les environnements de travail de type Unix (MacOS, Linux, BSD ...), il est souvent recommandé aussi
+	      de n'utiliser que des caractères minuscules.</span>
+          </li>
+        </ul>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-D">11-D. Les deux formes d'importation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Les lignes d'instructions que nous venons d'utiliser sont l'occasion d'expliquer un mécanisme intéressant. Vous savez qu'en complément des
+	  fonctions intégrées dans le module de base, Python met à votre disposition une très grande quantité de fonctions plus spécialisées,
+	  qui sont regroupées dans des <span class="italique">modules</span>. Ainsi vous connaissez déjà fort bien le module <span class="italique">math</span> et le module <span class="italique">tkinter</span>.</p>
+        <p>Pour utiliser les fonctions d'un module, il suffit de les importer. Mais cela peut se faire de deux manières différentes, comme nous allons le voir
+	  ci-dessous. Chacune des deux méthodes présente des avantages et des inconvénients.</p>
+        <p>
+          <span style="color:#000000;">Voici un exemple de la première méthode :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e16936">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e16936" onclick="selectionCode('contenuCoded0e16936', 'IdTitreCode-d0e16936');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e16936" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">import</code> os
+<code class="python_operator">&gt;&gt;&gt;</code> rep_cour <code class="python_operator">=</code> os.<code class="python_function">getcwd</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code> rep_cour
+C:\Python22\essais</code></pre></div>
+        <p>
+          <span style="color:#000000;">La première ligne de cet exemple importe l'</span>
+          <span class="italique">intégralité</span>
+          <span style="color:#000000;">du module </span>
+          <b>os</b>
+          <span style="color:#000000;">, lequel contient de nombreuses fonctions intéressantes pour l'accès au système d'exploitation. La seconde ligne utilise la fonction
+	    </span>
+          <b>getcwd()</b>
+          <span style="color:#000000;">du module </span>
+          <b>os</b>
+          <a class="signetNoteBasPage" id="signetNoteBasPage52" href="#noteBasPage52">(52)</a>
+          <span style="color:#000000;">. Comme vous pouvez le constater, la fonction </span>
+          <b>getcwd()</b>
+          <span style="color:#000000;">renvoie le nom du répertoire courant (</span>
+          <span class="italique">getcwd = get current working directory</span>
+          <span style="color:#000000;">). Par comparaison, voici un exemple similaire utilisant la seconde méthode d'importation :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17025">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17025" onclick="selectionCode('contenuCoded0e17025', 'IdTitreCode-d0e17025');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17025" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">from</code> os <code class="python_keyword1">import</code> getcwd
+<code class="python_operator">&gt;&gt;&gt;</code> rep_cour <code class="python_operator">=</code> <code class="python_function">getcwd</code><code class="python_operator">(</code>) 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>rep_cour)
+C:\Python31\essais</code></pre></div>
+        <p>Dans ce nouvel exemple, nous n'avons importé du module <b>os</b> que la fonction <b>getcwd()</b>. Importée de cette manière, la fonction
+	  s'intègre à notre propre code comme si nous l'avions écrite nous-mêmes. Dans les lignes où nous l'utilisons, il n'est pas nécessaire de
+	  rappeler qu'elle fait partie du module <b>os</b>.</p>
+        <p>
+          <span style="color:#000000;">Nous pouvons de la même manière importer plusieurs fonctions du même module :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17073">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17073" onclick="selectionCode('contenuCoded0e17073', 'IdTitreCode-d0e17073');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17073" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> sqrt, pi, sin, cos
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>pi)
+<code class="python_digit">3.14159265359</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_function">sqrt</code><code class="python_operator">(</code><code class="python_digit">5</code>))	<code class="python_comment1"># racine carrée de 5</code>
+<code class="python_digit">2.2360679775</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_function">sin</code><code class="python_operator">(</code>pi<code class="python_operator">/</code><code class="python_digit">6</code>))	  <code class="python_comment1"># sinus d'un angle de 30°</code>
+<code class="python_digit">0.5</code></code></pre></div>
+        <p><span style="color:#000000;">Nous pouvons même importer </span><span class="italique">toutes</span><span style="color:#000000;"> les fonctions d</span>'<span style="color:#000000;">un module, comme
+	  dans :</span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17148">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17148" onclick="selectionCode('contenuCoded0e17148', 'IdTitreCode-d0e17148');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17148" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code></code></pre></div>
+        <p>Cette méthode d'importation présente l'avantage d'alléger l'écriture du code. Elle présente l'inconvénient (surtout dans sa
+	  dernière forme, celle qui importe toutes les fonctions d'un module) d'encombrer l'espace de noms courant. Il se pourrait alors que certaines fonctions
+	  importées aient le même nom que celui d'une variable définie par vous-même, ou encore le même nom qu'une fonction importée depuis un autre
+	  module. Si cela se produit, l'un des deux noms en conflit n'est évidemment plus accessible.</p>
+        <p>Dans les programmes d'une certaine importance, qui font appel à un grand nombre de modules d'origines diverses, il sera donc toujours préférable
+	  de privilégier la première méthode, c'est-à-dire celle qui utilise des noms pleinement qualifiés.</p>
+        <p>On fait généralement exception à cette règle dans le cas particulier du module tkinter, parce que les fonctions qu'il contient sont
+	  très sollicitées (dès lors que l'on décide d'utiliser ce module).</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-E">11-E. Écriture séquentielle dans un fichier<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p><span style="color:#000000;">Sous Python, l</span>'<span style="color:#000000;">accès aux fichiers est assuré par l</span>'<span style="color:#000000;">intermédiaire
+	  d</span>'<span style="color:#000000;">un objet-interface particulier, que l</span>'<span style="color:#000000;">on appelle </span><span class="italique">objet-fichier</span><span style="color:#000000;">. On
+	  crée cet objet à l</span>'<span style="color:#000000;">aide de la fonction intégrée </span><b>open()</b><a class="signetNoteBasPage" id="signetNoteBasPage53" href="#noteBasPage53">(53)</a><span style="color:#000000;">. Celle-ci renvoie un objet doté de
+	  méthodes spécifiques, qui vous permettront de lire et écrire dans le fichier.</span></p>
+        <p><span style="color:#000000;">L</span>'<span style="color:#000000;">exemple ci-après vous montre comment ouvrir un fichier en écriture, y enregistrer deux
+	  chaînes de caractères, puis le refermer. Notez bien que si le fichier n</span>'<span style="color:#000000;">existe pas encore, il sera créé automatiquement.
+	  Par contre, si le nom utilisé concerne un fichier préexistant qui contient déjà des données, les caractères que vous y enregistrerez
+	  viendront s</span>'<span style="color:#000000;">ajouter à la suite de ceux qui s</span>'<span style="color:#000000;">y trouvent déjà. Vous pouvez faire tout cet
+	  exercice directement à la ligne de commande :</span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17221">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17221" onclick="selectionCode('contenuCoded0e17221', 'IdTitreCode-d0e17221');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17221" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> obFichier <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code><code class="python_literal1">'Monfichier'</code>,<code class="python_literal1">'a'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> obFichier.<code class="python_function">write</code><code class="python_operator">(</code><code class="python_literal1">'Bonjour, fichier !'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> obFichier.<code class="python_function">write</code><code class="python_operator">(</code><code class="python_literal1">"Quel beau temps, aujourd'hui !"</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> obFichier.<code class="python_function">close</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code></code></pre></div>
+        
+		<h4 class="TitreSection2" id="L11-E-1">11-E-1. Notes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>La première ligne crée l'<span class="italique">objet-fichier</span><b>obFichier</b>, lequel fait référence à un fichier véritable (sur disque ou
+	      disquette) dont le nom sera <b>Monfichier</b>. Attention : <span class="italique">ne confondez pas le nom de fichier avec le nom de l'objet-fichier</span> qui y donne
+	      accès ! À la suite de cet exercice, vous pouvez vérifier qu'il s'est bien créé sur votre système (dans le répertoire courant)
+	      un fichier dont le nom est <b>Monfichier</b> (et dont vous pouvez visualiser le contenu à l'aide d'un éditeur quelconque).</li>
+            <li>La fonction <b>open()</b> attend deux arguments, qui doivent tous deux être des chaînes de caractères. Le premier argument est le nom du
+	      fichier à ouvrir, et le second est le mode d'ouverture. <b><span style="color:#000080;">'</span><span style="color:#000080;">a</span><span style="color:#000080;">'</span></b>
+	      indique qu'il faut ouvrir ce fichier en mode « ajout » (<span class="italique">append</span>), ce qui signifie que les données à enregistrer doivent être
+	      ajoutées à la fin du fichier, à la suite de celles qui s'y trouvent éventuellement déjà. Nous aurions pu utiliser aussi le mode
+	      <b><span style="color:#000080;">'</span><span style="color:#000080;">w</span><span style="color:#000080;">'</span></b> (pour <span class="italique">write</span>), mais lorsqu'on utilise ce mode, Python
+	      crée toujours un nouveau fichier (vide), et l'écriture des données commence à partir du début de ce nouveau fichier. S'il existe
+	      déjà un fichier de même nom, celui-ci est effacé au préalable.</li>
+            <li>La méthode <b>write()</b> réalise l'écriture proprement dite. Les données à écrire doivent être fournies en argument. Ces
+	      données sont enregistrées dans le fichier les unes à la suite des autres (c'est la raison pour laquelle on parle de fichier à accès
+	      séquentiel). Chaque nouvel appel de <b>write()</b> continue l'écriture à la suite de ce qui est déjà enregistré. </li>
+            <li>La méthode <b>close()</b> referme le fichier. Celui-ci est désormais disponible pour tout usage.</li>
+          </ul>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-F">11-F. Lecture séquentielle d'un fichier<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p><span style="color:#000000;">Vous allez maintenant rouvrir le fichier, mais cette fois en lecture, de manière à pouvoir y relire les informations que vous
+	  avez enregistrées dans l</span>'<span style="color:#000000;">étape précédente :</span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17351">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17351" onclick="selectionCode('contenuCoded0e17351', 'IdTitreCode-d0e17351');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17351" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> ofi <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code><code class="python_literal1">'Monfichier'</code>, <code class="python_literal1">'r'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> t <code class="python_operator">=</code> ofi.<code class="python_function">read</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>t)
+Bonjour, fichier <code class="python_operator">!</code>Quel beau temps, aujourd<code class="python_literal1">'hui !</code>
+<code class="python_literal1">&gt;&gt;&gt; ofi.close()</code></code></pre></div>
+        <p>Comme on pouvait s'y attendre, la méthode <b>read()</b> lit les données présentes dans le fichier et les transfère dans une variable de type
+	  chaîne de caractères (<span class="italique">string</span>) . Si on utilise cette méthode sans argument, la totalité du fichier est transférée.</p>
+        
+		<h4 class="TitreSection2" id="L11-F-1">11-F-1. Notes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>Le fichier que nous voulons lire s'appelle <b>Monfichier</b>. L'instruction d'ouverture de fichier devra donc nécessairement faire référence
+	      à ce nom là. Si le fichier n'existe pas, nous obtenons un message d'erreur. Exemple :<br/><b><span style="color:#000080;">&gt;&gt;&gt; ofi = open(</span><span style="color:#000080;">'</span><span style="color:#000080;">Monficier</span><span style="color:#000080;">'</span><span style="color:#000080;">,</span><span style="color:#000080;">'</span><span style="color:#000080;">r</span><span style="color:#000080;">'</span><span style="color:#000080;">)</span></b><br/><b><span style="color:#000080;">IOError: [Errno 2] No such file or directory:
+	      </span><span style="color:#000080;">'</span><span style="color:#000080;">Monficier</span><span style="color:#000080;">'</span></b></li>
+            <li>Par contre, nous ne sommes tenus à aucune obligation concernant le nom à choisir pour <span class="italique">l'objet-fichier</span>. C'est un nom de variable quelconque.
+	      Ainsi donc, dans notre première instruction, nous avons choisi de créer un objet-fichier <b>ofi</b>, faisant référence au fichier réel
+	      <b>Monfichier</b>, lequel est ouvert en lecture (argument <b><span style="color:#000080;">'</span><span style="color:#000080;">r</span><span style="color:#000080;">'</span></b>).</li>
+            <li>Les deux chaînes de caractères que nous avions entrées dans le fichier sont à présent accolées en une seule. C'est normal,
+	      puisque nous n'avons fourni aucun caractère de séparation lorsque nous les avons enregistrées. Nous verrons un peu plus loin comment enregistrer des
+	      lignes de texte distinctes.</li>
+            <li>La méthode <b>read()</b> peut également être utilisée avec un argument. Celui-ci indiquera combien de caractères doivent être
+	      lus, à partir de la position déjà atteinte dans le fichier :<br/><b><span style="color:#000080;">&gt;&gt;&gt; ofi = open(</span><span style="color:#000080;">'</span><span style="color:#000080;">Monfichier</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">'</span><span style="color:#000080;">r</span><span style="color:#000080;">'</span><span style="color:#000080;">)</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; t = ofi.read(7)</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; print(t)</span></b><br/><b><span style="color:#000080;">Bonjour</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; t = ofi.read(15)</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; print(t)</span></b><br/><b><span style="color:#000080;">, fichier !Quel</span></b><br/><br/>
+		 S'il ne reste pas assez de caractères au fichier pour satisfaire la demande, la lecture s'arrête tout simplement à la fin du
+		   fichier :<br/><b><span style="color:#000080;">&gt;&gt;&gt; t = ofi.read(1000)</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; print(t)</span></b><br/><b><span style="color:#000080;">
+		   beau temps, aujourd</span><span style="color:#000080;">'</span><span style="color:#000080;">hui !</span></b><br/><br/>
+		 Si la fin du fichier est déjà atteinte, <b>read()</b> renvoie une chaîne vide :<br/><b><span style="color:#000080;">&gt;&gt;&gt; t =
+		   ofi.read()</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; print(t)</span></b></li>
+            <li><span style="color:#000000;">N</span>'<span style="color:#000000;">oubliez pas de refermer le fichier après usage :</span><br/><b><span style="color:#000080;">&gt;&gt;&gt;
+	      ofi.close()</span></b></li>
+          </ul>
+          <blockquote class="citation"><div>
+            <span style="color:#000000;">Dans tout ce qui précède, nous avons admis sans explication que les chaînes de caractères étaient échangées
+	      telles quelles entre l'interpréteur Python et le fichier. En réalité, ceci est inexact, parce que les séquences de caractères doivent
+	      être converties en séquences d'octets pour pouvoir être mémorisées dans les fichiers, et il existe malheureusement différentes normes
+	      pour cela. En toute rigueur, il faudrait donc préciser à Python la norme d'encodage que vous souhaitez utiliser dans vos fichiers : nous verrons
+	      comment faire au chapitre suivant. En attendant, vous pouvez tabler sur le fait que Python utilise par défaut la norme en vigueur sur votre système
+	      d'exploitation, ce qui devrait vous éviter tout problème pour ces premiers exercices. Si vous obtenez tout de même un rendu bizarre de vos
+	      caractères accentués, veuillez l'ignorer provisoirement.</span>
+          </div></blockquote>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-G">11-G. L'instruction break pour sortir d'une boucle<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Il va de soi que les boucles de programmation s'imposent lorsque l'on doit traiter un fichier dont on ne connaît pas nécessairement le contenu à
+	  l'avance. L'idée de base consistera à lire ce fichier morceau par morceau, jusqu'à ce que l'on ait atteint la fin du fichier.</p>
+        <p>
+          <span style="color:#000000;">La fonction ci-dessous illustre cette idée. Elle copie l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">intégralité d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">un fichier, quelle que soit sa taille, en transférant des portions de 50 caractères à la fois :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17600">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17600" onclick="selectionCode('contenuCoded0e17600', 'IdTitreCode-d0e17600');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17600" class="contenuCode"><code class="python_keyword1">def</code> <code class="python_function">copieFichier</code><code class="python_operator">(</code>source, destination):
+  <code class="python_literal1">"copie intégrale d'un fichier"</code> 
+ fs <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code>source, <code class="python_literal1">'r'</code>)
+ fd <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code>destination, <code class="python_literal1">'w'</code>)
+ <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+     txt <code class="python_operator">=</code> fs.<code class="python_function">read</code><code class="python_operator">(</code><code class="python_digit">50</code>)
+     <code class="python_keyword1">if</code> txt <code class="python_operator">==</code><code class="python_literal1">""</code>:
+     <code class="python_keyword1">break</code>
+     fd.<code class="python_function">write</code><code class="python_operator">(</code>txt)
+ fs.<code class="python_function">close</code><code class="python_operator">(</code>)
+ fd.<code class="python_function">close</code><code class="python_operator">(</code>)
+ <code class="python_keyword1">return</code></code></pre></div>
+        <p>
+          <span style="color:#000000;">Si vous voulez tester cette fonction, vous devez lui fournir deux arguments : le premier est le nom du fichier original, le second est le nom
+	    à donner au fichier qui accueillera la copie. Exemple :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17685">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17685" onclick="selectionCode('contenuCoded0e17685', 'IdTitreCode-d0e17685');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17685" class="contenuCode"><code class="python_function">copieFichier</code><code class="python_operator">(</code><code class="python_literal1">'Monfichier'</code>,<code class="python_literal1">'Tonfichier'</code>)</code></pre></div>
+        <p>Vous aurez remarqué que la boucle <b>while</b> utilisée dans cette fonction est construite d'une manière différente de ce que vous avez
+	  rencontré précédemment. Vous savez en effet que l'instruction <b>while</b> doit toujours être suivie d'une condition à évaluer ; le
+	  bloc d'instructions qui suit est alors exécuté en boucle, aussi longtemps que cette condition reste vraie. Or nous avons remplacé ici la condition à
+	  évaluer par une simple constante, et vous savez également<a class="signetNoteBasPage" id="signetNoteBasPage54" href="#noteBasPage54">(54)</a> que
+	  l'interpréteur Python considère comme vraie toute valeur numérique différente de zéro.</p>
+        <p>
+          <span style="color:#000000;">Une boucle </span>
+          <b>while</b>
+          <span style="color:#000000;">construite comme nous l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">avons fait ci-dessus devrait donc boucler indéfiniment, puisque la condition de continuation reste toujours vraie. Nous pouvons cependant
+	    interrompre ce bouclage en faisant appel à l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">instruction </span>
+          <b>break</b>
+          <span style="color:#000000;">, laquelle permet éventuellement de mettre en place plusieurs mécanismes de sortie différents pour une même
+	    boucle :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17739">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17739" onclick="selectionCode('contenuCoded0e17739', 'IdTitreCode-d0e17739');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17739" class="contenuCode"><code class="python_keyword1">while</code> <code class="python_operator">&lt;</code>condition <code class="python_digit">1</code><code class="python_operator">&gt;</code> :
+ <code class="python_operator">---</code> instructions diverses <code class="python_operator">---</code>
+ <code class="python_keyword1">if</code> <code class="python_operator">&lt;</code>condition <code class="python_digit">2</code><code class="python_operator">&gt;</code> :
+     <code class="python_keyword1">break</code>
+ <code class="python_operator">---</code> instructions diverses <code class="python_operator">---</code>
+ <code class="python_keyword1">if</code> <code class="python_operator">&lt;</code>condition <code class="python_digit">3</code><code class="python_operator">&gt;</code>:
+      <code class="python_keyword1">break</code>
+ etc.</code></pre></div>
+        <p>Dans notre fonction <b>copieFichier()</b>, il est facile de voir que l'instruction <b>break</b> s'exécutera seulement lorsque la fin du fichier aura
+	  été atteinte.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-H">11-H. Fichiers texte<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Un <span class="italique">fichier texte</span> est un fichier qui contient des caractères imprimables et des espaces organisés en lignes successives, ces lignes étant
+	  séparées les unes des autres par un caractère spécial non-imprimable appelé « marqueur de fin de ligne »<a class="signetNoteBasPage" id="signetNoteBasPage55" href="#noteBasPage55">(55)</a>.</p>
+        <p>Les fichiers texte sont donc des fichiers que nous pouvons lire et comprendre à l'aide d'un simple éditeur de texte, par opposition aux <span class="italique">fichiers
+	  binaires</span> dont le contenu est - au moins en partie - inintelligible pour un lecteur humain, et qui ne prend son sens que lorsqu'il est décodé
+	  par un logiciel spécifique. Par exemple, les fichiers contenant des images, des sons, des vidéos, etc. sont presque toujours des fichiers binaires. Nous
+	  donnons un petit exemple de traitement de fichier binaire un peu plus loin, mais dans le cadre de ce cours, nous nous intéresserons presqu'exclusivement aux
+	  fichiers texte.</p>
+        <p>
+          <span style="color:#000000;">Il est très facile de traiter des fichiers texte avec Python. Par exemple, les instructions suivantes suffisent pour créer un fichier
+	    texte de quatre lignes :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17828">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17828" onclick="selectionCode('contenuCoded0e17828', 'IdTitreCode-d0e17828');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17828" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> f <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code><code class="python_literal1">"Fichiertexte"</code>, <code class="python_literal1">"w"</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">write</code><code class="python_operator">(</code><code class="python_literal1">"Ceci est la ligne un</code><code class="python_literal4">\n</code><code class="python_literal1">Voici la ligne deux</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">write</code><code class="python_operator">(</code><code class="python_literal1">"Voici la ligne trois</code><code class="python_literal4">\n</code><code class="python_literal1">Voici la ligne quatre</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">close</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>Notez bien le marqueur de fin de ligne <b>\n</b> inséré dans les chaînes de caractères, aux endroits où l'on souhaite séparer les
+	  lignes de texte dans l'enregistrement. Sans ce marqueur, les caractères seraient enregistrés les uns à la suite des autres, comme dans les exemples
+	  précédents.</p>
+        <p>
+          <span style="color:#000000;">Lors des opérations de lecture, les lignes d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">un fichier texte peuvent être extraites séparément les unes des autres. La méthode </span>
+          <b>readline()</b>
+          <span style="color:#000000;">, par exemple, ne lit qu</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">une seule ligne à la fois (en incluant le caractère de fin de ligne) :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17920">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17920" onclick="selectionCode('contenuCoded0e17920', 'IdTitreCode-d0e17920');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17920" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> f <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code><code class="python_literal1">'Fichiertexte'</code>,<code class="python_literal1">'r'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> t <code class="python_operator">=</code> f.<code class="python_function">readline</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>t)
+Ceci est la ligne un
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>f.<code class="python_function">readline</code><code class="python_operator">(</code>))
+Voici la ligne deux</code></pre></div>
+        <p>
+          <span style="color:#000000;">La méthode </span>
+          <b>readlines()</b>
+          <span style="color:#000000;">transfère toutes les lignes restantes dans une liste de chaînes :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e17982">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e17982" onclick="selectionCode('contenuCoded0e17982', 'IdTitreCode-d0e17982');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e17982" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> t <code class="python_operator">=</code> f.<code class="python_function">readlines</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>t)
+[<code class="python_literal1">'Voici la ligne trois</code><code class="python_literal4">\n</code><code class="python_literal1">'</code>, <code class="python_literal1">'Voici la ligne quatre</code><code class="python_literal4">\n</code><code class="python_literal1">'</code>]
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">close</code><code class="python_operator">(</code>)</code></pre></div>
+        
+		<h4 class="TitreSection2" id="L11-H-1">11-H-1. Remarques<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>La liste apparaît ci-dessus en format brut, avec des apostrophes pour délimiter les chaînes, et les caractères spéciaux sous leur
+	      forme conventionnelle. Vous pourrez bien évidemment parcourir cette liste (à l'aide d'une boucle <b>while</b>, par exemple) pour en extraire les
+	      chaînes individuelles. </li>
+            <li>La méthode <b>readlines()</b> permet donc de lire l'intégralité d'un fichier en une instruction seulement. Cela n'est possible toutefois que si
+	      le fichier à lire n'est pas trop gros : puisqu'il est copié intégralement dans une variable, c'est-à-dire dans la mémoire vive de
+	      l'ordinateur, il faut que la taille de celle-ci soit suffisante. Si vous devez traiter de gros fichiers, utilisez plutôt la méthode <b>readline()</b> dans
+	      une boucle, comme le montrera l'exemple suivant.</li>
+            <li>Notez bien que <b>readline()</b> est une méthode qui renvoie une<span class="italique"> chaîne de caractères</span>, alors que la méthode <b>readlines()</b>
+	      renvoie une <span class="italique">liste</span>. À la fin du fichier, <b>readline()</b> renvoie une chaîne vide, tandis que <b>readlines()</b> renvoie une liste vide.</li>
+          </ul>
+          <p>
+            <span style="color:#000000;">Le script qui suit vous montre comment créer une fonction destinée à effectuer un certain traitement sur un fichier texte. En
+	      l</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000000;">occurrence, il s</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000000;">agit ici de recopier un fichier texte, en omettant toutes les lignes qui commencent par un caractère </span>
+            <b>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">#</span>
+              <span style="color:#000080;">'</span>
+            </b>
+            <span style="color:#000000;"> :</span>
+          </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e18102">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e18102" onclick="selectionCode('contenuCoded0e18102', 'IdTitreCode-d0e18102');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e18102" class="contenuCode"><code class="python_keyword1">def</code> <code class="python_function">filtre</code><code class="python_operator">(</code>source,destination):
+  <code class="python_literal1">"recopier un fichier en éliminant les lignes de remarques"</code>
+ fs <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code>source, <code class="python_literal1">'r'</code>)
+ fd <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code>destination, <code class="python_literal1">'w'</code>)
+ <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+     txt <code class="python_operator">=</code> fs.<code class="python_function">readline</code><code class="python_operator">(</code>)
+     <code class="python_keyword1">if</code> txt <code class="python_operator">==</code><code class="python_literal1">''</code>:
+     <code class="python_keyword1">break</code>
+     <code class="python_keyword1">if</code> txt[<code class="python_digit">0</code>] <code class="python_operator">!=</code> <code class="python_literal1">'#'</code>:
+     fd.<code class="python_function">write</code><code class="python_operator">(</code>txt)
+ fs.<code class="python_function">close</code><code class="python_operator">(</code>)
+ fd.<code class="python_function">close</code><code class="python_operator">(</code>)
+ <code class="python_keyword1">return</code></code></pre></div>
+          <p>
+            <span style="color:#000000;">Pour appeler cette fonction, vous devez utiliser deux arguments : le nom du fichier original, et le nom du fichier destiné à recevoir
+	      la copie filtrée. Exemple :</span>
+          </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e18197">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e18197" onclick="selectionCode('contenuCoded0e18197', 'IdTitreCode-d0e18197');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e18197" class="contenuCode"><code class="python_function">filtre</code><code class="python_operator">(</code><code class="python_literal1">'test.txt'</code>, <code class="python_literal1">'test_f.txt'</code>)</code></pre></div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-I">11-I. Enregistrement et restitution de variables diverses<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>
+          <span style="color:#000000;">L</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">argument de la méthode </span>
+          <b>write()</b>
+          <span style="color:#000000;">utilisée avec un fichier texte doit être une chaîne de caractères. Avec ce que nous avons appris jusqu</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">à présent, nous ne pouvons donc enregistrer d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">autres types de valeurs qu</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">en les transformant d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">abord en chaînes de caractères (</span>
+          <span class="italique">string</span>
+          <span style="color:#000000;">). Nous pouvons réaliser cela à l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">aide de la fonction intégrée </span>
+          <b>str()</b>
+          <span style="color:#000000;"> :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e18276">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e18276" onclick="selectionCode('contenuCoded0e18276', 'IdTitreCode-d0e18276');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e18276" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> x <code class="python_operator">=</code> <code class="python_digit">52</code>
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">write</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>x))</code></pre></div>
+        <p>
+          <span style="color:#000000;">Nous verrons plus loin qu</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">il existe d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">autres possibilités pour convertir des valeurs numériques en chaînes de caractères (voir à ce sujet : </span>
+          <span class="italique">Formatage des chaînes de caractères</span>
+          <span style="color:#000000;">). Mais la question n</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">est pas vraiment là. Si nous enregistrons les valeurs numériques en les transformant d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">abord en chaînes de caractères, nous risquons de ne plus pouvoir les re-transformer correctement en valeurs numériques lorsque nous
+	    allons relire le fichier. Exemple :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e18335">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e18335" onclick="selectionCode('contenuCoded0e18335', 'IdTitreCode-d0e18335');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e18335" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">5</code>
+<code class="python_operator">&gt;&gt;&gt;</code> b <code class="python_operator">=</code> <code class="python_digit">2.83</code>
+<code class="python_operator">&gt;&gt;&gt;</code> c <code class="python_operator">=</code> <code class="python_digit">67</code>
+<code class="python_operator">&gt;&gt;&gt;</code> f <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code><code class="python_literal1">'Monfichier'</code>, <code class="python_literal1">'w'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">write</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>a))
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">write</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>b))
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">write</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>c))
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">close</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> f <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code><code class="python_literal1">'Monfichier'</code>, <code class="python_literal1">'r'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>f.<code class="python_function">read</code><code class="python_operator">(</code>))
+<code class="python_digit">52.8367</code>
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">close</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>Nous avons enregistré trois valeurs numériques. Mais comment pouvons-nous les distinguer dans la chaîne de caractères résultante,
+	  lorsque nous effectuons la lecture du fichier ? C'est impossible ! Rien ne nous indique d'ailleurs qu'il y a là trois valeurs plutôt qu'une seule, ou
+	  2, ou 4… </p>
+        <p>
+          <span style="color:#000000;">Il existe plusieurs solutions à ce genre de problèmes. L</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">une des meilleures consiste à importer un module Python spécialisé : le module </span>
+          <b>pickle</b>
+          <a class="signetNoteBasPage" id="signetNoteBasPage56" href="#noteBasPage56">(56)</a>
+          <span style="color:#000000;">. Voici comment il s</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">utilise :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e18497">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e18497" onclick="selectionCode('contenuCoded0e18497', 'IdTitreCode-d0e18497');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e18497" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">import</code> pickle 
+<code class="python_operator">&gt;&gt;&gt;</code> a, b, c <code class="python_operator">=</code> <code class="python_digit">27</code>, <code class="python_digit">12.96</code>, [<code class="python_digit">5</code>, <code class="python_digit">4.83</code>, <code class="python_literal1">"René"</code>] 
+<code class="python_operator">&gt;&gt;&gt;</code> f <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code><code class="python_literal1">'donnees_test'</code>, <code class="python_literal1">'wb'</code>) 
+<code class="python_operator">&gt;&gt;&gt;</code> pickle.<code class="python_function">dump</code><code class="python_operator">(</code>a, f) 
+<code class="python_operator">&gt;&gt;&gt;</code> pickle.<code class="python_function">dump</code><code class="python_operator">(</code>b, f) 
+<code class="python_operator">&gt;&gt;&gt;</code> pickle.<code class="python_function">dump</code><code class="python_operator">(</code>c, f) 
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">close</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> f <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code><code class="python_literal1">'donnes_test'</code>, <code class="python_literal1">'rb'</code>) 
+<code class="python_operator">&gt;&gt;&gt;</code> j <code class="python_operator">=</code> pickle.<code class="python_function">load</code><code class="python_operator">(</code>f) 
+<code class="python_operator">&gt;&gt;&gt;</code> k <code class="python_operator">=</code> pickle.<code class="python_function">load</code><code class="python_operator">(</code>f) 
+<code class="python_operator">&gt;&gt;&gt;</code> l <code class="python_operator">=</code> pickle.<code class="python_function">load</code><code class="python_operator">(</code>f) 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>j, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a><code class="python_operator">(</code>j))
+<code class="python_digit">27</code> <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'int'</code><code class="python_operator">&gt;</code> 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>k, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a><code class="python_operator">(</code>k))
+<code class="python_digit">12.96</code> <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'float'</code><code class="python_operator">&gt;</code> 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>l, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a><code class="python_operator">(</code>l)) 
+[<code class="python_digit">5</code>, <code class="python_digit">4.83</code>, <code class="python_literal1">'René'</code>] <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'list'</code><code class="python_operator">&gt;</code>
+<code class="python_operator">&gt;&gt;&gt;</code> f.<code class="python_function">close</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>Comme vous pouvez le constater dans ce court exemple, le module <span class="italique">pickle</span> permet d'enregistrer des données avec conservation de leur type. Les contenus
+	  des trois variables <b>a</b>, <b>b</b> et <b>c</b> sont enregistrés dans le fichier <span class="italique"><b>donnees_test</b></span>, et ensuite fidèlement restitués, avec leur
+	  type, dans les variables <b>j</b>, <b>k</b> et <b>l</b>. Vous pouvez donc mémorisera ainsi des entiers, des réels, des chaînes de caractères, des
+	  listes, et d'autres types de données encore que nous étudierons plus loin.</p>
+        <p><span class="italique"><b>Attention :</b></span> les fichiers traités à l'aide des fonctions du module <span class="italique">pickle</span> ne seront pas des des fichiers texte, mais bien des
+	  <span class="italique">fichiers binaires</span><a class="signetNoteBasPage" id="signetNoteBasPage57" href="#noteBasPage57">(57)</a>. Pour cette raison, ils doivent
+	  obligatoirement être ouverts comme tels à l'aide de la fonction <b>open()</b>. Vous utiliserez l'argument 'wb' pour ouvrir un fichier binaire en écriture
+	  (comme à la 3<sup>e</sup> ligne de notre exemple), et l'argument 'rb' pour ouvrir un fichier binaire en lecture (comme à la 8<sup>e</sup> ligne de notre
+	  exemple).</p>
+        <p>La fonction <b>dump()</b> du module <b>pickle</b> attend deux arguments : le premier est la variable à enregistrer, le second est l'objet fichier dans
+	  lequel on travaille. La fonction <b>pickle.load()</b> effectue le travail inverse, c'est-à-dire la restitution de chaque variable avec son type.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L11-J">11-J. Gestion des exceptions : les instructions try - except - else<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>
+          <span style="color:#000000;">Les </span>
+          <span class="italique">exceptions</span>
+          <span style="color:#000000;">sont les opérations qu</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">effectue un interpréteur ou un compilateur lorsqu</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">une erreur est détectée au cours de l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">exécution d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">un programme. En règle générale, l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">exécution du programme est alors interrompue, et un message d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">erreur plus ou moins explicite est affiché. Exemple :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e18834">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e18834" onclick="selectionCode('contenuCoded0e18834', 'IdTitreCode-d0e18834');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e18834" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_digit">55</code><code class="python_operator">/</code><code class="python_digit">0</code>)
+<code class="python_keyword3">ZeroDivisionError</code>: <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a> division <code class="python_keyword1">or</code> modulo by zero</code></pre></div>
+        <blockquote class="citation"><div>
+          <span style="color:#000000;">D</span>
+          <span class="italique">
+            <span style="color:#000080;">'</span>
+          </span>
+          <span style="color:#000000;">autres informations complémentaires sont affichées, lesquelles indiquent notamment à quel endroit du script l</span>
+          <span class="italique">
+            <span style="color:#000080;">'</span>
+          </span>
+          <span style="color:#000000;">erreur a été détectée, mais nous ne les reproduisons pas ici.</span>
+        </div></blockquote>
+        <p>Le message d'erreur proprement dit comporte deux parties séparées par un double point : d'abord le type d'erreur, et ensuite une information
+	  spécifique de cette erreur. </p>
+        <p>Dans de nombreux cas, il est possible de prévoir à l'avance certaines des erreurs qui risquent de se produire à tel ou tel endroit du programme
+	  et d'inclure à cet endroit des instructions particulières, qui seront activées seulement si ces erreurs se produisent. Dans les langages de niveau
+	  élevé comme Python, il est également possible d'associer un mécanisme de surveillance à <span class="italique">tout un ensemble d'instructions</span>, et donc de
+	  simplifier le traitement des erreurs qui peuvent se produire dans n'importe laquelle de ces instructions.</p>
+        <p>Un mécanisme de ce type s'appelle en général <span class="italique">mécanisme de traitement des exceptions</span>. Celui de Python utilise l'ensemble
+	  d'instructions <b>try</b> - <b>except</b> - <b>else</b>, qui permettent d'intercepter une erreur et d'exécuter une portion de script spécifique de cette
+	  erreur. Il fonctionne comme suit.</p>
+        <p>Le bloc d'instructions qui suit directement une instruction <b>try</b> est exécuté par Python <span class="italique">sousréserve</span>. Si une erreur survient pendant
+	  l'exécution de l'une de ces instructions, alors Python annule cette instruction fautive et exécute à sa place le code inclus dans le bloc qui suit
+	  l'instruction <b>except.</b> Si aucune erreur ne s'est produite dans les instructions qui suivent <b>try</b>, alors c'est le bloc qui suit l'instruction <b>else</b> qui
+	  est exécuté (si cette instruction est présente). Dans tous les cas, l'exécution du programme peut se poursuivre ensuite avec les instructions
+	  ultérieures.</p>
+        <p>
+          <span style="color:#000000;">Considérons par exemple un script qui demande à l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">utilisateur d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">entrer un nom de fichier, lequel fichier étant destiné à être ouvert en lecture. Si le fichier n</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">existe pas, nous ne voulons pas que le programme se « plante ». Nous voulons qu</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">un avertissement soit affiché, et éventuellement que l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">utilisateur puisse essayer d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">entrer un autre nom.</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e18967">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e18967" onclick="selectionCode('contenuCoded0e18967', 'IdTitreCode-d0e18967');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e18967" class="contenuCode">filename <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Veuillez entrer un nom de fichier : "</code>)
+<code class="python_keyword1">try</code>:
+ f <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code>filename, <code class="python_literal1">"r"</code>)
+<code class="python_keyword1">except</code>:
+ <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Le fichier"</code>, filename, <code class="python_literal1">"est introuvable"</code>)</code></pre></div>
+        <p>
+          <span style="color:#000000;">Si nous estimons que ce genre de test est susceptible de rendre service à plusieurs endroits d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">un programme, nous pouvons aussi l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">inclure dans une fonction :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e19025">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e19025" onclick="selectionCode('contenuCoded0e19025', 'IdTitreCode-d0e19025');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e19025" class="contenuCode"><code class="python_keyword1">def</code> <code class="python_function">existe</code><code class="python_operator">(</code>fname):
+ <code class="python_keyword1">try</code>:
+     f <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code>fname,<code class="python_literal1">'r'</code>)
+     f.<code class="python_function">close</code><code class="python_operator">(</code>)
+     <code class="python_keyword1">return</code> <code class="python_digit">1</code>
+ <code class="python_keyword1">except</code>:
+     <code class="python_keyword1">return</code> <code class="python_digit">0</code>
+ 
+filename <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Veuillez entrer le nom du fichier : "</code>)
+<code class="python_keyword1">if</code> <code class="python_function">existe</code><code class="python_operator">(</code>filename):
+ <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Ce fichier existe bel et bien."</code>)
+<code class="python_keyword1">else</code>:
+ <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Le fichier"</code>, filename, <code class="python_literal1">"est introuvable."</code>)</code></pre></div>
+        <p>Il est également possible de faire suivre l'instruction <b>try</b> de plusieurs blocs <b>except</b>, chacun d'entre eux traitant un type d'erreur
+	  spécifique, mais nous ne développerons pas ces compléments ici. Veuillez consulter un ouvrage de référence sur Python si
+	  nécessaire.</p>
+        <p>Exercices</p>
+        <p>.Écrivez un script qui permette de créer et de relire aisément un fichier texte. Votre programme demandera d'abord à l'utilisateur d'entrer
+	  le nom du fichier. Ensuite il lui proposera le choix, soit d'enregistrer de nouvelles lignes de texte, soit d'afficher le contenu du fichier.<br/>
+		 L'utilisateur devra pouvoir entrer ses lignes de texte successives en utilisant simplement la touche &lt;Enter&gt; pour les séparer les unes des autres. Pour
+		   terminer les entrées, il lui suffira d'entrer une ligne vide (c'est-à-dire utiliser la touche &lt;Enter&gt; seule).<br/>
+		 L'affichage du contenu devra montrer les lignes du fichier séparées les unes des autres de la manière la plus naturelle (les codes de fin de ligne
+		   ne doivent pas apparaître).</p>
+        <p>.Considérons que vous avez à votre disposition un fichier texte contenant des phrases de différentes longueurs. Écrivez un script qui
+	  recherche et affiche la phrase la plus longue.</p>
+        <p>.Écrivez un script qui génère automatiquement un fichier texte contenant les tables de multiplication de 2 à 30 (chacune d'entre elles
+	  incluant 20 termes seulement).</p>
+        <p>.Écrivez un script qui recopie un fichier texte en triplant tous les espaces entre les mots.</p>
+        <p>.Vous avez à votre disposition un fichier texte dont chaque ligne est la représentation d'une valeur numérique de type réel (mais sans
+	  exposants). Par exemple :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">14.896</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">7894.6</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">123.278</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">etc.</span>
+          </b>
+        </p>
+        <p>Écrivez un script qui recopie ces valeurs dans un autre fichier en les arrondissant en nombres entiers (l'arrondi doit être correct).</p>
+        <p>.Écrivez un script qui compare les contenus de deux fichiers et signale la première différence rencontrée.</p>
+        <p>.À partir de deux fichiers préexistants A et B, construisez un fichier C qui contienne alternativement un élément de A, un élément
+	  de B, un élément de A... et ainsi de suite jusqu'à atteindre la fin de l'un des deux fichiers originaux. Complétez ensuite C avec les
+	  éléments restant sur l'autre.</p>
+        <p>.Écrivez un script qui permette d'encoder un fichier texte dont les lignes contiendront chacune les noms, prénom, adresse, code postal et
+	  n<sup>o</sup> de téléphone de différentes personnes (considérez par exemple qu'il s'agit des membres d'un club).</p>
+        <p>.Écrivez un script qui recopie le fichier utilisé dans l'exercice précédent, en y ajoutant la date de naissance et le sexe des personnes
+	  (l'ordinateur devra afficher les lignes une par une et demander à l'utilisateur d'entrer pour chacune les données complémentaires).</p>
+        <p>.Considérons que vous avez fait les exercices précédents et que vous disposez à présent d'un fichier contenant les coordonnées
+	  d'un certain nombre de personnes. Écrivez un script qui permette d'extraire de ce fichier les lignes qui correspondent à un code postal bien
+	  déterminé.</p>
+        <p>.Modifiez le script de l'exercice précédent, de manière à retrouver les lignes correspondant à des prénoms dont la première
+	  lettre est située entre F et M (inclus) dans l'alphabet.</p>
+        <p>
+          <span style="color:#000000;">.Écrivez des fonctions qui effectuent le même travail que celles du module </span>
+          <b>pickle</b>
+          <span style="color:#000000;">. Ces fonctions doivent permettre l'enregistrement de variables diverses dans un fichier texte, en les accompagnant systématiquement
+	    d'informations concernant leur format exact.</span>
+        </p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_10.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_12.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage50" href="#signetNoteBasPage50">(50)</a></div><div class="ContenuUneNoteBasPage">En toute rigueur, vous devez considérer que le contenu d'un fichier est une suite
+	  d'<span class="italique">octets</span>. La plupart des octets peuvent effectivement être représentés par des caractères, mais l'inverse n'est pas vrai : nous devrons
+	  donc plus loin opérer une distinction nette entre les chaînes d'octets et les chaînes de caractères.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage51" href="#signetNoteBasPage51">(51)</a></div><div class="ContenuUneNoteBasPage">Dans le cas de <span class="italique">Windows</span>, vous pouvez également inclure dans ce chemin la lettre qui désigne le
+	  périphérique de stockage où se trouve le fichier. Par exemple : <b>D:/home/jules/exercices</b>.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage52" href="#signetNoteBasPage52">(52)</a></div><div class="ContenuUneNoteBasPage">Le point séparateur exprime donc ici une relation d'appartenance. Il s'agit d'un exemple de la <span class="italique"><b>qualification des noms</b></span> qui sera de plus en
+	    plus largement exploitée dans la suite de ce cours. Relier ainsi des noms à l'aide de points est une manière de désigner sans ambiguïté
+	    des éléments faisant partie d'ensembles, lesquels peuvent eux-mêmes faire partie d'ensembles plus vastes, etc. Par exemple, l'étiquette
+	    <b>systeme.machin.truc</b> désigne l'élément <b>truc</b>, qui fait partie de l'ensemble <b>machin</b>, lequel fait lui-même partie de l'ensemble
+	    <b>systeme</b>. Nous verrons de nombreux exemples de cette technique de désignation, notamment lors de notre étude des <b>classes</b> d'objets.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage53" href="#signetNoteBasPage53">(53)</a></div><div class="ContenuUneNoteBasPage">Une telle fonction, dont la valeur de
+	  retour est un objet particulier, est souvent appelée <span class="italique">fonction-fabrique</span>.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage54" href="#signetNoteBasPage54">(54)</a></div><div class="ContenuUneNoteBasPage">Voir page : Véracité/fausseté d'une expression</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage55" href="#signetNoteBasPage55">(55)</a></div><div class="ContenuUneNoteBasPage">Suivant
+	  le système d'exploitation utilisé, le codage correspondant au marqueur de fin de ligne peut être différent. Sous Windows, par exemple, il s'agit
+	  d'une séquence de deux caractères (retour chariot et saut de ligne), alors que dans les systèmes de type Unix (comme Linux) il s'agit d'un seul saut de
+	  ligne, MacOS pour sa part utilisant un seul retour chariot. En principe, vous n'avez pas à vous préoccuper de ces différences. Lors des opérations
+	  d'écriture, Python utilise la convention en vigueur sur votre système d'exploitation. Pour la lecture, Python interprète correctement chacune des trois
+	  conventions (qui sont donc considérées comme équivalentes).</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage56" href="#signetNoteBasPage56">(56)</a></div><div class="ContenuUneNoteBasPage">En anglais, le terme <span class="italique">pickle</span> signifie « conserver ». Le module a été nommé ainsi parce qu'il sert effectivement
+	    à enregistrer des données en conservant leur type.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage57" href="#signetNoteBasPage57">(57)</a></div><div class="ContenuUneNoteBasPage">Dans les versions de Python antérieures à la version 3.0, le module <span class="italique">pickle</span> s'utilisait avec des fichiers texte
+	  (mais les chaînes de caractères étaient traitées en interne avec des conventions différentes). Les fichiers de données créés avec
+	  ces différentes versions de Python ne sont donc pas directement compatibles. Des convertisseurs existent.</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

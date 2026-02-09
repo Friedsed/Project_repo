@@ -1,0 +1,465 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L3">3. À l'école des sorciers</a><ul class="nav-sommaire-ul Indentation3">
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L3-A">3-A. Boîtes noires et pensée magique</a></li>
+      <li><a class="summaryIndent1" href="#L3-B">3-B. Magie blanche, magie noire</a></li>
+      <li><a class="summaryIndent1" href="#L3-C">3-C. La démarche du programmeur</a></li>
+      <li><a class="summaryIndent1" href="#L3-D">3-D. Langage machine, langage de programmation</a></li>
+      <li><a class="summaryIndent1" href="#L3-E">3-E. Édition du code source - Interprétation</a></li>
+      <li><a class="summaryIndent1" href="#L3-F">3-F. Mise au point d'un programme - Recherche des erreurs (debug)</a><ul class="nav-sommaire-ul Indentation3-F">
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L3-F-1">3-F-1. Erreurs de syntaxe</a></li>
+        <li><a class="summaryIndent2" href="#L3-F-2">3-F-2. Erreurs sémantiques</a></li>
+        <li><a class="summaryIndent2" href="#L3-F-3">3-F-3. Erreurs à l'exécution</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L3-G">3-G. Recherche des erreurs et expérimentation</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_2.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_4.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L3">3. À l'école des sorciers<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>Apprendre à programmer est une activité déjà très intéressante en elle-même : elle peut stimuler puissamment votre
+	curiosité intellectuelle. Mais ce n'est pas tout. Acquérir cette compétence vous ouvre également la voie menant à la réalisation de projets
+	tout à fait concrets (utiles ou ludiques), ce qui vous procurera certainement beaucoup de fierté et de grandes satisfactions.</p>
+      <p>Avant de nous lancer dans le vif du sujet, nous allons vous proposer ici quelques réflexions sur la nature de la programmation et le comportement parfois
+	étrange de ceux qui la pratiquent, ainsi que l'explication de quelques concepts fondamentaux. Il n'est pas vraiment difficile d'apprendre à programmer, mais il
+	faut de la méthode et une bonne dose de persévérance, car vous pourrez continuer à progresser sans cesse dans cette science : elle n'a aucune
+	limite</p>
+      
+		<h3 class="TitreSection1" id="L3-A">3-A. Boîtes noires et pensée magique<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Une caractéristique remarquable de notre société moderne est que nous vivons de plus en plus entourés de nombreuses <b>boîtes
+	  noires</b>. Les scientifiques ont l'habitude de nommer ainsi les divers dispositifs technologiques que nous utilisons couramment, sans en connaître ni la structure
+	  ni le fonctionnement exacts. Tout le monde sait se servir d'un téléphone, par exemple, alors qu'il n'existe qu'un très petit nombre de techniciens
+	  hautement spécialisés qui soient capables d'en concevoir un nouveau modèle.</p>
+        <p>Des boîtes noires existent dans tous les domaines, et pour tout le monde. En général, cela ne nous affecte guère, car nous pouvons nous
+	  contenter d'une compréhension sommaire de leur mécanisme pour les utiliser sans état d'âme. Dans la vie courante, par exemple, la composition
+	  précise d'une pile électrique ne nous importe guère. Le simple fait de savoir qu'elle produit son électricité à partir d'une réaction
+	  chimique nous suffit pour admettre sans difficulté qu'elle sera épuisée après quelque temps d'utilisation, et qu'elle sera alors devenue un objet
+	  polluant qu'il ne faudra pas jeter n'importe où. Inutile donc d'en savoir davantage.</p>
+        <p>Il arrive cependant que certaines boîtes noires deviennent tellement complexes que nous n'arrivons plus à en avoir une compréhension suffisante
+	  pour les utiliser tout-à-fait correctement dans n'importe quelle circonstance. Nous pouvons alors être tentés de tenir à leur encontre des
+	  raisonnements qui se rattachent à <span class="italique">la pensée magique</span>, c'est-à-dire à une forme de pensée faisant appel à l'intervention de
+	  propriétés ou de pouvoirs surnaturels pour expliquer ce que notre raison n'arrive pas à comprendre. C'est ce qui se passe lorsqu'un magicien nous montre
+	  un tour de passe-passe, et que nous sommes enclins à croire qu'il possède un pouvoir particulier, tel un don de « double vue », ou à
+	  accepter l'existence de mécanismes paranormaux (« fluide magnétique », etc.), tant que nous n'avons pas compris le truc
+	  utilisé.</p>
+        <p>Du fait de leur extraordinaire complexité, les ordinateurs constituent bien évidemment l'exemple type de la boîte noire. Même si vous avez
+	  l'impression d'avoir toujours vécu entouré de moniteurs vidéo et de claviers, il est fort probable que vous n'ayez qu'une idée très confuse de
+	  ce qui se passe réellement dans la machine, par exemple lorsque vous déplacez la souris, et qu'en conséquence de ce geste un petit dessin en forme de
+	  flèche se déplace docilement sur votre écran. Qu'est-ce qui se déplace, au juste ? Vous sentez-vous capable de l'expliquer en détail, sans
+	  oublier (entre autres) les capteurs, les ports d'interface, les mémoires, les portes et bascules logiques, les transistors, les bits, les octets, les interruptions
+	  processeur, les cristaux liquides de l'écran, la micro-programmation, les pixels, le codage des couleurs ... ?</p>
+        <p>De nos jours, plus personne ne peut prétendre maîtriser absolument toutes les connaissances techniques et scientifiques mises en œuvre dans le
+	  fonctionnement d'un ordinateur. Lorsque nous utilisons ces machines, nous sommes donc forcément amenés à les traiter mentalement, en partie tout au moins,
+	  comme des objets magiques, sur lesquels nous sommes habilités à exercer un certain pouvoir, magique lui aussi.</p>
+        <p>Par exemple, nous comprenons tous très bien une instruction telle que : « déplacer la fenêtre d'application en la saisissant par
+	  sa barre de titre ». Dans le monde réel, nous savons parfaitement ce qu'il faut faire pour l'exécuter, à savoir manipuler un dispositif
+	  technique familier (souris, pavé tactile …) qui va transmettre des impulsions électriques à travers une machinerie d'une complexité
+	  prodigieuse, avec pour effet ultime la modification de l'état de transparence ou de luminosité d'une partie des pixels de l'écran. Mais dans notre esprit,
+	  il ne sera nullement question d'interactions physiques ni de circuiterie complexe. C'est un objet tout à fait virtuel qui sera activé (la flèche du
+	  curseur se déplaçant à l'écran), et qui agira tout à fait comme une baguette magique, pour faire obéir un objet tout aussi virtuel et
+	  magique (la fenêtre d'application). L'explication rationnelle de ce qui se passe effectivement dans la machine est donc tout à fait escamotée au profit
+	  d'un « raisonnement » figuré, qui nous rassure par sa simplicité, mais qui est bel et bien une illusion.</p>
+        <p>Si vous vous intéressez à la programmation des ordinateurs, sachez que vous serez constamment confronté à des formes diverses de cette
+	  « pensée magique », non seulement chez les autres (par exemple ceux qui vous demanderont de réaliser tel ou tel programme), mais surtout
+	  aussi dans vos propres représentations mentales. Vous devrez inlassablement démonter ces pseudo-raisonnements qui ne sont en fait que des spéculations,
+	  basées sur des interprétations figuratives simplifiées de la réalité, pour arriver à mettre en lumière (au moins en partie) leurs
+	  implications concrètes véritables.</p>
+        <p>Ce qui est un peu paradoxal, et qui justifie le titre de ce chapitre, c'est qu'en progressant dans cette compétence, vous allez acquérir de plus en
+	  plus de pouvoir sur la machine, et de ce fait vous allez vous-même devenir petit à petit aux yeux des autres, une sorte de magicien !</p>
+        <p>Bienvenue donc, comme le célèbre <span class="italique">Harry Potter</span>, à l'école des sorciers !</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L3-B">3-B. Magie blanche, magie noire<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous n'avons bien évidemment aucune intention d'assimiler la programmation d'un ordinateur à une science occulte. Si nous vous accueillons ici comme
+	  un apprenti sorcier, c'est seulement pour attirer votre attention sur ce qu'implique cette image que vous donnerez probablement de vous-même (involontairement)
+	  à vos contemporains. Il peut être intéressant aussi d'emprunter quelques termes au vocabulaire de la magie pour illustrer plaisamment certaines
+	  pratiques.</p>
+        <p>La programmation est l'art d'apprendre à une machine comment elle pourra accomplir des tâches nouvelles, qu'elle n'avait jamais été capable
+	  d'effectuer auparavant. C'est par la programmation que vous pourrez acquérir le plus de contrôle, non seulement sur votre machine, mais aussi peut-être
+	  sur celles des autres, par l'intermédiaire des réseaux. D'une certaine façon, cette activité peut donc être assimilée à une forme
+	  particulière de magie. Elle donne effectivement à celui qui l'exerce un certain <b>pouvoir</b>, mystérieux pour le plus grand nombre, voire
+	  inquiétant quand on se rend compte qu'il peut être utilisé à des fins malhonnêtes.</p>
+        <p>Dans le monde de la programmation, on désigne par le terme de <span class="italique"><b>hackers</b></span> les programmeurs chevronnés qui ont perfectionné les
+	  systèmes d'exploitation de type <span class="italique">Unix</span> et mis au point les techniques de communication qui sont à la base du développement extraordinaire de
+	  l'internet. Ce sont eux également qui continuent inlassablement à produire et à améliorer les logiciels libres, dits « o<span class="italique">pen
+	  source</span> ». Dans notre analogie, les <span class="italique">hackers</span> sont donc des maîtres-sorciers, qui pratiquent la magie blanche. </p>
+        <p>Mais il existe aussi un autre groupe de gens que les journalistes mal informés désignent erronément sous le nom de <span class="italique">hackers</span> (alors qu'ils
+	  devraient les appeler plutôt des <span class="italique">crackers</span>). Ces personnes se prétendent <span class="italique">hackers</span> parce qu'ils veulent faire croire qu'ils sont très
+	  compétents, alors qu'en général ils ne le sont guère. Ils sont cependant très nuisibles, parce qu'ils utilisent leurs quelques connaissances
+	  pour rechercher les moindres failles des systèmes informatiques construits par d'autres, afin d'y effectuer toutes sortes d'opérations illicites : vol
+	  d'informations confidentielles, escroquerie, diffusion de spam, de virus, de propagande haineuse, de pornographie et de contrefaçons, destruction de sites web, etc.
+	  Ces sorciers dépravés s'adonnent bien sûr à une forme grave de magie noire.</p>
+        <p>Mais il y en a une autre.</p>
+        <p>Les vrais <span class="italique">hackers</span> cherchent à promouvoir dans leur domaine une certaine éthique, basée principalement sur l'émulation et le partage
+	  des connaissances<a class="signetNoteBasPage" id="signetNoteBasPage2" href="#noteBasPage2">(2)</a>. La plupart d'entre eux sont des perfectionnistes, qui veillent non seulement à ce que leurs
+		   constructions logiques soient efficaces, mais aussi à ce qu'elles soient élégantes, avec une structure parfaitement lisible et documentée.
+		   Vous découvrirez rapidement qu'il est aisé de produire à la va-vite des programmes d'ordinateur qui fonctionnent, certes, mais qui sont obscurs
+		   et confus, indéchiffrables pour toute autre personne que leur auteur (et encore !). Cette forme de programmation abstruse et ingérable est
+		   souvent aussi qualifiée de « magie noire » par les <span class="italique">hackers</span>.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L3-C">3-C. La démarche du programmeur<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Comme le sorcier, le programmeur compétent semble doté d'un pouvoir étrange qui lui permet de transformer une machine en une autre, une machine
+	  à calculer en une machine à écrire ou à dessiner, par exemple, un peu à la manière d'un sorcier qui transformerait un prince charmant en
+	  grenouille, à l'aide de quelques incantations mystérieuses entrées au clavier. Comme le sorcier, il est capable de guérir une application apparemment
+	  malade, ou de jeter des sorts à d'autres, via l'internet.</p>
+        <p>Mais comment cela est-il possible ?</p>
+        <p>Cela peut paraître paradoxal, mais comme nous l'avons déjà fait remarquer plus haut, le vrai maître est en fait celui qui ne croit à
+	  aucune magie, aucun don, aucune intervention surnaturelle. Seule la froide, l'implacable, l'inconfortable logique est de mise.</p>
+        <p>Le mode de pensée d'un programmeur combine des constructions intellectuelles complexes, similaires à celles qu'accomplissent les mathématiciens,
+	  les ingénieurs et les scientifiques. Comme le mathématicien, il utilise des langages formels pour décrire des raisonnements (ou algorithmes). Comme
+	  l'ingénieur, il conçoit des dispositifs, il assemble des composants pour réaliser des mécanismes et il évalue leurs performances. Comme le
+	  scientifique, il observe le comportement de systèmes complexes, il crée des modèles, il teste des prédictions.</p>
+        <blockquote class="citation"><div>
+          <span class="italique">
+            <b>L'activité essentielle d'un programmeur consiste à résoudre des problèmes.</b>
+          </span>
+        </div></blockquote>
+        <p>Il s'agit-là d'une compétence de haut niveau, qui implique des capacités et des connaissances diverses : être capable de (re)formuler
+	  un problème de plusieurs manières différentes, être capable d'imaginer des solutions innovantes et efficaces, être capable d'exprimer ces
+	  solutions de manière claire et complète. Comme nous l'avons déjà évoqué plus haut, il s'agira souvent de mettre en lumière les
+	  implications concrètes d'une représentation mentale « magique », simpliste ou trop abstraite. </p>
+        <p>La programmation d'un ordinateur consiste en effet à « expliquer » en détail à une machine ce qu'elle doit faire, en sachant
+	  d'emblée qu'elle ne peut pas véritablement « comprendre » un langage humain, mais seulement effectuer un traitement automatique sur des
+	  séquences de caractères. Il s'agit la plupart du temps de convertir un souhait exprimé à l'origine en termes « magiques », en un
+	  vrai raisonnement parfaitement structuré et élucidé dans ses moindres détails, que l'on appelle un <span class="italique">algorithme.</span></p>
+        <p>Considérons par exemple une suite de nombres fournis dans le désordre : 47, 19, 23, 15, 21, 36, 5, 12 … Comment devons-nous nous y prendre
+	  pour obtenir d'un ordinateur qu'il les remette dans l'ordre ?</p>
+        <p>Le souhait « magique » est de n'avoir à effectuer qu'un clic de souris sur un bouton, ou entrer une seule instruction au clavier, pour
+	  qu'automatiquement les nombres se mettent en place. Mais le travail du sorcier-programmeur est justement de créer cette « magie ». Pour y
+	  arriver, il devra décortiquer tout ce qu'implique pour nous une telle opération de tri (au fait, existe-t-il une méthode unique pour cela, ou bien y en
+	  a-t-il plusieurs ?), et en traduire toutes les étapes en une suite d'instructions simples, telles que par exemple : « comparer les deux premiers
+	  nombres, les échanger s'ils ne sont pas dans l'ordre souhaité, recommencer avec le deuxième et le troisième, etc., etc., ...».</p>
+        <p>Si les instructions ainsi mises en lumière sont suffisamment simples, il pourra alors les encoder dans la machine en respectant de manière très
+	  stricte un ensemble de conventions fixées à l'avance, que l'on appelle un <b>langage informatique</b>. Pour « comprendre » celui-ci, la
+	  machine sera pourvue d'un mécanisme qui décode ces instructions en associant à chaque « mot » du langage une action précise.
+	  Ainsi seulement, la magie pourra s'accomplir.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L3-D">3-D. Langage machine, langage de programmation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>À strictement parler, un ordinateur n'est rien d'autre qu'une machine effectuant des opérations simples sur des séquences de signaux
+	  électriques, lesquels sont conditionnés de manière à ne pouvoir prendre que deux états seulement (par exemple un potentiel électrique
+	  maximum ou minimum). Ces séquences de signaux obéissent à une logique du type « tout ou rien » et peuvent donc être
+	  considérés conventionnellement comme des suites de nombres ne prenant jamais que les deux valeurs 0 et 1. Un système numérique ainsi limité
+	  à deux chiffres est appelé système binaire.</p>
+        <p>Sachez dès à présent que dans son fonctionnement interne, un ordinateur est totalement incapable de traiter autre chose que des nombres binaires.
+	  Toute information d'un autre type doit être convertie, ou codée, <span class="italique">en format binaire</span>. Cela est vrai non seulement pour les données que l'on souhaite
+	  traiter (les textes, les images, les sons, les nombres, etc.), mais aussi pour les programmes, c'est-à-dire les séquences d'instructions que l'on va fournir
+	  à la machine pour lui dire ce qu'elle doit faire avec ces données.</p>
+        <p>Le seul « langage » que l'ordinateur puisse véritablement « comprendre » est donc très éloigné de ce
+	  que nous utilisons nous-mêmes. C'est une longue suite de 1 et de 0 (les « bits ») souvent traités par groupes de 8 (les
+	  « octets »), 16, 32, ou même 64. Ce « langage machine » est évidemment presque incompréhensible pour nous. Pour
+	  « parler » à un ordinateur, il nous faudra utiliser des systèmes de traduction automatiques, capables de convertir en nombres binaires des
+	  suites de caractères formant des mots-clés (anglais en général) qui seront plus significatifs pour nous.</p>
+        <p>Ces systèmes de traduction automatique seront établis sur la base de toute une série de conventions, dont il existera évidemment de
+	  nombreuses variantes.</p>
+        <p>Le système de traduction proprement dit s'appellera <span class="italique">interpréteur</span> ou bien <span class="italique">compilateur</span>, suivant la méthode utilisée pour
+	  effectuer la traduction. On appellera <span class="italique">langage de programmation</span> un ensemble de mots-clés (choisis arbitrairement) associé à un ensemble de
+	  règles très précises indiquant comment on peut assembler ces mots pour former des « phrases » que l'interpréteur ou le
+	  compilateur puisse traduire en langage machine (binaire).</p>
+        <p>Suivant son niveau d'abstraction, on pourra dire d'un langage qu'il est « de bas niveau » (ex : <span class="italique">assembleur</span>) ou « de
+	  haut niveau » (ex : <span class="italique">Pascal</span>, <span class="italique">Perl</span>, <span class="italique">Smalltalk</span>, <span class="italique">Scheme</span>, <span class="italique">Lisp</span>...). Un langage de bas niveau est constitué
+	  d'instructions très élémentaires, très « proches de la machine ». Un langage de haut niveau comporte des instructions plus
+	  abstraites, plus « puissantes » (et donc plus « magiques »). Cela signifie que chacune de ces instructions pourra être
+	  traduite par l'interpréteur ou le compilateur en un grand nombre d'instructions machine élémentaires.</p>
+        <p>Le langage que vous avez allez apprendre en premier est <span class="italique">Python</span>. Il s'agit d'un langage de haut niveau, dont la traduction en code binaire est complexe et
+	  prend donc toujours un certain temps. Cela pourrait paraître un inconvénient. En fait, les avantages que présentent les langages de haut niveau sont
+	  énormes : il est <span class="italique">beaucoup plus facile</span> d'écrire un programme dans un langage de haut niveau ; l'écriture du programme prend donc beaucoup
+	  moins de temps ; la probabilité d'y faire des fautes est nettement plus faible ; la maintenance (c'est-à-dire l'apport de modifications
+	  ultérieures) et la recherche des erreurs (les « bugs ») sont grandement facilitées. De plus, un programme écrit dans un langage de
+	  haut niveau sera souvent <span class="italique">portable</span>, c'est-à-dire que l'on pourra le faire fonctionner sans guère de modifications sur des machines ou des systèmes
+	  d'exploitation différents. Un programme écrit dans un langage de bas niveau ne peut jamais fonctionner que sur un seul type de machine : pour qu'une autre
+	  l'accepte, il faut le réécrire entièrement.</p>
+        <p>Dans ce que nous venons d'expliquer sommairement, vous aurez sans doute repéré au passage de nombreuses « boîtes
+	  noires » : interpréteur, système d'exploitation, langage, instructions machine, code binaire, etc. L'apprentissage de la programmation va vous
+	  permettre d'en entrouvrir quelques-unes. Restez cependant conscients que vous n'arriverez pas à les décortiquer toutes. De nombreux <span class="italique">objets</span> informatiques
+	  créés par d'autres resteront probablement « magiques » pour vous pendant longtemps (à commencer par le langage de programmation
+	  lui-même, par exemple). Vous devrez donc faire confiance à leurs auteurs, quitte à être déçus parfois en constatant que cette confiance
+	  n'est pas toujours méritée. Restez donc vigilants, apprenez à vérifier, à vous documenter sans cesse. Dans vos propres productions, soyez
+	  rigoureux et évitez à tout prix la « magie noire » (les programmes pleins d'astuces tarabiscotées que vous êtes seul à
+	  comprendre) : un <span class="italique">hacker</span> digne de confiance n'a rien à cacher.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L3-E">3-E. Édition du code source - Interprétation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Le programme tel que nous l'écrivons dans un langage de programmation quelconque est à strictement parler un simple texte. Pour rédiger ce texte,
+	  on peut faire appel à toutes sortes de logiciels plus ou moins perfectionnés, à la condition qu'ils ne produisent que du texte brut, c'est-à-dire
+	  sans mise en page particulière ni aucun attribut de style (pas de spécification de police, donc, pas de gros titres, pas de gras, ni de souligné, ni
+	  d'italique, etc.)<a class="signetNoteBasPage" id="signetNoteBasPage3" href="#noteBasPage3">(3)</a>.</p>
+        <p>Le texte ainsi produit est ce que nous appellerons désormais un « code source ».</p>
+        <p>Comme nous l'avons déjà évoqué plus haut, le code source doit être traduit en une suite d'instructions binaires directement
+	  compréhensibles par la machine : le « code objet ». Dans le cas de Python, cette traduction est prise en charge par un
+	  <span class="italique">interpréteur</span> assisté d'un <span class="italique">pré-compilateur</span>. Cette technique hybride (également utilisée par le langage <span class="italique">Java</span>) vise à
+	  exploiter au maximum les avantages de l'interprétation et de la compilation, tout en minimisant leurs inconvénients respectifs.</p>
+        <p>Veuillez consulter un ouvrage d'informatique générale si vous voulez en savoir davantage sur ces deux techniques. Sachez simplement à ce sujet
+	  que vous pourrez réaliser des programmes extrêmement performants avec Python, même s'il est indiscutable qu'un langage strictement compilé tel que le
+	  C peut toujours faire mieux en termes de rapidité d'exécution.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L3-F">3-F. Mise au point d'un programme - Recherche des erreurs (debug)<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>La programmation est une démarche très complexe, et comme c'est le cas dans toute activité humaine, on y commet de nombreuses erreurs. Pour des
+	  raisons anecdotiques, les erreurs de programmation s'appellent des « <span class="italique">bugs</span> » (ou « bogues », en
+	  Français)<a class="signetNoteBasPage" id="signetNoteBasPage4" href="#noteBasPage4">(4)</a>, et l'ensemble des techniques que l'on met en œuvre pour les détecter et les corriger s'appelle
+		   « <span class="italique">debug</span> » (ou « débogage »).</p>
+        <p>En fait, il peut exister dans un programme trois types d'erreurs assez différentes, et il convient que vous appreniez à bien les
+	  distinguer.</p>
+        
+		<h4 class="TitreSection2" id="L3-F-1">3-F-1. Erreurs de syntaxe<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Python ne peut exécuter un programme que si sa syntaxe est parfaitement correcte. Dans le cas contraire, le processus s'arrête et vous obtenez un
+	    message d'erreur. Le terme syntaxe se réfère aux règles que les auteurs du langage ont établies pour la structure du programme.</p>
+          <p>Tout langage comporte sa syntaxe. Dans la langue française, par exemple, une phrase doit toujours commencer par une majuscule et se terminer par un
+	    point. ainsi cette phrase comporte deux erreurs de syntaxe</p>
+          <p>Dans les textes ordinaires, la présence de quelques petites fautes de syntaxe par-ci par-là n'a généralement pas d'importance. Il peut
+	    même arriver (en poésie, par exemple), que des fautes de syntaxe soient commises volontairement. Cela n'empêche pas que l'on puisse comprendre le
+	    texte.</p>
+          <p>Dans un programme d'ordinateur, par contre, la moindre erreur de syntaxe produit invariablement un arrêt de fonctionnement (un
+	    « plantage ») ainsi que l'affichage d'un message d'erreur. Au cours des premières semaines de votre carrière de programmeur, vous
+	    passerez certainement pas mal de temps à rechercher vos erreurs de syntaxe. Avec de l'expérience, vous en commettrez beaucoup moins.</p>
+          <p>Gardez à l'esprit que les mots et les symboles utilisés n'ont aucune signification en eux-mêmes : ce ne sont que des suites de codes
+	    destinés à être convertis automatiquement en nombres binaires. Par conséquent, il vous faudra être très attentifs à respecter
+	    scrupuleusement la syntaxe du langage.</p>
+          <p>Finalement, souvenez-vous que <b>tous</b> les détails ont de l'importance. Il faudra en particulier faire très attention à la <span class="italique">casse</span>
+	    (c'est-à-dire l'emploi des majuscules et des minuscules) et à la <span class="italique">ponctuation</span>. Toute erreur à ce niveau (même minime en apparence, tel
+	    l'oubli d'une virgule, par exemple) peut modifier considérablement la signification du code, et donc le déroulement du programme.</p>
+          <p>Il est heureux que vous fassiez vos débuts en programmation avec un langage interprété tel que Python. La recherche des erreurs y est facile et
+	    rapide. Avec les langages compilés (tel le C++), il vous faudrait recompiler l'intégralité du programme après chaque modification, aussi minime
+	    soit-elle.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L3-F-2">3-F-2. Erreurs sémantiques<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le second type d'erreur est l'erreur sémantique ou erreur de logique. S'il existe une erreur de ce type dans un de vos programmes, celui-ci
+	    s'exécute parfaitement, en ce sens que vous n'obtenez aucun message d'erreur, mais le résultat n'est pas celui que vous attendiez : vous obtenez autre
+	    chose.</p>
+          <p>En réalité, le programme fait exactement ce que vous lui avez dit de faire. Le problème est que ce que vous lui avez dit de faire ne correspond
+	    pas à ce que vous vouliez qu'il fasse. La séquence d'instructions de votre programme ne correspond pas à l'objectif poursuivi. La sémantique (la
+	    logique) est incorrecte.</p>
+          <p>Rechercher des fautes de logique peut être une tâche ardue. C'est là que se révélera votre aptitude à démonter toute forme
+	    résiduelle de « pensée magique » dans vos raisonnements. Il vous faudra analyser patiemment ce qui sort de la machine et tâcher de
+	    vous représenter une par une les opérations qu'elle a effectuées, à la suite de chaque instruction.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L3-F-3">3-F-3. Erreurs à l'exécution<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le troisième type d'erreur est l'erreur en cours d'exécution (<span class="italique">Run-time error</span>), qui apparaît seulement lorsque votre programme fonctionne
+	    déjà, mais que des circonstances particulières se présentent (par exemple, votre programme essaie de lire un fichier qui n'existe plus). Ces
+	    erreurs sont également appelées des <span class="italique">exceptions</span>, parce qu'elles indiquent généralement que quelque chose d'exceptionnel (et de malencontreux)
+	    s'est produit. Vous rencontrerez davantage ce type d'erreurs lorsque vous programmerez des projets de plus en plus volumineux, et vous apprendrez plus loin dans ce
+	    cours qu'il existe des techniques particulières pour les gérer.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L3-G">3-G. Recherche des erreurs et expérimentation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>L'une des compétences les plus importantes à acquérir au cours de votre apprentissage est celle qui consiste à <span class="italique">déboguer</span>
+	  efficacement un programme. Il s'agit d'une activité intellectuelle parfois énervante mais toujours très riche, dans laquelle il faut faire montre de
+	  beaucoup de perspicacité.</p>
+        <p>Ce travail ressemble par bien des aspects à une enquête policière. Vous examinez un ensemble de faits, et vous devez émettre des
+	  hypothèses explicatives pour reconstituer les processus et les événements qui ont logiquement entraîné les résultats que vous
+	  constatez.</p>
+        <p>Cette activité s'apparente aussi au travail expérimental en sciences. Vous vous faites une première idée de ce qui ne va pas, vous modifiez
+	  votre programme et vous essayez à nouveau. Vous avez émis une hypothèse, qui vous permet de prédire ce que devra donner la modification. Si la
+	  prédiction se vérifie, alors vous avez progressé d'un pas sur la voie d'un programme qui fonctionne. Si la prédiction se révèle fausse,
+	  alors il vous faut émettre une nouvelle hypothèse. Comme l'a bien dit Sherlock Holmes : « Lorsque vous avez éliminé l'impossible, ce
+	  qui reste, même si c'est improbable, doit être la vérité » (A. Conan Doyle, <span class="italique">Le signe des quatre</span>).</p>
+        <p>Pour certaines personnes, « programmer » et « déboguer » signifient exactement la même chose. Ce qu'elles
+	  veulent dire par là est que l'activité de programmation consiste en fait à modifier, à corriger sans cesse un même programme, jusqu'à ce
+	  qu'il se comporte finalement comme vous le vouliez. L'idée est que la construction d'un programme commence toujours par une ébauche qui fait déjà
+	  quelque chose (et qui est donc déjà déboguée), à laquelle on ajoute couche par couche de petites modifications, en corrigeant au fur et à
+	  mesure les erreurs, afin d'avoir de toute façon à chaque étape du processus un programme qui fonctionne.</p>
+        <p>Par exemple, vous savez que Linux est un système d'exploitation (et donc un gros logiciel) qui comporte des milliers de lignes de code. Au départ,
+	  cependant, cela a commencé par un petit programme simple que Linus Torvalds avait développé pour tester les particularités du processeur <span class="italique">Intel
+	  80386</span>. D'après Larry Greenfield (« <span class="italique">The Linux user's guide </span>», beta version 1) : « L'un des premiers projets de Linus
+	  était un programme destiné à convertir une chaîne de caractères AAAA en BBBB. C'est cela qui plus tard finit par devenir Linux
+	  ! ».</p>
+        <p>Ce qui précède ne signifie pas que nous voulions vous pousser à programmer par approximations successives, à partir d'une vague idée.
+	  Lorsque vous démarrerez un projet de programmation d'une certaine importance, il faudra au contraire vous efforcer d'établir le mieux possible un <span class="italique">cahier des
+	  charges</span> détaillé, lequel s'appuiera sur un plan solidement construit pour l'application envisagée.</p>
+        <p>Diverses méthodes existent pour effectuer cette tâche d'analyse, mais leur étude sort du cadre de ces notes. Nous vous présenterons
+	  cependant plus loin quelques idées de base.</p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_2.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_4.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage2" href="#signetNoteBasPage2">(2)</a></div><div class="ContenuUneNoteBasPage">Voir à ce sujet le texte de <span class="italique">Eric Steven Raymond</span> : « Comment devenir un hacker », reproduit sur de
+	  nombreux sites web, notamment sur : http://www.secuser.com/dossiers/devenir_hacker.htm, ou encore sur :<br/>
+		 http://www.forumdz.com/showthread.php?t=4593</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage3" href="#signetNoteBasPage3">(3)</a></div><div class="ContenuUneNoteBasPage">Ces logiciels sont appelés des <span class="italique">éditeurs de texte</span>. Même s'ils proposent divers automatismes, et sont souvent capables
+	  de mettre en évidence certains éléments du texte traité (coloration syntaxique, par ex.), ils ne produisent strictement que du texte non
+	  formaté. Ils sont donc assez différents des logiciels de <span class="italique">traitement de texte</span>, dont la fonction consiste justement à mettre en page et à
+	  ornementer un texte avec des attributs de toute sorte, de manière à le rendre aussi agréable à lire que possible. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage4" href="#signetNoteBasPage4">(4)</a></div><div class="ContenuUneNoteBasPage"><span class="italique">bug</span> est à l'origine un terme anglais servant à désigner de petits insectes gênants, tels les punaises. Les premiers
+	  ordinateurs fonctionnaient à l'aide de « lampes » radios qui nécessitaient des tensions électriques assez élevées. Il est
+	  arrivé à plusieurs reprises que des petits insectes s'introduisent dans cette circuiterie complexe et se fassent électrocuter, leurs cadavres
+	  calcinés provoquant alors des court-circuits et donc des pannes incompréhensibles.<br/>
+		 Le mot français «<span class="italique"> bogue </span>» a été choisi par homonymie approximative. Il désigne la coque épineuse de la
+		   châtaigne.</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

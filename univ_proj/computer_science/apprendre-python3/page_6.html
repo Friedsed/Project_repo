@@ -1,0 +1,557 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L6">6. Instructions répétitives</a><ul class="nav-sommaire-ul Indentation6">
+      
+      
+      <li><a class="summaryIndent1" href="#L6-A">6-A. Ré-affectation</a></li>
+      <li><a class="summaryIndent1" href="#L6-B">6-B. Répétitions en boucle - l'instruction while</a><ul class="nav-sommaire-ul Indentation6-B">
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L6-B-1">6-B-1. Commentaires</a></li>
+        <li><a class="summaryIndent2" href="#L6-B-2">6-B-2. Remarques</a></li>
+        <li><a class="summaryIndent2" href="#L6-B-3">6-B-3. Élaboration de tables</a></li>
+        <li><a class="summaryIndent2" href="#L6-B-4">6-B-4. Construction d'une suite mathématique</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L6-C">6-C. Premiers scripts, ou comment conserver nos programmes</a><ul class="nav-sommaire-ul Indentation6-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L6-C-1">6-C-1. Problèmes éventuels liés aux caractères accentués</a></li>
+      </ul></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_5.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_7.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L6">6. Instructions répétitives<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>L'une des tâches que les machines font le mieux est la répétition sans erreur de tâches identiques. Il existe bien des méthodes pour
+	programmer ces tâches répétitives. Nous allons commencer par l'une des plus fondamentales : la boucle de répétition construite autour de
+	l'instruction while.</p>
+      
+		<h3 class="TitreSection1" id="L6-A">6-A. Ré-affectation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous ne l'avions pas encore signalé explicitement : il est permis de ré-affecter une nouvelle valeur à une même variable, autant de
+	  fois qu'on le souhaite.</p>
+        <p>L'effet d'une ré-affectation est de remplacer l'ancienne valeur d'une variable par une nouvelle.</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3533">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3533" onclick="selectionCode('contenuCoded0e3533', 'IdTitreCode-d0e3533');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3533" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> altitude <code class="python_operator">=</code> <code class="python_digit">320</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>altitude)
+<code class="python_digit">320</code>
+<code class="python_operator">&gt;&gt;&gt;</code> altitude <code class="python_operator">=</code> <code class="python_digit">375</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>altitude)
+<code class="python_digit">375</code></code></pre></div>
+        <p>Ceci nous amène à attirer une nouvelle fois votre attention sur le fait que le symbole <span class="italique">égale</span> utilisé sous Python pour réaliser
+	  une affectation ne doit en aucun cas être confondu avec un symbole d'égalité tel qu'il est compris en mathématique. Il est tentant d'interpréter
+	  l'instruction <b>altitude = 320</b> comme une affirmation d'égalité, mais ce n'en est pas une !</p>
+        <ul class="ListeDVP">
+          <li>Premièrement, l'égalité est <span class="italique">commutative</span>, alors que l'affectation ne l'est pas. Ainsi, en mathématique, les écritures <b>a = 7
+	    </b>et <b>7 = a</b>sont équivalentes, alors qu'une instruction de programmation telle que <b>375 = altitude</b> serait illégale.</li>
+          <li>Deuxièmement, l'égalité est <span class="italique">permanente</span>, alors que l'affectation peut être remplacée comme nous venons de le voir. Lorsqu'en
+	    mathématique, nous affirmons une égalité telle que a = b au début d'un raisonnement, alors a continue à être égal à b durant
+	    tout le développement qui suit.<br/>
+		 En programmation, une première instruction d'affectation peut rendre égales les valeurs de deux variables, et une instruction ultérieure en changer
+		   ensuite l'une ou l'autre. Exemple :</li>
+        </ul>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3609">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3609" onclick="selectionCode('contenuCoded0e3609', 'IdTitreCode-d0e3609');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3609" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">5</code>
+<code class="python_operator">&gt;&gt;&gt;</code> b <code class="python_operator">=</code> a     <code class="python_comment1"># a et b contiennent des valeurs égales</code>
+<code class="python_operator">&gt;&gt;&gt;</code> b <code class="python_operator">=</code> <code class="python_digit">2</code>     <code class="python_comment1"># a et b sont maintenant différentes</code></code></pre></div>
+        <p>Rappelons ici que Python permet d'affecter leurs valeurs à plusieurs variables simultanément :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3643">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3643" onclick="selectionCode('contenuCoded0e3643', 'IdTitreCode-d0e3643');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3643" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b, c, d <code class="python_operator">=</code> <code class="python_digit">3</code>, <code class="python_digit">4</code>, <code class="python_digit">5</code>, <code class="python_digit">7</code></code></pre></div>
+        <p>Cette fonctionnalité de Python est bien plus intéressante encore qu'elle n'en a l'air à première vue. Supposons par exemple que nous
+	  voulions maintenant échanger les valeurs des variables <b>a</b> et <b>c</b> (actuellement, <b>a</b> contient la valeur <b>3</b>, et <b>c</b> la valeur
+	  <b>5</b> ; nous voudrions que ce soit l'inverse). Comment faire ?</p>
+        <p>Exercice</p>
+        <p>.Écrivez les lignes d'instructions nécessaires pour obtenir ce résultat.</p>
+        <p>À la suite de l'exercice proposé ci-dessus, vous aurez certainement trouvé une méthode, et un professeur vous demanderait certainement de la
+	  commenter en classe. Comme il s'agit d'une opération courante, les langages de programmation proposent souvent des raccourcis pour l'effectuer (par exemple des
+	  instructions spécialisées, telle l'instruction SWAP du langage <span class="italique">Basic</span>). Sous Python, <span class="italique">l'affectation parallèle</span> permet de programmer
+	  l'échange d'une manière particulièrement élégante :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3698">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3698" onclick="selectionCode('contenuCoded0e3698', 'IdTitreCode-d0e3698');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3698" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b <code class="python_operator">=</code> b, a</code></pre></div>
+        <p>(On pourrait bien entendu échanger d'autres variables en même temps, dans la même instruction.)</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L6-B">6-B. Répétitions en boucle - l'instruction while<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>L'une des tâches que les machines font le mieux est la répétition sans erreur de tâches identiques. Il existe bien des méthodes pour
+	  programmer ces tâches répétitives. Nous allons commencer par l'une des plus fondamentales : la boucle construite à partir de l'instruction
+	  <b>while</b>.</p>
+        <p>Veuillez donc entrer les commandes ci-dessous :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3724">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3724" onclick="selectionCode('contenuCoded0e3724', 'IdTitreCode-d0e3724');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3724" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> <code class="python_operator">(</code>a <code class="python_operator">&lt;</code> <code class="python_digit">7</code>):     <code class="python_comment1"># (n'oubliez pas le double point !)</code>
+...    a <code class="python_operator">=</code> a <code class="python_operator">+</code> <code class="python_digit">1</code>     <code class="python_comment1"># (n'oubliez pas l'indentation !)</code>
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code>a)</code></pre></div>
+        <p>Frappez encore une fois &lt;<span class="italique">Enter</span>&gt;.</p>
+        <p>Que se passe-t-il ?</p>
+        <p>Avant de lire les commentaires de la page suivante, prenez le temps d'ouvrir votre cahier et d'y noter cette série de commandes. Décrivez aussi le
+	  résultat obtenu, et essayez de l'expliquer de la manière la plus détaillée possible.</p>
+        
+		<h4 class="TitreSection2" id="L6-B-1">6-B-1. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le mot <b>while </b>signifie « tant que » en anglais. Cette instruction utilisée à la seconde ligne indique à Python qu'il
+	    lui faut <span class="italique">répéter continuellement le bloc d'instructions qui suit, tant que</span> le contenu de la variable a reste inférieur à 7.</p>
+          <p>Comme l'instruction if abordée au chapitre précédent, l'instruction <b>while</b> amorce une <span class="italique">instructioncomposée</span>. Le double point
+	    à la fin de la ligne introduit le bloc d'instructions à répéter, lequel doit obligatoirement se trouver en retrait. Comme vous l'avez appris au
+	    chapitre précédent, toutes les instructions d'un même bloc doivent être indentées exactement au même niveau (c'est-à-dire
+	    décalées à droite d'un même nombre d'espaces).</p>
+          <p>Nous avons ainsi construit notre première <span class="italique">boucle de programmation</span>, laquelle répète un certain nombre de fois le bloc d'instructions
+	    indentées. Voici comment cela fonctionne :</p>
+          <ul class="ListeDVP">
+            <li>Avec l'instruction <b>while</b>, Python commence par évaluer la validité de la <span class="italique">condition</span> fournie entre parenthèses (celles-ci sont
+	      optionnelles, nous ne les avons utilisées que pour clarifier notre explication).</li>
+            <li>Si la condition se révèle fausse, alors tout le bloc qui suit est ignoré et l'exécution du programme se termine<a class="signetNoteBasPage" id="signetNoteBasPage14" href="#noteBasPage14">(14)</a>.</li>
+            <li>Si la condition est vraie, alors Python exécute tout le bloc d'instructions constituant <span class="italique">le corps de la boucle</span>,
+	      c'est-à-dire : <ul class="ListeDVP"><li>l'instruction <b>a = a + 1 </b>qui incrémente d'une unité le contenu de la variable<b> a </b>(ce qui signifie que
+	      l'on affecte à la variable <b>a</b> une nouvelle valeur, qui est égale à la valeur précédente augmentée d'une
+	      unité).</li><li>l'appel de la fonction<b>print()</b> pour afficher la valeur courante de la variable <b>a</b>.</li></ul></li>
+            <li>lorsque ces deux instructions ont été exécutées, nous avons assisté à une première <span class="italique">itération</span>, et le programme
+	      boucle, c'est-à-dire que l'exécution reprend à la ligne contenant l'instruction <b>while</b>. La condition qui s'y trouve est à nouveau
+	      évaluée, et ainsi de suite.<br/>
+		 Dans notre exemple, si la condition <b>a &lt; 7</b> est encore vraie, le corps de la boucle est exécuté une nouvelle fois et le bouclage se
+		   poursuit.</li>
+          </ul>
+        </div>
+        
+		<h4 class="TitreSection2" id="L6-B-2">6-B-2. Remarques<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>La variable évaluée dans la condition doit exister au préalable (il faut qu'on lui ait déjà affecté au moins une
+	      valeur).</li>
+            <li>Si la condition est fausse au départ, le corps de la boucle n'est jamais exécuté.</li>
+            <li>Si la condition reste toujours vraie, alors le corps de la boucle est répété indéfiniment (tout au moins tant que Python lui-même
+	      continue à fonctionner). Il faut donc veiller à ce que le corps de la boucle contienne au moins une instruction qui change la valeur d'une variable
+	      intervenant dans la condition évaluée par while, de manière à ce que cette condition puisse devenir fausse et la boucle se terminer.<br/>
+		 Exemple de boucle sans fin (à éviter !) :</li>
+          </ul>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3892">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3892" onclick="selectionCode('contenuCoded0e3892', 'IdTitreCode-d0e3892');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3892" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> n <code class="python_operator">=</code> <code class="python_digit">3</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> n <code class="python_operator">&lt;</code> <code class="python_digit">5</code>:
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"hello !"</code>)</code></pre></div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L6-B-3">6-B-3. Élaboration de tables<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Recommencez à présent le premier exercice, mais avec la petite modification ci-dessous :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3931">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3931" onclick="selectionCode('contenuCoded0e3931', 'IdTitreCode-d0e3931');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3931" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> a <code class="python_operator">&lt;</code> <code class="python_digit">12</code>:
+...    a <code class="python_operator">=</code> a <code class="python_operator">+</code><code class="python_digit">1</code>
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code>a , a<code class="python_operator">**</code><code class="python_digit">2</code> , a<code class="python_operator">**</code><code class="python_digit">3</code>)</code></pre></div>
+          <p>Vous devriez obtenir la liste des carrés et des cubes des nombres de 1 à 12.<br/>
+		 Notez au passage que la fonction <b>print()</b> permet d'afficher plusieurs expressions l'une à la suite de l'autre sur la même ligne : il suffit
+		   de les séparer par des virgules. Python insère automatiquement un espace entre les éléments affichés.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L6-B-4">6-B-4. Construction d'une suite mathématique<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le petit programme ci-dessous permet d'afficher les dix premiers termes d'une suite appelée « <span class="italique">Suite de Fibonacci </span>». Il s'agit
+	    d'une suite de nombres dont chaque terme est égal à la somme des deux termes qui le précèdent. Analysez ce programme (qui utilise judicieusement
+	    l'affectation parallèle) et décrivez le mieux possible le rôle de chacune des instructions.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3997">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3997" onclick="selectionCode('contenuCoded0e3997', 'IdTitreCode-d0e3997');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3997" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b, c <code class="python_operator">=</code> <code class="python_digit">1</code>, <code class="python_digit">1</code>, <code class="python_digit">1</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> c <code class="python_operator">&lt;</code> <code class="python_digit">11</code> :
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code>b, end <code class="python_operator">=</code><code class="python_literal1">" "</code>)
+...    a, b, c <code class="python_operator">=</code> b, a<code class="python_operator">+</code>b, c<code class="python_operator">+</code><code class="python_digit">1</code></code></pre></div>
+          <p>Lorsque vous lancez l'exécution de ce programme, vous obtenez :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4049">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4049" onclick="selectionCode('contenuCoded0e4049', 'IdTitreCode-d0e4049');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4049" class="contenuCode">1 2 3 5 8 13 21 34 55 89</code></pre></div>
+          <p>Les termes de la suite de Fibonacci sont affichés sur la même ligne. Vous obtenez ce résultat grâce au second argument  <b><span style="color:#000080;">end =" " </span></b> fourni à la fonction <b>print()</b>. Par défaut, la fonction <b>print()</b> ajoute en effet un caractère de
+	    saut à la ligne à toute valeur qu'on lui demande d'afficher. L'argument  <b><span style="color:#000080;">end =" " </span></b> signifie que vous souhaitez
+	    remplacer le saut à la ligne par un simple espace. Si vous supprimez cet argument, les nombres seront affichés l'un en-dessous de l'autre.</p>
+          <p>Dans vos programmes futurs, vous serez très souvent amenés à mettre au point des boucles de répétition comme celle que nous analysons
+	    ici. Il s'agit d'une question essentielle, que vous devez apprendre à maîtriser parfaitement. Soyez sûr que vous y arriverez progressivement, à
+	    force d'exercices.</p>
+          <p>Lorsque vous examinez un problème de cette nature, vous devez considérer les lignes d'instruction, bien entendu, mais surtout décortiquer
+	    <span class="italique">les états successifs des différentes variables</span> impliquées dans la boucle. Cela n'est pas toujours facile, loin de là. Pour vous aider à
+	    y voir plus clair, prenez la peine de dessiner sur papier une table d'états similaire à celle que nous reproduisons ci-dessous pour notre programme
+	    « suite de Fibonacci » :</p>
+          <div class="TextAlign-center"><table class="tableau" style="border-width:1px;width:70%;" border="1">
+            <tr>
+              <td class="colonne" style="">Variables</td>
+              <td class="colonne" style="">a</td>
+              <td class="colonne" style="">b</td>
+              <td class="colonne" style="">c</td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">Valeurs initiales</td>
+              <td class="colonne" style="">1</td>
+              <td class="colonne" style="">1</td>
+              <td class="colonne" style="">1</td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">Valeurs prises successivement, au cours des itérations</td>
+              <td class="colonne" style="">1</td>
+              <td class="colonne" style="">2</td>
+              <td class="colonne" style="">2</td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">2</td>
+              <td class="colonne" style="">3</td>
+              <td class="colonne" style="">3</td>
+              <td class="colonne" style=""> </td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">3</td>
+              <td class="colonne" style="">5</td>
+              <td class="colonne" style="">4</td>
+              <td class="colonne" style=""> </td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">5</td>
+              <td class="colonne" style="">8</td>
+              <td class="colonne" style="">5</td>
+              <td class="colonne" style=""> </td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">… </td>
+              <td class="colonne" style="">… </td>
+              <td class="colonne" style="">… </td>
+              <td class="colonne" style=""> </td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">Expression de remplacement</td>
+              <td class="colonne" style="">b</td>
+              <td class="colonne" style="">a+b</td>
+              <td class="colonne" style="">c+1</td>
+            </tr>
+          </table></div>
+          <p>Dans une telle table, on effectue en quelque sorte « à la main » le travail de l'ordinateur, en indiquant ligne par ligne les valeurs
+	    que prendront chacune des variables au fur et à mesure des itérations successives. On commence par inscrire en haut du tableau les noms des variables
+	    concernées. Sur la ligne suivante, les valeurs initiales de ces variables (valeurs qu'elles possèdent avant le démarrage de la boucle). Enfin, tout en
+	    bas du tableau, les expressions utilisées dans la boucle pour modifier l'état de chaque variable à chaque itération.</p>
+          <p>On remplit alors quelques lignes correspondant aux premières itérations. Pour établir les valeurs d'une ligne, il suffit d'appliquer à
+	    celles de la ligne précédente, l'expression de remplacement qui se trouve en bas de chaque colonne. On vérifie ainsi que l'on obtient bien la suite
+	    recherchée. Si ce n'est pas le cas, il faut essayer d'autres expressions de remplacement.</p>
+          <p>Exercices</p>
+          <p>.Écrivez un programme qui affiche les 20 premiers termes de la table de multiplication par 7.</p>
+          <p><span style="color:#000000;">.Écrivez un programme qui affiche une table de conversion de sommes d'argent </span>exprimées en euros, en dollars canadiens.
+	    La progression des sommes de la table sera « géométrique », comme dans l'exemple ci-dessous :<br/></p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4219">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4219" onclick="selectionCode('contenuCoded0e4219', 'IdTitreCode-d0e4219');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4219" class="contenuCode">1 euro(s) = 1.65 dollar(s)
+2 euro(s) = 3.30 dollar(s)
+4 euro(s) = 6.60 dollar(s)
+8 euro(s) = 13.20 dollar(s)</code></pre></div>
+          <p><br/>
+		 etc. (S'arrêter à 16384 eur<span style="color:#000000;">os.)</span></p>
+          <p>.Écrivez un programme qui affiche une suite de 12 nombres dont chaque terme soit égal au triple du terme précédent.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L6-C">6-C. Premiers scripts, ou comment conserver nos programmes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Jusqu'à présent, vous avez toujours utilisé Python <span class="italique">en mode interactif</span> (c'est-à-dire que vous avez à chaque fois entré les
+	  commandes directement dans l'interpréteur, sans les sauvegarder au préalable dans un fichier). Cela vous a permis d'apprendre très rapidement les bases du
+	  langage, par expérimentation directe. Cette façon de faire présente toutefois un gros inconvénient : toutes les séquences d'instructions
+	  que vous avez écrites disparaissent irrémédiablement dès que vous fermez l'interpréteur. Avant de poursuivre plus avant votre étude, il est
+	  donc temps que vous appreniez à sauvegarder vos programmes dans des fichiers, sur disque dur ou clef USB, de manière à pouvoir les retravailler par
+	  étapes successives, les transférer sur d'autres machines, etc.</p>
+        <p>Pour ce faire, vous allez désormais rédiger vos séquences d'instructions dans un <span class="italique">éditeur de texte</span> quelconque (par exemple
+	  <span class="italique">Kate</span>, <span class="italique">Gedit</span>, <span class="italique">Geany</span>,... sous <span class="italique">Linux</span>, <span class="italique">Wordpad, Geany, Komodo editor, ...</span> sous <span class="italique">Windows</span>, ou encore l'éditeur incorporé
+	  dans l'interface de développement <span class="italique">IDLE </span> qui fait partie de la distribution de Python pour Windows). Ainsi vous écrirez <span class="italique">unscript</span>, que
+	  vous pourrez ensuite sauvegarder, modifier, copier, etc. comme n'importe quel autre texte traité par ordinateur<a class="signetNoteBasPage" id="signetNoteBasPage15" href="#noteBasPage15">(15)</a>. La figure ci-dessus illustre l'utilisation de l'éditeur
+	  <span class="italique">Gedit</span> sous <span class="italique">Linux (Ubuntu)</span> :</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image5.png"><img class="ImgCliquable figure-img-caption" src="./images/image5.png" alt="Image non disponible" width="550" height="269"/></a></figure></div>
+        <p>Par la suite, lorsque vous voudrez tester l'exécution de votre programme, il vous suffira de lancer l'interpréteur Python en lui fournissant (comme
+	  argument) le nom du fichier qui contient le script. Par exemple, si vous avez placé un script dans un fichier nommé « MonScript », il
+	  suffira d'entrer la commande suivante dans une fenêtre de terminal pour que ce script s'exécute :</p>
+        <p>python3 MonScript <a class="signetNoteBasPage" id="signetNoteBasPage16" href="#noteBasPage16">(16)</a></p>
+        <p>Pour faire mieux encore, veillez à choisir pour votre fichier un nom qui se termine par l'extension .<b>py</b></p>
+        <p>Si vous respectez cette convention, vous pourrez aussi lancer l'exécution du script, simplement en cliquant sur son nom ou sur l'icône correspondante
+	  dans le gestionnaire de fichiers (c'est-à-dire l'explorateur, sous <span class="italique">Windows</span>, ou bien <span class="italique">Nautilus</span>, <span class="italique">Konqueror</span>... sous <span class="italique">Linux</span>).</p>
+        <p>Ces gestionnaires graphiques « savent » en effet qu'il doivent lancer l'interpréteur Python chaque fois que leur utilisateur essaye
+	  d'ouvrir un fichier dont le nom se termine par .py (cela suppose bien entendu qu'ils aient été correctement configurés). La même convention permet en
+	  outre aux éditeurs « intelligents » de reconnaître automatiquement les scripts Python, et d'adapter leur coloration syntaxique en
+	  conséquence.</p>
+        <p>Un script Python contiendra des séquences d'instructions identiques à celles que vous avez expérimentées jusqu'à présent. Puisque
+	  ces séquences sont destinées à être conservées et relues plus tard par vous-même ou par d'autres, <span class="italique">il vous est très fortement
+	  recommandé d'expliciter vos scripts le mieux possible, en y incorporant de nombreux commentaires</span>. La principale difficulté de la programmation consiste en
+	  effet à mettre au point des algorithmes corrects. Afin que ces algorithmes puissent être vérifiés, corrigés, modifiés, etc. dans de bonnes
+	  conditions, il est essentiel que leur auteur les décrive le plus complètement et le plus clairement possible. Et le meilleur emplacement pour cette description
+	  est le corps même du script (ainsi elle ne peut pas s'égarer).</p>
+        <blockquote class="citation"><div>Un bon programmeur veille toujours à insérer un grand nombre de commentaires dans ses scripts. En procédant ainsi, non seulement il facilite la
+	  compréhension de ses algorithmes pour d'autres lecteurs éventuels, mais encore il se force lui-même à avoir les idées plus claires.</div></blockquote>
+        <p>On peut insérer des commentaires quelconques à peu près n'importe où dans un script. Il suffit de les faire précéder d'un
+	  caractère #. Lorsqu'il rencontre ce caractère, l'interpréteur Python ignore tout ce qui suit, jusqu'à la fin de la ligne courante.</p>
+        <p>Comprenez bien qu'il est important d'inclure des commentaires <span class="italique">au fur et à mesure de l'avancement de votre travail de programmation</span>. N'attendez pas
+	  que votre script soit terminé pour les ajouter « après coup ». Vous vous rendrez progressivement compte qu'un programmeur passe
+	  <span class="italique">énormément de temps</span> à relire son propre code (pour le modifier, y rechercher des erreurs, etc.). Cette relecture sera grandement facilitée si
+	  le code comporte de nombreuses explications et remarques. </p>
+        <p>Ouvrez donc un éditeur de texte, et rédigez le script ci-dessous :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4353">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4353" onclick="selectionCode('contenuCoded0e4353', 'IdTitreCode-d0e4353');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4353" class="contenuCode"><code class="python_comment1"># Premier essai de script Python</code>
+<code class="python_comment1"># petit programme simple affichant une suite de Fibonacci, c.à.d. une suite</code>
+<code class="python_comment1"># de nombres dont chaque terme est égal à la somme des deux précédents.</code>
+ 
+a, b, c <code class="python_operator">=</code> <code class="python_digit">1</code>, <code class="python_digit">1</code>, <code class="python_digit">1</code>	<code class="python_comment1"># a &amp; b servent au calcul des termes successifs</code>
+	     <code class="python_comment1"># c est un simple compteur</code>
+<code class="python_keyword1">print</code><code class="python_operator">(</code>b)	   <code class="python_comment1"># affichage du premier terme</code>
+<code class="python_keyword1">while</code> c<code class="python_operator">&lt;</code><code class="python_digit">15</code>:	      <code class="python_comment1"># nous afficherons 15 termes au total</code>
+ a, b, c <code class="python_operator">=</code> b, a<code class="python_operator">+</code>b, c<code class="python_operator">+</code><code class="python_digit">1</code>
+ <code class="python_keyword1">print</code><code class="python_operator">(</code>b)</code></pre></div>
+        <p>Afin de vous montrer tout de suite le bon exemple, nous commençons ce script par trois lignes de commentaires, qui contiennent une courte description de la
+	  fonctionnalité du programme. Prenez l'habitude de faire de même dans vos propres scripts.</p>
+        <p>Certaines lignes de code sont également elle-mêmes documentées. Si vous procédez comme nous l'avons fait, c'est-à-dire en insérant
+	  des commentaires à la droite des instructions correspondantes, veillez à les écarter suffisamment de celles-ci, afin de ne pas gêner leur
+	  lisibilité.</p>
+        <p>Lorsque vous aurez bien vérifié votre texte, sauvegardez-le et exécutez-le.</p>
+        <blockquote class="citation"><div>Bien que ce ne soit pas indispensable, nous vous recommandons une fois encore de choisir pour vos scripts des noms de fichiers se terminant par l'extension .py.
+	  Cela aide beaucoup à les identifier comme tels dans un répertoire. Les gestionnaires graphiques de fichiers (explorateur Windows, Nautilus, Konqueror) se
+	  servent d'ailleurs de cette extension pour leur associer une icône spécifique. <b>Évitez cependant de choisir des noms qui risqueraient d'être
+	  déjà attribués à des modules python existants </b>: des noms tels que math.py ou tkinter.py, par exemple, sont à
+	  proscrire !</div></blockquote>
+        <p>Si vous travaillez en mode texte sous <span class="italique">Linux</span>, ou dans une fenêtre <span class="italique">MS-DOS</span>, vous pouvez exécuter votre script à l'aide de la commande
+	  python3 suivie du nom du script. Si vous travaillez en mode graphique sous <span class="italique">Linux</span>, vous pouvez ouvrir une fenêtre de terminal et faire la même
+	  chose :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4444">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4444" onclick="selectionCode('contenuCoded0e4444', 'IdTitreCode-d0e4444');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4444" class="contenuCode">python3 monScript.py</code></pre></div>
+        <p>Dans un gestionnaire graphique de fichiers, vous pouvez en principe lancer l'exécution de votre script en effectuant un (double ?) clic de souris sur
+	  l'icône correspondante. Ceci ne pourra cependant fonctionner que si c'est bien <b>Python 3</b> qui a été désigné comme interpréteur
+	  par défaut pour les fichiers comportant l'extension .py (des problèmes peuvent en effet apparaître si plusieurs versions de Python sont installées
+	  sur votre machine - voyez votre professeur ou votre gourou local pour détailler ces questions).</p>
+        <p>Si vous travaillez avec <span class="italique">IDLE</span>, vous pouvez lancer l'exécution du script en cours d'édition, directement à l'aide de la combinaison de
+	  touches &lt;<b>Ctrl</b>-<b>F5</b>&gt;. Dans d'autres environnements de travail spécifiquement dédiés à Python, tels que <span class="italique">Geany</span>, vous trouverez
+	  également des icônes et/ou des raccourcis clavier pour lancer l'exécution (il s'agit souvent de la touche F5). Consultez votre professeur ou votre
+	  <span class="italique">gourou</span> local concernant les autres possibilités de lancement éventuelles sur différents systèmes d'exploitation.</p>
+        
+		<h4 class="TitreSection2" id="L6-C-1">6-C-1. Problèmes éventuels liés aux caractères accentués<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Si vous avez rédigé votre script avec un logiciel éditeur récent (tels ceux que nous avons déjà indiqués), le script
+	    décrit ci-dessus devrait s'exécuter sans problème avec la version actuelle de Python 3. Si votre logiciel éditeur est ancien ou mal configuré,
+	    par contre, il se peut que vous obteniez un message d'erreur similaire à celui-ci :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4479">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4479" onclick="selectionCode('contenuCoded0e4479', 'IdTitreCode-d0e4479');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4479" class="contenuCode">File "fibo2.py", line 2 
+SyntaxError: Non-UTF-8 code starting with '\xe0' in file fibo2.py on line 2, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details</code></pre></div>
+          <p>Ce message vous indique que le script contient des caractères typographiques encodés suivant une norme ancienne (vraisemblablement la norme
+	    ISO-8859-1 ou Latin-1).</p>
+          <p>Nous détaillerons les différentes normes d'encodage plus loin dans ce livre. Pour l'instant, il vous suffit de savoir que vous devez dans ce
+	    cas :</p>
+          <ul class="ListeDVP">
+            <li>soit reconfigurer votre éditeur de textes pour qu'il encode les caractères en Utf-8 (ou vous procurer un autre éditeur fonctionnant suivant
+	      cette norme). C'est la meilleure solution, car ainsi vous serez certain à l'avenir de travailler en accord avec les conventions de standardisation actuelles,
+	      qui finiront tôt ou tard par remplacer partout les anciennes. </li>
+            <li>soit inclure le pseudo-commentaire suivant au début de tous vos scripts (obligatoirement à la 1<sup>e</sup> ou à la 2<sup>e</sup>
+	      ligne) :<br/><br/><b><span style="color:#000080;"># -*- coding:Latin-1 -*-</span></b></li>
+          </ul>
+          <p>Le pseudo-commentaire ci-dessus indique à Python que vous utilisez dans votre script le jeu de caractères accentués <span class="italique">ASCII
+	    étendu</span> correspondant aux principales langues de l'Europe occidentale (Français, Allemand, Portugais, etc.), encodé sur un seul octet suivant la
+	    norme <span class="italique">ISO-8859-1</span>, laquelle est souvent désignée aussi par l'étiquette <span class="italique">Latin-1</span> .</p>
+          <p>Python peut traiter correctement les caractères encodés suivant toute une série de normes, mais il faut alors lui signaler laquelle vous
+	    utilisez à l'aide d'un pseudo-commentaire en début de script. Sans cette indication, Python considère que vos scripts ont été encodés en
+	    Utf-8<a class="signetNoteBasPage" id="signetNoteBasPage17" href="#noteBasPage17">(17)</a>, suivant en cela la nouvelle norme <span class="italique">Unicode</span>, laquelle a
+	    été mise au point pour standardiser la représentation numérique de tous les caractères spécifiques des différentes langues
+	    mondiales, ainsi que les symboles mathématiques, scientifiques, etc. Il existe plusieurs représentations ou <span class="italique">encodages</span> de cette norme, et nous devrons
+	    approfondir cette question plus loin<a class="signetNoteBasPage" id="signetNoteBasPage18" href="#noteBasPage18">(18)</a>, mais pour l'instant il vous suffit de savoir que l'encodage le plus répandu sur
+	    les ordinateurs récents est <span class="italique">Utf-8</span>. Dans ce système, les caractères standard (<span class="italique">ASCII</span>) sont encore encodés sur un seul octet, ce qui
+	    assure une certaine compatibilité avec l'ancienne norme d'encodage <span class="italique">Latin-1</span>, mais les autres caractères (parmi lesquels nos caractères
+	    accentués) peuvent être encodés sur 2, 3, ou même parfois 4 octets.</p>
+          <p>Nous apprendrons comment gérer et convertir ces différents encodages, lorsque nous étudierons plus en détail le traitement des fichiers
+	    texte (au chapitre 9).</p>
+          <p>Exercices</p>
+          <p>.Écrivez un programme qui calcule le volume d'un parallélépipède rectangle dont sont fournis au départ la largeur, la hauteur et la
+	    profondeur.</p>
+          <p>.Écrivez un programme qui convertit un nombre entier de secondes fourni au départ en un nombre d'années, de mois, de jours, de minutes et de
+	    secondes (utilisez l'opérateur modulo : <b>%</b>).</p>
+          <p>.Écrivez un programme qui affiche les 20 premiers termes de la table de multiplication par 7, en signalant au passage (à l'aide d'une
+	    astérisque) ceux qui sont des multiples de 3.<br/>
+		 Exemple : 7 14 21 * 28 35 42 * 49 ...</p>
+          <p>.Écrivez un programme qui calcule les 50 premiers termes de la table de multiplication par 13, mais n'affiche que ceux qui sont des multiples de
+	    7.</p>
+          <p>
+            <span style="color:#000000;">.Écrivez un programme qui affiche la suite de symboles suivante :</span>
+          </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4573">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4573" onclick="selectionCode('contenuCoded0e4573', 'IdTitreCode-d0e4573');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4573" class="contenuCode">*
+**
+***
+****
+*****
+******
+*******</code></pre></div>
+        </div>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_5.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_7.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage14" href="#signetNoteBasPage14">(14)</a></div><div class="ContenuUneNoteBasPage">... du moins
+	      dans cet exemple. Nous verrons un peu plus loin qu'en fait l'exécution continue avec la première instruction qui suit le bloc indenté, et qui fait
+	      partie du même bloc que l'instruction <b>while</b> elle-même.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage15" href="#signetNoteBasPage15">(15)</a></div><div class="ContenuUneNoteBasPage">Il serait parfaitement possible
+	  d'utiliser un système de traitement de textes, à la condition d'effectuer la sauvegarde sous un format « texte pur » (sans balises de mise
+	  en page). Il est cependant préférable d'utiliser un véritable éditeur « intelligent » tel que <span class="italique">Gedit, Geany</span>, ou
+	  <span class="italique">IDLE</span>, muni d'une fonction de coloration syntaxique pour Python, qui vous aide à éviter les fautes de syntaxe. Avec <span class="italique">IDLE</span>, suivez le menu : File
+	   New window (ou tapez Ctrl-N) pour ouvrir une nouvelle fenêtre dans laquelle vous écrirez votre script. Pour l'exécuter, il vous suffira
+	  (après sauvegarde), de suivre le menu : Edit  Run script (ou de taper Ctrl-F5). </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage16" href="#signetNoteBasPage16">(16)</a></div><div class="ContenuUneNoteBasPage">Si l'interpréteur Python 3 a été installé sur votre machine comme interpréteur Python par défaut,
+	  vous devriez pouvoir aussi entrer tout simplement : <b><span style="color:#000080;">python MonScript</span></b> . Mais attention : si plusieurs versions de Python
+	  sont présentes, il se peut que cette commande active plutôt une version antérieure (Python 2.x).</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage17" href="#signetNoteBasPage17">(17)</a></div><div class="ContenuUneNoteBasPage">Dans les versions de Python antérieures à la version 3.0, l'encodage par défaut était ASCII. Il fallait donc toujours
+	    préciser en début de script les autres encodages (y compris Utf-8). </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage18" href="#signetNoteBasPage18">(18)</a></div><div class="ContenuUneNoteBasPage">Voir page </div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

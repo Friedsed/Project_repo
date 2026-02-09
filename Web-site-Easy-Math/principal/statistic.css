@@ -1,0 +1,42 @@
+
+
+header{
+    border-bottom: dashed 10px;
+    border-top: dashed 10px;
+    border-color: aquamarine;
+    border-radius: 50%;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+}
+header h1 {
+    text-align: center;
+  
+}
+body{
+    background-color: #333;
+}
+
+section h1{
+    text-align: center;
+    color: aqua;
+}
+
+.main{
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    border-top: dashed 20px;
+    border-bottom: dashed 20px;
+    border-radius: 10%;
+    border-color: #333;
+    padding: 50px;
+    margin: 50px;
+
+
+}
+
+.main section{
+  border-bottom: dashed 5px;
+    border-top: dashed 5px;
+    border-radius: 10%;
+    padding: 50px;
+    margin: 20px;
+
+}

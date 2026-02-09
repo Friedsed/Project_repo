@@ -1,0 +1,980 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L9">9. Fonctions originales</a><ul class="nav-sommaire-ul Indentation9">
+      
+      
+      <li><a class="summaryIndent1" href="#L9-A">9-A. Définir une fonction</a><ul class="nav-sommaire-ul Indentation9-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L9-A-1">9-A-1. Fonction simple sans paramètres</a></li>
+        <li><a class="summaryIndent2" href="#L9-A-2">9-A-2. Fonction avec paramètre</a></li>
+        <li><a class="summaryIndent2" href="#L9-A-3">9-A-3. Utilisation d'une variable comme argument</a><ul class="nav-sommaire-ul Indentation9-A-3">
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L9-A-3-A">9-A-3-A. Remarque importante</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L9-A-4">9-A-4. Fonction avec plusieurs paramètres</a><ul class="nav-sommaire-ul Indentation9-A-4">
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L9-A-4-A">9-A-4-A. Notes</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L9-B">9-B. Variables locales, variables globales</a></li>
+      <li><a class="summaryIndent1" href="#L9-C">9-C. Vraies fonctions et procédures</a><ul class="nav-sommaire-ul Indentation9-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L9-C-1">9-C-1. Notes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L9-D">9-D. Utilisation des fonctions dans un script</a><ul class="nav-sommaire-ul Indentation9-D">
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L9-D-1">9-D-1. Notes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L9-E">9-E. Modules de fonctions</a></li>
+      <li><a class="summaryIndent1" href="#L9-F">9-F. Typage des paramètres</a></li>
+      <li><a class="summaryIndent1" href="#L9-G">9-G. Valeurs par défaut pour les paramètres</a></li>
+      <li><a class="summaryIndent1" href="#L9-H">9-H. Arguments avec étiquettes</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_8.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_10.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L9">9. Fonctions originales<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>La programmation est l'art d'apprendre à un ordinateur comment accomplir des tâches qu'il n'était pas capable de réaliser auparavant. L'une
+	des méthodes les plus intéressantes pour y arriver consiste à ajouter de nouvelles instructions au langage de programmation que vous utilisez, sous la forme
+	de fonctions originales.</p>
+      
+		<h3 class="TitreSection1" id="L9-A">9-A. Définir une fonction<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Les scripts que vous avez écrits jusqu'à présent étaient à chaque fois très courts, car leur objectif était seulement de vous
+	  faire assimiler les premiers éléments du langage. Lorsque vous commencerez à développer de véritables projets, vous serez confrontés à
+	  des problèmes souvent fort complexes, et les lignes de programme vont commencer à s'accumuler...</p>
+        <p>L'approche efficace d'un problème complexe consiste souvent à le décomposer en plusieurs sous-problèmes plus simples qui seront
+	  étudiés séparément (ces sous-problèmes peuvent éventuellement être eux-mêmes décomposés à leur tour, et ainsi de
+	  suite). Or il est important que cette décomposition soit représentée fidèlement dans les algorithmes<a class="signetNoteBasPage" id="signetNoteBasPage29" href="#noteBasPage29">(29)</a> pour que ceux-ci restent
+	  clairs.</p>
+        <p>D'autre part, il arrivera souvent qu'une même séquence d'instructions doive être utilisée à plusieurs reprises dans un programme, et on
+	  souhaitera bien évidemment ne pas avoir à la reproduire systématiquement.</p>
+        <p>Les <span class="italique">fonctions</span><a class="signetNoteBasPage" id="signetNoteBasPage30" href="#noteBasPage30">(30)</a> et les <span class="italique">classesd'objets</span> sont différentes structures de
+		   sous-programmes qui ont été imaginées par les concepteurs des langages de haut niveau afin de résoudre les difficultés
+		   évoquées ci-dessus. Nous allons commencer par décrire ici la <span class="italique">définitiondefonctions</span> sous Python. Les <span class="italique">objets</span> et les
+		   <span class="italique">classes</span> seront examinés plus loin.</p>
+        <p>Nous avons déjà rencontré diverses fonctions pré-programmées. Voyons à présent comment en définir nous-mêmes de
+	  nouvelles.</p>
+        <p>La syntaxe Python pour la définition d'une fonction est la suivante : </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e8872">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e8872" onclick="selectionCode('contenuCoded0e8872', 'IdTitreCode-d0e8872');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e8872" class="contenuCode"><code class="python_keyword1">def</code> <code class="python_function">nomDeLaFonction</code><code class="python_operator">(</code>liste de paramètres):
+ ... 
+ bloc d<code class="python_literal1">'instructions</code>
+<code class="python_literal1"> ...</code></code></pre></div>
+        <ul class="ListeDVP">
+          <li>Vous pouvez choisir n'importe quel nom pour la fonction que vous créez, à l'exception des mots réservés du langage<a class="signetNoteBasPage" id="signetNoteBasPage31" href="#noteBasPage31">(31)</a>, et à la condition de n'utiliser aucun caractère spécial ou
+	    accentué (le caractère souligné « _ » est permis). Comme c'est le cas pour les noms de variables, il vous est conseillé
+	    d'utiliser surtout des lettres minuscules, notamment au début du nom (les noms commençant par une majuscule seront réservés aux <span class="italique">classes</span> que
+	    nous étudierons plus loin).</li>
+          <li>Comme les instructions <b>if</b> et <b>while</b> que vous connaissez déjà, l'instruction <b>def</b> est une <span class="italique">instructioncomposée</span>. La ligne
+	    contenant cette instruction se termine obligatoirement par un double point, lequel introduit un bloc d'instructions que vous ne devez pas oublier
+	    <span class="italique">d'indenter</span>.</li>
+          <li>La <span class="italique">listedeparamètres</span> spécifie quelles informations il faudra fournir en guise <span class="italique">d'arguments</span> lorsque l'on voudra utiliser cette fonction
+	    (les parenthèses peuvent parfaitement rester vides si la fonction ne nécessite pas d'arguments). </li>
+          <li>Une fonction s'utilise pratiquement comme une instruction quelconque. Dans le corps d'un programme, un <span class="italique">appel de fonction</span> est constitué du nom de la
+	    fonction suivi de parenthèses.<br/>
+		 Si c'est nécessaire, on place dans ces parenthèses le ou les arguments que l'on souhaite transmettre à la fonction. Il faudra en principe fournir
+		   un argument pour chacun des paramètres spécifiés dans la définition de la fonction, encore qu'il soit possible de définir pour ces
+		   paramètres des valeurs par défaut (voir plus loin). </li>
+        </ul>
+        
+		<h4 class="TitreSection2" id="L9-A-1">9-A-1. Fonction simple sans paramètres<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Pour notre première approche concrète des fonctions, nous allons travailler à nouveau en mode interactif. Le mode interactif de Python est en
+	    effet idéal pour effectuer des petits tests comme ceux qui suivent. C'est une facilité que n'offrent pas tous les langages de
+	    programmation !</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e8942">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e8942" onclick="selectionCode('contenuCoded0e8942', 'IdTitreCode-d0e8942');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e8942" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">table7</code><code class="python_operator">(</code>):
+...    n <code class="python_operator">=</code> <code class="python_digit">1</code>
+...    <code class="python_keyword1">while</code> n <code class="python_operator">&lt;</code><code class="python_digit">11</code> :
+...	  <code class="python_keyword1">print</code><code class="python_operator">(</code>n <code class="python_operator">*</code> <code class="python_digit">7</code>, end <code class="python_operator">=</code><code class="python_literal1">' '</code>)
+...	  n <code class="python_operator">=</code> n <code class="python_operator">+</code><code class="python_digit">1</code>
+...</code></pre></div>
+          <p>En entrant ces quelques lignes, nous avons défini une fonction très simple qui calcule et affiche les 10 premiers termes de la table de
+	    multiplication par 7. Notez bien les parenthèses<a class="signetNoteBasPage" id="signetNoteBasPage32" href="#noteBasPage32">(32)</a>, le double point, et l'indentation du bloc d'instructions qui suit la ligne d'en-tête (c'est ce bloc d'instructions qui constitue le corps de
+	    la fonction proprement dite).</p>
+          <p>Pour utiliser la fonction que nous venons de définir, il suffit de l'appeler par son nom. Ainsi :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9002">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9002" onclick="selectionCode('contenuCoded0e9002', 'IdTitreCode-d0e9002');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9002" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">table7</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>provoque l'affichage de :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9015">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9015" onclick="selectionCode('contenuCoded0e9015', 'IdTitreCode-d0e9015');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9015" class="contenuCode">7 14 21 28 35 42 49 56 63 70</code></pre></div>
+          <p>Nous pouvons maintenant réutiliser cette fonction à plusieurs reprises, autant de fois que nous le souhaitons. Nous pouvons également
+	    l'incorporer dans la définition d'une autre fonction, comme dans l'exemple ci-dessous :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9021">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9021" onclick="selectionCode('contenuCoded0e9021', 'IdTitreCode-d0e9021');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9021" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">table7triple</code><code class="python_operator">(</code>):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'La table par 7 en triple exemplaire :'</code>)
+...    <code class="python_function">table7</code><code class="python_operator">(</code>)
+...    <code class="python_function">table7</code><code class="python_operator">(</code>)
+...    <code class="python_function">table7</code><code class="python_operator">(</code>)
+...</code></pre></div>
+          <p>Utilisons cette nouvelle fonction, en entrant la commande :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9059">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9059" onclick="selectionCode('contenuCoded0e9059', 'IdTitreCode-d0e9059');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9059" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">table7triple</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>l'affichage résultant devrait être :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9072">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9072" onclick="selectionCode('contenuCoded0e9072', 'IdTitreCode-d0e9072');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9072" class="contenuCode">La table par 7 en triple exemplaire :
+7 14 21 28 35 42 49 56 63 70
+7 14 21 28 35 42 49 56 63 70
+7 14 21 28 35 42 49 56 63 70</code></pre></div>
+          <p>Une première fonction peut donc appeler une deuxième fonction, qui elle-même en appelle une troisième, etc. Au stade où nous sommes,
+	    vous ne voyez peut-être pas encore très bien l'utilité de tout cela, mais vous pouvez déjà noter deux propriétés
+	    intéressantes :</p>
+          <ul class="ListeDVP">
+            <li>Créer une nouvelle fonction vous offre l'opportunité de donner un nom à tout un ensemble d'instructions. De cette manière, vous pouvez
+	      simplifier le corps principal d'un programme, en dissimulant un algorithme secondaire complexe sous une commande unique, à laquelle vous pouvez donner un nom
+	      très explicite, en français si vous voulez.</li>
+            <li>Créer une nouvelle fonction peut servir à raccourcir un programme, par élimination des portions de code qui se répètent. Par exemple,
+	      si vous devez afficher la table par 7 plusieurs fois dans un même programme, vous n'avez pas à réécrire chaque fois l'algorithme qui accomplit ce
+	      travail.</li>
+          </ul>
+          <p>Une fonction est donc en quelque sorte une nouvelle instruction personnalisée, que vous ajoutez vous-même librement à votre langage de
+	    programmation.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L9-A-2">9-A-2. Fonction avec paramètre<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Dans nos derniers exemples, nous avons défini et utilisé une fonction qui affiche les termes de la table de multiplication par 7. Supposons à
+	    présent que nous voulions faire de même avec la table par 9. Nous pouvons bien entendu réécrire entièrement une nouvelle fonction pour cela.
+	    Mais si nous nous intéressons plus tard à la table par 13, il nous faudra encore recommencer. Ne serait-il donc pas plus intéressant de définir une
+	    fonction qui soit capable d'afficher n'importe quelle table, à la demande ?</p>
+          <p>Lorsque nous appellerons cette fonction, nous devrons bien évidemment pouvoir lui indiquer quelle table nous souhaitons afficher. Cette information que
+	    nous voulons transmettre à la fonction au moment même où nous l'appelons s'appelle un <span class="italique"><b>argument</b></span>. Nous avons déjà rencontré
+	    à plusieurs reprises des fonctions intégrées qui utilisent des arguments. La fonction <b>sin(a)</b>, par exemple, calcule le sinus de l'angle <b>a</b>.
+	    La fonction <b>sin()</b> utilise donc la valeur numérique de <b>a</b> comme argument pour effectuer son travail.</p>
+          <p>Dans la définition d'une telle fonction, il faut prévoir une variable particulière pour recevoir l'argument transmis. Cette variable
+	    particulière s'appelle un <span class="italique"><b>paramètre</b></span>. On lui choisit un nom en respectant les mêmes règles de syntaxe que d'habitude (pas de lettres
+	    accentuées, etc.), et on place ce nom entre les parenthèses qui accompagnent la définition de la fonction.</p>
+          <p>Voici ce que cela donne dans le cas qui nous intéresse :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9128">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9128" onclick="selectionCode('contenuCoded0e9128', 'IdTitreCode-d0e9128');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9128" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">table</code><code class="python_operator">(</code>base):
+...    n <code class="python_operator">=</code> <code class="python_digit">1</code>
+...    <code class="python_keyword1">while</code> n <code class="python_operator">&lt;</code><code class="python_digit">11</code> :
+...	<code class="python_keyword1">print</code><code class="python_operator">(</code>n <code class="python_operator">*</code> base, end <code class="python_operator">=</code><code class="python_literal1">' '</code>)
+...	n <code class="python_operator">=</code> n <code class="python_operator">+</code><code class="python_digit">1</code></code></pre></div>
+          <p>La fonction <b>table()</b> telle que définie ci-dessus utilise le paramètre <b>base</b> pour calculer les dix premiers termes de la table de
+	    multiplication correspondante.</p>
+          <p>Pour tester cette nouvelle fonction, il nous suffit de l'appeler avec un argument. Exemples :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9187">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9187" onclick="selectionCode('contenuCoded0e9187', 'IdTitreCode-d0e9187');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9187" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">table</code><code class="python_operator">(</code><code class="python_digit">13</code>)
+<code class="python_digit">13</code> <code class="python_digit">26</code> <code class="python_digit">39</code> <code class="python_digit">52</code> <code class="python_digit">65</code> <code class="python_digit">78</code> <code class="python_digit">91</code> <code class="python_digit">104</code> <code class="python_digit">117</code> <code class="python_digit">130</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">table</code><code class="python_operator">(</code><code class="python_digit">9</code>)
+<code class="python_digit">9</code> <code class="python_digit">18</code> <code class="python_digit">27</code> <code class="python_digit">36</code> <code class="python_digit">45</code> <code class="python_digit">54</code> <code class="python_digit">63</code> <code class="python_digit">72</code> <code class="python_digit">81</code> <code class="python_digit">90</code></code></pre></div>
+          <p>Dans ces exemples, la valeur que nous indiquons entre parenthèses lors de l'appel de la fonction (et qui est donc un argument) est automatiquement
+	    affectée au paramètre <b>base</b>. Dans le corps de la fonction, <b>base</b> joue le même rôle que n'importe quelle autre variable. Lorsque nous
+	    entrons la commande <b><span style="color:#000080;">table(9)</span></b>, nous signifions à la machine que nous voulons exécuter la fonction <b>table()</b> en
+	    affectant la valeur <b>9</b> à la variable <b>base</b>.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L9-A-3">9-A-3. Utilisation d'une variable comme argument<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Dans les 2 exemples qui précèdent, l'argument que nous avons utilisé en appelant la fonction <b>table()</b> était à chaque fois une
+	    constante (la valeur 13, puis la valeur 9). Cela n'est nullement obligatoire. <span class="italique">L'argument que nous utilisons dans l'appel d'une fonction peut être une
+	    variable</span> lui aussi, comme dans l'exemple ci-dessous. Analysez bien cet exemple, essayez-le concrètement, et décrivez le mieux possible dans votre cahier
+	    d'exercices ce que vous obtenez, en expliquant avec vos propres mots ce qui se passe. Cet exemple devrait vous donner un premier aperçu de l'utilité des
+	    fonctions pour accomplir simplement des tâches complexes :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9305">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9305" onclick="selectionCode('contenuCoded0e9305', 'IdTitreCode-d0e9305');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9305" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">1</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> a <code class="python_operator">&lt;</code><code class="python_digit">20</code>:
+...    <code class="python_function">table</code><code class="python_operator">(</code>a)
+...    a <code class="python_operator">=</code> a <code class="python_operator">+</code><code class="python_digit">1</code>
+...</code></pre></div>
+          
+		<h5 class="TitreSection3" id="L9-A-3-A">9-A-3-A. Remarque importante<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <p>Dans l'exemple ci-dessus, l'argument que nous passons à la fonction <b>table()</b> est le contenu de la variable <b>a</b>. À l'intérieur de
+	      la fonction, cet argument est affecté au paramètre <b>base</b>, qui est une tout autre variable. Notez donc bien dès à présent que
+	      :</p>
+            <blockquote class="citation"><div>Le nom d<span class="italique">'</span>une variable que nous passons comme argument n<span class="italique">'</span>a rien à voir avec le nom du paramètre correspondant dans la
+	      fonction.</div></blockquote>
+            <p>Ces noms peuvent être identiques si vous le voulez, mais vous devez bien comprendre qu'ils ne désignent pas la même chose (en dépit du
+	      fait qu'ils puissent éventuellement contenir une valeur identique).</p>
+            <p>Exercice</p>
+            <p>.Importez le module<span class="italique"><b>turtle</b></span> pour pouvoir effectuer des dessins simples.</p>
+            <p>Vous allez dessiner une série de triangles équilatéraux de différentes couleurs.<br/>
+		 Pour ce faire, définissez d'abord une fonction <b>triangle()</b> capable de dessiner un triangle d'une couleur bien déterminée (ce qui signifie
+		   donc que la définition de votre fonction doit comporter un paramètre pour recevoir le nom de cette couleur).</p>
+            <p>Utilisez ensuite cette fonction pour reproduire ce même triangle en différents endroits, en changeant de couleur à chaque fois.</p>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L9-A-4">9-A-4. Fonction avec plusieurs paramètres<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>La fonction <b>table()</b> est certainement intéressante, mais elle n'affiche toujours que les dix premiers termes de la table de multiplication, alors
+	    que nous pourrions souhaiter qu'elle en affiche d'autres. Qu'à cela ne tienne. Nous allons l'améliorer en lui ajoutant des paramètres
+	    supplémentaires, dans une nouvelle version que nous appellerons cette fois <b>tableMulti()</b> :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9406">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9406" onclick="selectionCode('contenuCoded0e9406', 'IdTitreCode-d0e9406');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9406" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">tableMulti</code><code class="python_operator">(</code>base, debut, fin):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'Fragment de la table de multiplication par'</code>, base, <code class="python_literal1">':'</code>)
+...    n <code class="python_operator">=</code> debut
+...    <code class="python_keyword1">while</code> n <code class="python_operator">&lt;=</code> fin :
+...	<code class="python_keyword1">print</code><code class="python_operator">(</code>n, <code class="python_literal1">'x'</code>, base, <code class="python_literal1">'='</code>, n <code class="python_operator">*</code> base)
+...	n <code class="python_operator">=</code> n <code class="python_operator">+</code><code class="python_digit">1</code></code></pre></div>
+          <p>Cette nouvelle fonction utilise donc trois paramètres : la base de la table comme dans l'exemple précédent, l'indice du premier terme à
+	    afficher, l'indice du dernier terme à afficher.</p>
+          <p>Essayons cette fonction en entrant par exemple :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9465">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9465" onclick="selectionCode('contenuCoded0e9465', 'IdTitreCode-d0e9465');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9465" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">tableMulti</code><code class="python_operator">(</code><code class="python_digit">8</code>, <code class="python_digit">13</code>, <code class="python_digit">17</code>)</code></pre></div>
+          <p>ce qui devrait provoquer l'affichage de :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9486">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9486" onclick="selectionCode('contenuCoded0e9486', 'IdTitreCode-d0e9486');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9486" class="contenuCode">Fragment de la table de multiplication par <code class="python_digit">8</code> :
+<code class="python_digit">13</code> x <code class="python_digit">8</code> <code class="python_operator">=</code> <code class="python_digit">104</code>
+<code class="python_digit">14</code> x <code class="python_digit">8</code> <code class="python_operator">=</code> <code class="python_digit">112</code>
+<code class="python_digit">15</code> x <code class="python_digit">8</code> <code class="python_operator">=</code> <code class="python_digit">120</code>
+<code class="python_digit">16</code> x <code class="python_digit">8</code> <code class="python_operator">=</code> <code class="python_digit">128</code>
+<code class="python_digit">17</code> x <code class="python_digit">8</code> <code class="python_operator">=</code> <code class="python_digit">136</code></code></pre></div>
+          
+		<h5 class="TitreSection3" id="L9-A-4-A">9-A-4-A. Notes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Pour définir une fonction avec plusieurs paramètres, il suffit d'inclure ceux-ci entre les parenthèses qui suivent le nom de la fonction, en
+		les séparant à l'aide de virgules.</li>
+              <li>Lors de l'appel de la fonction, les arguments utilisés doivent être fournis <span class="italique">dans le même ordre</span> que celui des paramètres
+		correspondants (en les séparant eux aussi à l'aide de virgules). Le premier argument sera affecté au premier paramètre, le second argument sera
+		affecté au second paramètre, et ainsi de suite.</li>
+              <li>À titre d'exercice, essayez la séquence d'instructions suivantes et décrivez dans votre cahier d'exercices le résultat
+		obtenu :<br/></li>
+            </ul>
+            <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9572">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9572" onclick="selectionCode('contenuCoded0e9572', 'IdTitreCode-d0e9572');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9572" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> t, d, f <code class="python_operator">=</code> <code class="python_digit">11</code>, <code class="python_digit">5</code>, <code class="python_digit">10</code> 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> t<code class="python_operator">&lt;</code><code class="python_digit">21</code>:
+...    <code class="python_function">tableMulti</code><code class="python_operator">(</code>t,d,f)
+...    t, d, f <code class="python_operator">=</code> t <code class="python_operator">+</code><code class="python_digit">1</code>, d <code class="python_operator">+</code><code class="python_digit">3</code>, f <code class="python_operator">+</code><code class="python_digit">5</code> 
+...</code></pre></div>
+          </div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L9-B">9-B. Variables locales, variables globales<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Lorsque nous définissons des variables à l'intérieur du corps d'une fonction, ces variables ne sont accessibles qu'à la fonction
+	  elle-même. On dit que ces variables sont des <span class="italique">variables locales</span> à la fonction. C'est par exemple le cas des variables <b>base</b>, <b>debut</b>,
+	  <b>fin</b> et <b>n</b> dans l'exercice précédent.</p>
+        <p>Chaque fois que la fonction <b>tableMulti()</b> est appelée, Python réserve pour elle (dans la mémoire de l'ordinateur) un nouvel <span class="italique">espace de
+	  noms</span><a class="signetNoteBasPage" id="signetNoteBasPage33" href="#noteBasPage33">(33)</a>. Les contenus des variables <b>base</b>,
+	  <b>debut</b>, <b>fin</b> et <b>n</b> sont stockés dans cet espace de noms qui est <span class="italique">inaccessible depuis l'extérieur de la fonction</span>. Ainsi par exemple, si
+	  nous essayons d'afficher le contenu de la variable <b>base</b> juste après avoir effectué l'exercice ci-dessus, nous obtenons un message
+	  d'erreur :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9687">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9687" onclick="selectionCode('contenuCoded0e9687', 'IdTitreCode-d0e9687');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9687" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>base) 
+Traceback <code class="python_operator">(</code>most recent call last): 
+ File <code class="python_literal1">"&lt;stdin&gt;"</code>, line <code class="python_digit">1</code>, <code class="python_keyword1">in</code> <code class="python_operator">&lt;</code>module<code class="python_operator">&gt;</code> 
+<code class="python_keyword3">NameError</code>: name <code class="python_literal1">'base'</code> <code class="python_keyword1">is</code> <code class="python_keyword1">not</code> defined</code></pre></div>
+        <p>La machine nous signale clairement que le symbole <b>base</b> lui est inconnu, alors qu'il était correctement imprimé par la fonction
+	  <b>tableMulti()</b> elle-même. L'espace de noms qui contient le symbole <b>base</b> est strictement réservé au fonctionnement interne de
+	  <b>tableMulti()</b>, et il est automatiquement détruit dès que la fonction a terminé son travail.</p>
+        <p>Les variables définies à l'extérieur d'une fonction sont des <span class="italique">variables globales</span>. Leur contenu est « visible » de
+	  l'intérieur d'une fonction, mais la fonction <span class="italique">ne peut pas le modifier</span>. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9751">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9751" onclick="selectionCode('contenuCoded0e9751', 'IdTitreCode-d0e9751');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9751" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">mask</code><code class="python_operator">(</code>):
+...    p <code class="python_operator">=</code> <code class="python_digit">20</code>
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code>p, q)
+...
+<code class="python_operator">&gt;&gt;&gt;</code> p, q <code class="python_operator">=</code> <code class="python_digit">15</code>, <code class="python_digit">38</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">mask</code><code class="python_operator">(</code>)
+<code class="python_digit">20</code> <code class="python_digit">38</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p, q)
+<code class="python_digit">15</code> <code class="python_digit">38</code></code></pre></div>
+        <p>
+          <span class="italique">
+            <b>Analysons attentivement cet exemple :</b>
+          </span>
+        </p>
+        <p>Nous commençons par définir une fonction très simple (qui n'utilise d'ailleurs aucun paramètre). À l'intérieur de cette fonction,
+	  une variable <b>p</b> est définie, avec <b>20</b> comme valeur initiale. Cette variable <b>p</b> qui est définie à l'intérieur d'une fonction sera
+	  donc une <span class="italique">variable locale</span>.</p>
+        <p>Une fois la définition de la fonction terminée, nous revenons au niveau principal pour y définir les deux variables <b>p</b> et <b>q</b>
+	  auxquelles nous attribuons les contenus <b>15</b> et <b>38</b>. Ces deux variables définies au niveau principal seront donc des <span class="italique">variables
+	  globales</span>.</p>
+        <p>Ainsi le même nom de variable <b>p</b> a été utilisé ici à deux reprises, <span class="italique">pour définir deux variables
+	  différentes</span> : l'une est globale et l'autre est locale. On peut constater dans la suite de l'exercice que ces deux variables sont bel et bien des variables
+	  distinctes, indépendantes, obéissant à une règle de priorité qui veut qu'à l'intérieur d'une fonction (où elles pourraient entrer
+	  en compétition), ce sont les variables définies localement qui ont la priorité.</p>
+        <p>On constate en effet que lorsque la fonction <b>mask()</b> est lancée, la variable globale <b>q</b> y est accessible, puisqu'elle est imprimée
+	  correctement. Pour <b>p</b>, par contre, c'est la valeur attribuée localement qui est affichée.</p>
+        <p>On pourrait croire d'abord que la fonction <b>mask()</b> a simplement modifié le contenu de la variable globale <b>p</b> (puisqu'elle est accessible). Les
+	  lignes suivantes démontrent qu'il n'en est rien : en dehors de la fonction <b>mask()</b>, la variable globale <b>p</b> conserve sa valeur initiale.</p>
+        <p>Tout ceci peut vous paraître compliqué au premier abord. Vous comprendrez cependant très vite combien il est utile que des variables soient ainsi
+	  définies comme étant locales, c'est-à-dire en quelque sorte confinées à l'intérieur d'une fonction. Cela signifie en effet que vous pourrez
+	  toujours utiliser une infinité de fonctions sans vous préoccuper le moins du monde des noms de variables qui y sont utilisées : ces variables ne
+	  pourront en effet jamais interférer avec celles que vous aurez vous-même définies par ailleurs.</p>
+        <p>Cet état de choses peut toutefois être modifié si vous le souhaitez. Il peut se faire par exemple que vous ayez à définir une fonction
+	  qui soit capable de modifier une variable globale. Pour atteindre ce résultat, il vous suffira d'utiliser l'instruction <b>global</b>. Cette instruction permet
+	  d'indiquer - à l'intérieur de la définition d'une fonction - quelles sont les variables à traiter globalement.</p>
+        <p>Dans l'exemple ci-dessous, la variable <b>a</b> utilisée à l'intérieur de la fonction <b>monter()</b> est non seulement accessible, mais
+	  également modifiable, parce qu'elle est signalée explicitement comme étant une variable qu'il faut traiter globalement. Par comparaison, essayez le
+	  même exercice en supprimant l'instruction <b>global</b> : la variable <b>a</b> n'est plus incrémentée à chaque appel de la fonction.</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e9916">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e9916" onclick="selectionCode('contenuCoded0e9916', 'IdTitreCode-d0e9916');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e9916" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">monter</code><code class="python_operator">(</code>):
+...    <code class="python_keyword1">global</code> a
+...    a <code class="python_operator">=</code> a<code class="python_operator">+</code><code class="python_digit">1</code>
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code>a)
+...
+<code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">15</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">monter</code><code class="python_operator">(</code>)
+<code class="python_digit">16</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">monter</code><code class="python_operator">(</code>)
+<code class="python_digit">17</code>
+<code class="python_operator">&gt;&gt;&gt;</code></code></pre></div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L9-C">9-C. Vraies fonctions et procédures<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Pour les puristes, les fonctions que nous avons décrites jusqu'à présent ne sont pas tout à fait des fonctions au sens strict, mais plus
+	  exactement des <span class="italique">procédures</span><a class="signetNoteBasPage" id="signetNoteBasPage34" href="#noteBasPage34">(34)</a>. Une
+	  « vraie » fonction (au sens strict) doit en effet <span class="italique">renvoyerunevaleur</span> lorsqu'elle se termine. Une « vraie » fonction peut
+	  s'utiliser à la droite du signe égale dans des expressions telles que <b><span style="color:#000080;">y = sin(a)</span></b>. On comprend aisément que dans cette
+	  expression, la fonction <b>sin()</b> renvoie une valeur (le sinus de l'argument <b>a</b>) qui est directement affectée à la variable <b>y</b>.</p>
+        <p>Commençons par un exemple extrêmement simple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10014">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10014" onclick="selectionCode('contenuCoded0e10014', 'IdTitreCode-d0e10014');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10014" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">cube</code><code class="python_operator">(</code>w):
+...    <code class="python_keyword1">return</code> w<code class="python_operator">*</code>w<code class="python_operator">*</code>w
+...</code></pre></div>
+        <p>L'instruction <b>return</b> définit ce que doit être la valeur renvoyée par la fonction. En l'occurrence, il s'agit du cube de l'argument qui a
+	  été transmis lors de l'appel de la fonction. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10042">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10042" onclick="selectionCode('contenuCoded0e10042', 'IdTitreCode-d0e10042');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10042" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> b <code class="python_operator">=</code> <code class="python_function">cube</code><code class="python_operator">(</code><code class="python_digit">9</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>b)
+<code class="python_digit">729</code></code></pre></div>
+        <p>À titre d'exemple un peu plus élaboré, nous allons maintenant modifier quelque peu la fonction <b>table()</b> sur laquelle nous avons
+	  déjà pas mal travaillé, afin qu'elle renvoie elle aussi une valeur. Cette valeur sera en l'occurrence une liste (la liste des dix premiers termes de la
+	  table de multiplication choisie). Voilà donc une occasion de reparler des listes. Dans la foulée, nous en profiterons pour apprendre encore un nouveau
+	  concept :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10073">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10073" onclick="selectionCode('contenuCoded0e10073', 'IdTitreCode-d0e10073');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10073" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">table</code><code class="python_operator">(</code>base):
+...    resultat <code class="python_operator">=</code> []	     <code class="python_comment1"># resultat est d'abord une liste vide</code>
+...    n <code class="python_operator">=</code> <code class="python_digit">1</code>
+...    <code class="python_keyword1">while</code> n <code class="python_operator">&lt;</code> <code class="python_digit">11</code>:
+...	b <code class="python_operator">=</code> n <code class="python_operator">*</code> base
+...	resultat.<code class="python_function">append</code><code class="python_operator">(</code>b)     <code class="python_comment1"># ajout d'un terme à la liste</code>
+...	n <code class="python_operator">=</code> n <code class="python_operator">+</code><code class="python_digit">1</code>	 <code class="python_comment1"># (voir explications ci-dessous)</code>
+...    <code class="python_keyword1">return</code> resultat
+...</code></pre></div>
+        <p>Pour tester cette fonction, nous pouvons entrer par exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10138">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10138" onclick="selectionCode('contenuCoded0e10138', 'IdTitreCode-d0e10138');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10138" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> ta9 <code class="python_operator">=</code> <code class="python_function">table</code><code class="python_operator">(</code><code class="python_digit">9</code>)</code></pre></div>
+        <p>Ainsi nous affectons à la variable <b>ta9</b> les dix premiers termes de la table de multiplication par 9, sous la forme d'une liste :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10159">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10159" onclick="selectionCode('contenuCoded0e10159', 'IdTitreCode-d0e10159');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10159" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>ta9)
+[<code class="python_digit">9</code>, <code class="python_digit">18</code>, <code class="python_digit">27</code>, <code class="python_digit">36</code>, <code class="python_digit">45</code>, <code class="python_digit">54</code>, <code class="python_digit">63</code>, <code class="python_digit">72</code>, <code class="python_digit">81</code>, <code class="python_digit">90</code>]
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>ta9[<code class="python_digit">0</code>])
+<code class="python_digit">9</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>ta9[<code class="python_digit">3</code>])
+<code class="python_digit">36</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>ta9[<code class="python_digit">2</code>:<code class="python_digit">5</code>])
+[<code class="python_digit">27</code>, <code class="python_digit">36</code>, <code class="python_digit">45</code>]
+<code class="python_operator">&gt;&gt;&gt;</code></code></pre></div>
+        <p>(Rappel : le premier élément d'une liste correspond à l'indice 0).</p>
+        
+		<h4 class="TitreSection2" id="L9-C-1">9-C-1. Notes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>Comme nous l'avons vu dans l'exemple précédent, l'instruction <b>return</b> définit ce que doit être la valeur
+	      « renvoyée » par la fonction. En l'occurrence, il s'agit ici du contenu de la variable <b>resultat</b>, c'est-à-dire la liste des
+	      nombres générés par la fonction<a class="signetNoteBasPage" id="signetNoteBasPage35" href="#noteBasPage35">(35)</a>.</li>
+            <li>L'instruction <b>resultat.append(b)</b> est notre second exemple de l'utilisation d'un concept important sur lequel nous reviendrons encore abondamment par la
+	      suite : dans cette instruction, nous appliquons la <span class="italique">méthode</span><b>append()</b> à l'<span class="italique">objet</span><b>resultat</b>.<br/><br/>
+		 Nous préciserons petit à petit ce qu'il faut entendre par <span class="italique">objet</span> en programmation. Pour l'instant, admettons simplement que ce terme très
+		   général s'applique notamment aux <span class="italique">listes</span> de Python. Une <span class="italique">méthode</span> n'est en fait rien d'autre qu'une fonction (que vous pouvez
+		   d'ailleurs reconnaître comme telle à la présence des parenthèses), mais <span class="italique">une fonction qui est associée à un objet</span>. Elle fait
+		   partie de la définition de cet objet, ou plus précisément de la <span class="italique">classe</span> particulière à laquelle cet objet appartient (nous
+		   étudierons ce concept de classe plus tard).<br/><br/><span class="italique">Mettre en œuvre une méthode associée à un objet</span> consiste en quelque sorte
+		   à « faire fonctionner » cet objet d'une manière particulière. Par exemple, on met en œuvre la méthode
+		   <b>methode4()</b> d'un objet <b>objet3</b>, à l'aide d'une instruction du type : <b>objet3.methode4()</b> , c'est-à-dire le nom de l'objet, puis
+		   le nom de la méthode, reliés l'un à l'autre par un point. Ce point joue un rôle essentiel : on peut le considérer comme un
+		   véritable <span class="italique">opérateur</span>.<br/><br/>
+		 Dans notre exemple, nous appliquons donc la méthode <b>append()</b> à l'objet <b>resultat</b>, qui est une liste. Sous Python, les <span class="italique">listes</span>
+		   constituent donc une <span class="italique">classe</span> particulière d'objets, auxquels on peut effectivement appliquer toute une série de <span class="italique">méthodes</span>. En
+		   l'occurrence, la méthode <b>append()</b> des objets « listes » sert à leur ajouter un élément par la fin.
+		   L'élément à ajouter est transmis entre les parenthèses, comme tout argument qui se respecte.</li>
+            <li><span class="italique"><b>Remarque :</b></span> nous aurions obtenu un résultat similaire si nous avions utilisé à la place de cette instruction une expression telle
+	      que « <b><span style="color:#000080;">resultat = resultat + [b]</span></b> » (l'opérateur de concaténation fonctionne en
+	      effet aussi avec les listes). Cette façon de procéder est cependant moins rationnelle et beaucoup moins efficace, car elle consiste à redéfinir
+	      à chaque itération de la boucle une nouvelle liste <b>resultat</b>, dans laquelle la totalité de la liste précédente est à chaque fois
+	      recopiée avec ajout d'un élément supplémentaire.<br/>
+		 Lorsque l'on utilise la méthode <b>append()</b>, par contre, l'ordinateur procède bel et bien à une modification de la liste existante (sans la
+		   recopier dans une nouvelle variable). Cette technique est donc préférable, car elle mobilise moins lourdement les ressources de l'ordinateur, et elle
+		   est plus rapide (surtout lorsqu'il s'agit de traiter des listes volumineuses).</li>
+            <li>Il n'est pas du tout indispensable que la valeur renvoyée par une fonction soit affectée à une variable (comme nous l'avons fait jusqu'ici dans
+	      nos exemples par souci de clarté). Ainsi, nous aurions pu tester les fonction <b>cube()</b> et <b>table()</b> en entrant les commandes :<br/><b><span style="color:#000080;">&gt;&gt;&gt; print(cube(9))</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; print(table(9))</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt;
+	      print(table(9)[3])</span></b><br/>
+		 ou encore plus simplement encore :<br/><b><span style="color:#000080;">&gt;&gt;&gt; cube(9)</span></b>...</li>
+          </ul>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L9-D">9-D. Utilisation des fonctions dans un script<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Pour cette première approche des fonctions, nous n'avons utilisé jusqu'ici que le mode interactif de l'interpréteur Python. </p>
+        <p>Il est bien évident que les fonctions peuvent aussi s'utiliser dans des scripts. Veuillez donc essayer vous-même le petit programme ci-dessous, lequel
+	  calcule le volume d'une sphère à l'aide de la formule que vous connaissez certainement : <img src="./images/formule05.png" alt="Image non disponible" width="77" height="41" class="image_verticale"/></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10412">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10412" onclick="selectionCode('contenuCoded0e10412', 'IdTitreCode-d0e10412');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10412" class="contenuCode"><code class="python_keyword1">def</code> <code class="python_function">cube</code><code class="python_operator">(</code>n):
+ <code class="python_keyword1">return</code> n<code class="python_operator">**</code><code class="python_digit">3</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">volumeSphere</code><code class="python_operator">(</code>r):
+ <code class="python_keyword1">return</code> <code class="python_digit">4</code> <code class="python_operator">*</code> <code class="python_digit">3.1416</code> <code class="python_operator">*</code> <code class="python_function">cube</code><code class="python_operator">(</code>r) <code class="python_operator">/</code> <code class="python_digit">3</code>
+ 
+r <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">'Entrez la valeur du rayon : '</code>)
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'Le volume de cette sphère vaut'</code>, <code class="python_function">volumeSphere</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>r)))</code></pre></div>
+        
+		<h4 class="TitreSection2" id="L9-D-1">9-D-1. Notes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>À bien y regarder, ce programme comporte trois parties : les deux fonctions <b>cube()</b> et <b>volumeSphere()</b>, et ensuite le corps principal du
+	    programme.</p>
+          <p>Dans le corps principal du programme, on appelle la fonction <b>volumeSphere()</b>, en lui transmettant la valeur entrée par l'utilisateur pour le rayon,
+	    préalablement convertie en un nombre réel à l'aide de la fonction intégrée <b>float()</b>.</p>
+          <p>À l'intérieur de la fonction <b>volumeSphere()</b>, il y a un appel de la fonction <b>cube()</b>.</p>
+          <p>Notez bien que les trois parties du programme ont été disposées dans un certain ordre : <span class="italique">d'abord la définition des fonctions, et
+	    ensuite le corps principal du programme.</span> Cette disposition est nécessaire, parce que l'interpréteur exécute les lignes d'instructions du programme
+	    l'une après l'autre, dans l'ordre où elles apparaissent dans le code source.</p>
+          <blockquote class="citation"><div>Dans un script, la définition des fonctions doit précéder leur utilisation.</div></blockquote>
+          <p>Pour vous en convaincre, intervertissez cet ordre (en plaçant par exemple le corps principal du programme au début), et prenez note du type de
+	    message d'erreur qui est affiché lorsque vous essayez d'exécuter le script ainsi modifié.</p>
+          <p>En fait, le corps principal d'un programme Python constitue lui-même une entité un peu particulière, qui est toujours reconnue dans le
+	    fonctionnement interne de l'interpréteur sous le nom réservé <b>__main__</b> (le mot « main » signifie
+	    « principal », en anglais. Il est encadré par des caractères « souligné » en double, pour éviter toute
+	    confusion avec d'autres symboles). L'exécution d'un script commence toujours avec la première instruction de cette entité <b>__main__</b>, où
+	    qu'elle puisse se trouver dans le listing. Les instructions qui suivent sont alors exécutées l'une après l'autre, dans l'ordre, jusqu'au premier appel
+	    de fonction. Un appel de fonction est comme un détour dans le flux de l'exécution : au lieu de passer à l'instruction suivante, l'interpréteur
+	    exécute la fonction appelée, puis revient au programme appelant pour continuer le travail interrompu. Pour que ce mécanisme puisse fonctionner, il faut
+	    que l'interpréteur ait pu lire la définition de la fonction avant l'entité <b>__main__</b>, et celle-ci sera donc placée en général
+	    à la fin du script.</p>
+          <p>Dans notre exemple, l'entité <b>__main__</b> appelle une première fonction qui elle-même en appelle une deuxième. Cette situation est
+	    très fréquente en programmation. Si vous voulez comprendre correctement ce qui se passe dans un programme, vous devez donc apprendre à lire un script,
+	    non pas de la première à la dernière ligne, mais plutôt en suivant un cheminement analogue à ce qui se passe lors de l'exécution de ce
+	    script. Cela signifie donc concrètement que vous devrez souvent analyser un script en commençant par ses dernières lignes !</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L9-E">9-E. Modules de fonctions<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Afin que vous puissiez mieux comprendre encore la distinction entre la définition d'une fonction et son utilisation au sein d'un programme, nous vous
+	  suggérons de placer fréquemment vos définitions de fonctions dans un module Python, et le programme qui les utilise dans un autre.</p>
+        <p>
+          <span class="italique">
+            <b>Exemple :</b>
+          </span>
+        </p>
+        <p>
+          <span class="italique">On souhaite réaliser la série de dessins ci-dessous, à l'aide du <b>module</b><b>turtle</b></span>
+          <span class="italique">
+            <b>:</b>
+          </span>
+        </p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image7.png" alt="Image non disponible" width="408" height="130"/></figure></div>
+        <p>Écrivez les lignes de code suivantes, et sauvegardez-les dans un fichier auquel vous donnerez le nom<span class="italique"><b>dessins_to</b><b>rtue.py</b><b> 
+	  :</b></span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10599">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10599" onclick="selectionCode('contenuCoded0e10599', 'IdTitreCode-d0e10599');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10599" class="contenuCode"><code class="python_keyword1">from</code> turtle <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">carre</code><code class="python_operator">(</code>taille, couleur):
+ <code class="python_literal1">"fonction qui dessine un carré de taille et de couleur déterminées"</code>
+ <code class="python_function">color</code><code class="python_operator">(</code>couleur)
+ c <code class="python_operator">=</code><code class="python_digit">0</code>
+ <code class="python_keyword1">while</code> c <code class="python_operator">&lt;</code><code class="python_digit">4</code>:
+     <code class="python_function">forward</code><code class="python_operator">(</code>taille)
+     <code class="python_function">right</code><code class="python_operator">(</code><code class="python_digit">90</code>)
+     c <code class="python_operator">=</code> c <code class="python_operator">+</code><code class="python_digit">1</code></code></pre></div>
+        <p>Vous pouvez remarquer que la définition de la fonction <b>carre()</b> commence par une chaîne de caractères. Cette chaîne ne joue aucun
+	  rôle fonctionnel dans le script : elle est traitée par Python <span class="italique">comme un simple commentaire</span>, mais qui est mémorisé à part dans un
+	  système de documentation interne automatique, lequel pourra ensuite être exploité par certains utilitaires et éditeurs
+	  « intelligents ».</p>
+        <p>Si vous programmez dans l'environnement IDLE, par exemple, vous verrez apparaître cette chaîne documentaire dans une « bulle
+	  d'aide », chaque fois que vous ferez appel aux fonctions ainsi documentées.</p>
+        <p>En fait, Python place cette chaîne dans une variable spéciale dont le nom est __doc__ (le mot « doc » entouré de deux paires
+	  de caractères « souligné »), et qui est associée à l'objet fonction comme étant l'un de ses attributs (vous en apprendrez
+	  davantage au sujet de ces attributs lorsque nous aborderons les classes d'objets). Ainsi, vous pouvez vous-même retrouver la chaîne de documentation d'une
+	  fonction quelconque en affichant le contenu de cette variable. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10673">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10673" onclick="selectionCode('contenuCoded0e10673', 'IdTitreCode-d0e10673');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10673" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">essai</code><code class="python_operator">(</code>):
+...    <code class="python_literal1">"Cette fonction est bien documentée mais ne fait presque rien."</code>
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"rien à signaler"</code>)
+...
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">essai</code><code class="python_operator">(</code>)
+rien à signaler
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>essai.<code class="python_keyword3">__doc__</code>)
+Cette fonction est bien documentée mais ne fait presque rien.</code></pre></div>
+        <p>Prenez donc la peine d'incorporer une telle chaîne explicative dans toutes vos définitions de fonctions futures : il s'agit là d'une pratique
+	  hautement recommandable.</p>
+        <p>Le fichier que vous aurez créé ainsi est dorénavant un véritable module de fonctions Python, au même titre que les modules turtle ou
+	  math que vous connaissez déjà. Vous pouvez donc l'utiliser dans n'importe quel autre script, comme celui-ci, par exemple, qui effectuera le travail
+	  demandé :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e10721">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e10721" onclick="selectionCode('contenuCoded0e10721', 'IdTitreCode-d0e10721');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e10721" class="contenuCode"><code class="python_keyword1">from</code> dessins_tortue <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_function">up</code><code class="python_operator">(</code>)		<code class="python_comment1"># relever le crayon</code>
+<code class="python_function">goto</code><code class="python_operator">(-</code><code class="python_digit">150</code>, <code class="python_digit">50</code>)	      <code class="python_comment1"># reculer en haut à gauche</code>
+ 
+<code class="python_comment1"># dessiner dix carrés rouges, alignés :</code>
+i <code class="python_operator">=</code> <code class="python_digit">0</code>
+<code class="python_keyword1">while</code> i <code class="python_operator">&lt;</code> <code class="python_digit">10</code>:
+ <code class="python_function">down</code><code class="python_operator">(</code>) 	<code class="python_comment1"># abaisser le crayon</code>
+ <code class="python_function">carre</code><code class="python_operator">(</code><code class="python_digit">25</code>, <code class="python_literal1">'red'</code>)    <code class="python_comment1"># tracer un carré</code>
+ <code class="python_function">up</code><code class="python_operator">(</code>)		  <code class="python_comment1"># relever le crayon</code>
+ <code class="python_function">forward</code><code class="python_operator">(</code><code class="python_digit">30</code>)	     <code class="python_comment1"># avancer + loin</code>
+ i <code class="python_operator">=</code> i <code class="python_operator">+</code><code class="python_digit">1</code>
+a <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>)	   <code class="python_comment1"># attendre</code></code></pre></div>
+        <blockquote class="citation"><div>Attention -</div></blockquote>
+        <blockquote class="citation"><div>Vous pouvez à priori nommer vos modules de fonctions comme bon vous semble. Sachez cependant qu'il vous sera impossible d'importer un module si son nom est
+	  l'un des 33 mots réservés Python signalés à la page , car le nom du module importé deviendrait une variable dans votre script, et les mots
+	  réservés ne peuvent pas être utilisés comme noms de variables. Rappelons aussi qu'il vous faut éviter de donner à vos modules - et
+	  à tous vos scripts en général - le même nom que celui d'un module Python préexistant, sinon vous devez vous attendre à des conflits.
+	  Par exemple, si vous donnez le nom turtle.py à un exercice dans lequel vous avez placé une instruction d'importation du module turtle, c'est l'exercice
+	  lui-même que vous allez importer !</div></blockquote>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image08.png"><img class="ImgCliquable figure-img-caption" src="./images/image08.png" alt="Image non disponible" width="241" height="325"/></a></figure></div>
+        <p>Exercices</p>
+        <p>.Définissez une fonction <b>ligneCar(n, ca)</b> qui renvoie une chaîne de <b>n</b> caractères <b>ca</b>.</p>
+        <p>.Définissez une fonction <b>surfCercle(R)</b>. Cette fonction doit renvoyer la surface (l'aire) d'un cercle dont on lui a fourni le rayon <b>R</b> en
+	  argument. Par exemple, l'exécution de l'instruction :<br/><b><span style="color:#000080;">print(surfCercle(2.5)) </span></b> doit donner le résultat :
+	  <b><span style="color:#000080;">19.63495...</span></b></p>
+        <p>.Définissez une fonction <b>volBoite(x1,x2,x3)</b> qui renvoie le volume d'une boîte parallélépipédique dont on fournit les trois
+	  dimensions <b>x1, x2, x3</b> en arguments.<br/>
+		 Par exemple, l'exécution de l'instruction :<br/><b><span style="color:#000080;">print(volBoite(5.2, 7.7, 3.3)) </span></b> doit donner le
+		   résultat : <b><span style="color:#000080;">132.132.</span></b></p>
+        <p>.Définissez une fonction <b>maximum(n1,n2,n3)</b> qui renvoie le plus grand de 3 nombres <b>n1, n2, n3</b> fournis en arguments. Par exemple,
+	  l'exécution de l'instruction :<br/><b><span style="color:#000080;">print(maximum(2,5,4)) </span></b> doit donner le résultat : <b><span style="color:#000080;">5.</span></b></p>
+        <p>.Complétez le module de fonctions graphiques <b>dessins_tortue.py</b> décrit à la page . <br/>
+		 Commencez par ajouter un paramètre <b>angle</b> à la fonction <b>carre()</b>, de manière à ce que les carrés puissent être
+		   tracés dans différentes orientations.<br/>
+		 Définissez ensuite une fonction <b>triangle(taille, couleur, angle)</b> capable de dessiner un triangle équilatéral d'une taille, d'une couleur et
+		   d'une orientation bien déterminées.<br/>
+		 Testez votre module à l'aide d'un programme qui fera appel à ces fonctions à plusieurs reprises, avec des arguments variés pour dessiner une
+		   série de carrés et de triangles :</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image09.png"><img class="ImgCliquable figure-img-caption" src="./images/image09.png" alt="Image non disponible" width="550" height="155"/></a></figure></div>
+        <p>.Ajoutez au module de l'exercice précédent une fonction <b>etoile5()</b> spécialisée dans le dessin d'étoiles à 5 branches. Dans
+	  votre programme principal, insérez une boucle qui dessine une rangée horizontale de de 9 petites étoiles de tailles variées :</p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image10.png" alt="Image non disponible" width="534" height="133"/></figure></div>
+        <p>.Ajoutez au module de l'exercice précédent une fonction <b>etoile6()</b> capable de dessiner une étoile à 6 branches, elle-même
+	  constituée de deux triangles équilatéraux imbriqués. Cette nouvelle fonction devra faire appel à la fonction <b>triangle()</b> définie
+	  précédemment. <br/>
+		 Votre programme principal dessinera également une série de ces étoiles : <img src="./images/image11.png" alt="Image non disponible" width="259" height="237" class="image_verticale"/><a data-lightbox="lightbox[article]" href="./images/100000000000017B0000018165DE3236.png"><img src="./images/100000000000017B0000018165DE3236.png" alt="Image non disponible" width="320" height="325" class="ImgCliquable image_verticale"/></a></p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/1000000000000103000000ED1B2B553A.png" alt="Image non disponible" width="259" height="237"/></figure></div>
+        <p>.Définissez une fonction <b>indexMax(liste)</b> qui renvoie l'index de l'élément ayant la valeur la plus élevée dans la liste transmise
+	  en argument. Exemple d'utilisation :<br/><b><span style="color:#000080;">serie = [5, 8, 2, 1, 9, 3, 6, 7]</span></b><br/><b><span style="color:#000080;">print(indexMax(serie))</span></b><br/><b><span style="color:#000080;">4</span></b></p>
+        <p>.Définissez une fonction <b>nomMois(n)</b> qui renvoie le nom du n-ième mois de l'année.<br/>
+		 Par exemple, l'exécution de l'instruction :<br/><b><span style="color:#000080;">print(nomMois(4))</span></b> doit donner le résultat : <b><span style="color:#000080;">Avril.</span></b></p>
+        <p>.Définissez une fonction <b>inverse(ch)</b> qui permette d'inverser les l'ordre des caractères d'une chaîne quelconque. La chaîne
+	  inversée sera renvoyée au programme appelant.</p>
+        <p>.Définissez une fonction <b>compteMots(ph)</b> qui renvoie le nombre de mots contenus dans la phrase <b>ph</b>. On considère comme mots les ensembles
+	  de caractères inclus entre des espaces.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L9-F">9-F. Typage des paramètres<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Vous avez appris que le <span class="italique">typage</span> des variables sous Python est un <span class="italique">typage dynamique</span>, ce qui signifie que le type d'une variable est défini au
+	  moment où on lui affecte une valeur. Ce mécanisme fonctionne aussi pour les paramètres d'une fonction. Le type d'un paramètre devient automatiquement
+	  le même que celui de l'argument qui a été transmis à la fonction. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e11014">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e11014" onclick="selectionCode('contenuCoded0e11014', 'IdTitreCode-d0e11014');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e11014" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">afficher3fois</code><code class="python_operator">(</code>arg):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code>arg, arg, arg)
+...
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">afficher3fois</code><code class="python_operator">(</code><code class="python_digit">5</code>)
+<code class="python_digit">5</code> <code class="python_digit">5</code> <code class="python_digit">5</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">afficher3fois</code><code class="python_operator">(</code><code class="python_literal1">'zut'</code>)
+zut zut zut
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">afficher3fois</code><code class="python_operator">(</code>[<code class="python_digit">5</code>, <code class="python_digit">7</code>])
+[<code class="python_digit">5</code>, <code class="python_digit">7</code>] [<code class="python_digit">5</code>, <code class="python_digit">7</code>] [<code class="python_digit">5</code>, <code class="python_digit">7</code>]
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">afficher3fois</code><code class="python_operator">(</code><code class="python_digit">6</code><code class="python_operator">**</code><code class="python_digit">2</code>)
+<code class="python_digit">36</code> <code class="python_digit">36</code> <code class="python_digit">36</code></code></pre></div>
+        <p>Dans cet exemple, vous pouvez constater que la même fonction <b>afficher3fois()</b> accepte dans tous les cas l'argument qu'on lui transmet, que cet
+	  argument soit un nombre, une chaîne de caractères, une liste, <span class="italique">ou même une expression</span>. Dans ce dernier cas, Python commence par évaluer
+	  l'expression, et c'est le résultat de cette évaluation qui est transmis comme argument à la fonction.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L9-G">9-G. Valeurs par défaut pour les paramètres<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans la définition d'une fonction, il est possible (et souvent souhaitable) de définir un argument par défaut pour chacun des paramètres. On
+	  obtient ainsi une fonction <span class="italique">qui peut être appelée avec une partie seulement des arguments attendus</span>. Exemples :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e11136">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e11136" onclick="selectionCode('contenuCoded0e11136', 'IdTitreCode-d0e11136');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e11136" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">politesse</code><code class="python_operator">(</code>nom, vedette <code class="python_operator">=</code><code class="python_literal1">'Monsieur'</code>):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Veuillez agréer ,"</code>, vedette, nom, <code class="python_literal1">", mes salutations cordiales."</code>)
+...
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">politesse</code><code class="python_operator">(</code><code class="python_literal1">'Dupont'</code>)
+Veuillez agréer , Monsieur Dupont , mes salutations cordiales.
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">politesse</code><code class="python_operator">(</code><code class="python_literal1">'Durand'</code>, <code class="python_literal1">'Mademoiselle'</code>)
+Veuillez agréer , Mademoiselle Durand , mes salutations cordiales.</code></pre></div>
+        <p>Lorsque l'on appelle cette fonction en ne lui fournissant que le premier argument, le second reçoit tout de même une valeur par défaut. Si l'on
+	  fournit les deux arguments, la valeur par défaut pour le deuxième est tout simplement ignorée.</p>
+        <p>Vous pouvez définir une valeur par défaut pour tous les paramètres, ou une partie d'entre eux seulement. Dans ce cas, cependant, <span class="italique">les
+	  paramètres sans valeur par défaut doivent précéder les autres</span> dans la liste. Par exemple, la définition ci-dessous est
+	  incorrecte :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e11196">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e11196" onclick="selectionCode('contenuCoded0e11196', 'IdTitreCode-d0e11196');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e11196" class="contenuCode">def <code class="java_function">politesse</code><code class="java_operator">(</code>vedette <code class="java_operator">=</code><code class="java_literal1">'Monsieur'</code>, nom):</code></pre></div>
+        <p>Autre exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e11212">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e11212" onclick="selectionCode('contenuCoded0e11212', 'IdTitreCode-d0e11212');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e11212" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">question</code><code class="python_operator">(</code>annonce, essais <code class="python_operator">=</code><code class="python_digit">4</code>, please <code class="python_operator">=</code><code class="python_literal1">'Oui ou non, s.v.p.!'</code>):
+...    <code class="python_keyword1">while</code> essais <code class="python_operator">&gt;</code><code class="python_digit">0</code>:
+...	 reponse <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>annonce)
+...	 <code class="python_keyword1">if</code> reponse <code class="python_keyword1">in</code> <code class="python_operator">(</code><code class="python_literal1">'o'</code>, <code class="python_literal1">'oui'</code>,<code class="python_literal1">'O'</code>,<code class="python_literal1">'Oui'</code>,<code class="python_literal1">'OUI'</code>):
+...	     <code class="python_keyword1">return</code> <code class="python_digit">1</code>
+...	 <code class="python_keyword1">if</code> reponse <code class="python_keyword1">in</code> <code class="python_operator">(</code><code class="python_literal1">'n'</code>,<code class="python_literal1">'non'</code>,<code class="python_literal1">'N'</code>,<code class="python_literal1">'Non'</code>,<code class="python_literal1">'NON'</code>):
+...	     <code class="python_keyword1">return</code> <code class="python_digit">0</code>
+...	 <code class="python_keyword1">print</code><code class="python_operator">(</code>please)
+...	 essais <code class="python_operator">=</code> essais<code class="python_operator">-</code><code class="python_digit">1</code>
+...
+<code class="python_operator">&gt;&gt;&gt;</code></code></pre></div>
+        <p>Cette fonction peut être appelée de différentes façons, telles par exemple :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">rep = question(</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Voulez-vous vraiment terminer ? </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">)</span>
+          </b>
+        </p>
+        <p>ou bien :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">rep = question(</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Faut-il effacer ce fichier ? </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, 3)</span>
+          </b>
+        </p>
+        <p>ou même encore :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">rep = question(</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Avez-vous compris ? </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, 2, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Répondez par oui ou par non !</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">)</span>
+          </b>
+        </p>
+        <p>Prenez la peine d'essayer et de décortiquer cet exemple.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L9-H">9-H. Arguments avec étiquettes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans la plupart des langages de programmation, les arguments que l'on fournit lors de l'appel d'une fonction doivent être fournis<span class="italique"> exactement dans le
+	  même ordre</span> que celui des paramètres qui leur correspondent dans la définition de la fonction.</p>
+        <p>Python autorise cependant une souplesse beaucoup plus grande. Si les paramètres annoncés dans la définition de la fonction ont reçu chacun
+	  une valeur par défaut, sous la forme déjà décrite ci-dessus, on peut faire appel à la fonction en fournissant les arguments correspondants
+	  <span class="italique">dans n'importe quel ordre, à la condition de désigner nommément les paramètres correspondants</span>. Exemple : </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e11429">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e11429" onclick="selectionCode('contenuCoded0e11429', 'IdTitreCode-d0e11429');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e11429" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">oiseau</code><code class="python_operator">(</code>voltage<code class="python_operator">=</code><code class="python_digit">100</code>, etat<code class="python_operator">=</code><code class="python_literal1">'allumé'</code>, action<code class="python_operator">=</code><code class="python_literal1">'danser la java'</code>):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'Ce perroquet ne pourra pas'</code>, action)
+ 
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'si vous le branchez sur'</code>, voltage, <code class="python_literal1">'volts !'</code>)
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"L'auteur de ceci est complètement"</code>, etat)
+...
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">oiseau</code><code class="python_operator">(</code>etat<code class="python_operator">=</code><code class="python_literal1">'givré'</code>, voltage<code class="python_operator">=</code><code class="python_digit">250</code>, action<code class="python_operator">=</code><code class="python_literal1">'vous approuver'</code>)
+Ce perroquet ne pourra pas vous approuver
+si vous le branchez sur <code class="python_digit">250</code> volts <code class="python_operator">!</code>
+L<code class="python_literal1">'auteur de ceci est complètement givré</code>
+<code class="python_literal1"> </code>
+<code class="python_literal1">&gt;&gt;&gt; oiseau()</code>
+<code class="python_literal1">Ce perroquet ne pourra pas danser la java</code>
+<code class="python_literal1">si vous le branchez sur 100 volts !</code>
+<code class="python_literal1">L'</code>auteur de ceci est complètement allumé</code></pre></div>
+        <p>Exercices</p>
+        <p>.Modifiez la fonction <b>volBoite(x1,x2,x3)</b> que vous avez définie dans un exercice précédent, de manière à ce qu'elle puisse
+	  être appelée avec trois, deux, un seul, ou même aucun argument. Utilisez pour ceux ci des valeurs par défaut égales à 10.<br/>
+		 Par exemple :<br/><b><span style="color:#000080;">print(volBoite())</span></b>doit donner le résultat : <b><span style="color:#000080;">1000</span></b><br/><b><span style="color:#000080;">print(volBoite(5.2))</span></b>doit donner le résultat : <b><span style="color:#000080;">520.0</span></b><br/><b><span style="color:#000080;">print(volBoite(5.2, 3))</span></b>doit donner le résultat : <b><span style="color:#000080;">156.0</span></b></p>
+        <p>.Modifiez la fonction <b>volBoite(x1,x2,x3)</b> ci-dessus de manière à ce qu'elle puisse être appelée avec un, deux, ou trois arguments. Si
+	  un seul est utilisé, la boîte est considérée comme cubique (l'argument étant l'arête de ce cube). Si deux sont utilisés, la boîte
+	  est considérée comme un prisme à base carrée (auquel cas le premier argument est le côté du carré, et le second la hauteur du prisme).
+	  Si trois arguments sont utilisés, la boîte est considérée comme un parallélépipède. Par exemple :<br/><b><span style="color:#000080;">print(volBoite())</span></b>doit donner le résultat :<b><span style="color:#000080;"> -1</span></b> (indication d'une erreur)<br/><b><span style="color:#000080;">print(volBoite(5.2))</span></b>doit donner le résultat :<b><span style="color:#000080;"> 140.608</span></b><br/><b><span style="color:#000080;">print(volBoite(5.2, 3))</span></b>doit donner le résultat :<b><span style="color:#000080;"> 81.12</span></b><br/><b><span style="color:#000080;">print(volBoite(5.2, 3, 7.4))</span></b>doit donner le résultat :<b><span style="color:#000080;"> 115.44</span></b></p>
+        <p>.Définissez une fonction <b>changeCar(ch,ca1,ca2,debut,fin)</b> qui remplace tous les caractères <b>ca1</b> par des caractères <b>ca2</b> dans la
+	  chaîne de caractères <b>ch</b>, à partir de l'indice <b>debut</b> et jusqu'à l'indice <b>fin</b>, ces deux derniers arguments pouvant être omis
+	  (et dans ce cas la chaîne est traitée d'une extrémité à l'autre). Exemples de la<span style="color:#000000;"> fonctionnalité
+	  attendue :</span></p>
+        <p>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; phrase = </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Ceci est une toute petite phrase.</span>
+            <span style="color:#000080;">'</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; print(changeCar(phrase, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">*</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">))</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Ceci*est*une*toute*petite*phrase.</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; print(changeCar(phrase, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">*</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, 8, 12))</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Ceci est*une*toute petite phrase.</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; print(changeCar(phrase, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">*</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, 12))</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Ceci est une*toute*petite*phrase.</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; print(changeCar(phrase, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">*</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, fin = 12))</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Ceci*est*une*toute petite phrase.</span>
+          </b>
+        </p>
+        <p>.Définissez une fonction <b>eleMax(liste,debut,fin)</b> qui renvoie l'élément ayant la plus grande valeur dans la liste transmise. Les deux
+	  arguments <b>debut</b> et <b>fin</b> indiqueront les indices entre lesquels doit s'exercer la recherche, et chacun d'eux pourra être omis (comme dans l'exercice
+	  précédent). Exemples de la fonctionnalité attendue :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; serie = [9, 3, 6, 1, 7, 5, 4, 8, 2]</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; print(eleMax(serie))</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">9</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; print(eleMax(serie, 2, 5))</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">7</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; print(eleMax(serie, 2))</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">8 </span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; print(eleMax(serie, fin =3, debut =1))</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">6</span>
+          </b>
+        </p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_8.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_10.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage29" href="#signetNoteBasPage29">(29)</a></div><div class="ContenuUneNoteBasPage">On appelle algorithme la
+	  séquence détaillée de toutes les opérations à effectuer pour résoudre un problème. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage30" href="#signetNoteBasPage30">(30)</a></div><div class="ContenuUneNoteBasPage">Il existe aussi dans d'autres langages des <b>routines</b> (parfois appelés sous-programmes) et des
+	  <b>procédures</b>.<br/>
+		 Il n'existe pas de <b>routines</b> en Python. Quant au terme de <b>fonction</b>, il désigne à la fois les fonctions au sens strict (qui fournissent une
+		   valeur en retour), et les procédures (qui n'en fournissent pas). </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage31" href="#signetNoteBasPage31">(31)</a></div><div class="ContenuUneNoteBasPage">La liste
+	    complète des mots réservés Python se trouve page .</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage32" href="#signetNoteBasPage32">(32)</a></div><div class="ContenuUneNoteBasPage">Un nom de fonction doit toujours être accompagné de parenthèses, même si la
+	    fonction n'utilise aucun paramètre. Il en résulte une convention d'écriture qui stipule que dans un texte quelconque traitant de programmation
+	    d'ordinateur, un nom de fonction soit toujours accompagné d'une paire de parenthèses vides. Nous respecterons cette convention dans la suite de ce
+	    texte.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage33" href="#signetNoteBasPage33">(33)</a></div><div class="ContenuUneNoteBasPage">Ce concept d'<span class="italique">espace de noms</span> sera approfondi progressivement. Vous apprendrez également plus loin que les fonctions sont en fait des
+	  <span class="italique">objets</span> dont on crée à chaque fois une nouvelle <span class="italique">instance</span> lorsqu'on les appelle.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage34" href="#signetNoteBasPage34">(34)</a></div><div class="ContenuUneNoteBasPage">Dans certains langages de programmation, les fonctions et les procédures sont définies à l'aide
+	  d'instructions différentes. Python utilise la même instruction <b>def</b> pour définir les unes et les autres.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage35" href="#signetNoteBasPage35">(35)</a></div><div class="ContenuUneNoteBasPage"><b>return</b> peut également être utilisé sans aucun argument, à l'intérieur
+	      d'une fonction, pour provoquer sa fermeture immédiate. La valeur retournée dans ce cas est l'objet <b>None</b> (objet particulier, correspondant à
+	      « rien »).</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

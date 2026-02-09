@@ -1,0 +1,477 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L13">13. Classes, objets, attributs</a><ul class="nav-sommaire-ul Indentation13">
+      
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L13-A">13-A. Utilité des classes</a></li>
+      <li><a class="summaryIndent1" href="#L13-B">13-B. Définition d'une classe élémentaire</a></li>
+      <li><a class="summaryIndent1" href="#L13-C">13-C. Attributs (ou variables) d'instance</a></li>
+      <li><a class="summaryIndent1" href="#L13-D">13-D. Passage d'objets comme arguments dans l'appel d'une fonction</a></li>
+      <li><a class="summaryIndent1" href="#L13-E">13-E. Similitude et unicité</a></li>
+      <li><a class="summaryIndent1" href="#L13-F">13-F. Objets composés d'objets</a></li>
+      <li><a class="summaryIndent1" href="#L13-G">13-G. Objets comme valeurs de retour d'une fonction</a></li>
+      <li><a class="summaryIndent1" href="#L13-H">13-H. Modification des objets</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_12.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_14.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L13">13. Classes, objets, attributs<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span class="italique">Les chapitres précédents vous ont déjà mis en contact à plusieurs reprises avec la notion d'objet. Vous savez donc déjà qu'un objet
+	  est une entité que l'on construit par instanciationà partir d'une classe (c'est-à-dire en quelque sorte une « catégorie » ou un
+	  « type » d'objet). Par exemple, on peut trouver dans la bibliothèque tkinter, une classe <b>Button()</b>à partir de laquelle on peut
+	  créer dans une fenêtre un nombre quelconque de boutons.</span>
+      </p>
+      <p>
+        <span class="italique">Nous allons à présent examiner comment vous pouvez vous-mêmes définir de nouvelles classes d'objets. Il s'agit là d'un sujet relativement ardu,
+	  mais vous l'aborderez de manière très progressive, en commençant par définir des classes d'objets très simples, que vous perfectionnerez
+	  ensuite.</span>
+      </p>
+      <p>
+        <span class="italique">Comme les objets de la vie courante, les objets informatiques peuvent être très simples ou très compliqués. Ils peuvent être composés de
+	  différentes parties, qui soient elles-mêmes des objets, ceux-ci étant faits à leur tour d'autres objets plus simples, etc.</span>
+      </p>
+      
+		<h3 class="TitreSection1" id="L13-A">13-A. Utilité des classes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Les classes sont les principaux outils de la programmation orientée objet (<span class="italique">Object Oriented Programming ou OOP</span>). Ce type de programmation permet de
+	  structurer les logiciels complexes en les organisant comme des ensembles d'objets qui interagissent, entre eux et avec le monde extérieur.</p>
+        <p>Le premier bénéfice de cette approche de la programmation réside dans le fait que les différents objets utilisés peuvent être
+	  construits indépendamment les uns des autres (par exemple par des programmeurs différents) sans qu'il n'y ait de risque d'interférence. Ce résultat
+	  est obtenu grâce au concept d'<span class="italique">encapsulation</span> : la fonctionnalité interne de l'objet et les variables qu'il utilise pour effectuer son travail, sont
+	  en quelque sorte « enfermées » dans l'objet. Les autres objets et le monde extérieur ne peuvent y avoir accès qu'à travers des
+	  procédures bien définies : l'<span class="italique">interface</span> de l'objet.</p>
+        <p>En particulier, l'utilisation de classes dans vos programmes va vous permettre - entre autres avantages -<span class="italique">d'éviter au maximum l'emploi
+	  de variables globales</span>. Vous devez savoir en effet que l'utilisation de variables globales comporte des risques, d'autant plus importants que les programmes sont
+	  volumineux, parce qu'il est toujours possible que de telles variables soient modifiées, ou même redéfinies, n'importe où dans le corps du programme
+	  (ce risque s'aggrave particulièrement si plusieurs programmeurs différents travaillent sur un même logiciel).</p>
+        <p>Un second bénéfice résultant de l'utilisation des classes est la possibilité qu'elles offrent de <span class="italique">construire de nouveaux objets à
+	  partir d'objets préexistants</span>, et donc de réutiliser des pans entiers d'une programmation déjà écrite (sans toucher à celle-ci !),
+	  pour en tirer une fonctionnalité nouvelle. Cela est rendu possible grâce aux concepts de <span class="italique">dérivation</span> et de <span class="italique">polymorphisme :</span></p>
+        <ul class="ListeDVP">
+          <li>La <span class="italique">dérivation</span> est le mécanisme qui permet de construire une classe « enfant » au départ d'une classe
+	    « parente ». L'enfant ainsi obtenu hérite toutes les propriétés et toute la fonctionnalité de son ancêtre, auxquelles on
+	    peut ajouter ce que l'on veut.</li>
+          <li>Le <span class="italique">polymorphisme</span> permet d'attribuer des comportements différents à des objets dérivant les uns des autres, ou au même objet ou en
+	    fonction d'un certain contexte.</li>
+        </ul>
+        <p>Avant d'aller plus loin, signalons ici que la programmation orientée objet est <span class="italique">optionnelle</span> sous Python. Vous pouvez donc mener à bien de
+	  nombreux projets sans l'utiliser, avec des outils plus simples tels que les fonctions. Sachez cependant que si vous faites l'effort d'apprendre à programmer à
+	  l'aide de classes, vous maîtriserez un niveau d'abstraction plus élevé, ce qui vous permettra de traiter des problèmes de plus en plus complexes. En
+	  d'autres termes, vous deviendrez un programmeur beaucoup plus compétent. Pour vous en convaincre, rappelez-vous les progrès que vous avez déjà
+	  réalisés au long de ce cours :</p>
+        <ul class="ListeDVP">
+          <li>Au début de votre étude, vous avez d'abord utilisé de simples instructions. Vous avez en quelque sorte « programmé à la
+	    main » (c'est-à-dire pratiquement sans outils). </li>
+          <li>Lorsque vous avez découvert les fonctions prédéfinies (cf. chapitre 6), vous avez appris qu'il existait ainsi de vastes collections d'outils
+	    spécialisés, réalisés par d'autres programmeurs.</li>
+          <li>En apprenant à écrire vos propres fonctions (cf. chapitre 7 et suivants), vous êtes devenu capable de créer vous-même de nouveaux
+	    outils, ce qui vous a donné un surcroît de puissance considérable.</li>
+          <li>Si vous vous initiez maintenant à la programmation par classes, vous allez apprendre à construire des machines productrices d'outils. C'est
+	    évidemment plus complexe que de fabriquer directement ces outils, mais cela vous ouvre des perspectives encore bien plus larges !</li>
+        </ul>
+        <p>Une bonne compréhension des classes vous aidera notamment à bien maîtriser le domaine des interfaces graphiques (<span class="italique">tkinter</span>, <span class="italique">wxPython</span>)
+	  et vous préparera efficacement à aborder d'autres langages modernes, tels que <span class="italique">C++</span> ou <span class="italique">Java</span>.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L13-B">13-B. Définition d'une classe élémentaire<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Pour créer une nouvelle classe d'objets Python, on utilise l'instruction <b>class</b>. Nous allons donc apprendre à utiliser cette instruction, en
+	  commençant par définir un type d'objet très rudimentaire, lequel sera simplement un nouveau type de donnée. Nous avons déjà utilisé
+	  différents types de données jusqu'à présent, mais il s'agissait à chaque fois de types intégrés dans le langage lui-même. Nous
+	  allons maintenant créer un nouveau type composite : le type <b>Point</b>.</p>
+        <p>Ce type correspondra au concept de <span class="italique">point</span> en géométrie plane. Dans un plan, un point est caractérisé par deux nombres (ses
+	  coordonnées suivant x et y). En notation mathématique, on représente donc un point par ses deux coordonnées x et y enfermées dans une paire de
+	  parenthèses. On parlera par exemple du point (25, 17). Une manière naturelle de représenter un point sous Python serait d'utiliser pour les
+	  coordonnées deux valeurs de type <span class="italique">float. </span>Nous voudrions cependant combiner ces deux valeurs dans une seule entité, ou un seul objet. Pour y arriver, nous
+	  allons définir une <span class="italique">classe</span><b>Point()</b> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29097">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29097" onclick="selectionCode('contenuCoded0e29097', 'IdTitreCode-d0e29097');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29097" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Point</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>): 
+...    <code class="python_literal1">"Définition d'un point géométrique"</code></code></pre></div>
+        <p>Les définitions de classes peuvent être situées n'importe où dans un programme, mais on les placera en général au début (ou
+	  bien dans un module à importer). L'exemple ci-dessus est probablement le plus simple qui se puisse concevoir. Une seule ligne nous a suffi pour définir le
+	  nouveau type d'objet <b>Point()</b>.</p>
+        <p>Remarquons d'emblée que :</p>
+        <ul class="ListeDVP">
+          <li>L'instruction <b>class</b> est un nouvel exemple d'<span class="italique">instruction composée</span>. N'oubliez pas le double point obligatoire à la fin de la ligne, et
+	    l'indentation du bloc d'instructions qui suit. Ce bloc doit contenir au moins une ligne. Dans notre exemple ultra-simplifié, cette ligne n'est rien d'autre qu'un
+	    simple commentaire. Comme nous l'avons vu précédemment pour les fonctions (cf. page ), vous pouvez insérer une chaîne de caractères
+	    directement après l'instruction <b>class</b>, afin de mettre en place un commentaire qui sera automatiquement incorporé dans le dispositif de documentation
+	    interne de Python. Prenez donc l'habitude de toujours placer une chaîne décrivant la classe à cet endroit.</li>
+          <li>Les parenthèses sont destinées à contenir la référence d'une classe préexistante. Cela est requis pour permettre le mécanisme
+	    d'<span class="italique">héritage</span>. Toute classe nouvelle que nous créons peut en effet hériter d'une <span class="italique">classe parente</span> un ensemble de caractéristiques,
+	    auxquelles elle ajoutera les siennes propres. Lorsque l'on désire créer une classe fondamentale - c'est-à-dire ne dérivant d'aucune autre,
+	    comme c'est le cas ici avec notre classe <b>Point()</b> - la référence à indiquer doit être par convention le nom spécial <b>object</b>,
+	    lequel désigne l'ancêtre de toutes les classes<a class="signetNoteBasPage" id="signetNoteBasPage71" href="#noteBasPage71">(71)</a>.</li>
+          <li>Une convention très répandue veut que l'on donne aux classes <span class="italique">des noms qui commencent par une majuscule</span>. Dans la suite de ce texte, nous
+	    respecterons cette convention, ainsi qu'une autre qui demande que dans les textes explicatifs, on associe à chaque nom de classe une paire de parenthèses,
+	    comme nous le faisons déjà pour les noms de fonctions.</li>
+        </ul>
+        <p>Nous venons donc de définir une <span class="italique">classe</span><b>Point()</b>. Nous pouvons à présent nous en servir pour <span class="italique">créer des objets de cette
+	  classe</span>, que l'on appellera aussi des <span class="italique">instances</span> de cette classe. L'opération s'appelle pour cette raison une <span class="italique">instanciation</span>. Créons par exemple
+	  un nouvel objet <b>p9</b><a class="signetNoteBasPage" id="signetNoteBasPage72" href="#noteBasPage72">(72)</a> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29192">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29192" onclick="selectionCode('contenuCoded0e29192', 'IdTitreCode-d0e29192');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29192" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> p9 <code class="python_operator">=</code> <code class="python_function">Point</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>Après cette instruction, la variable <b>p9</b> contient la référence d'un nouvel <span class="italique">objet</span><b>Point()</b>. Nous pouvons dire également que
+	  <b>p9</b> est une nouvelle <span class="italique">instance</span> de la classe <b>Point()</b>.</p>
+        <blockquote class="citation"><div>
+          <b>-Attention -</b>
+        </div></blockquote>
+        <p>comme les fonctions, les classes auxquelles on fait appel dans une instruction doivent toujours être accompagnées de parenthèses (même si
+	  aucun argument n<span class="italique">'</span>est transmis). Nous verrons un peu plus loin que les classes peuvent effectivement être appelées avec des arguments.</p>
+        <p>Voyons maintenant si nous pouvons faire quelque chose avec notre nouvel objet <b>p9</b> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29243">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29243" onclick="selectionCode('contenuCoded0e29243', 'IdTitreCode-d0e29243');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29243" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p9) 
+<code class="python_operator">&lt;</code>__main__.Point <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a> at <code class="python_digit">0xb76f132c</code><code class="python_operator">&gt;</code></code></pre></div>
+        <p>Le message renvoyé par Python indique, comme vous l'aurez certainement bien compris tout de suite, que <b>p9</b> est une instance de la classe
+	  <b>Point()</b>, laquelle est définie elle-même au niveau principal (<span class="italique">main</span>) du programme. Elle est située dans un emplacement bien
+	  déterminé de la mémoire vive, dont l'adresse apparaît ici en notation hexadécimale.</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29275">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29275" onclick="selectionCode('contenuCoded0e29275', 'IdTitreCode-d0e29275');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29275" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p9.<code class="python_keyword3">__doc__</code>) 
+Définition d<code class="python_literal1">'un point géométrique</code></code></pre></div>
+        <p>Comme nous l'avons expliqué pour les fonctions (cf. page ), les chaînes de documentation de divers objets Python sont associées à l'attribut
+	  prédéfini <b>__doc__</b>. Il est donc toujours possible de retrouver la documentation associée à un objet Python quelconque, en invoquant cet
+	  attribut. </p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L13-C">13-C. Attributs (ou variables) d'instance<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>L'objet que nous venons de créer est juste une coquille vide. Nous allons à présent lui ajouter des composants, par simple assignation, en
+	  utilisant le système de qualification des noms par points<a class="signetNoteBasPage" id="signetNoteBasPage73" href="#noteBasPage73">(73)</a> :
+	  </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29329">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29329" onclick="selectionCode('contenuCoded0e29329', 'IdTitreCode-d0e29329');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29329" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> p9.x <code class="python_operator">=</code> <code class="python_digit">3.0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> p9.y <code class="python_operator">=</code> <code class="python_digit">4.0</code></code></pre></div>
+        <p>Les variables <b>x</b> et <b>y</b> que nous avons ainsi définies en les liant d'emblée à <b>p9</b> , sont désormais des <span class="italique">attributs</span> de
+	  l'objet <b>p9.</b> On peut également les appeler des <span class="italique">variables d'instance</span>. Elles sont en effet incorporées, ou plutôt <span class="italique">encapsulées</span> dans
+	  cette instance (ou objet). Le diagramme d'état ci-contre montre le résultat de ces affectations : la variable <b>p9</b> contient la référence
+	  indiquant l'emplacement mémoire du nouvel objet, qui contient lui-même les deux attributs <b>x</b> et <b>y</b>. Ceux-ci contiennent les références
+	  des valeurs 3.0 et 4.0, mémorisées ailleurs.</p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image33.jpg" alt="Image non disponible" width="120" height="52"/></figure></div>
+        <p>On pourra utiliser les attributs d'un objet dans n'importe quelle expression, exactement comme toutes les variables ordinaires :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29386">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29386" onclick="selectionCode('contenuCoded0e29386', 'IdTitreCode-d0e29386');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29386" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p9.x)
+<code class="python_digit">3.0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p9.x<code class="python_operator">**</code><code class="python_digit">2</code> <code class="python_operator">+</code> p9.y<code class="python_operator">**</code><code class="python_digit">2</code>)
+<code class="python_digit">25.0</code></code></pre></div>
+        <p>Du fait de leur <span class="italique">encapsulation</span> dans l'objet, les attributs sont des variables distinctes d'autres variables qui pourraient porter le même nom. Par
+	  exemple, l'instruction <b><span style="color:#000080;">x = p9.x</span></b> signifie : « extraire de l'objet référencé par <b>p9</b> la valeur de
+	  son attribut <b>x</b>, et assigner cette valeur à la variable <b>x</b> ». Il n'y a pas de conflit entre la variable indépendante <b>x</b> , et
+	  l'attribut <b>x</b> de l'objet <b>p9</b>. L'objet <b>p9</b> contient en effet son propre espace de noms, indépendant de l'espace de nom principal où se trouve
+	  la variable <b>x</b>.</p>
+        <blockquote class="citation"><div><b>Important :</b> les exemples donnés ici sont provisoires.</div></blockquote>
+        <blockquote class="citation"><div>Nous venons de voir qu'il est très aisé d'ajouter un attribut à un objet en utilisant une simple instruction d'assignation telle que p9.x = 3.0 On
+	  peut se permettre cela sous Python (c'est une conséquence de son caractère foncièrement dynamique), mais cela n'est pas vraiment recommandable, comme vous
+	  le comprendrez plus loin. Nous n'utiliserons donc cette façon de faire que de manière anecdotique, et uniquement dans le but de simplifier nos premières
+	  explications concernant les attributs d'instances. La bonne manière de procéder sera développée dans le chapitre suivant.</div></blockquote>
+      </div>
+      
+		<h3 class="TitreSection1" id="L13-D">13-D. Passage d'objets comme arguments dans l'appel d'une fonction<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Les fonctions peuvent utiliser des objets comme paramètres, et elles peuvent également fournir un objet comme valeur de retour. Par exemple, vous
+	  pouvez définir une fonction telle que celle-ci :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29473">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29473" onclick="selectionCode('contenuCoded0e29473', 'IdTitreCode-d0e29473');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29473" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">affiche_point</code><code class="python_operator">(</code>p):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"coord. horizontale ="</code>, p.x, <code class="python_literal1">"coord. verticale ="</code>, p.y)</code></pre></div>
+        <p>Le paramètre <b>p</b> utilisé par cette fonction doit être un objet de type <b>Point()</b>, dont l'instruction qui suit utilisera les variables
+	  d'instance <b>p.x</b> et <b>p.y</b>. Lorsqu'on appelle cette fonction, il faut donc lui fournir un objet de type <b>Point()</b> comme argument. Essayons avec l'objet
+	  <b>p9</b> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29517">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29517" onclick="selectionCode('contenuCoded0e29517', 'IdTitreCode-d0e29517');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29517" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">affiche_point</code><code class="python_operator">(</code>p9)
+coord. horizontale <code class="python_operator">=</code> <code class="python_digit">3.0</code> coord. verticale <code class="python_operator">=</code> <code class="python_digit">4.0</code></code></pre></div>
+        <p>Exercice</p>
+        <p><span style="color:#000000;">.</span>Écrivez une fonction <b>distance()</b> qui permette de calculer la distance entre deux points. (Il faudra vous rappeler le
+	  théorème de Pythagore !)<br/>
+		 Cette fonction attendra évidemment deux objets <b>Point()</b> comme arguments.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L13-E">13-E. Similitude et unicité<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans la langue parlée, les mêmes mots peuvent avoir des significations fort différentes suivant le contexte dans lequel on les utilise. La
+	  conséquence en est que certaines expressions utilisant ces mots peuvent être comprises de plusieurs manières différentes (expressions
+	  ambiguës).</p>
+        <p>Le mot « même », par exemple, a des significations différentes dans les phrases : « Charles et moi avons la
+	  même voiture » et « Charles et moi avons la même mère ». Dans la première, ce que je veux dire est que la voiture de
+	  Charles et la mienne sont du même modèle. Il s'agit pourtant de deux voitures distinctes. Dans la seconde, j'indique que la mère de Charles et la mienne
+	  constituent en fait une seule et unique personne.</p>
+        <p>Lorsque nous traitons d'objets logiciels, nous pouvons rencontrer la même ambiguïté. Par exemple, si nous parlons de l'égalité de deux
+	  objets <b>Point()</b>, cela signifie-t-il que ces deux objets contiennent les mêmes données (leurs attributs), ou bien cela signifie-t-il que nous parlons de
+	  deux références à un même et unique objet ? Considérez par exemple les instructions suivantes :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29572">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29572" onclick="selectionCode('contenuCoded0e29572', 'IdTitreCode-d0e29572');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29572" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> p1 <code class="python_operator">=</code> <code class="python_function">Point</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> p1.x <code class="python_operator">=</code> <code class="python_digit">3</code>
+<code class="python_operator">&gt;&gt;&gt;</code> p1.y <code class="python_operator">=</code> <code class="python_digit">4</code>
+<code class="python_operator">&gt;&gt;&gt;</code> p2 <code class="python_operator">=</code> <code class="python_function">Point</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> p2.x <code class="python_operator">=</code> <code class="python_digit">3</code>
+<code class="python_operator">&gt;&gt;&gt;</code> p2.y <code class="python_operator">=</code> <code class="python_digit">4</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p1 <code class="python_operator">==</code> p2)
+<code class="python_keyword3">False</code></code></pre></div>
+        <p>Ces instructions créent deux objets <b>p1</b> et <b>p2</b> qui restent distincts, même s'ils font partie d'une même classe et ont des contenus
+	  similaires. La dernière instruction teste l'égalité de ces deux objets (double signe égale), et le résultat est <b>False</b> (faux) : il
+	  n'y a donc pas égalité.</p>
+        <p>On peut confirmer cela d'une autre manière encore : </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29660">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29660" onclick="selectionCode('contenuCoded0e29660', 'IdTitreCode-d0e29660');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29660" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p1)
+<code class="python_operator">&lt;</code>__main__.Point instance at <code class="python_digit">00</code>C2CBEC<code class="python_operator">&gt;</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p2)
+<code class="python_operator">&lt;</code>__main__.Point instance at <code class="python_digit">00</code>C50F9C<code class="python_operator">&gt;</code></code></pre></div>
+        <p>L'information est claire : les deux variables <b>p1</b> et <b>p2</b> référencent bien des objets différents, mémorisés à des
+	  emplacements différents dans la mémoire de l'ordinateur.</p>
+        <p>Essayons autre chose, à présent : </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29707">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29707" onclick="selectionCode('contenuCoded0e29707', 'IdTitreCode-d0e29707');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29707" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> p2 <code class="python_operator">=</code> p1
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p1 <code class="python_operator">==</code> p2)
+<code class="python_keyword3">True</code></code></pre></div>
+        <p>Par l'instruction <b><span style="color:#000080;">p2 = p1 </span></b>, nous assignons le contenu de <b>p1</b> à <b>p2</b>. Cela signifie que désormais ces
+	  deux variables <span class="italique">référencent le même objet</span>. Les variables <b>p1</b> et <b>p2</b> sont des <span class="italique">alias</span><a class="signetNoteBasPage" id="signetNoteBasPage74" href="#noteBasPage74">(74)</a> l'une de l'autre.</p>
+        <p>Le test d'égalité dans l'instruction suivante renvoie cette fois la valeur <b>True</b>, ce qui signifie que l'expression entre parenthèses est
+	  vraie : <b>p1</b> et <b>p2</b> désignent bien toutes deux un seul et unique objet, comme on peut s'en convaincre en essayant encore :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29767">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29767" onclick="selectionCode('contenuCoded0e29767', 'IdTitreCode-d0e29767');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29767" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> p1.x <code class="python_operator">=</code> <code class="python_digit">7</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p2.x)
+<code class="python_digit">7</code></code></pre></div>
+        <p>Lorsqu'on modifie l'attribut <b>x</b> de <b>p1</b>, on constate que l'attribut <b>x</b> de <b>p2</b> a changé, lui aussi.</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29803">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29803" onclick="selectionCode('contenuCoded0e29803', 'IdTitreCode-d0e29803');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29803" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p1)
+<code class="python_operator">&lt;</code>__main__.Point instance at <code class="python_digit">00</code>C2CBEC<code class="python_operator">&gt;</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>p2)
+<code class="python_operator">&lt;</code>__main__.Point instance at <code class="python_digit">00</code>C2CBEC<code class="python_operator">&gt;</code></code></pre></div>
+        <p>Les deux références <b>p1</b> et <b>p2</b> pointent vers le même emplacement dans la mémoire.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L13-F">13-F. Objets composés d'objets<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Supposons maintenant que nous voulions définir une classe qui servira à représenter des <span class="italique">rectangles</span>. Pour simplifier, nous allons
+	  considérer que ces rectangles seront toujours orientés horizontalement ou verticalement, et jamais en oblique.</p>
+        <p>De quelles informations avons-nous besoin pour définir de tels rectangles ?</p>
+        <p>Il existe plusieurs possibilités. Nous pourrions par exemple spécifier la position du centre du rectangle (deux coordonnées) et préciser sa
+	  taille (largeur et hauteur). Nous pourrions aussi spécifier les positions du coin supérieur gauche et du coin inférieur droit. Ou encore la position du
+	  coin supérieur gauche et la taille. Admettons ce soit cette dernière convention qui soit retenue.</p>
+        <p>Définissons donc notre nouvelle classe :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29868">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29868" onclick="selectionCode('contenuCoded0e29868', 'IdTitreCode-d0e29868');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29868" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Rectangle</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+     <code class="python_literal1">"définition d'une classe de rectangles"</code></code></pre></div>
+        <p>... et servons nous-en tout de suite pour créer une instance :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29888">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29888" onclick="selectionCode('contenuCoded0e29888', 'IdTitreCode-d0e29888');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29888" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> boite <code class="python_operator">=</code> <code class="python_function">Rectangle</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> boite.largeur <code class="python_operator">=</code> <code class="python_digit">50.0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> boite.hauteur <code class="python_operator">=</code> <code class="python_digit">35.0</code></code></pre></div>
+        <p>Nous créons ainsi un nouvel objet <b>Rectangle()</b> et lui donnons ensuite deux attributs. Pour spécifier le coin supérieur gauche, nous allons
+	  à présent utiliser une nouvelle instance de la classe <b>Point()</b> que nous avons définie précédemment. Ainsi nous allons créer un objet,
+	  à l'intérieur d'un autre objet !</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e29927">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e29927" onclick="selectionCode('contenuCoded0e29927', 'IdTitreCode-d0e29927');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e29927" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> boite.coin <code class="python_operator">=</code> <code class="python_function">Point</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> boite.coin.x <code class="python_operator">=</code> <code class="python_digit">12.0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> boite.coin.y <code class="python_operator">=</code> <code class="python_digit">27.0</code></code></pre></div>
+        <p>À la première de ces trois instructions, nous créons un nouvel attribut <b>coin</b> pour l'objet <b>boite</b>. Ensuite, pour accéder à
+	  cet objet qui se trouve lui-même à l'intérieur d'un autre objet, nous utilisons la <span class="italique">qualification des noms hiérarchisée</span> (à l'aide de
+	  points) que nous avons déjà rencontrée à plusieurs reprises.</p>
+        <p>Ainsi l'expression <b><span style="color:#000080;">boite.coin.y</span></b> signifie « Aller à l'objet référencé dans la variable
+	  <b>boite</b>. Dans cet objet, repérer l'attribut <b>coin</b>, puis aller à l'objet référencé dans cet attribut. Une fois cet autre objet
+	  trouvé, sélectionner son attribut <b>y</b>. » </p>
+        <p>Vous pourrez peut-être mieux vous représenter tout cela à l'aide d'un diagramme tel que celui-ci :</p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image34.jpg" alt="Image non disponible" width="300" height="161"/></figure></div>
+        <p>Le nom <b>boite</b> se trouve dans <span class="italique">l'espace de noms principal</span>. Il référence un autre <span class="italique">espace de noms</span> réservé à l'objet
+	  correspondant, dans lequel sont mémorisés les noms <b>largeur</b>, <b>hauteur</b> et <b>coin</b>. Ceux-ci référencent à leur tour, soit
+	  <span class="italique">d'autres espaces de noms</span> (cas du nom « <b>coin</b> »), soit <span class="italique">des valeurs</span> bien déterminées, lesquelles sont
+	  mémorisées ailleurs.</p>
+        <p>Python réserve des espaces de noms différents pour chaque module, chaque classe, chaque instance, chaque fonction. Vous pouvez tirer parti de tous ces
+	  espaces de noms bien compartimentés afin de réaliser des <span class="italique">programmes robustes</span>, c'est-à-dire des programmes dont les différents composants ne
+	  peuvent pas facilement interférer.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L13-G">13-G. Objets comme valeurs de retour d'une fonction<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous avons vu plus haut que les fonctions peuvent utiliser des objets comme paramètres. Elles peuvent également transmettre une instance comme valeur
+	  de retour. Par exemple, la fonction <b>trouveCentre()</b>ci-dessous doit être appelée avec un argument de type <b>Rectangle()</b> et elle renvoie un objet de
+	  type <b>Point()</b>, lequel contiendra les coordonnées du centre du rectangle.</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30044">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30044" onclick="selectionCode('contenuCoded0e30044', 'IdTitreCode-d0e30044');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30044" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">trouveCentre</code><code class="python_operator">(</code>box):
+...    p <code class="python_operator">=</code> <code class="python_function">Point</code><code class="python_operator">(</code>)
+...    p.x <code class="python_operator">=</code> box.coin.x <code class="python_operator">+</code> box.largeur<code class="python_operator">/</code><code class="python_digit">2.0</code>
+...    p.y <code class="python_operator">=</code> box.coin.y <code class="python_operator">+</code> box.hauteur<code class="python_operator">/</code><code class="python_digit">2.0</code>
+...    <code class="python_keyword1">return</code> p</code></pre></div>
+        <p>Vous pouvez par exemple appeler cette fonction, en utilisant comme argument l'objet <b>boite</b> défini plus haut :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30096">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30096" onclick="selectionCode('contenuCoded0e30096', 'IdTitreCode-d0e30096');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30096" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> centre <code class="python_operator">=</code> <code class="python_function">trouveCentre</code><code class="python_operator">(</code>boite)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>centre.x, centre.y)
+<code class="python_digit">37.0</code>  <code class="python_digit">44.5</code></code></pre></div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L13-H">13-H. Modification des objets<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous pouvons changer les propriétés d'un objet en assignant de nouvelles valeurs à ses attributs. Par exemple, nous pouvons modifier la taille
+	  d'un rectangle (sans modifier sa position), en réassignant ses attributs hauteur et largeur :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30131">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30131" onclick="selectionCode('contenuCoded0e30131', 'IdTitreCode-d0e30131');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30131" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> boite.hauteur <code class="python_operator">=</code> boite.hauteur <code class="python_operator">+</code> <code class="python_digit">20</code>
+<code class="python_operator">&gt;&gt;&gt;</code> boite.largeur <code class="python_operator">=</code> boite.largeur ? <code class="python_digit">5</code></code></pre></div>
+        <p>Nous pouvons faire cela sous Python, parce que dans ce langage les propriétés des objets sont toujours <span class="italique">publiques</span> (du moins jusqu'à la
+	  version actuelle 3.1). D'autres langages établissent une distinction nette entre attributs publics (accessibles de l'extérieur de l'objet) et attributs
+	  privés (qui sont accessibles seulement aux algorithmes inclus dans l'objet lui-même).</p>
+        <p>Cependant, comme nous l'avons déjà signalé plus haut (à propos de la définition des attributs par assignation simple, depuis
+	  l'extérieur de l'objet), modifier de cette façon les attributs d'une instance <span class="italique"><b>n'est pas une pratique recommandable</b></span>, parce qu'elle contredit l'un
+	  des objectifs fondamentaux de la programmation orientée objet, qui vise à établir une séparation stricte entre la fonctionnalité d'un objet
+	  (telle qu'elle a été déclarée au monde extérieur) et la manière dont cette fonctionnalité est réellement implémentée
+	  dans l'objet (et que le monde extérieur n'a pas à connaître).</p>
+        <p>Concrètement, cela signifie que nous devons maintenant étudier comment faire fonctionner les objets à l'aide d'outils vraiment appropriés,
+	  que nous appellerons des <span class="italique">méthodes</span>.</p>
+        <p>Ensuite, lorsque nous aurons bien compris le maniement de celles-ci, <span class="italique">nous nous fixerons pour règle de ne plus modifier les attributs d'un objet par
+	  assignation directe depuis le monde extérieur</span>, comme nous l'avons fait jusqu'à présent. Nous veillerons au contraire à toujours utiliser pour
+	  cela des méthodes mises en place spécifiquement dans ce but, comme nous allons l'expliquer dans le chapitre suivant. L'ensemble de ces méthodes
+	  constituera ce que nous appellerons désormais l'<span class="italique">interface</span> de l'objet.</p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_12.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_14.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage71" href="#signetNoteBasPage71">(71)</a></div><div class="ContenuUneNoteBasPage">Lorsque vous définissez une classe fondamentale, vous pouvez omettre les parenthèses et
+	    la référence à la classe « ancêtre » <b>object</b> : ces indications sont devenues facultatives sous Python 3. Nous
+	    continuerons cependant à les utiliser nous-mêmes dans la suite de ce texte, afin de bien marquer l'importance du concept
+	    d'héritage.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage72" href="#signetNoteBasPage72">(72)</a></div><div class="ContenuUneNoteBasPage">Sous Python, on peut donc instancier un objet à l'aide d'une simple instruction d'affectation. D'autres langages imposent
+	  l'emploi d'une instruction spéciale, souvent appelée <b>new</b> pour bien montrer que l'on crée un nouvel objet à partir d'un moule. Exemple : <b>p9
+	  = new Point().</b></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage73" href="#signetNoteBasPage73">(73)</a></div><div class="ContenuUneNoteBasPage">Ce système de notation est similaire à celui que nous utilisons pour désigner
+	  les variables d'un module, comme par exemple <b>math.pi</b> ou <b>string.ascii_lowercase</b>. Nous aurons l'occasion d'y revenir plus tard, mais sachez dès à
+	  présent que les modules peuvent en effet contenir des fonctions, mais aussi des classes et des variables. Essayez par exemple :<br/><b>&gt;&gt;&gt; import
+	  string</b><br/><b>&gt;&gt;&gt; string.capwords</b><br/><b>&gt;&gt;&gt; string.ascii_uppercase</b><br/><b>&gt;&gt;&gt; string.punctuation</b><br/><b>&gt;&gt;&gt; string.hexdigits </b></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage74" href="#signetNoteBasPage74">(74)</a></div><div class="ContenuUneNoteBasPage">Concernant ce phénomène
+	  d'aliasing, voir également page .</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

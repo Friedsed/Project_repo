@@ -1,0 +1,40 @@
+
+form{
+    font-style: italic;
+    color: green(65,42,165);
+    font-size: 20px;
+    border: solid 5px rebeccapurple;/* bordure */
+    border-style: solid;
+    border-color: rgb(5, 255, 179);/* couleur de la bordure*/
+    border-radius: 15px;/*le caractère circulaire des sommets*/
+    border-width: 5px;
+    text-align: center;
+    background-color: aquamarine;
+    background-position: center;
+   
+    
+}
+body
+{
+    font-family: 'Courier New', Courier, monospace;/**/
+    background-image: url(tof4.png) ;/**/
+}
+h1
+{
+    /*toute transformation qui se ferai dans les acolades de h1 modifiera les textes contenu dans le h1*/
+    text-transform: uppercase;/*transforme le texte  de h1 en majuscul*/
+    letter-spacing: 2px;/*l'espacement entre les lettres*/
+    font-size: 2.5rem;/* la grosseur de l'ecrit*/
+    color: blue(65, 42, 165);/* la couleur des lettres*/
+    font-family: Arial, Helvetica, sans-serif;/**/
+    font-style: italic;/* police d'ecriture*/
+    /*text-decoration: underline;/* sous ligne le texte*/
+    text-align:center;/* permet de centrer l'ecrit*/
+    background-color: aquamarine;/**/
+    
+}
+h8
+{
+    center
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System of Equations Solver</title>
+    <script>
+        function solveSystem() {
+            const equations = [];
+            const numEquations = parseInt(document.getElementById("numEquations").value);
+
+            for (let i = 1; i <= numEquations; i++) {
+                const coefficients = [];
+                for (let j = 1; j <= numEquations + 1; j++) {
+                    coefficients.push(parseFloat(document.getElementById(`coeff${i}${j}`).value));
+                }
+                equations.push(coefficients);
+            }
+
+            for (let i = 0; i < numEquations; i++) {
+                for (let j = i + 1; j < numEquations; j++) {
+                    const factor = equations[j][i] / equations[i][i];
+                    for (let k = i; k <= numEquations; k++) {
+                        equations[j][k] -= factor * equations[i][k];
+                    }
+                }
+            }
+
+            const solutions = [];
+            for (let i = numEquations - 1; i >= 0; i--) {
+                let sum = equations[i][numEquations];
+                for (let j = i + 1; j < numEquations; j++) {
+                    sum -= equations[i][j] * solutions[j];
+                }
+                solutions[i] = sum / equations[i][i];
+            }
+
+            const solutionOutput = document.getElementById("solution");
+            solutionOutput.innerHTML = "Solutions: " + solutions.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h2>System of Equations Solver</h2>
+    <p>Enter the coefficients of the system of linear equations:</p>
+    <input type="number" id="numEquations" placeholder="Number of Equations">
+    <br><br>
+
+    <div id="equationInputs"></div>
+    <br>
+    <button onclick="solveSystem()">Solve</button>
+
+    <p id="solution"></p>
+
+    <script>
+        const equationInputs = document.getElementById("equationInputs");
+        document.getElementById("numEquations").addEventListener("change", function () {
+            const numEquations = parseInt(this.value);
+            equationInputs.innerHTML = "";
+
+            for (let i = 1; i <= numEquations; i++) {
+                for (let j = 1; j <= numEquations + 1; j++) {
+                    const input = document.createElement("input");
+                    input.type = "number";
+                    input.id = `coeff${i}${j}`;
+                    input.placeholder = `Coeff ${i}${j}`;
+                    equationInputs.appendChild(input);
+                }
+                equationInputs.appendChild(document.createElement("br"));
+            }
+        });
+    </script>
+</body>
+</html>

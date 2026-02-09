@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+
+\newcounter{count}[section]
+
+\newenvironment{defi}{%
+	\refstepcounter{count}%
+	\addvspace{0.3cm}\noindent%
+	\textbf{Définition \arabic{section}.\arabic{count}: \it\ignorespaces}%
+}{%
+	\par\addvspace{0.3cm}%
+}
+
+
+\newenvironment{expl}{%
+	\refstepcounter{count}%
+	\addvspace{0.3cm}\noindent%
+	\textbf{Exemple \arabic{section}.\arabic{count}: \it\ignorespaces}%
+}{%
+	\par\addvspace{0.3cm}%
+}
+
+\newenvironment{theo}{%
+	\refstepcounter{count}%
+	\addvspace{0.3cm}\noindent%
+	\textbf{Théorème \arabic{section}.\arabic{count}: \it\ignorespaces}%
+}{%
+	\par\addvspace{0.3cm}%
+}
+
+
+
+
+
+
+
+
+
+\newenvironment{prop}{%
+	\refstepcounter{count}%
+	\addvspace{0.3cm}\noindent%
+	\textbf{Proposition \arabic{section}.\arabic{count}: \it\ignorespaces}%
+}{%
+	\par\addvspace{0.3cm}%
+}
+
+
+
+\newenvironment{coro}{%
+	\refstepcounter{count}%
+	\addvspace{0.3cm}\noindent%
+	\textbf{Corolaire \arabic{section}.\arabic{count}: \it\ignorespaces}%
+}{%
+	\par\addvspace{0.3cm}%
+}
+
+
+
+
+
+
+\newenvironment{rem}{%
+	\refstepcounter{count}%
+	\addvspace{0.3cm}\noindent%
+	\textbf{Remarque \arabic{section}.\arabic{count}: \it\ignorespaces}%
+}{%
+	\par\addvspace{0.3cm}%
+}
+
+
+
+\newenvironment{demo}{%
+	\refstepcounter{count}%
+	\addvspace{0.3cm}\noindent%
+	\textbf{Démonstration \arabic{section}.\arabic{count}: \it\ignorespaces}%
+}{%
+	\par\addvspace{0.3cm}%
+}
+
+
+

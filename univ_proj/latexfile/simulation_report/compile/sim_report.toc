@@ -1,0 +1,15 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Battery Container Simulation on Ansys}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Geometry}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Material characteristic}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Loading and Boundary Conditions}{4}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Applied Pressure}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Fixed Supports}{5}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Acceleration Load}{5}{subsubsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.4}Meshing Strategy and Numerical Constraints}{6}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Final Mesh Settings}{6}{subsubsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.5}Total Deformation}{6}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Directional Deformation}{7}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Equivalent (von Mises) Stress}{8}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Some video for understanding }{9}{subsection.1.8}%
+\contentsline {section}{\numberline {2}Conclusion}{9}{section.2}%

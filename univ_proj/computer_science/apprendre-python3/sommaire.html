@@ -1,0 +1,1206 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" src="./images/fleche-bas-bleue.png" style="display:none;"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+    <li><a class="summaryIndent0" href="page_1.html">Avant-propos<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_1.html#L1">1. Avant-propos</a></li><li><ul class="nav-sommaire-ul Indentation1">
+      
+      
+      
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_1.html#L1-A">1-A. La couverture</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_2.html">Préface<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_2.html#L2">2. Préface</a></li><li><ul class="nav-sommaire-ul Indentation2">
+      
+      
+      
+      
+      
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_2.html#L2-A">2-A. Choix d'un premier langage de programmation</a></li>
+      <li><a class="summaryIndent2" href="page_2.html#L2-B">2-B. Présentation du langage Python</a></li><li><ul class="nav-sommaire-ul Indentation2-B">
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_2.html#L2-B-1">2-B-1. Caractéristiques du langage</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_2.html#L2-C">2-C. Pour le professeur qui souhaite utiliser cet ouvrage comme support de cours</a></li>
+      <li><a class="summaryIndent2" href="page_2.html#L2-D">2-D. Versions du langage</a></li>
+      <li><a class="summaryIndent2" href="page_2.html#L2-E">2-E. Distribution de Python et bibliographie</a></li>
+      <li><a class="summaryIndent2" href="page_2.html#L2-F">2-F. Exemples du livre</a></li>
+      <li><a class="summaryIndent2" href="page_2.html#L2-G">2-G. Remerciements</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_3.html">À l'école des sorciers<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_3.html#L3">3. À l'école des sorciers</a></li><li><ul class="nav-sommaire-ul Indentation3">
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_3.html#L3-A">3-A. Boîtes noires et pensée magique</a></li>
+      <li><a class="summaryIndent2" href="page_3.html#L3-B">3-B. Magie blanche, magie noire</a></li>
+      <li><a class="summaryIndent2" href="page_3.html#L3-C">3-C. La démarche du programmeur</a></li>
+      <li><a class="summaryIndent2" href="page_3.html#L3-D">3-D. Langage machine, langage de programmation</a></li>
+      <li><a class="summaryIndent2" href="page_3.html#L3-E">3-E. Édition du code source - Interprétation</a></li>
+      <li><a class="summaryIndent2" href="page_3.html#L3-F">3-F. Mise au point d'un programme - Recherche des erreurs (debug)</a></li><li><ul class="nav-sommaire-ul Indentation3-F">
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_3.html#L3-F-1">3-F-1. Erreurs de syntaxe</a></li>
+        <li><a class="summaryIndent3" href="page_3.html#L3-F-2">3-F-2. Erreurs sémantiques</a></li>
+        <li><a class="summaryIndent3" href="page_3.html#L3-F-3">3-F-3. Erreurs à l'exécution</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_3.html#L3-G">3-G. Recherche des erreurs et expérimentation</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_4.html">Premiers pas<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_4.html#L4">4. Premiers pas</a></li><li><ul class="nav-sommaire-ul Indentation4">
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_4.html#L4-A">4-A. Calculer avec Python</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-B">4-B. Données et variables</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-C">4-C. Noms de variables et mots réservés</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-D">4-D. Affectation (ou assignation)</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-E">4-E. Afficher la valeur d' une variable</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-F">4-F. Typage des variables</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-G">4-G. Affectations multiples</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-H">4-H. Opérateurs et expressions</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-I">4-I. Priorité des opérations</a></li>
+      <li><a class="summaryIndent2" href="page_4.html#L4-J">4-J. Composition</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_5.html">Contrôle du flux d'exécution<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_5.html#L5">5. Contrôle du flux d'exécution</a></li><li><ul class="nav-sommaire-ul Indentation5">
+      
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_5.html#L5-A">5-A. Séquence d'instructions</a></li>
+      <li><a class="summaryIndent2" href="page_5.html#L5-B">5-B. Sélection ou exécution conditionnelle</a></li>
+      <li><a class="summaryIndent2" href="page_5.html#L5-C">5-C. Opérateurs de comparaison</a></li>
+      <li><a class="summaryIndent2" href="page_5.html#L5-D">5-D. Instructions composées - blocs d'instructions</a></li>
+      <li><a class="summaryIndent2" href="page_5.html#L5-E">5-E. Instructions imbriquées</a></li>
+      <li><a class="summaryIndent2" href="page_5.html#L5-F">5-F. Quelques règles de syntaxe Python</a></li><li><ul class="nav-sommaire-ul Indentation5-F">
+        
+        
+        <li><a class="summaryIndent3" href="page_5.html#L5-F-1">5-F-1. Les limites des instructions et des blocs sont définies par la mise en page</a></li>
+        <li><a class="summaryIndent3" href="page_5.html#L5-F-2">5-F-2. Instruction composée : en-tête, double point, bloc d'instructions indenté</a></li>
+        <li><a class="summaryIndent3" href="page_5.html#L5-F-3">5-F-3. Les espaces et les commentaires sont normalement ignorés</a></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_6.html">Instructions répétitives<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_6.html#L6">6. Instructions répétitives</a></li><li><ul class="nav-sommaire-ul Indentation6">
+      
+      
+      <li><a class="summaryIndent2" href="page_6.html#L6-A">6-A. Ré-affectation</a></li>
+      <li><a class="summaryIndent2" href="page_6.html#L6-B">6-B. Répétitions en boucle - l'instruction while</a></li><li><ul class="nav-sommaire-ul Indentation6-B">
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_6.html#L6-B-1">6-B-1. Commentaires</a></li>
+        <li><a class="summaryIndent3" href="page_6.html#L6-B-2">6-B-2. Remarques</a></li>
+        <li><a class="summaryIndent3" href="page_6.html#L6-B-3">6-B-3. Élaboration de tables</a></li>
+        <li><a class="summaryIndent3" href="page_6.html#L6-B-4">6-B-4. Construction d'une suite mathématique</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_6.html#L6-C">6-C. Premiers scripts, ou comment conserver nos programmes</a></li><li><ul class="nav-sommaire-ul Indentation6-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_6.html#L6-C-1">6-C-1. Problèmes éventuels liés aux caractères accentués</a></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_7.html">Principaux types de données<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_7.html#L7">7. Principaux types de données</a></li><li><ul class="nav-sommaire-ul Indentation7">
+      
+      
+      <li><a class="summaryIndent2" href="page_7.html#L7-A">7-A. Les données numériques</a></li><li><ul class="nav-sommaire-ul Indentation7-A">
+        
+        
+        <li><a class="summaryIndent3" href="page_7.html#L7-A-1">7-A-1. Le type integer</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_7.html#L7-B">7-B. Le type float</a></li>
+      <li><a class="summaryIndent2" href="page_7.html#L7-C">7-C. Les données alphanumériques</a></li><li><ul class="nav-sommaire-ul Indentation7-C">
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_7.html#L7-C-1">7-C-1. Le type string</a></li><li><ul class="nav-sommaire-ul Indentation7-C-1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_7.html#L7-C-1-A">7-C-1-A. Remarques</a></li>
+          <li><a class="summaryIndent4" href="page_7.html#L7-C-1-B">7-C-1-B. Triple quotes</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_7.html#L7-C-2">7-C-2. Accès aux caractères individuels d'une chaîne</a></li>
+        <li><a class="summaryIndent3" href="page_7.html#L7-C-3">7-C-3. Opérations élémentaires sur les chaînes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_7.html#L7-D">7-D. Les listes (première approche)</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_8.html">Fonctions prédéfinies<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_8.html#L8">8. Fonctions prédéfinies</a></li><li><ul class="nav-sommaire-ul Indentation8">
+      
+      
+      <li><a class="summaryIndent2" href="page_8.html#L8-A">8-A. Affichage : la fonction print()</a></li>
+      <li><a class="summaryIndent2" href="page_8.html#L8-B">8-B. Interaction avec l'utilisateur : la fonction input()</a></li><li><ul class="nav-sommaire-ul Indentation8-B">
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_8.html#L8-B-1">8-B-1. Remarque importante</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_8.html#L8-C">8-C. Importer un module de fonctions</a></li>
+      <li><a class="summaryIndent2" href="page_8.html#L8-D">8-D. Un peu de détente avec le module turtle</a></li>
+      <li><a class="summaryIndent2" href="page_8.html#L8-E">8-E. Véracité/fausseté d'une expression</a></li>
+      <li><a class="summaryIndent2" href="page_8.html#L8-F">8-F. Révision</a></li><li><ul class="nav-sommaire-ul Indentation8-F">
+        
+        
+        <li><a class="summaryIndent3" href="page_8.html#L8-F-1">8-F-1. Contrôle du flux - utilisation d'une liste simple</a></li>
+        <li><a class="summaryIndent3" href="page_8.html#L8-F-2">8-F-2. Boucle while - instructions imbriquées</a></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_9.html">Fonctions originales<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_9.html#L9">9. Fonctions originales</a></li><li><ul class="nav-sommaire-ul Indentation9">
+      
+      
+      <li><a class="summaryIndent2" href="page_9.html#L9-A">9-A. Définir une fonction</a></li><li><ul class="nav-sommaire-ul Indentation9-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_9.html#L9-A-1">9-A-1. Fonction simple sans paramètres</a></li>
+        <li><a class="summaryIndent3" href="page_9.html#L9-A-2">9-A-2. Fonction avec paramètre</a></li>
+        <li><a class="summaryIndent3" href="page_9.html#L9-A-3">9-A-3. Utilisation d'une variable comme argument</a></li><li><ul class="nav-sommaire-ul Indentation9-A-3">
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_9.html#L9-A-3-A">9-A-3-A. Remarque importante</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_9.html#L9-A-4">9-A-4. Fonction avec plusieurs paramètres</a></li><li><ul class="nav-sommaire-ul Indentation9-A-4">
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_9.html#L9-A-4-A">9-A-4-A. Notes</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_9.html#L9-B">9-B. Variables locales, variables globales</a></li>
+      <li><a class="summaryIndent2" href="page_9.html#L9-C">9-C. Vraies fonctions et procédures</a></li><li><ul class="nav-sommaire-ul Indentation9-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_9.html#L9-C-1">9-C-1. Notes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_9.html#L9-D">9-D. Utilisation des fonctions dans un script</a></li><li><ul class="nav-sommaire-ul Indentation9-D">
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_9.html#L9-D-1">9-D-1. Notes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_9.html#L9-E">9-E. Modules de fonctions</a></li>
+      <li><a class="summaryIndent2" href="page_9.html#L9-F">9-F. Typage des paramètres</a></li>
+      <li><a class="summaryIndent2" href="page_9.html#L9-G">9-G. Valeurs par défaut pour les paramètres</a></li>
+      <li><a class="summaryIndent2" href="page_9.html#L9-H">9-H. Arguments avec étiquettes</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_10.html">Utilisation de fenêtres et de graphismes<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_10.html#L10">10. Utilisation de fenêtres et de graphismes</a></li><li><ul class="nav-sommaire-ul Indentation10">
+      
+      
+      <li><a class="summaryIndent2" href="page_10.html#L10-A">10-A. Interfaces graphiques (GUI)</a></li>
+      <li><a class="summaryIndent2" href="page_10.html#L10-B">10-B. Premiers pas avec tkinter</a></li><li><ul class="nav-sommaire-ul Indentation10-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_10.html#L10-B-1">10-B-1. Examinons à présent plus en détail chacune des lignes de commandes exécutées</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_10.html#L10-C">10-C. Programmes pilotés par des événements</a></li><li><ul class="nav-sommaire-ul Indentation10-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_10.html#L10-C-1">10-C-1. Exemple graphique :tracé de lignes dans un canevas</a></li>
+        <li><a class="summaryIndent3" href="page_10.html#L10-C-2">10-C-2. Exemple graphique : deux dessins alternés</a></li>
+        <li><a class="summaryIndent3" href="page_10.html#L10-C-3">10-C-3. Exemple graphique : calculatrice minimaliste</a></li>
+        <li><a class="summaryIndent3" href="page_10.html#L10-C-4">10-C-4. Exemple graphique : détection et positionnement d'un clic souris</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_10.html#L10-D">10-D. Les classes de widgets tkinter</a></li>
+      <li><a class="summaryIndent2" href="page_10.html#L10-E">10-E. Utilisation de la méthode grid() pour contrôler la disposition des widgets</a></li>
+      <li><a class="summaryIndent2" href="page_10.html#L10-F">10-F. Composition d'instructions pour écrire un code plus compact</a></li>
+      <li><a class="summaryIndent2" href="page_10.html#L10-G">10-G. Modification des propriétés d'un objet - Animation</a></li>
+      <li><a class="summaryIndent2" href="page_10.html#L10-H">10-H. Animation automatique - Récursivité</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_11.html">Manipuler des fichiers<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_11.html#L11">11. Manipuler des fichiers</a></li><li><ul class="nav-sommaire-ul Indentation11">
+      
+      
+      <li><a class="summaryIndent2" href="page_11.html#L11-A">11-A. Utilité des fichiers</a></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-B">11-B. Travailler avec des fichiers</a></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-C">11-C. Noms de fichiers - le répertoire courant</a></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-D">11-D. Les deux formes d'importation</a></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-E">11-E. Écriture séquentielle dans un fichier</a></li><li><ul class="nav-sommaire-ul Indentation11-E">
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_11.html#L11-E-1">11-E-1. Notes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-F">11-F. Lecture séquentielle d'un fichier</a></li><li><ul class="nav-sommaire-ul Indentation11-F">
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_11.html#L11-F-1">11-F-1. Notes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-G">11-G. L'instruction break pour sortir d'une boucle</a></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-H">11-H. Fichiers texte</a></li><li><ul class="nav-sommaire-ul Indentation11-H">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_11.html#L11-H-1">11-H-1. Remarques</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-I">11-I. Enregistrement et restitution de variables diverses</a></li>
+      <li><a class="summaryIndent2" href="page_11.html#L11-J">11-J. Gestion des exceptions : les instructions try - except - else</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_12.html">Approfondir les structures de données<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_12.html#L12">12. Approfondir les structures de données</a></li><li><ul class="nav-sommaire-ul Indentation12">
+      
+      
+      <li><a class="summaryIndent2" href="page_12.html#L12-A">12-A. Le point sur les chaînes de caractères</a></li><li><ul class="nav-sommaire-ul Indentation12-A">
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-1">12-A-1. Indiçage, extraction, longueur</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-2">12-A-2. Extraction de fragments de chaînes</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-3">12-A-3. Concaténation, répétition</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-4">12-A-4. Parcours d'une séquence : l'instruction for - in ...</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-5">12-A-5. Appartenance d'un élément à une séquence : l'instruction in utilisée seule</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-6">12-A-6. Les chaînes sont des séquences non modifiables</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-7">12-A-7. Les chaînes sont comparables</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-8">12-A-8. La norme Unicode</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-9">12-A-9. Séquences d'octets : le type bytes</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-10">12-A-10. L'encodage Utf-8</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-11">12-A-11. Conversion (encodage/décodage) des chaînes</a></li><li><ul class="nav-sommaire-ul Indentation12-A-11">
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_12.html#L12-A-11-A">12-A-11-A. Conversion d'une chaîne bytes en chaîne string</a></li>
+          <li><a class="summaryIndent4" href="page_12.html#L12-A-11-B">12-A-11-B. Conversion d'une chaîne string en chaîne bytes</a></li>
+          <li><a class="summaryIndent4" href="page_12.html#L12-A-11-C">12-A-11-C. Conversions automatiques lors du traitement des fichiers</a></li>
+          <li><a class="summaryIndent4" href="page_12.html#L12-A-11-D">12-A-11-D. Cas des scripts Python</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-12">12-A-12. Accéder à d'autres caractères que ceux du clavier</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-13">12-A-13. Les chaînes sont des objets</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-14">12-A-14. Fonctions intégrées</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-15">12-A-15. Formatage des chaînes de caractères</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-A-16">12-A-16. Formatage des chaînes « à l'ancienne »</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_12.html#L12-B">12-B. Le point sur les listes</a></li><li><ul class="nav-sommaire-ul Indentation12-B">
+        
+        
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-1">12-B-1. Définition d'une liste - accès à ses éléments</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-2">12-B-2. Les listes sont modifiables</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-3">12-B-3. Les listes sont des objets</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-4">12-B-4. Techniques de slicing avancé pour modifier une liste</a></li><li><ul class="nav-sommaire-ul Indentation12-B-4">
+          
+          
+          <li><a class="summaryIndent4" href="page_12.html#L12-B-4-A">12-B-4-A. Insertion d'un ou plusieurs éléments n'importe où dans une liste</a></li>
+          <li><a class="summaryIndent4" href="page_12.html#L12-B-4-B">12-B-4-B. Suppression/remplacement d'éléments</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-5">12-B-5. Création d'une liste de nombres à l'aide de la fonction range()</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-6">12-B-6. Parcours d'une liste à l'aide de for, range() et len()</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-7">12-B-7. Une conséquence importante du typage dynamique</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-8">12-B-8. Opérations sur les listes</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-9">12-B-9. Test d'appartenance</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-10">12-B-10. Copie d'une liste</a></li><li><ul class="nav-sommaire-ul Indentation12-B-10">
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_12.html#L12-B-10-A">12-B-10-A. Petite remarque concernant la syntaxe</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-11">12-B-11. Nombres aléatoires - histogrammes</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-B-12">12-B-12. Tirage au hasard de nombres entiers</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_12.html#L12-C">12-C. Les tuples</a></li><li><ul class="nav-sommaire-ul Indentation12-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_12.html#L12-C-1">12-C-1. Opérations sur les tuples</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_12.html#L12-D">12-D. Les dictionnaires</a></li><li><ul class="nav-sommaire-ul Indentation12-D">
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-1">12-D-1. Création d'un dictionnaire</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-2">12-D-2. Opérations sur les dictionnaires</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-3">12-D-3. Test d'appartenance</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-4">12-D-4. Les dictionnaires sont des objets</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-5">12-D-5. Parcours d'un dictionnaire</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-6">12-D-6. Les clés ne sont pas nécessairement des chaînes de caractères</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-7">12-D-7. Les dictionnaires ne sont pas des séquences</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-8">12-D-8. Construction d'un histogramme à l'aide d'un dictionnaire</a></li>
+        <li><a class="summaryIndent3" href="page_12.html#L12-D-9">12-D-9. Contrôle du flux d'exécution à l'aide d'un dictionnaire</a></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_13.html">Classes, objets, attributs<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_13.html#L13">13. Classes, objets, attributs</a></li><li><ul class="nav-sommaire-ul Indentation13">
+      
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_13.html#L13-A">13-A. Utilité des classes</a></li>
+      <li><a class="summaryIndent2" href="page_13.html#L13-B">13-B. Définition d'une classe élémentaire</a></li>
+      <li><a class="summaryIndent2" href="page_13.html#L13-C">13-C. Attributs (ou variables) d'instance</a></li>
+      <li><a class="summaryIndent2" href="page_13.html#L13-D">13-D. Passage d'objets comme arguments dans l'appel d'une fonction</a></li>
+      <li><a class="summaryIndent2" href="page_13.html#L13-E">13-E. Similitude et unicité</a></li>
+      <li><a class="summaryIndent2" href="page_13.html#L13-F">13-F. Objets composés d'objets</a></li>
+      <li><a class="summaryIndent2" href="page_13.html#L13-G">13-G. Objets comme valeurs de retour d'une fonction</a></li>
+      <li><a class="summaryIndent2" href="page_13.html#L13-H">13-H. Modification des objets</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_14.html">Classes, méthodes, héritage<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_14.html#L14">14. Classes, méthodes, héritage</a></li><li><ul class="nav-sommaire-ul Indentation14">
+      
+      
+      
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_14.html#L14-A">14-A. Définition d'une méthode</a></li><li><ul class="nav-sommaire-ul Indentation14-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_14.html#L14-A-1">14-A-1. Définition concrète d'une méthode dans un script</a></li>
+        <li><a class="summaryIndent3" href="page_14.html#L14-A-2">14-A-2. Essai de la méthode, dans une instance quelconque</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_14.html#L14-B">14-B. La méthode constructeur</a></li><li><ul class="nav-sommaire-ul Indentation14-B">
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_14.html#L14-B-1">14-B-1. Exemple</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_14.html#L14-C">14-C. Espaces de noms des classes et instances</a></li>
+      <li><a class="summaryIndent2" href="page_14.html#L14-D">14-D. Héritage</a></li>
+      <li><a class="summaryIndent2" href="page_14.html#L14-E">14-E. Héritage et polymorphisme</a></li><li><ul class="nav-sommaire-ul Indentation14-E">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_14.html#L14-E-1">14-E-1. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_14.html#L14-F">14-F. Modules contenant des bibliothèques de classes</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_15.html">Classes et interfaces graphiques<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_15.html#L15">15. Classes et interfaces graphiques</a></li><li><ul class="nav-sommaire-ul Indentation15">
+      
+      
+      <li><a class="summaryIndent2" href="page_15.html#L15-A">15-A. Code des couleurs : un petit projet bien encapsulé</a></li><li><ul class="nav-sommaire-ul Indentation15-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_15.html#L15-A-1">15-A-1. Cahier des charges de notre programme</a></li>
+        <li><a class="summaryIndent3" href="page_15.html#L15-A-2">15-A-2. Mise en œuvre concrète</a></li>
+        <li><a class="summaryIndent3" href="page_15.html#L15-A-3">15-A-3. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_15.html#L15-B">15-B. Petit train : héritage, échange d'informations entre classes</a></li><li><ul class="nav-sommaire-ul Indentation15-B">
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_15.html#L15-B-1">15-B-1. Cahier des charges</a></li>
+        <li><a class="summaryIndent3" href="page_15.html#L15-B-2">15-B-2. Implémentation</a></li>
+        <li><a class="summaryIndent3" href="page_15.html#L15-B-3">15-B-3. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_15.html#L15-C">15-C. OscilloGraphe : un widget personnalisé</a></li><li><ul class="nav-sommaire-ul Indentation15-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_15.html#L15-C-1">15-C-1. Expérimentation</a></li>
+        <li><a class="summaryIndent3" href="page_15.html#L15-C-2">15-C-2. Cahier des charges</a></li>
+        <li><a class="summaryIndent3" href="page_15.html#L15-C-3">15-C-3. Implémentation</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_15.html#L15-D">15-D. Curseurs : un widget composite</a></li><li><ul class="nav-sommaire-ul Indentation15-D">
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_15.html#L15-D-1">15-D-1. Présentation du widget Scale</a></li>
+        <li><a class="summaryIndent3" href="page_15.html#L15-D-2">15-D-2. Construction d'un panneau de contrôle à trois curseurs</a></li><li><ul class="nav-sommaire-ul Indentation15-D-2">
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_15.html#L15-D-2-A">15-D-2-A. Commentaires</a></li>
+          <li><a class="summaryIndent4" href="page_15.html#L15-D-2-B">15-D-2-B. Propagation des événements</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_15.html#L15-E">15-E. Intégration de widgets composites dans une application synthèse</a></li><li><ul class="nav-sommaire-ul Indentation15-E">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_15.html#L15-E-1">15-E-1. Commentaires</a></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_16.html">Et pour quelques widgets de plus ...<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_16.html#L16">16. Et pour quelques widgets de plus ...</a></li><li><ul class="nav-sommaire-ul Indentation16">
+      
+      
+      <li><a class="summaryIndent2" href="page_16.html#L16-A">16-A. Les boutons radio</a></li><li><ul class="nav-sommaire-ul Indentation16-A">
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_16.html#L16-A-1">16-A-1. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_16.html#L16-B">16-B. Utilisation de cadres pour la composition d'une fenêtre</a></li><li><ul class="nav-sommaire-ul Indentation16-B">
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_16.html#L16-B-1">16-B-1. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_16.html#L16-C">16-C. Comment déplacer des dessins à l'aide de la souris</a></li><li><ul class="nav-sommaire-ul Indentation16-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_16.html#L16-C-1">16-C-1. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_16.html#L16-D">16-D. Widgets complémentaires, widgets composites</a></li><li><ul class="nav-sommaire-ul Indentation16-D">
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_16.html#L16-D-1">16-D-1. Combo box simplifié</a></li><li><ul class="nav-sommaire-ul Indentation16-D-1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_16.html#L16-D-1-A">16-D-1-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-D-2">16-D-2. Le widget Text assorti d'un ascenseur</a></li><li><ul class="nav-sommaire-ul Indentation16-D-2">
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_16.html#L16-D-2-A">16-D-2-A. Gestion du texte affiché</a></li>
+          <li><a class="summaryIndent4" href="page_16.html#L16-D-2-B">16-D-2-B. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-D-3">16-D-3. Le widget Canvas assorti d'un ascenseur</a></li><li><ul class="nav-sommaire-ul Indentation16-D-3">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_16.html#L16-D-3-A">16-D-3-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_16.html#L16-E">16-E. Application à fenêtres multiples - paramétrage implicite</a></li><li><ul class="nav-sommaire-ul Indentation16-E">
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_16.html#L16-E-1">16-E-1. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_16.html#L16-F">16-F. Barres d'outils - expressions lambda</a></li><li><ul class="nav-sommaire-ul Indentation16-F">
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_16.html#L16-F-1">16-F-1. Métaprogrammation - expressions lambda</a></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-F-2">16-F-2. Passage d'une fonction (ou d'une méthode) comme argument</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_16.html#L16-G">16-G. Fenêtres avec menus</a></li><li><ul class="nav-sommaire-ul Indentation16-G">
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-1">16-G-1. Cahier des charges de l'exercice</a></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-2">16-G-2. Première ébauche du programme</a></li><li><ul class="nav-sommaire-ul Indentation16-G-2">
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_16.html#L16-G-2-A">16-G-2-A. Analyse du script</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-3">16-G-3. Ajout de la rubrique Musiciens</a></li><li><ul class="nav-sommaire-ul Indentation16-G-3">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_16.html#L16-G-3-A">16-G-3-A. Analyse du script</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-4">16-G-4. Ajout de la rubrique Peintres</a></li><li><ul class="nav-sommaire-ul Indentation16-G-4">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_16.html#L16-G-4-A">16-G-4-A. Analyse du script</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-5">16-G-5. Ajout de la rubrique Options</a></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-6">16-G-6. Menu avec cases à cocher</a></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-7">16-G-7. Menu avec choix exclusifs</a></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-8">16-G-8. Contrôle du flux d'exécution à l'aide d'une liste</a></li>
+        <li><a class="summaryIndent3" href="page_16.html#L16-G-9">16-G-9. Pré-sélection d'une rubrique</a></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_17.html">Analyse de programmes concrets<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_17.html#L17">17. Analyse de programmes concrets</a></li><li><ul class="nav-sommaire-ul Indentation17">
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_17.html#L17-A">17-A. Jeu des bombardes</a></li><li><ul class="nav-sommaire-ul Indentation17-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_17.html#L17-A-1">17-A-1. Prototypage d'une classe Canon</a></li><li><ul class="nav-sommaire-ul Indentation17-A-1">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_17.html#L17-A-1-A">17-A-1-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_17.html#L17-A-2">17-A-2. Ajout de méthodes au prototype</a></li><li><ul class="nav-sommaire-ul Indentation17-A-2">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_17.html#L17-A-2-A">17-A-2-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_17.html#L17-A-3">17-A-3. Développement de l'application</a></li><li><ul class="nav-sommaire-ul Indentation17-A-3">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_17.html#L17-A-3-A">17-A-3-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_17.html#L17-A-4">17-A-4. Développements complémentaires</a></li><li><ul class="nav-sommaire-ul Indentation17-A-4">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_17.html#L17-A-4-A">17-A-4-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_17.html#L17-B">17-B. Jeu de Ping</a></li><li><ul class="nav-sommaire-ul Indentation17-B">
+        
+        
+        <li><a class="summaryIndent3" href="page_17.html#L17-B-1">17-B-1. Principe</a></li>
+        <li><a class="summaryIndent3" href="page_17.html#L17-B-2">17-B-2. Programmation</a></li><li><ul class="nav-sommaire-ul Indentation17-B-2">
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_17.html#L17-B-2-A">17-B-2-A. Cahier des charges du logiciel à développer</a></li>
+        </ul></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_18.html">Gestion d'une base de données<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_18.html#L18">18. Gestion d'une base de données</a></li><li><ul class="nav-sommaire-ul Indentation18">
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_18.html#L18-A">18-A. Les bases de données</a></li><li><ul class="nav-sommaire-ul Indentation18-A">
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_18.html#L18-A-1">18-A-1. SGBDR - Le modèle client/serveur</a></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-A-2">18-A-2. Le langage SQL</a></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-A-3">18-A-3. SQLite</a></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-A-4">18-A-4. Création de la base de données. Objets « connexion » et « curseur ».</a></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-A-5">18-A-5. Connexion à une base de données existante</a></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-A-6">18-A-6. Recherches sélectives dans une base de données</a></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-A-7">18-A-7. La requête select</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_18.html#L18-B">18-B. Ébauche d'un logiciel client pour PostgreSQL</a></li><li><ul class="nav-sommaire-ul Indentation18-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_18.html#L18-B-1">18-B-1. Décrire la base de données dans un dictionnaire d'application</a></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-B-2">18-B-2. Définir une classe d'objets-interfaces</a></li><li><ul class="nav-sommaire-ul Indentation18-B-2">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_18.html#L18-B-2-A">18-B-2-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-B-3">18-B-3. Construire un générateur de formulaires</a></li><li><ul class="nav-sommaire-ul Indentation18-B-3">
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_18.html#L18-B-3-A">18-B-3-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_18.html#L18-B-4">18-B-4. Le corps de l'application</a></li><li><ul class="nav-sommaire-ul Indentation18-B-4">
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_18.html#L18-B-4-A">18-B-4-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_19.html">Applications web<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_19.html#L19">19. Applications web</a></li><li><ul class="nav-sommaire-ul Indentation19">
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_19.html#L19-A">19-A. Pages web interactives</a></li><li><ul class="nav-sommaire-ul Indentation19-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_19.html#L19-A-1">19-A-1. Un serveur web en pur Python !</a></li>
+        <li><a class="summaryIndent3" href="page_19.html#L19-A-2">19-A-2. Première ébauche : mise en ligne d'une page web minimaliste</a></li>
+        <li><a class="summaryIndent3" href="page_19.html#L19-A-3">19-A-3. Ajout d'une deuxième page</a></li>
+        <li><a class="summaryIndent3" href="page_19.html#L19-A-4">19-A-4. Présentation et traitement d'un formulaire</a></li>
+        <li><a class="summaryIndent3" href="page_19.html#L19-A-5">19-A-5. Analyse de la communication et des erreurs</a></li>
+        <li><a class="summaryIndent3" href="page_19.html#L19-A-6">19-A-6. Structuration d'un site à pages multiples</a></li>
+        <li><a class="summaryIndent3" href="page_19.html#L19-A-7">19-A-7. Prise en charge des sessions</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_19.html#L19-B">19-B. Réalisation concrète d'un site web interactif</a></li><li><ul class="nav-sommaire-ul Indentation19-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_19.html#L19-B-1">19-B-1. Le script</a></li>
+        <li><a class="summaryIndent3" href="page_19.html#L19-B-2">19-B-2. Les « patrons » HTML</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_19.html#L19-C">19-C. Autres développements</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_20.html">Communications à travers un réseau &amp; Multithreading.<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_20.html#L20">20. Communications à travers un réseau &amp; Multithreading.</a></li><li><ul class="nav-sommaire-ul Indentation20">
+      
+      
+      
+      
+      <li><a class="summaryIndent2" href="page_20.html#L20-A">20-A. Les sockets</a></li><li><ul class="nav-sommaire-ul Indentation20-A">
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_20.html#L20-A-1">20-A-1. Construction d'un serveur rudimentaire</a></li><li><ul class="nav-sommaire-ul Indentation20-A-1">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-A-1-A">20-A-1-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-A-2">20-A-2. Construction d'un client rudimentaire</a></li><li><ul class="nav-sommaire-ul Indentation20-A-2">
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-A-2-A">20-A-2-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_20.html#L20-B">20-B. Gestion de plusieurs tâches en parallèle à l'aide de threads</a></li><li><ul class="nav-sommaire-ul Indentation20-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_20.html#L20-B-1">20-B-1. Client réseau gérant l'émission et la réception simultanées</a></li><li><ul class="nav-sommaire-ul Indentation20-B-1">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-B-1-A">20-B-1-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-B-2">20-B-2. Serveur réseau gérant les connexions de plusieurs clients en parallèle</a></li><li><ul class="nav-sommaire-ul Indentation20-B-2">
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-B-2-A">20-B-2-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_20.html#L20-C">20-C. Jeu des bombardes, version réseau</a></li><li><ul class="nav-sommaire-ul Indentation20-C">
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_20.html#L20-C-1">20-C-1. Programme serveur : vue d' ensemble</a></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-C-2">20-C-2. Protocole de communication</a></li><li><ul class="nav-sommaire-ul Indentation20-C-2">
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-C-2-A">20-C-2-A. Remarques complémentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-C-3">20-C-3. Programme serveur : première partie</a></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-C-4">20-C-4. Synchronisation de threads concurrents à l'aide de verrous (thread locks)</a></li><li><ul class="nav-sommaire-ul Indentation20-C-4">
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-C-4-A">20-C-4-A. Utilisation</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-C-5">20-C-5. Programme serveur : suite et fin</a></li><li><ul class="nav-sommaire-ul Indentation20-C-5">
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-C-5-A">20-C-5-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-C-6">20-C-6. Programme client</a></li><li><ul class="nav-sommaire-ul Indentation20-C-6">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-C-6-A">20-C-6-A. Commentaires</a></li>
+          <li><a class="summaryIndent4" href="page_20.html#L20-C-6-B">20-C-6-B. Conclusions et perspectives :</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="page_20.html#L20-D">20-D. Utilisation de threads pour optimiser les animations.</a></li><li><ul class="nav-sommaire-ul Indentation20-D">
+        
+        
+        
+        <li><a class="summaryIndent3" href="page_20.html#L20-D-1">20-D-1. Temporisation des animations à l'aide de after()</a></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-D-2">20-D-2. Temporisation des animations à l'aide de time.sleep()</a></li>
+        <li><a class="summaryIndent3" href="page_20.html#L20-D-3">20-D-3. Exemple concret</a></li><li><ul class="nav-sommaire-ul Indentation20-D-3">
+          
+          
+          
+          
+          <li><a class="summaryIndent4" href="page_20.html#L20-D-3-A">20-D-3-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_21.html">Installation de Python<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_21.html#L21">21. Installation de Python</a></li><li><ul class="nav-sommaire-ul Indentation21">
+      
+      
+      <li><a class="summaryIndent2" href="page_21.html#L21-A">21-A. Sous Windows</a></li>
+      <li><a class="summaryIndent2" href="page_21.html#L21-B">21-B. Sous Linux</a></li>
+      <li><a class="summaryIndent2" href="page_21.html#L21-C">21-C. Sous Mac OS</a></li>
+      <li><a class="summaryIndent2" href="page_21.html#L21-D">21-D. Installation de Cherrypy</a></li>
+      <li><a class="summaryIndent2" href="page_21.html#L21-E">21-E. Installation de pg8000</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="page_22.html">Solutions des exercices<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_22.html#L22">22. Solutions des exercices</a></li></ul></li>
+    <li><a class="summaryIndent0" href="page_23.html">Licence associée à cet ouvrage<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="page_23.html#L23">23. Licence associée à cet ouvrage</a></li><li><ul class="nav-sommaire-ul Indentation23">
+      
+      <li><a class="summaryIndent2" href="page_23.html#L23-A">23-A. Vous êtes libres :</a></li>
+      <li><a class="summaryIndent2" href="page_23.html#L23-B">23-B. Selon les conditions suivantes :</a></li>
+    </ul></li></ul></li>
+  </ul></nav>
+
+<div class="contenu">
+<div itemprop="about" class="SectionSynopsis">
+    
+    <p>
+			Un livre incontournable de 435 pages pour acquérir l'exigeante discipline qu'est l'art de la programmation !</p>
+    <p>Original et stimulant, cet ouvrage aborde au travers d'exemples attrayants et concrets tous les fondamentaux de la programmation. L'auteur a choisi Python, langage moderne et élégant, aussi performant pour le développement d'applications web complexes que pour la réalisation de scripts système ou l'analyse de fichiers XML.
+Un support de cours réputé et adopté par de nombreux enseignants, avec 60 pages d'exercices corrigés.
+</p>
+    <p>
+
+Reconnu et utilisé par les enseignants de nombreuses écoles et IUT, complété d'exercices accompagnés de leurs corrigés, cet ouvrage original et érudit est une référence sur tous les fondamentaux de la programmation : choix d'une structure de données, paramétrage, modularité, orientation objet et héritage, conception d'interface, multithreading et gestion d'événements, protocoles de communication et gestion réseau, bases de données... jusqu'à la désormais indispensable norme Unicode (le format UTF-8). On verra notamment la réalisation avec Python 3 d'une application web interactive et autonome, intégrant une base de données SQLite. Cette nouvelle édition traite de la possibilité de produire des documents imprimables (PDF) de grande qualité en exploitant les ressources combinées de Python 2 et Python 3.</p>
+    <p>A qui s'adresse ce livre ?</p>
+    <p>
+
+Aux étudiants en BTS et IUT Informatique et à leurs enseignants ;
+À tous les autodidactes férus de programmation qui veulent découvrir le langage Python.
+</p>
+    <p> 
+			Disponible également en version papier:
+			<a class="lienArticle simple" href="http://www.amazon.fr/exec/obidos/ASIN/2212127081/wwwdeveloppec-21">Commandez sur Amazon !</a></p>
+    <p>
+		Droits de copie de cette version : Creative Commons (Paternité - Pas d'utilisation commerciale - Partage des conditions initiales à l'identique.)
+		</p>
+    <p>	<a href="https://www.developpez.net/forums/showthread.php?t=1173913" class="lienforum">Commentez</a>	</p>
+  <a class="lienArticle Fr" title="Lire la version en ligne de l'article." href="page_1.html">Lire l'article.</a><p class="TextNbrVues">Article lu <span id="NbrVues">&nbsp;</span> fois.</p></div><div class="InfoAuthArtBook">
+	<section class="SectionAuteurs">
+	<h2 class="TitreHeader">L'auteur</h2>
+<p class="auteur" itemprop="name" itemscope itemtype="http://schema.org/Person"><span itemprop="author" class="auteur-non-dvp">Gérard Swinnen</span></p>
+</section>
+<section class="SectionInformationArticle">
+<h2 class="TitreHeader">L'article</h2>
+
+<p class="InfoArticle">Publi&eacute;&nbsp;le&nbsp;<span itemprop="datePublished">17 mars 2013 </span>- Mis&nbsp;&agrave;&nbsp;jour&nbsp;le&nbsp;<span itemprop="dateModified">26 juillet 2015 </span></p><span class="lienversionenligne"><a class="lientelechargement" href="page_1.html" title="Lire la version en ligne de l'article.">Version en ligne</a></span><p>
+<span class="lientelechargementpdf"><a class="lientelechargement" href="https://python.developpez.com/cours/apprendre-python3/.pdf" title="Télécharger la version PDF de cet article.">Version PDF</a></span>
+<span class="lientelechargementzip"><a class="lientelechargement" href="https://python.developpez.com/cours/apprendre-python3/.zip" title="Télécharger la version HTML de cet article.">Version hors-ligne</a></span></p>
+<p><span class="lientelechargementebook"><a class="lientelechargement" href="https://python.developpez.com/cours/apprendre-python3/.epub" title="Télécharger la version ePub de l'article compatible avec la plupart des liseuses non Kindle (Amazon).">ePub</a></span>, <span class="lientelechargementebook"><a class="lientelechargement" href="https://python.developpez.com/cours/apprendre-python3/.azw" title="Télécharger la version Azw spécifique aux liseuses Kindle (Amazon).">Azw</a></span> et <span class="lientelechargementebook"><a class="lientelechargement" href="https://python.developpez.com/cours/apprendre-python3/.mobi" title="Télécharger la version Mobi de l'article compatible avec les liseuses Amazon.">Mobi</a></span></p><p class="ParaLienLireArticle"><a class="LienLireArticle" href="page_1.html">Lire l'article</a></p>
+</section>
+<section class="SectionBookmarks">
+<h2 class="TitreHeader">Liens&nbsp;sociaux</h2>
+<div class="InfoBookmarks"><?php echo DoBookMarks("Apprendre à programmer avec Python 3",'https://python.developpez.com/cours/apprendre-python3/'); ?></div>
+</section></div><section class="articleBody"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_1.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></section><div class="articleBody"><p>Vous avez aimé ce tutoriel ? Alors partagez-le en cliquant sur les boutons suivants : <?php echo DoBookMarks("Apprendre à programmer avec Python 3",'https://python.developpez.com/cours/apprendre-python3/'); ?></p></div></div><section class="ArticleHorsLigne"><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		</section>

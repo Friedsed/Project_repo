@@ -1,0 +1,370 @@
+% =============================================================================
+% DÉBUT PRÉAMBULE - TEMPLATE THÈSE/RAPPORT PROFESSIONNEL
+% =============================================================================
+
+\documentclass[12pt, a4paper, final, twoside]{report}
+% 12pt = taille police principale
+% a4paper = format papier A4 standard
+% final = supprime messages debug/warnings
+% twoside = mise en page livre (marges alternées verso/recto)
+
+\newcommand{\isPrintVersion}{false}						
+% Variable de contrôle : false = liens COLORÉS (version PDF écran)
+% true = tous liens NOIRS (version impression papier)
+
+\usepackage[utf8]{inputenc}
+% Encodage UTF-8 : support accents français/allemands/espagnols/etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DONNÉES THÈSE/RAPPORT %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\thesisTitle}{Etude de projectile balistique}
+% Titre principal du document (utilisé partout : page titre, PDF metadata...)
+\newcommand{\authorName}{Friedly WOLI}
+% Nom auteur principal
+\newcommand{\thesisDate}{$19^{th}$ Januar 2038}
+% Date thèse : $19^{th}$ = exposant "th" pour "19th"
+
+\newcommand{\city}{Toulouse}
+% Ville du projet/université
+%%%%% Éléments page de garde détaillée
+\newcommand{\reportType}{Master Thesis}
+% Type document : "Project Report", "Master Thesis", "PhD Dissertation"...
+\newcommand{\courseOfStudies}{ Mechanical Engineering }
+% Filière/formation : "Mechanical Engineering", "Informatique"...
+\newcommand{\university}{Universite de Toulouse }
+% Nom université complète
+\newcommand{\timeOfProject}{01/1970 -- 01/2038}
+% Période stage/projet : format MM/YYYY -- MM/YYYY
+\newcommand{\studentId}{1234567}
+% Numéro étudiant
+\newcommand{\course}{XYZ1234}
+% Code matière/cours
+\newcommand{\company}{MyCompany}
+% Entreprise stage (si applicable)
+\newcommand{\supervisorName}{William Tanner}
+% Tuteur principal
+\newcommand{\secondSupervisorName}{Jane Doe}
+% Deuxième correcteur (optionnel)
+%%%%% Labels interface (multilingue anglais/allemand)
+\newcommand{\byTitle}{by}
+\newcommand{\courseOfStudiesTitle}{Course of Studies}
+\newcommand{\timeOfProjectTitle}{Time of Project}
+\newcommand{\studentIdTitle}{Student Number}
+\newcommand{\courseTitle}{Course}
+\newcommand{\companyTitle}{Company}
+\newcommand{\supervisorTitle}{Supervisor}
+\newcommand{\secondSupervisorTitle}{Reviewer}
+% Permet traduction facile byTitle → "par", "von", etc.
+\newcommand{\universityLogo}{example-image-16x9.pdf}
+% Fichier logo université (remplacer par vrai logo)
+\newcommand{\companyLogo}{example-image-16x9.pdf}
+% Fichier logo entreprise (remplacer par vrai logo)
+
+
+
+%%%%% Titres des listes automatiques (anglais/allemand)
+\newcommand{\ListOfFiguresTitle}{List of Figures}
+\newcommand{\ListOfAbbreviationsTitle}{List of Abbreviations}
+\newcommand{\ListOfTablesTitle}{List of Tables}
+\newcommand{\ListOfListingsTitle}{List of Listings}
+% Personnalise titres : "Liste des figures", "Glossaire", etc.
+%%%%% Commandes globales titre/auteur (pour \maketitle)
+\title{\thesisTitle}
+\author{\authorName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PAQUETS FONDAMENTAUX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[left=3.5cm,right=2.5cm,top=3cm,bottom=2.5cm]{geometry}
+% Marges précises : 
+% 3.5cm GAUCHE = reliure + notes marge
+% 2.5cm DROIT = texte confortable
+% 3cm HAUT = en-têtes
+% 2.5cm BAS = pieds page
+
+\usepackage[francais,english]{babel}
+% Langues : francais (priorité) + anglais
+% Traduit automatiquement : "Chapter", "Figure", "Bibliography"...
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% Paquets maths AMS : équations complexes, symboles spéciaux (∇, ∑, ∫...)
+\usepackage{enumitem}
+% Listes personnalisées : espacement, puces, numérotation avancée
+\usepackage{float}
+% Positionnement figures : [H] = ICI et nulle part ailleurs
+\usepackage{fancyhdr}
+% En-têtes/pieds de page COMPLETEMENT personnalisables
+\usepackage[bottom]{footmisc}
+% Notes de bas de page ANCRE en bas (pas milieu)
+\usepackage[printonlyused]{acronym}
+% Abréviations intelligentes : première occurrence = "CFD (Computational Fluid Dynamics)"
+\usepackage{appendix}
+% Annexes : A, B, C... (pas continuation chapitres)
+\usepackage{pdfpages}
+% Insertion pages PDF externes (plans CAO, rapports joints...)
+\usepackage{ifthen}
+% Conditions logiques : \ifthenelse{condition}{vrai}{faux}
+\usepackage{csquotes}
+% Guillemets typographiques «français» "anglais" „allemand“
+\usepackage{emptypage}
+% Pages vides SANS numéro (après chapitres pairs)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COULEURS CMYK (IMPRESSION PRO) %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{darkBlue}{cmyk}{0.9592, 0.4592, 0, 0.6157} 
+% Bleu foncé liens (#043562) - Mode CMYK pour imprimerie
+\definecolor{lightBlue}{cmyk}{0.5, 0.25, 0, 0.2} 		
+% Bleu clair cadres (#6699cc)
+\definecolor{darkGrey}{cmyk}{0, 0, 0, 0.9333} 			
+% Gris foncé texte code (#111111)
+\definecolor{lightGrey}{cmyk}{0.0164, 0.0082, 0, 0.0431}
+% Gris très clair fond code (#F0F2F4)
+\definecolor{magenta}{cmyk}{0, 1, 0.4972, 0.3059}		
+% Magenta keywords code (#B10059)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% NOUVELLES COMMANDES (RACCOURCIS) %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Légendes avec source
+\usepackage{caption}									
+% Personnalisation légendes figures/tableaux
+
+\captionsetup{justification=centering}
+% TOUTES légendes CENTRÉES
+
+\newcommand{\captionsource}[2][]{
+	\ifthenelse{\equal{#1}{}}					% Si 1er argument VIDE
+	{\small\textit{Source: #2}} 				% → Source simple
+	{\small\textit{Source: #2, \href{#1}{#1}}} % → Source + LIEN cliquable
+}
+% Usage : \captionsource{https://...}{Wikipedia}
+%%%%% Boîtes théorèmes/définitions
+\usepackage{amsthm} 					
+\newtheorem{define}{Definition}
+% Crée boîtes numérotées : "Définition 1", "Définition 2"...
+%%%%% Code inline texte
+\newcommand{\code}[1]{{\ttfamily#1}}
+% `monCode()` → police monospace
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHIE NUMÉRIQUE %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=bibtex,style=numeric,citestyle=numeric]{biblatex}
+% Biblatex moderne : [1], [2], [3] numéroté
+% backend=bibtex (pas biber pour compatibilité)
+
+\bibliography{bibliography} 		
+% Fichier sources : bibliography.bib
+
+% COUPURE URLS BIBLIO (CRUCIAL pour longues URLs)
+\usepackage{url}							% URLs intelligentes
+\usepackage{breakurl}						% Coupures forcées
+\def\UrlBreaks{\do\/\do-}					% AUTORISE coupe après / et -
+\setcounter{biburlnumpenalty}{1000}			% Coupe FACILE après CHIFFRES
+\setcounter{biburlucpenalty}{1000}			% Coupe FACILE après MAJUSCULES
+\setcounter{biburllcpenalty}{1000}			% Coupe FACILE après minuscules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HYPERLIENS PDF PRO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftitle={\thesisTitle}, pdfauthor={\authorName},pdfsubject={\thesisTitle}, pdfcreator={pdflatex}, pdfpagemode=UseOutlines, pdfdisplaydoctitle=true, pdflang={en}, breaklinks]{hyperref}
+% Métadonnées PDF complètes + table matières cliquable + liens cassables
+
+% LIENS selon version impression/écran
+\ifthenelse{\equal{\isPrintVersion}{true}}
+{ % ===== VERSION IMPRESSION (noir pur) =====
+	\hypersetup{
+		hidelinks=true,							% Liens invisibles (cadres noirs)
+		colorlinks=false, 
+		linktocpage=true, 						% N° pages TOC cliquables
+		bookmarksnumbered=true 					% Chapitre 1.1 dans PDF TOC
+	}
+}{ % ===== VERSION ÉCRAN (couleurs) =====
+	\hypersetup{
+		colorlinks=true, 						% Liens colorés
+		linkcolor=darkBlue,						% Liens internes = bleu foncé
+		citecolor=darkBlue,						% Citations [1] = bleu
+		filecolor=darkBlue,						% Fichiers joints
+		menucolor=darkBlue,
+		urlcolor=darkBlue,						% URLs externes
+		linktocpage=true,
+		bookmarksnumbered=true
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TYPOGRAPHIE PROFESSIONNELLE %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parskip}{8pt}							% ESPACE 8pt APRÈS paragraphe
+\setlength{\parindent}{0pt}							% SANS alinéa (avec parskip)
+\renewcommand{\baselinestretch}{1.2}\normalsize		% Interlignes 120% + taille normale
+
+% Évite lignes isolées (veuves/orphelines)
+\clubpenalty = 10000								% Jamais ligne orpheline début page
+\widowpenalty = 10000 							% Jamais ligne veuve fin page
+\displaywidowpenalty=10000						% Équations aussi
+
+% TITRES CHAPITRES personnalisés
+\usepackage{titlesec}								% Contrôle total titres
+\newcommand{\hsp}{\hspace{20pt}}					% Espace 20pt raccourci
+
+\titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter \hsp {|}\hsp}{0pt}{\Huge\bfseries}
+% Chapitre : "1 | TITRE" format GÉANT GRAS
+
+\titleformat{\section}[block]{\Large\bfseries}{\thesection \ }{0pt}{\Large \bfseries}
+% Section : "1.1 TITRE" GRAND GRAS
+
+\titleformat{\subsection}[block]{\large\bfseries}{\thesubsection \ }{0pt}{\large \bfseries}
+% Sous-section : "1.1.1 TITRE" grand gras
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CODES SOURCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}								% Codes sources colorés
+
+\lstset{
+	language=Java,								% Langage DÉFAUT (changeable)
+	numbers=left,								% Numéros lignes GAUCHE
+	stepnumber=1,								% Numéro TOUTES les lignes
+	numbersep=6pt,								% Distance numéros ↔ code
+	numberstyle=\fontsize{9pt}{9pt}\ttfamily,	% Style numéros : petit monospace
+	breaklines=true,							% Lignes longues → retour auto
+	breakautoindent=true,						% Retour indenté
+	postbreak=\space,							% Espace au retour
+	tabsize=4,									% Tab = 4 espaces
+	showspaces=false,							% Cache espaces invisibles
+	showstringspaces=false,						% Cache espaces chaînes
+	extendedchars=true,							% Caractères latins étendus
+	captionpos=b,								% Légende EN BAS
+	backgroundcolor=\color{lightGrey}, 			% Fond GRIS clair
+	xleftmargin=0pt, xrightmargin=0pt,			% Pas marge latérale
+	frame=leftline,								% Cadre GAUCHE seulement
+	framerule=1.1pt,							% Épaisseur cadre 1.1pt
+	frameround=ffff,							% Coins droits (pas arrondis)
+	rulecolor=\color{lightBlue},				% Couleur cadre bleu clair
+	framesep=1.5pt,								% Espace cadre ↔ code
+	fillcolor=\color{lightGrey},				% Remplissage gris
+	basicstyle=\ttfamily\footnotesize\color{darkGrey},	% Texte : petit gris foncé
+	keywordstyle=\color{magenta}\bfseries,		% Mots-clés : magenta GRAS
+	commentstyle=\color{lightBlue},				% Commentaires : bleu clair
+	stringstyle=\color{darkBlue}				% Chaînes : bleu foncé
+}
+
+\lstloadlanguages{bash, C, C++, HTML, Java, PHP, Python, SQL}
+% Support 8 langages avec coloration auto
+
+% Personnalise titre liste codes
+\renewcommand{\lstlistlistingname}{\ListOfListingsTitle}
+
+
+
+% Répertoire des figures
+\graphicspath{{../Images/}}
+
+
+
+
+
+
+
+
+
+
+
+%	
+%
+%
+%
+% ============================================================================
+%%%%% CORPS PRINCIPAL - Contenu scientifique
+% ============================================================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Structure  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	% ============================================================================
+	% 1. CONFIGURATION INITIALE - Prépare les premières pages
+	% ============================================================================
+
+	\setlength{\headheight}{24.7pt}					% Hauteur minimale en-tête (requis Latexmk)
+
+	\input{fried-addons}									% Page titre, résumé, déclarations  					%%%%%%%%%%%%		FAIRE APPEL
+	
+	
+	% 2 eme page
+	%%%%% TABLE DES MATIÈRES - Préparation propre
+	\setlength{\parskip}{0pt}						% Zéro espace après paragraphe
+	\setcounter{tocdepth}{2}						% Niveaux : Chapitre + Section seulement
+	\tableofcontents								% Génère table des matières
+	\thispagestyle{empty}							% Page TOC sans numéro
+	% 2 eme page
+	
+	
+	% 3 eme page 
+	\addtocounter{page}{6}							% +6 pages (compense frontmatter)
+	\input{acronyms}								% Fichier abréviations									%%%%%%%%%%%%		FAIRE APPEL
+	\addcontentsline{toc}{chapter}{\ListOfAbbreviationsTitle}	% Ajoute à TOC
+	% 3 eme page
+	
+
+	%
+	%
+	%
+	% ============================================================================
+	%%%%% CORPS PRINCIPAL - Contenu scientifique
+	% ============================================================================
+	
+	\pagenumbering{arabic}							% Pages 1, 2, 3... (mainmatter)   +++  arabic : Plus personne ne veut "i, ii, iii..." dans le contenu scientifique
+	\setlength{\parskip}{8pt}						% 8pt après chaque paragraphe   +++  parskip 8pt : Paragraphes aérés (confort lecture)
+	\renewcommand{\baselinestretch}{1.4}\normalsize	% Interlignes 1.4x + taille normale    
+	% LE,RO : Gauche(paire) + Droite(impaire) = mise en page livre pro
+	\fancyhead[LE,RO]{\thechapter  \ -- \ \nouppercase\leftmark}	% En-tête : "1 -- Chapitre"
+	\fancyfoot[LE,RO]{\thepage}						% Pied : numéro page
+	
+	\input{content}									% TOUT le contenu scientifique							%%%%%%%%%%%%		FAIRE APPEL
+	\clearpage																					% Saut page avant biblio	
+	%
+	%
+	%
+	%
+	% ============================================================================
+	%%%%% BIBLIOGRAPHIE
+	% ============================================================================
+	
+	\fancyhead[LE,RO]{\nouppercase\leftmark}		% En-tête simplifié
+	\printbibliography[heading=bibintoc]			% Biblio + ajout automatique TOC
+																			% Saut page IMPAIR annexes
+	%
+	%
+	%
+	%
+	% ============================================================================
+	%%%%% ANNEXES
+	% ============================================================================
+	
+	\fancyhead[LE,RO]{A  \ -- \ \nouppercase\leftmark}	% En-tête : "A -- Annexe"
+	\input{appendix}								% Contenu facultatifs si je veux seulement									%%%%%%%%%%%%		FAIRE APPEL
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
+
+
+
+
+
+
+% All the file important to run this code are: 
+%		fried-addons.tex for the first page shape design 
+%		acronyms.tex for the all about abbreviation that i use in the documents 
+%		content.tex for the main part or develpment
+%		appendix.tex for the more explanation about the main development but separatly

@@ -1,0 +1,67 @@
+/*h1
+{
+    color:blue;
+
+}
+
+*/
+ul{
+    font-style: italic;
+    font-size: 20px;
+    border: solid 5px rebeccapurple;
+    border-style: solid;
+    border-color: rgb(5, 255, 179);
+    border-radius: 15px;
+    border-width: 5px;
+    border-right-color: darkseagreen;
+    
+}
+li{
+    
+    color: black;
+
+}
+h2
+{
+    color:blueviolet;
+    text-align:center;/* permet de centrer l'ecrit*/
+    font-size: 30px;
+    border: solid 2px rgba(218, 232, 228, 0.875);
+}
+
+body
+{
+    font-family: 'Courier New', Courier, monospace;/**/
+    background-image: url(tof2.png) ;/**/
+}
+h3{
+    
+    color:blueviolet;
+    text-align:center;/* permet de centrer l'ecrit*/
+    
+    border: solid 2px rgba(218, 232, 228, 0.875);
+
+}
+
+h1
+{
+    /*toute transformation qui se ferai dans les acolades de h1 modifiera les textes contenu dans le h1*/
+    text-transform: uppercase;/*transforme le texte  de h1 en majuscul*/
+    letter-spacing: 2px;/*l'espacement entre les lettres*/
+    font-size: 2.5rem;/* la grosseur de l'ecrit*/
+    color: blue(65, 42, 165);/* la couleur des lettres*/
+    font-family: Arial, Helvetica, sans-serif;/**/
+    font-style: italic;/* police d'ecriture*/
+    /*text-decoration: underline;/* sous ligne le texte*/
+    text-align:center;/* permet de centrer l'ecrit*/
+    background-color: aquamarine;/**/
+}
+
+#clic{
+    background: #4e8457;
+    color:white;
+}
+
+h4{
+    text-align: center;
+}

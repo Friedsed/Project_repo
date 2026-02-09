@@ -1,0 +1,1161 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L19">19. Applications web</a><ul class="nav-sommaire-ul Indentation19">
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L19-A">19-A. Pages web interactives</a><ul class="nav-sommaire-ul Indentation19-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L19-A-1">19-A-1. Un serveur web en pur Python !</a></li>
+        <li><a class="summaryIndent2" href="#L19-A-2">19-A-2. Première ébauche : mise en ligne d'une page web minimaliste</a></li>
+        <li><a class="summaryIndent2" href="#L19-A-3">19-A-3. Ajout d'une deuxième page</a></li>
+        <li><a class="summaryIndent2" href="#L19-A-4">19-A-4. Présentation et traitement d'un formulaire</a></li>
+        <li><a class="summaryIndent2" href="#L19-A-5">19-A-5. Analyse de la communication et des erreurs</a></li>
+        <li><a class="summaryIndent2" href="#L19-A-6">19-A-6. Structuration d'un site à pages multiples</a></li>
+        <li><a class="summaryIndent2" href="#L19-A-7">19-A-7. Prise en charge des sessions</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L19-B">19-B. Réalisation concrète d'un site web interactif</a><ul class="nav-sommaire-ul Indentation19-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L19-B-1">19-B-1. Le script</a></li>
+        <li><a class="summaryIndent2" href="#L19-B-2">19-B-2. Les « patrons » HTML</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L19-C">19-C. Autres développements</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_18.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_20.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L19">19. Applications web<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span class="italique">Vous avez certainement déjà appris par ailleurs un grand nombre de choses concernant la rédaction de pages web. Vous savez que ces pages sont des
+	  documents au format HTML, que l'on peut consulter via un réseau (intranet ou internet) à l'aide d'un logiciel appelé navigateur (Firefox, Internet
+	  explorer, Safari, Opera, Galeon, Konqueror, ...).</span>
+      </p>
+      <p>
+        <span class="italique">Les pages HTML sont installées dans les répertoires publics d'un autre ordinateur où fonctionne en permanence un logiciel appelé serveur web
+	  (Apache, IIS, Xitami, Lighttpd, ...). Lorsqu'une connexion a été établie entre cet ordinateur et le vôtre, votre logiciel navigateur peut dialoguer
+	  avec le logiciel serveur en lui envoyant des <b>requêtes</b>(par l'intermédiaire de toute une série de dispositifs matériels et logiciels dont nous
+	  ne traiterons pas ici : lignes téléphoniques, routeurs, caches, protocoles de communication...). Les pages web lui sont expédiées en
+	  <b>réponse</b>à ces requêtes. </span>
+      </p>
+      
+		<h3 class="TitreSection1" id="L19-A">19-A. Pages web interactives<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Le protocole HTTP qui gère la transmission des pages web autorise l'échange de données dans les deux sens. Mais dans le cas de la simple
+	  consultation de sites, le transfert d'informations a surtout lieu dans l'un des deux, à savoir du serveur vers le navigateur : des textes, des images, des
+	  fichiers divers lui sont expédiés en grand nombre (ce sont les pages consultées) ; en revanche, le navigateur n'envoie guère au serveur que de
+	  toutes petites quantités d'information : essentiellement les adresses URL des pages que l'internaute désire consulter.</p>
+        <p>Vous savez cependant qu'il existe des sites web où vous êtes invité à fournir vous-même des quantités d'information plus
+	  importantes : vos références personnelles pour l'inscription à un club ou la réservation d'une chambre d'hôtel, votre numéro de carte
+	  de crédit pour la commande d'un article sur un site de commerce électronique, votre avis ou vos suggestions, etc.</p>
+        <p>Dans ces cas là, vous vous doutez bien que l'information transmise doit être prise en charge, du côté du serveur, par un <span class="italique">programme</span>
+	  spécifique. Il faudra donc associer étroitement un tel programme au serveur web. Quant aux pages web destinées à accueillir cette information (on les
+	  appelle des formulaires), il faudra les doter de divers widgets d'encodage (champs d'entrée, cases à cocher, boîtes de listes, etc.), afin que le
+	  navigateur puisse soumettre au serveur une <span class="italique">requête</span> accompagnée d'arguments. Le serveur pourra alors confier ces arguments au programme de traitement
+	  spécifique, et en fonction du résultat de ce traitement, renvoyer une <span class="italique">réponse</span> adéquate à l'internaute, sous la forme d'une nouvelle page
+	  web.</p>
+        <p>Il existe différentes manières de réaliser de tels programmes spécifiques, que nous appellerons désormais <span class="italique"><b>applications
+	  web</b></span>.</p>
+        <p>L'une des plus répandues à l'heure actuelle consiste à utiliser des pages HTML « enrichies » à l'aide de scripts
+	  écrits à l'aide d'un langage spécifique tel que PHP. Ces scripts sont directement insérés dans le code HTML, entre des balises
+	  particulières, et ils seront exécutés par le serveur web (Apache, par exemple) à la condition que celui-ci soit doté du module interpréteur
+	  adéquat. Il est possible de procéder de cette façon avec Python via une forme légèrement modifiée du langage nommée <b>PSP</b>
+	  (<span class="italique">Python Server Pages</span>).</p>
+        <p>Cette approche présente toutefois l'inconvénient de mêler trop intimement le code de présentation de l'information (le HTML) et le code de
+	  manipulation de celle-ci (les fragments de script PHP ou PSP insérés entre balises), ce qui compromet gravement la lisibilité de l'ensemble. Une meilleure
+	  approche consiste à écrire des scripts distincts, qui génèrent du code HTML « classique » sous la forme de chaînes de
+	  caractères, et de doter le serveur web d'un module approprié pour interpréter ces scripts et renvoyer le code HTML en réponse aux requêtes du
+	  navigateur (par exemple <b>mod_python</b>, dans le cas de Apache).</p>
+        <p>Mais avec Python, nous pouvons pousser ce type de démarche encore plus loin, en développant nous-même un véritable serveur web
+	  spécialisé, tout à fait autonome, qui contiendra en un seul logiciel la fonctionnalité particulière souhaitée pour notre application. Il
+	  est en effet parfaitement possible de réaliser cela à l'aide de Python, car toutes les bibliothèques nécessaires à la gestion du protocole HTTP
+	  sont intégrées au langage. Partant de cette base, de nombreux programmeurs indépendants ont d'ailleurs réalisé et mis à la disposition de
+	  la communauté toute une série d'outils de développement pour faciliter la mise au point de telles applications web spécifiques. Pour la suite de
+	  notre étude, nous utiliserons donc l'un d'entre eux. Nous avons choisi <span class="italique">Cherrypy</span>, car celui-ci nous semble particulièrement bien adapté aux
+	  objectifs de cet ouvrage.</p>
+        <blockquote class="citation"><div><b>Note :</b> Ce que nous allons expliquer dans les paragraphes qui suivent sera directement fonctionnel sur l'intranet de votre établissement scolaire
+	  ou de votre entreprise. En ce qui concerne l'internet, par contre, les choses sont un peu plus compliquées. Il va de soi que l'installation de logiciels sur un
+	  ordinateur serveur relié à l'internet ne peut se faire qu'avec l'accord de son propriétaire. Si un fournisseur d'accès à l'internet a mis a
+	  votre disposition un certain espace où vous êtes autorisé à installer des pages web « statiques » (c'est-à-dire de simples
+	  documents à consulter), cela ne signifie pas pour autant que vous pourrez y faire fonctionner des programmes ! Pour que cela puisse marcher, il faudra donc que
+	  vous demandiez une autorisation et un certain nombre de renseignements à votre fournisseur d'accès. La plupart d'entre eux refuseront cependant de vous laisser
+	  installer des applications tout à fait autonomes du type que nous décrivons ci-après, mais vous pourrez assez facilement convertir celles-ci afin qu'elles
+	  soient également utilisables avec le module mod_python de Apache, lequel est généralement disponible<a class="signetNoteBasPage" id="signetNoteBasPage97" href="#noteBasPage97">(97)</a>.</div></blockquote>
+        
+		<h4 class="TitreSection2" id="L19-A-1">19-A-1. Un serveur web en pur Python !<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>L'intérêt pour le développement web est devenu très important à notre époque, et il existe donc une forte demande pour des
+	    interfaces et des environnements de programmation bien adaptés à cette tâche. Or, même s'il ne peut pas prétendre à l'universalité
+	    de langages tels que C/C++, Python est déjà largement utilisé un peu partout dans le monde pour écrire des programmes très ambitieux, y
+	    compris dans le domaine des serveurs d'applications web. La robustesse et la facilité de mise en œuvre du langage ont séduit de nombreux
+	    développeurs de talent, qui ont réalisé des outils de développement web de très haut niveau. Plusieurs de ces applications peuvent vous
+	    intéresser si vous souhaitez réaliser vous-même des sites web interactifs de différents types.</p>
+          <p>Les produits existants sont pour la plupart des logiciels libres. Ils permettent de couvrir une large gamme de besoins, depuis le petit site personnel de
+	    quelques pages, jusqu'au gros site commercial collaboratif, capable de répondre à des milliers de requêtes journalières, et dont les
+	    différents secteurs sont gérés sans interférence par des personnes de compétences variées (infographistes, programmeurs,
+	    spécialistes de bases de données, etc.).</p>
+          <p>Le plus célèbre de ces produits est le logiciel <span class="italique">Zope</span>, déjà adopté par de grands organismes privés et publics pour le
+	    développement d'intranets et d'extranets collaboratifs. Il s'agit en fait d'un système serveur d'applications, très performant, sécurisé,
+	    presqu'entièrement écrit en Python, et que l'on peut administrer à distance à l'aide d'une simple interface web. Il ne nous est pas possible de
+	    décrire l'utilisation de <span class="italique">Zope</span> dans ces pages : le sujet est trop vaste, et un livre entier n'y suffirait pas. Sachez cependant que ce produit est
+	    parfaitement capable de gérer de très gros sites d'entreprise en offrant d'énormes avantages par rapport à des solutions plus connues telles que
+	    PHP ou Java.</p>
+          <p>D'autres outils moins ambitieux mais tout aussi intéressants sont disponibles. Tout comme <span class="italique">Zope</span>, la plupart d'entre eux peuvent être
+	    téléchargés librement depuis Internet. Le fait qu'ils soient écrits en Python assure en outre leur portabilité : vous pourrez donc les
+	    employer aussi bien sous <span class="italique">Windows</span> que sous <span class="italique">Linux</span> ou <span class="italique">MacOs</span>. Chacun d'eux peut être utilisé en conjonction avec un serveur web
+	    « classique » tel que <span class="italique">Apache</span> ou <span class="italique">Xitami</span> (c'est d'ailleurs préférable si le site à réaliser est destiné à
+	    supporter une charge de connexions importante sur l'internet), mais la plupart d'entre eux intègrent leur propre serveur, ce qui leur permet de fonctionner
+	    également de manière tout à fait autonome. Cette possibilité se révèle particulièrement intéressante au cours de la mise au
+	    point d'un site, car elle facilite la recherche des erreurs.</p>
+          <p>Une totale autonomie, alliée à une grande facilité de mise en œuvre, font de ces produits de fort bonnes solutions pour la
+	    réalisation de sites web d'intranet spécialisés, notamment dans des petites et moyennes entreprises, des administrations, ou dans des écoles. Si
+	    vous souhaitez développer une application Python qui soit accessible à distance, par l'intermédiaire d'un simple navigateur web, ces outils sont faits
+	    pour vous. Il en existe une grande variété : <span class="italique">Django</span>, <span class="italique">Turbogears</span>, <span class="italique">Spyce</span>, <span class="italique">Karrigell</span>, <span class="italique">Webware</span>, <span class="italique">Cherrypy</span>,
+	    <span class="italique">Quixote</span>, <span class="italique">Twisted</span>, <span class="italique">Pylons</span>, etc<a class="signetNoteBasPage" id="signetNoteBasPage98" href="#noteBasPage98">(98)</a>. Choisissez en fonction de vos besoins : vous n'aurez que l'embarras du
+	    choix.</p>
+          <p>Dans les lignes qui suivent, nous allons décrire pas à pas le développement d'une application web fonctionnant à l'aide de
+	    <span class="italique"><b>Cherrypy</b></span>. Vous pouvez trouver ce système à l'adresse : <span class="italique">http://www.cherrypy.org.</span> Il s'agit d'une solution de développement web
+	    très conviviale pour un programmeur Python, car elle lui permet de le développer un site web comme une application Python classique, sur la base d'un
+	    ensemble d'objets. Ceux-ci génèrent du code HTML en réponse aux requêtes HTTP qu'on leur adresse via leurs méthodes, et ces méthodes sont
+	    elles-mêmes perçues comme des adresses URL ordinaires par les navigateurs.</p>
+          <blockquote class="citation"><div>Pour la suite de ce texte, nous allons supposer que vous possédez quelques rudiments du langage HTML, et nous admettrons également que la
+	    bibliothèque Cherrypy a déjà été installée sur votre poste de travail. (Cette installation est décrite à la
+	    page ).</div></blockquote>
+        </div>
+        
+		<h4 class="TitreSection2" id="L19-A-2">19-A-2. Première ébauche : mise en ligne d'une page web minimaliste<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Dans votre répertoire de travail, préparez un petit fichier texte que vous nommerez <b><span style="color:#000080;">tutoriel.conf</span></b>, et qui
+	    contiendra les lignes suivantes : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e57542">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e57542" onclick="selectionCode('contenuCoded0e57542', 'IdTitreCode-d0e57542');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e57542" class="contenuCode">[global] 
+server.socket_host = "127.0.0.1" 
+server.socket_port = 8080 
+server.thread_pool = 5 
+tools.sessions.on = True 
+tools.encode.encoding = "Utf-8" 
+[/annexes] 
+tools.staticdir.on = True 
+tools.staticdir.dir = "annexes"</code></pre></div>
+          <p>Il s'agit d'un simple fichier de configuration que notre serveur web consultera au démarrage. Notez surtout le n° de port utilisé (8080 dans
+	    notre exemple). Vous savez peut-être que les logiciels navigateurs s'attendent à trouver les services web sur le n° de port 80 par défaut. Si vous
+	    êtes le propriétaire de votre machine, et que vous n'y avez encore installé aucun autre logiciel serveur web, vous avez donc probablement
+	    intérêt à remplacer 8080 par 80 dans ce fichier de configuration : ainsi les navigateurs qui se connecteront à votre serveur ne devront pas
+	    spécifier un n° de port dans l'adresse. Cependant, si vous faites ces exercices sur une machine dont vous n'êtes pas l'administrateur, vous n'avez pas
+	    le droit d'utiliser les numéros de port inférieurs à 1024 (pour des raisons de sécurité). Dans ce cas, vous devez donc utiliser un numéro
+	    de port plus élevé que 80, tel celui que nous vous proposons. Il en va de même si un autre serveur web (<span class="italique">Apache</span>, par exemple) est déjà
+	    en fonction sur votre machine, car ce logiciel utilise très certainement déjà le port 80, par défaut.</p>
+          <p>Remarquez également la ligne concernant l'encodage. Il s'agit de l'encodage que <span class="italique">Cherrypy</span> devra utiliser dans les pages web produites. Il est
+	    possible que certains navigateurs web attendent une autre norme que Utf-8 comme encodage par défaut. Si vous obtenez des caractères accentués incorrects
+	    dans votre navigateur lorsque vous expérimenterez les exercices décrits ci-après, refaites vos essais en spécifiant un autre encodage dans cette
+	    ligne.</p>
+          <p>Les 3 dernières lignes du fichier indiquent le chemin d'un répertoire où vous placerez les documents « statiques » dont
+	    votre site peut avoir besoin (images, feuilles de style, etc.).</p>
+          <p>Veuillez à présent encoder le petit script ci-dessous :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e57563">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e57563" onclick="selectionCode('contenuCoded0e57563', 'IdTitreCode-d0e57563');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e57563"><code class="python_keyword1">import</code> cherrypy
+ 
+<code class="python_keyword1">class</code> <code class="python_function">MonSiteWeb</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):      <code class="python_comment1"># Classe maîtresse de l'application</code>
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):	   <code class="python_comment1"># Méthode invoquée comme URL racine (/)</code>
+      <code class="python_keyword1">return</code> <code class="python_literal1">"&lt;h1&gt;Bonjour à tous !&lt;/h1&gt;"</code>
+  index.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>	    <code class="python_comment1"># la méthode doit être ?publiée'</code>
+ 
+<code class="python_comment1">###### Programme principal : #############</code>
+cherrypy.<code class="python_function">quickstart</code><code class="python_operator">(</code><code class="python_function">MonSiteWeb</code><code class="python_operator">(</code>), config <code class="python_operator">=</code><code class="python_literal1">"tutoriel.conf"</code>)
+</code></pre></div></div>
+          <p>Lancez l'exécution du script. Si tout est en ordre, vous obtenez quelques lignes d'information similaires aux suivantes dans votre terminal. Elles vous
+	    confirment que « quelque chose » a démarré, et reste en attente d'événements :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e57645">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e57645" onclick="selectionCode('contenuCoded0e57645', 'IdTitreCode-d0e57645');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e57645" class="contenuCode">[07/Jan/2010:18:00:34] ENGINE Listening for SIGHUP. 
+[07/Jan/2010:18:00:34] ENGINE Listening for SIGTERM. 
+[07/Jan/2010:18:00:34] ENGINE Listening for SIGUSR1. 
+[07/Jan/2010:18:00:34] ENGINE Bus STARTING 
+[07/Jan/2010:18:00:34] ENGINE Started monitor thread '_TimeoutMonitor'. 
+[07/Jan/2010:18:00:34] ENGINE Started monitor thread 'Autoreloader'. 
+[07/Jan/2010:18:00:34] ENGINE Serving on 127.0.0.1:8080 
+[07/Jan/2010:18:00:34] ENGINE Bus STARTED</code></pre></div>
+          <p>
+            <span class="italique">
+              <b>Vous venez effectivement de mettre en route un serveur web !</b>
+            </span>
+          </p>
+          <p>Il ne vous reste plus qu'à vérifier qu'il fonctionne bel et bien, à l'aide de votre navigateur préféré. Si vous utilisez ce
+	    navigateur sur la même machine que le serveur, dirigez-le vers une adresse telle que : <span class="italique">http://localhost:8080</span>, « localhost »
+	    étant une expression consacrée pour désigner la machine locale (vous pouvez également spécifier celle-ci à l'aide de l'adresse IP
+	    conventionnelle : 127.0.0.1), et « 8080 » le numéro de port choisi dans le fichier de configuration<a class="signetNoteBasPage" id="signetNoteBasPage99" href="#noteBasPage99">(99)</a>. Vous devriez obtenir la page d'accueil suivante :</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/100000000000027F000000FE20EAD0ED.png"><img class="ImgCliquable figure-img-caption" src="./images/100000000000027F000000FE20EAD0ED.png" alt="Image non disponible" width="550" height="218"/></a></figure></div>
+          <p>Examinons à présent notre script d'un peu plus près.<br/>
+		 Sa concision est remarquable : seulement 6 lignes effectives !</p>
+          <p>Après importation du module <b>cherrypy</b>, on y définit une nouvelle classe <b>MonSiteWeb()</b>. Les objets produits à l'aide de cette classe
+	    seront des gestionnaires de requêtes. Leurs méthodes seront invoquées par un dispositif interne à <span class="italique">Cherrypy</span>, qui convertira l'adresse
+	    <span class="italique">url</span> demandée par le navigateur, en un appel de méthode avec un nom équivalent (nous illustrerons mieux ce mécanisme avec l'exemple suivant).
+	    Si l'<span class="italique">url</span> reçue ne comporte aucun nom de page, comme c'est le cas ici, c'est le nom <b>index</b> qui sera recherché par défaut, suivant une
+	    convention bien établie sur le web. C'est pour cette raison que nous avons nommé ainsi notre unique méthode, qui attend donc les requêtes
+	    s'adressant à la racine du site.</p>
+          <ul class="ListeDVP">
+            <li>Ligne 5 : Les méthodes de cette classe vont donc traiter les requêtes provenant du navigateur, et lui renvoyer en réponse des
+	      chaînes de caractères contenant du texte rédigé en HTML. Pour ce premier exercice, nous avons simplifié au maximum le code HTML produit, le
+	      résumant à un petit message inséré entre deux balises de titre (&lt;<span class="italique">h1</span>&gt; et &lt;/<span class="italique">h1</span>&gt;). En toute rigueur, nous aurions dû
+	      insérer le tout entre balises &lt;<span class="italique">html</span>&gt;&lt;/<span class="italique">html</span>&gt; et &lt;<span class="italique">body</span>&gt;&lt;/<span class="italique">body</span>&gt; afin de réaliser une mise en page correcte. Mais
+	      puisque cela peut déjà fonctionner ainsi, nous attendrons encore un peu avant de montrer nos bonnes manières.</li>
+            <li>Ligne 6 : Les méthodes destinées à traiter une requête HTTP et à renvoyer en retour une page web, doivent être
+	      « publiées » à l'aide d'un attribut <b>exposed</b> contenant une valeur « vraie ». Il s'agit là d'un
+	      dispositif de sécurité mis en place par <span class="italique">Cherrypy</span>, qui fait que par défaut, toutes les méthodes que vous écrivez sont
+	      protégées vis-à-vis des tentatives d'accès extérieurs indésirables. Les seules méthodes « accessibles » seront
+	      donc celles qui auront été délibérément rendues « publiques » à l'aide de cet attribut.</li>
+            <li>Ligne 9 : La fonction <b>quickstart()</b> du module <span class="italique">cherrypy</span> démarre le serveur proprement dit. Il faut lui fournir en argument la
+	      référence de l'objet gestionnaire de requêtes qui sera la racine du site, ainsi que la référence d'un fichier de configuration
+	      générale. </li>
+          </ul>
+        </div>
+        
+		<h4 class="TitreSection2" id="L19-A-3">19-A-3. Ajout d'une deuxième page<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le même objet gestionnaire peut bien entendu prendre en charge plusieurs pages :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e57751">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e57751" onclick="selectionCode('contenuCoded0e57751', 'IdTitreCode-d0e57751');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e57751"><code class="python_keyword1">import</code> cherrypy
+ 
+<code class="python_keyword1">class</code> <code class="python_function">MonSiteWeb</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Renvoi d'une page HTML contenant un lien vers une autre page</code>
+      <code class="python_comment1"># (laquelle sera produite par une autre méthode du même objet) :</code>
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      &lt;h2&gt;Veuillez &lt;a href="unMessage"&gt;cliquer ici&lt;/a&gt;</code>
+<code class="python_literal2">      pour accéder à une information d'importance cruciale.&lt;/h2&gt;</code>
+<code class="python_literal2">      '''</code>
+  index.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">unMessage</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">return</code> <code class="python_literal1">"&lt;h1&gt;La programmation, c'est génial !&lt;/h1&gt;"</code>
+  unMessage.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+cherrypy.<code class="python_function">quickstart</code><code class="python_operator">(</code><code class="python_function">MonSiteWeb</code><code class="python_operator">(</code>), config <code class="python_operator">=</code><code class="python_literal1">"tutoriel.conf"</code>)
+</code></pre></div></div>
+          <p>Ce script dérive directement du précédent. La page renvoyée par la méthode <b>index()</b> contient cette fois une
+	    balise-lien :<b><span style="color:#000080;"> &lt;a href="unMessage"&gt; </span></b>dont l'argument est <span class="italique">l'url</span> d'une autre page. Si cette <span class="italique">url</span> est un
+	    simple nom, la page correspondante est supposée se trouver dans le répertoire racine du site. Dans la logique de conversion des <span class="italique">url</span> utilisée par
+	    <span class="italique">Cherrypy</span>, cela revient à invoquer une méthode de l'objet racine possédant un nom équivalent. Dans notre exemple, la page
+	    référencée sera donc produite par la méthode <b>unMessage()</b>.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L19-A-4">19-A-4. Présentation et traitement d'un formulaire<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Les choses vont vraiment commencer à devenir intéressantes avec le script suivant :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e57908">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e57908" onclick="selectionCode('contenuCoded0e57908', 'IdTitreCode-d0e57908');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e57908"><code class="python_keyword1">import</code> cherrypy
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Bienvenue</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Formulaire demandant son nom à l'utilisateur :</code>
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      &lt;form action="salutations" method="GET"&gt;</code>
+<code class="python_literal2">      Bonjour. Quel est votre nom ?</code>
+<code class="python_literal2">      &lt;input type="text" name="nom" /&gt;</code>
+<code class="python_literal2">      &lt;input type="submit" value="OK" /&gt;</code>
+<code class="python_literal2">      &lt;/form&gt;</code>
+<code class="python_literal2">      '''</code>
+  index.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">salutations</code><code class="python_operator">(</code>self, nom <code class="python_operator">=</code><code class="python_keyword3">None</code>):
+      <code class="python_keyword1">if</code> nom:	      <code class="python_comment1"># Accueil de l'utilisateur :</code>
+      <code class="python_keyword1">return</code> <code class="python_literal1">"Bonjour, {}, comment allez-vous ?"</code>.<code class="python_function">format</code><code class="python_operator">(</code>nom)
+      <code class="python_keyword1">else</code>:	    <code class="python_comment1"># Aucun nom n'a été fourni :</code>
+      <code class="python_keyword1">return</code> <code class="python_literal1">'Veuillez svp fournir votre nom &lt;a href="/"&gt;ici&lt;/a&gt;.'</code>
+  salutations.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+cherrypy.<code class="python_function">quickstart</code><code class="python_operator">(</code><code class="python_function">Bienvenue</code><code class="python_operator">(</code>), config <code class="python_operator">=</code><code class="python_literal1">"tutoriel.conf"</code>)
+</code></pre></div></div>
+          <p>La méthode <b>index()</b> de notre objet racine présente cette fois à l'utilisateur une page web contenant <span class="italique">un formulaire</span> : le code
+	    HTML inclus entre les balises <b><span style="color:#000080;">&lt;form&gt;</span></b> et <b><span style="color:#000080;">&lt;/form&gt;</span></b> peut en effet contenir un ensemble de
+	    widgets divers, à l'aide desquels l'internaute pourra encoder des informations et exercer une certaine activité : champs d'entrée, cases à
+	    cocher, boutons radio, boîtes de listes, etc. Pour ce premier exemple, un champ d'entrée et un bouton suffiront :</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/1000000000000253000000DA5799D7BC.png"><img class="ImgCliquable figure-img-caption" src="./images/1000000000000253000000DA5799D7BC.png" alt="Image non disponible" width="550" height="201"/></a></figure></div>
+          <ul class="ListeDVP">
+            <li>La ligne 9 contient la balise HTML qui définit un champ d'entrée (balise <b><span style="color:#000080;">&lt;input
+	      type="text" name="nom" /&gt;</span></b>). Son attribut <b><span style="color:#000080;">name</span></b> permet d'associer une étiquette à la chaîne de
+	      caractères qui sera encodée par l'utilisateur. Lorsque le navigateur transmettra au serveur la requête HTTP correspondante, celle-ci contiendra donc
+	      cet argument bien étiqueté. Comme nous l'avons déjà expliqué plus haut, <span class="italique">Cherrypy </span>convertira alors cette requête en un appel de
+	      méthode classique, dans lequel l'étiquette sera associée à son argument, de la manière habituelle sous Python.</li>
+            <li>La ligne 10 définit un widget de type « bouton d'envoi » (balise <b><span style="color:#000080;">&lt;input type="submit"&gt;</span></b>). Le texte qui doit apparaître sur le bouton est précisé par l'attribut <b><span style="color:#000080;">value</span></b>.</li>
+            <li>Les lignes 15 à 20 définissent la méthode qui réceptionnera la requête, lorsque le formulaire aura été
+	      expédié au serveur. Son paramètre <b><span style="color:#000080;">nom</span></b> recevra l'argument correspondant, reconnu grâce à son
+	      étiquette homonyme. Comme d'habitude sous Python, vous pouvez définir des valeurs par défaut pour chaque paramètre (si un champ du formulaire est
+	      laissé vide par l'utilisateur, l'argument correspondant n'est pas transmis). Dans notre exemple, le paramètre <b><span style="color:#000080;">nom</span></b>
+	      contient par défaut un objet vide : il sera donc très facile de vérifier par programme, si l'utilisateur a effectivement entré un nom ou
+	      pas. </li>
+          </ul>
+          <p>Le fonctionnement de tous ces mécanismes est finalement très naturel et très simple : les <span class="italique">url</span> invoquées dans les pages web
+	    sont converties par <span class="italique">Cherrypy</span> en appels de méthodes possédant les mêmes noms, auxquelles les arguments sont transmis de manière tout à
+	    fait classique.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L19-A-5">19-A-5. Analyse de la communication et des erreurs<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>En expérimentant les scripts décrits jusqu'ici, vous aurez remarqué que divers messages apparaissent dans la fenêtre de terminal où
+	    vous avez lancé leur exécution. Ces messages vous renseignent (en partie) sur le dialogue qui s'est instauré entre le serveur et ses clients. Vous
+	    pourrez ainsi y suivre la connexion éventuellement établie avec votre serveur par d'autres machines (si votre serveur est relié à un réseau,
+	    bien entendu) :.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e58146">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e58146" onclick="selectionCode('contenuCoded0e58146', 'IdTitreCode-d0e58146');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e58146" class="contenuCode">[12/Jan/2010:14:43:27] ENGINE Started monitor thread '_TimeoutMonitor'. 
+[12/Jan/2010:14:43:27] ENGINE Started monitor thread 'Autoreloader'. 
+[12/Jan/2010:14:43:27] ENGINE Serving <code class="apacheconf_literal2">on</code> 127.0.0.1:8080 
+[12/Jan/2010:14:43:27] ENGINE Bus STARTED 
+127.0.0.1 - - [12/Jan/2010:14:43:31] <code class="apacheconf_literal1">"GET / HTTP/1.1"</code> 200 215 <code class="apacheconf_literal1">""</code> <code class="apacheconf_literal1">"Mozilla/5.0</code>
+(X11; U; Linux i686; fr; rv:1.9.1.6) Gecko/20091215 Ubuntu/9.10 (karmic)
+ Firefox/3.5.6<code class="apacheconf_literal1">" </code>
+127.0.0.1 - - [12/Jan/2010:14:44:07] <code class="apacheconf_literal1">"GET /salutations?nom=Juliette HTTP/1.1"</code>
+ 200 39 <code class="apacheconf_literal1">"http://localhost:8080/"</code> <code class="apacheconf_literal1">"Mozilla/5.0 (X11; U; Linux i686; fr;</code>
+ rv:1.9.1.6) Gecko/20091215 Ubuntu/9.10 (karmic) Firefox/3.5.6<code class="apacheconf_literal1">"</code></code></pre></div>
+          <p>C'est dans cette fenêtre de terminal que vous trouverez également les messages d'erreur (fautes de syntaxe, par exemple) qui se rapportent à
+	    tout ce que votre programme met éventuellement en place <span class="italique">avant le démarrage du serveur</span>. Si une erreur est détectée en cours de
+	    fonctionnement, par contre (erreur dans une méthode gestionnaire de requêtes), le message d'erreur correspondant apparaît dans la fenêtre du
+	    navigateur, <span class="italique"><b>et le serveur continue de fonctionner</b></span>. Voici par exemple le message que nous avons obtenu en ajoutant un ‘e' erroné au nom de la
+	    méthode <b>format()</b>, à la ligne 17 de notre script (<b><span style="color:#000080;">formate(nom)</span></b> au lieu de <b><span style="color:#000080;">format(nom)</span></b>) :</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/1000000000000344000001BA05E93E34.png"><img class="ImgCliquable figure-img-caption" src="./images/1000000000000344000001BA05E93E34.png" alt="Image non disponible" width="550" height="290"/></a></figure></div>
+          <p>Vous pouvez vérifier que le serveur fonctionne toujours, en revenant à la page précédente et en entrant cette fois un nom vide. Cette
+	    faculté de ne pas se bloquer complètement lorsqu'une erreur est détectée est extrêmement importante pour un serveur web, car cela lui permet
+	    de continuer à répondre à la majorité des requêtes qu'il reçoit, même si certaines d'entre elles doivent être rejetées
+	    parce qu'il subsiste quelques petits défauts dans le programme. Ce comportement robuste est rendu possible par l'utilisation de threads (voir page ).
+	    </p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L19-A-6">19-A-6. Structuration d'un site à pages multiples<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Voyons à présent comment nous pouvons organiser notre site web de manière bien structurée, en établissant une hiérarchie entre
+	    les classes d'une manière analogue à celle qui lie les répertoires et sous-répertoires dans un système de fichiers.</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/100000000000025D00000126083BE4D8.png"><img class="ImgCliquable figure-img-caption" src="./images/100000000000025D00000126083BE4D8.png" alt="Image non disponible" width="550" height="267"/></a></figure></div>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e58212">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e58212" onclick="selectionCode('contenuCoded0e58212', 'IdTitreCode-d0e58212');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/>74.<br/>75.<br/>76.<br/>77.<br/>78.<br/>79.<br/>80.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e58212"><code class="python_keyword1">import</code> cherrypy
+ 
+<code class="python_keyword1">class</code> <code class="python_function">HomePage</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Les objets gestionnaires de requêtes peuvent instancier eux-mêmes</code>
+      <code class="python_comment1"># d'autres gestionnaires "esclaves", et ainsi de suite :</code>
+      self.maxime <code class="python_operator">=</code> <code class="python_function">MaximeDuJour</code><code class="python_operator">(</code>)
+      self.liens <code class="python_operator">=</code> <code class="python_function">PageDeLiens</code><code class="python_operator">(</code>)
+      <code class="python_comment1"># L'instanciation d'objets gestionnaires de requêtes peut bien entendu</code>
+      <code class="python_comment1"># être effectuée à n'importe quel niveau du programme.</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      &lt;h3&gt;Site des adorateurs du Python royal - Page d'accueil.&lt;/h3&gt;</code>
+<code class="python_literal2">      &lt;p&gt;Veuillez visiter nos rubriques géniales :&lt;/p&gt;</code>
+<code class="python_literal2">      &lt;ul&gt;</code>
+<code class="python_literal2">	  &lt;li&gt;&lt;a href="/entreNous"&gt;Restons entre nous&lt;/a&gt;&lt;/li&gt;</code>
+<code class="python_literal2">	  &lt;li&gt;&lt;a href="/maxime/"&gt;Une maxime subtile&lt;/a&gt;&lt;/li&gt;</code>
+<code class="python_literal2">	  &lt;li&gt;&lt;a href="/liens/utiles"&gt;Des liens utiles&lt;/a&gt;&lt;/li&gt;</code>
+<code class="python_literal2">      &lt;/ul&gt;</code>
+<code class="python_literal2">      '''</code>
+  index.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">entreNous</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      Cette page est produite à la racine du site.&lt;br /&gt;</code>
+<code class="python_literal2">      [&lt;a href="/"&gt;Retour&lt;/a&gt;]</code>
+<code class="python_literal2">      '''</code>
+  entreNous.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+ 
+<code class="python_keyword1">class</code> <code class="python_function">MaximeDuJour</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      &lt;h3&gt;Il existe 10 sortes de gens : ceux qui comprennent</code>
+<code class="python_literal2">      le binaire, et les autres !&lt;/h3&gt;</code>
+<code class="python_literal2">      &lt;p&gt;[&lt;a href="../"&gt;Retour&lt;/a&gt;]&lt;/p&gt;</code>
+<code class="python_literal2">      '''</code>
+  index.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+<code class="python_keyword1">class</code> <code class="python_function">PageDeLiens</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self):
+      self.extra <code class="python_operator">=</code> <code class="python_function">LiensSupplementaires</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      &lt;p&gt;Page racine des liens (sans utilité réelle).&lt;/p&gt;</code>
+<code class="python_literal2">      &lt;p&gt;En fait, les liens &lt;a href="utiles"&gt;sont plutôt ici&lt;/a&gt;&lt;/p&gt;</code>
+<code class="python_literal2">      '''</code>
+  index.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">utiles</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Veuillez noter comment le lien vers les autres pages est défini :</code>
+      <code class="python_comment1"># on peut procéder de manière ABSOLUE ou RELATIVE.</code>
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      &lt;p&gt;Quelques liens utiles :&lt;/p&gt;</code>
+<code class="python_literal2">      &lt;ul&gt;</code>
+<code class="python_literal2">	  &lt;li&gt;&lt;a href="http://www.cherrypy.org"&gt;Site de CherryPy&lt;/a&gt;&lt;/li&gt;</code>
+<code class="python_literal2">	  &lt;li&gt;&lt;a href="http://www.python.org"&gt;Site de Python&lt;/a&gt;&lt;/li&gt;</code>
+<code class="python_literal2">      &lt;/ul&gt;</code>
+<code class="python_literal2">      &lt;p&gt;D'autres liens utiles vous sont proposés</code>
+<code class="python_literal2">      &lt;a href="./extra/"&gt; ici &lt;/a&gt;.&lt;/p&gt;</code>
+<code class="python_literal2">      &lt;p&gt;[&lt;a href="../"&gt;Retour&lt;/a&gt;]&lt;/p&gt;</code>
+<code class="python_literal2">      '''</code>
+  utiles.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+<code class="python_keyword1">class</code> <code class="python_function">LiensSupplementaires</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Notez le lien relatif pour retourner à la page maîtresse :</code>
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      &lt;p&gt;Encore quelques autres liens utiles :&lt;/p&gt;</code>
+<code class="python_literal2">      &lt;ul&gt;</code>
+<code class="python_literal2">	  &lt;li&gt;&lt;a href="http://pythomium.net"&gt;Le site de l'auteur&lt;/a&gt;&lt;/li&gt;</code>
+<code class="python_literal2">	  &lt;li&gt;&lt;a href="http://ubuntu-fr.org"&gt;Ubuntu : le must&lt;/a&gt;&lt;/li&gt;</code>
+<code class="python_literal2">      &lt;/ul&gt;</code>
+<code class="python_literal2">      &lt;p&gt;[&lt;a href="../"&gt;Retour à la page racine des liens&lt;/a&gt;]&lt;/p&gt;</code>
+<code class="python_literal2">      '''</code>
+  index.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+racine <code class="python_operator">=</code> <code class="python_function">HomePage</code><code class="python_operator">(</code>)
+cherrypy.<code class="python_function">quickstart</code><code class="python_operator">(</code>racine, config <code class="python_operator">=</code><code class="python_literal1">"tutoriel.conf"</code>)
+</code></pre></div></div>
+          <p>Lignes 4 à 10 : La méthode constructeur des objets racine est l'endroit idéal pour instancier d'autres objets
+	    « esclaves ». On accédera aux méthodes gestionnaires de requêtes de ceux-ci exactement comme on accède aux
+	    sous-répertoires d'un répertoire racine (voir ci-après).</p>
+          <p>Lignes 12 à 22 : La page d'accueil propose des liens vers les autres pages du site. Remarquez la syntaxe utilisée dans les
+	    balises-liens, utilisée ici de manière à définir un <span class="italique"><b>chemin absolu</b></span> :</p>
+          <ul class="ListeDVP">
+            <li>les méthodes de l'objet racine sont référencées par un caractère / suivi de leur nom seul. Le caractère / indique que le
+	      « chemin » part de la racine du site. Exemple : <b><span style="color:#000080;">/entreNous</span></b>.</li>
+            <li>les méthodes racines des objets esclaves sont référencées à l'aide d'un simple / suivant le nom de ces autres objets. Exemple :
+	      <b><span style="color:#000080;">/maxime/</span></b></li>
+            <li>les autres méthodes des objets esclaves sont référencées à l'aide de leur nom inclus dans un chemin complet : Exemple :
+	      <b><span style="color:#000080;">/liens/utiles</span></b></li>
+          </ul>
+          <p>Lignes 36, 62 et 75 : Pour retourner à la racine du niveau précédent, on utilise cette fois un <span class="italique"><b>chemin
+	    relatif</b></span>, avec la même syntaxe que celle utilisée pour remonter au répertoire précédent dans une arborescence de fichiers (deux
+	    points).</p>
+          <p>Lignes 41-42 : Vous aurez compris qu'on installe ainsi une hiérarchie en forme d'arborescence de fichiers, en instanciant des objets
+	    « esclaves » les uns à partir des autres. En suivant cette logique, le chemin absolu complet menant à la méthode <b>index()</b> de
+	    cette classe devrait être par conséquent <b><span style="color:#000080;">/liens/extra/index</span></b>.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L19-A-7">19-A-7. Prise en charge des sessions<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Lorsqu'on élabore un site web interactif, on souhaite fréquemment que la personne visitant le site puisse s'identifier et fournir un certain nombre
+	    de renseignements tout au long de sa visite dans différentes pages (l'exemple type est le remplissage d'un <span class="italique">caddie</span> au cours de la consultation d'un site
+	    commercial), toutes ces informations étant conservées quelque part jusqu'à la fin de sa visite. <span class="italique">Et il faut bien entendu réaliser cela
+	    indépendamment pour chaque client connecté</span>, car nous ne pouvons pas oublier qu'un site web est destiné à être utilisé en
+	    parallèle par toute une série de personnes.</p>
+          <p>Il serait possible de transmettre ces informations de page en page, à l'aide de champs de formulaires cachés (balises <b><span style="color:#000080;">&lt;INPUT TYPE="hidden"&gt;</span></b>), mais ce serait compliqué et très contraignant. Il est donc préférable que le serveur
+	    soit doté d'un mécanisme spécifique, qui attribue à chaque client une <span class="italique">session</span> particulière, dans laquelle seront mémorisées
+	    toutes les informations particulières à ce client. <span class="italique">Cherrypy</span> réalise cet objectif par l'intermédiaire de <span class="italique">cookies</span>.</p>
+          <p>Lorsqu'un nouveau visiteur du site se présente, le serveur génère un <span class="italique">cookie</span> (c'est-à-dire un petit paquet d'informations contenant
+	    un <span class="italique">identifiant de session</span> unique sous la forme d'une chaîne aléatoire d'octets) et l'envoie au navigateur web, qui l'enregistre. En relation avec le
+	    cookie généré, le serveur va alors conserver durant un certain temps un <span class="italique">objet-session</span> dans lequel seront mémorisées toutes les
+	    informations spécifiques du visiteur. Lorsque celui-ci parcourt les autres pages du site, son navigateur renvoie à chaque fois le contenu du cookie au
+	    serveur, ce qui permet à celui-ci de l'identifier et de retrouver l'objet-session qui lui correspond. L'objet-session reste donc disponible tout au long de la
+	    visite de l'internaute : il s'agit d'un objet Python ordinaire, dans lequel on mémorise un nombre quelconque d'informations sous forme
+	    d'attributs.</p>
+          <p>Au niveau de la programmation, voici comment cela se passe :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e58799">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e58799" onclick="selectionCode('contenuCoded0e58799', 'IdTitreCode-d0e58799');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e58799"><code class="python_keyword1">import</code> cherrypy
+ 
+<code class="python_keyword1">class</code> <code class="python_function">CompteurAcces</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Exemple simplissime : incrémentation d'un compteur d'accès.</code>
+      <code class="python_comment1"># On commence par récupérer le total actuel du comptage :</code>
+      count <code class="python_operator">=</code> cherrypy.session.<code class="python_function">get</code><code class="python_operator">(</code><code class="python_literal1">'count'</code>, <code class="python_digit">0</code>)
+      <code class="python_comment1"># ... on l'incrémente :</code>
+      count <code class="python_operator">+=</code> <code class="python_digit">1</code>
+      <code class="python_comment1"># ... on mémorise sa nouvelle valeur dans le dictionnaire de session :</code>
+      cherrypy.session[<code class="python_literal1">'count'</code>] <code class="python_operator">=</code> count
+      <code class="python_comment1"># ... et on affiche le compte actuel :</code>
+      <code class="python_keyword1">return</code> <code class="python_literal2">'''</code>
+<code class="python_literal2">      Durant la présente session, vous avez déjà visité</code>
+<code class="python_literal2">      cette page {} fois ! Votre vie est bien excitante !</code>
+<code class="python_literal2">      '''</code>.<code class="python_function">format</code><code class="python_operator">(</code>count)
+  index.exposed <code class="python_operator">=</code> <code class="python_keyword3">True</code>
+ 
+cherrypy.<code class="python_function">quickstart</code><code class="python_operator">(</code><code class="python_function">CompteurAcces</code><code class="python_operator">(</code>), config<code class="python_operator">=</code><code class="python_literal1">'tutoriel.conf'</code>)
+</code></pre></div></div>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/1000000000000263000000D743AA5748.png"><img class="ImgCliquable figure-img-caption" src="./images/1000000000000263000000D743AA5748.png" alt="Image non disponible" width="550" height="193"/></a></figure></div>
+          <p>Il vous suffit de redemander la page produite par ce script à plusieurs reprises. Vous constaterez qu'à chaque fois le compteur de visites est bien
+	    incrémenté :</p>
+          <p>Le script lui-même devrait être assez explicite. On y remarquera que le module <b>cherrypy</b> est doté d'un objet <b>session</b> qui se
+	    comporte (apparemment) comme un dictionnaire classique. Nous pouvons lui ajouter des clefs à volonté, et associer à ces clefs des valeurs
+	    quelconques.</p>
+          <p>À la ligne 7 de notre exemple, nous utilisons la méthode <b>get()</b> des dictionnaires, pour retrouver la valeur associée à la clef
+	    <b>count</b> (ou zéro, si la clef n'existe pas encore). À la ligne 11 nous ré-enregistrons ensuite cette valeur, incrémentée, dans le
+	    même dictionnaire. Ainsi nous pouvons constater une fois de plus que <span class="italique">Cherrypy</span> met à notre disposition un environnement de programmation tout à
+	    fait familier pour un habitué de Python.</p>
+          <p>Remarquons toutefois que l'objet <b>session</b>, qui se comporte pour nous comme un simple dictionnaire, est en réalité l'interface d'une machinerie
+	    interne complexe, puisqu'il nous « sert » automatiquement les informations qui correspondent à un client particulier de notre site,
+	    identifié par l'intermédiaire de son cookie de session.</p>
+          <p>Pour bien visualiser cela, faites donc l'expérience d'accéder à votre serveur depuis deux navigateurs
+	    différents<a class="signetNoteBasPage" id="signetNoteBasPage100" href="#noteBasPage100">(100)</a> (Firefox et Opera, par exemple) : vous
+	    constaterez que le décompte des visites est bel et bien différent pour chacun d'eux.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L19-B">19-B. Réalisation concrète d'un site web interactif<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Avec tout ce que vous avez appris jusqu'ici, vous devriez désormais pouvoir envisager la réalisation d'un projet d'une certaine importance. C'est ce
+	  que nous vous proposons ci-après en vous détaillant la mise en place d'une ébauche d'un site web quelque peu élaborée, utilisable pour la
+	  réservation en ligne de places de spectacle<a class="signetNoteBasPage" id="signetNoteBasPage101" href="#noteBasPage101">(101)</a> :</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/100000000000027A000002218D36C75F.png"><img class="ImgCliquable figure-img-caption" src="./images/100000000000027A000002218D36C75F.png" alt="Image non disponible" width="378" height="325"/></a></figure></div>
+        <p>Les « administrateurs » du site peuvent ajouter de nouveaux spectacles à la liste et visionner les réservations déjà
+	  effectuées. Les « clients » peuvent s'enregistrer, réserver des places pour l'un ou l'autre des spectacles annoncés, et lister les
+	  places qu'ils ont déjà achetées.</p>
+        <p>Du fait qu'il ne s'agit toujours que d'un exercice, les fonctionnalités de cette petite application sont forcément très incomplètes. Il y
+	  manque notamment un dispositif de contrôle d'accès pour les administrateurs (via un système de <span class="italique">login/mot de passe</span> par exemple), la possibilité
+	  de supprimer ou modifier des spectacles existants, une gestion correcte des dates, des adresses courriel et des numéros de téléphone (ce sont ici de
+	  simples chaînes de caractères), etc., etc.</p>
+        <p>L'application intègre cependant une petite base de données relationnelle comportant trois tables, liées par deux relations de type « un
+	  à plusieurs ». Les pages web produites possèdent une mise en page commune, et leur décoration utilise une feuille de style CSS. Le code python
+	  de l'application et le code HTML « patron » sont bien séparés dans des fichiers distincts.</p>
+        <p>Nous avons donc intégré dans cet exemple un maximum de concepts utiles, mais délibérément laissé de côté tout le code de
+	  contrôle qui serait indispensable dans une véritable application pour vérifier les entrées de l'utilisateur, détecter les erreurs de
+	  communication avec la base de données, etc., afin de ne pas encombrer la démonstration.</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/100000000000027A000001F91CF61590.png"><img class="ImgCliquable figure-img-caption" src="./images/100000000000027A000001F91CF61590.png" alt="Image non disponible" width="408" height="325"/></a></figure></div>
+        <ul class="ListeDVP">
+          <li><span class="italique">Le traitement des données</span> est assuré par le script Python que nous décrivons ci-après. Il est entièrement inclus dans un seul
+	    fichier (<span class="italique">spectacles.py</span>), mais nous vous le présenterons en plusieurs morceaux afin de faciliter les explications et d'aérer quelque peu le texte.<br/>
+		 Ce script fait appel au mécanisme des sessions pour garder en mémoire les coordonnées de l'utilisateur pendant tout le temps que dure sa visite du
+		   site. </li>
+          <li><span class="italique">La présentation des données</span> est assurée par un ensemble de pages web, dont le code HTML est rassemblé pour sa plus grande partie dans
+	    un fichier texte distinct (<span class="italique">spectacles.htm</span>). Par programme, on extraira de ce fichier des chaînes de caractères qui seront formatées par insertion
+	    de valeurs issues de variables, suivant la technique décrite au chapitre 10. Ainsi le contenu statique des pages n'encombrera pas le script lui-même. Nous
+	    reproduisons le contenu de ce fichier à la page .</li>
+          <li>
+            <a data-lightbox="lightbox[article]" href="./images/100000000000027A000002A77EC42057.png"><img src="./images/100000000000027A000002A77EC42057.png" alt="Image non disponible" width="303" height="325" class="ImgCliquable image_verticale"/></a>
+          </li>
+        </ul>
+        
+		<h4 class="TitreSection2" id="L19-B-1">19-B-1. Le script<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le script <b>spectacles.py</b> commence par définir une classe <b>Glob()</b> qui servira uniquement de conteneur pour des variables que nous voulons
+	    traiter comme globales. On y trouve notamment la description des tables de la base de données dans un dictionnaire, suivant une technique similaire à celle
+	    que nous avons expliquée au chapitre précédent  :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e59061">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e59061" onclick="selectionCode('contenuCoded0e59061', 'IdTitreCode-d0e59061');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e59061"><code class="python_keyword1">import</code> os, cherrypy, sqlite3
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Glob</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_literal1">"Données à caractère global pour l'application"</code>
+  patronsHTML <code class="python_operator">=</code><code class="python_literal1">"spectacles.htm"</code>    <code class="python_comment1"># Fichier contenant les "patrons" HTML</code>
+  html <code class="python_operator">=</code>{}	  <code class="python_comment1"># Les patrons seront chargés dans ce dictionnaire</code>
+  <code class="python_comment1"># Structure de la base de données.  Dictionnaire des tables &amp; champs :</code>
+  dbName <code class="python_operator">=</code> <code class="python_literal1">"spectacles.sq3"</code>	   <code class="python_comment1"># nom de la base de données</code>
+  tables <code class="python_operator">=</code>{<code class="python_literal1">"spectacles"</code>:<code class="python_operator">((</code><code class="python_literal1">"ref_spt"</code>,<code class="python_literal1">"k"</code>), <code class="python_operator">(</code><code class="python_literal1">"titre"</code>,<code class="python_literal1">"s"</code>), <code class="python_operator">(</code><code class="python_literal1">"date"</code>,<code class="python_literal1">"t"</code>),
+	     <code class="python_operator">(</code><code class="python_literal1">"prix_pl"</code>,<code class="python_literal1">"r"</code>), <code class="python_operator">(</code><code class="python_literal1">"vendues"</code>,<code class="python_literal1">"i"</code>)),
+       <code class="python_literal1">"reservations"</code>:<code class="python_operator">((</code><code class="python_literal1">"ref_res"</code>,<code class="python_literal1">"k"</code>), <code class="python_operator">(</code><code class="python_literal1">"ref_spt"</code>,<code class="python_literal1">"i"</code>), <code class="python_operator">(</code><code class="python_literal1">"ref_cli"</code>,<code class="python_literal1">"i"</code>),
+	       <code class="python_operator">(</code><code class="python_literal1">"place"</code>,<code class="python_literal1">"i"</code>)),
+       <code class="python_literal1">"clients"</code>:<code class="python_operator">((</code><code class="python_literal1">"ref_cli"</code>,<code class="python_literal1">"k"</code>), <code class="python_operator">(</code><code class="python_literal1">"nom"</code>,<code class="python_literal1">"s"</code>), <code class="python_operator">(</code><code class="python_literal1">"e_mail"</code>,<code class="python_literal1">"s"</code>),
+	      <code class="python_operator">(</code><code class="python_literal1">"tel"</code>, <code class="python_literal1">"i"</code>)) }
+</code></pre></div></div>
+          <p>Viennent ensuite les définitions de deux fonctions. La première (lignes 16 à 32) ne sera utilisée qu'une seule fois au
+	    démarrage. Son rôle consiste à lire l'intégralité du fichier texte <b>spectacles.htm</b> afin d'en extraire les
+	    « patrons » HTML qui seront utilisés pour formater les pages web. Si vous examinez la structure de ce fichier (nous avons reproduit son
+	    contenu à la page ), vous constaterez qu'il contient une série de sections, clairement délimitées chacune par deux repères : une
+	    balise d'ouverture (elle-même formée d'un libellé inclus entre deux astérisques et des crochets), et une ligne terminale constituée d'au moins
+	    5 caractères #. Chaque section peut donc ainsi être extraite séparément, et mémorisée dans un dictionnaire global (<b>glob.html</b>). Les
+	    clés de ce dictionnaire seront les libellés trouvés, et les valeurs les sections correspondantes, chacune d'elles contenant donc une
+	    « page » de code HTML, avec des balises de conversion <b><span style="color:#000080;">{}</span></b> qui pourront être remplacées par les valeurs
+	    de variables.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e59268">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e59268" onclick="selectionCode('contenuCoded0e59268', 'IdTitreCode-d0e59268');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e59268"><code class="python_keyword1">def</code> <code class="python_function">chargerPatronsHTML</code><code class="python_operator">(</code>):
+  <code class="python_comment1"># Chargement de tous les "patrons" de pages HTML dans un dictionnaire :</code>
+  fi <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=open#open"><span>open</span></a><code class="python_operator">(</code>Glob.patronsHTML,<code class="python_literal1">"r"</code>)
+  <code class="python_keyword1">try</code>:	       <code class="python_comment1"># pour s'assurer que le fichier sera toujours refermé</code>
+      <code class="python_keyword1">for</code> ligne <code class="python_keyword1">in</code> fi:
+      <code class="python_keyword1">if</code> ligne[:<code class="python_digit">2</code>] <code class="python_operator">==</code><code class="python_literal1">"[*"</code>:	    <code class="python_comment1"># étiquette trouvée ==&gt;</code>
+	  label <code class="python_operator">=</code>ligne[<code class="python_digit">2</code>:]	    <code class="python_comment1"># suppression [*</code>
+	  label <code class="python_operator">=</code>label[:<code class="python_operator">-</code><code class="python_digit">1</code>].<code class="python_function">strip</code><code class="python_operator">(</code>)	 <code class="python_comment1"># suppression LF et esp évent.</code>
+	  label <code class="python_operator">=</code>label[:<code class="python_operator">-</code><code class="python_digit">2</code>]	    <code class="python_comment1"># suppression *]</code>
+	  txt <code class="python_operator">=</code><code class="python_literal1">""</code>
+      <code class="python_keyword1">else</code>:
+	  <code class="python_keyword1">if</code> ligne[:<code class="python_digit">5</code>] <code class="python_operator">==</code><code class="python_literal1">"#####"</code>:
+	  Glob.html[label] <code class="python_operator">=</code>txt
+	  <code class="python_keyword1">else</code>:
+	  txt <code class="python_operator">+=</code> ligne
+  <code class="python_keyword1">finally</code>:
+      fi.<code class="python_function">close</code><code class="python_operator">(</code>)       <code class="python_comment1"># fichier refermé dans tous les cas</code>
+</code></pre></div></div>
+          <p>La seconde fonction, quoique toute simple, effectue un travail remarquable : c'est elle en effet qui va nous permettre de donner à toutes nos pages
+	    un aspect similaire, en les insérant dans un patron commun. Ce patron, comme tous les autres, provient à l'origine du fichier <span class="italique">spectacles.htm</span>, mais la
+	    fonction précédente l'aura déjà mis à notre disposition dans le dictionnaire <b>Glob.html</b>, sous le libellé
+	    "miseEnPage" :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e59442">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e59442" onclick="selectionCode('contenuCoded0e59442', 'IdTitreCode-d0e59442');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">34.<br/>35.<br/>36.<br/>37.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e59442"><code class="python_keyword1">def</code> <code class="python_function">mep</code><code class="python_operator">(</code>page):
+  <code class="python_comment1"># Fonction de "mise en page" du code HTML généré : renvoie la &lt;page&gt;</code>
+  <code class="python_comment1"># transmise, agrémentée d'un en-tête et d'un bas de page adéquats.</code>
+  <code class="python_keyword1">return</code> Glob.html[<code class="python_literal1">"miseEnPage"</code>].<code class="python_function">format</code><code class="python_operator">(</code>page)
+</code></pre></div></div>
+          <p>Vient ensuite la définition d'une classe d'objets-interfaces pour l'accès à la base de données. Cette classe est certainement très
+	    perfectible<a class="signetNoteBasPage" id="signetNoteBasPage102" href="#noteBasPage102">(102)</a>. Vous y retrouverez l'application de
+	    quelques principes décrits au chapitre précédent. Si vous effacez le fichier <span class="italique">spectacles.sq3</span> qui contient la base de données, celle-ci sera
+	    recréée automatiquement par la méthode <b>creaTables()</b> :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e59504">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e59504" onclick="selectionCode('contenuCoded0e59504', 'IdTitreCode-d0e59504');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/>74.<br/>75.<br/>76.<br/>77.<br/>78.<br/>79.<br/>80.<br/>81.<br/>82.<br/>83.<br/>84.<br/>85.<br/>86.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e59504"><code class="python_keyword1">class</code> <code class="python_function">GestionBD</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_literal1">"Mise en place et interfaçage d'une base de données SQLite"</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, dbName):
+      <code class="python_literal1">"Établissement de la connexion - Création du curseur"</code>
+      self.dbName <code class="python_operator">=</code>dbName
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">executerReq</code><code class="python_operator">(</code>self, req, param <code class="python_operator">=(</code>)):
+      <code class="python_literal1">"Exécution de la requête &lt;req&gt;, avec détection d'erreur éventuelle"</code>
+      connex <code class="python_operator">=</code>sqlite3.<code class="python_function">connect</code><code class="python_operator">(</code>self.dbName)
+      cursor <code class="python_operator">=</code>connex.<code class="python_function">cursor</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">try</code>:
+      cursor.<code class="python_function">execute</code><code class="python_operator">(</code>req, param)
+      <code class="python_keyword1">except</code> <code class="python_keyword3">Exception</code> <code class="python_keyword1">as</code> err:
+      <code class="python_comment1"># renvoyer la requête et le message d'erreur système :</code>
+      msg <code class="python_operator">=</code><code class="python_literal1">"Requête SQL incorrecte :</code><code class="python_literal4">\n</code><code class="python_literal1">{}</code><code class="python_literal4">\n</code><code class="python_literal1">Erreur détectée :"</code>.<code class="python_function">format</code><code class="python_operator">(</code>req)
+      <code class="python_keyword1">return</code> msg <code class="python_operator">+</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>err)
+      <code class="python_keyword1">if</code> <code class="python_literal1">"SELECT"</code> <code class="python_keyword1">in</code> req.<code class="python_function">upper</code><code class="python_operator">(</code>):
+      <code class="python_keyword1">return</code> cursor.<code class="python_function">fetchall</code><code class="python_operator">(</code>)	 <code class="python_comment1"># renvoyer une liste de tuples</code>
+      <code class="python_keyword1">else</code>:
+      connex.<code class="python_function">commit</code><code class="python_operator">(</code>)	      <code class="python_comment1"># On enregistre systématiquement</code>
+      cursor.<code class="python_function">close</code><code class="python_operator">(</code>)
+      connex.<code class="python_function">close</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">creaTables</code><code class="python_operator">(</code>self, dicTables):
+      <code class="python_literal1">"Création des tables de la base de données si elles n'existent pas déjà"</code>
+      <code class="python_keyword1">for</code> table <code class="python_keyword1">in</code> dicTables:	      <code class="python_comment1"># parcours des clés du dictionnaire</code>
+      req <code class="python_operator">=</code> <code class="python_literal1">"CREATE TABLE {} ("</code>.<code class="python_function">format</code><code class="python_operator">(</code>table)
+      pk <code class="python_operator">=</code><code class="python_literal1">""</code>
+      <code class="python_keyword1">for</code> descr <code class="python_keyword1">in</code> dicTables[table]:
+	  nomChamp <code class="python_operator">=</code> descr[<code class="python_digit">0</code>]	  <code class="python_comment1"># libellé du champ à créer</code>
+	  tch <code class="python_operator">=</code> descr[<code class="python_digit">1</code>]	 <code class="python_comment1"># type de champ à créer</code>
+	  <code class="python_keyword1">if</code> tch <code class="python_operator">==</code><code class="python_literal1">"i"</code>:
+	  typeChamp <code class="python_operator">=</code><code class="python_literal1">"INTEGER"</code>
+	  <code class="python_keyword1">elif</code> tch <code class="python_operator">==</code><code class="python_literal1">"k"</code>:
+	  <code class="python_comment1"># champ 'clé primaire' (entier incrémenté automatiquement)</code>
+	  typeChamp <code class="python_operator">=</code><code class="python_literal1">"INTEGER PRIMARY KEY AUTOINCREMENT"</code>
+	  pk <code class="python_operator">=</code> nomChamp
+	  <code class="python_keyword1">elif</code> tch <code class="python_operator">==</code><code class="python_literal1">"r"</code>:
+	  typeChamp <code class="python_operator">=</code><code class="python_literal1">"REAL"</code>
+	  <code class="python_keyword1">else</code>: 	    <code class="python_comment1"># pour simplifier, nous considérons</code>
+	  typeChamp <code class="python_operator">=</code><code class="python_literal1">"TEXT"</code>	<code class="python_comment1"># comme textes tous les autres types</code>
+	  req <code class="python_operator">+=</code> <code class="python_literal1">"{} {}, "</code>.<code class="python_function">format</code><code class="python_operator">(</code>nomChamp, typeChamp)
+      req <code class="python_operator">=</code> req[:<code class="python_operator">-</code><code class="python_digit">2</code>] <code class="python_operator">+</code> <code class="python_literal1">")"</code>
+      <code class="python_keyword1">try</code>:
+	  self.<code class="python_function">executerReq</code><code class="python_operator">(</code>req)
+      <code class="python_keyword1">except</code>:
+	  <code class="python_keyword1">pass</code>		   <code class="python_comment1"># La table existe probablement déjà</code>
+</code></pre></div></div>
+          <p>Le script se poursuit avec la définition de la classe qui assure la fonctionnalité du site web. Comme nous l'avons expliqué dans les pages
+	    précédentes, <span class="italique">Cherrypy</span> convertit chacune des <span class="italique">url</span> demandées par le navigateur web en un appel de méthode de cette classe.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e59950">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e59950" onclick="selectionCode('contenuCoded0e59950', 'IdTitreCode-d0e59950');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">88.<br/>89.<br/>90.<br/>91.<br/>92.<br/>93.<br/>94.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e59950"><code class="python_keyword1">class</code> <code class="python_function">WebSpectacles</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_literal1">"Classe générant les objets gestionnaires de requêtes HTTP"</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">index</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Page d'entrée du site web - renvoi d'une page HTML statique :</code>
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"pageAccueil"</code>])
+  index.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+</code></pre></div></div>
+          <p>La page d'entrée du site est une page statique, dont le texte a donc été chargé dans le dictionnaire <b>Glob.html</b> (sous le
+	    libellé <b><span style="color:#000080;">"pageAccueil"</span></b>) pendant la phase d'initialisation du programme. La méthode <b>index()</b> doit donc simplement
+	    renvoyer ce texte, préalablement « habillé » à l'aide de la fonction <b>mep()</b> pour lui donner l'aspect commun à toutes les
+	    pages. </p>
+          <p>La méthode suivante est un peu plus complexe. Pour bien comprendre son fonctionnement, il est préférable d'examiner d'abord le contenu la page
+	    web qui aura été renvoyée à l'utilisateur par la méthode <b>index()</b> (cf. ligne 93). Cette page contient un <span class="italique">formulaire HTML</span>, que
+	    nous reproduisons ci-après. Un tel formulaire est délimité par les balises <b><span style="color:#000080;">&lt;form&gt;</span></b> et <b><span style="color:#000080;">&lt;/form&gt;</span></b> :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e60041">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e60041" onclick="selectionCode('contenuCoded0e60041', 'IdTitreCode-d0e60041');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e60041" class="contenuCode"><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=form "><span>&lt;form </span></a><code class="html_literal3">action</code><code class="html_operator">=</code><code class="html_literal1">"/identification"</code><code class="html_markup"> </code><code class="html_literal3">method</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=get"><span>GET&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h4"><span>&lt;h4&gt;</span></a>Veuillez SVP entrer vos coordonnées dans les champs ci-après :<code class="html_markup">&lt;/h4&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=table"><span>&lt;table&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Votre nom :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"nom"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Votre adresse courriel :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"mail"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Votre numéro de téléphone :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"tel"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<code class="html_markup">&lt;/table&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=input "><span>&lt;input </span></a><code class="html_literal3">type</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=submit "><span>submit </span></a><code class="html_literal3">class</code><code class="html_operator">=</code><code class="html_literal1">"button"</code><code class="html_markup"> </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"acces"</code><code class="html_markup"> </code><code class="html_literal3">value</code><code class="html_operator">=</code><code class="html_literal1">"Accès client"</code><code class="html_markup">&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=input "><span>&lt;input </span></a><code class="html_literal3">type</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=submit "><span>submit </span></a><code class="html_literal3">class</code><code class="html_operator">=</code><code class="html_literal1">"button"</code><code class="html_markup"> </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"acces"</code><code class="html_markup"> </code><code class="html_literal3">value</code><code class="html_operator">=</code><code class="html_literal1">"Accès administrateur"</code><code class="html_markup">&gt;</code> 
+<code class="html_markup">&lt;/form&gt;</code></code></pre></div>
+          <p>L'attribut <b><span style="color:#000080;">action</span></b> utilisé dans la balise <b><span style="color:#000080;">&lt;form&gt;</span></b> indique indique <span class="italique">l'url</span>
+	    qui sera invoquée lorsque le visiteur du site aura cliqué sur l'un des boutons de type <b><span style="color:#000080;">submit</span></b>. Cette <span class="italique">url</span> sera
+	    convertie par <span class="italique">Cherrypy</span> en un appel de la méthode de même nom, à la racine du site puisque le nom est précédé d'un simple /. C'est
+	    donc la méthode <b>identification()</b> de notre classe principale qui sera appelée. Les balises de type <b><span style="color:#000080;">&lt;input name= "..."&gt;</span></b> définissent les champs d'entrée, chacun avec son libellé spécifique signalé par
+	    l'attribut <b><span style="color:#000080;">name</span></b>. Ce sont ces libellés qui permettront à <span class="italique">Cherrypy</span> de transmettre les valeurs encodées dans ces
+	    champs, aux paramètres de mêmes noms de la méthode <b>identification()</b>. Examinons à présent celle-ci : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e60223">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e60223" onclick="selectionCode('contenuCoded0e60223', 'IdTitreCode-d0e60223');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">95.<br/>96.<br/>97.<br/>98.<br/>99.<br/>100.<br/>101.<br/>102.<br/>103.<br/>104.<br/>105.<br/>106.<br/>107.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e60223">  <code class="python_keyword1">def</code> <code class="python_function">identification</code><code class="python_operator">(</code>self, acces<code class="python_operator">=</code><code class="python_literal1">""</code>, nom<code class="python_operator">=</code><code class="python_literal1">""</code>, mail<code class="python_operator">=</code><code class="python_literal1">""</code>, tel<code class="python_operator">=</code><code class="python_literal1">""</code>):
+      <code class="python_comment1"># On mémorise les coord. de l'utilisat. dans des variables de session :</code>
+      cherrypy.session[<code class="python_literal1">"nom"</code>] <code class="python_operator">=</code>nom
+      cherrypy.session[<code class="python_literal1">"mail"</code>] <code class="python_operator">=</code>mail
+      cherrypy.session[<code class="python_literal1">"tel"</code>] <code class="python_operator">=</code>tel
+      <code class="python_keyword1">if</code> acces<code class="python_operator">==</code><code class="python_literal1">"Accès administrateur"</code>:
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"accesAdmin"</code>])     <code class="python_comment1"># renvoi d'une page HTML</code>
+      <code class="python_keyword1">else</code>:
+      <code class="python_comment1"># Une variable de session servira de "caddy" pour les réservations :</code>
+      cherrypy.session[<code class="python_literal1">"caddy"</code>] <code class="python_operator">=</code>[]	<code class="python_comment1"># (liste vide, au départ)</code>
+      <code class="python_comment1"># Renvoi d'une page HTML, formatée avec le nom de l'utilisateur :</code>
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"accesClients"</code>].<code class="python_function">format</code><code class="python_operator">(</code>nom))
+  identification.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+</code></pre></div></div>
+          <p>Les arguments reçus sont donc réceptionnés dans les variables locales <b>acces</b>, <b>nom</b>, <b>mail</b> et <b>tel</b>. Si nous souhaitons
+	    que ces valeurs restent mémorisées spécifiquement pour chaque utilisateur durant sa visite de notre site, il nous suffit de les confier aux bons soins
+	    de l'objet <b>cherrypy.session</b>, qui se présente à nous sous l'apparence d'un simple dictionnaire (Lignes 98-100).</p>
+          <p>Ligne 101 : Le paramètre <b>acces</b> aura reçu la valeur correspondant au bouton <b><span style="color:#000080;">submit</span></b> qui aura
+	    été utilisé par le visiteur, à savoir la chaîne « Accès administrateurs » ou « Accès
+	    client ». Cela nous permet donc d'aiguiller ce visiteur vers d'autres pages.</p>
+          <p>Ligne 104 : Nous allons mémoriser les réservations envisagées par le visiteur dans une liste de tuples, qu'il pourra remplir à
+	    sa guise. Par analogie avec ce qui se pratique sur les sites de commerce électronique en ligne, nous appellerons cette liste son « panier » ou
+	    « caddy ». L'enregistrement de ces réservations dans la base de données aura lieu plus tard, dans une étape distincte, et seulement
+	    lorsqu'il en exprimera le souhait. Nous devrons donc conserver cette liste tout au long de la visite, dans une <span class="italique">variable de session</span> libellée <b><span style="color:#000080;">"caddy"</span></b> (Nous appellerons désormais <span class="italique">variables de session</span> les valeurs mémorisées dans l'objet
+	    <b>cherrypy.session</b>).</p>
+          <p>La ligne 107 combine deux formatages successifs, le premier pour fusionner le code HTML produit localement (le nom entré par l'utilisateur) avec
+	    celui d'un patron extrait du dictionnaire <b>glob.html</b>, et le second pour « envelopper » l'ensemble dans un autre patron, commun à toutes
+	    les pages celui-là, par l'intermédiaire de la fonction <b>mep()</b>.</p>
+          <p>La page web ainsi renvoyée est une simple page statique, qui fournit les liens menant à d'autres pages. La suite du script contient les
+	    méthodes correspondantes : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e60423">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e60423" onclick="selectionCode('contenuCoded0e60423', 'IdTitreCode-d0e60423');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">110.<br/>111.<br/>112.<br/>113.<br/>114.<br/>115.<br/>116.<br/>117.<br/>118.<br/>119.<br/>120.<br/>121.<br/>122.<br/>123.<br/>124.<br/>125.<br/>126.<br/>127.<br/>128.<br/>129.<br/>130.<br/>131.<br/>132.<br/>133.<br/>134.<br/>135.<br/>136.<br/>137.<br/>138.<br/>139.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e60423">     <code class="python_keyword1">def</code> <code class="python_function">reserver</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Retouver le nom utilisateur dans les variables de session :</code>
+      nom <code class="python_operator">=</code>cherrypy.session[<code class="python_literal1">"nom"</code>]
+      <code class="python_comment1"># Retrouver la liste des spectacles proposés :</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"SELECT ref_spt, titre, date, prix_pl, vendues FROM spectacles"</code>
+      res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req)	      <code class="python_comment1"># On obtient une liste de tuples</code>
+      <code class="python_comment1"># Construire un tableau html pour lister les infos trouvées :</code>
+      tabl <code class="python_operator">=</code><code class="python_literal1">'&lt;table border="1" cellpadding="5"&gt;</code><code class="python_literal4">\n</code><code class="python_literal1">'</code>
+      ligneTableau <code class="python_operator">=</code><code class="python_literal1">"&lt;tr&gt;"</code> <code class="python_operator">+</code><code class="python_literal1">"&lt;td&gt;{}&lt;/td&gt;"</code><code class="python_operator">*</code><code class="python_digit">5</code> <code class="python_operator">+</code><code class="python_literal1">"&lt;/tr&gt;</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>
+      <code class="python_comment1"># Ajouter une ligne en haut du tableau avec les en-têtes de colonnes :</code>
+      tabl <code class="python_operator">+=</code> ligneTableau.\
+      <code class="python_function">format</code><code class="python_operator">(</code><code class="python_literal1">"Réf."</code>, <code class="python_literal1">"Titre"</code>, <code class="python_literal1">"Date"</code>, <code class="python_literal1">"Prix des places"</code>, <code class="python_literal1">"Vendues"</code>)
+      <code class="python_keyword1">for</code> ref, tit, dat, pri, ven <code class="python_keyword1">in</code> res:
+      tabl <code class="python_operator">+=</code>ligneTableau.<code class="python_function">format</code><code class="python_operator">(</code>ref, tit, dat, pri, ven)
+      tabl <code class="python_operator">+=</code><code class="python_literal1">"&lt;/table&gt;"</code>
+      <code class="python_comment1"># Renvoyer une page HTML (assemblage d'un "patron" et de valeurs) :</code>
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"reserver"</code>].<code class="python_function">format</code><code class="python_operator">(</code>tabl, nom))
+  reserver.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">reservations</code><code class="python_operator">(</code>self, tel<code class="python_operator">=</code><code class="python_literal1">""</code>, spect<code class="python_operator">=</code><code class="python_literal1">""</code>, places<code class="python_operator">=</code><code class="python_literal1">""</code>):
+      <code class="python_comment1"># Mémoriser les réservations demandées, dans une variable de session :</code>
+      spect, places <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>spect), <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>places)	      <code class="python_comment1"># conversion en nombres</code>
+      caddy <code class="python_operator">=</code>cherrypy.session[<code class="python_literal1">"caddy"</code>]	  <code class="python_comment1"># récupération état actuel</code>
+      caddy.<code class="python_function">append</code><code class="python_operator">((</code>spect, places))	 <code class="python_comment1"># ajout d'un tuple à la liste</code>
+      cherrypy.session[<code class="python_literal1">"caddy"</code>] <code class="python_operator">=</code>caddy	  <code class="python_comment1"># mémorisation de la liste</code>
+      nSp, nPl <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=len#len"><span>len</span></a><code class="python_operator">(</code>caddy), <code class="python_digit">0</code>
+      <code class="python_keyword1">for</code> c <code class="python_keyword1">in</code> caddy:		   <code class="python_comment1"># totaliser les réservations</code>
+      nPl <code class="python_operator">+=</code> c[<code class="python_digit">1</code>]
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"reservations"</code>].<code class="python_function">format</code><code class="python_operator">(</code>nPl, nSp))
+  reservations.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+</code></pre></div></div>
+          <p>Lignes 110-127 : Cette méthode fait appel à la base de données pour pouvoir afficher la liste des spectacles déjà
+	    encodés. Examinez particulièrement les lignes 116 à 124, qui vous montrent comment vous pouvez très efficacement construire par programme
+	    tout le code HTML décrivant un tableau, en vous servant des techniques de création et de formatage des chaînes de caractères que nous avons vues au
+	    chapitre 10. À la ligne 126, on se sert à nouveau de la même technique pour fusionner le code produit localement avec un patron HTML. </p>
+          <p>Lignes 129-139 : La page web produite ainsi est à nouveau un formulaire. L'examen de son code HTML (voir page ) nous indique que c'est
+	    cette fois la méthode <b>reservations()</b> qui sera invoquée lorsque l'utilisateur actionnera le bouton « Enregistrer ». Cette
+	    méthode réceptionne les valeurs entrées dans le formulaire et les rassemble dans un tuple, puis ajoute celui-ci à la liste contenue dans la
+	    variable de session <b><span style="color:#000080;">"caddy"</span></b>. Elle renvoie ensuite à l'utilisateur une petite page qui l'informe sur l'évolution de ses
+	    demandes.</p>
+          <p>Ligne 131 : Tous les arguments transmis par un formulaire HTML sont des chaînes de caractères. Si ces arguments représentent des
+	    valeurs numériques, il faut donc les convertir dans le type adéquat avant de les utiliser comme telles.</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/100000000000027A000001D2570FABE6.png"><img class="ImgCliquable figure-img-caption" src="./images/100000000000027A000001D2570FABE6.png" alt="Image non disponible" width="442" height="325"/></a></figure></div>
+          <p>Le reste du script est reproduit ci-après. Vous y trouverez les méthodes qui permettent à l'utilisateur « client » de
+	    clôturer sa visite du site en demandant l'enregistrement de ses réservations, ou de revoir des réservations qu'il aurait effectuées
+	    précédemment. Les méthodes concernant les fonctions réservées aux « administrateurs » viennent ensuite. Elles sont
+	    construites sur les mêmes principes et ne nécessitent guère de commentaires.</p>
+          <p>Les requêtes SQL figurant dans les lignes suivantes devraient être assez explicites. Leur description détaillée sort du cadre de cet
+	    ouvrage, et nous ne nous y attarderons donc pas. Si elles vous paraissent quelque peu complexes, ne vous découragez pas : l'apprentissage de ce langage peut
+	    être très progressif. Sachez cependant qu'il s'agit d'un passage obligé si vous souhaitez acquérir une vraie compétence de développeur.
+	    </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e60773">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e60773" onclick="selectionCode('contenuCoded0e60773', 'IdTitreCode-d0e60773');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">141.<br/>142.<br/>143.<br/>144.<br/>145.<br/>146.<br/>147.<br/>148.<br/>149.<br/>150.<br/>151.<br/>152.<br/>153.<br/>154.<br/>155.<br/>156.<br/>157.<br/>158.<br/>159.<br/>160.<br/>161.<br/>162.<br/>163.<br/>164.<br/>165.<br/>166.<br/>167.<br/>168.<br/>169.<br/>170.<br/>171.<br/>172.<br/>173.<br/>174.<br/>175.<br/>176.<br/>177.<br/>178.<br/>179.<br/>180.<br/>181.<br/>182.<br/>183.<br/>184.<br/>185.<br/>186.<br/>187.<br/>188.<br/>189.<br/>190.<br/>191.<br/>192.<br/>193.<br/>194.<br/>195.<br/>196.<br/>197.<br/>198.<br/>199.<br/>200.<br/>201.<br/>202.<br/>203.<br/>204.<br/>205.<br/>206.<br/>207.<br/>208.<br/>209.<br/>210.<br/>211.<br/>212.<br/>213.<br/>214.<br/>215.<br/>216.<br/>217.<br/>218.<br/>219.<br/>220.<br/>221.<br/>222.<br/>223.<br/>224.<br/>225.<br/>226.<br/>227.<br/>228.<br/>229.<br/>230.<br/>231.<br/>232.<br/>233.<br/>234.<br/>235.<br/>236.<br/>237.<br/>238.<br/>239.<br/>240.<br/>241.<br/>242.<br/>243.<br/>244.<br/>245.<br/>246.<br/>247.<br/>248.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e60773">     <code class="python_keyword1">def</code> <code class="python_function">finaliser</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Finaliser l'enregistrement du caddy.</code>
+      nom <code class="python_operator">=</code>cherrypy.session[<code class="python_literal1">"nom"</code>]
+      mail <code class="python_operator">=</code>cherrypy.session[<code class="python_literal1">"mail"</code>]
+      tel <code class="python_operator">=</code>cherrypy.session[<code class="python_literal1">"tel"</code>]
+      caddy <code class="python_operator">=</code>cherrypy.session[<code class="python_literal1">"caddy"</code>]
+      <code class="python_comment1"># Enregistrer les références du client dans la table ad hoc :</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"INSERT INTO clients(nom, e_mail, tel) VALUES(?,?,?)"</code>
+      res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, <code class="python_operator">(</code>nom, mail, tel))
+      <code class="python_comment1"># Récupérer la réf. qui lui a été attribuée automatiquement :</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"SELECT ref_cli FROM clients WHERE nom=?"</code>
+      res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, <code class="python_operator">(</code>nom,))
+      client <code class="python_operator">=</code>res[<code class="python_digit">0</code>][<code class="python_digit">0</code>]      <code class="python_comment1"># extraire le 1er élément du 1er tuple</code>
+      <code class="python_comment1"># Parcours du caddy - enregistrement des places pour chaque spectacle :</code>
+      <code class="python_keyword1">for</code> <code class="python_operator">(</code>spect, places) <code class="python_keyword1">in</code> caddy:
+      <code class="python_comment1"># Rechercher le dernier N° de place déjà réservée pour ce spect. :</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"SELECT MAX(place) FROM reservations WHERE ref_spt =?"</code>
+      res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, <code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>spect),))
+      numP <code class="python_operator">=</code>res[<code class="python_digit">0</code>][<code class="python_digit">0</code>]
+      <code class="python_keyword1">if</code> numP <code class="python_keyword1">is</code> <code class="python_keyword3">None</code>:
+	  numP <code class="python_operator">=</code><code class="python_digit">0</code>
+      <code class="python_comment1"># Générer les numéros de places suivants, les enregistrer :</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"INSERT INTO reservations(ref_spt,ref_cli,place) VALUES(?,?,?)"</code>
+      <code class="python_keyword1">for</code> i <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code>places):
+	  numP <code class="python_operator">+=</code><code class="python_digit">1</code>
+	  res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, <code class="python_operator">(</code>spect, client, numP))
+      <code class="python_comment1"># Enregistrer le nombre de places vendues pour ce spectacle :</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"UPDATE spectacles SET vendues=? WHERE ref_spt=?"</code>
+      res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, <code class="python_operator">(</code>numP, spect))
+      cherrypy.session[<code class="python_literal1">"caddy"</code>] <code class="python_operator">=</code>[]	<code class="python_comment1"># vider le caddy</code>
+      <code class="python_keyword1">return</code> self.<code class="python_function">accesClients</code><code class="python_operator">(</code>)     <code class="python_comment1"># Retour à la page d'accueil</code>
+  finaliser.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">revoir</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Retrouver les infos concernant un client particulier.</code>
+      <code class="python_comment1"># On retrouvera sa référence à l'aide de son adresse courriel :</code>
+      mail <code class="python_operator">=</code>cherrypy.session[<code class="python_literal1">"mail"</code>]
+      req <code class="python_operator">=</code><code class="python_literal1">"SELECT ref_cli, nom, tel FROM clients WHERE e_mail =?"</code>
+      res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, <code class="python_operator">(</code>mail,))
+      client, nom, tel <code class="python_operator">=</code>res[<code class="python_digit">0</code>]
+      <code class="python_comment1"># Spectacles pour lesquels il a acheté des places :</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"SELECT titre, date, place, prix_pl "</code>\
+       <code class="python_literal1">"FROM reservations JOIN spectacles USING (ref_spt) "</code>\
+       <code class="python_literal1">"WHERE ref_cli =? ORDER BY titre, place"</code>
+      res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, <code class="python_operator">(</code>client,))
+      <code class="python_comment1"># Construction d'un tableau html pour lister les infos trouvées :</code>
+      tabl <code class="python_operator">=</code><code class="python_literal1">'&lt;table border="1" cellpadding="5"&gt;</code><code class="python_literal4">\n</code><code class="python_literal1">'</code>
+      ligneTableau <code class="python_operator">=</code><code class="python_literal1">"&lt;tr&gt;"</code> <code class="python_operator">+</code><code class="python_literal1">"&lt;td&gt;{}&lt;/td&gt;"</code><code class="python_operator">*</code><code class="python_digit">4</code> <code class="python_operator">+</code><code class="python_literal1">"&lt;/tr&gt;</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>
+      <code class="python_comment1"># Ajouter une ligne en haut du tableau avec les en-têtes de colonnes :</code>
+      tabl <code class="python_operator">+=</code> ligneTableau.<code class="python_function">format</code><code class="python_operator">(</code><code class="python_literal1">"Titre"</code>, <code class="python_literal1">"Date"</code>, <code class="python_literal1">"N° place"</code>, <code class="python_literal1">"Prix"</code>)
+      tot <code class="python_operator">=</code><code class="python_digit">0</code>		     <code class="python_comment1"># compteur pour prix total</code>
+      <code class="python_keyword1">for</code> titre, date, place, prix <code class="python_keyword1">in</code> res:
+      tabl <code class="python_operator">+=</code> ligneTableau.<code class="python_function">format</code><code class="python_operator">(</code>titre, date, place, prix)
+      tot <code class="python_operator">+=</code> prix
+      <code class="python_comment1"># Ajouter une ligne en bas du tableau avec le total en bonne place :</code>
+      tabl <code class="python_operator">+=</code> ligneTableau.<code class="python_function">format</code><code class="python_operator">(</code><code class="python_literal1">""</code>, <code class="python_literal1">""</code>, <code class="python_literal1">"Total"</code>, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>tot))
+      tabl <code class="python_operator">+=</code> <code class="python_literal1">"&lt;/table&gt;"</code>
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"revoir"</code>].<code class="python_function">format</code><code class="python_operator">(</code>nom, mail, tel, tabl))
+  revoir.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">accesClients</code><code class="python_operator">(</code>self):
+      nom <code class="python_operator">=</code>cherrypy.session[<code class="python_literal1">"nom"</code>]
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"accesClients"</code>].<code class="python_function">format</code><code class="python_operator">(</code>nom))
+  accesClients.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">entrerSpectacles</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"entrerSpectacles"</code>])
+  entrerSpectacles.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">memoSpectacles</code><code class="python_operator">(</code>self, titre <code class="python_operator">=</code><code class="python_literal1">""</code>, date <code class="python_operator">=</code><code class="python_literal1">""</code>, prixPl <code class="python_operator">=</code><code class="python_literal1">""</code>):
+      <code class="python_comment1"># Mémoriser un nouveau spectacle</code>
+      <code class="python_keyword1">if</code> <code class="python_keyword1">not</code> titre <code class="python_keyword1">or</code> <code class="python_keyword1">not</code> date <code class="python_keyword1">or</code> <code class="python_keyword1">not</code> prixPl:
+      <code class="python_keyword1">return</code> <code class="python_literal1">'&lt;h4&gt;Complétez les champs ! [&lt;a href="/"&gt;Retour&lt;/a&gt;]&lt;/h4&gt;'</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"INSERT INTO spectacles (titre, date, prix_pl, vendues) "</code>\
+       <code class="python_literal1">"VALUES (?, ?, ?, ?)"</code>
+      msg <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, <code class="python_operator">(</code>titre, date, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>prixPl), <code class="python_digit">0</code>))
+      <code class="python_keyword1">return</code> self.<code class="python_function">index</code><code class="python_operator">(</code>)      <code class="python_comment1"># Retour à la page d'accueil</code>
+  memoSpectacles.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">toutesReservations</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Lister les réservations effectuées par chaque client</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"SELECT titre, nom, e_mail, COUNT(place) FROM spectacles "</code>\
+       <code class="python_literal1">"LEFT JOIN reservations USING(ref_spt) "</code>\
+       <code class="python_literal1">"LEFT JOIN clients USING (ref_cli) "</code>\
+       <code class="python_literal1">"GROUP BY nom, titre "</code>\
+       <code class="python_literal1">"ORDER BY titre, nom"</code>
+      res <code class="python_operator">=</code>BD.<code class="python_function">executerReq</code><code class="python_operator">(</code>req)
+      <code class="python_comment1"># Construction d'un tableau html pour lister les infos trouvées :</code>
+      tabl <code class="python_operator">=</code><code class="python_literal1">'&lt;table border="1" cellpadding="5"&gt;</code><code class="python_literal4">\n</code><code class="python_literal1">'</code>
+      ligneTableau <code class="python_operator">=</code><code class="python_literal1">"&lt;tr&gt;"</code> <code class="python_operator">+</code><code class="python_literal1">"&lt;td&gt;{}&lt;/td&gt;"</code><code class="python_operator">*</code><code class="python_digit">4</code> <code class="python_operator">+</code><code class="python_literal1">"&lt;/tr&gt;</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>
+      <code class="python_comment1"># Ajouter une ligne en haut du tableau avec les en-têtes de colonnes :</code>
+      tabl <code class="python_operator">+=</code> ligneTableau.\
+      <code class="python_function">format</code><code class="python_operator">(</code><code class="python_literal1">"Titre"</code>, <code class="python_literal1">"Nom du client"</code>, <code class="python_literal1">"Courriel"</code>, <code class="python_literal1">"Places réservées"</code>)
+      <code class="python_keyword1">for</code> tit, nom, mail, pla <code class="python_keyword1">in</code> res:
+      tabl <code class="python_operator">+=</code> ligneTableau.<code class="python_function">format</code><code class="python_operator">(</code>tit, nom, mail, pla)
+      tabl <code class="python_operator">+=</code><code class="python_literal1">"&lt;/table&gt;"</code>
+      <code class="python_keyword1">return</code> <code class="python_function">mep</code><code class="python_operator">(</code>Glob.html[<code class="python_literal1">"toutesReservations"</code>].<code class="python_function">format</code><code class="python_operator">(</code>tabl))
+  toutesReservations.exposed <code class="python_operator">=</code><code class="python_keyword3">True</code>
+ 
+<code class="python_comment1"># === PROGRAMME PRINCIPAL ===</code>
+<code class="python_comment1"># Ouverture de la base de données - création de celle-ci si elle n'existe pas :</code>
+BD <code class="python_operator">=</code><code class="python_function">GestionBD</code><code class="python_operator">(</code>Glob.dbName)
+BD.<code class="python_function">creaTables</code><code class="python_operator">(</code>Glob.tables)
+<code class="python_comment1"># Chargement des "patrons" de pages web dans un dictionnaire global :</code>
+<code class="python_function">chargerPatronsHTML</code><code class="python_operator">(</code>)
+<code class="python_comment1"># Reconfiguration et démarrage du serveur web :</code>
+cherrypy.config.<code class="python_function">update</code><code class="python_operator">(</code>{<code class="python_literal1">"tools.staticdir.root"</code>:os.<code class="python_function">getcwd</code><code class="python_operator">(</code>)})
+cherrypy.<code class="python_function">quickstart</code><code class="python_operator">(</code><code class="python_function">WebSpectacles</code><code class="python_operator">(</code>), config <code class="python_operator">=</code><code class="python_literal1">"tutoriel.conf"</code>)
+</code></pre></div></div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L19-B-2">19-B-2. Les « patrons » HTML<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Les « patrons » HTML utilisés par le script (en tant que chaînes de caractères à formater) sont tous contenus dans un
+	    seul fichier texte, que nous reproduisons intégralement ci-après :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e61815">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e61815" onclick="selectionCode('contenuCoded0e61815', 'IdTitreCode-d0e61815');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/>74.<br/>75.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e61815">[*miseEnPage*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=html"><span>&lt;html&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=head"><span>&lt;head&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=meta "><span>&lt;meta </span></a><code class="html_literal3">content</code><code class="html_operator">=</code><code class="html_literal1">"text/html; charset=utf-8"</code><code class="html_markup"> </code><code class="html_literal3">http-equiv</code><code class="html_operator">=</code><code class="html_literal1">"Content-Type"</code><code class="html_markup">&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=link "><span>&lt;link </span></a><code class="html_literal3">rel</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=stylesheet "><span>stylesheet </span></a><code class="html_literal3">type</code><code class="html_operator">=</code><code class="html_markup">text/css </code><code class="html_literal3">media</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=screen "><span>screen </span></a><code class="html_literal3">href</code><code class="html_operator">=</code><code class="html_literal1">"/annexes/spectacles.css"</code><code class="html_markup">&gt;</code> 
+<code class="html_markup">&lt;/head&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=body"><span>&lt;body&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h1img "><span>&lt;h1&gt;&lt;img </span></a><code class="html_literal3">src</code><code class="html_operator">=</code><code class="html_literal1">"/annexes/python.gif"</code><code class="html_markup">&gt;</code>Grand Théâtre de Python City<code class="html_markup">&lt;/h1&gt;</code> 
+{} 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h3"><span>&lt;h3&gt;</span></a>[<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=a "><span>&lt;a </span></a><code class="html_literal3">href</code><code class="html_operator">=</code><code class="html_literal1">"/"</code><code class="html_markup">&gt;</code>Retour à la page d'accueil<code class="html_markup">&lt;/a&gt;</code>]<code class="html_markup">&lt;/h3&gt;</code> 
+<code class="html_markup">&lt;/body&gt;</code> 
+<code class="html_markup">&lt;/html&gt;</code> 
+########## 
+[*pageAccueil*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=form "><span>&lt;form </span></a><code class="html_literal3">action</code><code class="html_operator">=</code><code class="html_literal1">"/identification"</code><code class="html_markup"> </code><code class="html_literal3">method</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=get"><span>GET&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h4"><span>&lt;h4&gt;</span></a>Veuillez SVP entrer vos coordonnées dans les champs ci-après :<code class="html_markup">&lt;/h4&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=table"><span>&lt;table&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Votre nom :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"nom"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Votre adresse courriel :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"mail"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Votre numéro de téléphone :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"tel"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<code class="html_markup">&lt;/table&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=input "><span>&lt;input </span></a><code class="html_literal3">type</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=submit "><span>submit </span></a><code class="html_literal3">class</code><code class="html_operator">=</code><code class="html_literal1">"button"</code><code class="html_markup"> </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"acces"</code><code class="html_markup"> </code><code class="html_literal3">value</code><code class="html_operator">=</code><code class="html_literal1">"Accès client"</code><code class="html_markup">&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=input "><span>&lt;input </span></a><code class="html_literal3">type</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=submit "><span>submit </span></a><code class="html_literal3">class</code><code class="html_operator">=</code><code class="html_literal1">"button"</code><code class="html_markup"> </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"acces"</code><code class="html_markup"> </code><code class="html_literal3">value</code><code class="html_operator">=</code><code class="html_literal1">"Accès administrateur"</code><code class="html_markup">&gt;</code> 
+<code class="html_markup">&lt;/form&gt;</code> 
+########## 
+[*accesAdmin*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h3ul"><span>&lt;h3&gt;&lt;ul&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=lia "><span>&lt;li&gt;&lt;a </span></a><code class="html_literal3">href</code><code class="html_operator">=</code><code class="html_literal1">"/entrerSpectacles"</code><code class="html_markup">&gt;</code>Ajouter de nouveaux spectacles<code class="html_markup">&lt;/a&gt;&lt;Li&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=lia "><span>&lt;li&gt;&lt;a </span></a><code class="html_literal3">href</code><code class="html_operator">=</code><code class="html_literal1">"/toutesReservations"</code><code class="html_markup">&gt;</code>Lister les réservations<code class="html_markup">&lt;/a&gt;&lt;/li&gt;</code> 
+<code class="html_markup">&lt;/ul&gt;&lt;/h3&gt;</code> 
+########## 
+[*accesClients*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h3"><span>&lt;h3&gt;</span></a>Bonjour, Monsieur {}.<code class="html_markup">&lt;/h3&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h4"><span>&lt;h4&gt;</span></a>Veuillez choisir l'action souhaitée :<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=ul"><span>&lt;ul&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=lia "><span>&lt;li&gt;&lt;a </span></a><code class="html_literal3">href</code><code class="html_operator">=</code><code class="html_literal1">"/reserver"</code><code class="html_markup">&gt;</code>Réserver des places pour un spectacle<code class="html_markup">&lt;/a&gt;&lt;/li&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=lia "><span>&lt;li&gt;&lt;a </span></a><code class="html_literal3">href</code><code class="html_operator">=</code><code class="html_literal1">"/finaliser"</code><code class="html_markup">&gt;</code>Finaliser l'enregistrement des réservations<code class="html_markup">&lt;/a&gt;&lt;/li&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=lia "><span>&lt;li&gt;&lt;a </span></a><code class="html_literal3">href</code><code class="html_operator">=</code><code class="html_literal1">"/revoir"</code><code class="html_markup">&gt;</code>Revoir toutes les réservations effectuées<code class="html_markup">&lt;/a&gt;&lt;/li&gt;</code> 
+<code class="html_markup">&lt;/ul&gt;&lt;/h4&gt;</code> 
+########## 
+[*reserver*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h3"><span>&lt;h3&gt;</span></a>Les spectacles actuellement programmés sont les suivants : <code class="html_markup">&lt;/h3&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=p"><span>&lt;p&gt;</span></a>{}<code class="html_markup">&lt;/p&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=p"><span>&lt;p&gt;</span></a>Les réservations seront faites au nom de : <a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=b"><span>&lt;b&gt;</span></a>{}<code class="html_markup">&lt;/b&gt;</code>.<code class="html_markup">&lt;/p&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=form "><span>&lt;form </span></a><code class="html_literal3">action</code><code class="html_operator">=</code><code class="html_literal1">"/reservations"</code><code class="html_markup"> </code><code class="html_literal3">method</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=get"><span>GET&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=table"><span>&lt;table&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>La réf. du spectacle choisi :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"spect"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Le nombre de places souhaitées :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"places"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<code class="html_markup">&lt;/table&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=input "><span>&lt;input </span></a><code class="html_literal3">type</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=submit "><span>submit </span></a><code class="html_literal3">class</code><code class="html_operator">=</code><code class="html_literal1">"button"</code><code class="html_markup"> </code><code class="html_literal3">value</code><code class="html_operator">=</code><code class="html_literal1">"Enregistrer"</code><code class="html_markup">&gt;</code> 
+<code class="html_markup">&lt;/form&gt;</code> 
+########## 
+[*reservations*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h3"><span>&lt;h3&gt;</span></a>Réservations mémorisées.<code class="html_markup">&lt;/h3&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h4"><span>&lt;h4&gt;</span></a>Vous avez déjà réservé {} place(s) pour {} spectacle(s).<code class="html_markup">&lt;/h4&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h3a "><span>&lt;h3&gt;&lt;a </span></a><code class="html_literal3">href</code><code class="html_operator">=</code><code class="html_literal1">"/reserver"</code><code class="html_markup">&gt;</code>Réserver encore d'autres places<code class="html_markup">&lt;/a&gt;&lt;/h3&gt;</code> 
+########## 
+[*entrerSpectacles*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=form "><span>&lt;form </span></a><code class="html_literal3">action</code><code class="html_operator">=</code><code class="html_literal1">"/memoSpectacles"</code><code class="html_markup">&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=table"><span>&lt;table&gt;</span></a> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Titre du spectacle :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"titre"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Date :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"date"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=trtd"><span>&lt;tr&gt;&lt;td&gt;</span></a>Prix des places :<code class="html_markup">&lt;/td&gt;&lt;td&gt;&lt;input </code><code class="html_literal3">name</code><code class="html_operator">=</code><code class="html_literal1">"prixPl"</code><code class="html_markup">&gt;&lt;/td&gt;&lt;/tr&gt;</code> 
+<code class="html_markup">&lt;/table&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=input "><span>&lt;input </span></a><code class="html_literal3">type</code><code class="html_operator">=</code><a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=submit "><span>submit </span></a><code class="html_literal3">class</code><code class="html_operator">=</code><code class="html_literal1">"button"</code><code class="html_markup"> </code><code class="html_literal3">value</code><code class="html_operator">=</code><code class="html_literal1">"Enregistrer"</code><code class="html_markup">&gt;</code> 
+<code class="html_markup">&lt;/form&gt;</code> 
+########## 
+[*toutesReservations*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h4"><span>&lt;h4&gt;</span></a>Les réservations ci-après ont déjà été effectuées :<code class="html_markup">&lt;/h4&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=p"><span>&lt;p&gt;</span></a>{}<code class="html_markup">&lt;/p&gt;</code> 
+########## 
+[*revoir*] 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h4"><span>&lt;h4&gt;</span></a>Réservations effectuées par :<code class="html_markup">&lt;/h4&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=h3"><span>&lt;h3&gt;</span></a>{}<code class="html_markup">&lt;/h3&gt;&lt;h4&gt;</code>Adresse courriel : {} - Tél : {}<code class="html_markup">&lt;/h4&gt;</code> 
+<a class="html_markup lien_documentation_code" target="_blank" href="https://developer.mozilla.org/fr/search?q=p"><span>&lt;p&gt;</span></a>{}<code class="html_markup">&lt;/p&gt;</code> 
+##########
+</code></pre></div></div>
+          <p>Avec cet exemple un peu élaboré, nous espérons que vous aurez bien compris l'intérêt de séparer le code Python et le code HTML
+	    dans des fichiers distincts, comme nous l'avons fait, afin que l'ensemble de votre production conserve une lisibilité maximale. Une application web est en effet
+	    souvent destinée à grandir et à devenir de plus en plus complexe au fil du temps. Vous devez donc mettre toutes les chances de votre côté pour
+	    qu'elle reste toujours bien structurée et facilement compréhensible. En utilisant des techniques modernes comme la programmation par objets, vous êtes
+	    certainement sur la bonne voie pour progresser rapidement et acquérir une maîtrise très productive.</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/1000000000000272000002DC84922D7E.png"><img class="ImgCliquable figure-img-caption" src="./images/1000000000000272000002DC84922D7E.png" alt="Image non disponible" width="277" height="325"/></a></figure></div>
+          <p>Exercices</p>
+          <p>
+            <span class="italique">Le script précédent peut vous servir de banc d'essai pour exercer vos compétences dans un grand nombre de domaines.</span>
+          </p>
+          <p>.Comme expliqué précédemment, on peut structurer un site web en le fractionnant en plusieurs classes. Il serait judicieux de séparer les
+	    méthodes concernant les « clients » et les « administrateurs » de ce site dans des classes différentes.</p>
+          <p>.Le script tel qu'il est ne fonctionne à peu près correctement que si l'utilisateur remplit correctement tous les champs qui lui sont proposés.
+	    Il serait donc fort utile de lui ajouter une série d'instructions de contrôle des valeurs encodées, avec renvoi de messages d'erreur à
+	    l'utilisateur lorsque c'est nécessaire.</p>
+          <p>.L'accès « administrateurs » permet seulement d'ajouter de nouveaux spectacles, mais non de modifier ou de supprimer ceux qui sont
+	    déjà encodés. Ajoutez donc des méthodes pour implémenter ces fonctions.</p>
+          <p>.L'accès administrateur est libre. Il serait judicieux d'ajouter au script un mécanisme d'authentification par mot de passe, afin que cet accès
+	    soit réservé aux seules personnes possédant le sésame.</p>
+          <p>.L'utilisateur « client » qui se connecte plusieurs fois de suite, est à chaque fois mémorisé comme un nouveau client,
+	    alors qu'il devrait pouvoir ajouter d'autres réservations à son compte existant, éventuellement modifier ses données personnelles, etc. Toutes ces
+	    fonctionnalités pourraient être ajoutées.</p>
+          <p>.Vous aurez probablement remarqué que les <span class="italique"><b>tableaux</b></span> HTML générés dans le script sont produits à partir d'algorithmes
+	    très semblables. Il serait donc intéressant d'écrire une fonction généraliste capable de produire un tel tableau, dont on recevrait la
+	    description dans un dictionnaire ou une liste.</p>
+          <p>.La décoration des pages web générées par le script est définie dans une feuille de style annexe (le fichier <span class="italique">spectacles.css</span>).
+	    Libre à vous d'examiner ce qui se passe si vous enlevez le lien activant cette feuille de style (5<sup>e</sup> ligne du fichier <span class="italique">spectacles.htm</span>), ou si vous
+	    modifiez son contenu, lequel décrit le style à appliquer à chaque balise.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L19-C">19-C. Autres développements<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/100000000000027A00000275A69DDE0F.png"><img class="ImgCliquable figure-img-caption" src="./images/100000000000027A00000275A69DDE0F.png" alt="Image non disponible" width="327" height="325"/></a></figure></div>
+        <p>Si vous cherchez à réaliser un site web très ambitieux, prenez également la peine d'étudier d'autres offres logicielles, comme par
+	  exemple <span class="italique">Karrigell, Django</span>, <span class="italique">Pylons</span>, <span class="italique">TurboGears</span>, <span class="italique">Twisted</span>, <span class="italique">Zope, Plone, </span>... associés à <span class="italique">Apache</span> pour le système
+	  serveur, et <span class="italique">MySQL</span> ou <span class="italique">PostgreSQL</span> pour le gestionnaire de bases de données. Vous aurez compris qu'il s'agit d'un domaine très vaste, où vous
+	  pourrez exercer votre créativité pendant longtemps…</p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_18.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_20.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage97" href="#signetNoteBasPage97">(97)</a></div><div class="ContenuUneNoteBasPage">Veuillez pour cela consulter des ouvrages
+	  plus spécialisés, comme par exemple <span class="italique">Cherrypy Essentials</span>, par Sylvain Hellegouarch - Packt Publishing, Birmingham, 2007. (Un ouvrage de
+	  référence concernant Cherrypy). </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage98" href="#signetNoteBasPage98">(98)</a></div><div class="ContenuUneNoteBasPage">Cherrypy vient tout juste d'être rendu disponible pour la version 3 de Python au moment où
+	    nous écrivons ces lignes. Parmi les autres outils mentionnés ici, plusieurs sont encore en cours d'adaptation, mais ils restent de toute façon
+	    parfaitement utilisables avec les versions antérieures de Python.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage99" href="#signetNoteBasPage99">(99)</a></div><div class="ContenuUneNoteBasPage">Si vous avez choisi le
+	    n<sup>o</sup> de port par défaut (80) dans le fichier de configuration, il est inutile de le rappeler dans les adresses, puisque c'est ce numéro de port qui
+	    est utilisé par défaut par la plupart des navigateurs. Vous pouvez donc dans ce cas vous connecter à votre nouveau site en entrant simplement :
+	    <span class="italique">http://localhost</span> .</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage100" href="#signetNoteBasPage100">(100)</a></div><div class="ContenuUneNoteBasPage">Attention : les sessions ne pourront être distinguées qu'au départ de machines différentes (utilisant des
+	    navigateurs quelconques), ou bien de navigateurs différents fonctionnant sur la même machine. Si vous lancez deux instances du même navigateur sur la
+	    même machine, elles vont utiliser des cookies communs, ce qui signifie que le serveur ne pourra pas différencier les requêtes émanant de l'une ou
+	    de l'autre. En d'autres termes, ces deux instances du même navigateur partageront la même session.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage101" href="#signetNoteBasPage101">(101)</a></div><div class="ContenuUneNoteBasPage">Le dessin du serpent est le logo du logiciel libre <span class="italique"><b>WebCamSpy</b></span> (ce logiciel est écrit en
+	  Python).<br/>
+		 Voir : <span class="italique">http://webcamspy.sourceforge.net/</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage102" href="#signetNoteBasPage102">(102)</a></div><div class="ContenuUneNoteBasPage">Vous y verrez notamment que nous y recréons un nouvel objet connexion à chaque requête, ce qui n'est guère heureux mais
+	    résulte du fait que SQLite ne permet pas d'utiliser au sein d'un <span class="italique">thread</span> un objet connexion créé dans un autre <span class="italique">thread</span>. Il faudrait
+	    donc : soit faire en sorte que l'application n'utilise en tout et pour tout qu'un seul <span class="italique">thread</span>, soit qu'on lui ajoute la fonctionnalité nécessaire
+	    pour identifier les <span class="italique">threads</span> courants, soit utiliser un autre SGBDR que SQLite … Tout cela est réalisable, mais demanderait son lot d'explications et
+	    nous ferait sortir du cadre de cet ouvrage. Vous trouverez une introduction aux <span class="italique">threads</span> à la page .</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

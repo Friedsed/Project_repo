@@ -1,0 +1,1221 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L15">15. Classes et interfaces graphiques</a><ul class="nav-sommaire-ul Indentation15">
+      
+      
+      <li><a class="summaryIndent1" href="#L15-A">15-A. Code des couleurs : un petit projet bien encapsulé</a><ul class="nav-sommaire-ul Indentation15-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L15-A-1">15-A-1. Cahier des charges de notre programme</a></li>
+        <li><a class="summaryIndent2" href="#L15-A-2">15-A-2. Mise en œuvre concrète</a></li>
+        <li><a class="summaryIndent2" href="#L15-A-3">15-A-3. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L15-B">15-B. Petit train : héritage, échange d'informations entre classes</a><ul class="nav-sommaire-ul Indentation15-B">
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L15-B-1">15-B-1. Cahier des charges</a></li>
+        <li><a class="summaryIndent2" href="#L15-B-2">15-B-2. Implémentation</a></li>
+        <li><a class="summaryIndent2" href="#L15-B-3">15-B-3. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L15-C">15-C. OscilloGraphe : un widget personnalisé</a><ul class="nav-sommaire-ul Indentation15-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L15-C-1">15-C-1. Expérimentation</a></li>
+        <li><a class="summaryIndent2" href="#L15-C-2">15-C-2. Cahier des charges</a></li>
+        <li><a class="summaryIndent2" href="#L15-C-3">15-C-3. Implémentation</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L15-D">15-D. Curseurs : un widget composite</a><ul class="nav-sommaire-ul Indentation15-D">
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L15-D-1">15-D-1. Présentation du widget Scale</a></li>
+        <li><a class="summaryIndent2" href="#L15-D-2">15-D-2. Construction d'un panneau de contrôle à trois curseurs</a><ul class="nav-sommaire-ul Indentation15-D-2">
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L15-D-2-A">15-D-2-A. Commentaires</a></li>
+          <li><a class="summaryIndent3" href="#L15-D-2-B">15-D-2-B. Propagation des événements</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L15-E">15-E. Intégration de widgets composites dans une application synthèse</a><ul class="nav-sommaire-ul Indentation15-E">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L15-E-1">15-E-1. Commentaires</a></li>
+      </ul></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_14.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_16.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L15">15. Classes et interfaces graphiques<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span class="italique">La programmation orientée objet convient particulièrement bien au développement d'applications avec interface graphique. Des bibliothèques de
+	  classes comme tkinter ou wxPython fournissent une base de widgets très étoffée, que nous pouvons adapter à nos besoins par dérivation. Dans ce
+	  chapitre, nous allons utiliser à nouveau la bibliothèque tkinter, mais en appliquant les concepts décrits dans les pages précédentes, et en nous
+	  efforçant de mettre en évidence les avantages qu'apporte l'orientation objet dans nos programmes.</span>
+      </p>
+      
+		<h3 class="TitreSection1" id="L15-A">15-A. Code des couleurs : un petit projet bien encapsulé<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous allons commencer par un petit projet qui nous a été inspiré par le cours d'initiation à l'électronique. L'application que nous
+	  décrivons ci-après permet de retrouver rapidement le code de trois couleurs qui correspond à une résistance électrique de valeur bien
+	  déterminée.</p>
+        <p>Pour rappel, la fonction des résistances électriques consiste à s'opposer (à résister) plus ou moins bien au passage du courant. Les
+	  résistances se présentent concrètement sous la forme de petites pièces tubulaires cerclées de bandes de couleur (en général 3). Ces
+	  bandes de couleur indiquent la valeur numérique de la résistance, en fonction du code suivant :</p>
+        <p>Chaque couleur correspond conventionnellement à l'un des chiffres de zéro à neuf :</p>
+        <p>Noir = 0 ; Brun = 1 ; Rouge = 2 ; Orange = 3 ; Jaune = 4 ;<br/>
+		 Vert = 5 ; Bleu = 6 ; Violet = 7 ; Gris = 8 ; Blanc = 9.</p>
+        <p>On oriente la résistance de manière telle que les bandes colorées soient placées à gauche. La valeur de la résistance -
+	  exprimée en ohms (<b>Ω</b>) - s'obtient en lisant ces bandes colorées également à partir de la gauche : les deux premières
+	  bandes indiquent les deux premiers chiffres de la valeur numérique ; il faut ensuite accoler à ces deux chiffres un nombre de zéros égal à
+	  l'indication fournie par la troisième bande.</p>
+        <p>Exemple concret : supposons qu'à partir de la gauche, les bandes colorées soient jaune, violette et verte.<br/>
+		 La valeur de cette résistance est 4700000 <b>Ω </b>, ou 4700 <b>kΩ</b> , ou encore 4,7 <b>MΩ</b> .</p>
+        <p>Ce système ne permet évidemment de préciser une valeur numérique qu'avec deux chiffres significatifs seulement. Il est toutefois
+	  considéré comme largement suffisant pour la plupart des applications électroniques « ordinaires » (radio, TV, etc.).</p>
+        
+		<h4 class="TitreSection2" id="L15-A-1">15-A-1. Cahier des charges de notre programme<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image36.png" alt="Image non disponible" width="273" height="189"/></figure></div>
+          <p>Notre application doit faire apparaître une fenêtre comportant un dessin de la résistance, ainsi qu'un champ d'entrée dans lequel
+	    l'utilisateur peut encoder une valeur numérique. Un bouton « Montrer » déclenche la modification du dessin de la résistance, de
+	    telle façon que les trois bandes de couleur se mettent en accord avec la valeur numérique introduite.</p>
+          <p>Contrainte : Le programme doit accepter toute entrée numérique fournie sous forme entière ou réelle, dans les limites de 10 à
+	    10<sup>11</sup><b>Ω</b>. Par exemple, une valeur telle que 4.78e6 doit être acceptée et arrondie correctement, c'est-à-dire convertie en 4800000
+	    <b>Ω</b>.<br/></p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L15-A-2">15-A-2. Mise en œuvre concrète<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Nous construisons le corps de cette application simple sous la forme d'une classe. Nous voulons vous montrer ainsi comment une classe peut servir d'<span class="italique">espace
+	    de noms commun</span>, dans lequel vous pouvez <span class="italique">encapsuler</span> vos variables et nos fonctions. Le principal intérêt de procéder ainsi est que cela vous
+	    permet de vous passer de variables globales. En effet :</p>
+          <ul class="ListeDVP">
+            <li>Mettre en route l'application se résumera à instancier un objet de cette classe.</li>
+            <li>Les fonctions que l'on voudra y mettre en œuvre seront les <span class="italique">méthodes</span> de cet objet-application.</li>
+            <li>À l'intérieur de ces méthodes, il suffira de rattacher un nom de variable au paramètre <b>self</b> pour que cette variable soit accessible
+	      de partout à l'intérieur de l'objet. Une telle <span class="italique">variable d'instance</span> est donc tout à fait l'équivalent d'une variable globale (mais
+	      seulement à l'intérieur de l'objet), puisque toutes les autres méthodes de cet objet peuvent y accéder par l'intermédiaire de
+	      <b>self</b>.<br/></li>
+          </ul>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e33741">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e33741" onclick="selectionCode('contenuCoded0e33741', 'IdTitreCode-d0e33741');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e33741" class="contenuCode"><code class="python_keyword1">class</code> <code class="python_function">Application</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>): 
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self): 
+      <code class="python_literal2">"""Constructeur de la fenêtre principale"""</code> 
+      self.root <code class="python_operator">=</code><code class="python_function">Tk</code><code class="python_operator">(</code>) 
+      self.root.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">'Code des couleurs'</code>) 
+      self.<code class="python_function">dessineResistance</code><code class="python_operator">(</code>) 
+      <code class="python_function">Label</code><code class="python_operator">(</code>self.root, text <code class="python_operator">=</code><code class="python_literal1">"Entrez la valeur de la résistance, en ohms :"</code>).\ 
+	  <code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">2</code>, column <code class="python_operator">=</code><code class="python_digit">1</code>, columnspan <code class="python_operator">=</code><code class="python_digit">3</code>) 
+      <code class="python_function">Button</code><code class="python_operator">(</code>self.root, text <code class="python_operator">=</code><code class="python_literal1">'Montrer'</code>, command <code class="python_operator">=</code>self.changeCouleurs).\ 
+	  <code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">3</code>, column <code class="python_operator">=</code><code class="python_digit">1</code>) 
+      <code class="python_function">Button</code><code class="python_operator">(</code>self.root, text <code class="python_operator">=</code><code class="python_literal1">'Quitter'</code>, command <code class="python_operator">=</code>self.root.quit).\ 
+	  <code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">3</code>, column <code class="python_operator">=</code><code class="python_digit">3</code>) 
+      self.entree <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>self.root, width <code class="python_operator">=</code><code class="python_digit">14</code>) 
+      self.entree.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">3</code>, column <code class="python_operator">=</code><code class="python_digit">2</code>) 
+      <code class="python_comment1"># Code des couleurs pour les valeurs de zéro à neuf :</code>
+      self.cc <code class="python_operator">=</code> [<code class="python_literal1">'black'</code>,<code class="python_literal1">'brown'</code>,<code class="python_literal1">'red'</code>,<code class="python_literal1">'orange'</code>,<code class="python_literal1">'yellow'</code>, 
+	 <code class="python_literal1">'green'</code>,<code class="python_literal1">'blue'</code>,<code class="python_literal1">'purple'</code>,<code class="python_literal1">'grey'</code>,<code class="python_literal1">'white'</code>] 
+      self.root.<code class="python_function">mainloop</code><code class="python_operator">(</code>) 
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">dessineResistance</code><code class="python_operator">(</code>self): 
+      <code class="python_literal2">"""Canevas avec un modèle de résistance à trois lignes colorées"""</code> 
+      self.can <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>self.root, width<code class="python_operator">=</code><code class="python_digit">250</code>, height <code class="python_operator">=</code><code class="python_digit">100</code>, bg <code class="python_operator">=</code><code class="python_literal1">'ivory'</code>) 
+      self.can.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">1</code>, column <code class="python_operator">=</code><code class="python_digit">1</code>, columnspan <code class="python_operator">=</code><code class="python_digit">3</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>, padx <code class="python_operator">=</code><code class="python_digit">5</code>) 
+      self.can.<code class="python_function">create_line</code><code class="python_operator">(</code><code class="python_digit">10</code>, <code class="python_digit">50</code>, <code class="python_digit">240</code>, <code class="python_digit">50</code>, width <code class="python_operator">=</code><code class="python_digit">5</code>)	       <code class="python_comment1"># fils</code>
+      self.can.<code class="python_function">create_rectangle</code><code class="python_operator">(</code><code class="python_digit">65</code>, <code class="python_digit">30</code>, <code class="python_digit">185</code>, <code class="python_digit">70</code>, fill <code class="python_operator">=</code><code class="python_literal1">'light grey'</code>, width <code class="python_operator">=</code><code class="python_digit">2</code>) 
+      <code class="python_comment1"># Dessin des trois lignes colorées (noires au départ) :</code>
+      self.ligne <code class="python_operator">=</code>[]	     <code class="python_comment1"># on mémorisera les trois lignes dans 1 liste</code>
+      <code class="python_keyword1">for</code> x <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code><code class="python_digit">85</code>,<code class="python_digit">150</code>,<code class="python_digit">24</code>): 
+      self.ligne.<code class="python_function">append</code><code class="python_operator">(</code>self.can.<code class="python_function">create_rectangle</code><code class="python_operator">(</code>x,<code class="python_digit">30</code>,x<code class="python_operator">+</code><code class="python_digit">12</code>,<code class="python_digit">70</code>, 
+			      fill<code class="python_operator">=</code><code class="python_literal1">'black'</code>,width<code class="python_operator">=</code><code class="python_digit">0</code>)) 
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">changeCouleurs</code><code class="python_operator">(</code>self): 
+      <code class="python_literal2">"""Affichage des couleurs correspondant à la valeur entrée"""</code> 
+      self.v1ch <code class="python_operator">=</code> self.entree.<code class="python_function">get</code><code class="python_operator">(</code>)	 <code class="python_comment1"># cette méthode renvoie une chaîne</code>
+      <code class="python_keyword1">try</code>: 
+      v <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>self.v1ch)	 <code class="python_comment1">#conversion en valeur numérique</code>
+      <code class="python_keyword1">except</code>: 
+      err <code class="python_operator">=</code><code class="python_digit">1</code>		  <code class="python_comment1"># erreur : entrée non numérique</code>
+      <code class="python_keyword1">else</code>: 
+      err <code class="python_operator">=</code><code class="python_digit">0</code> 
+      <code class="python_keyword1">if</code> err <code class="python_operator">==</code><code class="python_digit">1</code> <code class="python_keyword1">or</code> v <code class="python_operator">&lt;</code> <code class="python_digit">10</code> <code class="python_keyword1">or</code> v <code class="python_operator">&gt;</code> <code class="python_digit">1e11</code> : 
+      self.<code class="python_function">signaleErreur</code><code class="python_operator">(</code>)	 <code class="python_comment1"># entrée incorrecte ou hors limites</code>
+      <code class="python_keyword1">else</code>: 
+      li <code class="python_operator">=</code>[<code class="python_digit">0</code>]<code class="python_operator">*</code><code class="python_digit">3</code> 	     <code class="python_comment1"># liste des 3 codes à afficher </code>
+      logv <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code><code class="python_function">log10</code><code class="python_operator">(</code>v))	 <code class="python_comment1"># partie entière du logarithme </code>
+      ordgr <code class="python_operator">=</code> <code class="python_digit">10</code><code class="python_operator">**</code>logv		<code class="python_comment1"># ordre de grandeur </code>
+      <code class="python_comment1"># extraction du premier chiffre significatif : </code>
+      li[<code class="python_digit">0</code>] <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>v<code class="python_operator">/</code>ordgr)	 <code class="python_comment1"># partie entière</code>
+      decim <code class="python_operator">=</code> v<code class="python_operator">/</code>ordgr <code class="python_operator">-</code> li[<code class="python_digit">0</code>]	   <code class="python_comment1"># partie décimale </code>
+      <code class="python_comment1"># extraction du second chiffre significatif :</code>
+      li[<code class="python_digit">1</code>] <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>decim<code class="python_operator">*</code><code class="python_digit">10</code> <code class="python_operator">+</code><code class="python_digit">.5</code>)      <code class="python_comment1"># +.5 pour arrondir correctement </code>
+      <code class="python_comment1"># nombre de zéros à accoler aux 2 chiffres significatifs :</code>
+      li[<code class="python_digit">2</code>] <code class="python_operator">=</code> logv <code class="python_operator">-</code><code class="python_digit">1</code> 
+      <code class="python_comment1"># Coloration des 3 lignes :</code>
+      <code class="python_keyword1">for</code> n <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code><code class="python_digit">3</code>): 
+	  self.can.<code class="python_function">itemconfigure</code><code class="python_operator">(</code>self.ligne[n], fill <code class="python_operator">=</code>self.cc[li[n]]) 
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">signaleErreur</code><code class="python_operator">(</code>self): 
+      self.entree.<code class="python_function">configure</code><code class="python_operator">(</code>bg <code class="python_operator">=</code><code class="python_literal1">'red'</code>)	     <code class="python_comment1"># colorer le fond du champ</code>
+      self.root.<code class="python_function">after</code><code class="python_operator">(</code><code class="python_digit">1000</code>, self.videEntree)	  <code class="python_comment1"># après 1 seconde, effacer </code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">videEntree</code><code class="python_operator">(</code>self): 
+      self.entree.<code class="python_function">configure</code><code class="python_operator">(</code>bg <code class="python_operator">=</code><code class="python_literal1">'white'</code>)      <code class="python_comment1"># rétablir le fond blanc</code>
+      self.entree.<code class="python_function">delete</code><code class="python_operator">(</code><code class="python_digit">0</code>, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=len#len"><span>len</span></a><code class="python_operator">(</code>self.v1ch))	 <code class="python_comment1"># enlever les car. présents</code>
+ 
+<code class="python_comment1"># Programme principal :</code>
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code> <code class="python_literal1">'__main__'</code>: 
+  <code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code> 
+  <code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> log10	<code class="python_comment1"># logarithmes en base 10</code>
+  f <code class="python_operator">=</code> <code class="python_function">Application</code><code class="python_operator">(</code>)	       <code class="python_comment1"># instanciation de l'objet application</code></code></pre></div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L15-A-3">15-A-3. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>Ligne 1 : La classe est définie comme une nouvelle classe indépendante (elle ne dérive d'aucune classe parente préexistante, mais
+	      seulement de <b>object</b>, « ancêtre » de toutes les classes).</li>
+            <li>Lignes 2 à 14 : Le constructeur de la classe instancie les widgets nécessaires : espace graphique, libellés et boutons. Afin
+	      d'améliorer la lisibilité du programme, cependant, nous avons placé l'instanciation du canevas (avec le dessin de la résistance) dans une
+	      méthode distincte : <b>dessineResistance()</b>. Veuillez remarquer aussi que pour obtenir un code plus compact, nous ne mémorisons pas les boutons et
+	      le libellé dans des variables (comme cela a été expliqué à la page ), parce que nous ne souhaitons pas y faire référence ailleurs
+	      dans le programme. Le positionnement des widgets dans la fenêtre utilise la méthode <b>grid()</b> décrite à la page .</li>
+            <li>Lignes 15-17 : Le code des couleurs est mémorisé dans une simple liste.</li>
+            <li>Ligne 18 : La dernière instruction du constructeur démarre l'application. Si vous préférez démarrer l'application
+	      indépendamment de sa création, vous devez supprimer cette ligne, et reporter l'appel à <b>mainloop()</b> au niveau principal du programme, en ajoutant
+	      une instruction : <b><span style="color:#000080;">f.root.mainloop()</span></b> à la ligne 71.</li>
+            <li>Lignes 20 à 30 : Le dessin de la résistance se compose d'une ligne et d'un premier rectangle gris clair, pour le corps de la résistance et
+	      ses deux fils. Trois autres rectangles figureront les bandes colorées que le programme devra modifier en fonction des entrées de l'utilisateur. Ces bandes
+	      sont noires au départ ; elles sont référencées dans la liste <b>self.ligne</b>.</li>
+            <li>Lignes 32 à 53 : Ces lignes contiennent l'essentiel de la fonctionnalité du programme. L'entrée brute fournie par l'utilisateur est
+	      acceptée sous la forme d'une chaîne de caractères.<br/>
+		 À la ligne 36, on essaie de convertir cette chaîne en une valeur numérique de type <span class="italique">float</span>. Si la conversion échoue, on mémorise
+		   l'erreur. Si l'on dispose bien d'une valeur numérique, on vérifie ensuite qu'elle se situe effectivement dans l'intervalle autorisé (de
+		   10 Ω à 10<sup>11</sup> Ω). Si une erreur est détectée, on signale à l'utilisateur que son entrée est incorrecte en
+		   colorant de rouge le fond du champ d'entrée, qui est ensuite vidé de son contenu (lignes 55 à 61).</li>
+            <li>Lignes 45-46 : Les mathématiques viennent à notre secours pour extraire de la valeur numérique son ordre de grandeur (c'est-à-dire
+	      l'exposant de 10 le plus proche). Veuillez consulter un ouvrage de mathématiques pour de plus amples explications concernant les logarithmes.</li>
+            <li>Lignes 47-48 : Une fois connu l'ordre de grandeur, il devient relativement facile d'extraire du nombre traité ses deux premiers chiffres
+	      significatifs. Exemple : supposons que la valeur entrée soit 31687. Le logarithme de ce nombre est 4,50088... dont la partie entière (4) nous donne
+	      l'ordre de grandeur de la valeur entrée (soit 10<sup>4</sup>). Pour extraire de celle-ci son premier chiffre significatif, il suffit de la diviser par
+	      10<sup>4</sup>, soit 10000, et de conserver seulement la partie entière du résultat (3).</li>
+            <li>Lignes 49 à 51 : Le résultat de la division effectuée dans le paragraphe précédent est 3,1687. Nous récupérons la
+	      partie décimale de ce nombre à la ligne 49, soit 0,1687 dans notre exemple. Si nous le multiplions par dix, ce nouveau résultat comporte une partie
+	      entière qui n'est rien d'autre que notre second chiffre significatif (1 dans notre exemple).<br/>
+		 Nous pourrions facilement extraire ce dernier chiffre, mais puisque c'est le dernier, nous souhaitons encore qu'il soit correctement arrondi. Pour ce faire, il
+		   suffit d'ajouter une demi unité au produit de la multiplication par dix, avant d'en extraire la valeur entière. Dans notre exemple, en effet, ce
+		   calcul donnera donc 1,687 + 0,5 = 2,187 , dont la partie entière (2) est bien la valeur arrondie recherchée.</li>
+            <li>Ligne 53 : Le nombre de zéros à accoler aux deux chiffres significatifs correspond au calcul de l'ordre de grandeur. Il suffit de retirer une
+	      unité au logarithme.</li>
+            <li>Ligne 56 : Pour attribuer une nouvelle couleur à un objet déjà dessiné dans un canevas, on utilise la méthode
+	      <b>itemconfigure()</b>. Nous utilisons donc cette méthode pour modifier l'option <b>fill</b> de chacune des bandes colorées, en utilisant les noms de
+	      couleur extraits de la liste <b>self.cc</b> grâce à aux trois indices <b>li[1]</b>, <b>li[2]</b> et <b>li[3]</b> qui contiennent les 3 chiffres
+	      correspondants.</li>
+          </ul>
+          <p>Exercices</p>
+          <p>.Modifiez le script ci-dessus de telle manière que le fond d'image devienne bleu clair (<span class="italique">light blue</span>), que le corps de la résistance devienne
+	    beige (<span class="italique">beige</span>), que le fil de cette résistance soit plus fin, et que les bandes colorées indiquant la valeur soient plus larges.</p>
+          <p>.Modifiez le script ci-dessus de telle manière que l'image dessinée soit deux fois plus grande.</p>
+          <p><span style="color:#000000;">.</span>Modifiez le script ci-dessus de telle manière qu'il devienne possible d'entrer aussi des valeurs de résistances
+	    comprises entre 1 et 10 <b>Ω</b>. Pour ces valeurs, le premier anneau coloré devra rester noir, les deux autres indiqueront la valeur en <b>Ω</b> et
+	    dixièmes d'<b>Ω</b>.</p>
+          <p>.Modifiez le script ci-dessus de telle façon que le bouton « Montrer » ne soit plus nécessaire. Dans votre script modifié,
+	    il suffira de frapper &lt;<span class="italique">Enter</span>&gt; après avoir entré la valeur de la résistance, pour que l'affichage s'active.</p>
+          <p>.Modifiez le script ci-dessus de telle manière que les trois bandes colorées redeviennent noires dans les cas où l'utilisateur fournit une
+	    entrée inacceptable.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L15-B">15-B. Petit train : héritage, échange d'informations entre classes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans l'exercice précédent, nous n'avons exploité qu'une seule caractéristique des classes : <span class="italique">l'encapsulation</span>. Celle-ci nous a
+	  permis d'écrire un programme dans lequel les différentes fonctions (qui sont donc devenues des <span class="italique">méthodes</span>) peuvent chacune accéder à un
+	  même <span class="italique">pool</span> de variables : toutes celles qui sont définies comme étant attachées à <b>self</b>. Toutes ces variables peuvent être
+	  considérées en quelque sorte comme des variables globales à l'intérieur de l'objet.</p>
+        <p>Comprenez bien toutefois qu'il ne s'agit pas de véritables variables globales. Elles restent en effet strictement confinées à l'intérieur de
+	  l'objet, et il est déconseillé de vouloir y accéder de l'extérieur<a class="signetNoteBasPage" id="signetNoteBasPage75" href="#noteBasPage75">(75)</a>. D'autre part, tous les
+		   objets que vous instancierez à partir d'une même classe posséderont chacun leur propre jeu de ces variables, qui sont donc bel et bien
+		   <span class="italique">encapsulées</span> dans ces objets. On les appelle pour cette raison des <span class="italique">attributsd'instance</span>.</p>
+        <p>Nous allons à présent passer à la vitesse supérieure, et réaliser une petite application sur la base de plusieurs classes, afin
+	  d'examiner comment différents objets peuvent <span class="italique">s'échanger des informations par l'intermédiaire de leurs méthodes</span>. Nous allons également
+	  profiter de cet exercice pour vous montrer comment vous pouvez définir la classe principale de votre application graphique par dérivation d'une classe tkinter
+	  préexistante, mettant ainsi à profit le mécanisme d'<span class="italique">héritage</span>.</p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image37.png" alt="Image non disponible" width="498" height="199"/></figure></div>
+        <p>Le projet développé ici est très simple, mais il pourrait constituer une première étape dans la réalisation d'un logiciel de
+	  jeu : nous en fournissons d'ailleurs des exemples plus loin (voir page ). Il s'agit d'une fenêtre contenant un canevas et deux boutons. Lorsque l'on actionne
+	  le premier de ces deux boutons, un petit train apparaît dans le canevas. Lorsque l'on actionne le second bouton, quelques petits personnages apparaissent à
+	  certaines fenêtres des wagons.</p>
+        
+		<h4 class="TitreSection2" id="L15-B-1">15-B-1. Cahier des charges<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>L'application comportera deux classes :</p>
+          <ul class="ListeDVP">
+            <li>La classe <b>Application()</b> sera obtenue par dérivation d'une des classes de base de tkinter : elle mettra en place la fenêtre principale,
+	      son canevas et ses deux boutons.</li>
+            <li>Une classe <b>Wagon()</b>, indépendante, permettra d'instancier dans le canevas 4 objets-wagons similaires, dotés chacun d'une méthode
+	      <b>perso()</b>. Celle-ci sera destinée à provoquer l'apparition d'un petit personnage à l'une quelconque des trois fenêtres du wagon.
+	      L'application principale invoquera cette méthode différemment pour différents objets-wagons, afin de faire apparaître un choix de quelques
+	      personnages.</li>
+          </ul>
+        </div>
+        
+		<h4 class="TitreSection2" id="L15-B-2">15-B-2. Implémentation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e34671">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e34671" onclick="selectionCode('contenuCoded0e34671', 'IdTitreCode-d0e34671');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e34671" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">cercle</code><code class="python_operator">(</code>can, x, y, r):
+  <code class="python_literal1">"dessin d'un cercle de rayon &lt;r&gt; en &lt;x,y&gt; dans le canevas &lt;can&gt;"</code>
+  can.<code class="python_function">create_oval</code><code class="python_operator">(</code>x<code class="python_operator">-</code>r, y<code class="python_operator">-</code>r, x<code class="python_operator">+</code>r, y<code class="python_operator">+</code>r)
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Application</code><code class="python_operator">(</code>Tk):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self):
+      Tk.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)    <code class="python_comment1"># constructeur de la classe parente</code>
+      self.can <code class="python_operator">=</code><code class="python_function">Canvas</code><code class="python_operator">(</code>self, width <code class="python_operator">=</code><code class="python_digit">475</code>, height <code class="python_operator">=</code><code class="python_digit">130</code>, bg <code class="python_operator">=</code><code class="python_literal1">"white"</code>)
+      self.can.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>TOP, padx <code class="python_operator">=</code><code class="python_digit">5</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>)
+      <code class="python_function">Button</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code><code class="python_literal1">"Train"</code>, command <code class="python_operator">=</code>self.dessine).<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT)
+      <code class="python_function">Button</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code><code class="python_literal1">"Hello"</code>, command <code class="python_operator">=</code>self.coucou).<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">dessine</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"instanciation de 4 wagons dans le canevas"</code>
+      self.w1 <code class="python_operator">=</code> <code class="python_function">Wagon</code><code class="python_operator">(</code>self.can, <code class="python_digit">10</code>, <code class="python_digit">30</code>)
+      self.w2 <code class="python_operator">=</code> <code class="python_function">Wagon</code><code class="python_operator">(</code>self.can, <code class="python_digit">130</code>, <code class="python_digit">30</code>)
+      self.w3 <code class="python_operator">=</code> <code class="python_function">Wagon</code><code class="python_operator">(</code>self.can, <code class="python_digit">250</code>, <code class="python_digit">30</code>)
+      self.w4 <code class="python_operator">=</code> <code class="python_function">Wagon</code><code class="python_operator">(</code>self.can, <code class="python_digit">370</code>, <code class="python_digit">30</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">coucou</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"apparition de personnages dans certaines fenêtres"</code>
+      self.w1.<code class="python_function">perso</code><code class="python_operator">(</code><code class="python_digit">3</code>)	      <code class="python_comment1"># 1er wagon, 3e fenêtre</code>
+      self.w3.<code class="python_function">perso</code><code class="python_operator">(</code><code class="python_digit">1</code>)	      <code class="python_comment1"># 3e wagon, 1e fenêtre</code>
+      self.w3.<code class="python_function">perso</code><code class="python_operator">(</code><code class="python_digit">2</code>)	      <code class="python_comment1"># 3e wagon, 2e fenêtre</code>
+      self.w4.<code class="python_function">perso</code><code class="python_operator">(</code><code class="python_digit">1</code>)	      <code class="python_comment1"># 4e wagon, 1e fenêtre</code>
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Wagon</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, canev, x, y):
+      <code class="python_literal1">"dessin d'un petit wagon en &lt;x,y&gt; dans le canevas &lt;canev&gt;"</code>
+      <code class="python_comment1"># mémorisation des paramètres dans des variables d'instance :</code>
+      self.canev, self.x, self.y <code class="python_operator">=</code> canev, x, y
+      <code class="python_comment1"># rectangle de base : 95x60 pixels :</code>
+      canev.<code class="python_function">create_rectangle</code><code class="python_operator">(</code>x, y, x<code class="python_operator">+</code><code class="python_digit">95</code>, y<code class="python_operator">+</code><code class="python_digit">60</code>)
+      <code class="python_comment1"># 3 fenêtres de 25x40 pixels, écartées de 5 pixels :</code>
+      <code class="python_keyword1">for</code> xf <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code>x<code class="python_operator">+</code><code class="python_digit">5</code>, x<code class="python_operator">+</code><code class="python_digit">90</code>, <code class="python_digit">30</code>):
+      canev.<code class="python_function">create_rectangle</code><code class="python_operator">(</code>xf, y<code class="python_operator">+</code><code class="python_digit">5</code>, xf<code class="python_operator">+</code><code class="python_digit">25</code>, y<code class="python_operator">+</code><code class="python_digit">40</code>)
+      <code class="python_comment1"># 2 roues de rayon égal à 12 pixels  :</code>
+      <code class="python_function">cercle</code><code class="python_operator">(</code>canev, x<code class="python_operator">+</code><code class="python_digit">18</code>, y<code class="python_operator">+</code><code class="python_digit">73</code>, <code class="python_digit">12</code>)
+      <code class="python_function">cercle</code><code class="python_operator">(</code>canev, x<code class="python_operator">+</code><code class="python_digit">77</code>, y<code class="python_operator">+</code><code class="python_digit">73</code>, <code class="python_digit">12</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">perso</code><code class="python_operator">(</code>self, fen):
+      <code class="python_literal1">"apparition d'un petit personnage à la fenêtre &lt;fen&gt;"</code>
+      <code class="python_comment1"># calcul des coordonnées du centre de chaque fenêtre :</code>
+      xf <code class="python_operator">=</code> self.x <code class="python_operator">+</code> fen<code class="python_operator">*</code><code class="python_digit">30</code> <code class="python_operator">-</code><code class="python_digit">12</code>
+      yf <code class="python_operator">=</code> self.y <code class="python_operator">+</code> <code class="python_digit">25</code>
+      <code class="python_function">cercle</code><code class="python_operator">(</code>self.canev, xf, yf, <code class="python_digit">10</code>)	  <code class="python_comment1"># visage</code>
+      <code class="python_function">cercle</code><code class="python_operator">(</code>self.canev, xf<code class="python_operator">-</code><code class="python_digit">5</code>, yf<code class="python_operator">-</code><code class="python_digit">3</code>, <code class="python_digit">2</code>)   <code class="python_comment1"># oeil gauche       </code>
+      <code class="python_function">cercle</code><code class="python_operator">(</code>self.canev, xf<code class="python_operator">+</code><code class="python_digit">5</code>, yf<code class="python_operator">-</code><code class="python_digit">3</code>, <code class="python_digit">2</code>)   <code class="python_comment1"># oeil droit</code>
+      <code class="python_function">cercle</code><code class="python_operator">(</code>self.canev, xf, yf<code class="python_operator">+</code><code class="python_digit">5</code>, <code class="python_digit">3</code>)	   <code class="python_comment1"># bouche</code>
+ 
+app <code class="python_operator">=</code> <code class="python_function">Application</code><code class="python_operator">(</code>)
+app.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L15-B-3">15-B-3. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>Lignes 3 à 5 : Nous projetons de dessiner une série de petits cercles. Cette petite fonction nous facilitera le travail en nous
+	      permettant de définir ces cercles à partir de leur centre et leur rayon.</li>
+            <li>Lignes 7 à 13 : La classe principale de notre application est construite par dérivation de la classe de fenêtres
+	      <b>Tk()</b> importée du module <b>tkinter</b>.<a class="signetNoteBasPage" id="signetNoteBasPage76" href="#noteBasPage76">(76)</a> Comme nous l'avons expliqué au
+	      chapitre précédent, le constructeur d'une classe dérivée doit activer lui-même le constructeur de la classe parente, en lui transmettant la
+	      référence de l'instance comme premier argument.<br/>
+		 Les lignes 10 à 13 servent à mettre en place le canevas et les boutons.</li>
+            <li>Lignes 15 à 20 : Ces lignes instancient les 4 objets-wagons, produits à partir de la classe correspondante. Ceci pourrait
+	      être programmé plus élégamment à l'aide d'une boucle et d'une liste, mais nous le laissons ainsi pour ne pas alourdir inutilement les
+	      explications qui suivent.<br/>
+		 Nous voulons placer nos objets-wagons dans le canevas, à des emplacements bien précis : il nous faut donc transmettre quelques informations au
+		   constructeur de ces objets : au moins la référence du canevas, ainsi que les coordonnées souhaitées. Ces considérations nous font
+		   également entrevoir que lorsque nous définirons la classe <b>Wagon()</b>, un peu plus loin, nous devrons associer à sa méthode constructeur
+		   un nombre égal de paramètres afin de réceptionner ces arguments.</li>
+            <li>Lignes 22 à 27 : Cette méthode est invoquée lorsque l'on actionne le second bouton. Elle invoque elle-même la
+	      méthode <b>perso()</b> de certains objets-wagons, avec des arguments différents, afin de faire apparaître les personnages aux fenêtres
+	      indiquées. Ces quelques lignes de code vous montrent donc comment un objet peut communiquer avec un autre, en faisant appel à ses méthodes. Il
+	      s'agit-là du mécanisme central de la programmation par objets : </li>
+          </ul>
+          <blockquote class="citation"><div>Les objets sont des entités programmées qui s<span class="italique">'</span>échangent des messages et interagissent par l<span class="italique">'</span>intermédiaire de leurs
+	    méthodes.</div></blockquote>
+          <p>Idéalement, la méthode <b>coucou()</b> devrait comporter quelques instructions complémentaires, lesquelles vérifieraient d'abord si les
+	    objets-wagons concernés existent bel et bien, avant d'autoriser l'activation d'une de leurs méthodes. Nous n'avons pas inclus ce genre de garde-fou afin que
+	    l'exemple reste aussi simple que possible, mais cela entraîne la conséquence que vous ne pouvez pas actionner le second bouton avant le premier.</p>
+          <ul class="ListeDVP">
+            <li>Lignes 29-30 : La classe <b>Wagon()</b> ne dérive d'aucune autre classe préexistante. Étant donné qu'il s'agit d'une classe
+	      d'objets graphiques, nous devons cependant munir sa méthode constructeur de paramètres, afin de recevoir la référence du canevas auquel les
+	      dessins sont destinés, ainsi que les coordonnées de départ de ces dessins. Dans vos expérimentations éventuelles autour de cet exercice,
+	      vous pourriez bien évidemment ajouter encore d'autres paramètres : taille du dessin, orientation, couleur, vitesse, etc.</li>
+            <li>Lignes 31 à 51 : Ces instructions ne nécessitent guère de commentaires. La méthode <b>perso()</b> est dotée d'un
+	      paramètre qui indique celle des 3 fenêtres où il faut faire apparaître un petit personnage. Ici aussi nous n'avons pas prévu de
+	      garde-fou : vous pouvez invoquer cette méthode avec un argument égal à 4 ou 5, par exemple, ce qui produira des effets incorrects.</li>
+            <li>Lignes 53-54 : Pour cette application, contrairement à la précédente, nous avons préféré séparer la création
+	      de l'objet <b>app</b>, et son démarrage par invocation de <b>mainloop()</b>, dans deux instructions distinctes (en guise d'exemple). Vous pourriez
+	      également condenser ces deux instructions en une seule, laquelle serait alors : <b><span style="color:#000080;">Application().mainloop()</span></b>, et faire
+	      ainsi l'économie d'une variable.</li>
+          </ul>
+          <p>Exercice</p>
+          <p><span style="color:#000000;">.</span>Perfectionnez le script décrit ci-dessus, en ajoutant un paramètre <b>couleur</b> au constructeur de la classe
+	    <b>Wagon()</b>, lequel déterminera la couleur de la cabine du wagon. Arrangez-vous également pour que les fenêtres soient noires au départ, et les
+	    roues grises (pour réaliser ce dernier objectif, ajoutez aussi un paramètre <b>couleur</b> à la fonction <b>cercle()</b>).<br/>
+		 À cette même classe <b>Wagon()</b>, ajoutez encore une méthode <b>allumer()</b>, qui servira à changer la couleur des 3 fenêtres
+		   (initialement noires) en jaune, afin de simuler l'allumage d'un éclairage intérieur.<br/>
+		 Ajoutez un bouton à la fenêtre principale, qui puisse déclencher cet allumage. Profitez de l'amélioration de la fonction <b>cercle()</b> pour
+		   teinter le visage des petits personnages en rose (<span class="italique">pink</span>), leurs yeux et leurs bouches en noir, et instanciez les objets-wagons avec des couleurs
+		   différentes.</p>
+          <p><span style="color:#000000;">.</span>Ajoutez des correctifs a<span style="color:#000000;">u programme précédent, afin que l'on puisse utiliser n'importe quel
+	    bouton dans le désordre, sans que cela ne déclenche une erreur ou un effet bizarre.</span></p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L15-C">15-C. OscilloGraphe : un widget personnalisé<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Le projet qui suit va nous entraîner encore un petit peu plus loin. Nous allons y construire <span class="italique">une nouvelle classe de widget</span>, qu'il sera possible
+	  d'intégrer dans nos projets futurs comme n'importe quel widget standard. Comme la classe principale de l'exercice précédent, cette nouvelle classe sera
+	  construite par dérivation d'une classe tkinter préexistante.</p>
+        <p>Le sujet concret de cette application nous est inspiré par le cours de physique.</p>
+        <p>Pour rappel, un mouvement vibratoire harmonique se définit comme étant la projection d'un mouvement circulaire uniforme sur une droite. Les positions
+	  successives d'un mobile qui effectue ce type de mouvement sont traditionnellement repérées par rapport à une position centrale : on les appelle alors
+	  des <span class="italique">élongations</span>. L'équation qui décrit l'évolution de l'élongation d'un tel mobile au cours du temps est toujours de la forme <img src="./images/formule09.png" alt="Image non disponible" width="179" height="23" class="image_verticale"/>, dans laquelle <span class="italique"><b>e</b></span> représente l'élongation du mobile à tout instant<span class="italique"><b> t</b></span> . Les constantes <span class="italique"><b>A,
+	  f</b></span> et <span class="italique">φ</span> désignent respectivement l'<span class="italique">amplitude</span>, la <span class="italique">fréquence</span> et la <span class="italique">phase</span> du mouvement vibratoire.</p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image38.png" alt="Image non disponible" width="267" height="216"/></figure></div>
+        <p>Le widget que nous allons construire d'abord s'occupera de l'affichage proprement dit. Nous construirons ensuite d'autres widgets pour faciliter l'entrée
+	  des paramètres <span class="italique"><b>A, f</b></span> et <span class="italique">φ</span>. </p>
+        <p>Veuillez donc encoder le script ci-dessous et le sauvegarder dans un fichier, auquel vous donnerez le nom <b>oscillo.py</b>. Vous réaliserez ainsi <span class="italique">un
+	  véritable module contenant une classe</span> (vous pourrez par la suite ajouter d'autres classes dans ce même module, si le cœur vous en
+	  dit).<br/></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e35406">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e35406" onclick="selectionCode('contenuCoded0e35406', 'IdTitreCode-d0e35406');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e35406" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> sin, pi
+ 
+<code class="python_keyword1">class</code> <code class="python_function">OscilloGraphe</code><code class="python_operator">(</code>Canvas):
+  <code class="python_literal1">"Canevas spécialisé, pour dessiner des courbes élongation/temps"</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss <code class="python_operator">=</code><code class="python_keyword3">None</code>, larg<code class="python_operator">=</code><code class="python_digit">200</code>, haut<code class="python_operator">=</code><code class="python_digit">150</code>):
+      <code class="python_literal1">"Constructeur du graphique : axes et échelle horiz."</code>
+      <code class="python_comment1"># construction du widget parent :</code>
+      Canvas.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)		    <code class="python_comment1"># appel au constructeur</code>
+      self.<code class="python_function">configure</code><code class="python_operator">(</code>width<code class="python_operator">=</code>larg, height<code class="python_operator">=</code>haut)	      <code class="python_comment1"># de la classe parente</code>
+      self.larg, self.haut <code class="python_operator">=</code> larg, haut 	     <code class="python_comment1"># mémorisation</code>
+      <code class="python_comment1"># tracé des axes de référence :</code>
+      self.<code class="python_function">create_line</code><code class="python_operator">(</code><code class="python_digit">10</code>, haut<code class="python_operator">/</code><code class="python_digit">2</code>, larg, haut<code class="python_operator">/</code><code class="python_digit">2</code>, arrow<code class="python_operator">=</code>LAST)  <code class="python_comment1"># axe X</code>
+      self.<code class="python_function">create_line</code><code class="python_operator">(</code><code class="python_digit">10</code>, haut<code class="python_operator">-</code><code class="python_digit">5</code>, <code class="python_digit">10</code>, <code class="python_digit">5</code>, arrow<code class="python_operator">=</code>LAST)	       <code class="python_comment1"># axe Y</code>
+      <code class="python_comment1"># tracé d'une échelle avec 8 graduations :</code>
+      pas <code class="python_operator">=</code> <code class="python_operator">(</code>larg<code class="python_operator">-</code><code class="python_digit">25</code>)<code class="python_operator">/</code><code class="python_digit">8.</code>      <code class="python_comment1"># intervalles de l'échelle horizontale</code>
+      <code class="python_keyword1">for</code> t <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code><code class="python_digit">1</code>, <code class="python_digit">9</code>):
+      stx <code class="python_operator">=</code> <code class="python_digit">10</code> <code class="python_operator">+</code> t<code class="python_operator">*</code>pas	    <code class="python_comment1"># +10 pour partir de l'origine</code>
+      self.<code class="python_function">create_line</code><code class="python_operator">(</code>stx, haut<code class="python_operator">/</code><code class="python_digit">2</code><code class="python_operator">-</code><code class="python_digit">4</code>, stx, haut<code class="python_operator">/</code><code class="python_digit">2</code><code class="python_operator">+</code><code class="python_digit">4</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">traceCourbe</code><code class="python_operator">(</code>self, freq<code class="python_operator">=</code><code class="python_digit">1</code>, phase<code class="python_operator">=</code><code class="python_digit">0</code>, ampl<code class="python_operator">=</code><code class="python_digit">10</code>, coul<code class="python_operator">=</code><code class="python_literal1">'red'</code>):
+      <code class="python_literal1">"tracé d'un graphique élongation/temps sur 1 seconde"</code>
+      curve <code class="python_operator">=</code>[] 	     <code class="python_comment1"># liste des coordonnées</code>
+      pas <code class="python_operator">=</code> <code class="python_operator">(</code>self.larg<code class="python_operator">-</code><code class="python_digit">25</code>)<code class="python_operator">/</code><code class="python_digit">1000.</code>      <code class="python_comment1"># l'échelle X correspond à 1 seconde</code>
+      <code class="python_keyword1">for</code> t <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code><code class="python_digit">0</code>,<code class="python_digit">1001</code>,<code class="python_digit">5</code>):       <code class="python_comment1"># que l'on divise en 1000 ms.</code>
+      e <code class="python_operator">=</code> ampl<code class="python_operator">*</code><code class="python_function">sin</code><code class="python_operator">(</code><code class="python_digit">2</code><code class="python_operator">*</code>pi<code class="python_operator">*</code>freq<code class="python_operator">*</code>t<code class="python_operator">/</code><code class="python_digit">1000</code> <code class="python_operator">-</code> phase)
+      x <code class="python_operator">=</code> <code class="python_digit">10</code> <code class="python_operator">+</code> t<code class="python_operator">*</code>pas
+      y <code class="python_operator">=</code> self.haut<code class="python_operator">/</code><code class="python_digit">2</code> <code class="python_operator">-</code> e<code class="python_operator">*</code>self.haut<code class="python_operator">/</code><code class="python_digit">25</code>
+      curve.<code class="python_function">append</code><code class="python_operator">((</code>x,y))
+      n <code class="python_operator">=</code> self.<code class="python_function">create_line</code><code class="python_operator">(</code>curve, fill<code class="python_operator">=</code>coul, smooth<code class="python_operator">=</code><code class="python_digit">1</code>)
+      <code class="python_keyword1">return</code> n		     <code class="python_comment1"># n = numéro d'ordre du tracé</code>
+ 
+<code class="python_comment1">#### Code pour tester la classe : ####</code>
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code> <code class="python_literal1">'__main__'</code>:
+  root <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+  gra <code class="python_operator">=</code> <code class="python_function">OscilloGraphe</code><code class="python_operator">(</code>root, <code class="python_digit">250</code>, <code class="python_digit">180</code>)
+  gra.<code class="python_function">pack</code><code class="python_operator">(</code>)
+  gra.<code class="python_function">configure</code><code class="python_operator">(</code>bg <code class="python_operator">=</code><code class="python_literal1">'ivory'</code>, bd <code class="python_operator">=</code><code class="python_digit">2</code>, relief<code class="python_operator">=</code>SUNKEN)
+  gra.<code class="python_function">traceCourbe</code><code class="python_operator">(</code><code class="python_digit">2</code>, <code class="python_digit">1.2</code>, <code class="python_digit">10</code>, <code class="python_literal1">'purple'</code>)
+  root.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>Le niveau principal du script est constitué par les lignes 35 à 41.<br/>
+		 Comme nous l'avons déjà expliqué à la page , les lignes de code situées après l'instruction <b><span style="color:#000080;">if __name__ == '__main__': </span></b>ne sont pas exécutées si le script est importé en tant que module dans une
+		   autre application. Si on lance le script comme application principale, par contre, ces instructions s'exécutent. Nous disposons ainsi d'un mécanisme
+		   intéressant, qui nous permet d'intégrer des instructions de test à l'intérieur des modules, même si ceux-ci sont destinés à
+		   être importés dans d'autres scripts.</p>
+        <p>Lancez donc l'exécution du script de la manière habituelle. Vous devriez obtenir un affichage similaire à celui qui est reproduit à la page
+	  précédente.</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image39.png"><img class="ImgCliquable figure-img-caption" src="./images/image39.png" alt="Image non disponible" width="154" height="325"/></a></figure></div>
+        
+		<h4 class="TitreSection2" id="L15-C-1">15-C-1. Expérimentation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Nous commenterons les lignes importantes du script un peu plus loin dans ce texte. Mais commençons d'abord par expérimenter quelque peu la classe
+	    que nous venons de construire.</p>
+          <p>Ouvrez donc votre terminal, et entrez les instructions ci-dessous directement à la ligne de commande :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e35887">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e35887" onclick="selectionCode('contenuCoded0e35887', 'IdTitreCode-d0e35887');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e35887" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">from</code> oscillo <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_operator">&gt;&gt;&gt;</code> g1 <code class="python_operator">=</code> <code class="python_function">OscilloGraphe</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> g1.<code class="python_function">pack</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Après importation des classes du module <b>oscillo</b>, nous instancions un premier objet <b>g1</b>, de la classe <b>OscilloGraphe()</b>.</p>
+          <p>Puisque nous ne fournissons aucun argument, l'objet possède les dimensions par défaut, définies dans le constructeur de la classe. Remarquons
+	    au passage que nous n'avons même pas pris la peine de définir d'abord une fenêtre maître pour y placer ensuite notre widget. tkinter nous pardonne
+	    cet oubli et nous en fournit une automatiquement !</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e35935">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e35935" onclick="selectionCode('contenuCoded0e35935', 'IdTitreCode-d0e35935');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e35935" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> g2 <code class="python_operator">=</code> <code class="python_function">OscilloGraphe</code><code class="python_operator">(</code>haut<code class="python_operator">=</code><code class="python_digit">200</code>, larg<code class="python_operator">=</code><code class="python_digit">250</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> g2.<code class="python_function">pack</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> g2.<code class="python_function">traceCourbe</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Par ces instructions, nous créons un second widget de la même classe, en précisant cette fois ses dimensions (hauteur et largeur, dans
+	    n'importe quel ordre).</p>
+          <p>Ensuite, nous activons la méthode <b>traceCourbe()</b> associée à ce widget. Étant donné que nous ne lui fournissons aucun argument,
+	    la sinusoïde qui apparaît correspond aux valeurs prévues par défaut pour les paramètres <span class="italique">A, f</span> et <span class="italique">φ</span>.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e35989">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e35989" onclick="selectionCode('contenuCoded0e35989', 'IdTitreCode-d0e35989');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e35989" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> g3 <code class="python_operator">=</code> <code class="python_function">OscilloGraphe</code><code class="python_operator">(</code>larg<code class="python_operator">=</code><code class="python_digit">220</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> g3.<code class="python_function">configure</code><code class="python_operator">(</code>bg<code class="python_operator">=</code><code class="python_literal1">'white'</code>, bd<code class="python_operator">=</code><code class="python_digit">3</code>, relief<code class="python_operator">=</code>SUNKEN)
+<code class="python_operator">&gt;&gt;&gt;</code> g3.<code class="python_function">pack</code><code class="python_operator">(</code>padx<code class="python_operator">=</code><code class="python_digit">5</code>,pady<code class="python_operator">=</code><code class="python_digit">5</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> g3.<code class="python_function">traceCourbe</code><code class="python_operator">(</code>phase<code class="python_operator">=</code><code class="python_digit">1.57</code>, coul<code class="python_operator">=</code><code class="python_literal1">'purple'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> g3.<code class="python_function">traceCourbe</code><code class="python_operator">(</code>phase<code class="python_operator">=</code><code class="python_digit">3.14</code>, coul<code class="python_operator">=</code><code class="python_literal1">'dark green'</code>)</code></pre></div>
+          <p>Pour comprendre la configuration de ce troisième widget, il faut nous rappeler que la classe <b>OscilloGraphe()</b> a été construite par
+	    dérivation de la classe <b>Canvas()</b>. Elle hérite donc toutes les propriétés de celle-ci, ce qui nous permet de choisir la couleur de fond, la
+	    bordure, etc., en utilisant les mêmes arguments que ceux qui sont à notre disposition lorsque nous configurons un canevas.</p>
+          <p>Nous faisons ensuite apparaître deux tracés successifs, en faisant appel deux fois à la méthode <b>traceCourbe()</b>, à laquelle nous
+	    fournissons des arguments pour la phase et la couleur.</p>
+          <p>Exercice</p>
+          <p><span style="color:#000000;">.</span>Créez un quatrième widget, de taille : 400 × 300, couleur de fond : jaune, et faites-y apparaître
+	    plusieurs courbes correspondant à des fréquences et des amplitudes différentes.</p>
+          <p>Il est temps à présent que nous analysions la structure de la classe qui nous a permis d'instancier tous ces widgets. Nous avons donc
+	    enregistré cette classe dans le module <b>oscillo.py</b> (voir page ).</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L15-C-2">15-C-2. Cahier des charges<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Nous souhaitons définir une nouvelle classe de widget, capable d'afficher automatiquement les graphiques élongation/temps correspondant à
+	    divers mouvements vibratoires harmoniques.</p>
+          <p>Ce widget doit pouvoir être dimensionné à volonté au moment de son instanciation. Il doit faire apparaître deux axes cartésiens
+	    X et Y munis de flèches. L'axe X représentera l'écoulement du temps pendant une seconde au total, et il sera muni d'une échelle comportant 8
+	    intervalles.</p>
+          <p>Une méthode <b>traceCourbe()</b> sera associée à ce widget. Elle provoquera le tracé du graphique élongation/temps pour un mouvement
+	    vibratoire, dont on aura fourni la <span class="italique">fréquence</span> (entre 0.25 et 10 Hz), la <span class="italique">phase</span> (entre 0 et 2<b>π</b> radians) et <span class="italique">l'amplitude</span> (entre 1 et
+	    10 ; échelle arbitraire).</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L15-C-3">15-C-3. Implémentation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>Ligne 4 : La classe <b>OscilloGraphe()</b> est créée par dérivation de la classe <b>Canvas()</b>. Elle hérite donc toutes les
+	      propriétés de celle-ci : on pourra configurer les objets de cette nouvelle classe en utilisant les nombreuses options déjà disponibles pour
+	      la classe <b>Canvas()</b>.</li>
+            <li>Ligne 6 : La méthode constructeur utilise 3 paramètres, qui sont tous optionnels puisque chacun d'entre eux possède une valeur par
+	      défaut. Le paramètre <b>boss</b> ne sert qu'à réceptionner la référence d'une fenêtre maîtresse éventuelle (voir
+	      exemples suivants). Les paramètres <b>larg</b> et <b>haut</b> (largeur et hauteur) servent à assigner des valeurs aux options <b>width</b> et <b>height</b>
+	      du canevas parent, au moment de l'instanciation.</li>
+            <li>Lignes 9-10 : Comme nous l'avons déjà dit à plusieurs reprises, le constructeur d'une classe dérivée doit presque toujours
+	      commencer par activer le constructeur de sa classe parente. Nous ne pouvons en effet hériter toute la fonctionnalité de la classe parente, que si cette
+	      fonctionnalité a été effectivement mise en place et initialisée.<br/>
+		 Nous activons donc le constructeur de la classe <b>Canvas()</b> à la ligne 9, et nous ajustons deux de ses options à la ligne 10. Notez au passage que
+		   nous pourrions condenser ces deux lignes en une seule, qui deviendrait en l'occurrence :<br/><b><span style="color:#000080;">Canvas.__init__(self, width=larg,
+		   height=haut)</span></b>.<br/>
+		 Et comme cela a également déjà été expliqué (cf. page ), nous devons transmettre à ce constructeur la référence de
+		   l'instance présente (<b>self</b>) comme premier argument.</li>
+            <li>Ligne 11 : Il est nécessaire de mémoriser les paramètres <b>larg</b> et <b>haut</b> dans des variables d'instance, parce que nous devrons
+	      pouvoir y accéder aussi dans la méthode <b>traceCourbe()</b>.</li>
+            <li>Lignes 13-14 : Pour tracer les axes X et Y, nous utilisons les paramètres <b>larg</b> et <b>haut</b>, ainsi ces axes sont automatiquement mis à
+	      dimension. L'option <b><span style="color:#000080;">arrow=LAST</span></b> permet de faire apparaître une petite flèche à l'extrémité de chaque
+	      ligne.</li>
+            <li>Lignes 16 à 19 : Pour tracer l'échelle horizontale, on commence par réduire de 25 pixels la largeur disponible, de manière à
+	      ménager des espaces aux deux extrémités. On divise ensuite en 8 intervalles, que l'on visualise sous la forme de 8 petits traits verticaux.</li>
+            <li>Ligne 21 : La méthode <b>traceCourbe()</b> pourra être invoquée avec quatre arguments. Chacun d'entre eux pourra éventuellement
+	      être omis, puisque chacun des paramètres correspondants possède une valeur par défaut. Il sera également possible de fournir les arguments
+	      dans n'importe quel ordre, comme nous l'avons déjà expliqué à la page .</li>
+            <li>Lignes 23 à 31 : Pour le tracé de la courbe, la variable <b>t</b> prend successivement toutes les valeurs de 0 à 1000, et on calcule
+	      à chaque fois l'élongation <b>e</b> correspondante, à l'aide de la formule théorique (ligne 26). Les couples de valeurs <b>t</b> et <b>e</b>
+	      ainsi trouvées sont mises à l'échelle et transformées en coordonnées <b>x, y</b> aux lignes 27 et 28, puis accumulées dans la liste
+	      <b>curve</b>.</li>
+            <li>Lignes 30-31 : La méthode <b>create_line()</b> trace alors la courbe correspondante en une seule opération, et elle renvoie le numéro
+	      d'ordre du nouvel objet ainsi instancié dans le canevas (ce numéro d'ordre nous permettra d'y accéder encore par après : pour l'effacer, par
+	      exemple). L'option  <b><span style="color:#000080;">smooth =1</span></b>améliore l'aspect final, par lissage.</li>
+          </ul>
+          <p>Exercices</p>
+          <p>.Modifiez le script de manière à ce que l'axe de référence vertical comporte lui aussi une échelle, avec 5 tirets de part et d'autre
+	    de l'origine.</p>
+          <p>.Comme les widgets de la classe <b>Canvas()</b> dont il dérive, votre widget peut intégrer des indications textuelles. Il suffit pour cela
+	    d'utiliser la méthode <b>create_text()</b>. Cette méthode attend au moins trois arguments : les coordonnées <b>x</b> et <b>y</b> de l'emplacement
+	    où vous voulez faire apparaître votre texte et puis le texte lui-même, bien entendu. D'autres arguments peuvent être transmis sous forme d'options,
+	    pour préciser par exemple la police de caractères et sa taille. Afin de voir comment cela fonctionne, ajoutez provisoirement la ligne suivante dans le
+	    constructeur de la classe <b>OscilloGraphe()</b>, puis relancez le script :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">self.create_text(130, 30, text = "Essai", anchor =CENTER)</span>
+            </b>
+          </p>
+          <p>Utilisez cette méthode pour ajouter au widget les indications suivantes aux extrémités des axes de référence : <b>e</b> (pour
+	    « élongation ») le long de l'axe vertical, et <b>t</b> (pour « temps ») le long de l'axe horizontal. Le résultat
+	    pourrait ressembler à la figure de gauche page .</p>
+          <p>.Vous pouvez compléter encore votre widget en y faisant apparaître une grille de référence plutôt que de simples tirets le long des
+	    axes. Pour éviter que cette grille ne soit trop visible, vous pouvez colorer ses traits en gris (option <b><span style="color:#000080;">fill = </span><span style="color:#000080;">'</span><span style="color:#000080;">grey</span><span style="color:#000080;">'</span></b>), comme dans la figure de droite de la page  .</p>
+          <p>.Complétez encore votre widget en y faisant apparaître des repères numériques.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L15-D">15-D. Curseurs : un widget composite<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans l'exercice précédent, vous avez construit un nouveau type de widget que vous avez sauvegardé dans le module <b>oscillo.py</b>. Conservez
+	  soigneusement ce module, car vous l'intégrerez bientôt dans un projet plus complexe.</p>
+        <p>Pour l'instant, vous allez construire un autre widget, plus interactif cette fois. Il s'agira d'une sorte de panneau de contrôle comportant trois curseurs
+	  de réglage et une case à cocher. Comme le précédent, ce widget est destiné à être réutilisé dans une application de
+	  synthèse.</p>
+        
+		<h4 class="TitreSection2" id="L15-D-1">15-D-1. Présentation du widget Scale<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image42.png" alt="Image non disponible" width="267" height="107"/></figure></div>
+          <p>Commençons d'abord par découvrir un widget de base, que nous n'avions pas encore utilisé jusqu'ici : le widget Scale se présente
+	    comme un curseur qui coulisse devant une échelle. Il permet à l'utilisateur de choisir rapidement la valeur d'un paramètre quelconque, d'une
+	    manière très attrayante.</p>
+          <p>Le petit script ci-dessous vous montre comment le paramétrer et l'utiliser dans une fenêtre :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e36350">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e36350" onclick="selectionCode('contenuCoded0e36350', 'IdTitreCode-d0e36350');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e36350" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">updateLabel</code><code class="python_operator">(</code>x):
+  lab.<code class="python_function">configure</code><code class="python_operator">(</code>text<code class="python_operator">=</code><code class="python_literal1">'Valeur actuelle = '</code> <code class="python_operator">+</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>x))
+ 
+root <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+<code class="python_function">Scale</code><code class="python_operator">(</code>root, length<code class="python_operator">=</code><code class="python_digit">250</code>, orient<code class="python_operator">=</code>HORIZONTAL, label <code class="python_operator">=</code><code class="python_literal1">'Réglage :'</code>,
+    troughcolor <code class="python_operator">=</code><code class="python_literal1">'dark grey'</code>, sliderlength <code class="python_operator">=</code><code class="python_digit">20</code>,
+    showvalue <code class="python_operator">=</code><code class="python_digit">0</code>, from_<code class="python_operator">=-</code><code class="python_digit">25</code>, to<code class="python_operator">=</code><code class="python_digit">125</code>, tickinterval <code class="python_operator">=</code><code class="python_digit">25</code>,
+    command<code class="python_operator">=</code>updateLabel).<code class="python_function">pack</code><code class="python_operator">(</code>)
+lab <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>root)
+lab.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+root.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Ces lignes ne nécessitent guère de commentaires.</p>
+          <p>Vous pouvez créer des widgets <b>Scale</b> de n'importe quelle taille (option <b>length</b>), en orientation horizontale (comme dans notre exemple) ou
+	    verticale (option <b>orient = VERTICAL</b>).<br/>
+		 Les options <b>from_</b> (attention : n'oubliez pas le caractère 'souligné', lequel est nécessaire afin d'éviter la confusion avec le mot
+		   réservé <b>from</b> !) et <b>to</b> définissent la plage de réglage. L'intervalle entre les repères numériques est défini
+		   dans l'option <b>tickinterval</b>, etc.</p>
+          <p>La fonction désignée dans l'option <b>command</b> est appelée automatiquement chaque fois que le curseur est déplacé, et la position
+	    actuelle du curseur par rapport à l'échelle lui est transmise en argument. Il est donc très facile d'utiliser cette valeur pour effectuer un traitement
+	    quelconque. Considérez par exemple le paramètre <b>x</b> de la fonction <b>updateLabel()</b>, dans notre exemple.</p>
+          <p>Le widget <b>Scale</b> constitue une interface très intuitive et attrayante pour proposer différents réglages aux utilisateurs de vos
+	    programmes. Nous allons à présent l'incorporer en plusieurs exemplaires dans une nouvelle classe de widget : un panneau de contrôle destiné
+	    à choisir la fréquence, la phase et l'amplitude pour un mouvement vibratoire, dont nous afficherons ensuite le graphique élongation/temps à l'aide
+	    du widget <b>oscilloGraphe</b> construit dans les pages précédentes.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L15-D-2">15-D-2. Construction d'un panneau de contrôle à trois curseurs<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Comme le précédent, le script que nous décrivons ci-dessous est destiné à être sauvegardé dans un module, que vous nommerez
+	    cette fois <b>curseurs.py</b>. Les classes que vous sauvegardez ainsi seront réutilisées (par importation) dans une application de synthèse que nous
+	    décrirons un peu plus loin<a class="signetNoteBasPage" id="signetNoteBasPage77" href="#noteBasPage77">(77)</a>. Nous
+	    attirons votre attention sur le fait que le code ci-dessous peut être raccourci de différentes manières (nous y reviendrons). Nous ne l'avons pas
+	    optimisé d'emblée, parce que cela nécessiterait d'y incorporer un concept supplémentaire (les <span class="italique">expressions lambda</span>), ce que nous
+	    préférons éviter pour l'instant.</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image43.png"><img class="ImgCliquable figure-img-caption" src="./images/image43.png" alt="Image non disponible" width="550" height="105"/></a></figure></div>
+          <p>Vous savez déjà que les lignes de code placées à la fin du script permettent de tester son fonctionnement. Vous devriez obtenir une
+	    fenêtre semblable à celle-ci :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e36542">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e36542" onclick="selectionCode('contenuCoded0e36542', 'IdTitreCode-d0e36542');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e36542" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> pi
+ 
+<code class="python_keyword1">class</code> <code class="python_function">ChoixVibra</code><code class="python_operator">(</code>Frame):
+  <code class="python_literal2">"""Curseurs pour choisir fréquence, phase &amp; amplitude d'une vibration"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss <code class="python_operator">=</code><code class="python_keyword3">None</code>, coul <code class="python_operator">=</code><code class="python_literal1">'red'</code>):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)	<code class="python_comment1"># constructeur de la classe parente</code>
+      <code class="python_comment1"># Initialisation de quelques attributs d'instance :</code>
+      self.freq, self.phase, self.ampl, self.coul <code class="python_operator">=</code> <code class="python_digit">0</code>, <code class="python_digit">0</code>, <code class="python_digit">0</code>, coul
+      <code class="python_comment1"># Variable d'état de la case à cocher :</code>
+      self.chk <code class="python_operator">=</code> <code class="python_function">IntVar</code><code class="python_operator">(</code>)	   <code class="python_comment1"># 'objet-variable' tkinter	     </code>
+      <code class="python_function">Checkbutton</code><code class="python_operator">(</code>self, text<code class="python_operator">=</code><code class="python_literal1">'Afficher'</code>, variable<code class="python_operator">=</code>self.chk,
+	  fg <code class="python_operator">=</code> self.coul, command <code class="python_operator">=</code> self.setCurve).<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT)
+      <code class="python_comment1"># Définition des 3 widgets curseurs :</code>
+      <code class="python_function">Scale</code><code class="python_operator">(</code>self, length<code class="python_operator">=</code><code class="python_digit">150</code>, orient<code class="python_operator">=</code>HORIZONTAL, sliderlength <code class="python_operator">=</code><code class="python_digit">25</code>,
+	label <code class="python_operator">=</code><code class="python_literal1">'Fréquence (Hz) :'</code>, from_<code class="python_operator">=</code><code class="python_digit">1.</code>, to<code class="python_operator">=</code><code class="python_digit">9.</code>, tickinterval <code class="python_operator">=</code><code class="python_digit">2</code>,
+	resolution <code class="python_operator">=</code><code class="python_digit">0.25</code>,
+	showvalue <code class="python_operator">=</code><code class="python_digit">0</code>, command <code class="python_operator">=</code> self.setFrequency).<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT)
+      <code class="python_function">Scale</code><code class="python_operator">(</code>self, length<code class="python_operator">=</code><code class="python_digit">150</code>, orient<code class="python_operator">=</code>HORIZONTAL, sliderlength <code class="python_operator">=</code><code class="python_digit">15</code>,
+	label <code class="python_operator">=</code><code class="python_literal1">'Phase (degrés) :'</code>, from_<code class="python_operator">=-</code><code class="python_digit">180</code>, to<code class="python_operator">=</code><code class="python_digit">180</code>, tickinterval <code class="python_operator">=</code><code class="python_digit">90</code>,
+	showvalue <code class="python_operator">=</code><code class="python_digit">0</code>, command <code class="python_operator">=</code> self.setPhase).<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT)
+      <code class="python_function">Scale</code><code class="python_operator">(</code>self, length<code class="python_operator">=</code><code class="python_digit">150</code>, orient<code class="python_operator">=</code>HORIZONTAL, sliderlength <code class="python_operator">=</code><code class="python_digit">25</code>,
+	label <code class="python_operator">=</code><code class="python_literal1">'Amplitude :'</code>, from_<code class="python_operator">=</code><code class="python_digit">1</code>, to<code class="python_operator">=</code><code class="python_digit">9</code>, tickinterval <code class="python_operator">=</code><code class="python_digit">2</code>,
+	showvalue <code class="python_operator">=</code><code class="python_digit">0</code>, command <code class="python_operator">=</code> self.setAmplitude).<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">setCurve</code><code class="python_operator">(</code>self):
+      self.<code class="python_function">event_generate</code><code class="python_operator">(</code><code class="python_literal1">'&lt;Control-Z&gt;'</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">setFrequency</code><code class="python_operator">(</code>self, f):
+      self.freq <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>f)
+      self.<code class="python_function">event_generate</code><code class="python_operator">(</code><code class="python_literal1">'&lt;Control-Z&gt;'</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">setPhase</code><code class="python_operator">(</code>self, p):
+      pp <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>p)
+      self.phase <code class="python_operator">=</code> pp<code class="python_operator">*</code><code class="python_digit">2</code><code class="python_operator">*</code>pi<code class="python_operator">/</code><code class="python_digit">360</code>	      <code class="python_comment1"># conversion degrés -&gt; radians</code>
+      self.<code class="python_function">event_generate</code><code class="python_operator">(</code><code class="python_literal1">'&lt;Control-Z&gt;'</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">setAmplitude</code><code class="python_operator">(</code>self, a):
+      self.ampl <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>a)
+      self.<code class="python_function">event_generate</code><code class="python_operator">(</code><code class="python_literal1">'&lt;Control-Z&gt;'</code>)
+ 
+<code class="python_comment1">#### Code pour tester la classe : ###</code>
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code> <code class="python_literal1">'__main__'</code>:
+  <code class="python_keyword1">def</code> <code class="python_function">afficherTout</code><code class="python_operator">(</code>event<code class="python_operator">=</code><code class="python_keyword3">None</code>):
+      lab.<code class="python_function">configure</code><code class="python_operator">(</code>text <code class="python_operator">=</code> <code class="python_literal1">'</code><code class="python_literal4">%s</code><code class="python_literal1"> - </code><code class="python_literal4">%s</code><code class="python_literal1"> - </code><code class="python_literal4">%s</code><code class="python_literal1"> - </code><code class="python_literal4">%s</code><code class="python_literal1">'</code> <code class="python_operator">%</code>
+	    <code class="python_operator">(</code>fra.chk.<code class="python_function">get</code><code class="python_operator">(</code>), fra.freq, fra.phase, fra.ampl))	      
+  root <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+  fra <code class="python_operator">=</code> <code class="python_function">ChoixVibra</code><code class="python_operator">(</code>root,<code class="python_literal1">'navy'</code>)
+  fra.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>TOP)
+  lab <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>root, text <code class="python_operator">=</code><code class="python_literal1">'test'</code>)
+  lab.<code class="python_function">pack</code><code class="python_operator">(</code>)
+  root.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">'&lt;Control-Z&gt;'</code>, afficherTout)
+  root.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Ce panneau de contrôle permettra à vos utilisateurs de régler aisément la valeur des paramètres indiqués (fréquence, phase
+	    et amplitude), lesquels pourront alors servir à commander l'affichage de graphiques élongation/temps dans un widget de la classe <b>OscilloGraphe()</b>
+	    construite précédemment, comme nous le montrerons dans l'application de synthèse.</p>
+          
+		<h5 class="TitreSection3" id="L15-D-2-A">15-D-2-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Ligne 6 : La méthode « constructeur » utilise un paramètre optionnel <b>coul</b>. Ce paramètre permettra de choisir
+		une couleur pour le graphique soumis au contrôle du widget. Le paramètre <b>boss</b> sert à réceptionner la référence d'une
+		fenêtre maîtresse éventuelle (voir plus loin).</li>
+              <li>Ligne 7 : Activation du constructeur de la classe parente (pour hériter sa fonctionnalité).</li>
+              <li>Ligne 9 : Déclaration de quelques variables d'instance. Leurs vraies valeurs seront déterminées par les méthodes des lignes 29
+		à 40 (gestionnaires d'événements).</li>
+              <li>Ligne 11 : Cette instruction instancie un objet de la classe <b>IntVar()</b>, laquelle fait partie du module tkinter au même titre que les classes
+		similaires <b>DoubleVar()</b>, <b>StringVar()</b> et <b>BooleanVar()</b>. Toutes ces classes permettent de définir des <span class="italique">variables tkinter</span>, lesquels sont
+		en fait des objets, mais qui se comportent comme des variables à l'intérieur des widgets tkinter (voir ci-après).<br/>
+		 Ainsi l'objet référencé dans <b>self.chk</b> contient l'équivalent d'une variable de type entier, dans un format utilisable par tkinter. Pour
+		   accéder à sa valeur depuis Python, il faut utiliser des méthodes spécifiques de cette classe d'objets : la méthode <b>set()</b>
+		   permet de lui assigner une valeur, et la méthode <b>get()</b> permet de la récupérer (ce que l'on mettra en pratique à la ligne
+		   47).</li>
+              <li>Ligne 12 : L'option <b>variable</b> de l'objet <b>checkbutton</b> est associée à la <span class="italique">variable tkinter</span>
+		définie à la ligne précédente. Nous ne pouvons pas référencer directement une variable ordinaire dans la définition d'un widget
+		tkinter, parce que tkinter lui-même est écrit dans un langage qui n'utilise pas les mêmes conventions que Python pour formater ses variables. Les
+		objets construits à partir des classes de <span class="italique">variables tkinter</span> sont donc nécessaires pour assurer l'interface.</li>
+              <li>Ligne 13 : L'option <b>command</b> désigne la méthode que le système doit invoquer lorsque l'utilisateur effectue un clic de souris dans
+		la case à cocher.</li>
+              <li>Lignes 14 à 24 : Ces lignes définissent les trois widgets curseurs, en trois instructions similaires. Il serait plus élégant de
+		programmer tout ceci en une seule instruction, répétée trois fois à l'aide d'une boucle. Cela nécessiterait cependant de faire appel
+		à un concept que nous n'avons pas encore expliqué (les <span class="italique">fonctions ou expressionslamdba</span>), et la définition du gestionnaire
+		d'événements associé à ces widgets deviendrait elle aussi plus complexe. Conservons donc pour cette fois des instructions
+		séparées : nous nous efforcerons d'améliorer tout cela plus tard.</li>
+              <li>Lignes 26 à 40 : Les 4 widgets définis dans les lignes précédentes possèdent chacun une option <b>command</b>. Pour chacun
+		d'eux, la méthode invoquée dans cette option <b>command</b> est différente : la case à cocher active la méthode <b>setCurve()</b>, le
+		premier curseur active la méthode <b>setFrequency()</b>, le second curseur active la méthode <b>setPhase()</b>, et le troisième curseur active la
+		méthode <b>setAmplitude()</b>. Remarquez bien au passage que l'option <b>command</b> des widgets <b>Scale</b> transmet un argument à la méthode
+		associée (la position actuelle du curseur), alors que la même option <b>command</b> ne transmet rien dans le cas du widget <b>Checkbutton.</b><br/><br/>
+		 Ces 4 méthodes (qui sont donc les gestionnaires des événements produits par la case à cocher et les trois curseurs) provoquent
+		   elles-mêmes chacune l'émission d'un nouvel <span class="italique">événement</span><a class="signetNoteBasPage" id="signetNoteBasPage78" href="#noteBasPage78">(78)</a>, en faisant appel à la méthode <b>event_generate()</b>.<br/><br/>
+		 Lorsque cette méthode est invoquée, Python envoie au système d'exploitation exactement le même message-événement que celui qui se
+		   produirait si l'utilisateur enfonçait simultanément les touches &lt;Ctrl&gt;, &lt;Maj&gt; et &lt;Z&gt; de son clavier.<br/>
+		 Nous produisons ainsi un message-événement bien particulier, qui peut être détecté et traité par un gestionnaire
+		   d'événement associé à un autre widget (voir page suivante). De cette manière, nous mettons en place un véritable système de
+		   communication entre widgets : chaque fois que l'utilisateur exerce une action sur notre panneau de contrôle, celui-ci génère un
+		   événement spécifique, qui signale cette action à l'attention des autres widgets présents.<br/><br/>
+		 Note : nous aurions pu choisir une autre combinaison de touches (ou même carrément un autre type d'événement). Notre choix s'est
+		   porté sur celle-ci parce qu'il y a vraiment très peu de chances que l'utilisateur s'en serve alors qu'il examine notre programme. Nous pourrons
+		   cependant produire nous-mêmes un tel événement au clavier à titre de test, lorsque le moment sera venu de vérifier le gestionnaire de
+		   cet événement, que nous mettrons en place par ailleurs.<br/></li>
+              <li>Lignes 42 à 54 : Comme nous l'avions déjà fait pour <b>oscillo.py</b>, nous complétons ce nouveau module par quelques lignes de
+		code au niveau principal. Ces lignes permettent de tester le bon fonctionnement de la classe : elles ne s'exécutent que si on lance le module
+		directement, comme une application à part entière. Veillez à utiliser vous-même cette technique dans vos propres modules, car elle constitue
+		une bonne pratique de programmation : l'utilisateur de modules construits ainsi peut en effet (re)découvrir très aisément leur
+		fonctionnalité (en les exécutant) et la manière de s'en servir (en analysant ces quelques lignes de code).<br/><br/>
+		 Dans ces lignes de test, nous construisons une fenêtre principale <b>root </b>qui contient deux widgets : un widget de la nouvelle classe
+		   <b>ChoixVibra()</b> et un widget de la classe <b>Label()</b>.<br/><br/>
+		 À la ligne 53, nous associons à la fenêtre principale un gestionnaire d'événement : tout événement du type
+		   spécifié déclenche désormais un appel de la fonction <b>afficherTout()</b>.<br/>
+		 Cette fonction est donc notre gestionnaire d'événement spécialisé, qui est sollicité chaque fois qu'un événement de type
+		   &lt;Maj-Ctrl-Z&gt; est détecté par le système d'exploitation.<br/><br/>
+		 Comme nous l'avons déjà expliqué plus haut, nous avons fait en sorte que de tels événements soient produits par les objets de la classe
+		   <b>ChoixVibra()</b>, chaque fois que l'utilisateur modifie l'état de l'un ou l'autre des trois curseurs, ou celui de la case à cocher.</li>
+              <li>Conçue seulement pour effectuer un test, la fonction <b>afficherTout()</b> ne fait rien d'autre que provoquer l'affichage des valeurs des variables
+		associées à chacun de nos quatre widgets, en (re)configurant l'option <b>text</b> d'un widget de classe <b>Label()</b>.</li>
+              <li>Ligne 47, expression <b><span style="color:#000080;">fra.chk.get()</span></b> : nous avons vu plus haut que la variable mémorisant l'état de la case
+		à cocher est un objet-variable tkinter. Python ne peut pas lire directement le contenu d'une telle variable, qui est en réalité un objet-interface.
+		Pour en extraire la valeur, il faut donc faire usage d'une méthode spécifique de cette classe d'objets : la méthode <b>get()</b>.</li>
+            </ul>
+          </div>
+          
+		<h5 class="TitreSection3" id="L15-D-2-B">15-D-2-B. Propagation des événements<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <p>Le mécanisme de communication décrit ci-dessus respecte la hiérarchie de classes des widgets. Vous aurez noté que la méthode qui
+	      déclenche l'événement est associée au widget dont nous sommes en train de définir la classe, par l'intermédiaire de self. En
+	      général, un message-événement est en effet associé à un widget particulier (par exemple, un clic de souris sur un bouton est
+	      associé à ce bouton), ce qui signifie que le système d'exploitation va d'abord examiner s'il existe un gestionnaire pour ce type
+	      d'événement, qui soit lui aussi associé à ce widget. S'il en existe un, c'est celui-là qui est activé, et la propagation du message
+	      s'arrête. Sinon, le message-événement est « présenté » successivement aux widgets maîtres, dans l'ordre
+	      hiérarchique, jusqu'à ce qu'un gestionnaire d'événement soit trouvé, ou bien jusqu'à ce que la fenêtre principale soit
+	      atteinte.</p>
+            <p>Les événements correspondant à des frappes sur le clavier (telle la combinaison de touches <b><span style="color:#000080;">&lt;Maj-Ctrl-Z&gt;</span></b> utilisée dans notre exercice) sont cependant toujours expédiés directement à la fenêtre
+	      principale de l'application. Dans notre exemple, le gestionnaire de cet événement doit donc être associé à la fenêtre
+	      <b>root</b>.</p>
+            <p>Exercices</p>
+            <p>.Votre nouveau widget hérite des propriétés de la classe <b>Frame()</b>. Vous pouvez donc modifier son aspect en modifiant les options par
+	      défaut de cette classe, à l'aide de la méthode <b>configure()</b>. Essayez par exemple de faire en sorte que le panneau de contrôle soit
+	      entouré d'une bordure de 4 pixels ayant l'aspect d'un sillon (<b><span style="color:#000080;">bd = 4, relief = GROOVE</span></b>). Si vous ne comprenez pas bien ce
+	      qu'il faut faire, inspirez-vous du script <b>oscillo.py</b> (ligne 10).</p>
+            <p>.Si l'on assigne la valeur 1 à l'option <b>showvalue</b> des widgets <b>Scale()</b>, la position précise du curseur par rapport à
+	      l'échelle est affichée en permanence. Activez donc cette fonctionnalité pour le curseur qui contrôle le paramètre
+	      « phase ».</p>
+            <p>.L'option <b>troughcolor</b> des widgets <b>Scale()</b> permet de définir la couleur de leur glissière. Utilisez cette option pour faire en sorte
+	      que la couleur des glissières des 3 curseurs soit celle qui est utilisée comme paramètre lors de l'instanciation de votre nouveau widget.</p>
+            <p>.Modifiez le script de telle manière que les widgets curseurs soient écartés davantage les uns des autres (options <b>padx</b> et <b>pady</b>
+	      de la méthode <b>pack()</b>).</p>
+          </div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L15-E">15-E. Intégration de widgets composites dans une application synthèse<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans les exercices précédents, nous avons construit deux nouvelles classes de widgets : le widget <b>OscilloGraphe()</b>, canevas
+	  spécialisé pour le dessin de sinusoïdes, et le widget <b>ChoixVibra()</b>, panneau de contrôle à trois curseurs permettant de choisir les
+	  paramètres d'une vibration.</p>
+        <p>Ces widgets sont désormais disponibles dans les modules <b>oscillo.py</b> et <b>curseurs.py</b><a class="signetNoteBasPage" id="signetNoteBasPage79" href="#noteBasPage79">(79)</a>.</p>
+        <p>Nous allons à présent les utiliser dans une application synthèse : un widget <b>OscilloGraphe()</b> y affiche un, deux, ou trois graphiques
+	  superposés, de couleurs différentes, chacun d'entre eux étant soumis au contrôle d'un widget <b>ChoixVibra().</b></p>
+        <p>Le script correspondant est reproduit ci-après.</p>
+        <p>Nous attirons votre attention sur la technique mise en œuvre pour provoquer un rafraîchissement de l'affichage dans le canevas par
+	  l'intermédiaire d'un événement, chaque fois que l'utilisateur effectue une action quelconque au niveau de l'un des panneaux de contrôle.</p>
+        <p>Rappelez-vous que les applications destinées à fonctionner dans une interface graphique doivent être conçues comme des
+	  « programmes pilotés par les événements » (voir page ).</p>
+        <p>En préparant cet exemple, nous avons arbitrairement décidé que l'affichage des graphiques serait déclenché par un événement
+	  particulier, tout à fait similaire à ceux que génère le système d'exploitation lorsque l'utilisateur accomplit une action quelconque. Dans la
+	  gamme (très étendue) d'événements possibles, nous en avons choisi un qui ne risque guère d'être utilisé pour d'autres raisons, pendant
+	  que notre application fonctionne : la combinaison de touches &lt;Maj-Ctrl-Z&gt;.</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image46.png"><img class="ImgCliquable figure-img-caption" src="./images/image46.png" alt="Image non disponible" width="418" height="325"/></a></figure></div>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e37359">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e37359" onclick="selectionCode('contenuCoded0e37359', 'IdTitreCode-d0e37359');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e37359" class="contenuCode"><code class="python_keyword1">from</code> oscillo <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> curseurs <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_keyword1">class</code> <code class="python_function">ShowVibra</code><code class="python_operator">(</code>Frame):
+  <code class="python_literal2">"""Démonstration de mouvements vibratoires harmoniques"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss <code class="python_operator">=</code><code class="python_keyword3">None</code>):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)	<code class="python_comment1"># constructeur de la classe parente</code>
+      self.couleur <code class="python_operator">=</code> [<code class="python_literal1">'dark green'</code>, <code class="python_literal1">'red'</code>, <code class="python_literal1">'purple'</code>]
+      self.trace <code class="python_operator">=</code> [<code class="python_digit">0</code>]<code class="python_operator">*</code><code class="python_digit">3</code>      <code class="python_comment1"># liste des tracés (courbes à dessiner)</code>
+      self.controle <code class="python_operator">=</code> [<code class="python_digit">0</code>]<code class="python_operator">*</code><code class="python_digit">3</code>	 <code class="python_comment1"># liste des panneaux de contrôle</code>
+ 
+      <code class="python_comment1"># Instanciation du canevas avec axes X et Y : </code>
+      self.gra <code class="python_operator">=</code> <code class="python_function">OscilloGraphe</code><code class="python_operator">(</code>self, larg <code class="python_operator">=</code><code class="python_digit">400</code>, haut<code class="python_operator">=</code><code class="python_digit">200</code>)
+      self.gra.<code class="python_function">configure</code><code class="python_operator">(</code>bg <code class="python_operator">=</code><code class="python_literal1">'white'</code>, bd<code class="python_operator">=</code><code class="python_digit">2</code>, relief<code class="python_operator">=</code>SOLID)
+      self.gra.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>TOP, pady<code class="python_operator">=</code><code class="python_digit">5</code>)
+ 
+      <code class="python_comment1"># Instanciation de 3 panneaux de contrôle (curseurs) : </code>
+      <code class="python_keyword1">for</code> i <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code><code class="python_digit">3</code>):
+      self.controle[i] <code class="python_operator">=</code> <code class="python_function">ChoixVibra</code><code class="python_operator">(</code>self, self.couleur[i])
+      self.controle[i].<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+      <code class="python_comment1"># Désignation de l'événement qui déclenche l'affichage des tracés :    </code>
+      self.master.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">'&lt;Control-Z&gt;'</code>, self.montreCourbes)
+      self.master.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">'Mouvements vibratoires harmoniques'</code>)
+      self.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">montreCourbes</code><code class="python_operator">(</code>self, event):
+      <code class="python_literal2">"""(Ré)Affichage des trois graphiques élongation/temps"""</code>   
+      <code class="python_keyword1">for</code> i <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=range#range"><span>range</span></a><code class="python_operator">(</code><code class="python_digit">3</code>):
+ 
+      <code class="python_comment1"># D'abord, effacer le tracé précédent (éventuel) :</code>
+      self.gra.<code class="python_function">delete</code><code class="python_operator">(</code>self.trace[i])
+ 
+      <code class="python_comment1"># Ensuite, dessiner le nouveau tracé :  </code>
+      <code class="python_keyword1">if</code> self.controle[i].chk.<code class="python_function">get</code><code class="python_operator">(</code>):
+	  self.trace[i] <code class="python_operator">=</code> self.gra.<code class="python_function">traceCourbe</code><code class="python_operator">(</code>
+		  coul <code class="python_operator">=</code> self.couleur[i],
+		  freq <code class="python_operator">=</code> self.controle[i].freq,
+		  phase <code class="python_operator">=</code> self.controle[i].phase,
+		  ampl <code class="python_operator">=</code> self.controle[i].ampl) 	  
+ 
+<code class="python_comment1">#### Code pour tester la classe : ###</code>
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code> <code class="python_literal1">'__main__'</code>:    
+  <code class="python_function">ShowVibra</code><code class="python_operator">(</code>).<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        
+		<h4 class="TitreSection2" id="L15-E-1">15-E-1. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>Lignes 1-2 : Nous pouvons nous passer d'importer le module tkinter : chacun de ces deux modules s'en charge déjà.</li>
+            <li>Ligne 4 : Puisque nous commençons à connaître les bonnes techniques, nous décidons de construire l'application elle-même sous la
+	      forme d'une nouvelle classe de widget, dérivée de la classe <b>Frame()</b> : ainsi nous pourrons plus tard l'intégrer toute entière dans
+	      d'autres projets, si le cœur nous en dit.</li>
+            <li>Lignes 8-10 : Définition de quelques variables d'instance (3 listes) : les trois courbes tracées seront des objets graphiques, dont
+	      les couleurs sont pré-définies dans la liste <b>self.couleur</b> ; nous devons préparer également une liste <b>self.trace</b> pour
+	      mémoriser les références de ces objets graphiques, et enfin une liste <b>self.controle</b> pour mémoriser les références des trois
+	      panneaux de contrôle.</li>
+            <li>Lignes 13 à 15 : Instanciation du widget d'affichage. Étant donné que la classe <b>OscilloGraphe()</b> a été obtenue par
+	      dérivation de la classe <b>Canvas()</b>, il est toujours possible de configurer ce widget en redéfinissant les options spécifiques de cette classe
+	      (ligne 13).</li>
+            <li>Lignes 18 à 20 : Pour instancier les trois widgets « panneau de contrôle », on utilise une boucle. Leurs
+	      références sont mémorisées dans la liste <b>self</b>.<b>controle</b> préparée à la ligne 10. Ces panneaux de contrôle sont
+	      instanciés comme esclaves du présent widget, par l'intermédiaire du paramètre <b>self</b>. Un second paramètre leur transmet la couleur du
+	      tracé à contrôler.</li>
+            <li>
+              <img src="./images/image44.gif" alt="Image non disponible" width="300" height="308" class="image_verticale"/>
+            </li>
+            <li>Lignes 27 à 40 : La méthode décrite ici est le gestionnaire des événements &lt;Maj-Ctrl-Z&gt; spécifiquement
+	      déclenchés par nos widgets <b>ChoixVibra()</b> (ou « panneaux de contrôle »), chaque fois que l'utilisateur exerce une action sur
+	      un curseur ou une case à cocher. Dans tous les cas, les graphiques éventuellement présents sont d'abord effacés (ligne 28) à l'aide de la
+	      méthode <b>delete()</b> : le widget <b>OscilloGraphe()</b> a hérité cette méthode de sa classe parente <b>Canvas()</b>. <br/>
+		 Ensuite, de nouvelles courbes sont retracées, pour chacun des panneaux de contrôle dont on a coché la case « Afficher ». Chacun
+		   des objets ainsi dessinés dans le canevas possède un numéro de référence, renvoyé par la méthode <b>traceCourbe()</b> de
+		   notre widget <b>OscilloGraphe()</b>.<br/>
+		 Les numéros de référence de nos dessins sont mémorisés dans la liste <b>self.trace</b>. Ils permettent d'effacer individuellement chacun
+		   d'entre eux (cf. instruction de la ligne 28).</li>
+            <li>Lignes 38-40 : Les valeurs de fréquence, phase et amplitude que l'on transmet à la méthode <b>traceCourbe()</b> sont les attributs
+	      d'instance correspondants de chacun des trois panneaux de contrôle, eux-mêmes mémorisés dans la liste <b>self.controle</b>. Nous pouvons
+	      récupérer ces attributs en utilisant la qualification des noms par points.</li>
+          </ul>
+          <p>Exercices</p>
+          <p>.Modifiez le script, de manière à obtenir l'aspect ci-dessous (écran d'affichage avec grille de référence, panneaux de contrôle
+	    entourés d'un sillon) : </p>
+          <p>.Modifiez le script, de manière à faire apparaître et contrôler 4 graphiques au lieu de trois. Pour la couleur du quatrième
+	    graphique, choisissez par exemple : 'blue', 'navy', 'maroon'...</p>
+          <p>.Aux lignes 33-35, nous récupérons les valeurs des fréquence, phase et amplitude choisies par l'utilisateur sur chacun des trois panneaux de
+	    contrôle, en accédant directement aux attributs d'instance correspondants. Python autorise ce raccourci - et c'est bien pratique - mais cette
+	    technique est dangereuse. Elle enfreint l'une des recommandations de la théorie générale de la « programmation orientée
+	    objet », qui préconise que l'accès aux propriétés des objets soit toujours pris en charge par des méthodes spécifiques. Pour
+	    respecter cette recommandation, ajoutez à la classe <b>ChoixVibra()</b> une méthode supplémentaire que vous appellerez <b>valeurs()</b>, et qui renverra
+	    un tuple contenant les valeurs de la fréquence, la phase et l'amplitude choisies. Les lignes 33 à 35 du présent script pourront alors être
+	    remplacées par quelque chose comme :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">freq, phase, ampl = self.control[i].valeurs()</span>
+            </b>
+          </p>
+          <p>.Écrivez une petite application qui fait apparaître une fenêtre avec un canevas et un widget curseur (<b>Scale</b>). Dans le canevas, dessinez
+	    un cercle, dont l'utilisateur pourra faire varier la taille à l'aide du curseur.</p>
+          <p>.Écrivez un script qui créera deux classes : une classe Application, dérivée de <b>Frame()</b>, dont le constructeur instanciera un
+	    canevas de 400 × 400 pixels, ainsi que deux boutons. Dans le canevas, vous instancierez un objet de la classe <b>Visage</b> décrite
+	    ci-après.<br/>
+		 La classe <b>Visage</b> servira à définir des objets graphiques censés représenter des visages humains simplifiés. Ces visages seront
+		   constitués d'un cercle principal dans lequel trois ovales plus petits représenteront deux yeux et une bouche (ouverte). Une méthode
+		   « fermer » permettra de remplacer l'ovale de la bouche par une ligne horizontale. Une méthode « ouvrir » permettra
+		   de restituer la bouche de forme ovale.<br/>
+		 Les deux boutons définis dans la classe <b>Application</b> serviront respectivement à fermer et à ouvrir la bouche de l'objet <b>Visage</b>
+		   installé dans le canevas. Vous pouvez vous inspirer de l'exemple de la page  pour composer une partie du code.</p>
+          <p>.Exercice de synthèse : élaboration d'un dictionnaire de couleurs.<br/>
+		 But : réaliser un petit programme utilitaire, qui puisse vous aider à construire facilement et rapidement un nouveau dictionnaire de couleurs,
+		   lequel permettrait l'accès technique à une couleur quelconque par l'intermédiaire de son nom usuel en français.</p>
+          <p>Contexte : En manipulant divers objets colorés avec tkinter, vous avez constaté que cette bibliothèque graphique accepte qu'on lui
+	    désigne les couleurs les plus fondamentales sous la forme de chaînes de caractères contenant leur nom en anglais : <span class="italique">red, blue, yellow,
+	    </span>etc.</p>
+          <p>Vous savez cependant qu'un ordinateur ne peut traiter que des informations numérisées. Cela implique que la désignation d'une couleur
+	    quelconque doit nécessairement tôt ou tard être encodée sous la forme d'un nombre. Il faut bien entendu adopter pour cela une une convention, et
+	    celle-ci peut varier d'un système à un autre. L'une de ces conventions, parmi les plus courantes, consiste à représenter une couleur à l'aide
+	    de trois octets, qui indiqueront respectivement les intensités des trois composantes rouge, verte et bleue de cette couleur.</p>
+          <p>Cette convention peut être utilisée avec tkinter pour accéder à n'importe quelle nuance colorée. Vous pouvez en effet lui indiquer la
+	    couleur d'un élément graphique quelconque, à l'aide d'une chaîne de 7 caractères telle que <b><span style="color:#000080;">'</span><span style="color:#000080;">#00FA4E</span><span style="color:#000080;">'</span><span style="color:#000080;">. </span></b>Dans cette chaîne, le premier caractère (#) signifie que ce
+	    qui suit est une valeur hexadécimale. Les six caractères suivants représentent les 3 valeurs hexadécimales des 3 composantes rouge, vert et
+	    bleu.</p>
+          <p>Pour visualiser concrètement la correspondance entre une couleur quelconque et son code, vous pouvez explorer les ressources de divers programmes de
+	    traitement d'images, tels par exemple les excellents programmes libres « Gimp » et « Inkscape ».</p>
+          <p>Étant donné qu'il n'est pas facile pour les humains que nous sommes de mémoriser de tels codes hexadécimaux, tkinter est également
+	    doté d'un dictionnaire de conversion, qui autorise l'utilisation de noms communs pour un certain nombre de couleurs parmi les plus courantes, mais cela ne marche
+	    que pour des noms de couleurs exprimés en anglais.</p>
+          <p>Le but du présent exercice est de réaliser un logiciel qui facilitera la construction d'un dictionnaire équivalent en français, lequel
+	    pourrait ensuite être incorporé à l'un ou l'autre de vos propres programmes. Une fois construit, ce dictionnaire serait donc de la forme :
+	    <br/><b><span style="color:#000080;">{</span><span style="color:#000080;">'</span><span style="color:#000080;">vert</span><span style="color:#000080;">'</span><span style="color:#000080;">:</span><span style="color:#000080;">'</span><span style="color:#000080;">#00FF00</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">'</span><span style="color:#000080;">bleu</span><span style="color:#000080;">'</span><span style="color:#000080;">:</span><span style="color:#000080;">'</span><span style="color:#000080;">#0000FF</span><span style="color:#000080;">'</span><span style="color:#000080;">, ... etc ...}</span></b>.</p>
+          <p>
+            <span class="italique">
+              <b>Cahier des charges :</b>
+            </span>
+          </p>
+          <p>L'application à réaliser sera une application graphique, construite autour d'une classe. Elle comportera une fenêtre avec un certain nombre de
+	    champs d'entrée et de boutons, afin que l'utilisateur puisse aisément encoder de nouvelles couleurs en indiquant à chaque fois son nom français
+	    dans un champ, et son code hexadécimal dans un autre.<br/>
+		 Lorsque le dictionnaire contiendra déjà un certain nombre de données, il devra être possible de le tester, c'est-à-dire d'entrer un nom
+		   de couleur en français et de retrouver le code hexadécimal correspondant à l'aide d'un bouton (avec affichage éventuel d'une zone
+		   colorée).<br/>
+		 Un bouton provoquera l'enregistrement du dictionnaire dans un fichier texte. Un autre permettra de reconstruire le dictionnaire à partir du
+		   fichier.</p>
+          <p>.Le script ci-dessous correspond à une ébauche de projet dessinant des ensembles de dés à jouer disposés à l'écran de
+	    plusieurs manières différentes (cette ébauche pourrait être une première étape dans la réalisation d'un logiciel de jeu). L'exercice
+	    consistera à analyser ce script et à le compléter. Vous vous placerez ainsi dans la situation d'un programmeur chargé de continuer le travail
+	    commencé par quelqu'un d'autre, ou encore dans celle de l'informaticien prié de participer à un travail d'équipe.<br/>
+		 A) Commencez par analyser ce script et ajoutez-y des commentaires, en particulier aux lignes marquées : <b><span style="color:#000080;">#***</span></b>, pour
+		   montrer que vous comprenez ce que doit faire le programme à ces emplacements :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e37887">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e37887" onclick="selectionCode('contenuCoded0e37887', 'IdTitreCode-d0e37887');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e37887" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">class</code> <code class="python_function">FaceDom</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, can, val, pos, taille <code class="python_operator">=</code><code class="python_digit">70</code>):
+      self.can <code class="python_operator">=</code>can
+      <code class="python_comment1"># ***</code>
+      x, y, c <code class="python_operator">=</code> pos[<code class="python_digit">0</code>], pos[<code class="python_digit">1</code>], taille<code class="python_operator">/</code><code class="python_digit">2</code>
+      can.<code class="python_function">create_rectangle</code><code class="python_operator">(</code>x <code class="python_operator">-</code>c, y<code class="python_operator">-</code>c, x<code class="python_operator">+</code>c, y<code class="python_operator">+</code>c, fill <code class="python_operator">=</code><code class="python_literal1">'ivory'</code>, width <code class="python_operator">=</code><code class="python_digit">2</code>)
+      d <code class="python_operator">=</code> taille<code class="python_operator">/</code><code class="python_digit">3</code>
+      <code class="python_comment1"># ***</code>
+      self.pList <code class="python_operator">=</code>[]
+      <code class="python_comment1"># ***</code>
+      pDispo <code class="python_operator">=</code> [<code class="python_operator">((</code><code class="python_digit">0</code>,<code class="python_digit">0</code>),), <code class="python_operator">((-</code>d,d),<code class="python_operator">(</code>d,<code class="python_operator">-</code>d)), <code class="python_operator">((-</code>d,<code class="python_operator">-</code>d), <code class="python_operator">(</code><code class="python_digit">0</code>,<code class="python_digit">0</code>), <code class="python_operator">(</code>d,d))]
+      disp <code class="python_operator">=</code> pDispo[val <code class="python_operator">-</code><code class="python_digit">1</code>]
+      <code class="python_comment1"># ***</code>
+      <code class="python_keyword1">for</code> p <code class="python_keyword1">in</code> disp:
+      self.<code class="python_function">cercle</code><code class="python_operator">(</code>x <code class="python_operator">+</code>p[<code class="python_digit">0</code>], y <code class="python_operator">+</code>p[<code class="python_digit">1</code>], <code class="python_digit">5</code>, <code class="python_literal1">'red'</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">cercle</code><code class="python_operator">(</code>self, x, y, r, coul):
+      <code class="python_comment1"># ***</code>
+      self.pList.<code class="python_function">append</code><code class="python_operator">(</code>self.can.<code class="python_function">create_oval</code><code class="python_operator">(</code>x<code class="python_operator">-</code>r, y<code class="python_operator">-</code>r, x<code class="python_operator">+</code>r, y<code class="python_operator">+</code>r, fill<code class="python_operator">=</code>coul))
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">effacer</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># ***</code>
+      <code class="python_keyword1">for</code> p <code class="python_keyword1">in</code> self.pList:
+      self.can.<code class="python_function">delete</code><code class="python_operator">(</code>p)
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Projet</code><code class="python_operator">(</code>Frame):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, larg, haut):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.larg, self.haut <code class="python_operator">=</code> larg, haut
+      self.can <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>self, bg<code class="python_operator">=</code><code class="python_literal1">'dark green'</code>, width <code class="python_operator">=</code>larg, height <code class="python_operator">=</code>haut)
+      self.can.<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">5</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>)
+      <code class="python_comment1"># ***</code>
+      bList <code class="python_operator">=</code> [<code class="python_operator">(</code><code class="python_literal1">"A"</code>, self.boutA), <code class="python_operator">(</code><code class="python_literal1">"B"</code>, self.boutB),
+	<code class="python_operator">(</code><code class="python_literal1">"C"</code>, self.boutC), <code class="python_operator">(</code><code class="python_literal1">"D"</code>, self.boutD),
+	<code class="python_operator">(</code><code class="python_literal1">"Quitter"</code>, self.boutQuit)]
+      <code class="python_keyword1">for</code> b <code class="python_keyword1">in</code> bList:
+      <code class="python_function">Button</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code>b[<code class="python_digit">0</code>], command <code class="python_operator">=</code>b[<code class="python_digit">1</code>]).<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT)
+      self.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">boutA</code><code class="python_operator">(</code>self):
+      self.d3 <code class="python_operator">=</code> <code class="python_function">FaceDom</code><code class="python_operator">(</code>self.can, <code class="python_digit">3</code>, <code class="python_operator">(</code><code class="python_digit">100</code>,<code class="python_digit">100</code>), <code class="python_digit">50</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">boutB</code><code class="python_operator">(</code>self):
+      self.d2 <code class="python_operator">=</code> <code class="python_function">FaceDom</code><code class="python_operator">(</code>self.can, <code class="python_digit">2</code>, <code class="python_operator">(</code><code class="python_digit">200</code>,<code class="python_digit">100</code>), <code class="python_digit">80</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">boutC</code><code class="python_operator">(</code>self):
+      self.d1 <code class="python_operator">=</code> <code class="python_function">FaceDom</code><code class="python_operator">(</code>self.can, <code class="python_digit">1</code>, <code class="python_operator">(</code><code class="python_digit">350</code>,<code class="python_digit">100</code>), <code class="python_digit">110</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">boutD</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># ***</code>
+      self.d3.<code class="python_function">effacer</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">boutQuit</code><code class="python_operator">(</code>self):
+      self.master.<code class="python_function">destroy</code><code class="python_operator">(</code>)
+ 
+<code class="python_function">Projet</code><code class="python_operator">(</code><code class="python_digit">500</code>, <code class="python_digit">300</code>).<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>B) Modifiez ensuite ce script, afin qu'il corresponde au cahier des charges suivant :<br/>
+		 Le canevas devra être plus grand : 600 × 600 pixels.<br/>
+		 Les boutons de commande devront être déplacés à droite et espacés davantage.<br/>
+		 La taille des points sur une face de dé devra varier proportionnellement à la taille de cette face.</p>
+          <p>
+            <span class="italique">
+              <b>Variante 1 :</b>
+            </span>
+          </p>
+          <p>Ne conservez que les 2 boutons A et B. Chaque utilisation du bouton A fera apparaître 3 nouveaux dés (de même taille, plutôt petits)
+	    disposés sur une colonne (verticale), les valeurs de ces dés étant tirées au hasard entre 1 et 6. Chaque nouvelle colonne sera disposée à
+	    la droite de la précédente. Si l'un des tirages de 3 dés correspond à 4, 2, 1 (dans n'importe quel ordre), un message
+	    « gagné » sera affiché dans la fenêtre (ou dans le canevas). Le bouton B provoquera l'effacement complet (pas seulement les points
+	    !) de tous les dés affichés.</p>
+          <p>
+            <span class="italique">
+              <b>Variante 2 :</b>
+            </span>
+          </p>
+          <p>Ne conservez que les 2 boutons A et B. Le bouton A fera apparaître 5 dés disposés en quinconce (c'est-à-dire comme les points d'une face
+	    de valeur 5). Les valeurs de ces dés seront tirées au hasard entre 1 et 6, mais il ne pourra pas y avoir de doublons. Le bouton B provoquera l'effacement
+	    complet (pas seulement les points !) de tous les dés affichés.</p>
+          <p>
+            <span class="italique">
+              <b>Variante 3 :</b>
+            </span>
+          </p>
+          <p>Ne conservez que les 3 boutons A, B et C. Le bouton A fera apparaître 13 dés de même taille disposés en cercle. Chaque utilisation du
+	    bouton B provoquera un changement de valeur du premier dé, puis du deuxième, du troisième, etc. La nouvelle valeur d'un dé sera à chaque fois
+	    égale a sa valeur précédente augmentée d'une unité, sauf dans le cas ou la valeur précédente était 6 : dans ce cas la nouvelle
+	    valeur est 1, et ainsi de suite. Le bouton C provoquera l'effacement complet (pas seulement les points !) de tous les dés affichés.</p>
+          <p>
+            <span class="italique">
+              <b>Variante 4 :</b>
+            </span>
+          </p>
+          <p>Ne conservez que les 3 boutons A, B et C. Le bouton A fera apparaître 12 dés de même taille disposés sur deux lignes de 6. Les valeurs des
+	    dés de la première ligne seront dans l'ordre 1, 2, 3, 4, 5, 6. Les valeurs des dés de la seconde ligne seront tirées au hasard entre 1 et 6. Chaque
+	    utilisation du bouton B provoquera un changement de valeur aléatoire du premier dé de la seconde ligne, tant que cette valeur restera différente de
+	    celle du dé correspondant dans la première ligne. Lorsque le 1<sup>er</sup> dé de la 2<sup>e</sup> ligne aura acquis la valeur de son correspondant,
+	    c'est la valeur du 2<sup>e</sup> dé de la seconde ligne qui sera changée au hasard, et ainsi de suite, jusqu'à ce que les 6 faces du bas soient
+	    identiques à celles du haut. Le bouton C provoquera l'effacement complet (pas seulement les points !) de tous les dés affichés.</p>
+        </div>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_14.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_16.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage75" href="#signetNoteBasPage75">(75)</a></div><div class="ContenuUneNoteBasPage">Comme nous l'avons déjà signalé précédemment,
+	  Python vous permet d'accéder aux attributs d'instance en utilisant la qualification des noms par points. D'autres langages de programmation l'interdisent, ou bien
+	  ne l'autorisent que moyennant une déclaration particulière de ces attributs (distinction entre attributs privés et publics).<br/>
+		 Sachez en tous cas que <b>ce n'est pas recommandé</b> : le bon usage de la programmation orientée objet stipule en effet que vous ne devez pouvoir
+		   accéder aux attributs des objets que par l'intermédiaire de méthodes spécifiques (l'interface). </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage76" href="#signetNoteBasPage76">(76)</a></div><div class="ContenuUneNoteBasPage"><span style="color:#000000;">Nous verrons plus loin que </span><span class="italique"><span style="color:#000000;">tkinter</span></span><span style="color:#000000;"> autorise également de construire la fenêtre principale d'une application pardérivation d'une
+	      classe de </span><span class="italique"><span style="color:#000000;">widget</span></span><span style="color:#000000;"> (le plus souvent, il s'agira d'un </span><span class="italique"><span style="color:#000000;">widget</span></span><b><span style="color:#000000;">Frame()</span></b><span style="color:#000000;">). La fenêtre englobant ce </span><span class="italique"><span style="color:#000000;">widget</span></span><span style="color:#000000;"> sera automatiquement ajoutée (voir page ).</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage77" href="#signetNoteBasPage77">(77)</a></div><div class="ContenuUneNoteBasPage">Vous pourriez bien évidemment aussi enregistrer plusieurs classes dans un même module.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage78" href="#signetNoteBasPage78">(78)</a></div><div class="ContenuUneNoteBasPage">En fait, on devrait plutôt appeler cela un message (qui est
+		   lui-même la notification d'un événement). Veuillez relire à ce sujet les explications de la page  : <span class="italique"><b>Programmes pilotés par
+		   des événements</b></span>.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage79" href="#signetNoteBasPage79">(79)</a></div><div class="ContenuUneNoteBasPage">Il va de soit que nous pourrions aussi
+	  rassembler toutes les classes que nous construisons dans un seul module.</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

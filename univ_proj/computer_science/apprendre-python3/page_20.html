@@ -1,0 +1,1583 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L20">20. Communications à travers un réseau &amp; Multithreading.</a><ul class="nav-sommaire-ul Indentation20">
+      
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L20-A">20-A. Les sockets</a><ul class="nav-sommaire-ul Indentation20-A">
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L20-A-1">20-A-1. Construction d'un serveur rudimentaire</a><ul class="nav-sommaire-ul Indentation20-A-1">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-A-1-A">20-A-1-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L20-A-2">20-A-2. Construction d'un client rudimentaire</a><ul class="nav-sommaire-ul Indentation20-A-2">
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-A-2-A">20-A-2-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L20-B">20-B. Gestion de plusieurs tâches en parallèle à l'aide de threads</a><ul class="nav-sommaire-ul Indentation20-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L20-B-1">20-B-1. Client réseau gérant l'émission et la réception simultanées</a><ul class="nav-sommaire-ul Indentation20-B-1">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-B-1-A">20-B-1-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L20-B-2">20-B-2. Serveur réseau gérant les connexions de plusieurs clients en parallèle</a><ul class="nav-sommaire-ul Indentation20-B-2">
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-B-2-A">20-B-2-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L20-C">20-C. Jeu des bombardes, version réseau</a><ul class="nav-sommaire-ul Indentation20-C">
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L20-C-1">20-C-1. Programme serveur : vue d' ensemble</a></li>
+        <li><a class="summaryIndent2" href="#L20-C-2">20-C-2. Protocole de communication</a><ul class="nav-sommaire-ul Indentation20-C-2">
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-C-2-A">20-C-2-A. Remarques complémentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L20-C-3">20-C-3. Programme serveur : première partie</a></li>
+        <li><a class="summaryIndent2" href="#L20-C-4">20-C-4. Synchronisation de threads concurrents à l'aide de verrous (thread locks)</a><ul class="nav-sommaire-ul Indentation20-C-4">
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-C-4-A">20-C-4-A. Utilisation</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L20-C-5">20-C-5. Programme serveur : suite et fin</a><ul class="nav-sommaire-ul Indentation20-C-5">
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-C-5-A">20-C-5-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L20-C-6">20-C-6. Programme client</a><ul class="nav-sommaire-ul Indentation20-C-6">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-C-6-A">20-C-6-A. Commentaires</a></li>
+          <li><a class="summaryIndent3" href="#L20-C-6-B">20-C-6-B. Conclusions et perspectives :</a></li>
+        </ul></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L20-D">20-D. Utilisation de threads pour optimiser les animations.</a><ul class="nav-sommaire-ul Indentation20-D">
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L20-D-1">20-D-1. Temporisation des animations à l'aide de after()</a></li>
+        <li><a class="summaryIndent2" href="#L20-D-2">20-D-2. Temporisation des animations à l'aide de time.sleep()</a></li>
+        <li><a class="summaryIndent2" href="#L20-D-3">20-D-3. Exemple concret</a><ul class="nav-sommaire-ul Indentation20-D-3">
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L20-D-3-A">20-D-3-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_19.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_21.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L20">20. Communications à travers un réseau &amp; Multithreading.<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span class="italique">Le développement extraordinaire de l'internet a amplement démontré que les ordinateurs peuvent être des outils de communication extrêmement
+	  efficaces. Dans ce chapitre, nous allons explorer les bases de cette technologie, en effectuant quelques expériences avec la plus fondamentale des méthodes
+	  d'interconnexion entre programmes, afin de mettre en évidence ce qui doit être mis en place pour assurer la transmission simultanée d'informations entre
+	  plusieurs partenaires.</span>
+      </p>
+      <p>
+        <span class="italique">Pour ce qui va suivre, nous supposerons donc que vous collaborez avec d'autres personnes, et que vos postes de travail Python sont connectés à un réseau
+	  local dont les communications utilisent le protocole TCP/IP. Le système d'exploitation n'a pas d'importance : vous pouvez par exemple installer l'un des
+	  scripts Python décrits ci-après sur un poste de travail fonctionnant sous Linux, et le faire dialoguer avec un autre script mis en œuvre sur un poste de
+	  travail confié aux bons soins d'un système d'exploitation différent, tel que MacOS ou Windows.</span>
+      </p>
+      <p>
+        <span class="italique">Vous pouvez également expérimenter ce qui suit sur une seule et même machine, en mettant les différents scripts en œuvre dans des fenêtres
+	  indépendantes.</span>
+      </p>
+      
+		<h3 class="TitreSection1" id="L20-A">20-A. Les sockets<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Le premier exercice qui va vous être proposé consistera à établir une communication entre deux machines seulement. L'une et l'autre pourront
+	  s'échanger des messages à tour de rôle, mais vous constaterez cependant que leurs configurations ne sont pas symétriques. Le script installé sur
+	  l'une de ces machines jouera en effet le rôle d'un logiciel <span class="italique">serveur</span>, alors que l'autre se comportera comme un logiciel <span class="italique">client</span>.</p>
+        <p>Le logiciel serveur fonctionne en continu, sur une machine dont l'identité est bien définie sur le réseau grâce à une <span class="italique">adresseIP</span>
+	  spécifique<a class="signetNoteBasPage" id="signetNoteBasPage103" href="#noteBasPage103">(103)</a>. Il guette en permanence l'arrivée de requêtes expédiées par les clients potentiels en direction
+	  de cette adresse, par l'intermédiaire d'un <span class="italique">port de communication</span> bien déterminé. Pour ce faire, le script correspondant doit mettre en œuvre
+	  un objet logiciel associé à ce port, que l'on appelle un <span class="italique">socket</span>.</p>
+        <p>Depuis une autre machine, le logiciel client tente d'établir la connexion en émettant une <span class="italique">requête</span> appropriée. Cette requête est
+	  un message qui est confié au réseau, un peu comme on confie une lettre à la Poste. Le réseau pourrait en effet acheminer la requête vers
+	  n'importe quelle autre machine, mais une seule est visée : pour que la destination visée puisse être atteinte, la requête contient dans son
+	  en-tête l'indication de l'adresse IP et du port de communication destinataires. </p>
+        <p>Lorsque la connexion est établie avec le serveur, le client lui assigne lui-même l'un de ses propres ports de communication. À partir de ce
+	  moment, on peut considérer qu'<span class="italique">un canal privilégié relie les deux machines</span>, comme si on les avait connectées l'une à l'autre par
+	  l'intermédiaire d'un fil (les deux ports de communication respectifs jouant le rôle des deux extrémités de ce fil). L'échange d'informations
+	  proprement dit peut commencer.</p>
+        <p>Pour pouvoir utiliser les ports de communication réseau, les programmes font appel à un ensemble de procédures et de fonctions du système
+	  d'exploitation, par l'intermédiaire d'objets interfaces que l'on appelle donc des <span class="italique">sockets</span>. Ceux-ci peuvent mettre en œuvre deux techniques de
+	  communication différentes et complémentaires : celle des <span class="italique">paquets</span> (que l'on appelle aussi des <span class="italique">datagrammes</span>), très largement utilisée
+	  sur l'internet, et celle de la <span class="italique">connexioncontinue</span>, ou <span class="italique">streamsocket</span>, qui est un peu plus simple.</p>
+        
+		<h4 class="TitreSection2" id="L20-A-1">20-A-1. Construction d'un serveur rudimentaire<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Pour nos premières expériences, nous allons utiliser la technique des <span class="italique">streamsockets</span>.<br/>
+		 Celle-ci est en effet parfaitement appropriée lorsqu'il s'agit de faire communiquer des ordinateurs interconnectés par l'intermédiaire d'un
+		   réseau local. C'est une technique particulièrement aisée à mettre en œuvre, et elle permet un débit élevé pour
+		   l'échange de données.</p>
+          <p>L'autre technologie (celle des <span class="italique">paquets</span>) serait préférable pour les communications expédiées <span class="italique">via</span> l'Internet, en raison de sa
+	    plus grande fiabilité (les mêmes paquets peuvent atteindre leur destination par différents chemins, être émis ou ré-émis en
+	    plusieurs exemplaires si cela se révèle nécessaire pour corriger les erreurs de transmission), mais sa mise en œuvre est un peu plus complexe. Nous
+	    ne l'étudierons pas dans ce livre.</p>
+          <p>Le premier script ci-dessous met en place un serveur capable de communiquer avec un seul client. Nous verrons un peu plus loin ce qu'il faut lui ajouter afin
+	    qu'il puisse prendre en charge en parallèle les connexions de plusieurs clients.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e62758">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e62758" onclick="selectionCode('contenuCoded0e62758', 'IdTitreCode-d0e62758');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e62758"><code class="python_comment1"># Définition d'un serveur réseau rudimentaire</code>
+<code class="python_comment1"># Ce serveur attend la connexion d'un client</code>
+ 
+<code class="python_keyword1">import</code> socket, sys
+ 
+HOST <code class="python_operator">=</code> <code class="python_literal1">'192.168.1.168'</code>
+PORT <code class="python_operator">=</code> <code class="python_digit">50000</code>
+counter <code class="python_operator">=</code><code class="python_digit">0</code>	 <code class="python_comment1"># compteur de connexions actives</code>
+ 
+<code class="python_comment1"># 1) création du socket :</code>
+mySocket <code class="python_operator">=</code> socket.<code class="python_function">socket</code><code class="python_operator">(</code>socket.AF_INET, socket.SOCK_STREAM)
+ 
+<code class="python_comment1"># 2) liaison du socket à une adresse précise :</code>
+<code class="python_keyword1">try</code>:
+  mySocket.<code class="python_function">bind</code><code class="python_operator">((</code>HOST, PORT))
+<code class="python_keyword1">except</code> socket.error:
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"La liaison du socket à l'adresse choisie a échoué."</code>)
+  sys.exit
+ 
+<code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+  <code class="python_comment1"># 3) Attente de la requête de connexion d'un client :</code>
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Serveur prêt, en attente de requêtes ..."</code>)
+  mySocket.<code class="python_function">listen</code><code class="python_operator">(</code><code class="python_digit">2</code>)
+ 
+  <code class="python_comment1"># 4) Etablissement de la connexion :</code>
+  connexion, adresse <code class="python_operator">=</code> mySocket.<code class="python_function">accept</code><code class="python_operator">(</code>)
+  counter <code class="python_operator">+=</code><code class="python_digit">1</code>
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Client connecté, adresse IP </code><code class="python_literal4">%s</code><code class="python_literal1">, port </code><code class="python_literal4">%s</code><code class="python_literal1">"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>adresse[<code class="python_digit">0</code>], adresse[<code class="python_digit">1</code>]))
+ 
+  <code class="python_comment1"># 5) Dialogue avec le client :</code>
+  msgServeur <code class="python_operator">=</code><code class="python_literal1">"Vous êtes connecté au serveur Marcel. Envoyez vos messages."</code>
+  connexion.<code class="python_function">send</code><code class="python_operator">(</code>msgServeur.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+  msgClient <code class="python_operator">=</code> connexion.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">1024</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+  <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"C&gt;"</code>, msgClient)
+      <code class="python_keyword1">if</code> msgClient.<code class="python_function">upper</code><code class="python_operator">(</code>) <code class="python_operator">==</code> <code class="python_literal1">"FIN"</code> <code class="python_keyword1">or</code> msgClient <code class="python_operator">==</code><code class="python_literal1">""</code>:
+      <code class="python_keyword1">break</code>
+      msgServeur <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"S&gt; "</code>)
+      connexion.<code class="python_function">send</code><code class="python_operator">(</code>msgServeur.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+      msgClient <code class="python_operator">=</code> connexion.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">1024</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+ 
+  <code class="python_comment1"># 6) Fermeture de la connexion :</code>
+  connexion.<code class="python_function">send</code><code class="python_operator">(</code><code class="python_literal1">"fin"</code>.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Connexion interrompue."</code>)
+  connexion.<code class="python_function">close</code><code class="python_operator">(</code>)
+ 
+  ch <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"&lt;R&gt;ecommencer &lt;T&gt;erminer ? "</code>)
+  <code class="python_keyword1">if</code> ch.<code class="python_function">upper</code><code class="python_operator">(</code>) <code class="python_operator">==</code><code class="python_literal1">'T'</code>:
+      <code class="python_keyword1">break</code>
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L20-A-1-A">20-A-1-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Ligne 4 : Le module <b>socket</b> contient toutes les fonctions et les classes nécessaires pour construire des programmes communicants. Comme nous
+		allons le voir dans les lignes suivantes, l'établissement de la communication comporte six étapes.</li>
+              <li>Lignes 6-7 : Ces deux variables définissent l'identité du serveur, telle qu'on l'intégrera au socket. <b>HOST</b> doit contenir une
+		chaîne de caractères indiquant l'adresse IP du serveur sous la forme décimale habituelle, ou encore le nom DNS de ce même serveur (mais à
+		la condition qu'un mécanisme de résolution des noms ait été mis en place sur le réseau). <b>PORT</b> doit contenir un entier, à
+		savoir le numéro d'un port qui ne soit pas déjà utilisé pour un autre usage, et de préférence une valeur supérieure à
+		1024.</li>
+              <li>Lignes 10-11 : Première étape du mécanisme d'interconnexion. On instancie un objet de la classe <b>socket()</b>, en précisant deux
+		options qui indiquent le type d'adresses choisi (nous utiliserons des adresses de type « Internet ») ainsi que la technologie de transmission
+		(datagrammes ou connexion continue (<span class="italique">stream</span>) : nous avons décidé d'utiliser cette dernière).</li>
+              <li>Lignes 13 à 18 : Seconde étape. On tente d'établir la liaison entre le socket et le port de communication. Si cette
+		liaison ne peut être établie (port de communication occupé, par exemple, ou nom de machine incorrect), le programme se termine sur un message
+		d'erreur. <span class="italique">Remarque concernant la ligne 15 </span>: la méthode <b>bind()</b> du socket attend un argument du type tuple, raison pour laquelle nous
+		devons enfermer nos deux variables dans une double paire de parenthèses.</li>
+              <li>Ligne 20 : Notre programme serveur étant destiné à fonctionner en permanence dans l'attente des requêtes de clients
+		potentiels, nous le lançons dans une boucle sans fin. </li>
+              <li>Lignes 21 à 23 : Troisième étape. Le socket étant relié à un port de communication, il peut à
+		présent se préparer à recevoir les requêtes envoyées par les clients. C'est le rôle de la méthode <b>listen()</b>. L'argument
+		qu'on lui transmet indique le nombre maximum de connexions à accepter en parallèle. Nous verrons plus loin comment gérer celles-ci.</li>
+              <li>Lignes 25 à 28 : Quatrième étape. Lorsqu'on fait appel à sa méthode <b>accept()</b>, le socket attend
+		indéfiniment qu'une requête se présente. Le script est donc interrompu à cet endroit, un peu comme il le serait si nous faisions appel à
+		une fonction <b>input()</b> pour attendre une entrée clavier. Si une requête est réceptionnée, la méthode <b>accept()</b> renvoie un tuple
+		de deux éléments : le premier est la référence d'un nouvel objet de la classe <b>socket()</b><a class="signetNoteBasPage" id="signetNoteBasPage104" href="#noteBasPage104">(104)</a>, qui sera la véritable
+		interface de communication entre le client et le serveur, et le second un autre tuple contenant les coordonnées de ce client (son adresse IP et le
+		n<sup>o</sup> de port qu'il utilise lui-même). </li>
+              <li>Lignes 30 à 33 : Cinquième étape. La communication proprement dite est établie. Les méthodes <b>send()</b> et
+		<b>recv()</b> du socket servent évidemment à l'émission et à la réception des messages, <span class="italique">qui doivent impérativement être des
+		chaînes d'octets.</span> À l'émission, il faut donc prévoir explicitement la conversion des chaînes de caractères en données de
+		type <span class="italique"><b>bytes</b></span>, et faire l'inverse à la réception.<br/><span class="italique">Remarques :</span> la méthode <b>send()</b> renvoie le nombre d'octets
+		expédiés. L'appel de la méthode <b>recv</b>() doit comporter un argument entier indiquant le nombre maximum d'octets à réceptionner en une
+		fois. Les octets surnuméraires sont mis en attente dans un tampon, ils sont transmis lorsque la même méthode <b>recv()</b> est appelée à
+		nouveau.</li>
+              <li>Lignes 34 à 40 : Cette nouvelle boucle sans fin maintient le dialogue jusqu'à ce que le client décide d'envoyer le mot
+		« fin » ou une simple chaîne vide. Les écrans des deux machines afficheront chacune l'évolution de ce dialogue.</li>
+              <li>Lignes 42 à 45 : Sixième étape. Fermeture de la connexion.</li>
+            </ul>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-A-2">20-A-2. Construction d'un client rudimentaire<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le script ci-dessous définit un logiciel client complémentaire du serveur décrit dans les pages précédentes. On notera sa grande
+	    simplicité.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e63293">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e63293" onclick="selectionCode('contenuCoded0e63293', 'IdTitreCode-d0e63293');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e63293"><code class="python_comment1"># Définition d'un client réseau rudimentaire</code>
+<code class="python_comment1"># Ce client dialogue avec un serveur ad hoc</code>
+ 
+<code class="python_keyword1">import</code> socket, sys
+ 
+HOST <code class="python_operator">=</code> <code class="python_literal1">'192.168.1.168'</code>
+PORT <code class="python_operator">=</code> <code class="python_digit">50000</code>
+ 
+<code class="python_comment1"># 1) création du socket :</code>
+mySocket <code class="python_operator">=</code> socket.<code class="python_function">socket</code><code class="python_operator">(</code>socket.AF_INET, socket.SOCK_STREAM)
+ 
+<code class="python_comment1"># 2) envoi d'une requête de connexion au serveur :</code>
+<code class="python_keyword1">try</code>:
+  mySocket.<code class="python_function">connect</code><code class="python_operator">((</code>HOST, PORT))
+<code class="python_keyword1">except</code> socket.error:
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"La connexion a échoué."</code>)
+  sys.<code class="python_function">exit</code><code class="python_operator">(</code>)
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Connexion établie avec le serveur."</code>)
+ 
+<code class="python_comment1"># 3) Dialogue avec le serveur :</code>
+msgServeur <code class="python_operator">=</code> mySocket.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">1024</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+ 
+<code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+  <code class="python_keyword1">if</code> msgServeur.<code class="python_function">upper</code><code class="python_operator">(</code>) <code class="python_operator">==</code> <code class="python_literal1">"FIN"</code> <code class="python_keyword1">or</code> msgServeur <code class="python_operator">==</code><code class="python_literal1">""</code>:
+      <code class="python_keyword1">break</code>
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"S&gt;"</code>, msgServeur)
+  msgClient <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"C&gt; "</code>)
+  mySocket.<code class="python_function">send</code><code class="python_operator">(</code>msgClient.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+  msgServeur <code class="python_operator">=</code> mySocket.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">1024</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+ 
+<code class="python_comment1"># 4) Fermeture de la connexion :</code>
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Connexion interrompue."</code>)
+mySocket.<code class="python_function">close</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L20-A-2-A">20-A-2-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Le début du script est similaire à celui du serveur. L'adresse IP et le port de communication doivent être ceux du serveur.</li>
+              <li>Lignes 12 à 18 : On ne crée cette fois qu'un seul objet socket, dont on utilise la méthode <b>connect()</b> pour envoyer la requête
+		de connexion.</li>
+              <li>Lignes 20 à 33 : Une fois la connexion établie, on peut dialoguer avec le serveur en utilisant les méthodes <b>send()</b> et
+		<b>recv()</b> déjà décrites plus haut pour celui-ci.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L20-B">20-B. Gestion de plusieurs tâches en parallèle à l'aide de threads<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Le système de communication que nous avons élaboré dans les pages précédentes est vraiment très rudimentaire : d'une part il
+	  ne met en relation que deux machines, et d'autre part il limite la liberté d'expression des deux interlocuteurs. Ceux-ci ne peuvent en effet envoyer des messages
+	  que chacun à leur tour. Par exemple, lorsque l'un d'eux vient d'émettre un message, son système reste bloqué tant que son partenaire ne lui a pas
+	  envoyé une réponse. Lorsqu'il vient de recevoir une telle réponse, son système reste incapable d'en réceptionner une autre, tant qu'il n'a pas
+	  entré lui-même un nouveau message, et ainsi de suite.</p>
+        <p>Tous ces problèmes proviennent du fait que nos scripts habituels ne peuvent s'occuper que d'une seule chose à la fois. Lorsque le flux d'instructions
+	  rencontre une fonction <b>input()</b>, par exemple, il ne se passe plus rien tant que l'utilisateur n'a pas introduit la donnée attendue. Et même si cette
+	  attente dure très longtemps, il n'est habituellement pas possible que le programme effectue d'autres tâches pendant ce temps. Ceci n'est toutefois vrai qu'au
+	  sein d'un seul et même programme : vous savez certainement que vous pouvez exécuter d'autres applications entre-temps sur votre ordinateur, car les
+	  systèmes d'exploitation modernes sont <span class="italique">multi-tâches</span>. </p>
+        <p>Les pages qui suivent sont destinées à vous expliquer comment vous pouvez introduire cette fonctionnalité <span class="italique">multi-tâche</span> dans vos
+	  programmes, afin que vous puissiez développer de véritables applications réseau, capables de communiquer simultanément avec plusieurs partenaires.
+	  </p>
+        <p>Veuillez à présent considérer le script de la page précédente. Sa fonctionnalité essentielle réside dans la boucle
+	  <b>while</b> des lignes 23 à 29. Or, cette boucle s'interrompt à deux endroits :</p>
+        <ul class="ListeDVP">
+          <li>à la ligne 27, pour attendre les entrées clavier de l'utilisateur (fonction <b>input()</b>) ;</li>
+          <li>à la ligne 29, pour attendre l'arrivée d'un message réseau.</li>
+        </ul>
+        <p>Ces deux attentes sont donc <span class="italique">successives</span>, alors qu'il serait bien plus intéressant qu'elles soient <span class="italique">simultanées</span>. Si c'était le cas,
+	  l'utilisateur pourrait expédier des messages à tout moment, sans devoir attendre à chaque fois la réaction de son partenaire. Il pourrait
+	  également recevoir n'importe quel nombre de messages, sans l'obligation d'avoir à répondre à chacun d'eux pour recevoir les autres.</p>
+        <p>Nous pouvons arriver à ce résultat si nous apprenons à gérer plusieurs séquences d'instructions <span class="italique">en parallèle</span> au sein d'un
+	  même programme. Mais comment cela est-il possible ? </p>
+        <p>Au cours de l'histoire de l'informatique, plusieurs techniques ont été mises au point pour partager le temps de travail d'un processeur entre
+	  différentes tâches, de telle manière que celles-ci paraissent être effectuées en même temps (alors qu'en réalité le processeur
+	  s'occupe d'un petit bout de chacune d'elles à tour de rôle). Ces techniques sont implémentées dans le système d'exploitation, et il n'est pas
+	  nécessaire de les détailler ici, même s'il est possible d'accéder à chacune d'elles avec Python.</p>
+        <p>Dans les pages suivantes, nous allons apprendre à utiliser celle de ces techniques qui est à la fois la plus facile à mettre en œuvre et la
+	  seule qui soit véritablement <span class="italique">portable</span> (elle est en effet supportée par tous les grands systèmes d'exploitation) : on l'appelle la technique
+	  des processus légers ou <span class="italique"><b>threads</b></span><a class="signetNoteBasPage" id="signetNoteBasPage105" href="#noteBasPage105">(105)</a>.</p>
+        <p>Dans un programme d'ordinateur, les threads sont des flux d'instructions qui sont menés en parallèle (quasi-simultanément), tout en partageant le
+	  même espace de noms global.</p>
+        <p>En fait, le flux d'instructions de n'importe quel programme Python suit toujours au moins un thread : le <span class="italique">threadprincipal</span>. À partir de celui-ci,
+	  d'autres <span class="italique">threadsenfants</span> peuvent être amorcés, qui seront exécutés en parallèle. Chaque thread enfant se termine et disparaît sans
+	  autre forme de procès lorsque toutes les instructions qu'il contient ont été exécutées. Par contre, lorsque le thread principal se termine, il
+	  faut parfois s'assurer que tous ses threads enfants « meurent » avec lui. </p>
+        
+		<h4 class="TitreSection2" id="L20-B-1">20-B-1. Client réseau gérant l'émission et la réception simultanées<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Nous allons maintenant mettre en pratique la technique des threads pour construire un système de <span class="italique">chat</span><a class="signetNoteBasPage" id="signetNoteBasPage106" href="#noteBasPage106">(106)</a> simplifié. Ce système sera constitué d'un seul serveur et d'un nombre quelconque de clients.
+	    Contrairement à ce qui se passait dans notre premier exercice, personne n'utilisera le serveur lui-même pour communiquer, mais lorsque celui-ci aura
+	    été mis en route, plusieurs clients pourront s'y connecter et commencer à s'échanger des messages.</p>
+          <p>Chaque client enverra tous ses messages au serveur, mais celui-ci les ré-expédiera immédiatement à tous les autres clients connectés,
+	    de telle sorte que chacun puisse voir l'ensemble du trafic. Chacun pourra à tout moment envoyer ses messages, et recevoir ceux des autres, dans n'importe quel
+	    ordre, la réception et l'émission étant gérées simultanément, dans des threads séparés.</p>
+          <p>Le script ci-après définit le programme client. Le serveur sera décrit un peu plus loin. Vous constaterez que la partie principale du script
+	    (ligne 38 et suivantes) est similaire à celle de l'exemple précédent. Seule la partie « Dialogue avec le serveur » a été
+	    remplacée. Au lieu d'une boucle <b>while</b>, vous y trouvez à présent les instructions de création de deux <span class="italique">objets threads</span> (aux lignes 49 et
+	    50), dont on démarre la fonctionnalité aux deux lignes suivantes. Ces objets threads sont crées par dérivation, à partir de la classe
+	    <b>Thread()</b> du module <b>threading</b>. Ils s'occuperont indépendamment de la réception et le l'émission des messages. Les deux <span class="italique">threads
+	    enfants</span> sont ainsi parfaitement encapsulés dans des objets distincts, ce qui facilite la compréhension du mécanisme.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e63717">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e63717" onclick="selectionCode('contenuCoded0e63717', 'IdTitreCode-d0e63717');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e63717"><code class="python_comment1"># Définition d'un client réseau gérant en parallèle l'émission</code>
+<code class="python_comment1"># et la réception des messages (utilisation de 2 THREADS).</code>
+ 
+host <code class="python_operator">=</code> <code class="python_literal1">'192.168.1.168'</code>
+port <code class="python_operator">=</code> <code class="python_digit">46000</code>
+ 
+<code class="python_keyword1">import</code> socket, sys, threading
+ 
+<code class="python_keyword1">class</code> <code class="python_function">ThreadReception</code><code class="python_operator">(</code>threading.Thread):
+  <code class="python_literal2">"""objet thread gérant la réception des messages"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, conn):
+      threading.Thread.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.connexion <code class="python_operator">=</code> conn	     <code class="python_comment1"># réf. du socket de connexion</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">run</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+      message_recu <code class="python_operator">=</code> self.connexion.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">1024</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"*"</code> <code class="python_operator">+</code> message_recu <code class="python_operator">+</code> <code class="python_literal1">"*"</code>)
+      <code class="python_keyword1">if</code> <code class="python_keyword1">not</code> message_recu <code class="python_keyword1">or</code> message_recu.<code class="python_function">upper</code><code class="python_operator">(</code>) <code class="python_operator">==</code><code class="python_literal1">"FIN"</code>:
+	  <code class="python_keyword1">break</code>
+      <code class="python_comment1"># Le thread &lt;réception&gt; se termine ici.</code>
+      <code class="python_comment1"># On force la fermeture du thread &lt;émission&gt; :</code>
+      th_E.<code class="python_function">_stop</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Client arrêté. Connexion interrompue."</code>)
+      self.connexion.<code class="python_function">close</code><code class="python_operator">(</code>)
+ 
+<code class="python_keyword1">class</code> <code class="python_function">ThreadEmission</code><code class="python_operator">(</code>threading.Thread):
+  <code class="python_literal2">"""objet thread gérant l'émission des messages"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, conn):
+      threading.Thread.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.connexion <code class="python_operator">=</code> conn	     <code class="python_comment1"># réf. du socket de connexion</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">run</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+      message_emis <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>)
+      self.connexion.<code class="python_function">send</code><code class="python_operator">(</code>message_emis.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+ 
+<code class="python_comment1"># Programme principal - Établissement de la connexion :</code>
+connexion <code class="python_operator">=</code> socket.<code class="python_function">socket</code><code class="python_operator">(</code>socket.AF_INET, socket.SOCK_STREAM)
+<code class="python_keyword1">try</code>:
+  connexion.<code class="python_function">connect</code><code class="python_operator">((</code>host, port))
+<code class="python_keyword1">except</code> socket.error:
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"La connexion a échoué."</code>)
+  sys.<code class="python_function">exit</code><code class="python_operator">(</code>)
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Connexion établie avec le serveur."</code>)
+ 
+<code class="python_comment1"># Dialogue avec le serveur : on lance deux threads pour gérer</code>
+<code class="python_comment1"># indépendamment l'émission et la réception des messages :</code>
+th_E <code class="python_operator">=</code> <code class="python_function">ThreadEmission</code><code class="python_operator">(</code>connexion)
+th_R <code class="python_operator">=</code> <code class="python_function">ThreadReception</code><code class="python_operator">(</code>connexion)
+th_E.<code class="python_function">start</code><code class="python_operator">(</code>)
+th_R.<code class="python_function">start</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L20-B-1-A">20-B-1-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Remarque générale : Dans cet exemple, nous avons décidé de créer deux<span class="italique"> objets threads</span> indépendants du thread
+		principal, afin de bien mettre en évidence les mécanismes. Notre programme utilise donc trois threads en tout, alors que le lecteur attentif aura
+		remarqué que deux pourraient suffire. En effet : le thread principal ne sert en définitive qu'à lancer les deux autres ! Il n'y a
+		cependant aucun intérêt à limiter le nombre de threads. Au contraire : à partir du moment où l'on décide d'utiliser cette
+		technique, il faut en profiter pour compartimenter l'application en unités bien distinctes. </li>
+              <li>Ligne 7 : Le module <b>threading</b> contient la définition de toute une série de classes intéressantes pour gérer les
+		threads. Nous n'utiliserons ici que la seule classe <b>Thread()</b>, mais une autre sera exploitée plus loin (la classe <b>Lock()</b>), lorsque nous devrons
+		nous préoccuper de problèmes de synchronisation entre différents threads concurrents.</li>
+              <li>Lignes 9 à 25 : Les classes dérivées de la classe <b>Thread()</b> contiendront essentiellement une méthode
+		<b>run()</b>. C'est dans celle-ci que l'on placera la portion de programme spécifiquement confiée au thread. Il s'agira souvent d'une boucle
+		répétitive, comme ici.<span class="italique"> Vous pouvez parfaitement considérer le contenu de cette méthode comme un script indépendant, qui s'exécute
+		en parallèle avec les autres composants de votre application</span>. Lorsque ce code a été complètement exécuté, le thread se
+		referme.</li>
+              <li>Lignes 16 à 20 : Cette boucle gère la réception des messages. À chaque itération, le flux d'instructions
+		s'interrompt à la ligne 17 dans l'attente d'un nouveau message, mais le reste du programme n'est pas figé pour autant : les autres threads
+		continuent leur travail indépendamment.</li>
+              <li>Ligne 19 : La sortie de boucle est provoquée par la réception d'un message <b><span style="color:#000080;">'</span><span style="color:#000080;">fin</span><span style="color:#000080;">'</span></b> (en majuscules ou en minuscules), ou encore d'un message vide (c'est notamment le cas si la connexion
+		est coupée par le partenaire). Quelques instructions de « nettoyage » sont alors exécutées, et puis le thread se
+		termine.</li>
+              <li>Ligne 23 : Lorsque la réception des messages est terminée, nous souhaitons que le reste du programme se termine lui aussi. Il nous faut
+		donc forcer la fermeture de l'autre objet thread, celui que nous avons mis en place pour gérer l'émission des messages. Cette fermeture forcée peut
+		être obtenue à l'aide de la méthode <b>_stop()</b><a class="signetNoteBasPage" id="signetNoteBasPage107" href="#noteBasPage107">(107)</a>.</li>
+              <li>Lignes 27 à 36 : Cette classe définit donc un autre objet thread, qui contient cette fois une boucle de répétition
+		perpétuelle. Il ne pourra donc se terminer que contraint et forcé par la méthode décrite au paragraphe précédent. À chaque
+		itération de cette boucle, le flux d'instructions s'interrompt à la ligne 35 dans l'attente d'une entrée clavier, mais cela n'empêche en
+		aucune manière les autres threads de faire leur travail.</li>
+              <li>Lignes 38 à 45 : Ces lignes sont reprises à l'identique des scripts précédents.</li>
+              <li>Lignes 47 à 52 : Instanciation et démarrage des deux objets <span class="italique">threads enfants</span>. Veuillez noter qu'il est recommandé
+		de provoquer ce démarrage en invoquant la méthode intégrée <b>start()</b>, plutôt qu'en faisant appel directement à la méthode
+		<b>run()</b> que vous aurez définie vous-même. Sachez également que vous ne pouvez invoquer <b>start()</b> qu'une seule fois (une fois
+		arrêté, un objet thread ne peut pas être redémarré).</li>
+            </ul>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-B-2">20-B-2. Serveur réseau gérant les connexions de plusieurs clients en parallèle<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le script ci-après crée un serveur capable de prendre en charge les connexions d'un certain nombre de clients du même type que ce que nous
+	    avons décrit dans les pages précédentes.</p>
+          <p>Ce serveur n'est pas utilisé lui-même pour communiquer : ce sont les clients qui communiquent les uns avec les autres, par l'intermédiaire
+	    du serveur. Celui-ci joue donc le rôle d'un <span class="italique">relais</span> : il accepte les connexions des clients, puis attend l'arrivée de leurs messages. Lorsqu'un
+	    message arrive en provenance d'un client particulier, le serveur le ré-expédie à tous les autres, en lui ajoutant au passage une chaîne
+	    d'identification spécifique du client émetteur, afin que chacun puisse voir tous les messages, et savoir de qui ils proviennent.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e64227">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e64227" onclick="selectionCode('contenuCoded0e64227', 'IdTitreCode-d0e64227');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e64227"><code class="python_comment1"># Définition d'un serveur réseau gérant un système de CHAT simplifié.</code>
+<code class="python_comment1"># Utilise les threads pour gérer les connexions clientes en parallèle.</code>
+ 
+HOST <code class="python_operator">=</code> <code class="python_literal1">'192.168.1.168'</code>
+PORT <code class="python_operator">=</code> <code class="python_digit">46000</code>
+ 
+<code class="python_keyword1">import</code> socket, sys, threading
+ 
+<code class="python_keyword1">class</code> <code class="python_function">ThreadClient</code><code class="python_operator">(</code>threading.Thread):
+  <code class="python_literal2">'''dérivation d'un objet thread pour gérer la connexion avec un client'''</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, conn):
+      threading.Thread.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.connexion <code class="python_operator">=</code> conn
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">run</code><code class="python_operator">(</code>self):
+      <code class="python_comment1"># Dialogue avec le client :</code>
+      nom <code class="python_operator">=</code> self.<code class="python_function">getName</code><code class="python_operator">(</code>)	    <code class="python_comment1"># Chaque thread possède un nom</code>
+      <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+      msgClient <code class="python_operator">=</code> self.connexion.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">1024</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+      <code class="python_keyword1">if</code> <code class="python_keyword1">not</code> msgClient <code class="python_keyword1">or</code> msgClient.<code class="python_function">upper</code><code class="python_operator">(</code>) <code class="python_operator">==</code><code class="python_literal1">"FIN"</code>:
+	  <code class="python_keyword1">break</code>
+      message <code class="python_operator">=</code> <code class="python_literal1">"</code><code class="python_literal4">%s</code><code class="python_literal1">&gt; </code><code class="python_literal4">%s</code><code class="python_literal1">"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>nom, msgClient)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code>message)
+      <code class="python_comment1"># Faire suivre le message à tous les autres clients :</code>
+      <code class="python_keyword1">for</code> cle <code class="python_keyword1">in</code> conn_client:
+	  <code class="python_keyword1">if</code> cle <code class="python_operator">!=</code> nom:	  <code class="python_comment1"># ne pas le renvoyer à l'émetteur</code>
+	  conn_client[cle].<code class="python_function">send</code><code class="python_operator">(</code>message.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+ 
+      <code class="python_comment1"># Fermeture de la connexion :</code>
+      self.connexion.<code class="python_function">close</code><code class="python_operator">(</code>)	  <code class="python_comment1"># couper la connexion côté serveur</code>
+      <code class="python_keyword1">del</code> conn_client[nom]	<code class="python_comment1"># supprimer son entrée dans le dictionnaire</code>
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Client </code><code class="python_literal4">%s</code><code class="python_literal1"> déconnecté."</code> <code class="python_operator">%</code> nom)
+      <code class="python_comment1"># Le thread se termine ici</code>
+ 
+<code class="python_comment1"># Initialisation du serveur - Mise en place du socket :</code>
+mySocket <code class="python_operator">=</code> socket.<code class="python_function">socket</code><code class="python_operator">(</code>socket.AF_INET, socket.SOCK_STREAM)
+<code class="python_keyword1">try</code>:
+  mySocket.<code class="python_function">bind</code><code class="python_operator">((</code>HOST, PORT))
+<code class="python_keyword1">except</code> socket.error:
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"La liaison du socket à l'adresse choisie a échoué."</code>)
+  sys.<code class="python_function">exit</code><code class="python_operator">(</code>)
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Serveur prêt, en attente de requêtes ..."</code>)
+mySocket.<code class="python_function">listen</code><code class="python_operator">(</code><code class="python_digit">5</code>)
+ 
+<code class="python_comment1"># Attente et prise en charge des connexions demandées par les clients :</code>
+conn_client <code class="python_operator">=</code> {}	<code class="python_comment1"># dictionnaire des connexions clients</code>
+<code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+  connexion, adresse <code class="python_operator">=</code> mySocket.<code class="python_function">accept</code><code class="python_operator">(</code>)
+  <code class="python_comment1"># Créer un nouvel objet thread pour gérer la connexion :</code>
+  th <code class="python_operator">=</code> <code class="python_function">ThreadClient</code><code class="python_operator">(</code>connexion)
+  th.<code class="python_function">start</code><code class="python_operator">(</code>)
+  <code class="python_comment1"># Mémoriser la connexion dans le dictionnaire :</code>
+  it <code class="python_operator">=</code> th.<code class="python_function">getName</code><code class="python_operator">(</code>)	  <code class="python_comment1"># identifiant du thread</code>
+  conn_client[it] <code class="python_operator">=</code> connexion
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Client </code><code class="python_literal4">%s</code><code class="python_literal1"> connecté, adresse IP </code><code class="python_literal4">%s</code><code class="python_literal1">, port </code><code class="python_literal4">%s</code><code class="python_literal1">."</code> <code class="python_operator">%</code>\
+     <code class="python_operator">(</code>it, adresse[<code class="python_digit">0</code>], adresse[<code class="python_digit">1</code>]))
+  <code class="python_comment1"># Dialogue avec le client :</code>
+  msg <code class="python_operator">=</code><code class="python_literal1">"Vous êtes connecté. Envoyez vos messages."</code>
+  connexion.<code class="python_function">send</code><code class="python_operator">(</code>msg.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L20-B-2-A">20-B-2-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Lignes 35 à 43 : L'initialisation de ce serveur est identique à celle du serveur rudimentaire décrit au début du
+		présent chapitre.</li>
+              <li>Ligne 46 : Les références des différentes connexions doivent être mémorisées. Nous pourrions les placer dans une
+		liste, mais il est plus judicieux de les placer dans un dictionnaire, pour deux raisons : la première est que nous devrons pouvoir ajouter ou enlever ces
+		références dans n'importe quel ordre, puisque les clients se connecteront et se déconnecteront à leur guise. La seconde est que nous pouvons
+		disposer aisément d'un identifiant unique pour chaque connexion, lequel pourra servir de clé d'accès dans un dictionnaire. Cet identifiant nous sera
+		en effet fourni automatiquement par la classe <b>Thread()</b>.</li>
+              <li>Lignes 47 à 51 : Le programme commence ici une boucle de répétition perpétuelle, qui va constamment attendre
+		l'arrivée de nouvelles connexions. Pour chacune de celles-ci, un nouvel objet <b>ThreadClient()</b> est créé, lequel pourra s'occuper d'elle
+		indépendamment de toutes les autres.</li>
+              <li>Lignes 52 à 54 : Obtention d'un identifiant unique à l'aide de la méthode <b>getName()</b>. Nous pouvons profiter ici du
+		fait que Python attribue automatiquement un nom unique à chaque nouveau thread : ce nom convient bien comme identifiant (ou clé) pour retrouver la
+		connexion correspondante dans notre dictionnaire. Vous pourrez constater qu'il s'agit d'une chaîne de caractères, de la forme « <b><span style="color:#000080;">Thread-N</span></b> » (N étant le numéro d'ordre du thread).</li>
+              <li>Lignes 15 à 17 : Gardez bien à l'esprit qu'il se créera autant d'objets <b>ThreadClient()</b> que de connexions, et que
+		tous ces objets fonctionneront en parallèle. La méthode <b>getName()</b> peut alors être utilisée au sein d'un quelconque de ces objets pour
+		retrouver son identité particulière. Nous utiliserons cette information pour distinguer la connexion courante de toutes les autres (voir ligne
+		26).</li>
+              <li>Lignes 18 à 23 : L'utilité du thread est de réceptionner tous les messages provenant d'un client particulier. Il faut
+		donc pour cela une boucle de répétition perpétuelle, qui ne s'interrompra qu'à la réception du message spécifique :
+		« fin », ou encore à la réception d'un message vide (cas où la connexion est coupée par le partenaire).</li>
+              <li>Lignes 24 à 27 : Chaque message reçu d'un client doit être ré-expédié à tous les autres. Nous
+		utilisons ici une boucle <b>for</b> pour parcourir l'ensemble des clés du dictionnaire des connexions, lesquelles nous permettent ensuite de retrouver les
+		connexions elles-mêmes. Un simple test (à la ligne 26) nous évite de ré-expédier le message au client d'où il
+		provient.</li>
+              <li>Ligne 31 : Lorsque nous fermons un socket de connexion, il est préférable de supprimer sa référence dans le dictionnaire,
+		puisque cette référence ne peut plus servir. Et nous pouvons faire cela sans précaution particulière, car les éléments d'un
+		dictionnaire ne sont pas ordonnés (nous pouvons en ajouter ou en enlever dans n'importe quel ordre).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L20-C">20-C. Jeu des bombardes, version réseau<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/100000000000034D0000028226D7135A.png"><img class="ImgCliquable figure-img-caption" src="./images/100000000000034D0000028226D7135A.png" alt="Image non disponible" width="428" height="325"/></a></figure></div>
+        <p>Au chapitre 15, nous avons commenté le développement d'un petit jeu de combat dans lequel des joueurs s'affrontaient à l'aide de bombardes.
+	  L'intérêt de ce jeu reste toutefois fort limité, tant qu'il se pratique sur un seul et même ordinateur. Nous allons donc le perfectionner, en y
+	  intégrant les techniques que nous venons d'apprendre. Comme le système de « chat » décrit dans les pages précédentes,
+	  l'application complète se composera désormais de deux programmes distincts : un logiciel serveur qui ne sera mis en fonctionnement que sur une seule
+	  machine, et un logiciel client qui pourra être lancé sur toute une série d'autres.</p>
+        <p>Du fait du caractère portable de Python, il vous sera même possible d'organiser des combats de bombardes entre ordinateurs gérés par des
+	  systèmes d'exploitation différents (<span class="italique">Linux ↔ Windows ↔ MacOS !</span>).</p>
+        
+		<h4 class="TitreSection2" id="L20-C-1">20-C-1. Programme serveur : vue d' ensemble<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Les programmes serveur et client exploitent la même base logicielle, elle-même largement récupérée de ce qui avait déjà
+	    été mis au point tout au long du chapitre 15. Nous admettrons donc pour la suite de cet exposé que les deux versions précédentes du jeu ont
+	    été sauvegardées dans les fichiers-modules <b>canon03.py</b> et <b>canon04.py</b>, installés dans le répertoire courant. Nous pouvons en effet
+	    réutiliser une bonne partie du code qu'ils contiennent, en nous servant judicieusement de l'importation et de l'héritage de classes. </p>
+          <p>Du module <b>canon04</b>, nous allons réutiliser la classe <b>Canon()</b> telle quelle, aussi bien pour le logiciel serveur que pour le logiciel client.
+	    De ce même module, nous importerons également la classe <b>AppBombardes()</b>, dont nous ferons dériver la classe maîtresse de notre application
+	    serveur : <b>AppServeur()</b>. Vous constaterez plus loin que celle-ci produira elle-même la sous-classe <b>AppClient()</b>, toujours par
+	    héritage.</p>
+          <p>Du module <b>canon03</b>, nous récupérerons la classe <b>Pupitre()</b> dont nous tirerons une version plus adaptée au « contrôle
+	    à distance ». </p>
+          <p>Enfin, deux nouvelles classes viendront s'ajouter aux précédentes, chacune spécialisée dans la création d'un objet thread : la
+	    classe <b>ThreadClients()</b>, dont une instance surveillera en permanence le socket destiné à réceptionner les demandes de connexion de nouveaux
+	    clients, et la classe <b>ThreadConnexion()</b>, qui servira à créer autant d'objets sockets que nécessaire pour assurer le dialogue avec chacun des
+	    clients déjà connectés. </p>
+          <p>Ces nouvelles classes seront inspirées de celles que nous avions développées pour notre serveur de <span class="italique">chat</span> dans les pages
+	    précédentes. La principale différence par rapport à celui-ci est que nous devrons activer un thread spécifique pour le code qui gère
+	    l'attente et la prise en charge des connexions clientes, afin que l'application principale puisse faire autre chose pendant ce temps.</p>
+          <p>À partir de là, notre plus gros travail consistera à <span class="italique">développer un protocole de communication</span> pour le dialogue entre le serveur et
+	    ses clients. De quoi est-il question ? Tout simplement de définir la teneur des messages que vont s'échanger les machines connectées.
+	    Rassurez-vous : la mise au point de ce « langage » peut être progressive. On commence par établir un dialogue de base, puis on y
+	    ajoute petit à petit un « vocabulaire » plus étendu.</p>
+          <p>L'essentiel de ce travail peut être accompli en s'aidant du logiciel client développé précédemment pour le système de
+	    <span class="italique">chat</span>. On se sert de celui-ci pour envoyer des « ordres » au serveur en cours de développement, et on corrige celui-ci jusqu'à ce
+	    qu'il « obéisse » : en clair, les procédures que l'on met en place progressivement sur le serveur sont testées au fur et à
+	    mesure, en réponse aux messages correspondants émis « à la main » à partir du client.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-C-2">20-C-2. Protocole de communication<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Il va de soi que le protocole décrit ci-après est tout à fait <span class="italique">arbitraire</span>. Il serait parfaitement possible de choisir d'autres
+	    conventions complètement différentes. Vous pouvez bien évidemment critiquer les choix effectués, et vous souhaiterez peut-être même les
+	    remplacer par d'autres, plus efficaces ou plus simples.</p>
+          <p>Vous savez déjà que les messages échangés sont de simples chaînes d'octets. Prévoyant que certains de ces messages devront
+	    transmettre plusieurs informations à la fois, nous avons décidé que chacun d'eux pourrait comporter plusieurs champs, que nous séparerons à
+	    l'aide de virgules. Lors de la réception de l'un quelconque de ces messages, nous pourrons alors aisément récupérer tous ses composants dans une
+	    liste, à l'aide de la méthode intégrée <b>split()</b>.</p>
+          <p>Voici un exemple de dialogue type, tel qu'il peut être suivi du côté d'un client. Les messages entre astérisques sont ceux qui sont
+	    reçus du serveur ; les autres sont ceux qui sont émis par le client lui-même :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e64894">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e64894" onclick="selectionCode('contenuCoded0e64894', 'IdTitreCode-d0e64894');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e64894"><code class="python_operator">*</code>serveur OK<code class="python_operator">*</code>
+client OK
+<code class="python_operator">*</code>canons,Thread<code class="python_operator">-</code><code class="python_digit">3</code>;<code class="python_digit">104</code>;<code class="python_digit">228</code>;<code class="python_digit">1</code>;dark red,Thread<code class="python_operator">-</code><code class="python_digit">2</code>;<code class="python_digit">454</code>;<code class="python_digit">166</code>;<code class="python_operator">-</code><code class="python_digit">1</code>;dark blue,<code class="python_operator">*</code>
+OK
+<code class="python_operator">*</code>nouveau_canon,Thread<code class="python_operator">-</code><code class="python_digit">4</code>,<code class="python_digit">481</code>,<code class="python_digit">245</code>,<code class="python_operator">-</code><code class="python_digit">1</code>,dark green,le_vôtre<code class="python_operator">*</code>
+orienter,<code class="python_digit">25</code>,
+feu
+<code class="python_operator">*</code>mouvement_de,Thread<code class="python_operator">-</code><code class="python_digit">4</code>,<code class="python_digit">549</code>,<code class="python_digit">280</code>,<code class="python_operator">*</code>
+feu
+<code class="python_operator">*</code>mouvement_de,Thread<code class="python_operator">-</code><code class="python_digit">4</code>,<code class="python_digit">504</code>,<code class="python_digit">278</code>,<code class="python_operator">*</code>
+<code class="python_operator">*</code>scores,Thread<code class="python_operator">-</code><code class="python_digit">4</code>;<code class="python_digit">1</code>,Thread<code class="python_operator">-</code><code class="python_digit">3</code>;<code class="python_operator">-</code><code class="python_digit">1</code>,Thread<code class="python_operator">-</code><code class="python_digit">2</code>;<code class="python_digit">0</code>,<code class="python_operator">*</code>
+<code class="python_operator">*</code>angle,Thread<code class="python_operator">-</code><code class="python_digit">2</code>,<code class="python_digit">23</code>,<code class="python_operator">*</code>
+<code class="python_operator">*</code>angle,Thread<code class="python_operator">-</code><code class="python_digit">2</code>,<code class="python_digit">20</code>,<code class="python_operator">*</code>
+<code class="python_operator">*</code>tir_de,Thread<code class="python_operator">-</code><code class="python_digit">2</code>,<code class="python_operator">*</code>
+<code class="python_operator">*</code>mouvement_de,Thread<code class="python_operator">-</code><code class="python_digit">2</code>,<code class="python_digit">407</code>,<code class="python_digit">191</code>,<code class="python_operator">*</code>
+<code class="python_operator">*</code>départ_de,Thread<code class="python_operator">-</code><code class="python_digit">2</code><code class="python_operator">*</code>
+<code class="python_operator">*</code>nouveau_canon,Thread<code class="python_operator">-</code><code class="python_digit">5</code>,<code class="python_digit">502</code>,<code class="python_digit">276</code>,<code class="python_operator">-</code><code class="python_digit">1</code>,dark green<code class="python_operator">*</code>
+</code></pre></div></div>
+          <ul class="ListeDVP">
+            <li>Lorsqu'un nouveau client démarre, il envoie une requête de connexion au serveur, lequel lui expédie en retour le message :
+	      « serveur OK ». À la réception de ce dernier, le client répond alors en envoyant lui-même : « client
+	      OK ». Ce premier échange de politesses n'est pas absolument indispensable, mais il permet de vérifier que la communication passe bien dans les
+	      deux sens. Étant donc averti que le client est prêt à travailler, le serveur lui expédie alors une description des canons déjà
+	      présents dans le jeu (éventuellement aucun) : identifiant, emplacement sur le canevas, orientation et couleur (ligne 3).</li>
+            <li>En réponse à l'accusé de réception du client (ligne 4), le serveur installe un nouveau canon dans l'espace de jeu, puis il signale
+	      les caractéristiques de cette installation, non seulement au client qui l'a provoquée, mais également à tous les autres clients connectés.
+	      Le message expédié au nouveau client comporte cependant une différence (car c'est lui le propriétaire de ce nouveau canon) : en plus des
+	      caractéristiques du canon, qui sont fournies à tout le monde, il comporte un champ supplémentaire contenant simplement
+	      « le_vôtre » (comparez par exemple la ligne 5 avec la ligne 17, laquelle signale la connexion d'un autre joueur). Cette indication
+	      supplémentaire permet au client propriétaire du canon de distinguer, parmi plusieurs messages similaires éventuels, celui qui contient l'identifiant
+	      unique que lui a attribué le serveur.</li>
+            <li>Les messages des lignes 6 et 7 sont des commandes envoyées par le client (réglage de la hausse et commande de tir). Dans la version
+	      précédente du jeu, nous avions déjà convenu que les canons se déplaceraient quelque peu (et au hasard) après chaque tir. Le serveur
+	      effectue donc cette opération, et s'empresse ensuite d'en faire connaître le résultat à tous les clients connectés. Le message reçu du
+	      serveur à la ligne 8 est donc l'indication d'un tel déplacement (les coordonnées fournies sont les coordonnées résultantes pour le
+	      canon concerné).</li>
+            <li>La ligne 11 reproduit le type de message expédié par le serveur lorsqu'une cible a été touchée. Les nouveaux scores de tous les
+	      joueurs sont ainsi communiqués à tous les clients.</li>
+            <li>Les messages serveur des lignes 12, 13 et 14 indiquent les actions entreprises par un autre joueur (réglage de hausse suivi d'un
+	      tir). Cette fois encore, le canon concerné est déplacé au hasard après qu'il ait tiré (ligne 15).</li>
+            <li>Lignes 16 et 17 : lorsque l'un des clients coupe sa connexion, le serveur en avertit tous les autres, afin que le canon correspondant
+	      disparaisse de l'espace de jeu sur tous les postes. À l'inverse, de nouveaux clients peuvent se connecter à tout moment pour participer au jeu.</li>
+          </ul>
+          
+		<h5 class="TitreSection3" id="L20-C-2-A">20-C-2-A. Remarques complémentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <p>Le premier champ de chaque message indique sa teneur. Les messages envoyés par le client sont très simples : ils correspondent aux
+	      différentes actions entreprises par le joueur (modifications de l'angle de tir et commandes de feu). Ceux qui sont envoyés par le serveur sont un peu plus
+	      complexes. La plupart d'entre eux sont expédiés à tous les clients connectés, afin de les tenir informés du déroulement du jeu. En
+	      conséquence, ces messages doivent mentionner l'identifiant du joueur qui a commandé une action ou qui est concerné par un changement quelconque. Nous
+	      avons vu plus haut que ces identifiants sont des noms générés automatiquement par le gestionnaire de threads du serveur, chaque fois qu'un nouveau
+	      client se connecte.</p>
+            <p>Certains messages concernant l'ensemble du jeu contiennent plusieurs informations par champ. Dans ce cas, les différents
+	      « sous-champs » sont séparés par des points-virgules (lignes 3 et 11).</p>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-C-3">20-C-3. Programme serveur : première partie<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Vous trouverez dans les pages qui suivent le script complet du programme serveur. Nous vous le présentons en trois morceaux successifs afin de rapprocher
+	    les commentaires du code correspondant, mais la numérotation de ses lignes est continue. Bien qu'il soit déjà relativement long et complexe, vous
+	    estimerez probablement qu'il mérite d'être encore perfectionné, notamment au niveau de la présentation générale. Nous vous laisserons le
+	    soin d'y ajouter vous-même tous les compléments qui vous sembleront utiles (par exemple, une proposition de choisir les coordonnées de la machine
+	    hôte au démarrage, une barre de menus, etc.) :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e65185">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e65185" onclick="selectionCode('contenuCoded0e65185', 'IdTitreCode-d0e65185');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e65185"><code class="python_comment1">#######################################################</code>
+<code class="python_comment1"># Jeu des bombardes - partie serveur		 #</code>
+<code class="python_comment1"># (C) Gérard Swinnen, Verviers (Belgique) - July 2004 #</code>
+<code class="python_comment1"># Licence : GPL 	       rév. 2010 #</code>
+<code class="python_comment1"># Avant d'exécuter ce script, vérifiez que l'adresse  #</code>
+<code class="python_comment1"># IP ci-dessous soit bien celle de la machine hôte.   #</code>
+<code class="python_comment1"># Vous pouvez choisir un numéro de port différent, ou #</code>
+<code class="python_comment1"># changer les dimensions de l'espace de jeu.	     #</code>
+<code class="python_comment1"># Dans tous les cas, vérifiez que les mêmes choix ont #</code>
+<code class="python_comment1"># été effectués pour chacun des scripts clients.      #</code>
+<code class="python_comment1">#######################################################</code>
+ 
+host, port <code class="python_operator">=</code> <code class="python_literal1">'192.168.1.168'</code>, <code class="python_digit">36000</code>
+largeur, hauteur <code class="python_operator">=</code> <code class="python_digit">700</code>, <code class="python_digit">400</code>	   <code class="python_comment1"># dimensions de l'espace de jeu</code>
+ 
+<code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">import</code> socket, sys, threading, time
+<code class="python_keyword1">import</code> canon03
+<code class="python_keyword1">from</code> canon04 <code class="python_keyword1">import</code> Canon, AppBombardes
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Pupitre</code><code class="python_operator">(</code>canon03.Pupitre):
+  <code class="python_literal2">"""Pupitre de pointage amélioré"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, canon):
+      canon03.Pupitre.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, canon)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">tirer</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"déclencher le tir du canon associé"</code>
+      self.appli.<code class="python_function">tir_canon</code><code class="python_operator">(</code>self.canon.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">orienter</code><code class="python_operator">(</code>self, angle):
+      <code class="python_literal1">"ajuster la hausse du canon associé"</code>
+      self.appli.<code class="python_function">orienter_canon</code><code class="python_operator">(</code>self.canon.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, angle)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">valeur_score</code><code class="python_operator">(</code>self, sc <code class="python_operator">=</code><code class="python_keyword3">None</code>):
+      <code class="python_literal1">"imposer un nouveau score &lt;sc&gt;, ou lire le score existant"</code>
+      <code class="python_keyword1">if</code> sc <code class="python_operator">==</code> <code class="python_keyword3">None</code>:
+      <code class="python_keyword1">return</code> self.score
+      <code class="python_keyword1">else</code>:
+      self.score <code class="python_operator">=</code>sc
+      self.points.<code class="python_function">config</code><code class="python_operator">(</code>text <code class="python_operator">=</code> <code class="python_literal1">' </code><code class="python_literal4">%s</code><code class="python_literal1"> '</code> <code class="python_operator">%</code> self.score)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">inactiver</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"désactiver le bouton de tir et le système de réglage d'angle"</code>
+      self.bTir.<code class="python_function">config</code><code class="python_operator">(</code>state <code class="python_operator">=</code>DISABLED)
+      self.regl.<code class="python_function">config</code><code class="python_operator">(</code>state <code class="python_operator">=</code>DISABLED)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">activer</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"activer le bouton de tir et le système de réglage d'angle"</code>
+      self.bTir.<code class="python_function">config</code><code class="python_operator">(</code>state <code class="python_operator">=</code>NORMAL)
+      self.regl.<code class="python_function">config</code><code class="python_operator">(</code>state <code class="python_operator">=</code>NORMAL)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">reglage</code><code class="python_operator">(</code>self, angle):
+      <code class="python_literal1">"changer la position du curseur de réglage"</code>
+      self.regl.<code class="python_function">config</code><code class="python_operator">(</code>state <code class="python_operator">=</code>NORMAL)
+      self.regl.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=set#set"><span>set</span></a><code class="python_operator">(</code>angle)
+      self.regl.<code class="python_function">config</code><code class="python_operator">(</code>state <code class="python_operator">=</code>DISABLED)
+</code></pre></div></div>
+          <ul class="ListeDVP">
+            <li>La classe <b>Pupitre()</b> est construite par dérivation de la classe de même nom importée du module <b>canon03</b>. Elle hérite donc
+	      toutes les caractéristiques de celle-ci, mais nous devons surcharger<a class="signetNoteBasPage" id="signetNoteBasPage108" href="#noteBasPage108">(108)</a> ses méthodes <b>tirer()</b> et <b>orienter().</b></li>
+            <li>Dans la version monoposte du logiciel, en effet, chacun des pupitres pouvait commander directement l'objet canon correspondant. Dans cette version
+	      réseau, par contre, ce sont les clients qui contrôlent à distance le fonctionnement des canons. Par conséquent, les pupitres qui apparaissent
+	      dans la fenêtre du serveur ne peuvent être que de simples répétiteurs des manœuvres effectuées par les joueurs sur chaque client. Le
+	      bouton de tir et le curseur de réglage de la hausse sont donc désactivés, mais les indications fournies obéissent aux injonctions qui leur sont
+	      adressées par l'application principale.</li>
+            <li>Cette nouvelle classe <b>Pupitre()</b> sera également utilisée telle quelle dans chaque exemplaire du programme client. Dans la fenêtre de
+	      celui-ci comme dans celle du serveur, tous les pupitres seront affichés comme des répétiteurs, mais l'un d'entre eux cependant sera complètement
+	      fonctionnel : celui qui correspond au canon du joueur. </li>
+            <li>Toutes ces raisons expliquent également l'apparition des nouvelles méthodes <b>activer()</b>, <b>desactiver()</b>, <b>reglage()</b> et
+	      <b>valeur_score()</b>, qui seront elles aussi invoquées par l'application principale, en réponse aux messages-instructions échangés entre le
+	      serveur et ses clients.</li>
+            <li>La classe <b>ThreadConnexion()</b> ci-dessous sert à instancier la série d'objets threads qui s'occuperont en parallèle de toutes les
+	      connexions lancées par les clients. Sa méthode <b>run()</b> contient la fonctionnalité centrale du serveur, à savoir la boucle d'instructions qui
+	      gère la réception des messages provenant d'un client particulier, lesquels entraînent chacun toute une cascade de réactions. Vous y trouverez la
+	      mise en œuvre concrète du protocole de communication décrit dans les pages précédentes (certains messages étant cependant
+	      générés par les méthodes <b>depl_aleat_canon()</b> et <b>goal()</b> de la classe <b>AppServeur()</b> décrite plus loin).<br/></li>
+          </ul>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e65661">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e65661" onclick="selectionCode('contenuCoded0e65661', 'IdTitreCode-d0e65661');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/>74.<br/>75.<br/>76.<br/>77.<br/>78.<br/>79.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e65661"><code class="python_keyword1">class</code> <code class="python_function">ThreadConnexion</code><code class="python_operator">(</code>threading.Thread):
+  <code class="python_literal2">"""objet thread gestionnaire d'une connexion client"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, conn):
+      threading.Thread.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.connexion <code class="python_operator">=</code> conn	     <code class="python_comment1"># réf. du socket de connexion</code>
+      self.app <code class="python_operator">=</code> boss		   <code class="python_comment1"># réf. de la fenêtre application</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">run</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"actions entreprises en réponse aux messages reçus du client"</code>
+      nom <code class="python_operator">=</code> self.<code class="python_function">getName</code><code class="python_operator">(</code>)	    <code class="python_comment1"># id. du client = nom du thread</code>
+      <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+      msgClient <code class="python_operator">=</code> self.connexion.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">1024</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"**{}** de {}"</code>.<code class="python_function">format</code><code class="python_operator">(</code>msgClient, nom))
+      deb <code class="python_operator">=</code> msgClient.<code class="python_function">split</code><code class="python_operator">(</code><code class="python_literal1">','</code>)[<code class="python_digit">0</code>]
+      <code class="python_keyword1">if</code> deb <code class="python_operator">==</code> <code class="python_literal1">"fin"</code> <code class="python_keyword1">or</code> deb <code class="python_operator">==</code><code class="python_literal1">""</code>:
+	  self.app.<code class="python_function">enlever_canon</code><code class="python_operator">(</code>nom)
+	  <code class="python_comment1"># signaler le départ de ce canon aux autres clients :</code>
+	  self.app.verrou.<code class="python_function">acquire</code><code class="python_operator">(</code>)
+	  <code class="python_keyword1">for</code> cli <code class="python_keyword1">in</code> self.app.conn_client:
+	  <code class="python_keyword1">if</code> cli <code class="python_operator">!=</code> nom:
+	      message <code class="python_operator">=</code> <code class="python_literal1">"départ_de,{}"</code>.<code class="python_function">format</code><code class="python_operator">(</code>nom)
+	      self.app.conn_client[cli].<code class="python_function">send</code><code class="python_operator">(</code>message.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+	  self.app.verrou.<code class="python_function">release</code><code class="python_operator">(</code>)
+	  <code class="python_comment1"># fermer le présent thread :</code>
+	  <code class="python_keyword1">break</code>
+      <code class="python_keyword1">elif</code> deb <code class="python_operator">==</code><code class="python_literal1">"client OK"</code>:
+	  <code class="python_comment1"># signaler au nouveau client les canons déjà enregistrés :</code>
+	  msg <code class="python_operator">=</code><code class="python_literal1">"canons,"</code>
+	  <code class="python_keyword1">for</code> g <code class="python_keyword1">in</code> self.app.guns:
+	  gun <code class="python_operator">=</code> self.app.guns[g]
+	  msg <code class="python_operator">=</code>msg <code class="python_operator">+</code><code class="python_literal1">"{};{};{};{};{},"</code>.\
+	      <code class="python_function">format</code><code class="python_operator">(</code>gun.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, gun.x1, gun.y1, gun.sens, gun.coul)
+	  self.app.verrou.<code class="python_function">acquire</code><code class="python_operator">(</code>)
+	  self.connexion.<code class="python_function">send</code><code class="python_operator">(</code>msg.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+	  <code class="python_comment1"># attendre un accusé de réception ('OK') :</code>
+	  self.connexion.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">100</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+	  self.app.verrou.<code class="python_function">release</code><code class="python_operator">(</code>)
+	  <code class="python_comment1"># ajouter un canon dans l'espace de jeu serveur.</code>
+	  <code class="python_comment1"># la méthode invoquée renvoie les caract. du canon créé :</code>
+	  x, y, sens, coul <code class="python_operator">=</code> self.app.<code class="python_function">ajouter_canon</code><code class="python_operator">(</code>nom)
+	  <code class="python_comment1"># signaler les caract. de ce nouveau canon à tous les</code>
+	  <code class="python_comment1"># clients déjà connectés :</code>
+	  self.app.verrou.<code class="python_function">acquire</code><code class="python_operator">(</code>)
+	  <code class="python_keyword1">for</code> cli <code class="python_keyword1">in</code> self.app.conn_client:
+	  msg <code class="python_operator">=</code><code class="python_literal1">"nouveau_canon,{},{},{},{},{}"</code>.\
+	      <code class="python_function">format</code><code class="python_operator">(</code>nom, x, y, sens, coul)
+	  <code class="python_comment1"># pour le nouveau client, ajouter un champ indiquant</code>
+	  <code class="python_comment1"># que le message concerne son propre canon :</code>
+	  <code class="python_keyword1">if</code> cli <code class="python_operator">==</code> nom:
+	      msg <code class="python_operator">=</code>msg <code class="python_operator">+</code><code class="python_literal1">",le_vôtre"</code>
+	  self.app.conn_client[cli].<code class="python_function">send</code><code class="python_operator">(</code>msg.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+	  self.app.verrou.<code class="python_function">release</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">elif</code> deb <code class="python_operator">==</code><code class="python_literal1">'feu'</code>:
+	  self.app.<code class="python_function">tir_canon</code><code class="python_operator">(</code>nom)
+	  <code class="python_comment1"># Signaler ce tir à tous les autres clients :</code>
+	  self.app.verrou.<code class="python_function">acquire</code><code class="python_operator">(</code>)
+	  <code class="python_keyword1">for</code> cli <code class="python_keyword1">in</code> self.app.conn_client:
+	  <code class="python_keyword1">if</code> cli <code class="python_operator">!=</code> nom:
+	      message <code class="python_operator">=</code> <code class="python_literal1">"tir_de,{},"</code>.<code class="python_function">format</code><code class="python_operator">(</code>nom)
+	      self.app.conn_client[cli].<code class="python_function">send</code><code class="python_operator">(</code>message.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+	  self.app.verrou.<code class="python_function">release</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">elif</code> deb <code class="python_operator">==</code><code class="python_literal1">"orienter"</code>:
+	  t <code class="python_operator">=</code>msgClient.<code class="python_function">split</code><code class="python_operator">(</code><code class="python_literal1">','</code>)
+	  <code class="python_comment1"># on peut avoir reçu plusieurs angles. utiliser le dernier :</code>
+	  self.app.<code class="python_function">orienter_canon</code><code class="python_operator">(</code>nom, t[<code class="python_operator">-</code><code class="python_digit">1</code>])
+	  <code class="python_comment1"># Signaler ce changement à tous les autres clients :</code>
+	  self.app.verrou.<code class="python_function">acquire</code><code class="python_operator">(</code>)
+	  <code class="python_keyword1">for</code> cli <code class="python_keyword1">in</code> self.app.conn_client:
+	  <code class="python_keyword1">if</code> cli <code class="python_operator">!=</code> nom:
+	      <code class="python_comment1"># virgule terminale, car messages parfois groupés :</code>
+	      message <code class="python_operator">=</code> <code class="python_literal1">"angle,{},{},"</code>.<code class="python_function">format</code><code class="python_operator">(</code>nom, t[<code class="python_operator">-</code><code class="python_digit">1</code>])
+	      self.app.conn_client[cli].<code class="python_function">send</code><code class="python_operator">(</code>message.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+	  self.app.verrou.<code class="python_function">release</code><code class="python_operator">(</code>)
+ 
+      <code class="python_comment1"># Fermeture de la connexion :</code>
+      self.connexion.<code class="python_function">close</code><code class="python_operator">(</code>)	      <code class="python_comment1"># couper la connexion</code>
+      <code class="python_keyword1">del</code> self.app.conn_client[nom]   <code class="python_comment1"># suppr. sa réf. dans le dictionnaire</code>
+      self.app.<code class="python_function">afficher</code><code class="python_operator">(</code><code class="python_literal1">"Client </code><code class="python_literal4">%s</code><code class="python_literal1"> déconnecté.</code><code class="python_literal4">\n</code><code class="python_literal1">"</code> <code class="python_operator">%</code> nom)
+      <code class="python_comment1"># Le thread se termine ici</code>
+</code></pre></div></div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-C-4">20-C-4. Synchronisation de threads concurrents à l'aide de verrous (thread locks)<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Au cours de votre examen du code ci-dessus, vous aurez certainement remarqué la structure particulière des blocs d'instructions par lesquelles le
+	    serveur expédie un même message à tous ses clients. Considérez par exemple les lignes 74 à 80.</p>
+          <p>La ligne 75 active la méthode <b>acquire()</b> d'un objet « verrou » qui a été créé par le constructeur de
+	    l'application principale (voir plus loin). Cet objet est une instance de la classe <b>Lock()</b>, laquelle fait partie du module <b>threading</b> que nous avons
+	    importé en début de script. Les lignes suivantes (76 à 79) provoquent l'envoi d'un message à tous les clients connectés (sauf un).
+	    Ensuite, l'objet-verrou est à nouveau sollicité, cette fois pour sa méthode <b>release()</b>.</p>
+          <p>À quoi cet objet-verrou peut-il donc bien servir ? Puisqu'il est produit par une classe du module <b>threading</b>, vous pouvez deviner que son
+	    utilité concerne les threads. En fait, de tels objets-verrous servent à synchroniser les <span class="italique">threads concurrents</span>. De quoi s'agit-il ?</p>
+          <p>Vous savez que le serveur démarre un thread différent pour chacun des clients qui se connecte. Ensuite, tous ces threads fonctionnent en
+	    parallèle. Il existe donc un risque que, de temps à autre, deux ou plusieurs de ces threads essaient d'utiliser une ressource commune en même
+	    temps.</p>
+          <p>Dans les lignes de code que nous venons de discuter, par exemple, nous avons affaire à un thread qui souhaite exploiter quasiment toutes les connexions
+	    présentes pour poster un message. Il est donc parfaitement possible que, pendant ce temps, un autre thread tente d'exploiter lui aussi l'une ou l'autre de ces
+	    connexions, ce qui risque de provoquer un dysfonctionnement (en l'occurrence, la superposition chaotique de plusieurs messages).</p>
+          <p>Un tel problème de <span class="italique">concurrence entre threads</span> peut être résolu par l'utilisation d'un objet-verrou (<span class="italique">thread lock</span>). Un tel objet
+	    n'est créé qu'en un seul exemplaire, dans un espace de noms accessible à tous les threads concurrents. Il se caractérise essentiellement par le
+	    fait qu'il se trouve toujours dans l'un ou l'autre de deux états : soit <span class="italique">verrouillé</span>, soit <span class="italique">déverrouillé</span>. Son état initial est
+	    l'état déverrouillé.</p>
+          
+		<h5 class="TitreSection3" id="L20-C-4-A">20-C-4-A. Utilisation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <p>Lorsqu'un thread quelconque s'apprête à accéder à une ressource commune, il active d'abord la méthode <b>acquire()</b> du verrou.
+	      Si celui-ci était dans l'état déverrouillé, il se verrouille, et le thread demandeur peut alors utiliser la ressource commune, en toute
+	      tranquillité. Lorsqu'il aura fini d'utiliser la ressource, il s'empressera cependant d'activer la méthode <b>release()</b> du verrou, ce qui le fera
+	      repasser dans l'état déverrouillé.</p>
+            <p>En effet, si un autre thread concurrent essaie d'activer lui aussi la méthode <b>acquire()</b> du verrou, alors que celui-ci est dans l'état
+	      verrouillé, la méthode « ne rend pas la main », provoquant le blocage de ce thread, lequel suspend donc son activité jusqu'à
+	      ce que le verrou repasse dans l'état déverrouillé. Ceci l'empêche donc d'accéder à la ressource commune durant tout le temps où un
+	      autre thread s'en sert. Lorsque le verrou est déverrouillé, l'un des threads en attente (il peut en effet y en avoir plusieurs) reprend alors son
+	      activité tout en refermant le verrou, et ainsi de suite.</p>
+            <p>L'objet-verrou mémorise les références des threads bloqués, de manière à n'en débloquer qu'un seul à la fois lorsque
+	      sa méthode <b>release()</b> est invoquée. Il faut donc toujours veiller à ce que chaque thread qui active la méthode <b>acquire()</b> du verrou
+	      avant d'accéder à une ressource, active également sa méthode <b>release()</b> peu après. </p>
+            <p>Pour autant que tous les threads concurrents respectent la même procédure, cette technique simple empêche donc qu'une ressource commune soit
+	      exploitée en même temps par plusieurs d'entre eux. On dira dans ce cas que les threads ont été <span class="italique">synchronisés</span>.</p>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-C-5">20-C-5. Programme serveur : suite et fin<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Les deux classes ci-dessous complètent le script serveur. Le code implémenté dans la classe <b>ThreadClients()</b> est assez similaire à
+	    celui que nous avions développé précédemment pour le corps d'application du logiciel de <span class="italique">Chat</span>. Dans le cas présent, toutefois, nous le
+	    plaçons dans une classe dérivée de <b>Thread()</b>, parce que devons faire fonctionner ce code dans un thread indépendant de celui de l'application
+	    principale. Celui-ci est en effet déjà complètement accaparé par la boucle <b>mainloop()</b> de l'interface graphique<a class="signetNoteBasPage" id="signetNoteBasPage109" href="#noteBasPage109">(109)</a>.</p>
+          <p>La classe <b>AppServeur()</b> dérive de la classe <b>AppBombardes()</b> du module <b>canon04</b>. Nous lui avons ajouté un ensemble de méthodes
+	    complémentaires destinées à exécuter toutes les opérations qui résulteront du dialogue entamé avec les clients. Nous avons
+	    déjà signalé plus haut que les clients instancieront chacun une version dérivée de cette classe (afin de profiter des mêmes
+	    définitions de base pour la fenêtre, le canevas, etc.).</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e66536">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e66536" onclick="selectionCode('contenuCoded0e66536', 'IdTitreCode-d0e66536');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/>74.<br/>75.<br/>76.<br/>77.<br/>78.<br/>79.<br/>80.<br/>81.<br/>82.<br/>83.<br/>84.<br/>85.<br/>86.<br/>87.<br/>88.<br/>89.<br/>90.<br/>91.<br/>92.<br/>93.<br/>94.<br/>95.<br/>96.<br/>97.<br/>98.<br/>99.<br/>100.<br/>101.<br/>102.<br/>103.<br/>104.<br/>105.<br/>106.<br/>107.<br/>108.<br/>109.<br/>110.<br/>111.<br/>112.<br/>113.<br/>114.<br/>115.<br/>116.<br/>117.<br/>118.<br/>119.<br/>120.<br/>121.<br/>122.<br/>123.<br/>124.<br/>125.<br/>126.<br/>127.<br/>128.<br/>129.<br/>130.<br/>131.<br/>132.<br/>133.<br/>134.<br/>135.<br/>136.<br/>137.<br/>138.<br/>139.<br/>140.<br/>141.<br/>142.<br/>143.<br/>144.<br/>145.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e66536"><code class="python_keyword1">class</code> <code class="python_function">ThreadClients</code><code class="python_operator">(</code>threading.Thread):
+  <code class="python_literal2">"""objet thread gérant la connexion de nouveaux clients"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, connex):
+      threading.Thread.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.boss <code class="python_operator">=</code> boss		 <code class="python_comment1"># réf. de la fenêtre application</code>
+      self.connex <code class="python_operator">=</code> connex	    <code class="python_comment1"># réf. du socket initial</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">run</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"attente et prise en charge de nouvelles connexions clientes"</code>
+      txt <code class="python_operator">=</code><code class="python_literal1">"Serveur prêt, en attente de requêtes ...</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>
+      self.boss.<code class="python_function">afficher</code><code class="python_operator">(</code>txt)
+      self.connex.<code class="python_function">listen</code><code class="python_operator">(</code><code class="python_digit">5</code>)
+      <code class="python_comment1"># Gestion des connexions demandées par les clients :</code>
+      <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+      nouv_conn, adresse <code class="python_operator">=</code> self.connex.<code class="python_function">accept</code><code class="python_operator">(</code>)
+      <code class="python_comment1"># Créer un nouvel objet thread pour gérer la connexion :</code>
+      th <code class="python_operator">=</code> <code class="python_function">ThreadConnexion</code><code class="python_operator">(</code>self.boss, nouv_conn)
+      th.<code class="python_function">start</code><code class="python_operator">(</code>)
+      it <code class="python_operator">=</code> th.<code class="python_function">getName</code><code class="python_operator">(</code>)       <code class="python_comment1"># identifiant unique du thread</code>
+      <code class="python_comment1"># Mémoriser la connexion dans le dictionnaire :</code>
+      self.boss.<code class="python_function">enregistrer_connexion</code><code class="python_operator">(</code>nouv_conn, it)
+      <code class="python_comment1"># Afficher :</code>
+      txt <code class="python_operator">=</code> <code class="python_literal1">"Client </code><code class="python_literal4">%s</code><code class="python_literal1"> connecté, adresse IP </code><code class="python_literal4">%s</code><code class="python_literal1">, port </code><code class="python_literal4">%s</code><code class="python_literal1">.</code><code class="python_literal4">\n</code><code class="python_literal1">"</code> <code class="python_operator">%</code>\
+	 <code class="python_operator">(</code>it, adresse[<code class="python_digit">0</code>], adresse[<code class="python_digit">1</code>])
+      self.boss.<code class="python_function">afficher</code><code class="python_operator">(</code>txt)
+      <code class="python_comment1"># Commencer le dialogue avec le client :</code>
+      nouv_conn.<code class="python_function">send</code><code class="python_operator">(</code><code class="python_literal1">"serveur OK"</code>.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+ 
+<code class="python_keyword1">class</code> <code class="python_function">AppServeur</code><code class="python_operator">(</code>AppBombardes):
+  <code class="python_literal2">"""fenêtre principale de l'application (serveur ou client)"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, host, port, larg_c, haut_c):
+      self.host, self.port <code class="python_operator">=</code> host, port
+      AppBombardes.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, larg_c, haut_c)
+      self.active <code class="python_operator">=</code><code class="python_digit">1</code>	      <code class="python_comment1"># témoin d'activité</code>
+      <code class="python_comment1"># veiller à quitter proprement si l'on referme la fenêtre :</code>
+      self.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">'&lt;Destroy&gt;'</code>,self.fermer_threads)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">specificites</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"préparer les objets spécifiques de la partie serveur"</code>
+      self.master.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">'&lt;&lt;&lt; Serveur pour le jeu des bombardes &gt;&gt;&gt;'</code>)
+ 
+      <code class="python_comment1"># widget Text, associé à une barre de défilement :</code>
+      st <code class="python_operator">=</code><code class="python_function">Frame</code><code class="python_operator">(</code>self)
+      self.avis <code class="python_operator">=</code><code class="python_function">Text</code><code class="python_operator">(</code>st, width <code class="python_operator">=</code><code class="python_digit">65</code>, height <code class="python_operator">=</code><code class="python_digit">5</code>)
+      self.avis.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT)
+      scroll <code class="python_operator">=</code><code class="python_function">Scrollbar</code><code class="python_operator">(</code>st, command <code class="python_operator">=</code>self.avis.yview)
+      self.avis.<code class="python_function">configure</code><code class="python_operator">(</code>yscrollcommand <code class="python_operator">=</code>scroll.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=set#set"><span>set</span></a>)
+      scroll.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>RIGHT, fill <code class="python_operator">=</code>Y)
+      st.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+      <code class="python_comment1"># partie serveur réseau :</code>
+      self.conn_client <code class="python_operator">=</code> {}	     <code class="python_comment1"># dictionn. des connexions clients</code>
+      self.verrou <code class="python_operator">=</code>threading.<code class="python_function">Lock</code><code class="python_operator">(</code>)   <code class="python_comment1"># verrou pour synchroniser threads</code>
+      <code class="python_comment1"># Initialisation du serveur - Mise en place du socket :</code>
+      connexion <code class="python_operator">=</code> socket.<code class="python_function">socket</code><code class="python_operator">(</code>socket.AF_INET, socket.SOCK_STREAM)
+      <code class="python_keyword1">try</code>:
+      connexion.<code class="python_function">bind</code><code class="python_operator">((</code>self.host, self.port))
+      <code class="python_keyword1">except</code> socket.error:
+      txt <code class="python_operator">=</code><code class="python_literal1">"La liaison du socket à l'hôte </code><code class="python_literal4">%s</code><code class="python_literal1">, port </code><code class="python_literal4">%s</code><code class="python_literal1"> a échoué.</code><code class="python_literal4">\n</code><code class="python_literal1">"</code> <code class="python_operator">%</code>\
+	 <code class="python_operator">(</code>self.host, self.port)
+      self.avis.<code class="python_function">insert</code><code class="python_operator">(</code>END, txt)
+      self.accueil <code class="python_operator">=</code><code class="python_keyword3">None</code>
+      <code class="python_keyword1">else</code>:
+      <code class="python_comment1"># démarrage du thread guettant la connexion des clients :</code>
+      self.accueil <code class="python_operator">=</code> <code class="python_function">ThreadClients</code><code class="python_operator">(</code>self, connexion)
+      self.accueil.<code class="python_function">start</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">depl_aleat_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>):
+      <code class="python_literal1">"déplacer aléatoirement le canon &lt;id&gt;"</code>
+      x, y <code class="python_operator">=</code> AppBombardes.<code class="python_function">depl_aleat_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>)
+      <code class="python_comment1"># signaler ces nouvelles coord. à tous les clients :</code>
+      self.verrou.<code class="python_function">acquire</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">for</code> cli <code class="python_keyword1">in</code> self.conn_client:
+      message <code class="python_operator">=</code> <code class="python_literal1">"mouvement_de,</code><code class="python_literal4">%s</code><code class="python_literal1">,</code><code class="python_literal4">%s</code><code class="python_literal1">,</code><code class="python_literal4">%s</code><code class="python_literal1">,"</code> <code class="python_operator">%</code> <code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, x, y)
+      self.conn_client[cli].<code class="python_function">send</code><code class="python_operator">(</code>message.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+      self.verrou.<code class="python_function">release</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">goal</code><code class="python_operator">(</code>self, i, j):
+      <code class="python_literal1">"le canon &lt;i&gt; signale qu'il a atteint l'adversaire &lt;j&gt;"</code>
+      AppBombardes.<code class="python_function">goal</code><code class="python_operator">(</code>self, i, j)
+      <code class="python_comment1"># Signaler les nouveaux scores à tous les clients :</code>
+      self.verrou.<code class="python_function">acquire</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">for</code> cli <code class="python_keyword1">in</code> self.conn_client:
+      msg <code class="python_operator">=</code><code class="python_literal1">'scores,'</code>
+      <code class="python_keyword1">for</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_keyword1">in</code> self.pupi:
+	  sc <code class="python_operator">=</code> self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">valeur_score</code><code class="python_operator">(</code>)
+	  msg <code class="python_operator">=</code> msg <code class="python_operator">+</code><code class="python_literal1">"</code><code class="python_literal4">%s</code><code class="python_literal1">;</code><code class="python_literal4">%s</code><code class="python_literal1">,"</code> <code class="python_operator">%</code> <code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, sc)
+      self.conn_client[cli].<code class="python_function">send</code><code class="python_operator">(</code>msg.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+      time.<code class="python_function">sleep</code><code class="python_operator">(</code><code class="python_digit">.5</code>)	       <code class="python_comment1"># pour mieux séparer les messages</code>
+      self.verrou.<code class="python_function">release</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">ajouter_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>):
+      <code class="python_literal1">"instancier un canon et un pupitre de nom &lt;id&gt; dans 2 dictionnaires"</code>
+      <code class="python_comment1"># on alternera ceux des 2 camps :</code>
+      n <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=len#len"><span>len</span></a><code class="python_operator">(</code>self.guns)
+      <code class="python_keyword1">if</code> n <code class="python_operator">%</code><code class="python_digit">2</code> <code class="python_operator">==</code><code class="python_digit">0</code>:
+      sens <code class="python_operator">=</code> <code class="python_operator">-</code><code class="python_digit">1</code>
+      <code class="python_keyword1">else</code>:
+      sens <code class="python_operator">=</code> <code class="python_digit">1</code>
+      x, y <code class="python_operator">=</code> self.<code class="python_function">coord_aleat</code><code class="python_operator">(</code>sens)
+      coul <code class="python_operator">=(</code><code class="python_literal1">'dark blue'</code>, <code class="python_literal1">'dark red'</code>, <code class="python_literal1">'dark green'</code>, <code class="python_literal1">'purple'</code>,
+	 <code class="python_literal1">'dark cyan'</code>, <code class="python_literal1">'red'</code>, <code class="python_literal1">'cyan'</code>, <code class="python_literal1">'orange'</code>, <code class="python_literal1">'blue'</code>, <code class="python_literal1">'violet'</code>)[n]
+      self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>] <code class="python_operator">=</code> <code class="python_function">Canon</code><code class="python_operator">(</code>self.jeu, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, x, y, sens, coul)
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>] <code class="python_operator">=</code> <code class="python_function">Pupitre</code><code class="python_operator">(</code>self, self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>])
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">inactiver</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">return</code> <code class="python_operator">(</code>x, y, sens, coul)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">enlever_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>):
+      <code class="python_literal1">"retirer le canon et le pupitre dont l'identifiant est &lt;id&gt;"</code>
+      <code class="python_keyword1">if</code> self.active <code class="python_operator">==</code> <code class="python_digit">0</code>:	<code class="python_comment1"># la fenêtre a été refermée</code>
+      <code class="python_keyword1">return</code>
+      self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">effacer</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">del</code> self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>]
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">destroy</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">del</code> self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>]
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">orienter_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, angle):
+      <code class="python_literal1">"régler la hausse du canon &lt;id&gt; à la valeur &lt;angle&gt;"</code>
+      self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">orienter</code><code class="python_operator">(</code>angle)
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">reglage</code><code class="python_operator">(</code>angle)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">tir_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>):
+      <code class="python_literal1">"déclencher le tir du canon &lt;id&gt;"</code>
+      self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">feu</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">enregistrer_connexion</code><code class="python_operator">(</code>self, conn, it):
+      <code class="python_literal1">"Mémoriser la connexion dans un dictionnaire"</code>
+      self.conn_client[it] <code class="python_operator">=</code> conn
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">afficher</code><code class="python_operator">(</code>self, txt):
+      <code class="python_literal1">"afficher un message dans la zone de texte"</code>
+      self.avis.<code class="python_function">insert</code><code class="python_operator">(</code>END, txt)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">fermer_threads</code><code class="python_operator">(</code>self, evt):
+      <code class="python_literal1">"couper les connexions existantes et fermer les threads"</code>
+      <code class="python_comment1"># couper les connexions établies avec tous les clients :</code>
+      <code class="python_keyword1">for</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_keyword1">in</code> self.conn_client:
+      self.conn_client[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">send</code><code class="python_operator">(</code><code class="python_literal1">'fin'</code>.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+      <code class="python_comment1"># forcer la terminaison du thread serveur qui attend les requêtes :</code>
+      <code class="python_keyword1">if</code> self.accueil <code class="python_operator">!=</code> <code class="python_keyword3">None</code>:
+      self.accueil.<code class="python_function">_stop</code><code class="python_operator">(</code>)
+      self.active <code class="python_operator">=</code><code class="python_digit">0</code>		  <code class="python_comment1"># empêcher accès ultérieurs à Tk</code>
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code><code class="python_literal1">'__main__'</code>:
+  <code class="python_function">AppServeur</code><code class="python_operator">(</code>host, port, largeur, hauteur).<code class="python_function">mainloop</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L20-C-5-A">20-C-5-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Ligne 173 : Il vous arrivera de temps à autre de vouloir « intercepter » l'ordre de fermeture de l'application que
+		l'utilisateur déclenche en quittant votre programme, par exemple parce que vous voulez forcer la sauvegarde de données importantes dans un fichier, ou
+		fermer aussi d'autres fenêtres, etc. Il suffit pour ce faire de détecter l'événement <b><span style="color:#000080;">&lt;Destroy&gt;</span></b>, comme
+		nous le faisons ici pour forcer la terminaison de tous les threads actifs.</li>
+              <li>Lignes 179 à 186 : Au passage, vous revoyez ici la technique d'association d'une barre de défilement à un widget
+		<b>Text</b> (Voir aussi page ).</li>
+              <li>Ligne 190 : Instanciation de l'objet-verrou permettant de synchroniser les threads.</li>
+              <li>Lignes 202-203 : Instanciation de l'objet thread qui attendra en permanence les demandes de connexion des clients potentiels.</li>
+              <li>Lignes 205 à 213, 215 à 227 : Ces méthodes <span class="italique">surchargent</span> les méthodes de même nom
+		héritées de leur classe parente. Elles commencent par invoquer celles-ci pour effectuer le même travail (lignes 207, 217), puis ajoutent leur
+		fonctionnalité propre, laquelle consiste à signaler à tout le monde ce qui vient de se passer.</li>
+              <li>Lignes 229 à 243 : Cette méthode instancie un nouveau poste de tir chaque fois qu'un nouveau client se connecte. Les canons
+		sont placés alternativement dans le camp de droite et dans celui de gauche, procédure qui pourrait bien évidemment être améliorée. La
+		liste des couleurs prévues limite le nombre de clients à 10, ce qui devrait suffire.</li>
+            </ul>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-C-6">20-C-6. Programme client<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le script correspondant au logiciel client est reproduit ci-après. Comme celui qui correspond au serveur, il est relativement court, parce qu'il utilise
+	    lui aussi l'importation de modules et l'héritage de classes. Le script serveur doit avoir été sauvegardé dans un fichier-module nommé
+	    <b>canon_serveur.py</b>. Ce fichier doit être placé dans le répertoire courant, de même que les fichiers-modules <b>canon03.py</b> et
+	    <b>canon04.py</b> qu'il utilise lui-même.</p>
+          <p>De ces modules ainsi importés, le présent script utilise les classes <b>Canon()</b> et <b>Pupitre()</b> à l'identique, ainsi qu'une forme
+	    dérivée de la classe <b>AppServeur()</b>. Dans cette dernière, de nombreuses méthodes ont été surchargées, afin d'adapter leur
+	    fonctionnalité. Considérez par exemple les méthodes <b>goal()</b> et <b>depl_aleat_canon()</b>, dont la variante surchargée ne fait plus rien du
+	    tout (instruction <b>pass</b>), parce que le calcul des scores et le repositionnement des canons après chaque tir ne peuvent être effectués que sur le
+	    serveur seulement.</p>
+          <p>C'est dans la méthode <b>run()</b> de la classe <b>ThreadSocket()</b> (lignes 86 à 126) que se trouve le code traitant les messages
+	    échangés avec le serveur. Nous y avons d'ailleurs laissé une instruction <b>print</b> (à la ligne 88) afin que les messages reçus du
+	    serveur apparaissent sur la sortie standard. Si vous réalisez vous-même une forme plus définitive de ce jeu, vous pourrez bien évidemment supprimer
+	    cette instruction.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e67972">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e67972" onclick="selectionCode('contenuCoded0e67972', 'IdTitreCode-d0e67972');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/>74.<br/>75.<br/>76.<br/>77.<br/>78.<br/>79.<br/>80.<br/>81.<br/>82.<br/>83.<br/>84.<br/>85.<br/>86.<br/>87.<br/>88.<br/>89.<br/>90.<br/>91.<br/>92.<br/>93.<br/>94.<br/>95.<br/>96.<br/>97.<br/>98.<br/>99.<br/>100.<br/>101.<br/>102.<br/>103.<br/>104.<br/>105.<br/>106.<br/>107.<br/>108.<br/>109.<br/>110.<br/>111.<br/>112.<br/>113.<br/>114.<br/>115.<br/>116.<br/>117.<br/>118.<br/>119.<br/>120.<br/>121.<br/>122.<br/>123.<br/>124.<br/>125.<br/>126.<br/>127.<br/>128.<br/>129.<br/>130.<br/>131.<br/>132.<br/>133.<br/>134.<br/>135.<br/>136.<br/>137.<br/>138.<br/>139.<br/>140.<br/>141.<br/>142.<br/>143.<br/>144.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e67972"><code class="python_comment1">#######################################################</code>
+<code class="python_comment1"># Jeu des bombardes - partie cliente		 #</code>
+<code class="python_comment1"># (C) Gérard Swinnen, Liège (Belgique) - Juillet 2004 #</code>
+<code class="python_comment1"># Licence : GPL 	     Révis.  2010 #</code>
+<code class="python_comment1"># Avant d'exécuter ce script, vérifiez que l'adresse, #</code>
+<code class="python_comment1"># le numéro de port et les dimensions de l'espace de  #</code>
+<code class="python_comment1"># jeu indiquées ci-dessous correspondent exactement   #</code>
+<code class="python_comment1"># à ce qui a été défini pour le serveur.	 #</code>
+<code class="python_comment1">#######################################################</code>
+ 
+<code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">import</code> socket, sys, threading, time
+<code class="python_keyword1">from</code> canon_serveur <code class="python_keyword1">import</code> Canon, Pupitre, AppServeur
+ 
+host, port <code class="python_operator">=</code> <code class="python_literal1">'192.168.1.168'</code>, <code class="python_digit">36000</code>
+largeur, hauteur <code class="python_operator">=</code> <code class="python_digit">700</code>, <code class="python_digit">400</code>	   <code class="python_comment1"># dimensions de l'espace de jeu</code>
+ 
+<code class="python_keyword1">class</code> <code class="python_function">AppClient</code><code class="python_operator">(</code>AppServeur):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, host, port, larg_c, haut_c):
+      AppServeur.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, host, port, larg_c, haut_c)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">specificites</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"préparer les objets spécifiques de la partie client"</code>
+      self.master.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">'&lt;&lt;&lt; Jeu des bombardes &gt;&gt;&gt;'</code>)
+      self.connex <code class="python_operator">=</code><code class="python_function">ThreadSocket</code><code class="python_operator">(</code>self, self.host, self.port)
+      self.connex.<code class="python_function">start</code><code class="python_operator">(</code>)
+      self.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_operator">=</code><code class="python_keyword3">None</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">ajouter_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, x, y, sens, coul):
+      <code class="python_literal1">"instancier un canon et un pupitre de nom &lt;id&gt; dans 2 dictionnaires"</code>
+      self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>] <code class="python_operator">=</code> <code class="python_function">Canon</code><code class="python_operator">(</code>self.jeu, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>x), <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>y), <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>sens), coul)
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>] <code class="python_operator">=</code> <code class="python_function">Pupitre</code><code class="python_operator">(</code>self, self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>])
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">inactiver</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">activer_pupitre_personnel</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>):
+      self.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>	       <code class="python_comment1"># identifiant reçu du serveur</code>
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">activer</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">tir_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>):
+      r <code class="python_operator">=</code> self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">feu</code><code class="python_operator">(</code>)	       <code class="python_comment1"># renvoie False si enrayé</code>
+      <code class="python_keyword1">if</code> r <code class="python_keyword1">and</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_operator">==</code> self.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>:
+      self.connex.<code class="python_function">signaler_tir</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">imposer_score</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, sc):
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">valeur_score</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>sc))
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">deplacer_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, x, y):
+      <code class="python_literal1">"note: les valeurs de x et y sont reçues en tant que chaînes"</code>
+      self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">deplacer</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>x), <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>y))
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">orienter_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>, angle):
+      <code class="python_literal1">"régler la hausse du canon &lt;id&gt; à la valeur &lt;angle&gt;"</code>
+      self.guns[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">orienter</code><code class="python_operator">(</code>angle)
+      <code class="python_keyword1">if</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a> <code class="python_operator">==</code> self.<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>:
+      self.connex.<code class="python_function">signaler_angle</code><code class="python_operator">(</code>angle)
+      <code class="python_keyword1">else</code>:
+      self.pupi[<a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>].<code class="python_function">reglage</code><code class="python_operator">(</code>angle)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">fermer_threads</code><code class="python_operator">(</code>self, evt):
+      <code class="python_literal1">"couper les connexions existantes et refermer les threads"</code>
+      self.connex.<code class="python_function">terminer</code><code class="python_operator">(</code>)
+      self.active <code class="python_operator">=</code><code class="python_digit">0</code>		  <code class="python_comment1"># empêcher accès ultérieurs à Tk</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">depl_aleat_canon</code><code class="python_operator">(</code>self, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=id#id"><span>id</span></a>):
+      <code class="python_keyword1">pass</code>		    <code class="python_comment1"># =&gt; méthode inopérante</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">goal</code><code class="python_operator">(</code>self, a, b):
+      <code class="python_keyword1">pass</code>		    <code class="python_comment1"># =&gt; méthode inopérante</code>
+ 
+ 
+<code class="python_keyword1">class</code> <code class="python_function">ThreadSocket</code><code class="python_operator">(</code>threading.Thread):
+  <code class="python_literal2">"""objet thread gérant l'échange de messages avec le serveur"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, boss, host, port):
+      threading.Thread.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.app <code class="python_operator">=</code> boss	      <code class="python_comment1"># réf. de la fenêtre application</code>
+      <code class="python_comment1"># Mise en place du socket - connexion avec le serveur :</code>
+      self.connexion <code class="python_operator">=</code> socket.<code class="python_function">socket</code><code class="python_operator">(</code>socket.AF_INET, socket.SOCK_STREAM)
+      <code class="python_keyword1">try</code>:
+      self.connexion.<code class="python_function">connect</code><code class="python_operator">((</code>host, port))
+      <code class="python_keyword1">except</code> socket.error:
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"La connexion a échoué."</code>)
+      sys.<code class="python_function">exit</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Connexion établie avec le serveur."</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">run</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+      msg_recu <code class="python_operator">=</code> self.connexion.<code class="python_function">recv</code><code class="python_operator">(</code><code class="python_digit">1024</code>).<code class="python_function">decode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"*</code><code class="python_literal4">%s</code><code class="python_literal1">*"</code> <code class="python_operator">%</code> msg_recu)
+      <code class="python_comment1"># le message reçu est d'abord converti en une liste :</code>
+      t <code class="python_operator">=</code>msg_recu.<code class="python_function">split</code><code class="python_operator">(</code><code class="python_literal1">','</code>)
+      <code class="python_keyword1">if</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">""</code> <code class="python_keyword1">or</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">"fin"</code>:
+	  <code class="python_comment1"># fermer le présent thread :</code>
+	  <code class="python_keyword1">break</code>
+      <code class="python_keyword1">elif</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">"serveur OK"</code>:
+	  self.connexion.<code class="python_function">send</code><code class="python_operator">(</code><code class="python_literal1">"client OK"</code>.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+      <code class="python_keyword1">elif</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">"canons"</code>:
+	  self.connexion.<code class="python_function">send</code><code class="python_operator">(</code><code class="python_literal1">"OK"</code>.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))   <code class="python_comment1"># accusé de réception</code>
+	  <code class="python_comment1"># éliminons le 1er et le dernier élément de la liste.</code>
+	  <code class="python_comment1"># ceux qui restent sont eux-mêmes des listes :</code>
+	  lc <code class="python_operator">=</code> t[<code class="python_digit">1</code>:<code class="python_operator">-</code><code class="python_digit">1</code>]
+	  <code class="python_comment1"># chacune est la description complète d'un canon :</code>
+	  <code class="python_keyword1">for</code> g <code class="python_keyword1">in</code> lc:
+	  s <code class="python_operator">=</code> g.<code class="python_function">split</code><code class="python_operator">(</code><code class="python_literal1">';'</code>)
+	  self.app.<code class="python_function">ajouter_canon</code><code class="python_operator">(</code>s[<code class="python_digit">0</code>], s[<code class="python_digit">1</code>], s[<code class="python_digit">2</code>], s[<code class="python_digit">3</code>], s[<code class="python_digit">4</code>])
+      <code class="python_keyword1">elif</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">"nouveau_canon"</code>:
+	  self.app.<code class="python_function">ajouter_canon</code><code class="python_operator">(</code>t[<code class="python_digit">1</code>], t[<code class="python_digit">2</code>], t[<code class="python_digit">3</code>], t[<code class="python_digit">4</code>], t[<code class="python_digit">5</code>])
+	  <code class="python_keyword1">if</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=len#len"><span>len</span></a><code class="python_operator">(</code>t) <code class="python_operator">&gt;</code><code class="python_digit">6</code>:
+	  self.app.<code class="python_function">activer_pupitre_personnel</code><code class="python_operator">(</code>t[<code class="python_digit">1</code>])
+      <code class="python_keyword1">elif</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">'angle'</code>:
+	  <code class="python_comment1"># il se peut que l'on ait reçu plusieurs infos regroupées.</code>
+	  <code class="python_comment1"># on ne considère alors que la première :</code>
+	  self.app.<code class="python_function">orienter_canon</code><code class="python_operator">(</code>t[<code class="python_digit">1</code>], t[<code class="python_digit">2</code>])
+      <code class="python_keyword1">elif</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">"tir_de"</code>:
+	  self.app.<code class="python_function">tir_canon</code><code class="python_operator">(</code>t[<code class="python_digit">1</code>])
+      <code class="python_keyword1">elif</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">"scores"</code>:
+	  <code class="python_comment1"># éliminons le 1er et le dernier élément de la liste.</code>
+	  <code class="python_comment1"># ceux qui restent sont eux-mêmes des listes :</code>
+	  lc <code class="python_operator">=</code> t[<code class="python_digit">1</code>:<code class="python_operator">-</code><code class="python_digit">1</code>]
+	  <code class="python_comment1"># chaque élément est la description d'un score :</code>
+	  <code class="python_keyword1">for</code> g <code class="python_keyword1">in</code> lc:
+	  s <code class="python_operator">=</code> g.<code class="python_function">split</code><code class="python_operator">(</code><code class="python_literal1">';'</code>)
+	  self.app.<code class="python_function">imposer_score</code><code class="python_operator">(</code>s[<code class="python_digit">0</code>], s[<code class="python_digit">1</code>])
+      <code class="python_keyword1">elif</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">"mouvement_de"</code>:
+	  self.app.<code class="python_function">deplacer_canon</code><code class="python_operator">(</code>t[<code class="python_digit">1</code>],t[<code class="python_digit">2</code>],t[<code class="python_digit">3</code>])
+      <code class="python_keyword1">elif</code> t[<code class="python_digit">0</code>] <code class="python_operator">==</code><code class="python_literal1">"départ_de"</code>:
+	  self.app.<code class="python_function">enlever_canon</code><code class="python_operator">(</code>t[<code class="python_digit">1</code>])
+ 
+      <code class="python_comment1"># Le thread &lt;réception&gt; se termine ici.</code>
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Client arrêté. Connexion interrompue."</code>)
+      self.connexion.<code class="python_function">close</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">signaler_tir</code><code class="python_operator">(</code>self):
+      self.connexion.<code class="python_function">send</code><code class="python_operator">(</code><code class="python_literal1">"feu"</code>.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">signaler_angle</code><code class="python_operator">(</code>self, angle):
+      msg <code class="python_operator">=</code><code class="python_literal1">"orienter,{}"</code>.<code class="python_function">format</code><code class="python_operator">(</code>angle)
+      self.connexion.<code class="python_function">send</code><code class="python_operator">(</code>msg.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">terminer</code><code class="python_operator">(</code>self):
+      self.connexion.<code class="python_function">send</code><code class="python_operator">(</code><code class="python_literal1">"fin"</code>.<code class="python_function">encode</code><code class="python_operator">(</code><code class="python_literal1">"Utf8"</code>))
+ 
+<code class="python_comment1"># Programme principal :</code>
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code><code class="python_literal1">'__main__'</code>:
+  <code class="python_function">AppClient</code><code class="python_operator">(</code>host, port, largeur, hauteur).<code class="python_function">mainloop</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L20-C-6-A">20-C-6-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Lignes 15-16 : Vous pouvez vous-même perfectionner ce script en lui ajoutant un formulaire qui demandera ces valeurs à l'utilisateur au
+		cours du démarrage.</li>
+              <li>Lignes 19 à 27 : Le constructeur de la classe parente se termine en invoquant la méthode <b>specificites()</b>. On peut donc
+		placer dans celle-ci ce qui doit être construit différemment dans le serveur et dans les clients. Le serveur instancie notamment un widget <b>text</b>
+		qui n'est pas repris dans les clients ; l'un et l'autre démarrent des objets threads différents pour gérer les connexions.</li>
+              <li>Lignes 39 à 42 : Cette méthode est invoquée chaque fois que l'utilisateur enfonce le bouton de tir. Le canon ne peut
+		cependant pas effectuer des tirs en rafale. Par conséquent, aucun nouveau tir ne peut être accepté tant que l'obus précédent n'a pas
+		terminé sa trajectoire. C'est la valeur « vraie » ou « fausse » renvoyée par la méthode <b>feu()</b> de
+		l'objet canon qui indique si le tir a été accepté ou non. On utilise cette valeur pour ne signaler au serveur (et donc aux autres clients) que les
+		tirs qui ont effectivement eu lieu.</li>
+              <li>Lignes 105 à 108 : Un nouveau canon doit être ajouté dans l'espace de jeu de chacun (c'est-à-dire dans le canevas du
+		serveur, et dans le canevas de tous les clients connectés), chaque fois qu'un nouveau client se connecte. Le serveur envoie donc à ce moment un même
+		message à tous les clients pour les informer de la présence de ce nouveau partenaire. Mais le message envoyé à celui-ci en particulier comporte
+		un champ supplémentaire (lequel contient simplement la chaîne « le_vôtre »), afin que ce partenaire sache que ce message
+		concerne son propre canon, et qu'il puisse donc activer le pupitre correspondant, tout en mémorisant l'identifiant qui lui a été attribué par
+		le serveur (voir également les lignes 35 à 37).</li>
+            </ul>
+          </div>
+          
+		<h5 class="TitreSection3" id="L20-C-6-B">20-C-6-B. Conclusions et perspectives :<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <p>Cette application vous a été présentée dans un but didactique. Nous y avons délibérément simplifié un certain nombre
+	      de problèmes. Par exemple, si vous testez vous-même ces logiciels, vous constaterez que les messages échangés sont souvent rassemblés en
+	      « paquets », ce qui nécessiterait d'affiner les algorithmes mis en place pour les interpréter. </p>
+            <p>De même, nous avons à peine esquissé le mécanisme fondamental du jeu : répartition des joueurs dans les deux camps,
+	      destruction des canons touchés, obstacles divers, etc. Il vous reste bien des pistes à explorer !</p>
+            <p>Exercices</p>
+            <p>.Simplifiez le script correspondant au client de <span class="italique">chat</span> décrit à la page , en supprimant l'un des deux objets threads. Arrangez-vous par
+	      exemple pour traiter l'émission de messages au niveau du thread principal.</p>
+            <p>.Modifiez le jeu des bombardes (version monoposte) du chapitre 15 (voir pages et suivantes), en ne gardant qu'un seul canon et un seul pupitre de pointage.
+	      Ajoutez-y une cible mobile, dont le mouvement sera géré par un objet thread indépendant (de manière à bien séparer les portions de code
+	      qui contrôlent l'animation de la cible et celle du boulet).</p>
+          </div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L20-D">20-D. Utilisation de threads pour optimiser les animations.<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Le dernier exercice proposé à la fin de la section précédente nous suggère une méthodologie de développements d'applications
+	  qui peut se révéler particulièrement intéressante dans le cas de jeux vidéo impliquant plusieurs animations simultanées.</p>
+        <p>En effet, si vous programmez les différents éléments animés d'un jeu comme des objets indépendants fonctionnant chacun sur son propre
+	  thread, alors non seulement vous vous simplifiez la tâche et vous améliorez la lisibilité de votre script, mais encore vous augmentez la vitesse
+	  d'exécution et donc la fluidité de ces animations. Pour arriver à ce résultat, vous devrez abandonner la technique de temporisation que vous avez
+	  exploitée jusqu'ici, mais celle que vous allez utiliser à sa place est finalement plus simple !</p>
+        
+		<h4 class="TitreSection2" id="L20-D-1">20-D-1. Temporisation des animations à l'aide de after()<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Dans toutes les animations que nous avons décrites jusqu'à présent, le « moteur » était constitué à chaque
+	    fois par une fonction contenant la méthode <b>after()</b>, laquelle est associée d'office à tous les widgets tkinter. Vous savez que cette méthode
+	    permet d'introduire une temporisation dans le déroulement de votre programme : un chronomètre interne est activé, de telle sorte qu'après un
+	    intervalle de temps convenu, le système invoque automatiquement une fonction quelconque. En général, c'est la fonction contenant <b>after()</b> qui est
+	    elle-même invoquée : on réalise ainsi une boucle récursive, dans laquelle il reste à programmer les déplacements des divers objets
+	    graphiques.</p>
+          <p>Vous devez bien comprendre que pendant l'écoulement de l'intervalle de temps programmé à l'aide de la méthode <b>after()</b>, votre
+	    application n'est pas du tout « figée ». Vous pouvez par exemple, pendant ce temps, cliquer sur un bouton, redimensionner la fenêtre,
+	    effectuer une entrée clavier, etc. Comment cela est-il rendu possible ?</p>
+          <p>Nous avons mentionné déjà à plusieurs reprises le fait que les applications graphiques modernes comportent toujours une sorte de moteur
+	    qui « tourne » continuellement en tâche de fond : ce dispositif se met en route lorsque vous activez la méthode <b>mainloop()</b> de
+	    votre fenêtre principale. Comme son nom l'indique fort bien, cette méthode met en œuvre une boucle répétitive perpétuelle, du même
+	    type que les boucles <b>while</b> que vous connaissez bien. De nombreux mécanismes sont intégrés à ce « moteur ». L'un d'entre
+	    eux consiste à réceptionner tous les événements qui se produisent, et à les signaler ensuite à l'aide de messages appropriés aux
+	    programmes qui en font la demande (voir : <span class="italique">programmes pilotés par des événements</span>, page ), d'autres contrôlent les actions à
+	    effectuer au niveau de l'affichage, etc. Lorsque vous faites appel à la méthode <b>after()</b> d'un widget, vous utilisez en fait un mécanisme de
+	    chronométrage qui est intégré lui aussi à <b>mainloop()</b>, et c'est donc ce gestionnaire central qui déclenche l'appel de fonction que vous
+	    souhaitez, après un certain intervalle de temps.</p>
+          <p>La technique d'animation utilisant la méthode <b>after()</b> est la seule possible pour une application fonctionnant toute entière sur un seul
+	    thread, parce que c'est la boucle <b>mainloop()</b> qui dirige l'ensemble du comportement d'une telle application de manière absolue. C'est notamment elle qui se
+	    charge de redessiner tout ou partie de la fenêtre chaque fois que cela s'avère nécessaire. Pour cette raison, vous ne pouvez pas imaginer de construire
+	    un moteur d'animation qui redéfinirait les coordonnées d'un objet graphique à l'intérieur d'une simple boucle <b>while</b>, par exemple, parce que
+	    pendant tout ce temps l'exécution de <b>mainloop()</b> resterait suspendue, ce qui aurait pour conséquence que durant cet intervalle de temps aucun objet
+	    graphique ne serait redessiné (en particulier celui que vous souhaitez mettre en mouvement !). En fait, toute l'application apparaîtrait figée,
+	    aussi longtemps que la boucle <b>while</b> ne serait pas interrompue.</p>
+          <p>Puisqu'elle est la seule possible, c'est donc cette technique que nous avons utilisée jusqu'à présent dans tous nos exemples d'applications
+	    <span class="italique">mono-thread</span>. Elle comporte cependant un inconvénient gênant : du fait du grand nombre d'opérations prises en charge à chaque
+	    itération de la boucle <b>mainloop()</b>, la temporisation que l'on peut programmer à l'aide de <b>after()</b> ne peut pas être très courte. Par
+	    exemple, elle ne peut guère descendre en dessous de 15 ms sur un PC typique (année 2004, processeur de type Pentium IV, f = 1,5 GHz). Vous devez tenir
+	    compte de cette limitation si vous souhaitez développer des animations rapides.</p>
+          <p>Un autre inconvénient lié à l'utilisation de la méthode <b>after()</b> réside dans la structure de la boucle d'animation (à
+	    savoir une fonction ou une méthode « récursive », c'est-à-dire qui s'appelle elle-même) : il n'est pas toujours simple en
+	    effet de bien maîtriser ce genre de construction logique, en particulier si l'on souhaite programmer l'animation de plusieurs objets graphiques indépendants,
+	    dont le nombre ou les mouvements doivent varier au cours du temps.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-D-2">20-D-2. Temporisation des animations à l'aide de time.sleep()<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Vous pouvez ignorer les limitations de la méthode <b>after()</b> évoquées ci-dessus, si vous confiez l'animation de vos objets graphiques
+	    à des threads indépendants. En procédant ainsi, vous vous libérez de la tutelle de <b>mainloop()</b>, et il vous est permis alors de construire des
+	    procédures d'animation sur la base de structures de boucles plus « classiques », utilisant l'instruction <b>while</b> ou l'instruction
+	    <b>for</b> par exemple.</p>
+          <p>Au cœur de chacune de ces boucles, vous devez cependant toujours veiller à insérer une temporisation pendant laquelle vous « rendez
+	    la main » au système d'exploitation (afin qu'il puisse s'occuper des autres threads). Pour ce faire, vous ferez appel à la fonction <b>sleep()</b>
+	    du module <b>time</b>. Cette fonction permet de suspendre l'exécution du thread courant pendant un certain intervalle de temps, pendant lequel les autres threads
+	    et applications continuent à fonctionner. La temporisation ainsi produite ne dépend pas de <b>mainloop()</b>, et par conséquent, elle peut être
+	    beaucoup plus courte que celle que vous autorise la méthode <b>after()</b>.</p>
+          <p>Attention : cela ne signifie pas que le rafraîchissement de l'écran sera lui-même plus rapide, car ce rafraîchissement continue
+	    à être assuré par <b>mainloop()</b>. Vous pourrez cependant accélérer fortement les différents mécanismes que vous installez
+	    vous-même dans vos procédures d'animation. Dans un logiciel de jeu, par exemple, il est fréquent d'avoir à comparer périodiquement les
+	    positions de deux mobiles (tels qu'un projectile et une cible), afin de pouvoir entreprendre une action lorsqu'ils se rejoignent (explosion, ajout de points à un
+	    score, etc.). Avec la technique d'animation décrite ici, vous pouvez effectuer beaucoup plus souvent ces comparaisons et donc espérer un résultat plus
+	    précis. De même, vous pouvez augmenter le nombre de points pris en considération pour le calcul d'une trajectoire en temps réel, et donc affiner
+	    celle-ci.</p>
+          <blockquote class="citation"><div><b>- Attention : </b>Lorsque vous utilisez la méthode after(), vous devez lui indiquer la temporisation souhaitée en millisecondes, sous la
+	    forme d'un argument entier. Lorsque vous faites appel à la fonction sleep(), par contre, l'argument que vous transmettez doit être exprimé en secondes,
+	    sous la forme d'un réel (float). Vous pouvez cependant utiliser des très petites valeurs (0.0003 par ex.).</div></blockquote>
+        </div>
+        
+		<h4 class="TitreSection2" id="L20-D-3">20-D-3. Exemple concret<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Le petit script reproduit ci-dessous illustre la mise en œuvre de cette technique, dans un exemple volontairement minimaliste. Il s'agit d'une petite
+	    application graphique dans laquelle une figure se déplace en cercle à l'intérieur d'un canevas. Son « moteur » <b>mainloop()</b> est
+	    lancé comme d'habitude sur le thread principal. Le constructeur de l'application instancie un canevas contenant le dessin d'un cercle, un bouton et un objet
+	    thread. C'est cet objet thread qui assure l'animation du dessin, mais sans faire appel à la méthode <b>after()</b> d'un widget. Il utilise plutôt une
+	    simple boucle <b>while</b> très classique, installée dans sa méthode <b>run()</b>.</p>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/10000000000001AD000001DBE1C86696.png"><img class="ImgCliquable figure-img-caption" src="./images/10000000000001AD000001DBE1C86696.png" alt="Image non disponible" width="293" height="325"/></a></figure></div>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e69564">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e69564" onclick="selectionCode('contenuCoded0e69564', 'IdTitreCode-d0e69564');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e69564"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> sin, cos
+<code class="python_keyword1">import</code> time, threading
+ 
+<code class="python_keyword1">class</code> <code class="python_function">App</code><code class="python_operator">(</code>Frame):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self):
+      Frame.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.<code class="python_function">pack</code><code class="python_operator">(</code>)
+      can <code class="python_operator">=</code><code class="python_function">Canvas</code><code class="python_operator">(</code>self, width <code class="python_operator">=</code><code class="python_digit">400</code>, height <code class="python_operator">=</code><code class="python_digit">400</code>,
+	  bg <code class="python_operator">=</code><code class="python_literal1">'ivory'</code>, bd <code class="python_operator">=</code><code class="python_digit">3</code>, relief <code class="python_operator">=</code>SUNKEN)
+      can.<code class="python_function">pack</code><code class="python_operator">(</code>padx <code class="python_operator">=</code><code class="python_digit">5</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>)
+      cercle <code class="python_operator">=</code> can.<code class="python_function">create_oval</code><code class="python_operator">(</code><code class="python_digit">185</code>, <code class="python_digit">355</code>, <code class="python_digit">215</code>, <code class="python_digit">385</code>, fill <code class="python_operator">=</code><code class="python_literal1">'red'</code>)
+      tb <code class="python_operator">=</code> <code class="python_function">Thread_balle</code><code class="python_operator">(</code>can, cercle)
+      <code class="python_function">Button</code><code class="python_operator">(</code>self, text <code class="python_operator">=</code><code class="python_literal1">'Marche'</code>, command <code class="python_operator">=</code>tb.start).<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT)
+      <code class="python_comment1"># Button(self, text ='Arrêt', command =tb.stop).pack(side =RIGHT)</code>
+      <code class="python_comment1"># arrêter l'autre thread si l'on ferme la fenêtre :</code>
+      self.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">'&lt;Destroy&gt;'</code>, tb.stop)
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Thread_balle</code><code class="python_operator">(</code>threading.Thread):
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, canevas, dessin):
+      threading.Thread.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self)
+      self.can, self.dessin <code class="python_operator">=</code> canevas, dessin
+      self.anim <code class="python_operator">=</code><code class="python_digit">1</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">run</code><code class="python_operator">(</code>self):
+      a <code class="python_operator">=</code> <code class="python_digit">0.0</code>
+      <code class="python_keyword1">while</code> self.anim <code class="python_operator">==</code> <code class="python_digit">1</code>:
+      a <code class="python_operator">+=</code> <code class="python_digit">.01</code>
+      x, y <code class="python_operator">=</code> <code class="python_digit">200</code> <code class="python_operator">+</code> <code class="python_digit">170</code><code class="python_operator">*</code><code class="python_function">sin</code><code class="python_operator">(</code>a), <code class="python_digit">200</code> <code class="python_operator">+</code><code class="python_digit">170</code><code class="python_operator">*</code><code class="python_function">cos</code><code class="python_operator">(</code>a)
+      self.can.<code class="python_function">coords</code><code class="python_operator">(</code>self.dessin, x<code class="python_operator">-</code><code class="python_digit">15</code>, y<code class="python_operator">-</code><code class="python_digit">15</code>, x<code class="python_operator">+</code><code class="python_digit">15</code>, y<code class="python_operator">+</code><code class="python_digit">15</code>)
+      time.<code class="python_function">sleep</code><code class="python_operator">(</code><code class="python_digit">0.010</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">stop</code><code class="python_operator">(</code>self, evt <code class="python_operator">=</code><code class="python_digit">0</code>):
+      self.anim <code class="python_operator">=</code><code class="python_digit">0</code>
+ 
+<code class="python_function">App</code><code class="python_operator">(</code>).<code class="python_function">mainloop</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L20-D-3-A">20-D-3-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Lignes 13-14 : Afin de simplifier notre exemple au maximum, nous créons l'objet thread chargé de l'animation, directement dans le
+		constructeur de l'application principale. Cet objet thread ne démarrera cependant que lorsque l'utilisateur aura cliqué sur le bouton
+		« Marche », qui active sa méthode <b>start()</b> (rappelons ici que c'est cette méthode intégrée qui lancera elle-même
+		la méthode <b>run()</b> où nous avons installé notre boucle d'animation).</li>
+              <li>Ligne 15 : Vous ne pouvez par redémarrer un thread qui s'est terminé. De ce fait, vous ne pouvez lancer cette animation qu'une seule
+		fois (tout au moins sous la forme présentée ici). Pour vous en convaincre, activez la ligne n<sup>o</sup> 15 en enlevant le caractère <b>#</b>
+		situé au début (et qui fait que Python considère qu'il s'agit d'un simple commentaire) : lorsque l'animation est lancée, un clic de souris
+		sur le bouton ainsi mis en place provoque la sortie de la boucle <b>while</b> des lignes 27-31, ce qui termine la méthode <b>run()</b>. L'animation
+		s'arrête, mais le thread qui la gérait s'est terminé lui aussi. Si vous essayez de le relancer à l'aide du bouton
+		« Marche », vous n'obtenez rien d'autre qu'un message d'erreur.</li>
+              <li>Lignes 26 à 31 : Pour simuler un mouvement circulaire uniforme, il suffit de faire varier continuellement la valeur d'un angle<b>
+		a</b>. Le sinus et le cosinus de cet angle permettent alors de calculer les coordonnées <b>x</b> et <b>y</b> du point de la circonférence qui correspond
+		à cet angle<a class="signetNoteBasPage" id="signetNoteBasPage110" href="#noteBasPage110">(110)</a>.<br/>
+		 À chaque itération, l'angle ne varie que d'un centième de radian seulement (environ 0,6°), et il faudra donc 628 itérations pour que le
+		   mobile effectue un tour complet. La temporisation choisie pour ces itérations se trouve à la ligne 31 : 10 millisecondes. Vous pouvez
+		   accélérer le mouvement en diminuant cette valeur, mais vous ne pourrez guère descendre en dessous de 1 milliseconde (0.001 s), ce qui n'est
+		   déjà pas si mal.</li>
+            </ul>
+            <blockquote class="citation"><div>- Rappel Vous pouvez vous procurer le code source de tous nos exemples sur le site :<br/>
+		 http://inforef.be/swi/python.htm , ou bien :<br/>
+		 http://main.pythomium.net/download/cours_python.zip<br/>
+		 Vous y trouverez notamment, dans un fichier nommé <b>cibles_multiples.py</b>, un petit programme de jeu dans lequel l<span class="italique">'</span>utilisateur doit tirer au canon
+		   sur une série de cibles mobiles qui deviennent de plus en plus rapides et nombreuses au cours du temps. Ce jeu utilise les techniques d<span class="italique">'</span>animation
+		   expliquées ci-dessus. </div></blockquote>
+            <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/100000000000033B0000029F814E7AF6.png" alt="Image non disponible" width="370" height="300"/></figure></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_19.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_21.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage103" href="#signetNoteBasPage103">(103)</a></div><div class="ContenuUneNoteBasPage">Une machine particulière peut également être désignée par un nom plus explicite, mais à la condition qu'un
+	  mécanisme ait été mis en place sur le réseau (DNS) pour traduire automatiquement ce nom en adresse IP. Veuillez consulter un ouvrage sur les
+	  réseaux pour en savoir davantage.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage104" href="#signetNoteBasPage104">(104)</a></div><div class="ContenuUneNoteBasPage"/></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage105" href="#signetNoteBasPage105">(105)</a></div><div class="ContenuUneNoteBasPage"><span style="color:#000000;">Dans un système d'exploitation de type Unix (comme Linux), les différents
+	  </span><span class="italique"><span style="color:#000000;">threads</span></span><span style="color:#000000;"> d'un même programme font partie d'un seul </span><span class="italique"><span style="color:#000000;">processus</span></span><span style="color:#000000;">. Il est également possible de gérer différents processus à l'aide d'un même script
+	  Python (opération </span><span class="italique"><span style="color:#000000;">fork</span></span><span style="color:#000000;">), mais l'explication de cette technique dépasse largement le cadre de
+	  ce livre.</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage106" href="#signetNoteBasPage106">(106)</a></div><div class="ContenuUneNoteBasPage"><span style="color:#000000;">Le
+	    « chat » est l'occupation qui consiste à « papoter » par l'intermédiaire d'ordinateurs. Les canadiens francophones
+	    ont proposé le terme de </span><span class="italique"><span style="color:#000000;">clavardage</span></span><span style="color:#000000;"> pour désigner ce « bavardage par claviers
+	    interposés ».</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage107" href="#signetNoteBasPage107">(107)</a></div><div class="ContenuUneNoteBasPage"><span style="color:#000000;">Que les puristes veuillent bien me pardonner : j'admets
+		volontiers que cette astuce pour forcer l'arrêt d'un thread n'est pas vraiment recommandable. Je me suis autorisé ce raccourci afin de ne pas trop
+		alourdir ce texte, qui se veut seulement une initiation. Le lecteur exigeant pourra approfondir cette question en consultant l'un ou l'autre des ouvrages de
+		référence mentionnés dans la bibliographie (voir page XVI).</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage108" href="#signetNoteBasPage108">(108)</a></div><div class="ContenuUneNoteBasPage"><span style="color:#000000;">Rappel : dans une classe dérivée, vous
+	      pouvez définir une nouvelle méthode avec le même nom qu'une méthode de la classe parente, afin de modifier sa fonctionnalité dans la classe
+	      dérivée. Cela s'appelle </span><b><span style="color:#000000;">surcharger</span></b><span style="color:#000000;"> cette méthode (voir aussi page
+	      ).</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage109" href="#signetNoteBasPage109">(109)</a></div><div class="ContenuUneNoteBasPage"><span style="color:#000000;">Nous détaillerons cette question quelques pages plus loin, car elle ouvre quelques perspectives intéressantes. Voir : </span><span class="italique"><span style="color:#000000;">optimiser les animations à l</span>'<span style="color:#000000;">aide des threads</span></span><span style="color:#000000;">,
+	    page .</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage110" href="#signetNoteBasPage110">(110)</a></div><div class="ContenuUneNoteBasPage">Vous pouvez trouver quelques explications complémentaires à ce sujet à la page .</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

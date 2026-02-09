@@ -1,0 +1,206 @@
+\documentclass[11pt,a4paper]{article}
+
+% =========================
+% PACKAGES
+% =========================
+\usepackage[utf8]{inputenc}      % Encodage UTF-8
+\usepackage[T1]{fontenc}         % Encodage des fontes
+\usepackage[french]{babel}       % Typographie française [web:7][web:9]
+\usepackage{amsmath, amssymb}    % Maths avancées [web:11]
+\usepackage{physics}             % Notation vectorielle, dérivées, etc.
+\usepackage{graphicx}            % Insertion d'images
+\usepackage{siunitx}             % Unités SI
+\usepackage{geometry}            % Marges
+\usepackage{hyperref}            % Liens cliquables (TOC, références, URLs)
+\usepackage{float}               % Contrôle des flottants (H, h, etc.)
+\usepackage{caption}             % Légendes
+\usepackage{subcaption}          % Sous-figures
+\usepackage[absolute,overlay]{textpos} % pour le placement absolu
+
+% Réglages de mise en page
+\geometry{margin=2.5cm}
+\setlength{\parskip}{1em}
+
+% Répertoire des figures
+\graphicspath{{../Images/}}
+
+% =========================
+% INFORMATIONS
+% =========================
+\title{\textbf{TP -- Informatique Scientifique \\ Étude du comportement balistique d'un projectile}}
+\author{
+	Université Paul Sabatier \\ \\
+	L3 Mécanique et Énergétique \\ \\
+	\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+	\textbf{WOLI Sedjro Friedly }
+	\\ \\ \\ \\ \\ \\ \\ \\ \\ \\  \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+}
+\date{Année universitaire 2025--2026}
+
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	% ==================================================
+	\section{Introduction}
+	% ==================================================
+	Ce projet porte sur l'étude du mouvement d'un objet lancé dans un champ de pesanteur, un problème classique de mécanique du point. L'objectif est de mettre en œuvre la programmation orientée objet (POO) en Python pour simuler et analyser des trajectoires balistiques de complexité croissante.
+	
+	Le travail est divisé en trois modules :
+	\begin{enumerate}
+		\item Le \textbf{Modèle 1}, purement analytique, négligeant les forces de frottement.
+		\item Le \textbf{Modèle 2}, utilisant une résolution numérique d'équations différentielles ordinaires (EDO) pour valider l'approche.
+		\item Le \textbf{Modèle 3}, intégrant des forces aérodynamiques (traînée et portance) ainsi qu'une force de propulsion.
+	\end{enumerate}
+	
+	% ==================================================
+	\section{Corps du devoir}
+	% ==================================================
+	
+	% --------------------------------------------------
+	\subsection{Modèle 1 : Approche analytique}
+	% --------------------------------------------------
+	Le modèle de référence repose sur la seconde loi de Newton, en supposant que seule l'accélération de la pesanteur \(g\) agit sur le projectile.
+	
+	\subsubsection{Calcul de la trajectoire}
+	La trajectoire est une parabole définie par
+	\[
+	z(x) = -\frac{g}{2}\frac{x^2}{v_0^2 \cos^2 \alpha} + \tan(\alpha)\, x + h.
+	\]
+	Pour un lancement à \(h = \SI{20}{m}\) et \(v_0 = \SI{50}{m.s^{-1}}\), on obtient une trajectoire régulière (Fig.~\ref{fig:plot_trajectory}), tracée avec une épaisseur de trait \texttt{lw=3} conformément aux consignes.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{plot_trajectory.png}
+		\caption{Exemple de trajectoire \(z(x)\) pour le Modèle~1.}
+		\label{fig:plot_trajectory}
+	\end{figure}
+	
+	\subsubsection{Vitesse en fonction du temps}
+		L'accélération étant constante (\(a_z = -g\)), la composante verticale de la vitesse s'écrit
+		\[
+		v_z(t) = v_0 \sin(\alpha) - g t.
+		\]
+		La fonction \texttt{plot\_trajectories} trace \(v_z(t)\) ainsi que la norme \(\lVert \vb{v}(t) \rVert\) en fonction du temps (Fig.~\ref{fig:plot_trajectories}).
+		
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{composantes.png}
+				\caption{Composantes de la vitesse et norme de \(\vb{v}(t)\) pour le Modèle~1.}
+				\label{fig:plot_trajectories}
+			\end{figure}
+			%COMMENTAIRES
+			La vitesse \(v_z\) diminue linéairement à cause de l'accélération gravitationnelle, tandis que la vitesse totale atteint son minimum à l'apogée, où \(v_z = 0\).
+	
+	\subsubsection{Famille de trajectoires et angle optimal}
+		On trace sur un même graphique les trajectoires pour plusieurs angles de lancement \(\alpha\), avec une légende indiquant la valeur de chaque angle (Fig.~\ref{fig:family_trajectories}). Cela permet d'analyser l'influence de \(\alpha\) sur la portée et l'altitude maximale.
+			
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{Plot_trajectories.png}
+			\caption{Famille de trajectoires pour différents angles de lancement \(\alpha\).}
+			\label{fig:family_trajectories}
+		\end{figure}
+		
+		%COMMENTAIRES
+			On observe une grande échelle de portée, car les points d’impact dans le code dépendent de chaque instant d’impact au sol.
+				
+		Pour un tir à partir du sol (\(h = 0\)), l'étude montre que l'angle optimisant la portée est \(\alpha = 45^\circ\). Dans notre configuration avec \(h = \SI{20}{m}\), l'angle optimal est inférieur à \(45^\circ\), tandis que l'altitude maximale \(h_{\text{max}}\) augmente avec l'angle (Fig.~\ref{fig:max_altitude}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{max_altitude_f_alpha.png}
+		\caption{Altitude maximale en fonction de l'angle de lancement \(\alpha\).}
+		\label{fig:max_altitude}
+	\end{figure}
+	
+		%COMMENTAIRES
+		
+	
+	% --------------------------------------------------
+	\subsection{Modèle 2 : Résolution numérique}
+	% --------------------------------------------------
+	Le Modèle~2 résout le système différentiel \(\dv{y}{t} = f(t,y)\), où \(y = [x, z, v_x, v_z]^\top\), à l'aide d'un intégrateur de type Runge--Kutta d'ordre 4 (par exemple \texttt{odeint} de \texttt{scipy.integrate}).
+	
+	\subsubsection{Validation de l'intégrateur}
+	
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{validation_model2.png}
+			\caption{Comparaison des solutions analytique et numérique pour la trajectoire.}
+			\label{fig:Validation}
+		\end{figure}
+		
+		%COMMENTAIRES
+			On compare les résultats du Modèle~2 à la solution analytique du Modèle~1 pour valider l'intégrateur numérique. L'erreur absolue maximale obtenue est de l'ordre de \(9{,}98\times 10^{-11}\), bien inférieure au seuil de \(10^{-7}\) imposé par le cahier des charges, ce qui valide l'implémentation.
+	
+	
+	
+	
+	\subsubsection{Comparaison des trajectoires}	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{analt_vs_num_traj.png}
+			\caption{Solution analytique vs solution numérique pour la trajectoire.}
+			\label{fig:analt_vs_num}
+		\end{figure}
+		
+		%COMMENTAIRES
+			
+			La superposition des courbes analytique et numérique montre que les trajectoires coïncident quasiment parfaitement (Fig.~\ref{fig:analt_vs_num}), confirmant la robustesse du schéma numérique retenu.
+			
+	% --------------------------------------------------
+	\subsection{Modèle 3 : Effets aérodynamiques complets}
+	% --------------------------------------------------
+		Le Modèle~3 introduit les forces aérodynamiques de traînée (coefficient \(C_d\)) et de portance (coefficient \(C_l\)), ainsi qu'une force de propulsion \(T_0\) active sur une phase limitée du vol.
+	
+	\subsubsection{Trajectoires pour différents coefficients}
+	On calcule les trajectoires pour différentes combinaisons de \(C_d\) et \(C_l\). Les trajectoires obtenues sont représentées sur la Fig.~\ref{fig:four_trajectories}.
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{trace_4_trajectoires.png}
+			\caption{Trajectoires pour différentes valeurs des coefficients \(C_d\) et \(C_l\).}
+			\label{fig:four_trajectories}
+		\end{figure}
+		
+	
+		%COMMENTAIRES		
+			La traînée réduit la portée en s'opposant au mouvement et en dissipant l'énergie mécanique, tandis qu'une portance suffisante permets au projectile d'augmenter sa portée, voire générer des trajectoires plus complexes.
+			\\ 
+			On constate que la courbe verte de Cl $ C_{l}$ et $ C_{d} $ oscille après avoir touché le sol.\\
+			On remarque également l'ordre de grandeur de z et de x très grande 
+			
+			
+			
+	\subsubsection{Isocontours de la distance d'impact}
+	La distance d'impact est évaluée sur une grille de valeurs de l'angle de tir \(\alpha\) et du coefficient de traînée \(C_d\). Les isocontours de portée dans le plan \((\alpha, C_d)\) sont représentés sur la Fig.~\ref{fig:contours}.
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{contours.png}
+			\caption{Isocontours de la distance d'impact dans le plan \((\alpha, C_d)\).}
+			\label{fig:contours}
+		\end{figure}
+	
+	
+	
+			
+		%COMMENTAIRES
+			Ces cartes permettent d'identifier visuellement les couples \((\alpha, C_d)\) qui maximisent la portée pour une configuration aérodynamique donnée, et de discuter la sensibilité de la portée à ces paramètres. Mes isocontours ne cadre pas avec la figure proposer dans le malgré plusieur analyse du code de ma part	
+			
+			
+			
+	% ==================================================
+	\section{Conclusion}
+	% ==================================================
+		L'introduction des forces de traînée, de portance et de propulsion a mis en évidence l'impact critique des phénomènes aérodynamiques sur la portée, l'altitude et la forme des trajectoires balistiques, par rapport au cas purement balistique idéal.
+	
+\end{document}

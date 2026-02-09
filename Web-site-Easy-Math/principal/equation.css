@@ -1,0 +1,31 @@
+header{
+    border-top: dashed;
+    border-bottom: dashed;
+    border-radius: 10%;
+    background-color: cadetblue;
+}
+header h1 {
+    text-align: center;
+    color: aqua;
+}
+
+main{
+    border-top: dashed ;
+    border-bottom: dashed;
+    border-radius: 10%;
+    padding: 100px;
+    margin: 50px;
+    background-color: #333;
+}
+main section{
+    border-top: dashed;
+    border-bottom: dashed;
+    padding: 30px;
+    margin: 50px;
+    border-radius: 10%;
+}
+
+main section h2 {
+    text-align: center;
+    color: aqua;
+}

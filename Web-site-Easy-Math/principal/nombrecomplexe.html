@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <meta src="utf-8" >
+        <title> Easy Math  </title>
+        <link rel="stylesheet" href="nombrecomplexe.css">
+        <link rel="icon" href="logo1.bmp">
+        
+    </head>
+    <body>
+        <script type="text/javascript" src="nombrecomplexe.js"></script>
+
+            <section class="titre">
+                <h1>Nombres complexes</h1>
+            </section>
+      
+
+
+        </section>
+        
+
+        <section class="solution">
+            <section>
+                1- <a href="#v1">Module</a><br/>
+                2- <a href="#v2">Argument</a><br/>
+                3- <a href="#v3">Sommme de nombre complex</a><br/>
+                4- <a href="#v4">Produit de nombre complex</a><br/>
+                5- <a href="#v5">Quotient de nombre complex</a><br/>
+                6- <a href="#v6">Racine d'un nombre complex</a><br/>
+            </section>
+
+            <section>
+
+                <h1>Summary of Complex Numbers:</h1>      <br>
+                <a href="summary NC.pdf"> Summary </a> <br>
+                <a href="https://maths-france.fr/wp-content/uploads/ComplexesAlgebrique_fiche.pdf"> Summary 01</a> <br>
+                <a href="https://maths-france.fr/wp-content/uploads/ComplexesTrigonometrique_fiche.pdf"> Summary 02</a> <br>
+                <a href="https://maths-france.fr/wp-content/uploads/ComplexesGeometrique_fiche.pdf"> Summary 03</a> <br>
+       
+
+                <section>
+                    <h2 id="v1">Module</h2>
+                    Real part <input type="number" id="rel" size="20"><br>
+                    Imaginary part <input type="number" id="img" size="20"><br>
+                            
+                    <button onclick="find_module()"> Calculate Module</button><br>
+                    <p>The module of your complex number is: <span id="modul"></span> </p>
+                </section>
+                        
+                <section>
+                    <h2 id="v2">Argument</h2>
+                    Real part <input type="number" id="rel1" size="20"><br>
+                    Imaginary part <input type="number" id="img1" size="20"><br>
+                            
+                    <button onclick="find_argument()"> Calculate Argument</button><br>
+                    <p>The argument in radians of your complex number is: <span id="arg"></span></p>
+                    <p>The argument in degrees of your complex number is: <span id="degre"></span></p>
+                </section>
+                
+
+                <section>
+                    <h2 id="v3">Sum</h2>
+                    Real part a1 <input type="number" id="rel2" size="20"><br>
+                    Imaginary part b1 <input type="number" id="img2" size="20"><br>
+                    Real part a2 <input type="number" id="rel3" size="20"><br>
+                    Imaginary part b2 <input type="number" id="img3" size="20"><br> 
+                    <button onclick="sommecomplexe()">Complex Number Sum</button><br>
+                    <p>Let's assume (a1+ib1)+(a2+ib2)</p> <br>
+                    <p>The sum of the two complex numbers is: <span id="somme"></span></p>
+                </section>
+                <section>
+                    <h2 id="v4">Product </h2>
+                    Real part a1 <input type="number" id="rel4" size="20"><br>
+                    Imaginary part b1<input type="number" id="img4" size="20"><br>
+                    Real part a2 <input type="number" id="rel5" size="20"><br>
+                    Imaginary part b2 <input type="number" id="img5" size="20"><br>
+                    <button onclick="produitcomplexe()">Complex Number Product</button><br>
+                    <p>Let's assume (a1+ib1)*(a2+ib2)</p> <br>
+                    <p>The product of the two complex numbers is: <span id="produit"></span></p>
+                </section>
+                
+                
+                
+                
+                <section>
+                <h2 id="v5">Quotient</h2>
+                Real part a1     <input type="number" id="rel6" size="20"><br>
+                Imaginary part b1 <input type="number" id="img6" size="20"><br>
+                Real part a2     <input type="number" id="rel7" size="20"><br>
+                Imaginary part b2 <input type="number" id="img7" size="20"><br>            
+                <button onclick="quotientcomplexe()"> Complex Number Quotient</button><br>
+                <p>Let's assume (a1+ib1)/(a2+ib2)</p> <br>
+                <p>The quotient of the two complex numbers is: <span id="quotient"></span></p>
+            </section>
+            <section>
+                <h2 id="v6"> Racine d'un nombre complexe</h2>
+                <p> Suppossons un nombre complexe a+ib</p>
+               Entrer a  : <input type="number" id="rel8" size="20"><br>             
+                Entrer b  :<input type="number" id="img8" size="20"><br>
+               Entrer la racine  : <input type="number" id="rootDegree" size="20"><br>
+                <button onclick="calculateRoots()">Calculate Roots</button> 
+                <p>Roots: <span id="roots"></span></p> <br>
+            </section>
+            
+            
+        
+    </section>
+
+
+
+
+    </body>
+</html>

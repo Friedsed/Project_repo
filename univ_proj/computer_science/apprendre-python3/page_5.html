@@ -1,0 +1,395 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L5">5. Contrôle du flux d'exécution</a><ul class="nav-sommaire-ul Indentation5">
+      
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L5-A">5-A. Séquence d'instructions</a></li>
+      <li><a class="summaryIndent1" href="#L5-B">5-B. Sélection ou exécution conditionnelle</a></li>
+      <li><a class="summaryIndent1" href="#L5-C">5-C. Opérateurs de comparaison</a></li>
+      <li><a class="summaryIndent1" href="#L5-D">5-D. Instructions composées - blocs d'instructions</a></li>
+      <li><a class="summaryIndent1" href="#L5-E">5-E. Instructions imbriquées</a></li>
+      <li><a class="summaryIndent1" href="#L5-F">5-F. Quelques règles de syntaxe Python</a><ul class="nav-sommaire-ul Indentation5-F">
+        
+        
+        <li><a class="summaryIndent2" href="#L5-F-1">5-F-1. Les limites des instructions et des blocs sont définies par la mise en page</a></li>
+        <li><a class="summaryIndent2" href="#L5-F-2">5-F-2. Instruction composée : en-tête, double point, bloc d'instructions indenté</a></li>
+        <li><a class="summaryIndent2" href="#L5-F-3">5-F-3. Les espaces et les commentaires sont normalement ignorés</a></li>
+      </ul></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_4.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_6.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L5">5. Contrôle du flux d'exécution<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>Dans notre premier chapitre, nous avons vu que l'activité essentielle d'un programmeur est la résolution de problèmes. Or, pour résoudre un
+	problème informatique, il faut toujours effectuer une série d'actions dans un certain ordre. La description structurée de ces actions et de l'ordre dans
+	lequel il convient de les effectuer s'appelle un<b>algorithme</b> . </p>
+      <p>Le « chemin » suivi par Python à travers un programme est appelé un<b>flux d'exécution</b> ,et les constructions qui le
+	modifient sont appelées des <b>instructions de contrôle de flux</b> . </p>
+      <p>Les <b>structures de contrôle </b>sont les groupes d'instructions qui déterminent l'ordre dans lequel les actions sont effectuées. En programmation
+	moderne, il en existe seulement trois : la séquence<a class="signetNoteBasPage" id="signetNoteBasPage10" href="#noteBasPage10">(10)</a> et la sélection, que nous allons décrire dans ce chapitre, et la répétition que nous aborderons
+	au chapitre suivant.</p>
+      
+		<h3 class="TitreSection1" id="L5-A">5-A. Séquence d'instructions<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Sauf mention explicite, les instructions d'un programme s'exécutent les unes après les autres, <span class="italique">dans l'ordre où elles ont été
+	  écrites à l'intérieur du script</span>.</p>
+        <p>Cette affirmation peut vous paraître banale et évidente à première vue. L'expérience montre cependant qu'un grand nombre d'erreurs
+	  sémantiques dans les programmes d'ordinateur sont la conséquence d'une mauvaise disposition des instructions. Plus vous progresserez dans l'art de la
+	  programmation, plus vous vous rendrez compte qu'il faut être extrêmement attentif à l'ordre dans lequel vous placez vos instructions les unes
+	  derrière les autres. Par exemple, dans la séquence d'instructions suivantes :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2806">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2806" onclick="selectionCode('contenuCoded0e2806', 'IdTitreCode-d0e2806');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2806" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b <code class="python_operator">=</code> <code class="python_digit">3</code>, <code class="python_digit">7</code>
+<code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> b
+<code class="python_operator">&gt;&gt;&gt;</code> b <code class="python_operator">=</code> a
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>a, b)</code></pre></div>
+        <p>Vous obtiendrez un résultat contraire si vous intervertissez les 2<sup>e</sup> et 3<sup>e</sup> lignes. </p>
+        <p>Python exécute normalement les instructions de la première à la dernière, sauf lorsqu'il rencontre une <span class="italique">instruction conditionnelle</span>
+	  comme l'instruction <b>if</b> décrite ci-après (nous en rencontrerons d'autres plus loin, notamment à propos des boucles de répétition). Une
+	  telle instruction va permettre au programme de suivre différents chemins suivant les circonstances.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L5-B">5-B. Sélection ou exécution conditionnelle<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Si nous voulons pouvoir écrire des applications véritablement utiles, il nous faut des techniques permettant d'aiguiller le déroulement du
+	  programme dans différentes directions, en fonction des circonstances rencontrées. Pour ce faire, nous devons disposer d'instructions capables de <span class="italique">tester une
+	  certaine condition</span> et de modifier le comportement du programme en conséquence.</p>
+        <p>La plus simple de ces instructions conditionnelles est l'instruction <b>if</b>. Pour expérimenter son fonctionnement, veuillez entrer dans votre
+	  éditeur Python les deux lignes suivantes :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2876">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2876" onclick="selectionCode('contenuCoded0e2876', 'IdTitreCode-d0e2876');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2876" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">150</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">if</code> <code class="python_operator">(</code>a <code class="python_operator">&gt;</code> <code class="python_digit">100</code>):
+...</code></pre></div>
+        <p>La première commande affecte la valeur 150 à la variable <b>a</b>. Jusqu'ici rien de nouveau.<br/>
+		 Lorsque vous finissez d'entrer la seconde ligne, par contre, vous constatez que Python réagit d'une nouvelle manière. En effet, et à moins que vous
+		   n'ayez oublié le caractère « : » à la fin de la ligne, vous constatez que le <span class="italique">prompt principal</span> (<b><span style="color:#000080;">&gt;&gt;&gt;</span></b>) est maintenant remplacé par un <span class="italique">prompt secondaire</span> constitué de trois points<a class="signetNoteBasPage" id="signetNoteBasPage11" href="#noteBasPage11">(11)</a>.</p>
+        <p>Si votre éditeur ne le fait pas automatiquement, vous devez à présent effectuer une tabulation (ou entrer 4 espaces) avant d'entrer la ligne
+	  suivante, de manière à ce que celle-ci soit <span class="italique">indentée</span> (c'est-à-dire en retrait) par rapport à la précédente. Votre écran
+	  devrait se présenter maintenant comme suit :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2935">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2935" onclick="selectionCode('contenuCoded0e2935', 'IdTitreCode-d0e2935');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2935" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">150</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">if</code> <code class="python_operator">(</code>a <code class="python_operator">&gt;</code> <code class="python_digit">100</code>):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a dépasse la centaine"</code>)
+...</code></pre></div>
+        <p>Frappez encore une fois &lt;<span class="italique">Enter</span>&gt;. Le programme s'exécute, et vous obtenez :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2974">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2974" onclick="selectionCode('contenuCoded0e2974', 'IdTitreCode-d0e2974');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2974" class="contenuCode">a dépasse la centaine</code></pre></div>
+        <p>Recommencez le même exercice, mais avec <b><span style="color:#000080;">a = 20</span></b> en guise de première ligne : cette fois Python n'affiche plus
+	  rien.</p>
+        <p>L'expression que vous avez placée entre parenthèses est ce que nous appellerons désormais une <span class="italique">condition</span>. L'instruction <b>if</b> permet de
+	  tester la validité de cette condition. Si la condition est vraie, alors l'instruction que nous avons <span class="italique">indentée</span> après le « : »
+	  est exécutée. Si la condition est fausse, rien ne se passe. Notez que les parenthèses utilisées ici avec l'instruction if sont optionnelles :
+	  nous les avons utilisées pour améliorer la lisibilité. Dans d'autres langages, il se peut qu'elles soient obligatoires.</p>
+        <p>Recommencez encore, en ajoutant deux lignes comme indiqué ci-dessous. Veillez bien à ce que la quatrième ligne débute tout à fait
+	  à gauche (pas d'indentation), mais que la cinquième soit à nouveau indentée (de préférence avec un retrait identique à celui de la
+	  troisième) :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2999">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2999" onclick="selectionCode('contenuCoded0e2999', 'IdTitreCode-d0e2999');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2999" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">20</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">if</code> <code class="python_operator">(</code>a <code class="python_operator">&gt;</code> <code class="python_digit">100</code>):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a dépasse la centaine"</code>)
+... <code class="python_keyword1">else</code>:
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a ne dépasse pas cent"</code>)
+...</code></pre></div>
+        <p>Frappez &lt;<span class="italique">Enter</span>&gt; encore une fois. Le programme s'exécute, et affiche cette fois :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3048">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3048" onclick="selectionCode('contenuCoded0e3048', 'IdTitreCode-d0e3048');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3048" class="contenuCode">a ne dépasse pas cent</code></pre></div>
+        <p>Comme vous l'aurez certainement déjà compris, l'instruction <b>else</b> (« sinon », en anglais) permet de programmer une
+	  exécution alternative, dans laquelle le programme doit choisir entre deux possibilités. On peut faire mieux encore en utilisant aussi l'instruction <b>elif</b>
+	  (contraction de « else if ») :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3060">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3060" onclick="selectionCode('contenuCoded0e3060', 'IdTitreCode-d0e3060');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3060" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">if</code> a <code class="python_operator">&gt;</code> <code class="python_digit">0</code> :
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a est positif"</code>)
+... <code class="python_keyword1">elif</code> a <code class="python_operator">&lt;</code> <code class="python_digit">0</code> :
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a est négatif"</code>)
+... <code class="python_keyword1">else</code>:
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a est nul"</code>)
+...</code></pre></div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L5-C">5-C. Opérateurs de comparaison<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>La condition évaluée après l'instruction if peut contenir les <span class="italique">opérateurs de comparaison</span> suivants :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3128">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3128" onclick="selectionCode('contenuCoded0e3128', 'IdTitreCode-d0e3128');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3128" class="contenuCode">x <code class="python_operator">==</code> y	      <code class="python_comment1"># x est égal à y</code>
+x <code class="python_operator">!=</code> y	      <code class="python_comment1"># x est différent de y</code>
+x <code class="python_operator">&gt;</code> y	     <code class="python_comment1"># x est plus grand que y</code>
+x <code class="python_operator">&lt;</code> y	     <code class="python_comment1"># x est plus petit que y</code>
+x <code class="python_operator">&gt;=</code> y	      <code class="python_comment1"># x est plus grand que, ou égal à y</code>
+x <code class="python_operator">&lt;=</code> y	      <code class="python_comment1"># x est plus petit que, ou égal à y</code></code></pre></div>
+        <p>
+          <b>Exemple</b>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3172">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3172" onclick="selectionCode('contenuCoded0e3172', 'IdTitreCode-d0e3172');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3172" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">7</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">if</code> <code class="python_operator">(</code>a <code class="python_operator">%</code> <code class="python_digit">2</code> <code class="python_operator">==</code> <code class="python_digit">0</code>):
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a est pair"</code>)
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"parce que le reste de sa division par 2 est nul"</code>)
+... <code class="python_keyword1">else</code>:
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a est impair"</code>)
+...</code></pre></div>
+        <p>Notez bien que l'opérateur de comparaison pour l'égalité de deux valeurs est constitué de deux signes « égale » et
+	  non d'un seul<a class="signetNoteBasPage" id="signetNoteBasPage12" href="#noteBasPage12">(12)</a>. Le signe « égale » utilisé seul est un opérateur
+	  d'affectation, et non un opérateur de comparaison. Vous retrouverez le même symbolisme en <span class="italique">C++</span> et en <span class="italique">Java.</span></p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L5-D">5-D. Instructions composées - blocs d'instructions<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>La construction que vous avez utilisée avec l'instruction <b>if</b>est votre premier exemple d'<b>instruction composée</b>. Vous en rencontrerez
+	  bientôt d'autres. Sous Python, les instructions composées ont toujours la même structure : une ligne d'en-tête terminée par un double
+	  point, suivie d'une ou de plusieurs instructions indentées sous cette ligne d'en-tête. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3263">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3263" onclick="selectionCode('contenuCoded0e3263', 'IdTitreCode-d0e3263');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3263" class="contenuCode">Ligne d'en-tête:
+ première instruction du bloc
+ ... ...
+ ... ...
+ dernière instruction du bloc</code></pre></div>
+        <p>S'il y a plusieurs instructions indentées sous la ligne d'en-tête, elles doivent l'être exactement au même niveau (comptez un décalage
+	  de 4 caractères, par exemple). Ces instructions indentées constituent ce que nous appellerons désormais un bloc d'instructions. Un bloc d'instructions est
+	  une suite d'instructions formant un ensemble logique, qui n'est exécuté que dans certaines conditions définies dans la ligne d'en-tête. Dans
+	  l'exemple du paragraphe précédent, les deux lignes d'instructions indentées sous la ligne contenant l'instruction <b>if</b>constituent un même bloc
+	  logique : ces deux lignes ne sont exécutées - toutes les deux - que si la condition testée avec l'instruction <b>if</b>se
+	  révèle vraie, c'est-à-dire si le reste de la division de <b>a</b>par 2 est nul.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L5-E">5-E. Instructions imbriquées<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Il est parfaitement possible d'imbriquer les unes dans les autres plusieurs instructions composées, de manière à réaliser des structures de
+	  décision complexes. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3287">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3287" onclick="selectionCode('contenuCoded0e3287', 'IdTitreCode-d0e3287');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3287" class="contenuCode"><code class="python_keyword1">if</code> embranchement <code class="python_operator">==</code> <code class="python_literal1">"vertébrés"</code>:	    <code class="python_comment1"># 1</code>
+ <code class="python_keyword1">if</code> classe <code class="python_operator">==</code> <code class="python_literal1">"mammifères"</code>:		 <code class="python_comment1"># 2</code>
+     <code class="python_keyword1">if</code> ordre <code class="python_operator">==</code> <code class="python_literal1">"carnivores"</code>:		 <code class="python_comment1"># 3</code>
+     <code class="python_keyword1">if</code> famille <code class="python_operator">==</code> <code class="python_literal1">"félins"</code>:	      <code class="python_comment1"># 4</code>
+	 <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"c'est peut-être un chat"</code>)      <code class="python_comment1"># 5</code>
+     <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"c'est en tous cas un mammifère"</code>)	  <code class="python_comment1"># 6</code>
+ <code class="python_keyword1">elif</code> classe <code class="python_operator">==</code> <code class="python_literal1">"oiseaux"</code>:		<code class="python_comment1"># 7</code>
+     <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"c'est peut-être un canari"</code>)      <code class="python_comment1"># 8</code>
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"la classification des animaux est complexe"</code>)  <code class="python_comment1"># 9</code></code></pre></div>
+        <p>Analysez cet exemple. Ce fragment de programme n'imprime la phrase « c'est peut-être un chat » que dans le cas où les quatre
+	  premières conditions testées sont vraies.</p>
+        <p>Pour que la phrase « c'est en tous cas un mammifère » soit affichée, il faut et il suffit que les deux premières conditions
+	  soient vraies. L'instruction d'affichage de cette phrase (ligne 4) se trouve en effet au même niveau d'indentation que l'instruction : <b>if ordre ==
+	  "carnivores"</b>: (ligne 3). Les deux font donc partie d'un même bloc, lequel est entièrement exécuté si les conditions testées aux lignes 1 et
+	  2 sont vraies.</p>
+        <p>Pour que la phrase « c'est peut-être un canari » soit affichée, il faut que la variable <b>embranchement</b> contienne
+	  « vertébrés », et que la variable <b>classe</b> contienne « oiseaux ».</p>
+        <p>Quant à la phrase de la ligne 9, elle est affichée dans tous les cas, parce qu'elle fait partie du même bloc d'instructions que la ligne
+	  1.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L5-F">5-F. Quelques règles de syntaxe Python<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Tout ce qui précède nous amène à faire le point sur quelques règles de syntaxe :</p>
+        
+		<h4 class="TitreSection2" id="L5-F-1">5-F-1. Les limites des instructions et des blocs sont définies par la mise en page<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Dans de nombreux langages de programmation, il faut terminer chaque ligne d'instructions par un caractère spécial (souvent le point-virgule). Sous
+	    Python, c'est le caractère de fin de ligne<a class="signetNoteBasPage" id="signetNoteBasPage13" href="#noteBasPage13">(13)</a> qui joue ce
+	    rôle. (Nous verrons plus loin comment outrepasser cette règle pour étendre une instruction complexe sur plusieurs lignes.) On peut également
+	    terminer une ligne d'instructions par un commentaire. Un commentaire Python commence toujours par le caractère spécial <b>#</b>. Tout ce qui est inclus entre
+	    ce caractère et le saut à la ligne suivant est complètement ignoré par le compilateur.</p>
+          <p>Dans la plupart des autres langages, un bloc d'instructions doit être délimité par des symboles spécifiques (parfois même par des
+	    instructions, telles que <b>begin</b> et <b>end</b>). En <span class="italique">C++</span> et en <span class="italique">Java</span>, par exemple, un bloc d'instructions doit être délimité par des
+	    accolades. Cela permet d'écrire les blocs d'instructions les uns à la suite des autres, sans se préoccuper ni d'indentation ni de sauts à la ligne,
+	    mais cela peut conduire à l'écriture de programmes confus, difficiles à relire pour les pauvres humains que nous sommes. On conseille donc à tous
+	    les programmeurs qui utilisent ces langages de se servir <span class="italique">aussi</span> des sauts à la ligne et de l'indentation pour bien délimiter visuellement les
+	    blocs.</p>
+          <p>Avec Python, vous <span class="italique">devez</span> utiliser les sauts à la ligne et l'indentation, mais en contrepartie vous n'avez pas à vous préoccuper d'autres
+	    symboles délimiteurs de blocs. En définitive, Python vous force donc à écrire du code lisible, et à prendre de bonnes habitudes que vous
+	    conserverez lorsque vous utiliserez d'autres langages.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L5-F-2">5-F-2. Instruction composée : en-tête, double point, bloc d'instructions indenté<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Nous aurons de nombreuses occasions d'approfondir le concept de « bloc d'instructions » et de faire des exercices à ce sujet dès
+	    le chapitre suivant.</p>
+          <p>Le schéma ci-contre en résume le principe.</p>
+          <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image4.png" alt="Image non disponible" width="256" height="300"/></figure></div>
+          <ul class="ListeDVP">
+            <li>Les blocs d'instructions sont toujours associés à une ligne d'en-tête contenant une instruction bien spécifique (if, elif, else, while,
+	      def, etc.) <span class="italique">se terminant par un double point</span>.</li>
+            <li>Les blocs sont <span class="italique">délimités par l'indentation</span> : toutes les lignes d'un même bloc doivent être indentées exactement de la
+	      même manière (c'est-à-dire décalées vers la droite d'un même nombre d'espaces). Le nombre d'espaces à utiliser pour l'indentation
+	      est quelconque, mais la plupart des programmeurs utilisent des multiples de 4.</li>
+            <li>Notez que le code du bloc le plus externe (bloc 1) ne peut pas lui-même être écarté de la marge de gauche (il n'est imbriqué dans
+	      rien).</li>
+          </ul>
+          <blockquote class="citation"><div>
+            <b>Important : </b>
+            <span class="italique">vous pouvez aussi indenter à l'aide de tabulations, mais alors vous devrez faire très attention à ne pas utiliser tantôt des espaces,
+	      tantôt des tabulations pour indenter les lignes d'un même bloc. En effet, et même si le résultat paraît identique à l'écran,
+	      espaces et tabulations sont des codes binaires distincts : Python considérera donc que ces lignes indentées différemment font partie de blocs
+	      différents. Il peut en résulter des erreurs difficiles à déboguer.</span>
+            <br/>
+            <span class="italique">En conséquence, la plupart des programmeurs préfèrent se passer des tabulations. Si vous utilisez un éditeur de texte
+	      « intelligent », vous avez tout intérêt à activer son option « Remplacer les tabulations par des
+	      espaces ».</span>
+          </div></blockquote>
+        </div>
+        
+		<h4 class="TitreSection2" id="L5-F-3">5-F-3. Les espaces et les commentaires sont normalement ignorés<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>À part ceux qui servent à l'indentation, en début de ligne, les espaces placés à l'intérieur des instructions et des expressions
+	    sont presque toujours ignorés (sauf s'ils font partie d'une chaîne de caractères). Il en va de même pour les commentaires : ceux-ci commencent
+	    toujours par un caractère dièse (#) et s'étendent jusqu'à la fin de la ligne courante.</p>
+        </div>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_4.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_6.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage10" href="#signetNoteBasPage10">(10)</a></div><div class="ContenuUneNoteBasPage"><span style="color:#000000;">Tel qu'il est utilisé ici, le terme de </span><b><span style="color:#000000;">séquence</span></b><span style="color:#000000;"> désigne donc une série d'instructions qui se suivent. Nous préférerons dans la suite de
+	cet ouvrage réserver ce terme à un concept Python précis, lequel englobe les </span><b><span style="color:#000000;">chaînes de caractères</span></b><span style="color:#000000;">, les </span><b><span style="color:#000000;">tuples</span></b><span style="color:#000000;"> et les </span><b><span style="color:#000000;">listes</span></b><span style="color:#000000;"> (voir plus loin).</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage11" href="#signetNoteBasPage11">(11)</a></div><div class="ContenuUneNoteBasPage">Dans certaines versions
+		   de l'éditeur Python pour <span class="italique"><b>Windows</b></span>, le prompt secondaire n'apparaît pas<span style="color:#000000;">.</span></div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage12" href="#signetNoteBasPage12">(12)</a></div><div class="ContenuUneNoteBasPage">Rappel : l'opérateur % est l'opérateur <span class="italique">modulo</span> : il calcule le reste d'une division entière. Ainsi par exemple,
+	  <b>a % 2</b> fournit le reste de la division de <b>a</b> par 2.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage13" href="#signetNoteBasPage13">(13)</a></div><div class="ContenuUneNoteBasPage">Ce caractère n'apparaît ni à l'écran, ni sur les listings imprimés. Il est
+	    cependant bien présent, à un point tel qu'il fait même problème dans certains cas, parce qu'il n'est pas encodé de la même manière
+	    par tous les systèmes d'exploitation. Nous en reparlerons plus loin, à l'occasion de notre étude des fichiers texte (page ).</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"  name Sedjro  >
+    <title>Function Derivative and Integral Calculator</title>
+    <link rel="stylesheet" href="fonction.css">
+    <link rel="icon" href="logo1.bmp">
+ 
+    
+
+</head>
+<body>
+    <h1>Function Derivative and Integral Calculator</h1>
+    
+    <label for="functionInput">Enter a function:</label>
+    <input type="text" id="functionInput">
+    <button onclick="calculate()">Calculate</button>
+
+    <p>Derivative: <span id="derivativeResult"></span></p>
+    <p>Integral (Primitive): <span id="integralResult"></span></p>
+
+    <script>
+        function calculate() {
+            const input = document.getElementById("functionInput").value;
+            
+            // Parse and calculate derivative
+            const derivative = calculateDerivative(input);
+            document.getElementById("derivativeResult").textContent = derivative;
+
+            // Parse and calculate integral (primitive)
+            const integral = calculateIntegral(input);
+            document.getElementById("integralResult").textContent = integral;
+        }
+
+        function calculateDerivative(expression) {
+            // Implement your derivative calculation logic here
+            // You can use libraries like 'math.js' for more complex parsing and differentiation
+            // For simplicity, let's just assume basic operations and differentiation rules
+            // Example: derivative of x^n is n*x^(n-1)
+            return "Derivative of " + expression;
+        }
+
+        function calculateIntegral(expression) {
+            // Implement your integral calculation logic here
+            // You can use libraries like 'math.js' for more complex parsing and integration
+            // For simplicity, let's just assume basic operations and integration rules
+            // Example: integral of x^n is (1/n+1) * x^(n+1)
+            return "Integral of " + expression;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+#cll{
+    height:510px !important;
+}
+
+#sideviewCar{
+    position: absolute !important;
+    
+}
+
+#sideview{
+    background-image: url('images/beachbg2.png') !important;
+  
+}
+
+#ffs, #fr, #fg, #fn,#ffsval,#ffrval, #fgval, #fnval, #fbval, #fb{
+    position: absolute;
+}
+
+#fg,#fgval, #fbval, #fb{
+    color:white;
+}
+.values {
+    padding-left: 10px;
+    border: 2px solid black; /* Set the border width and style */
+    width: 300px; /* Set the desired width of the div */
+    height: 300px; /* Set the desired height of the div */
+  }
+  
+
+  .is-pulled-right{
+    width:700px !important;
+  }

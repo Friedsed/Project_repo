@@ -1,0 +1,86 @@
+<html>
+
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Zozor - Le Site Web</title>
+        <link rel="stylesheet" href="c6.css">
+
+    </head>
+
+    <script type="text/javascript" src="p7.js"></script>
+
+
+    <body>
+        <section>
+            <h2>Multiply Array Elements</h2>
+            <p>Enter the number of elements:</p>
+            <input type="number" id="numElements" placeholder="Number of Elements">
+            <br><br>    
+            <div id="elementInputs"></div>
+            <br>
+            <button onclick="calculate()">Calculate</button>    
+            <p id="result"></p>
+        </section>        
+        <script>
+            
+            document.getElementById("numElements").addEventListener("change", function () {
+                const numElements = parseInt(this.value);
+                elementInputs.innerHTML = "";
+                
+                for (let i = 1; i <= numElements; i++) {
+                    const input = document.createElement("input");
+                    input.type = "number";
+                    input.id = `element${i}`;
+                    input.placeholder = `Element ${i}`;
+                    elementInputs.appendChild(input);
+                }
+                elementInputs.appendChild(document.createElement("br"));
+            });
+            
+            
+            </script>
+
+
+
+
+<section>
+    <h2>Times 10 Array Elements</h2>    
+    <div id="eI"></div>
+    <br>
+    <button onclick="calculates()">Calculate</button>
+    <p id="results"></p>
+    </section>
+<script>
+
+    document.getElementById("numElements").addEventListener("change", function () {
+        const numElements = parseInt(this.value);
+        eI.innerHTML = "";
+
+        for (let i = 1; i <= numElements; i++) {
+            const input = document.createElement("input");
+            input.type = "number";
+            input.id = `element0${i}`;
+            input.placeholder = `Element ${i}`;
+            eI.appendChild(input);
+        }
+        eI.appendChild(document.createElement("br"));
+    });
+
+
+</script>
+    
+        
+       
+    
+    
+    
+    
+        
+          
+    </body>
+
+
+
+
+</html>

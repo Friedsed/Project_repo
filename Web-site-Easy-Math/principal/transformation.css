@@ -1,0 +1,49 @@
+header{
+    border-top: dashed 10px;
+    border-bottom: dashed 10px;
+    border-radius: 50%;
+    border-color: #333;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+
+}
+header h1 {
+    text-align: center;
+    /* color: red; */
+}
+
+
+.solution section {
+    border-top: dashed 10px;
+    /* border-bottom: dashed 5px; */
+    border-left: solid 0px;
+    border-radius: 0%;
+    border-color: #333;
+    border-right: solid 0px;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    padding: 30px;
+    margin: 30px;
+    border-bottom: dashed 10px;
+   
+
+    
+
+}
+body {
+  background-color: #333;
+    
+} 
+
+.solution h1{
+    text-align: center;
+    text-decoration: dashed;
+    /* color: red; */
+}
+
+.solution section h2 {
+    text-align: center;
+    /* color: red; */
+    border: solid 0px;
+    margin: 50px;
+    text-decoration: underline;
+
+}

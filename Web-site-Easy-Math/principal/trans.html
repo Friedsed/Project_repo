@@ -1,0 +1,366 @@
+<html>
+    <head>
+        <meta src="utf-8" >
+        <title> Easy math</title>
+        <link rel="stylesheet" href="transformation.css">
+        <link rel="icon" href="logo1.bmp">
+    </head>
+    <body>
+        <script type="text/javascript" src="trans.js"></script>
+        <header>
+            <h1>Geometrie analytique</h1>
+        </header>
+            <main>
+               
+                <section class="solution">
+
+                    <section>
+
+                        <h1>Courses Summary:</h1>      <br>
+                        <a href="https://maths-france.fr/wp-content/uploads/Espace_fiche.pdf"> Summary 01</a> <br>
+                        <a href="https://maths-france.fr/wp-content/uploads/DroitesPlansEspace_fiche.pdf"> Summary 02</a> <br>
+                    </section>
+
+
+                <section>
+                    <p>
+                        1- <a href="#v1">Vector in the Plane</a><br/>
+                        2- <a href="#v2">Image of a Point by Plane Vector Translation</a><br/>
+                        3- <a href="#v3">Image of a Point by Plane Homothety</a><br/>
+                        4- <a href="#v4">Image by Plane Projection</a><br/>
+                        5- <a href="#v5">Image by Orthogonal Plan Symmetry</a><br/>
+                        6- <a href="#v6">Scalar Product in Space</a><br/>
+                        7- <a href="#v7">Vector Product in Space</a><br/>
+                        8- <a href="#v8">Distance Between Two Points in Space</a><br/>
+                        9- <a href="#v9">Distance from a Point to a Plane</a><br/>
+                        10- <a href="#v10">Vector in Space</a><br/>
+                        11- <a href="#v11">Plane Equation Using Three Distinct Points on the Plane</a><br/>
+                        12- <a href="#v12">Image of a Point by Space Vector Translation</a><br/>
+                        13- <a href="#v13">Image of a Point by Space Homothety</a><br/>
+                        14- <a href="#v14">Image by Space Projection</a><br/>
+                        15- <a href="#v15">Image by Space Reflection</a><br/>
+                        16- <a href="#v16">Second Degree Equation Resolution</a><br/>
+                        17- <a href="#v17">Resolution of a System of Equations with Two Unknowns</a><br/>
+                        18- <a href="#v18">Resolution of a System of Equations with Three Unknowns</a><br/>
+                        
+                                    </p>
+                </section>
+                    <section>
+                        <h1>Deux dimension</h1>
+                        
+                       
+                        <section>
+                            <h2 id="v1">Vector of the Plane Formed by Two Points</h2>
+                            <p>Let's assume we want to calculate the vector AB.</p><br>
+                            Abscissa of A: <input type="number" id="e4" size="20">
+                            Ordinate of A: <input type="number" id="e5" size="20"><br><br>
+                            Abscissa of B: <input type="number" id="e6" size="20">
+                            Ordinate of B: <input type="number" id="e7" size="20"><br><br>
+                            <button onclick="find_vector()">Result</button><br>
+                            <p>The vector AB has coordinates: <span id="vector2D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v2">Plan Translation</h2>
+                            <p>Let's find the coordinates of point A after translating it by vector u.</p><br>
+                            Abscissa of A: <input type="number" id="e8" size="20">
+                            Ordinate of A: <input type="number" id="e9" size="20"><br><br>
+                            Abscissa of vector U: <input type="number" id="e10" size="20">
+                            Ordinate of vector U: <input type="number" id="e11" size="20"><br><br>
+                            <button onclick="find_translation()">Result</button><br>
+                            <p>The image has coordinates: <span id="trans2D"></span></p>
+                        </section>
+                        
+                    
+                    
+                        <section>
+                            <h2 id="v3">Plan Homothety</h2>
+                            <p>Let's find the coordinates of point A after applying the homothety with center C and ratio k.</p><br>
+                            Abscissa of A: <input type="number" id="e12" size="20">
+                            Ordinate of A: <input type="number" id="e13" size="20"><br><br>
+                            Abscissa of center C: <input type="number" id="e14" size="20">
+                            Ordinate of center C: <input type="number" id="e15" size="20">
+                            Ratio k: <input type="number" id="e16" size="20"><br><br>
+                            <button onclick="find_homothety()">Result</button><br>
+                            <p>The image has coordinates: <span id="homo2D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v4">Projection onto a Line in the Plane</h2>
+                            <p>Let's find the coordinates of point M after projecting it onto the line with the equation ax+by+c=0.</p><br>
+                            Abscissa of M: <input type="number" id="e17" size="20">
+                            Ordinate of M: <input type="number" id="e18" size="20"><br><br>
+                            Enter a: <input type="number" id="e19" size="20">
+                            Enter b: <input type="number" id="e20" size="20">
+                            Enter c: <input type="number" id="e21" size="20"><br><br>
+                            <button onclick="find_projection()">Result</button><br>
+                            <p>The image has coordinates: <span id="proj2D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v5">Orthogonal Symmetry of the Plane</h2>
+                            <p>Let's find the coordinates of point M after applying orthogonal symmetry to the line with the equation ax+by+c=0.</p><br>
+                            Abscissa of M: <input type="number" id="e22" size="20">
+                            Ordinate of M: <input type="number" id="e23" size="20"><br><br>
+                            Enter a: <input type="number" id="e24" size="20">
+                            Enter b: <input type="number" id="e25" size="20">
+                            Enter c: <input type="number" id="e26" size="20"><br><br>
+                            <button onclick="find_symmetry_orthogonal()">Result</button><br>
+                            <p>The image has coordinates: <span id="so"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h1>Three Dimensions</h1>
+                            <section>
+                                <h2 id="v6">Dot Product</h2>
+                                <p>Let's calculate the dot product of vectors A and B.</p><br><br>
+                                Ax: <input type="number" id="n7" size="20">
+                                Ay: <input type="number" id="n8" size="20">
+                                Az: <input type="number" id="n9" size="20"><br><br>
+                                Bx: <input type="number" id="n10" size="20">
+                                By: <input type="number" id="n11" size="20">
+                                Bz: <input type="number" id="n12" size="20"><br><br>
+                                <button onclick="find_dotProduct3D()">Result</button><br>
+                                <p>The dot product is: <span id="pscalaire"></span></p>
+                            </section>
+                        </section>
+                        
+                        
+                        <section>
+                            <!-- cross Product veut dire produire vectorielle -->
+                            <h2 id="v7">Cross Product</h2>
+                            <p>Let's calculate the cross product of vectors A and B.</p><br><br>
+                            Ax: <input type="number" id="n1" size="20">
+                            Ay: <input type="number" id="n2" size="20">
+                            Az: <input type="number" id="n3" size="20"><br><br>
+                            Bx: <input type="number" id="n4" size="20">
+                            By: <input type="number" id="n5" size="20">
+                            Bz: <input type="number" id="n6" size="20"><br><br>
+                            
+                            <button onclick="find_crossProduct3D()">Result</button><br>
+                            <p>The cross product is: <span id="pvectoriel"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v8">Distance between Two Points</h2>
+                            Abscissa of A: <input type="number" id="n26" size="20">
+                            Ordinate of A: <input type="number" id="n27" size="20">
+                            Height of A: <input type="number" id="n28" size="20"><br><br>
+                            Abscissa of B: <input type="number" id="n29" size="20">
+                            Ordinate of B: <input type="number" id="n30" size="20">
+                            Height of B: <input type="number" id="n31" size="20"><br><br>
+                                
+                            <button onclick="find_distance3D()">Result</button><br>
+                            <p>The distance AB is: <span id="dist3D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v9">Distance from a Point to a Plane</h2>
+                            <p>Let's find the distance from point M to the plane with the equation ax+by+cz+d=0.</p><br>
+                            Abscissa of M: <input type="number" id="n32" size="20">
+                            Ordinate of M: <input type="number" id="n33" size="20">
+                            Height of M: <input type="number" id="n34" size="20"><br><br>
+                            Enter a: <input type="number" id="n35" size="20">
+                            Enter b: <input type="number" id="n36" size="20">
+                            Enter c: <input type="number" id="n37" size="20">
+                            Enter d: <input type="number" id="n38" size="20"><br><br>
+                            <button onclick="find_point_plane3D()">Result</button><br>
+                            <p>The distance between M and the plane is: <span id="dpp"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v10">Vector in 3D Space Formed by Two Points</h2>
+                            <p>Let's calculate the vector AB.</p><br>
+                            Abscissa of A: <input type="number" id="n39" size="20">
+                            Ordinate of A: <input type="number" id="n40" size="20">
+                            Height of A: <input type="number" id="n41" size="20"><br><br>
+                            Abscissa of B: <input type="number" id="n42" size="20">
+                            Ordinate of B: <input type="number" id="n43" size="20">
+                            Height of B: <input type="number" id="n44" size="20"><br><br>
+                                    
+                            <button onclick="find_vector3D()">Result</button><br>
+                            <p>The vector AB has coordinates: <span id="vecteur3D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v11">Plane Equation</h2>
+                            <p>Let's consider the distinct points A, B, and C on the plane.</p><br>
+                            Abscissa of A: <input type="number" id="n95" size="20">
+                            Ordinate of A: <input type="number" id="n96" size="20">
+                            Height of A: <input type="number" id="n97" size="20"><br><br>
+                            Abscissa of B: <input type="number" id="n98" size="20">
+                            Ordinate of B: <input type="number" id="n99" size="20">
+                            Height of B: <input type="number" id="n100" size="20"><br><br>
+                            Abscissa of C: <input type="number" id="n101" size="20">
+                            Ordinate of C: <input type="number" id="n102" size="20">
+                            Height of C: <input type="number" id="n103" size="20"><br><br>
+                            
+                            <button onclick="find_plane_equation3D()">Result</button><br>
+                            <p>The equation of the plane is: <span id="t39"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v12">Space Translation</h2>
+                            <p>Let's find the coordinates of point A after translating it by vector u.</p><br>
+                            Abscissa of A: <input type="number" id="n45" size="20">
+                            Ordinate of A: <input type="number" id="n46" size="20">
+                            Height of A: <input type="number" id="n47" size="20"><br><br>
+                            Abscissa of vector U: <input type="number" id="n48" size="20">
+                            Ordinate of vector U: <input type="number" id="n49" size="20">
+                            Height of vector U: <input type="number" id="n50" size="20"><br><br>
+                            
+                            <button onclick="find_translation3D()">Result</button><br>
+                            <p>The image has coordinates: <span id="trans3D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v13">Space Homothety</h2>
+                            <p>Let's find the coordinates of point A after performing homothety with center C and scale factor k.</p><br>
+                            Abscissa of A: <input type="number" id="n51" size="20">
+                            Ordinate of A: <input type="number" id="n52" size="20">
+                            Height of A: <input type="number" id="n53" size="20"><br><br>
+                            Abscissa of center C: <input type="number" id="n54" size="20">
+                            Ordinate of center C: <input type="number" id="n55" size="20">
+                            Height of center C: <input type="number" id="n56" size="20"><br><br>
+                            Scale factor k: <input type="number" id="n57" size="20"><br><br>
+                            
+                            <button onclick="find_homothety3D()">Result</button><br>
+                            <p>The image has coordinates: <span id="homo3D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v14">Projection onto a Space Plane</h2>
+                            <p>Let's find the coordinates of point M after projecting it onto the plane with equation ax+by+cz+d=0.</p><br>
+                            Abscissa of M: <input type="number" id="n58" size="20">
+                            Ordinate of M: <input type="number" id="n59" size="20">
+                            Height of M: <input type="number" id="n60" size="20"><br><br>
+                            Enter a: <input type="number" id="n61" size="20">
+                            Enter b: <input type="number" id="n62" size="20">
+                            Enter c: <input type="number" id="n63" size="20">
+                            Enter d: <input type="number" id="n64" size="20"><br><br>
+                            
+                            <button onclick="find_projection3D()">Result</button><br>
+                            <p>The image has coordinates: <span id="proj3D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v15">Reflection</h2>
+                            <p>Let's find the coordinates of point M after reflecting it across the plane with equation ax+by+cz+d=0.</p><br>
+                            Abscissa of M: <input type="number" id="n65" size="20">
+                            Ordinate of M: <input type="number" id="n66" size="20">
+                            Height of M: <input type="number" id="n67" size="20"><br><br>
+                            Enter a: <input type="number" id="n68" size="20">
+                            Enter b: <input type="number" id="n69" size="20">
+                            Enter c: <input type="number" id="n70" size="20">
+                            Enter d: <input type="number" id="n71" size="20"><br><br>
+                            
+                            <button onclick="find_reflection3D()">Result</button><br>
+                            <p>The image has coordinates: <span id="refl3D"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v16">Quadratic Equation</h2>
+                            <p>Let's consider an equation of the form ax^2 + bx + c=0</p>
+                            a: <input type="number" id="n115" size="20">
+                            b: <input type="number" id="n116" size="20">
+                            c: <input type="number" id="n117" size="20">
+                            
+                            <button onclick="find_quadratic_equation()">Result</button>
+                            <p><span id="res"></span></p>
+                        </section>
+                        
+                      
+                        
+                        
+                        
+                        
+                        <section>
+                            <h2 id="v17">System of Equations with Two Unknowns</h2>
+                            <p>Let's find the solutions of a system of equations with two unknowns.</p><br>
+                            a: <input type="number" id="n20" size="20">
+                            b: <input type="number" id="n21" size="20">
+                            c: <input type="number" id="n22" size="20"><br><br>
+                            a': <input type="number" id="n23" size="20">
+                            b': <input type="number" id="n24" size="20">
+                            c': <input type="number" id="n25" size="20"><br>
+                            
+                            <button onclick="find_solution2I()">Result</button><br>
+                            <p>The solution is: <span id="p24"></span></p>
+                        </section>
+                        
+                        <section>
+                            <h2 id="v18">System of Equations with Three Unknowns</h2>
+                            <p>Let's find the solutions of a system of equations with three unknowns.</p><br>
+                            a: <input type="number" id="n72" size="20">
+                            b: <input type="number" id="n73" size="20">
+                            c: <input type="number" id="n74" size="20">
+                            d: <input type="number" id="n75" size="20"><br><br>
+                            a': <input type="number" id="n76" size="20">
+                            b': <input type="number" id="n77" size="20">
+                            c': <input type="number" id="n78" size="20">
+                            d': <input type="number" id="n79" size="20"><br><br>
+                            a'': <input type="number" id="n80" size="20">
+                            b'': <input type="number" id="n81" size="20">
+                            c'': <input type="number" id="n82" size="20">
+                            d'': <input type="number" id="n83" size="20"><br><br>
+                            
+                            <button onclick="find_solution3I()">Result</button><br>
+                            
+                            <p>The solution is a line with equation: <br><span id="t27"></span></p>
+                            <p><span id="t26"></span></p><br><br>
+                            <p>The solution is: <span id="t28"></span></p>
+                        </section>
+
+                        <section>
+                            <h2>System of Equations Solver</h2>
+                            <p>Enter the coefficients of the system of linear equations:</p>
+                            <input type="number" id="numEquations" placeholder="Number of Equations">
+                            <br><br>
+                        
+                            <div id="equationInputs"></div>
+                            <br>
+                            <button onclick="solveSystem()">Solve</button>
+                        
+                            <p id="equations"></p>
+                            <script>
+                                const equationInputs = document.getElementById("equationInputs");
+                                document.getElementById("numEquations").addEventListener("change", function () {
+                                    const numEquations = parseInt(this.value);
+                                    equationInputs.innerHTML = "";
+
+                                    for (let i = 1; i <= numEquations; i++) {
+                                        for (let j = 1; j <= numEquations + 1; j++) {
+                                            const input = document.createElement("input");
+                                            input.type = "number";
+                                            input.id = `coeff${i}${j}`;
+                                            input.placeholder = `Coeff ${i}${j}`;
+                                            equationInputs.appendChild(input);
+                                        }
+                                        equationInputs.appendChild(document.createElement("br"));
+                                    }
+                                });
+
+
+                            </script>
+                        </section>
+                        
+                        
+
+
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                    </section>
+
+
+                    
+                </section>
+            </main>
+    </body>
+</html>

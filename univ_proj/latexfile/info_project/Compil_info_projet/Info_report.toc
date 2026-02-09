@@ -1,0 +1,14 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Corps du devoir}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Modèle 1 : Approche analytique}{3}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Calcul de la trajectoire}{3}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Vitesse en fonction du temps}{4}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Famille de trajectoires et angle optimal}{5}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Modèle 2 : Résolution numérique}{6}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Validation de l'intégrateur}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Comparaison des trajectoires}{6}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Modèle 3 : Effets aérodynamiques complets}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Trajectoires pour différents coefficients}{7}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Isocontours de la distance d'impact}{7}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Conclusion}{8}{section.3}%

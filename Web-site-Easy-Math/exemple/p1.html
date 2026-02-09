@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Determinant Calculator</title>
+</head>
+<body>
+    <h1>Matrix Determinant Calculator</h1>
+    
+    <label>Enter the size of the matrix (n): </label>
+    <input type="number" id="matrixSize">
+    <button onclick="createMatrix()">Create Matrix</button>
+    
+    <div id="matrixContainer"></div>
+    
+    <button onclick="calculateDeterminant()">Calculate Determinant</button>
+    
+    <p id="result"></p>
+    
+    <script>
+        let matrixSize = 0;
+        let matrix = [];
+        
+        function createMatrix() {
+            matrixSize = parseInt(document.getElementById("matrixSize").value);
+            if (isNaN(matrixSize) || matrixSize <= 0) {
+                alert("Please enter a valid matrix size.");
+                return;
+            }
+            
+            let matrixHTML = "";
+            for (let i = 0; i < matrixSize; i++) {
+                matrixHTML += "<div>";
+                for (let j = 0; j < matrixSize; j++) {
+                    matrixHTML += `<input type="number" id="a${i}${j}" placeholder="a${i+1}${j+1}"> `;
+                }
+                matrixHTML += "</div>";
+            }
+            
+            document.getElementById("matrixContainer").innerHTML = matrixHTML;
+        }
+        
+        function calculateDeterminant() {
+            matrix = [];
+            for (let i = 0; i < matrixSize; i++) {
+                matrix[i] = [];
+                for (let j = 0; j < matrixSize; j++) {
+                    matrix[i][j] = parseFloat(document.getElementById(`a${i}${j}`).value);
+                }
+            }
+            
+            const determinant = calculateRecursiveDeterminant(matrix);
+            
+            document.getElementById("result").textContent = "Determinant: " + determinant;
+        }
+        
+        function calculateRecursiveDeterminant(matrix) {
+            const n = matrix.length;
+            
+            if (n === 2) {
+                return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
+            }
+            
+            let det = 0;
+            for (let i = 0; i < n; i++) {
+                const minor = [];
+                for (let j = 1; j < n; j++) {
+                    minor[j - 1] = [];
+                    for (let k = 0; k < n; k++) {
+                        if (k !== i) {
+                            minor[j - 1].push(matrix[j][k]);
+                        }
+                    }
+                }
+                det += matrix[0][i] * Math.pow(-1, i) * calculateRecursiveDeterminant(minor);
+            }
+            return det;
+        }
+    </script>
+</body>
+</html>

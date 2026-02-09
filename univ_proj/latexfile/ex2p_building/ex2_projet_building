@@ -1,0 +1,224 @@
+\documentclass[11pt]{report}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{float}      % pour l’option [H]
+% ---------- Hyperref setup ----------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% ---------- Code listing style ----------
+\lstdefinestyle{csstyle}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    showstringspaces=false,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    frame=single,
+    breaklines=true
+}
+\lstset{style=csstyle}
+
+% ---------- Meta data ----------
+\title{Projectile Motion Modelling and Simulation}
+\author{Sedjro WOLI \\
+Informatique\\
+Université de Toulouse: Paul Sabatier }
+\date{\today}
+
+\usepackage{graphicx}
+
+% TRES UTILE POUR AVOIR UN CHEMIN RELATIF POUR QUITTER FAIRE APPELLE AU DOSSIER iMAGES QUI EST DANS UN DOSSIER FRERE AU DOSIER COMTENANT LE FICHIER .TEX
+\graphicspath{{../Images/}}
+
+
+\begin{document}
+
+
+%____________________________________-----------------------------------------------_____________________________________________
+%____________________________________-----------------------------------------------______________________________________________
+
+
+
+
+\pagenumbering{roman}
+\maketitle
+
+\begin{abstract}
+This report presents the modelling and numerical simulation of projectile motion under various aerodynamic conditions. The work includes the implementation of several models, the visualization of trajectories, and the analysis of the influence of key parameters.
+
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\clearpage
+\pagenumbering{arabic}
+
+% ==================================================
+\chapter{Background}
+Resultats au model1
+
+\section{Physical model}
+Provide a description of the physical equations, assumptions, and parameters used (gravity, drag, lift, etc.).
+
+\section{Numerical methods}
+Briefly explain the numerical integration methods and implementation choices (time step, solver, stability considerations).
+
+% ==================================================
+\chapter{Model 1}
+Ce chapitre decrit le Model1 du TP et apporte une analyse des courbes obtenue{ch:model1}
+
+\section{Trajectory computation}
+
+\subsection{Calcule de la trajectoire}
+
+La fonction \texttt{set\_trajectory} calcule la trajectoire entre un temps initial \(t=0\) et un temps finale \(t=t_{\text{end}}\)
+
+\subsection{: \(z(x)\)}
+La fonction \texttt{plot\_trajectory} affiche la trajectoire de l\'objet donc z en fonction de x
+
+%COMMENTAIRE
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{plot_trajectory.png}
+    \caption{Example of a projectile trajectory \(z(x)\) for Model~1.}
+    \label{fig:plot_trajectory}
+\end{figure}
+
+
+\subsection{Tracer de la vitesse en fonction du temps }
+La fonction \texttt{plot\_trajectories} trace les composant de la vitesse \(v_z(t)\) et la norme de la vitesse \(\lVert \mathbf{v}(t) \rVert\) en fonction du temps.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/home/friedly/Documents/General_git_hub_file/ownproj_general_file/univ_proj/latexfile/info_project/Images/composantes.png}
+    \caption{Velocity components and magnitude over time for Model~1.}
+    \label{fig:plot_trajectories}
+\end{figure}
+
+
+\subsection{Famille de trajectoire en fonction de l'angle}
+Courbe indiquant le tracer sur un meme graphique, de toutes les trajectoires avec une legende indiquant la valeur de l angle $\alpha$
+\newline
+Les differents trajetcoires sont tracer en fonction de l'angle de depart alpha pour une analyse de l'angle optimal
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Plot_trajectories.png}
+    \caption{Projectile range as a function of launch angle \(\alpha\).}
+    \label{fig:max_range}
+\end{figure}
+
+\subsection{Maximum altitude as a function of angle}
+l'altitude maximal en fonction de l'angle  \(\alpha\), comme affiché ici~\ref{fig:max_altitude}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{max_altitude_f_alpha.png}
+    \caption{Maximum altitude as a function of launch angle \(\alpha\).}
+    \label{fig:max_altitude}
+\end{figure}
+
+% ==================================================
+
+\chapter{Model 2}
+This chapter presents the second model, which extends Model~1 by introducing additional physical effects (e.g.\ variable drag, wind, or spin).\label{ch:model2}
+
+\section{Model description}
+%COMMENTER L'ERREUR MAXIMALE PA RAPORT A 10^-7
+Validation de la méthode numérique par comparaison à la méthode analytique. 
+On trouve une erreur de $9.981526716273947e-11 \leq 10^{7}$
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{validation_model2.png}
+	\caption{Validation du calcule numérique}
+	\label{fig:Validation}
+\end{figure}
+
+
+
+\section{Comparaison des courbes}
+Ici, on compare la courbes du resulat analytique à celle du resultat numerique et on voit clairement qu'elle coincide
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{analt_vs_num_traj.png}
+	\caption{La méthode analytique vs celle  numérique}
+	\label{fig:Analytique VS Numérique}
+\end{figure}
+
+
+% ==================================================
+\chapter{Model 3}
+Model~3 considers variations of the drag coefficient \(C_d\) and lift coefficient \(C_l\), and analyzes their influence on the projectile trajectories and impact distance.\label{ch:model3}
+
+\section{Trajectories for different coefficients}
+Four trajectories are computed for different combinations of \(C_d\) and \(C_l\). The resulting paths are shown in Figure~\ref{fig:four_trajectories}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{trace_4_trajectoires.png}
+    \caption{Four trajectories for different values of \(C_d\) and \(C_l\).}
+    \label{fig:four_trajectories}
+\end{figure}
+
+\section{Isocontours of impact distance}
+The impact distance is evaluated over a grid of launch angles \(\alpha\) and drag coefficients \(C_d\). Isocontours of the impact distance in the \((\alpha, C_d)\) plane are plotted in Figure~\ref{fig:contours}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{contours.png}
+    \caption{Isocontours of impact distance in the \((\alpha, C_d)\) plane for Model~3.}
+    \label{fig:contours}
+\end{figure}
+
+% ==================================================
+\chapter{Conclusion}
+This chapter summarizes the main contributions of the project and suggests several directions for future work.\label{ch:conclusion}
+
+The project implemented and compared three projectile motion models with increasing physical complexity. The numerical simulations highlighted the role of launch angle and aerodynamic coefficients on range and maximum altitude.
+
+\section{Future work}
+Possible extensions of this work include:
+\begin{itemize}
+    \item Using higher-order or adaptive time integration schemes.
+    \item Calibrating drag and lift coefficients using experimental or reference data.
+    \item Extending the model to three dimensions with crosswind and spin effects.
+    \item Implementing an optimization framework to automatically determine optimal launch conditions.
+\end{itemize}
+
+% ==================================================
+\begin{thebibliography}{9}
+
+\bibitem{lamport}
+Leslie Lamport.
+\textit{\LaTeX: A Document Preparation System}.
+Addison-Wesley, 2nd edition, 1994.
+
+\end{thebibliography}
+
+\end{document}

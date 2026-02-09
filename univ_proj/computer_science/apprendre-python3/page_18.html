@@ -1,0 +1,1082 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L18">18. Gestion d'une base de données</a><ul class="nav-sommaire-ul Indentation18">
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L18-A">18-A. Les bases de données</a><ul class="nav-sommaire-ul Indentation18-A">
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L18-A-1">18-A-1. SGBDR - Le modèle client/serveur</a></li>
+        <li><a class="summaryIndent2" href="#L18-A-2">18-A-2. Le langage SQL</a></li>
+        <li><a class="summaryIndent2" href="#L18-A-3">18-A-3. SQLite</a></li>
+        <li><a class="summaryIndent2" href="#L18-A-4">18-A-4. Création de la base de données. Objets « connexion » et « curseur ».</a></li>
+        <li><a class="summaryIndent2" href="#L18-A-5">18-A-5. Connexion à une base de données existante</a></li>
+        <li><a class="summaryIndent2" href="#L18-A-6">18-A-6. Recherches sélectives dans une base de données</a></li>
+        <li><a class="summaryIndent2" href="#L18-A-7">18-A-7. La requête select</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L18-B">18-B. Ébauche d'un logiciel client pour PostgreSQL</a><ul class="nav-sommaire-ul Indentation18-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L18-B-1">18-B-1. Décrire la base de données dans un dictionnaire d'application</a></li>
+        <li><a class="summaryIndent2" href="#L18-B-2">18-B-2. Définir une classe d'objets-interfaces</a><ul class="nav-sommaire-ul Indentation18-B-2">
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L18-B-2-A">18-B-2-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L18-B-3">18-B-3. Construire un générateur de formulaires</a><ul class="nav-sommaire-ul Indentation18-B-3">
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L18-B-3-A">18-B-3-A. Commentaires</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L18-B-4">18-B-4. Le corps de l'application</a><ul class="nav-sommaire-ul Indentation18-B-4">
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L18-B-4-A">18-B-4-A. Commentaires</a></li>
+        </ul></li>
+      </ul></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_17.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_19.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L18">18. Gestion d'une base de données<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span class="italique">Les bases de données sont des outils de plus en plus fréquemment utilisés. Elles permettent de stocker des données nombreuses dans un seul ensemble
+	  bien structuré. Lorsqu'il s'agit de bases de données relationnelles, il devient en outre tout à fait possible d'éviter l'« enfer des
+	  doublons ». Vous avez sûrement été déjà confrontés à ce problème : des données identiques ont été
+	  enregistrées dans plusieurs fichiers différents. Lorsque vous souhaitez modifier ou supprimer l'une de ces données, vous devez ouvrir et modifier tous les
+	  fichiers qui la contiennent ! Le risque d'erreur est très réel, qui conduit inévitablement à des incohérences, sans compter la perte de
+	  temps que cela représente.</span>
+      </p>
+      <p>
+        <span class="italique">Les bases de données constituent la solution à ce type de problème. Python vous fournit les moyens d'utiliser les ressources de nombreux systèmes,
+	  mais nous n'en examinerons que deux dans nos exemples : SQLite et PostgreSQL.</span>
+      </p>
+      
+		<h3 class="TitreSection1" id="L18-A">18-A. Les bases de données<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Il existe de nombreux types de bases de données. On peut par exemple déjà considérer comme une base de données élémentaire un
+	  fichier qui contient une liste de noms et d'adresses.</p>
+        <p>Si la liste n'est pas trop longue, et si l'on ne souhaite pas pouvoir y effectuer des recherches en fonction de critères complexes, il va de soi que l'on
+	  peut accéder à ce type de données en utilisant des instructions simples, telles celles que nous avons abordées .</p>
+        <p>La situation se complique cependant très vite si l'on souhaite pouvoir effectuer des sélections et des tris parmi les données, surtout si
+	  celles-ci deviennent très nombreuses. La difficulté augmente encore si les données sont répertoriées dans différents ensembles reliés
+	  par un certain nombre de relations hiérarchiques, et si plusieurs utilisateurs doivent pouvoir y accéder en parallèle. </p>
+        <p>Imaginez par exemple que la direction de votre école vous confie la charge de mettre au point un système de bulletins informatisé. En y
+	  réfléchissant quelque peu, vous vous rendrez compte rapidement que cela suppose la mise en œuvre de toute une série de tables différentes :
+	  une table des noms d'élèves (laquelle pourra bien entendu contenir aussi d'autres informations spécifiques à ces élèves : adresse,
+	  date de naissance, etc.) ; une table contenant la liste des cours (avec le nom du professeur titulaire, le nombre d'heures enseignées par semaine, etc.) ;
+	  une table mémorisant les travaux pris en compte pour l'évaluation (avec leur importance, leur date, leur contenu, etc.) ; une table décrivant la
+	  manière dont les élèves sont groupés par classes ou par options, les cours suivis par chacun, etc.</p>
+        <p>Vous comprenez bien que ces différentes tables ne sont pas indépendantes. Les travaux effectués par un même élève sont liés
+	  à des cours différents. Pour établir le bulletin de cet élève, il faut donc extraire des données de la table des travaux, bien sûr,
+	  mais en relation avec des informations trouvées dans d'autres tables (celles des cours, des classes, des options, etc.).</p>
+        <p>Nous verrons plus loin comment représenter des tables de données et les relations qui les lient.</p>
+        
+		<h4 class="TitreSection2" id="L18-A-1">18-A-1. SGBDR - Le modèle client/serveur<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Les programmes informatiques capables de gérer efficacement de tels ensembles de données complexes sont forcément complexes, eux aussi. On
+	    appelle ces programmes des <span class="italique">SGBDR</span> (Systèmes de gestion de bases de données relationnelles). Il s'agit d'applications informatiques de première
+	    importance pour les entreprises. Certaines sont les fleurons de sociétés spécialisées (<span class="italique">IBM</span>, <span class="italique">Oracle</span>, <span class="italique">Microsoft</span>,
+	    <span class="italique">Informix</span>, <span class="italique">Sybase.</span>..) et sont en général vendues à des prix fort élevés. D'autres ont été développées dans
+	    des centres de recherche et d'enseignement universitaires (<span class="italique">PostgreSQL, SQLite, MySQL </span>...) ; elles sont alors en général tout à fait
+	    gratuites.</p>
+          <p>Ces systèmes ont chacun leurs spécificités et leurs performances, mais la plupart fonctionnant sur <span class="italique">le modèle client/serveur</span> :
+	    cela signifie que la plus grosse partie de l'application (ainsi que la base de données prise en charge) est installée en un seul endroit, en principe sur une
+	    machine puissante (cet ensemble constituant donc le <span class="italique">serveur</span>), alors que l'autre partie, beaucoup plus simple, est installée sur un nombre
+	    indéterminé de postes de travail, appelés des <span class="italique">clients</span>.</p>
+          <p>Les clients sont reliés au serveur, en permanence ou non, par divers procédés et protocoles (éventuellement par l'intermédiaire de
+	    l'internet). Chacun d'entre eux peut accéder à une partie plus ou moins importante des données, avec autorisation ou non de modifier certaines d'entre
+	    elles, d'en ajouter ou d'en supprimer, en fonction de règles d'accès bien déterminées, définies par un administrateur de la base de
+	    données.</p>
+          <p>Le serveur et ses clients sont en fait des applications distinctes qui s'échangent des informations. Imaginez par exemple que vous êtes l'un des
+	    utilisateurs du système.</p>
+          <p>Pour accéder aux données, vous devez lancer l'exécution d'une application cliente sur un poste de travail quelconque. Dans son processus de
+	    démarrage, l'application cliente commence par établir la connexion avec le serveur et la base de données<a class="signetNoteBasPage" id="signetNoteBasPage88" href="#noteBasPage88">(88)</a>. Lorsque la connexion est établie, l'application cliente peut interroger le serveur en lui envoyant une <span class="italique">requête</span> sous une forme
+	    convenue. Il s'agit par exemple de retrouver une information précise. Le serveur exécute alors la requête en recherchant les données
+	    correspondantes dans la base, puis il expédie en retour une certaine <span class="italique">réponse</span> au client.</p>
+          <p>Cette réponse peut être l'information demandée, ou encore un message d'erreur en cas d'insuccès.</p>
+          <p>La communication entre le client et le serveur est donc faite de <span class="italique">requêtes</span> et de <span class="italique">réponses</span>. Les requêtes sont de véritables
+	    instructions expédiées du client au serveur, non seulement pour extraire des données de la base, mais aussi pour en ajouter, en supprimer, en modifier,
+	    etc.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-A-2">18-A-2. Le langage SQL<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>À la lecture de ce qui précède, vous aurez bien compris qu'il ne peut être question de vous expliquer dans ces pages comment vous pourriez
+	    réaliser vous-même un logiciel serveur. C'est vraiment là une affaire de spécialistes (au même titre que le développement d'un nouveau
+	    langage de programmation, par exemple). L'élaboration d'un logiciel client, par contre, est tout à fait à votre portée et peut vous apporter un
+	    immense bénéfice. Il faut savoir en effet que la plupart des applications « sérieuses » de l'informatique s'articulent autour d'une
+	    base de données plus ou moins complexe : même les logiciels de jeu doivent mémoriser une foule de données, et maintenir entre elles des
+	    relations.</p>
+          <p>En fonction des besoins de votre application, vous devrez donc choisir, soit de vous connecter à un gros serveur distant géré par d'autres
+	    personnes, soit de mettre en place un serveur local plus ou moins performant. Dans le cas particulier d'une application monoposte, vous pourrez utiliser un logiciel
+	    serveur installé sur la même machine que votre application, ou plus simplement encore exploiter une bibliothèque-serveur compatible avec votre langage
+	    de programmation. Vous verrez cependant que dans tous les cas de figure, les mécanismes à mettre en œuvre restent fondamentalement les
+	    mêmes.</p>
+          <p>On aurait pu craindre, en effet, qu'étant donnée la grande diversité des systèmes serveurs existants, il soit nécessaire de faire
+	    usage de protocoles et de langages différents pour adresser des requêtes à chacun d'eux. Mais fort heureusement, de grands efforts de standardisation
+	    ont été accomplis pour la mise au point d'un langage de requêtes commun, qui porte le nom de <b>SQL</b> (<span class="italique">Structured Query Language</span>, ou
+	    langage de requêtes structuré)<a class="signetNoteBasPage" id="signetNoteBasPage89" href="#noteBasPage89">(89)</a>. En ce qui concerne Python, un effort supplémentaire a été accompli pour
+	    standardiser les procédures d'accès aux serveurs eux-mêmes, sous la forme d'une interface commune (<span class="italique">DBAPI</span><a class="signetNoteBasPage" id="signetNoteBasPage90" href="#noteBasPage90">(90)</a>). </p>
+          <p>Vous allez donc devoir apprendre quelques rudiments de ce langage pour pouvoir continuer, mais cela ne doit pas vous effrayer. Vous aurez d'ailleurs
+	    certainement l'occasion de rencontrer SQL dans d'autres domaines (bureautique, par exemple). Dans le cadre restreint de ce cours, il vous suffira de connaître
+	    quelques instructions SQL très simples pour comprendre les mécanismes de base et peut-être déjà réaliser quelques projets
+	    intéressants. </p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-A-3">18-A-3. SQLite<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/10000201000001440000005F4970656E.png" alt="Image non disponible" width="324" height="95"/></figure></div>
+          <p>Cela signifie donc que vous pouvez écrire en Python une application contenant son propre SGBDR intégré, sans qu'il soit nécessaire
+	    d'installer quoi que ce soit d'autre, et que les performances seront au rendez-vous.</p>
+          <p>Nous verrons en fin de chapitre comment les choses se présentent si votre application doit utiliser plutôt un serveur de bases de données
+	    hébergé par une autre machine, mais les principes resteront les mêmes. Tout ce que vous aurez appris à faire avec <b>SQLite</b> sera transposable
+	    sans modification si vous devez plus tard travailler avec un SGDBR plus « imposant » tel que <span class="italique">PostgreSQL</span>, <span class="italique">MySQL</span> ou
+	    <span class="italique">Oracle</span>.</p>
+          <p>Commençons donc tout de suite à explorer les bases de ce système, à la ligne de commande. Nous écrirons ensuite un petit script pour
+	    gérer une base de données simple à deux tables.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-A-4">18-A-4. Création de la base de données. Objets « connexion » et « curseur ».<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Comme vous vous y attendez certainement, il suffit d'importer un module pour accéder aux fonctionnalités attendues :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; import sqlite3</span>
+            </b>
+          </p>
+          <p>(Le chiffre à la fin du nom est le numéro de la version actuelle du module d'interface au moment où nous écrivons ces lignes. Il est
+	    possible que ce soit modifié dans des versions futures de Python).</p>
+          <p>Il faut ensuite décider le nom de fichier que vous voulez attribuer à la base de données. <b>SQLite</b> mémorise toutes les tables d'une
+	    base de données dans un seul fichier multi-plateformes que vous pouvez sauvegarder où vous voulez (cela devrait grandement vous faciliter la vie pour les
+	    archivages !) :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e53833">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e53833" onclick="selectionCode('contenuCoded0e53833', 'IdTitreCode-d0e53833');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e53833" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> fichierDonnees <code class="python_operator">=</code><code class="python_literal1">"E:/python3/essais/bd_test.sq3"</code></code></pre></div>
+          <p>Le nom de fichier peut comporter un chemin et une extension quelconques. Il est également possible d'utiliser le nom spécial « <b><span style="color:#000080;">:memory:</span></b> », ce qui indiquera au système de traiter la base de données en mémoire vive seulement. Ainsi les temps
+	    d'accès aux données seront raccourcis, et l'application pourra être ultra-rapide, ce qui peut vous intéresser dans le contexte d'un logiciel de
+	    jeu, par exemple, à la condition de prévoir un mécanisme distinct pour les sauvegardes sur disque. </p>
+          <p>Vous créez alors un <span class="italique"><b>objet-connexion</b></span>, à l'aide de la fonction-fabrique <b>connect()</b>. Cet objet assurera l'interface entre votre
+	    programme et la base de données. L'opération est tout à fait comparable à l'ouverture d'un simple fichier texte, l'instanciation de l'objet
+	    créant le fichier de mémorisation au passage (s'il n'existe pas déjà) :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e53859">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e53859" onclick="selectionCode('contenuCoded0e53859', 'IdTitreCode-d0e53859');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e53859" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> conn <code class="python_operator">=</code>sqlite3.<code class="python_function">connect</code><code class="python_operator">(</code>fichierDonnees)</code></pre></div>
+          <p>L'objet <span class="italique"><b>connexion</b></span> est désormais en place, et vous allez pouvoir dialoguer avec lui à l'aide du langage SQL. Il serait possible de le
+	    faire directement à l'aide de certaines méthodes de cet objet<a class="signetNoteBasPage" id="signetNoteBasPage91" href="#noteBasPage91">(91)</a> , mais il est préférable de mettre en place pour ce dialogue, encore un
+	    autre objet-interface que l'on appelle un <span class="italique"><b>curseur</b>.</span> Il s'agit d'une sorte de tampon mémoire intermédiaire, destiné à mémoriser
+	    temporairement les données en cours de traitement, ainsi que les opérations que vous effectuez sur elles, avant leur transfert définitif dans la base de
+	    données. Cette technique permet donc d'annuler si nécessaire une ou plusieurs opérations qui se seraient révélées inadéquates, et de
+	    revenir en arrière dans le traitement, sans que la base de données n'en soit affectée (vous pouvez en apprendre davantage sur ce concept en consultant
+	    l'un des nombreux manuels qui traitent du langage SQL).</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e53887">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e53887" onclick="selectionCode('contenuCoded0e53887', 'IdTitreCode-d0e53887');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e53887" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur <code class="python_operator">=</code>conn.<code class="python_function">cursor</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Une base de données se compose toujours d'une ou plusieurs <span class="italique"><b>tables</b></span>, qui contiendront les <span class="italique"><b>enregistrements</b></span> (ou <span class="italique">records</span>),
+	    ceux-ci comportant eux-mêmes un certain nombre de <span class="italique"><b>champs</b></span> de différents types. Ces concepts vous sont probablement familiers si vous avez
+	    déjà travaillé avec un logiciel tableur quelconque : les enregistrements sont les lignes du tableau, et les champs les cellules d'une ligne. Nous
+	    allons donc rédiger une première requête SQL pour demander la création d'une nouvelle table :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e53918">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e53918" onclick="selectionCode('contenuCoded0e53918', 'IdTitreCode-d0e53918');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e53918" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"CREATE TABLE membres (age INTEGER, nom TEXT, taille REAL)"</code>)</code></pre></div>
+          <p>La requête est exprimée dans une chaîne de caractères classique, que nous transmettons au curseur par l'intermédiaire de sa
+	    méthode <b>execute()</b>. Notez bien que <span class="italique">le langage SQL ne tient aucun compte de la casse des caractères</span> : vous pouvez donc encoder vos
+	    requêtes SQL indifféremment en majuscules ou en minuscules. Nous avons personnellement choisi d'écrire en majuscules les instructions de ce langage,
+	    afin de bien marquer la différence avec les instructions Python environnantes, mais vous pouvez bien évidemment adopter d'autres habitudes.</p>
+          <p>Veuillez également remarquer au passage que les types de données ne portent pas les mêmes noms en Python et en SQL. La traduction ne devrait
+	    cependant pas vous tracasser outre mesure. Signalons simplement que les chaînes de caractères seront encodées par défaut en <span class="italique">Utf-8</span>, suivant
+	    en cela la même convention que celle déjà mentionnée précédemment pour les fichiers texte (voir page ). </p>
+          <p>Nous pouvons maintenant entrer des enregistrements : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e53948">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e53948" onclick="selectionCode('contenuCoded0e53948', 'IdTitreCode-d0e53948');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e53948" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"INSERT INTO membres(age,nom,taille) VALUES(21,'Dupont',1.83)"</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"INSERT INTO membres(age,nom,taille) VALUES(15,'Blumâr',1.57)"</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"INSERT Into membres(age,nom,taille) VALUES(18,'Özémir',1.69)"</code>)</code></pre></div>
+          <p>Attention : à ce stade des opérations, les enregistrement sont dans le tampon du curseur, mais ils n'ont pas encore été
+	    transférés véritablement dans la base de données. Vous pourriez donc annuler tout, si nécessaire, comme nous le verrons un peu plus loin. Le
+	    transfert dans la basse de données sera déclenché par la méthode <b>commit()</b> de l'objet connexion :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e53986">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e53986" onclick="selectionCode('contenuCoded0e53986', 'IdTitreCode-d0e53986');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e53986" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> conn.<code class="python_function">commit</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Le curseur peut alors être refermé, de même que la connexion, si le travail est terminé<a class="signetNoteBasPage" id="signetNoteBasPage92" href="#noteBasPage92">(92)</a> :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54005">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54005" onclick="selectionCode('contenuCoded0e54005', 'IdTitreCode-d0e54005');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54005" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">close</code><code class="python_operator">(</code>) 
+<code class="python_operator">&gt;&gt;&gt;</code> conn.<code class="python_function">close</code><code class="python_operator">(</code>)</code></pre></div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-A-5">18-A-5. Connexion à une base de données existante<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>À la suite des opérations ci-dessus, un fichier nommé<b><span style="color:#000080;"> bd_test.sq3 </span></b>aura été crée à
+	    l'emplacement indiqué dans votre machine. Vous pourriez dès lors quitter Python, et même éventuellement même éteindre votre
+	    ordinateur : les données sont enregistrées. Maintenant, comment faut-il procéder pour y accéder à nouveau ? C'est très
+	    simple : il suffit d'utiliser exactement les mêmes instructions :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54036">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54036" onclick="selectionCode('contenuCoded0e54036', 'IdTitreCode-d0e54036');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54036" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">import</code> sqlite3
+<code class="python_operator">&gt;&gt;&gt;</code> conn <code class="python_operator">=</code>sqlite3.<code class="python_function">connect</code><code class="python_operator">(</code><code class="python_literal1">"E:/python3/essais/bd_test.sq3"</code>) 
+<code class="python_operator">&gt;&gt;&gt;</code> cur <code class="python_operator">=</code>conn.<code class="python_function">cursor</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>L'interrogation de la base s'effectue bien évidemment à l'aide de requêtes SQL, que l'on confie à la méthode <b>execute()</b> du
+	    curseur, toujours sous la forme de chaînes de caractères :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54074">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54074" onclick="selectionCode('contenuCoded0e54074', 'IdTitreCode-d0e54074');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54074" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"SELECT * FROM membres"</code>)</code></pre></div>
+          <p>Cette requête demande la <span class="italique">sélection</span> d'un ensemble particulier d'enregistrements, qui devront être transférés de la base de
+	    données au curseur. Dans le cas présent, la sélection n'en n'est pas tout à fait une, car nous y demandons en effet d'extraire <span class="italique">tous</span> les
+	    enregistrements de la table membres (rappelons que le symbole <b>*</b> est fréquemment utilisé en informatique comme un « joker » ayant
+	    la signification « tout » ou « tous »).</p>
+          <p>Les enregistrement sélectionnés sont donc à présent dans le curseur. Si nous voulons les voir, nous devons les en extraire. Cela peut
+	    être réalisé de deux façons, qui peuvent paraître différentes à première vue, mais qui en réalité tirent parti toutes
+	    les deux du fait que l'objet-curseur produit par Python est un <span class="italique">itérateur</span>, c'est-à-dire un dispositif générateur de
+	    séquences<a class="signetNoteBasPage" id="signetNoteBasPage93" href="#noteBasPage93">(93)</a>.</p>
+          <p>Vous pouvez parcourir directement la séquence qu'il produit, à l'aide d'une boucle <b>for</b> classique. Vous obtenez une série de
+	    tuples :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54113">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54113" onclick="selectionCode('contenuCoded0e54113', 'IdTitreCode-d0e54113');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54113" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">for</code> l <code class="python_keyword1">in</code> cur:
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code>l) 
+... 
+<code class="python_operator">(</code><code class="python_digit">21</code>, <code class="python_literal1">'Dupont'</code>, <code class="python_digit">1.83</code>)
+<code class="python_operator">(</code><code class="python_digit">15</code>, <code class="python_literal1">'Blumâr'</code>, <code class="python_digit">1.57</code>)
+<code class="python_operator">(</code><code class="python_digit">18</code>, <code class="python_literal1">'Özémir'</code>, <code class="python_digit">1.69</code>)</code></pre></div>
+          <p>... ou bien la recueillir dans une liste ou un tuple en vue d'un traitement ultérieur (à l'aide des fonctions intégrées <b>list()</b> et
+	    <b>tuple()</b>) :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54171">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54171" onclick="selectionCode('contenuCoded0e54171', 'IdTitreCode-d0e54171');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54171" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"SELECT * FROM membres"</code>) 
+<code class="python_operator">&gt;&gt;&gt;</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=list#list"><span>list</span></a><code class="python_operator">(</code>cur) 
+[<code class="python_operator">(</code><code class="python_digit">21</code>, <code class="python_literal1">'Dupont'</code>, <code class="python_digit">1.83</code>), <code class="python_operator">(</code><code class="python_digit">15</code>, <code class="python_literal1">'Blumâr'</code>, <code class="python_digit">1.57</code>), <code class="python_operator">(</code><code class="python_digit">18</code>, <code class="python_literal1">'Özémir'</code>, <code class="python_digit">1.69</code>)]</code></pre></div>
+          <p>Vous pouvez également, d'une manière plus classique, faire appel à la méthode <b>fetchall()</b> du curseur, laquelle renvoie elle aussi
+	    une liste de tuples :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54230">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54230" onclick="selectionCode('contenuCoded0e54230', 'IdTitreCode-d0e54230');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54230" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"SELECT * FROM membres"</code>) 
+<code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">fetchall</code><code class="python_operator">(</code>) 
+[<code class="python_operator">(</code><code class="python_digit">21</code>, <code class="python_literal1">'Dupont'</code>, <code class="python_digit">1.83</code>), <code class="python_operator">(</code><code class="python_digit">15</code>, <code class="python_literal1">'Blumâr'</code>, <code class="python_digit">1.57</code>), <code class="python_operator">(</code><code class="python_digit">18</code>, <code class="python_literal1">'Özémir'</code>, <code class="python_digit">1.69</code>)]</code></pre></div>
+          <p>Tant que le curseur reste ouvert, vous pouvez bien entendu ajouter des enregistrements supplémentaires :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54286">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54286" onclick="selectionCode('contenuCoded0e54286', 'IdTitreCode-d0e54286');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54286" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"INSERT INTO membres(age,nom,taille) VALUES(19,'Ricard',1.75)"</code>)</code></pre></div>
+          <p>Dans un programme concret, les données à enregistrer se présenteront la plupart du temps dans des variables Python. Vous devrez donc construire
+	    la chaîne de caractères contenant la requête SQL, en y incluant les valeurs tirées de ces variables. Il est cependant fortement
+	    déconseillé de faire appel dans ce but aux techniques ordinaires de formatage des chaînes, car cela peut ouvrir une faille de sécurité dans
+	    vos programmes, en y autorisant les intrusions par la méthode de piratage connue sous le nom de <span class="italique">SQL injection</span><a class="signetNoteBasPage" id="signetNoteBasPage94" href="#noteBasPage94">(94)</a>. Il faut donc plutôt confier
+	    le formatage de vos requêtes au module d'interface lui-même. La bonne technique est illustrée ci-après : la chaîne
+	    « patron » utilise le point d'interrogation comme balise de conversion, et le formatage proprement dit est pris en charge par la méthode
+	    <b>execute()</b> du curseur :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54309">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54309" onclick="selectionCode('contenuCoded0e54309', 'IdTitreCode-d0e54309');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54309" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> data <code class="python_operator">=</code>[<code class="python_operator">(</code><code class="python_digit">17</code>,<code class="python_literal1">"Durand"</code>,<code class="python_digit">1.74</code>),<code class="python_operator">(</code><code class="python_digit">22</code>,<code class="python_literal1">"Berger"</code>,<code class="python_digit">1.71</code>),<code class="python_operator">(</code><code class="python_digit">20</code>,<code class="python_literal1">"Weber"</code>,<code class="python_digit">1.65</code>)] 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">for</code> tu <code class="python_keyword1">in</code> data:
+...    cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"INSERT INTO membres(age,nom,taille) VALUES(?,?,?)"</code>, tu)
+...
+<code class="python_operator">&gt;&gt;&gt;</code> conn.<code class="python_function">commit</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Dans cet exemple, la chaîne de requête comporte 3 points d'interrogation, qui sont nos balises. Elles seront remplacées par les 3
+	    éléments du tuple <b>tu</b> à chaque itération de la boucle, le module d'interface avec SQLite se chargeant de traiter chaque variable correctement
+	    en fonction de son type.</p>
+          <p>À ce stade des opérations, vous pourriez penser que tout ce que nous venons de voir est bien compliqué pour écrire et relire ensuite des
+	    informations dans un fichier. Ne serait-il pas plus simple de faire appel aux procédés de traitement des fichiers texte que nous connaissons
+	    déjà ? Oui et Non. Cela reste vrai pour de petites quantités d'informations ne nécessitant guère de changements au fil du temps qui
+	    passe, mais n'est plus défendable si l'on considère déjà le simple problème de la modification ou de la suppression d'un enregistrement
+	    quelconque au sein du fichier. Dans une base de données, c'est très simple : </p>
+          <p>Pour modifier un ou plusieurs enregistrements, exécutez une requête du type : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54386">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54386" onclick="selectionCode('contenuCoded0e54386', 'IdTitreCode-d0e54386');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54386" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"UPDATE membres SET nom ='Gerart' WHERE nom='Ricard'"</code>)</code></pre></div>
+          <p>Pour supprimer un ou plusieurs enregistrements, utilisez une requête telle que :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54401">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54401" onclick="selectionCode('contenuCoded0e54401', 'IdTitreCode-d0e54401');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54401" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> cur.<code class="python_function">execute</code><code class="python_operator">(</code><code class="python_literal1">"DELETE FROM membres WHERE nom='Gerart'"</code>)</code></pre></div>
+          <p>Avec ce que nous connaissons des fichiers texte, nous devrions certainement déjà écrire pas mal de lignes de code pour arriver faire la
+	    même chose ! Mais il y a encore beaucoup plus. </p>
+          <blockquote class="citation"><div>Attention : n'oubliez pas que toutes les modifications apportées au curseur se passent en mémoire vive, et de ce fait rien n'est enregistré
+	    définitivement tant que vous n'exécutez pas l'instruction <b><span style="color:#000080;">conn.commit()</span></b>. Vous pouvez donc annuler toutes les
+	    modifications apportées depuis le <b><span style="color:#000080;">commit()</span></b> précédent, en refermant la connexion à l'aide de
+	    l'instruction : <b><span style="color:#000080;">conn.close()</span></b></div></blockquote>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-A-6">18-A-6. Recherches sélectives dans une base de données<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Exercice</p>
+          <p>.Avant d'aller plus loin, et à titre d'exercice de synthèse, nous allons vous demander de créer entièrement vous-même une base de
+	    données « Musique » qui contiendra les deux tables suivantes (cela représente un certain travail, mais il faut que vous puissiez disposer
+	    d'un certain nombre de données pour pouvoir expérimenter valablement les fonctions de recherche et de tri prises en charge par le SGBDR) :</p>
+          <div class="TextAlign-center"><table class="tableau" style="border-width:1px;" border="1">
+            <tr>
+              <td class="colonne" style="">Oeuvres</td>
+              <td class="colonne" style=""> </td>
+              <td class="colonne" style="">Compositeurs</td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">comp (chaîne)</td>
+              <td class="colonne" style=""> </td>
+              <td class="colonne" style="">comp (chaîne)</td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">titre (chaîne)</td>
+              <td class="colonne" style=""> </td>
+              <td class="colonne" style="">a_naiss (entier)</td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">duree (entier)</td>
+              <td class="colonne" style=""> </td>
+              <td class="colonne" style="">a_mort (entier)</td>
+            </tr>
+            <tr>
+              <td class="colonne" style="">interpr (chaîne)</td>
+              <td class="colonne" style=""> </td>
+              <td class="colonne" style=""> </td>
+            </tr>
+          </table></div>
+          <p>Commencez à remplir la table <b>Compositeurs</b> avec les données qui suivent (et profitez de cette occasion pour faire la preuve des
+	    compétences que vous maîtrisez déjà, en écrivant un petit script pour vous faciliter l'entrée des informations : une boucle
+	    s'impose !)</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54511">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54511" onclick="selectionCode('contenuCoded0e54511', 'IdTitreCode-d0e54511');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54511" class="contenuCode">comp	     a_naiss	  a_mort
+ 
+Mozart		1756	   1791
+Beethoven      1770	  1827
+Haendel        1685	  1759
+Schubert       1797	  1828
+Vivaldi        1678	  1741
+Monteverdi     1567	  1643
+Chopin		1810	   1849
+Bach	      1685	 1750
+Shostakovich   1906	  1975</code></pre></div>
+          <p>Dans la table <b>oeuvres</b>, entrez les données suivantes :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54520">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54520" onclick="selectionCode('contenuCoded0e54520', 'IdTitreCode-d0e54520');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54520" class="contenuCode">comp	      titre		duree	 interpr
+ 
+Vivaldi      Les quatre saisons      20     T. Pinnock
+Mozart	      Concerto piano N°12     25     M. Perahia
+Brahms	      Concerto violon N°2     40     A. Grumiaux
+Beethoven    Sonate "au clair de lune"	   14	  W. Kempf
+Beethoven    Sonate "pathétique"     17     W. Kempf
+Schubert     Quintette "la truite"     39     SE of London
+Haydn	     La création	 109	 H. Von Karajan
+Chopin	      Concerto piano N°1      42     M.J. Pires
+Bach	    Toccata &amp; fugue	     9	   P. Burmester
+Beethoven    Concerto piano N°4      33     M. Pollini
+Mozart	      Symphonie N°40	     29     F. Bruggen
+Mozart	      Concerto piano N°22     35     S. Richter
+Beethoven    Concerto piano N°3      37     S. Richter</code></pre></div>
+          <p>Les champs <b>a_naiss</b> et <b>a_mort</b> contiennent respectivement l'année de naissance et l'année de la mort des compositeurs. La durée des
+	    œuvres est fournie en minutes. Vous pouvez évidemment ajouter autant d'enregistrements d'œuvres et de compositeurs que vous le voulez, mais ceux qui
+	    précèdent devraient suffire pour la suite de la démonstration.</p>
+          <p>Pour ce qui va suivre, nous supposerons donc que vous avez effectivement encodé les données des deux tables décrites ci-dessus. Si vous
+	    éprouvez des difficultés à écrire le script nécessaire, veuillez consulter le corrigé de l'exercice 16.1, à la
+	    page .</p>
+          <p>Le petit script ci-dessous est fourni à titre purement indicatif. Il s'agit d'un client SQL rudimentaire, qui vous permet de vous connecter à la
+	    base de données « musique » qui devrait à présent exister dans l'un de vos répertoires, d'y ouvrir un curseur et d'utiliser
+	    celui-ci pour effectuer des requêtes. Notez encore une fois que rien n'est transcrit sur le disque tant que la méthode <b>commit()</b> n'a pas été
+	    invoquée.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54541">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54541" onclick="selectionCode('contenuCoded0e54541', 'IdTitreCode-d0e54541');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54541" class="contenuCode"><code class="python_comment1"># Utilisation d'une petite base de données acceptant les requêtes SQL</code>
+ 
+<code class="python_keyword1">import</code> sqlite3
+ 
+baseDonn <code class="python_operator">=</code> sqlite3.<code class="python_function">connect</code><code class="python_operator">(</code><code class="python_literal1">"musique.sq3"</code>)
+cur <code class="python_operator">=</code> baseDonn.<code class="python_function">cursor</code><code class="python_operator">(</code>)
+<code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Veuillez entrer votre requête SQL (ou &lt;Enter&gt; pour terminer) :"</code>)
+  requete <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>)
+  <code class="python_keyword1">if</code> requete <code class="python_operator">==</code><code class="python_literal1">""</code>:
+      <code class="python_keyword1">break</code>
+  <code class="python_keyword1">try</code>:
+      cur.<code class="python_function">execute</code><code class="python_operator">(</code>requete)	   <code class="python_comment1"># exécution de la requête SQL</code>
+  <code class="python_keyword1">except</code>:
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'*** Requête SQL incorrecte ***'</code>)
+  <code class="python_keyword1">else</code>:
+      <code class="python_keyword1">for</code> enreg <code class="python_keyword1">in</code> cur: 	<code class="python_comment1"># Affichage du résultat</code>
+      <code class="python_keyword1">print</code><code class="python_operator">(</code>enreg)
+  <code class="python_keyword1">print</code><code class="python_operator">(</code>)
+ 
+choix <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Confirmez-vous l'enregistrement de l'état actuel (o/n) ? "</code>)
+<code class="python_keyword1">if</code> choix[<code class="python_digit">0</code>] <code class="python_operator">==</code> <code class="python_literal1">"o"</code> <code class="python_keyword1">or</code> choix[<code class="python_digit">0</code>] <code class="python_operator">==</code> <code class="python_literal1">"O"</code>:
+  baseDonn.<code class="python_function">commit</code><code class="python_operator">(</code>)
+<code class="python_keyword1">else</code>:
+  baseDonn.<code class="python_function">close</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Cette application très simple n'est évidemment qu'un exemple. Il faudrait y ajouter la possibilité de choisir la base de données ainsi que
+	    le répertoire de travail. Pour éviter que le script ne se « plante » lorsque l'utilisateur encode une requête incorrecte, nous avons
+	    utilisé ici le traitement des <span class="italique">exceptions</span> déjà décrit à la page .</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-A-7">18-A-7. La requête select<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>L'une des instructions les plus puissantes du langage SQL est la requête <b>select</b>, dont nous allons à présent explorer quelques
+	    fonctionnalités. Rappelons encore une fois que nous n'abordons ici qu'une très petite partie du sujet : la description détaillée de SQL peut
+	    occuper plusieurs livres.</p>
+          <p>Lancez donc le script ci-dessus, et analysez attentivement ce qui se passe lorsque vous proposez les requêtes suivantes :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54710">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54710" onclick="selectionCode('contenuCoded0e54710', 'IdTitreCode-d0e54710');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54710" class="contenuCode"><code class="pl-sql_keyword1">select</code> <code class="pl-sql_operator">*</code> <code class="pl-sql_keyword1">from</code> oeuvres
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_operator">*</code> <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">where</code> comp <code class="pl-sql_operator">=</code> <code class="pl-sql_literal1">'Mozart'</code>
+<code class="pl-sql_keyword1">select</code> comp, titre, duree  <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">order</code> <code class="pl-sql_keyword1">by</code> comp
+<code class="pl-sql_keyword1">select</code> titre, comp <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">where</code> comp<code class="pl-sql_operator">=</code><code class="pl-sql_literal1">'Beethoven'</code> <code class="pl-sql_keyword1">or</code> comp<code class="pl-sql_operator">=</code><code class="pl-sql_literal1">'Mozart'</code>
+ <code class="pl-sql_keyword1">order</code> <code class="pl-sql_keyword1">by</code> comp
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_keyword1">count</code><code class="pl-sql_operator">(*)</code> <code class="pl-sql_keyword1">from</code> oeuvres 
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_keyword1">sum</code><code class="pl-sql_operator">(</code>duree<code class="pl-sql_operator">)</code> <code class="pl-sql_keyword1">from</code> oeuvres
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_keyword1">avg</code><code class="pl-sql_operator">(</code>duree<code class="pl-sql_operator">)</code> <code class="pl-sql_keyword1">from</code> oeuvres
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_keyword1">sum</code><code class="pl-sql_operator">(</code>duree<code class="pl-sql_operator">)</code> <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">where</code> comp<code class="pl-sql_operator">=</code><code class="pl-sql_literal1">'Beethoven'</code>
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_operator">*</code> <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">where</code> duree <code class="pl-sql_operator">&gt;</code><code class="pl-sql_digit">35</code> <code class="pl-sql_keyword1">order</code> <code class="pl-sql_keyword1">by</code> duree <code class="pl-sql_keyword1">desc</code>
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_operator">*</code> <code class="pl-sql_keyword1">from</code> compositeurs <code class="pl-sql_keyword1">where</code> a_mort <code class="pl-sql_operator">&lt;</code><code class="pl-sql_digit">1800</code>
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_operator">*</code> <code class="pl-sql_keyword1">from</code> compositeurs <code class="pl-sql_keyword1">where</code> a_mort <code class="pl-sql_operator">&lt;</code><code class="pl-sql_digit">1800</code> <code class="pl-sql_keyword1">limit</code> <code class="pl-sql_digit">3</code></code></pre></div>
+          <p>Pour chacune de ces requêtes, tâchez d'exprimer le mieux possible ce qui se passe. Fondamentalement, vous activez sur la base de données des
+	    <span class="italique">filtres de sélection</span> et des <span class="italique">tris</span>.</p>
+          <p>Les requêtes suivantes sont plus élaborées, car elles concernent les deux tables à la fois.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e54917">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e54917" onclick="selectionCode('contenuCoded0e54917', 'IdTitreCode-d0e54917');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e54917" class="contenuCode"><code class="pl-sql_keyword1">select</code> o.titre, c.comp, c.a_naiss <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">as</code> o, compositeurs <code class="pl-sql_keyword1">as</code> c
+ <code class="pl-sql_keyword1">where</code> o.comp <code class="pl-sql_operator">=</code>c.comp
+<code class="pl-sql_keyword1">select</code> comp, titre, a_naiss <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">join</code> compositeurs <code class="pl-sql_keyword1">using</code><code class="pl-sql_operator">(</code>comp<code class="pl-sql_operator">)</code>	    
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_operator">*</code> <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">join</code> compositeurs <code class="pl-sql_keyword1">using</code><code class="pl-sql_operator">(</code>comp<code class="pl-sql_operator">)</code> <code class="pl-sql_keyword1">order</code> <code class="pl-sql_keyword1">by</code> a_mort
+<code class="pl-sql_keyword1">select</code> comp <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">intersect</code> <code class="pl-sql_keyword1">select</code> comp <code class="pl-sql_keyword1">from</code> compositeurs
+<code class="pl-sql_keyword1">select</code> comp <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">except</code> <code class="pl-sql_keyword1">select</code> comp <code class="pl-sql_keyword1">from</code> compositeurs
+<code class="pl-sql_keyword1">select</code> comp <code class="pl-sql_keyword1">from</code> compositeurs <code class="pl-sql_keyword1">except</code> <code class="pl-sql_keyword1">select</code> comp <code class="pl-sql_keyword1">from</code> oeuvres
+<code class="pl-sql_keyword1">select</code> <code class="pl-sql_keyword1">distinct</code> comp <code class="pl-sql_keyword1">from</code> oeuvres <code class="pl-sql_keyword1">union</code> <code class="pl-sql_keyword1">select</code> comp <code class="pl-sql_keyword1">from</code> compositeurs</code></pre></div>
+          <p>Il ne nous est pas possible de développer davantage le langage de requêtes dans le cadre restreint de cet ouvrage. Nous allons cependant examiner
+	    encore un exemple de réalisation Python faisant appel à un système de bases de données, mais en supposant cette fois qu'il s'agisse de dialoguer
+	    avec un système serveur indépendant (lequel pourrait être par exemple un gros serveur de bases de données d'entreprise, un serveur de documentation
+	    dans une école, etc.). Du fait qu'il existe d'excellents logiciels libres et gratuits, vous pouvez aisément mettre en service vous-même un serveur
+	    extrêmement performant tel que <span class="italique">PostgreSQL</span><a class="signetNoteBasPage" id="signetNoteBasPage95" href="#noteBasPage95">(95)</a>. L'exercice sera
+		   particulièrement intéressant si vous prenez la peine d'installer le logiciel serveur sur une machine distincte de votre poste de travail habituel, et
+		   de relier les deux par l'intermédiaire d'une connexion réseau de type TCP/IP.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L18-B">18-B. Ébauche d'un logiciel client pour PostgreSQL<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Pour terminer ce chapitre, nous allons vous proposer dans les pages qui suivent un exemple de réalisation concrète. Il ne s'agira pas d'un
+	  véritable logiciel (le sujet exigerait qu'on lui consacre un ouvrage spécifique), mais plutôt d'une ébauche d'analyse, destinée à vous
+	  montrer comment vous pouvez « penser comme un programmeur » lorsque vous abordez un problème complexe.</p>
+        <p>Les techniques que nous allons mettre en œuvre ici sont de simples suggestions, dans lesquelles nous essayerons d'utiliser au mieux les outils que vous
+	  avez découverts au cours de votre apprentissage dans les chapitres précédents, à savoir : les structures de données de haut niveau (listes
+	  et dictionnaires), et la programmation par objets. Il va de soi que les options retenues dans cet exercice restent largement critiquables : vous pouvez bien
+	  évidemment traiter les mêmes problèmes en utilisant des approches différentes.</p>
+        <p>Notre objectif concret est d'arriver à réaliser rapidement un client rudimentaire, capable de dialoguer avec un « vrai » serveur
+	  de bases de données Nous voudrions que notre client reste un petit utilitaire très généraliste : il devra être capable de mettre en place
+	  une petite base de données comportant plusieurs tables, de produire des enregistrements pour chacune d'elles, et nous permettre de tester le résultat de
+	  requêtes SQL basiques.</p>
+        <p>Dans les lignes qui suivent, nous supposerons que vous avez déjà accès à un serveur <span class="italique">PostgreSQL</span>, sur lequel une base de données
+	  « discotheque » aura été créée pour l'utilisateur « jules », lequel s'identifie à l'aide du mot de passe
+	  « abcde ». Ce serveur peut être situé sur une machine distante accessible via un réseau, ou localement sur votre ordinateur
+	  personnel.</p>
+        <p>La configuration complète d'un serveur <span class="italique">PostgreSQL</span> sort du cadre de cet ouvrage, mais une installation basique n'est pas bien compliquée sur un
+	  système Linux récent, installé depuis une distribution « classique » telle que <span class="italique">Debian</span>, <span class="italique">Ubuntu</span>, <span class="italique">RedHat</span>,
+	  <span class="italique">SuSE</span>... </p>
+        <p>Il vous suffit d'installer le paquetage contenant le serveur (soit par exemple le paquetage <b>Postgresql-8.4</b> dans la version actuelle de Ubuntu-Linux au
+	  moment où nous écrivons ces lignes), puis d'accomplir les quelques opérations ci-après :</p>
+        <p>En tant qu'administrateur (<span class="italique">root</span>) du système Linux, vous éditez le fichier de configuration <b>pg_hba.conf</b> qui devrait se trouver soit dans
+	  un sous-répertoire de <b>/etc/postgresql</b>, soit dans un sous-répertoire de <b>/var/lib/postgresql</b>. Dans ce fichier, toutes les lignes doivent rester des
+	  commentaires (c'est-à-dire commencer par le caractère #), à l'exception des suivantes :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">local </span>
+            <span style="color:#000080;">all </span>
+            <span style="color:#000080;">postgres </span>
+            <span style="color:#000080;">ident</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">local </span>
+            <span style="color:#000080;">all </span>
+            <span style="color:#000080;">all </span>
+            <span style="color:#000080;">md5</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">host </span>
+            <span style="color:#000080;">all </span>
+            <span style="color:#000080;">all </span>
+            <span style="color:#000080;">0.0.0.0 </span>
+            <span style="color:#000080;">0.0.0.0 </span>
+            <span style="color:#000080;">reject</span>
+          </b>
+        </p>
+        <p>À l'aide de la commande système <b><span style="color:#000080;">sudo passwd</span></b>, vous choisissez un mot de passe pour l'utilisateur
+	  <span class="italique">postgres.</span> (Il s'agit d'un utilisateur système créé automatiquement lors de l'installation du paquetage, et qui sera le grand patron (ou
+	  <span class="italique">postmaster</span>) de votre serveur PostgreSQL.</p>
+        <p>Vous redémarrez le service PostgreSQL, à l'aide d'une commande telle que :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">sudo  /etc/init.d/postgresql-8.4  restart</span>
+          </b>
+        </p>
+        <p>Il vous faut ensuite ouvrir une session sur le système Linux en tant qu'utilisateur <span class="italique">postgres</span>, (au départ, celui-ci est le seul à pouvoir
+	  créer de nouveaux utilisateurs du SGBDR), et lancer la commande <b>createuser</b> :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">createuser jules -d -P </span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Saisir le mot de passe pour le nouveau rôle : *****</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Le saisir de nouveau : *****</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Le nouveau rôle est-il super-utilisateur ? (o/n) n </span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Le nouveau rôle est-il autorisé à créer de nouveaux rôles ? (o/n) n</span>
+          </b>
+        </p>
+        <p>Ces commandes définissent un nouvel utilisateur « jules » pour le système <span class="italique">PostgreSQL</span>, et cet utilisateur devra se connecter
+	  grâce au mot de passe fourni (« abcde », dans notre exercice). Le nom d'utilisateur est quelconque : il ne doit pas nécessairement
+	  correspondre à un utilisateur déjà répertorié dans le système Linux.</p>
+        <p>Vous pouvez désormais reprendre votre identité habituelle, et créer une ou plusieurs bases de données au nom de
+	  « jules », à l'aide de la commande <b>createdb</b> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e55261">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e55261" onclick="selectionCode('contenuCoded0e55261', 'IdTitreCode-d0e55261');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e55261" class="contenuCode">createdb <code class="pl-sql_operator">-</code>U jules	  discotheque 
+Mot de passe :	  abcde</code></pre></div>
+        <p>C'est suffisant. À ce stade, le serveur <span class="italique">PostgreSQL</span> est prêt à dialoguer avec le client Python décrit dans les pages qui
+	  suivent.</p>
+        
+		<h4 class="TitreSection2" id="L18-B-1">18-B-1. Décrire la base de données dans un dictionnaire d'application<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Une application dialoguant avec une base de données est presque toujours une application complexe. Elle comporte donc nécessairement de nombreuses
+	    lignes de code, qu'il s'agit de structurer le mieux possible en les regroupant dans des classes (ou au moins des fonctions) bien encapsulées.</p>
+          <p>En de nombreux endroits du code, souvent fort éloignés les uns des autres, des blocs d'instructions doivent prendre en compte la structure de la
+	    base de données, c'est-à-dire son découpage en un certain nombre de tables et de champs, ainsi que les relations qui établissent une
+	    hiérarchie dans les enregistrements.</p>
+          <p>Or, l'expérience montre que la structure d'une base de données est rarement définitive. Au cours d'un développement, on réalise
+	    souvent qu'il est nécessaire de lui ajouter ou de lui retirer des champs, parfois même de remplacer une table mal conçue par deux autres, etc. Il n'est
+	    donc pas prudent de programmer des portions de code trop spécifiques d'une structure particulière, « en dur ».</p>
+          <p>Au contraire, il est hautement recommandable <span class="italique">de décrire plutôt la structure complète de la base de données en un seul endroit du
+	    programme</span>, et d'utiliser ensuite cette description comme référence pour la génération semi-automatique des instructions particulières
+	    concernant telle table ou tel champ. On évite ainsi, dans une large mesure, le cauchemar de devoir traquer et modifier un grand nombre d'instructions un peu
+	    partout dans le code, chaque fois que la structure de la base de données change un tant soit peu. Au lieu de cela, il suffit de changer seulement la description
+	    de référence, et la plus grosse partie du code reste correcte sans nécessiter de modification.</p>
+          <blockquote class="citation"><div>Nous tenons là une idée maîtresse pour réaliser des applications robustes : un logiciel destiné au traitement de données
+	    devrait toujours être construit sur la base d<span class="italique">'</span>un dictionnaire d<span class="italique">'</span>application.</div></blockquote>
+          <p>Ce que nous entendons ici par « dictionnaire d'application » ne doit pas nécessairement revêtir la forme d'un dictionnaire
+	    Python. N'importe quelle structure de données peut convenir, l'essentiel étant de se construire <span class="italique">une référence centrale décrivant les
+	    données</span> que l'on se propose de manipuler, avec peut-être aussi un certain nombre d'informations concernant leur mise en forme.</p>
+          <p>Du fait de leur capacité à rassembler en une même entité des données de n'importe quel type, les listes, tuples et dictionnaires de
+	    Python conviennent parfaitement pour ce travail. Dans l'exemple des pages suivantes, nous avons utilisé nous-mêmes un dictionnaire, dont les valeurs sont des
+	    listes de tuples, mais vous pourriez tout aussi bien opter pour une organisation différente des mêmes informations.</p>
+          <p>Tout cela étant bien établi, il nous reste encore à régler une question d'importance : où allons-nous installer
+	    concrètement ce dictionnaire d'application ?</p>
+          <p>Ses informations devront pouvoir être consultées depuis n'importe quel endroit du programme. Il semble donc obligatoire de l'installer dans une
+	    variable globale, de même d'ailleurs que d'autres données nécessaires au fonctionnement de l'ensemble de notre logiciel. Or vous savez que l'utilisation
+	    de variables globales n'est pas recommandée : elle comporte des risques, qui augmentent avec la taille du programme. De toute façon, les variables dites
+	    globales ne sont en fait globales qu'à l'intérieur d'un même module. Si nous souhaitons organiser notre logiciel comme un ensemble de modules (ce qui
+	    constitue par ailleurs une excellente pratique), nous n'aurons accès à nos variables globales que dans un seul d'entre eux.</p>
+          <p>Pour résoudre ce petit problème, il existe cependant une solution simple et élégante : <span class="italique">regrouper dans une classe particulière
+	    toutes les variables qui nécessitent un statut global</span> pour l'ensemble de l'application. Ainsi encapsulées dans l'espace de noms d'une classe, ces
+	    variables peuvent être utilisées sans problème dans n'importe quel module : il suffit en effet que celui-ci importe la classe en question. De plus,
+	    l'utilisation de cette technique entraîne une conséquence intéressante : le caractère « global » des variables
+	    définies de cette manière apparaît très clairement dans leur nom qualifié, puisque ce nom commence par celui de la classe
+	    contenante.</p>
+          <p>Si vous choisissez, par exemple, un nom explicite tel que <b>Glob</b> pour la classe destinée à accueillir vos variables
+	    « globales », vous vous assurez de devoir faire référence à ces variables partout dans votre code avec des noms tout aussi
+	    explicites tels que <b>Glob</b>.<b>ceci</b> , <b>Glob</b>.<b>cela</b> , etc<a class="signetNoteBasPage" id="signetNoteBasPage96" href="#noteBasPage96">(96)</a>.</p>
+          <p>C'est cette technique que vous allez découvrir à présent dans les premières lignes de notre script. Nous y définissons effectivement
+	    une classe <b>Glob()</b>, qui n'est donc rien d'autre qu'un simple conteneur. Aucun objet ne sera instancié à partir de cette classe, laquelle ne comporte
+	    d'ailleurs aucune méthode. Nos variables « globales » y sont définies comme de simples variables de classe, et nous pourrons donc y faire
+	    référence dans tout le reste du programme en tant qu'attributs de <b>Glob()</b>. Le nom de la base de données, par exemple, pourra être
+	    retrouvé partout dans la variable <b>Glob</b>.<b>dbName</b> ; le nom ou l'adresse IP du serveur dans la variable <b>Glob</b>.<b>host</b>, etc. :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e55371">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e55371" onclick="selectionCode('contenuCoded0e55371', 'IdTitreCode-d0e55371');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e55371" class="contenuCode"><code class="python_keyword1">class</code> <code class="python_function">Glob</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_literal2">"""Espace de noms pour les variables et fonctions &lt;pseudo-globales&gt;"""</code>
+ 
+  dbName <code class="python_operator">=</code> <code class="python_literal1">"discotheque"</code>      <code class="python_comment1"># nom de la base de données</code>
+  user <code class="python_operator">=</code> <code class="python_literal1">"jules"</code>	  <code class="python_comment1"># propriétaire ou utilisateur</code>
+  passwd <code class="python_operator">=</code> <code class="python_literal1">"abcde"</code>	    <code class="python_comment1"># mot de passe d'accès</code>
+  host <code class="python_operator">=</code> <code class="python_literal1">"127.0.0.1"</code>	      <code class="python_comment1"># nom ou adresse IP du serveur</code>
+  port <code class="python_operator">=</code><code class="python_digit">5432</code>
+ 
+  <code class="python_comment1"># Structure de la base de données.  Dictionnaire des tables &amp; champs :</code>
+  dicoT <code class="python_operator">=</code>{<code class="python_literal1">"compositeurs"</code>:[<code class="python_operator">(</code><code class="python_literal1">'id_comp'</code>, <code class="python_literal1">"k"</code>, <code class="python_literal1">"clé primaire"</code>),
+	      <code class="python_operator">(</code><code class="python_literal1">'nom'</code>, <code class="python_digit">25</code>, <code class="python_literal1">"nom"</code>),
+	      <code class="python_operator">(</code><code class="python_literal1">'prenom'</code>, <code class="python_digit">25</code>, <code class="python_literal1">"prénom"</code>),
+	      <code class="python_operator">(</code><code class="python_literal1">'a_naiss'</code>, <code class="python_literal1">"i"</code>, <code class="python_literal1">"année de naissance"</code>),
+	      <code class="python_operator">(</code><code class="python_literal1">'a_mort'</code>, <code class="python_literal1">"i"</code>, <code class="python_literal1">"année de mort"</code>)],
+      <code class="python_literal1">"oeuvres"</code>:[<code class="python_operator">(</code><code class="python_literal1">'id_oeuv'</code>, <code class="python_literal1">"k"</code>, <code class="python_literal1">"clé primaire"</code>),
+	     <code class="python_operator">(</code><code class="python_literal1">'id_comp'</code>, <code class="python_literal1">"i"</code>, <code class="python_literal1">"clé compositeur"</code>),
+	     <code class="python_operator">(</code><code class="python_literal1">'titre'</code>, <code class="python_digit">50</code>, <code class="python_literal1">"titre de l'oeuvre"</code>),
+	     <code class="python_operator">(</code><code class="python_literal1">'duree'</code>, <code class="python_literal1">"i"</code>, <code class="python_literal1">"durée (en minutes)"</code>),
+	     <code class="python_operator">(</code><code class="python_literal1">'interpr'</code>, <code class="python_digit">30</code>, <code class="python_literal1">"interprète principal"</code>)]}</code></pre></div>
+          <p>Le dictionnaire d'application décrivant la structure de la base de données est contenu dans la variable <b>Glob.dicoT</b>.</p>
+          <p>Il s'agit d'un dictionnaire Python, dont les clés sont les noms des tables. Quant aux valeurs, chacune d'elles est une liste contenant la description de
+	    tous les champs de la table, sous la forme d'autant de tuples.</p>
+          <p>Chaque tuple décrit donc un champ particulier de la table. Pour ne pas encombrer notre exercice, nous avons limité cette description à trois
+	    informations seulement : le nom du champ, son type et un bref commentaire. Dans une véritable application, il serait judicieux d'ajouter encore d'autres
+	    informations ici, concernant par exemple des valeurs limites éventuelles pour les données de ce champ, le formatage à leur appliquer lorsqu'il s'agit de
+	    les afficher à l'écran ou de les imprimer, le texte qu'il faut placer en haut de colonne lorsque l'on veut les présenter dans un tableau,
+	    etc.</p>
+          <p>Il peut vous paraître assez fastidieux de décrire ainsi très en détail la structure de vos données, alors que vous voudriez
+	    probablement commencer tout de suite une réflexion sur les divers algorithmes à mettre en œuvre afin de les traiter. Sachez cependant que si elle est
+	    bien faite, une telle description structurée vous fera certainement gagner beaucoup de temps par la suite, parce qu'elle vous permettra d'automatiser pas mal de
+	    choses. Vous en verrez une démonstration un peu plus loin. En outre, vous devez vous convaincre que cette tâche un peu ingrate vous prépare à bien
+	    structurer aussi le reste de votre travail : organisation des formulaires, tests à effectuer, etc.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-B-2">18-B-2. Définir une classe d'objets-interfaces<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>La classe <b>Glob()</b> décrite à la rubrique précédente sera donc installée en début de script, ou bien dans un module
+	    séparé importé en début de script. Pour la suite de l'exposé, nous supposerons que c'est cette dernière formule qui est retenue :
+	    nous avons sauvegardé la classe <b>Glob()</b> dans un module nommé <b>dict_app</b>.<b>py</b>, d'où nous pouvons à présent l'importer dans le
+	    script suivant.</p>
+          <p>Ce nouveau script définit une classe d'objets-interfaces. Nous voulons en effet essayer de mettre à profit ce que nous avons appris dans les
+	    chapitres précédents, et donc privilégier la programmation par objets, afin de créer des portions de code bien encapsulées et largement
+	    réutilisables.</p>
+          <p>Les objets-interfaces que nous voulons construire seront similaires aux objets-fichiers que nous avons abondamment utilisés pour la gestion des fichiers
+	    au chapitre 9. Vous vous rappelez par exemple que nous ouvrons un fichier en créant un objet-fichier, à l'aide de la fonction-fabrique <b>open()</b>. D'une
+	    manière similaire, nous ouvrirons la communication avec la base de données en commençant par créer un objet-interface à l'aide de la classe
+	    <b>GestionBD()</b>, ce qui établira la connexion. Pour lire ou écrire dans un fichier ouvert, nous utilisons diverses méthodes de l'objet-fichier. D'une
+	    manière analogue, nous effectuerons nos opérations sur la base de données par l'intermédiaire des diverses méthodes de
+	    l'objet-interface.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e55597">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e55597" onclick="selectionCode('contenuCoded0e55597', 'IdTitreCode-d0e55597');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/>50.<br/>51.<br/>52.<br/>53.<br/>54.<br/>55.<br/>56.<br/>57.<br/>58.<br/>59.<br/>60.<br/>61.<br/>62.<br/>63.<br/>64.<br/>65.<br/>66.<br/>67.<br/>68.<br/>69.<br/>70.<br/>71.<br/>72.<br/>73.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e55597"><code class="python_keyword1">import</code> sys
+<code class="python_keyword1">from</code> pg8000 <code class="python_keyword1">import</code> DBAPI
+<code class="python_keyword1">from</code> dict_app <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_keyword1">class</code> <code class="python_function">GestionBD</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_literal2">"""Mise en place et interfaçage d'une base de données PostgreSQL"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, dbName, user, passwd, host, port <code class="python_operator">=</code><code class="python_digit">5432</code>):
+      <code class="python_literal1">"Établissement de la connexion - Création du curseur"</code>
+      <code class="python_keyword1">try</code>:
+      self.baseDonn <code class="python_operator">=</code> DBAPI.<code class="python_function">connect</code><code class="python_operator">(</code>host <code class="python_operator">=</code>host, port <code class="python_operator">=</code>port,
+		     database <code class="python_operator">=</code>dbName,
+		     user<code class="python_operator">=</code>user, password<code class="python_operator">=</code>passwd)
+      <code class="python_keyword1">except</code> <code class="python_keyword3">Exception</code> <code class="python_keyword1">as</code> err:
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'La connexion avec la base de données a échoué :</code><code class="python_literal4">\n</code><code class="python_literal1">'</code>\
+	 <code class="python_literal1">'Erreur détectée :</code><code class="python_literal4">\n%s</code><code class="python_literal1">'</code> <code class="python_operator">%</code> err)
+      self.echec <code class="python_operator">=</code><code class="python_digit">1</code>
+      <code class="python_keyword1">else</code>:
+      self.cursor <code class="python_operator">=</code> self.baseDonn.<code class="python_function">cursor</code><code class="python_operator">(</code>)   <code class="python_comment1"># création du curseur</code>
+      self.echec <code class="python_operator">=</code><code class="python_digit">0</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">creerTables</code><code class="python_operator">(</code>self, dicTables):
+      <code class="python_literal1">"Création des tables décrites dans le dictionnaire &lt;dicTables&gt;."</code>
+      <code class="python_keyword1">for</code> table <code class="python_keyword1">in</code> dicTables:	      <code class="python_comment1"># parcours des clés du dictionnaire</code>
+      req <code class="python_operator">=</code> <code class="python_literal1">"CREATE TABLE </code><code class="python_literal4">%s</code><code class="python_literal1"> ("</code> <code class="python_operator">%</code> table
+      pk <code class="python_operator">=</code><code class="python_literal1">''</code>
+      <code class="python_keyword1">for</code> descr <code class="python_keyword1">in</code> dicTables[table]:
+	  nomChamp <code class="python_operator">=</code> descr[<code class="python_digit">0</code>]	  <code class="python_comment1"># libellé du champ à créer</code>
+	  tch <code class="python_operator">=</code> descr[<code class="python_digit">1</code>]	 <code class="python_comment1"># type de champ à créer</code>
+	  <code class="python_keyword1">if</code> tch <code class="python_operator">==</code><code class="python_literal1">'i'</code>:
+	  typeChamp <code class="python_operator">=</code><code class="python_literal1">'INTEGER'</code>
+	  <code class="python_keyword1">elif</code> tch <code class="python_operator">==</code><code class="python_literal1">'k'</code>:
+	  <code class="python_comment1"># champ 'clé primaire' (entier incrémenté automatiquement)</code>
+	  typeChamp <code class="python_operator">=</code><code class="python_literal1">'SERIAL'</code>
+	  pk <code class="python_operator">=</code> nomChamp
+	  <code class="python_keyword1">else</code>:
+	  typeChamp <code class="python_operator">=</code><code class="python_literal1">'VARCHAR(</code><code class="python_literal4">%s</code><code class="python_literal1">)'</code> <code class="python_operator">%</code> tch
+	  req <code class="python_operator">=</code> req <code class="python_operator">+</code> <code class="python_literal1">"</code><code class="python_literal4">%s</code><code class="python_literal1"> </code><code class="python_literal4">%s</code><code class="python_literal1">, "</code> <code class="python_operator">%</code> <code class="python_operator">(</code>nomChamp, typeChamp)
+      <code class="python_keyword1">if</code> pk <code class="python_operator">==</code> <code class="python_literal1">''</code>:
+	  req <code class="python_operator">=</code> req[:<code class="python_operator">-</code><code class="python_digit">2</code>] <code class="python_operator">+</code> <code class="python_literal1">")"</code>
+      <code class="python_keyword1">else</code>:
+	  req <code class="python_operator">=</code> req <code class="python_operator">+</code> <code class="python_literal1">"CONSTRAINT </code><code class="python_literal4">%s</code><code class="python_literal1">_pk PRIMARY KEY(</code><code class="python_literal4">%s</code><code class="python_literal1">))"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>pk, pk)
+      self.<code class="python_function">executerReq</code><code class="python_operator">(</code>req)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">supprimerTables</code><code class="python_operator">(</code>self, dicTables):
+      <code class="python_literal1">"Suppression de toutes les tables décrites dans &lt;dicTables&gt;"</code>
+      <code class="python_keyword1">for</code> table <code class="python_keyword1">in</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=list#list"><span>list</span></a><code class="python_operator">(</code>dicTables.<code class="python_function">keys</code><code class="python_operator">(</code>)):
+      req <code class="python_operator">=</code><code class="python_literal1">"DROP TABLE </code><code class="python_literal4">%s</code><code class="python_literal1">"</code> <code class="python_operator">%</code> table
+      self.<code class="python_function">executerReq</code><code class="python_operator">(</code>req)
+      self.<code class="python_function">commit</code><code class="python_operator">(</code>)		 <code class="python_comment1"># transfert -&gt; disque</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">executerReq</code><code class="python_operator">(</code>self, req, param <code class="python_operator">=</code><code class="python_keyword3">None</code>):
+      <code class="python_literal1">"Exécution de la requête &lt;req&gt;, avec détection d'erreur éventuelle"</code>
+      <code class="python_keyword1">try</code>:
+      self.cursor.<code class="python_function">execute</code><code class="python_operator">(</code>req, param)
+      <code class="python_keyword1">except</code> <code class="python_keyword3">Exception</code> <code class="python_keyword1">as</code> err:
+      <code class="python_comment1"># afficher la requête et le message d'erreur système :</code>
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Requête SQL incorrecte :</code><code class="python_literal4">\n</code><code class="python_literal1">{}</code><code class="python_literal4">\n</code><code class="python_literal1">Erreur détectée :"</code>.<code class="python_function">format</code><code class="python_operator">(</code>req))
+      <code class="python_keyword1">print</code><code class="python_operator">(</code>err)
+      <code class="python_keyword1">return</code> <code class="python_digit">0</code>
+      <code class="python_keyword1">else</code>:
+      <code class="python_keyword1">return</code> <code class="python_digit">1</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">resultatReq</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"renvoie le résultat de la requête précédente (une liste de tuples)"</code>
+      <code class="python_keyword1">return</code> self.cursor.<code class="python_function">fetchall</code><code class="python_operator">(</code>)
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">commit</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">if</code> self.baseDonn:
+      self.baseDonn.<code class="python_function">commit</code><code class="python_operator">(</code>)	 <code class="python_comment1"># transfert curseur -&gt; disque</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">close</code><code class="python_operator">(</code>self):
+      <code class="python_keyword1">if</code> self.baseDonn:
+      self.baseDonn.<code class="python_function">close</code><code class="python_operator">(</code>)
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L18-B-2-A">18-B-2-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Lignes 1-3 : Outre notre propre module <b>dict_app</b> qui contient les variables « globales », nous importons le module
+		<b>sys</b> qui englobe quelques fonctions système, et surtout le module <b>pg8000</b> qui rassemble tout ce qui est nécessaire pour communiquer avec
+		<span class="italique">PostgreSQL</span>. Ce module ne fait pas partie de la distribution standard de Python. Il s'agit d'un des modules d'interface Python-PostgreSQL déjà
+		disponibles pour Python 3. Plusieurs autres bibliothèques plus performantes, disponibles depuis longtemps pour les versions précédentes de
+		Python, seront très certainement adaptés sous peu (l'excellent pilote <b>psycopg2</b> devrait être bientôt prêt). Pour l'installation de
+		pg8000, voyez page .</li>
+              <li>Ligne 7 : Lors de la création des objets-interfaces, nous devrons fournir les paramètres de la connexion : nom de la base de
+		données, nom de son utilisateur, nom ou adresse IP de la machine où est situé le serveur. Le numéro du port de communication est habituellement
+		celui que nous avons prévu par défaut. Toutes ces informations sont supposées être en votre possession.</li>
+              <li>Lignes 9 à 19 : Il est hautement recommandable de placer le code servant à établir la connexion à l'intérieur
+		d'un gestionnaire d'exceptions <b>try</b>-<b>except</b>-<b>else</b> (voir page ), car nous ne pouvons pas présumer que le serveur sera nécessairement
+		accessible. Remarquons au passage que la méthode <b>__init__()</b> ne peut pas renvoyer de valeur (à l'aide de l'instruction <b>return</b>), du fait
+		qu'elle est invoquée automatiquement par Python lors de l'instanciation d'un objet. En effet : ce qui est renvoyé dans ce cas au programme appelant
+		est l'objet nouvellement construit. Nous ne pouvons donc pas signaler la réussite ou l'échec de la connexion au programme appelant à l'aide d'une
+		valeur de retour. Une solution simple à ce petit problème consiste à mémoriser le résultat de la tentative de connexion dans un attribut
+		d'instance (variable <b>self.echec</b>), que le programme appelant peut ensuite tester quand bon lui semble.</li>
+              <li>Lignes 21 à 42 : Cette méthode automatise la création de toutes les tables de la base de données, en tirant profit de la
+		description du dictionnaire d'application, lequel doit lui être transmis en argument. Une telle automatisation sera évidemment d'autant plus
+		appréciable, que la structure de la base de données sera plus complexe (imaginez par exemple une base de données contenant 35 tables !). Afin
+		de ne pas alourdir la démonstration, nous avons restreint les capacités de cette méthode à la création de champs des types <span class="italique">integer</span>
+		et <span class="italique">varchar</span>. Libre à vous d'ajouter les instructions nécessaires pour créer des champs d'autres types.<br/><br/>
+		 Si vous détaillez le code, vous constaterez qu'il consiste simplement à construire une requête SQL pour chaque table, morceau par morceau, dans la
+		   chaîne de caractères <b>req</b>. Celle-ci est ensuite transmise à la méthode <b>executerReq()</b> pour exécution. Si vous souhaitez
+		   visualiser la requête ainsi construite, vous pouvez évidemment ajouter une instruction  <b><span style="color:#000080;">print(req)</span></b> 
+		   juste après la ligne 42.<br/><br/>
+		 Vous pouvez également ajouter à cette méthode la capacité de mettre en place les <span class="italique">contraintes d'intégrité
+		   référentielle</span>, sur la base d'un complément au dictionnaire d'application qui décrirait ces contraintes. Nous ne développons pas
+		   cette question ici, mais cela ne devrait pas vous poser de problème si vous savez de quoi il retourne.</li>
+              <li>Lignes 44 à 49 : Beaucoup plus simple que la précédente, cette méthode utilise le même principe pour supprimer
+		toutes les tables décrites dans le dictionnaire d'application.</li>
+              <li>Lignes 51 à 61 : Cette méthode transmet simplement la requête à l'objet curseur. Son utilité est de simplifier
+		l'accès à celui-ci et de produire un message d'erreur si nécessaire.</li>
+              <li>Lignes 63 à 73 : Ces méthodes ne sont que de simples relais vers les objets produits par le module <b>pg8000</b> :
+		l'objet-connecteur produit par la fonction-fabrique <b>DBAPI.connect()</b>, et l'objet curseur correspondant. Elles permettent de simplifier légèrement
+		le code du programme appelant.</li>
+            </ul>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-B-3">18-B-3. Construire un générateur de formulaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Nous avons ajouté cette classe à notre exercice pour vous expliquer comment vous pouvez utiliser le même dictionnaire d'application afin
+	    d'élaborer du code généraliste. L'idée développée ici est de réaliser une classe d'objets-formulaires capables de prendre en charge
+	    l'encodage des enregistrements de n'importe quelle table, en construisant automatiquement les instructions d'entrée adéquates grâce aux informations
+	    tirées du dictionnaire d'application.</p>
+          <p>Dans une application véritable, ce formulaire trop simpliste devrait certainement être fortement remanié, et il prendrait vraisemblablement la
+	    forme d'une fenêtre spécialisée, dans laquelle les champs d'entrée et leurs libellés pourraient encore une fois être
+	    générés de manière automatique. Nous ne prétendons donc pas qu'il constitue un bon exemple, mais nous voulons simplement vous montrer comment
+	    vous pouvez automatiser sa construction dans une large mesure. Tâchez de réaliser vos propres formulaires en vous servant de principes
+	    semblables.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e56391">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e56391" onclick="selectionCode('contenuCoded0e56391', 'IdTitreCode-d0e56391');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e56391"><code class="python_keyword1">class</code> <code class="python_function">Enregistreur</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+  <code class="python_literal2">"""classe pour gérer l'entrée d'enregistrements divers"""</code>
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, bd, table):
+      self.bd <code class="python_operator">=</code>bd
+      self.table <code class="python_operator">=</code>table
+      self.descriptif <code class="python_operator">=</code>Glob.dicoT[table]   <code class="python_comment1"># descriptif des champs</code>
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">entrer</code><code class="python_operator">(</code>self):
+      <code class="python_literal1">"procédure d'entrée d'un enregistrement entier"</code>
+      champs <code class="python_operator">=</code><code class="python_literal1">"("</code>	 <code class="python_comment1"># ébauche de chaîne pour les noms de champs</code>
+      valeurs <code class="python_operator">=</code>[]	 <code class="python_comment1"># liste pour les valeurs correspondantes</code>
+      <code class="python_comment1"># Demander successivement une valeur pour chaque champ :</code>
+      <code class="python_keyword1">for</code> cha, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a>, nom <code class="python_keyword1">in</code> self.descriptif:
+      <code class="python_keyword1">if</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a> <code class="python_operator">==</code><code class="python_literal1">"k"</code>:	<code class="python_comment1"># on ne demandera pas le n° d'enregistrement</code>
+	  <code class="python_keyword1">continue</code>	<code class="python_comment1"># à l'utilisateur (numérotation auto.)</code>
+      champs <code class="python_operator">=</code> champs <code class="python_operator">+</code> cha <code class="python_operator">+</code> <code class="python_literal1">","</code>
+      val <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Entrez le champ </code><code class="python_literal4">%s</code><code class="python_literal1"> :"</code> <code class="python_operator">%</code> nom)
+      <code class="python_keyword1">if</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a> <code class="python_operator">==</code><code class="python_literal1">"i"</code>:
+	  val <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>val)
+      valeurs.<code class="python_function">append</code><code class="python_operator">(</code>val)
+ 
+      balises <code class="python_operator">=</code><code class="python_literal1">"("</code> <code class="python_operator">+</code> <code class="python_literal1">"</code><code class="python_literal4">%s</code><code class="python_literal1">,"</code> <code class="python_operator">*</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=len#len"><span>len</span></a><code class="python_operator">(</code>valeurs)     <code class="python_comment1"># balises de conversion</code>
+      champs <code class="python_operator">=</code> champs[:<code class="python_operator">-</code><code class="python_digit">1</code>] <code class="python_operator">+</code> <code class="python_literal1">")"</code>    <code class="python_comment1"># supprimer la dernière virgule,</code>
+      balises <code class="python_operator">=</code> balises[:<code class="python_operator">-</code><code class="python_digit">1</code>] <code class="python_operator">+</code> <code class="python_literal1">")"</code>  <code class="python_comment1"># et ajouter une parenthèse</code>
+      req <code class="python_operator">=</code><code class="python_literal1">"INSERT INTO </code><code class="python_literal4">%s</code><code class="python_literal1"> </code><code class="python_literal4">%s</code><code class="python_literal1"> VALUES </code><code class="python_literal4">%s</code><code class="python_literal1">"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>self.table, champs, balises)
+      self.bd.<code class="python_function">executerReq</code><code class="python_operator">(</code>req, valeurs)
+ 
+      ch <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Continuer (O/N) ? "</code>)
+      <code class="python_keyword1">if</code> ch.<code class="python_function">upper</code><code class="python_operator">(</code>) <code class="python_operator">==</code> <code class="python_literal1">"O"</code>:
+      <code class="python_keyword1">return</code> <code class="python_digit">0</code>
+      <code class="python_keyword1">else</code>:
+      <code class="python_keyword1">return</code> <code class="python_digit">1</code>
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L18-B-3-A">18-B-3-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>Lignes 1 à 6 : Au moment de leur instanciation, les objets de cette classe reçoivent la référence de l'une des
+		tables du dictionnaire. C'est ce qui leur donne accès au descriptif des champs.</li>
+              <li>Ligne 8 : Cette méthode <b>entrer()</b> génère le formulaire proprement dit. Elle prend en charge l'entrée des enregistrements
+		dans la table, en s'adaptant à leur structure propre grâce au descriptif trouvé dans le dictionnaire. Sa fonctionnalité concrète consiste
+		encore une fois à construire morceau par morceau une chaîne de caractères qui deviendra une requête SQL, comme dans la méthode
+		<b>creerTables()</b> de la classe <b>GestionBD()</b> décrite à la rubrique précédente.<br/>
+		 Vous pourriez bien entendu ajouter à la présente classe encore d'autres méthodes, pour gérer par exemple la suppression et/ou la modification
+		   d'enregistrements.</li>
+              <li>Lignes 12 à 20 : L'attribut d'instance <b>self</b>.<b>descriptif</b> contient une liste de tuples, et chacun de ceux-ci est fait de
+		trois éléments, à savoir le nom d'un champ, le type de données qu'il est censé recevoir, et sa description « en
+		clair ». La boucle <b>for</b> de la ligne 13 parcourt cette liste et affiche pour chaque champ un message d'invite construit sur la base de la
+		description qui accompagne ce champ. Lorsque l'utilisateur a entré la valeur demandée, celle-ci et mémorisée dans une liste en construction,
+		tandis que le nom du champ s'ajoute à une chaîne en cours de formatage.</li>
+              <li>Lignes 22 à 26 : Lorsque tous les champs ont été parcourus, la requête proprement dite est assemblée et
+		exécutée. Comme nous l'avons expliqué page , les valeurs ne doivent pas être intégrés dans la chaîne de requête
+		elle-même, mais plutôt transmises comme arguments à la méthode <b>execute()</b>.</li>
+            </ul>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L18-B-4">18-B-4. Le corps de l'application<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Il ne nous paraît pas utile de développer davantage encore cet exercice dans le cadre d'un manuel d'initiation. Si le sujet vous intéresse,
+	    vous devriez maintenant en savoir assez pour commencer déjà quelques expériences personnelles. Veuillez alors consulter les bons ouvrages de
+	    référence, comme par exemple <span class="italique">Python : How to program</span> de Deitel &amp; coll., ou encore les sites web consacrés aux extensions de
+	    Python.</p>
+          <p>Le script qui suit est celui d'une petite application destinée à tester les classes décrites dans les pages qui précèdent. Libre
+	    à vous de la perfectionner, ou alors d'en écrire une autre tout à fait différente !</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e56800">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e56800" onclick="selectionCode('contenuCoded0e56800', 'IdTitreCode-d0e56800');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/>22.<br/>23.<br/>24.<br/>25.<br/>26.<br/>27.<br/>28.<br/>29.<br/>30.<br/>31.<br/>32.<br/>33.<br/>34.<br/>35.<br/>36.<br/>37.<br/>38.<br/>39.<br/>40.<br/>41.<br/>42.<br/>43.<br/>44.<br/>45.<br/>46.<br/>47.<br/>48.<br/>49.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e56800"><code class="python_comment1">###### Programme principal : #########</code>
+ 
+<code class="python_comment1"># Création de l'objet-interface avec la base de données :</code>
+bd <code class="python_operator">=</code> <code class="python_function">GestionBD</code><code class="python_operator">(</code>Glob.dbName, Glob.user, Glob.passwd, Glob.host, Glob.port)
+<code class="python_keyword1">if</code> bd.echec:
+  sys.<code class="python_function">exit</code><code class="python_operator">(</code>)
+ 
+<code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"</code><code class="python_literal4">\n</code><code class="python_literal1">Que voulez-vous faire :</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+     <code class="python_literal1">"1) Créer les tables de la base de données</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+     <code class="python_literal1">"2) Supprimer les tables de la base de données ?</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+     <code class="python_literal1">"3) Entrer des compositeurs</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+     <code class="python_literal1">"4) Entrer des oeuvres</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+     <code class="python_literal1">"5) Lister les compositeurs</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+     <code class="python_literal1">"6) Lister les oeuvres</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+     <code class="python_literal1">"7) Exécuter une requête SQL quelconque</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>\
+     <code class="python_literal1">"9) terminer ?		Votre choix :"</code>, end<code class="python_operator">=</code><code class="python_literal1">' '</code>)
+  ch <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>))
+  <code class="python_keyword1">if</code> ch <code class="python_operator">==</code><code class="python_digit">1</code>:
+      <code class="python_comment1"># création de toutes les tables décrites dans le dictionnaire :</code>
+      bd.<code class="python_function">creerTables</code><code class="python_operator">(</code>Glob.dicoT)
+  <code class="python_keyword1">elif</code> ch <code class="python_operator">==</code><code class="python_digit">2</code>:
+      <code class="python_comment1"># suppression de toutes les tables décrites dans le dic. :</code>
+      bd.<code class="python_function">supprimerTables</code><code class="python_operator">(</code>Glob.dicoT)
+  <code class="python_keyword1">elif</code> ch <code class="python_operator">==</code><code class="python_digit">3</code> <code class="python_keyword1">or</code> ch <code class="python_operator">==</code><code class="python_digit">4</code>:
+      <code class="python_comment1"># création d'un &lt;enregistreur&gt; de compositeurs ou d'oeuvres :</code>
+      table <code class="python_operator">=</code>{<code class="python_digit">3</code>:<code class="python_literal1">'compositeurs'</code>, <code class="python_digit">4</code>:<code class="python_literal1">'oeuvres'</code>}[ch]
+      enreg <code class="python_operator">=</code><code class="python_function">Enregistreur</code><code class="python_operator">(</code>bd, table)
+      <code class="python_keyword1">while</code> <code class="python_digit">1</code>:
+      <code class="python_keyword1">if</code> enreg.<code class="python_function">entrer</code><code class="python_operator">(</code>):
+	  <code class="python_keyword1">break</code>
+  <code class="python_keyword1">elif</code> ch <code class="python_operator">==</code><code class="python_digit">5</code> <code class="python_keyword1">or</code> ch <code class="python_operator">==</code><code class="python_digit">6</code>:
+      <code class="python_comment1"># listage de tous les compositeurs, ou toutes les oeuvres :</code>
+      table <code class="python_operator">=</code>{<code class="python_digit">5</code>:<code class="python_literal1">'compositeurs'</code>, <code class="python_digit">6</code>:<code class="python_literal1">'oeuvres'</code>}[ch]
+      <code class="python_keyword1">if</code> bd.<code class="python_function">executerReq</code><code class="python_operator">(</code><code class="python_literal1">"SELECT * FROM </code><code class="python_literal4">%s</code><code class="python_literal1">"</code> <code class="python_operator">%</code> table):
+      <code class="python_comment1"># analyser le résultat de la requête ci-dessus :</code>
+      records <code class="python_operator">=</code> bd.<code class="python_function">resultatReq</code><code class="python_operator">(</code>)      <code class="python_comment1"># ce sera un tuple de tuples</code>
+      <code class="python_keyword1">for</code> rec <code class="python_keyword1">in</code> records:	   <code class="python_comment1"># =&gt; chaque enregistrement</code>
+	  <code class="python_keyword1">for</code> item <code class="python_keyword1">in</code> rec:	 <code class="python_comment1"># =&gt; chaque champ dans l'enreg.</code>
+	  <code class="python_keyword1">print</code><code class="python_operator">(</code>item, end<code class="python_operator">=</code><code class="python_literal1">' '</code>)
+	  <code class="python_keyword1">print</code><code class="python_operator">(</code>)
+  <code class="python_keyword1">elif</code> ch <code class="python_operator">==</code><code class="python_digit">7</code>:
+      req <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Entrez la requête SQL : "</code>)
+      <code class="python_keyword1">if</code> bd.<code class="python_function">executerReq</code><code class="python_operator">(</code>req):
+      <code class="python_keyword1">print</code><code class="python_operator">(</code>bd.<code class="python_function">resultatReq</code><code class="python_operator">(</code>))	    <code class="python_comment1"># ce sera un tuple de tuples</code>
+  <code class="python_keyword1">else</code>:
+      bd.<code class="python_function">commit</code><code class="python_operator">(</code>)
+      bd.<code class="python_function">close</code><code class="python_operator">(</code>)
+      <code class="python_keyword1">break</code>
+</code></pre></div></div>
+          
+		<h5 class="TitreSection3" id="L18-B-4-A">18-B-4-A. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>On supposera bien évidemment que les classes décrites plus haut soient présentes dans le même script, ou qu'elles aient été
+		importées.</li>
+              <li>Lignes 3 à 6 : L'objet-interface est créé ici. Si la création échoue, l'attribut d'instance <b>bd.echec</b>
+		contient la valeur 1. Le test des lignes 5 et 6 permet alors d'arrêter l'application immédiatement (la fonction <b>exit()</b> du module <b>sys</b> sert
+		spécifiquement à cela).</li>
+              <li>Ligne 8 : Le reste de l'application consiste à proposer sans cesse le même menu, jusqu'à ce que l'utilisateur choisisse l'option
+		n<sup>o</sup> 9.</li>
+              <li>Lignes 27-28 : La classe <b>Enregistreur()</b> accepte de gérer les enregistrements de n'importe quelle table. Afin de déterminer
+		laquelle doit être utilisée lors de l'instanciation, on utilise un petit dictionnaire qui indique quel nom retenir, en fonction du choix opéré
+		par l'utilisateur (option n<sup>o</sup> 3 ou n<sup>o</sup> 4).</li>
+              <li>Lignes 29 à 31 : La méthode <b>entrer()</b> de l'objet-enregistreur renvoie une valeur 0 ou 1 suivant que l'utilisateur a
+		choisi de continuer à entrer des enregistrements, ou bien d'arrêter. Le test de cette valeur permet d'interrompre la boucle de répétition en
+		conséquence.</li>
+              <li>Lignes 35-44 : La méthode <b>executerReq()</b> renvoie une valeur 0 ou 1 suivant que la requête a été acceptée ou non par
+		le serveur. On peut donc tester cette valeur pour décider si le résultat doit être affiché ou non.</li>
+            </ul>
+            <p>Exercices</p>
+            <p>.Modifiez le script décrit dans ces pages de manière à ajouter une table supplémentaire à la base de données. Ce pourrait
+	      être par exemple une table « orchestres », dont chaque enregistrement contiendrait le nom de l'orchestre, le nom de son chef, et le nombre
+	      total d'instruments.</p>
+            <p>.Ajoutez d'autres types de champ à l'une des tables (par exemple un champ de type <span class="italique">float</span> (réel) ou de type <span class="italique">date</span>), et modifiez le
+	      script en conséquence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_17.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_19.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage88" href="#signetNoteBasPage88">(88)</a></div><div class="ContenuUneNoteBasPage">Il vous faudra certainement entrer
+	    quelques informations pour obtenir l'accès : adresse du serveur sur le réseau, nom de la base de données, nom d'utilisateur, mot de
+	    passe...</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage89" href="#signetNoteBasPage89">(89)</a></div><div class="ContenuUneNoteBasPage">Quelques variantes subsistent entre différentes implémentations du SQL, pour des requêtes très
+	    spécifiques, mais la base reste cependant la même. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage90" href="#signetNoteBasPage90">(90)</a></div><div class="ContenuUneNoteBasPage">La <span class="italique">Python DataBase
+	    Application Programming Interface Specification</span> définit un ensemble de règles de conduite pour les développeurs de modules d'accès aux divers
+	    SGBDR présents et à venir, afin que ces modules soient autant que possible interchangeables. Ainsi la même application Python devrait pouvoir
+	    indifféremment utiliser un SGBDR ou un bien un autre, au prix d'un simple échange de modules.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage91" href="#signetNoteBasPage91">(91)</a></div><div class="ContenuUneNoteBasPage">Le module SQLite de Python propose en effet quelques méthodes-raccourcis pour
+	    accéder aux données sans faire usage d'un curseur (plus exactement, en utilisant un curseur implicite). Ces méthodes ne correspondent cependant pas aux
+	    techniques standard, et nous préférons donc les ignorer ici. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage92" href="#signetNoteBasPage92">(92)</a></div><div class="ContenuUneNoteBasPage">Les applications gérant des
+	    grosses bases de données sont souvent des applications à utilisateurs multiples. Nous verrons plus loin (page ) que de telles applications mettent en
+	    œuvre plusieurs « fils » d'exécution simultanées du programme, que l'on appelle des <span class="italique">threads</span>, afin de pouvoir gérer en
+	    parallèle les requêtes émanant de plusieurs utilisateurs différents. Chacun d'eux disposera ainsi de ses propres objets connexion et curseur au
+	    sein du même programme, et il n'y aura pas de télescopages. Dans le cas de SQLite, qui est un système monoposte, la fermeture de la connexion provoque
+	    aussi la fermeture du fichier contenant la base de données, ce qui serait différent sur un gros système. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage93" href="#signetNoteBasPage93">(93)</a></div><div class="ContenuUneNoteBasPage">Les itérateurs font partie des dispositifs de programmation avancée de Python. Nous ne les étudierons pas dans cet ouvrage,
+	    de même que bien d'autres instruments très intéressants comme la définition fonctionnelle des listes, les décorateurs, etc. Il vous restera
+	    donc encore bien des choses à découvrir, si vous continuez à explorer ce langage ! </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage94" href="#signetNoteBasPage94">(94)</a></div><div class="ContenuUneNoteBasPage">Ce problème de
+	    sécurité ne se pose en fait que pour des applications web, l'attaquant se servant des champs d'un formulaire HTML pour « injecter » des
+	    instructions SQL malicieuses là où le programme n'attend que des chaînes de caractères inoffensives. Il est cependant recommandé d'utiliser de
+	    toute façon les techniques de programmation les plus sûres, même pour une simple application monoposte.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage95" href="#signetNoteBasPage95">(95)</a></div><div class="ContenuUneNoteBasPage">PostgreSQL est un SGBDR libre, disponible selon les termes d'une licence de type BSD.<br/>
+		 Ce système très élaboré est concurrent d'autres systèmes de gestion de base de données, qu'ils soient libres (comme MySQL et
+		   Firebird), ou propriétaires (comme Oracle, Sybase, DB2 et Microsoft SQL Server). Comme les projets libres Apache et Linux, PostgreSQL n'est pas
+		   contrôlé par une seule entreprise, mais est fondé sur une communauté mondiale de développeurs et d'entreprises.<br/>
+		 Des millions d'exemplaires de PostgreSQL sont installés sur des serveurs Web et des serveurs d'application.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage96" href="#signetNoteBasPage96">(96)</a></div><div class="ContenuUneNoteBasPage"><span style="color:#000000;">Vous pourriez également placer vos variables
+	    « globales » dans un module nommé </span><b><span style="color:#000000;">Glob.py</span></b><span style="color:#000000;">, puis importer celui-ci. Utiliser
+	    un module ou une classe comme espace de noms pour stocker des variables sont donc des techniques assez similaires. L'utilisation d'une classe est peut-être un peu
+	    plus souple et plus lisible, puisque la classe peut accompagner le reste du script, alors qu'un module est nécessairement un fichier
+	    distinct.</span></div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

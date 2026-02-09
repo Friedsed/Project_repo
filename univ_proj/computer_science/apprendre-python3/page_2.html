@@ -1,0 +1,444 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L2">2. Préface</a><ul class="nav-sommaire-ul Indentation2">
+      
+      
+      
+      
+      
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L2-A">2-A. Choix d'un premier langage de programmation</a></li>
+      <li><a class="summaryIndent1" href="#L2-B">2-B. Présentation du langage Python</a><ul class="nav-sommaire-ul Indentation2-B">
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L2-B-1">2-B-1. Caractéristiques du langage</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L2-C">2-C. Pour le professeur qui souhaite utiliser cet ouvrage comme support de cours</a></li>
+      <li><a class="summaryIndent1" href="#L2-D">2-D. Versions du langage</a></li>
+      <li><a class="summaryIndent1" href="#L2-E">2-E. Distribution de Python et bibliographie</a></li>
+      <li><a class="summaryIndent1" href="#L2-F">2-F. Exemples du livre</a></li>
+      <li><a class="summaryIndent1" href="#L2-G">2-G. Remerciements</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_1.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_3.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L2">2. Préface<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>En tant que professeur ayant pratiqué l'enseignement de la programmation en parallèle avec d'autres disciplines, je crois pouvoir affirmer qu'il s'agit
+	là d'une forme d'apprentissage extrêmement enrichissante pour la formation intellectuelle d'un jeune, et dont la valeur formative est au moins égale, sinon
+	supérieure, à celle de branches plus classiques telles que le latin.</p>
+      <p>Excellente idée donc, que celle de proposer cet apprentissage dans certaines filières, y compris de l'enseignement secondaire. Comprenons-nous
+	bien : il ne s'agit pas de former trop précocement de futurs programmeurs professionnels. Nous sommes simplement convaincus que l'apprentissage de la
+	programmation a sa place dans la forma<span style="color:#000000;">tion générale des jeunes (ou au moins d'une partie d'entre eux), car c'est une extraordinaire
+	école de logique, de rigueur, et même de courage.</span></p>
+      <p>
+        <span style="color:#000000;">À l'origine, le présent ouvrage a été rédigé à l'intention des élèves qui suivent le cours </span>
+        <span class="italique">
+          <span style="color:#000000;">Programmation et langages</span>
+        </span>
+        <span style="color:#000000;">de l'option </span>
+        <span class="italique">
+          <span style="color:#000000;">Sciences &amp; informatique</span>
+        </span>
+        <span style="color:#000000;">au 3e degré de l'enseignement secondaire belge. Il nous a semblé par la suite que ce cours pouvait également très bien convenir
+	  à toute personne n'ayant encore jamais programmé, mais souhaitant s'initier à cette discipline en autodidacte. </span>
+      </p>
+      <p><span style="color:#000000;">Nous y proposons une dém</span>arche d'apprentissage non linéaire qui est très certainement critiquable. Nous sommes
+	conscients qu'elle apparaîtra un peu chaotique aux yeux de certains puristes, mais nous l'avons voulue ainsi parce que nous sommes convaincus qu'il existe de
+	nombreuses manières d'apprendre (pas seulement la programmation, d'ailleurs), et qu'il faut accepter d'emblée ce fait établi que des individus
+	différents n'assimilent pas les mêmes concepts dans le même ordre. Nous avons donc cherché avant tout à susciter l'intérêt et à
+	ouvrir un maximum de portes, en nous efforçant tout de même de respecter les principes directeurs suivants :</p>
+      <ul class="ListeDVP">
+        <li>L'apprentissage que nous visons se veut généraliste : nous souhaitons mettre en évidence les invariants de la programmation et de
+	  l'informatique, sans nous laisser entraîner vers une spécialisation quelconque, ni supposer que le lecteur dispose de capacités intellectuelles hors du
+	  commun.</li>
+        <li>Les outils utilisés au cours de l'apprentissage doivent être modernes et performants, mais il faut aussi que le lecteur puisse se les procurer en toute
+	  légalité à très bas prix pour son usage personnel. Notre texte s'adresse en effet en priorité à des étudiants, et toute notre
+	  démarche d'apprentissage vise à leur donner la possibilité de mettre en chantier le plus tôt possible des réalisations personnelles qu'il
+	  pourront développer et exploiter à leur guise.</li>
+        <li><span style="color:#000000;">Nous aborderons très tôt la programmation d'une interface graphique, avant même d'avoir présenté l'ensemble des
+	  structures de données disponibles, parce que cette programmation présente des défis qui apparaissent bien concrets aux yeux d'un programmeur
+	  débutant. Nous observons par ailleurs que les jeunes qui arrivent aujourd'hui dans nos classes « baignent » déjà dans une culture
+	  informatique à base de fenêtres et autres objets graphiques interactifs. S</span>'ils choisissent d'apprendre la programmation, ils sont forcément
+	  impatients de créer par eux-mêmes des applications (peut-être très simples) où l'aspect graphique est déjà bien présent. Nous
+	  avons donc choisi cette approche un peu inhabituelle afin de permettre au lecteur de se lancer très tôt dans de petits projets personnels attrayants, par
+	  lesquels ils puisse se sentir valorisé. En revanche, nous laisserons délibérément de côté les environnements de programmation
+	  sophistiqués qui écrivent automatiquement de nombreuses lignes de code, parce que nous ne voulons pas non plus masquer la complexité
+	  sous-jacente.</li>
+      </ul>
+      <p>Certains nous reprocheront que notre démarche n'est pas suffisamment centrée sur l'algorithmique pure et dure. Nous pensons que celle-ci est moins
+	primordiale que par le passé. Il semble en effet que l'apprentissage de la programmation moderne par objets nécessite plutôt une mise en contact aussi
+	précoce que possible de l'apprenant avec des objets et des bibliothèques de classes préexistants. Ainsi il apprend très tôt à raisonner en
+	termes d'interactions entre objets, plutôt qu'en termes de construction de procédures, et cela l'autorise assez vite à tirer profit de concepts
+	avancés, tels que l'instanciation, l'héritage et le polymorphisme.</p>
+      <p>Nous avons par ailleurs accordé une place assez importante à la manipulation de différents types de structures de données, car nous estimons
+	que c'est la réflexion sur les données qui doit rester la colonne vertébrale de tout développement logiciel.</p>
+      
+		<h3 class="TitreSection1" id="L2-A">2-A. Choix d'un premier langage de programmation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Il existe un très grand nombre de langages de programmation, chacun avec ses avantages et ses inconvénients. Il faut bien en choisir un. Lorsque nous
+	  avons commencé à réfléchir à cette question, durant notre préparation d'un curriculum pour la nouvelle option Sciences &amp; Informatique,
+	  nous avions personnellement accumulé une assez longue expérience de la programmation sous <span class="italique">Visual Basic</span> (<span class="italique">Microsoft</span>) et sous <span class="italique">Clarion</span>
+	  (<span class="italique">Topspeed</span>). Nous avions également expérimenté quelque peu sous <span class="italique">Delphi</span> (<span class="italique">Borland</span>). Il était donc naturel que nous pensions d'abord
+	  exploiter l'un ou l'autre de ces langages. Si nous souhaitions les utiliser comme outils de base pour un apprentissage général de la programmation, ces
+	  langages présentaient toutefois deux gros inconvénients :</p>
+        <ul class="ListeDVP">
+          <li>Ils sont liés à des environnements de programmation (c'est-à-dire des logiciels) propriétaires.<br/>
+		 Cela signifiait donc, non seulement que l'institution scolaire désireuse de les utiliser devrait acheter une licence de ces logiciels pour chaque poste de
+		   travail (<span style="color:#000000;">ce qui pouvait se révéler coûteux</span>), mais surtout que les élèves souhaitant utiliser leurs
+		   compétences de programmation ailleurs qu'à l'école seraient implicitement forcés d'acquérir eux aussi des licences, ce que nous ne
+		   pouvions pas accepter. <span style="color:#000000;">Un autre grave inconvénient de ces produits propriétaires est qu'ils comportent de nombreuses
+		   « boîtes noires » dont on ne peut connaître le contenu. Leur documentation est donc incomplète, et leur évolution
+		   incertaine. </span></li>
+          <li>Ce sont des langages spécifiquement liés au seul système d'exploitation <span class="italique">Windows</span>. Ils ne sont pas « portables » sur
+	    d'autres systèmes (<span class="italique">Unix</span>, <span class="italique">Mac OS</span>, <span class="italique">etc</span>.). Cela ne cadrait pas avec notre projet pédagogique qui ambitionne d'inculquer une formation
+	    générale (et donc diversifiée) dans laquelle les invariants de l'informatique seraient autant que possible mis en évidence.</li>
+        </ul>
+        <p>Nous avons alors décidé d'examiner l'offre alternative, c'est-à-dire celle qui est proposée gratuitement dans la mouvance de l'informatique
+	  libre<a class="signetNoteBasPage" id="signetNoteBasPage1" href="#noteBasPage1">(1)</a>. Ce que nous avons trouvé nous a enthousiasmés : non seulement il existe dans le monde de
+	  <span class="italique">l'OpenSource</span> des interpréteurs et des compilateurs gratuits pour toute une série de langages, mais surtout ces langages sont modernes, performants,
+	  portables (c'est-à-dire utilisables sur différents systèmes d'exploitation tels que <span class="italique">Windows</span>, <span class="italique">Linux</span>, <span class="italique">Mac OS</span> ...), et fort bien
+	  documentés.</p>
+        <p>Le langage dominant y est sans conteste <span class="italique">C/C++</span>. Ce langage s'impose comme une référence absolue, et tout informaticien sérieux doit s'y
+	  frotter tôt ou tard. Il est malheureusement très rébarbatif et compliqué, trop proche de la machine. Sa syntaxe est peu lisible et fort
+	  contraignante. La mise au point d'un gros logiciel écrit en <span class="italique">C/C++</span> est longue et pénible. (Les mêmes remarques valent aussi dans une large mesure
+	  pour le langage <span class="italique">Java.</span>)</p>
+        <p>D'autre part, la pratique moderne de ce langage fait abondamment appel à des générateurs d'applications et autres outils d'assistance très
+	  élaborés tels <span class="italique">C++Builder</span>, <span class="italique">Kdevelop</span>, etc. Ces environnements de programmation peuvent certainement se révéler très efficaces entre
+	  les mains de programmeurs expérimentés, mais ils proposent d'emblée beaucoup trop d'outils complexes, et ils présupposent de la part de l'utilisateur
+	  des connaissances qu'un débutant ne maîtrise évidemment pas encore. Ce seront donc aux yeux de celui-ci de véritables « usines à
+	  gaz » qui risquent de lui masquer les mécanismes de base du langage lui-même. Nous laisserons donc le <span class="italique">C/C++</span> pour plus tard.</p>
+        <p>Pour nos débuts dans l'étude de la programmation, il nous semble préférable d'utiliser un langage de plus haut niveau, moins contraignant,
+	  à la syntaxe plus lisible. Après avoir successivement examiné et expérimenté quelque peu les langages <span class="italique">Perl</span> et <span class="italique">Tcl</span>/<span class="italique">Tk</span> , nous
+	  avons finalement décidé d'adopter Python, langage très moderne à la popularité grandissante.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L2-B">2-B. Présentation du langage Python<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <blockquote class="citation"><div><span style="color:#000000;">Ce texte de Stéfane Fermigier date un peu, mais il reste d'actualité pour l'essentiel. Il est extrait d'un article paru dans le
+	  magazine Programmez! en décembre 1998. Il e</span>st également disponible sur http://www.linux-center.org/articles/9812/python.html. Stéfane Fermigier est
+	  le co-fondateur de l'AFUL (Association Francophone des Utilisateurs de Linux et des logiciels libres). </div></blockquote>
+        <p>Python est un langage portable, dynamique, extensible, gratuit, qui permet (sans l'imposer) une approche modulaire et orientée objet de la programmation.
+	  Python est développé depuis 1989 par Guido van Rossum et de nombreux contributeurs bénévoles. </p>
+        
+		<h4 class="TitreSection2" id="L2-B-1">2-B-1. Caractéristiques du langage<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Détaillons un peu les principales caractéristiques de Python, plus précisément, du langage et de ses deux implantations actuelles:
+	    </p>
+          <ul class="ListeDVP">
+            <li>Python est <b>portable</b>, non seulement sur les différentes variantes d'<span class="italique">Unix</span>, mais aussi sur les OS propriétaires :
+	      <span class="italique">Mac OS</span>, <span class="italique">BeOS</span>, <span class="italique">NeXTStep</span>, <span class="italique">MS-DOS</span> et les différentes variantes de <span class="italique">Windows</span>. Un nouveau compilateur, baptisé
+	      <span class="italique">JPython</span>, est écrit en Java et génère du <span class="italique">bytecode</span> Java. </li>
+            <li>Python est <b>gratuit</b>, mais on peut l'utiliser sans restriction dans des projets commerciaux. </li>
+            <li>Python convient aussi bien à des <b>scripts</b> d'une dizaine de lignes qu'à des <b>projets complexes</b> de plusieurs dizaines de milliers de
+	      lignes.</li>
+            <li>La <b>syntaxe</b> de Python est <b>très simple</b> et, combinée à des <b>types de données évolués</b> (listes,
+	      dictionnaires...), conduit à des programmes à la fois très compacts et très lisibles. À fonctionnalités égales, un programme
+	      Python (abondamment commenté et présenté selon les canons standards) est souvent de 3 à 5 fois plus court qu'un programme C ou C++ (ou même
+	      Java) équivalent, ce qui représente en général un temps de développement de 5 à 10 fois plus court et une facilité de maintenance
+	      largement accrue.</li>
+            <li>Python gère ses ressources (mémoire, descripteurs de fichiers...) sans intervention du programmeur, par un mécanisme de <b>comptage de
+	      références</b> (proche, mais différent, d'un <span class="italique">garbage collector</span>).</li>
+            <li>Il n'y a <b>pas de pointeurs</b> explicites en Python.</li>
+            <li>Python est (optionnellement) <b>multi-threadé</b>.</li>
+            <li>Python est <b>orienté-objet</b>. Il supporte <b>l'héritage multiple</b> et <b>la surcharge des opérateurs</b>. Dans son modèle objets, et
+	      en reprenant la terminologie de C++, toutes les méthodes sont virtuelles.</li>
+            <li>Python intègre, comme Java ou les versions récentes de C++, un système <b>d'exceptions</b>, qui permettent de simplifier considérablement
+	      la gestion des erreurs.</li>
+            <li>Python est <b>dynamique</b> (l'interpréteur peut évaluer des chaînes de caractères représentant des expressions ou des instructions
+	      Python), <b>orthogonal</b> (un petit nombre de concepts suffit à engendrer des constructions très riches), <b>réflectif</b> (il supporte la
+	      métaprogrammation, par exemple la capacité pour un objet de se rajouter ou de s'enlever des attributs ou des méthodes, ou même de changer de
+	      classe en cours d'exécution) et <b>introspectif</b> (un grand nombre d'outils de développement, comme le <span class="italique">debugger</span> ou le <span class="italique">profiler</span>, sont
+	      implantés en Python lui-même).</li>
+            <li>Comme <span class="italique">Scheme</span> ou <span class="italique">SmallTalk</span>, Python est dynamiquement typé. Tout objet manipulable par le programmeur possède un type bien défini
+	      à l'exécution, qui n'a pas besoin d'être déclaré à l'avance.</li>
+            <li>Python possède actuellement deux implémentations. L'une, <b>interprétée</b>, dans laquelle les programmes Python sont compilés en
+	      instructions portables, puis exécutés par une machine virtuelle (comme pour Java, avec une différence importante : Java étant statiquement
+	      typé, il est beaucoup plus facile d'accélérer l'exécution d'un programme Java que d'un programme Python). L'autre génère directement du
+	      <span class="italique">bytecode</span> Java.</li>
+            <li>Python est <b>extensible </b>: comme <span class="italique">Tcl</span> ou <span class="italique">Guile</span>, on peut facilement l'interfacer avec des bibliothèques C existantes. On peut aussi
+	      s'en servir comme d'un langage d'extension pour des systèmes logiciels complexes.</li>
+            <li>La <b>bibliothèque standard</b> de Python, et les paquetages contribués, donnent accès à une grande variété de services :
+	      chaînes de caractères et expressions régulières, services UNIX standards (fichiers, <span class="italique">pipes</span>, signaux, sockets, threads...), protocoles
+	      Internet (Web, News, FTP, CGI, HTML...), persistance et bases de données, interfaces graphiques.</li>
+            <li>Python est un langage qui <b>continue à évoluer</b>, soutenu par une communauté d'utilisateurs enthousiastes et responsables, dont la plupart
+	      sont des supporters du logiciel libre. Parallèlement à l'interpréteur principal, écrit en C et maintenu par le créateur du langage, un
+	      deuxième interpréteur, écrit en Java, est en cours de développement.</li>
+            <li>Enfin, Python est un langage de choix pour traiter le XML.</li>
+          </ul>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L2-C">2-C. Pour le professeur qui souhaite utiliser cet ouvrage comme support de cours<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous souhaitons avec ces notes ouvrir un maximum de portes. À notre niveau d'études, il nous paraît important de montrer que la programmation
+	  d'un ordinateur est un vaste univers de concepts et de méthodes, dans lequel chacun peut trouver son domaine de prédilection. Nous ne pensons pas que tous nos
+	  étudiants doivent apprendre exactement les mêmes choses. Nous voudrions plutôt qu'ils arrivent à développer chacun des compétences quelque
+	  peu différentes, qui leur permettent de se valoriser à leurs propres yeux ainsi qu'à ceux de leurs condisciples, et également d'apporter leur
+	  contribution spécifique lorsqu'on leur proposera de collaborer à des travaux d'envergure.</p>
+        <p>De toute manière, notre préoccupation primordiale doit être d'arriver à susciter l'intérêt, ce qui est loin d'être acquis
+	  d'avance pour un sujet aussi ardu que la programmation d'un ordinateur. Nous ne voulons pas feindre de croire que nos jeunes élèves vont se passionner
+	  d'emblée pour la construction de beaux algorithmes. Nous sommes plutôt convaincus qu'un certain intérêt ne pourra durablement s'installer qu'à
+	  partir du moment où ils commenceront à réaliser qu'ils sont devenus capables de développer un projet personnel original, dans une certaine
+	  autonomie.</p>
+        <p>Ce sont ces considérations qui nous ont amenés à développer une structure de cours que certains trouveront peut-être un peu chaotique.
+	  Nous commençons par une série de chapitres très courts, qui expliquent sommairement ce qu'est l'activité de programmation et posent les quelques
+	  bases indispensables à la réalisation de petits programmes. Ceux-ci pourront faire appel très tôt à des bibliothèques d'objets existants,
+	  tels ceux de l'interface graphique <span class="italique">tkinter</span> par exemple, afin que ce concept d'objet devienne rapidement familier. Ils devront être suffisamment attrayants
+	  pour que leurs auteurs aient le sentiment d'avoir déjà acquis une certaine maîtrise. Nous souhaiterions en effet que les élèves puissent
+	  déjà réaliser une petite application graphique dès la fin de leur première année d'études.</p>
+        <p>Très concrètement, cela signifie que nous pensons pouvoir explorer les huit premiers chapitres de ces notes durant la première année de
+	  cours. Cela suppose que l'on aborde d'abord toute une série de concepts importants (types de données, variables, instructions de contrôle du flux,
+	  fonctions et boucles) d'une manière assez rapide, sans trop se préoccuper de ce que chaque concept soit parfaitement compris avant de passer au suivant, en
+	  essayant plutôt d'inculquer le goût de la recherche personnelle et de l'expérimentation. Il sera souvent plus efficace de ré-expliquer les notions et
+	  les mécanismes essentiels plus tard, en situation et dans des contextes variés. </p>
+        <p>Dans notre esprit, c'est surtout en seconde année que l'on cherchera à structurer les connaissances acquises, en les approfondissant. Les algorithmes
+	  seront davantage décortiqués et commentés. Les projets, cahiers des charges et méthodes d'analyse seront discutés en concertation. On exigera la
+	  tenue régulière d'un cahier de notes et la rédaction de rapports techniques pour certains travaux.</p>
+        <p>L'objectif ultime sera pour chaque élève de réaliser un projet de programmation original d'une certaine importance. On s'efforcera donc de
+	  boucler l'étude théorique des concepts essentiels suffisamment tôt dans l'année scolaire, afin que chacun puisse disposer du temps
+	  nécessaire.</p>
+        <p>Il faut bien comprendre que les nombreuses informations fournies dans ces notes concernant une série de domaines particuliers (gestion des interfaces
+	  graphiques, des communications, des bases de données, etc.) sont facultatives. Ce sont seulement une série de suggestions et de repères que nous avons
+	  inclus pour aider les étudiants à choisir et à commencer leur projet personnel de fin d'études. Nous ne cherchons en aucune manière à
+	  former des spécialistes d'un certain langage ou d'un certain domaine technique : nous voulons simplement donner un petit aperçu des immenses
+	  possibilités qui s'offrent à celui qui se donne la peine d'acquérir une compétence de programmeur. </p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L2-D">2-D. Versions du langage<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Python continue à évoluer, mais cette évolution ne vise qu'à améliorer ou perfectionner le produit. Il est donc très rare qu'il
+	  faille modifier les programmes afin de les adapter à une nouvelle version qui serait devenue incompatible avec les précédentes. Les exemples de ce livre
+	  ont été réalisés les uns après les autres sur une période de temps relativement longue : certains ont été
+	  développés sous Python 1.5.2, puis d'autres sous Python 1.6, Python 2.0, 2.1, 2.2, 2.3, 2.4, etc. Ils n'ont guère nécessité de modifications
+	  avant l'apparition de Python 3.</p>
+        <p>Cette nouvelle version du langage a cependant apporté quelques changements de fond qui lui confèrent une plus grande cohérence et même une
+	  plus grande facilité d'utilisation, mais qui imposent une petite mise à jour de tous les scripts écrits pour les versions précédentes. La
+	  présente édition de ce livre a donc été remaniée, non seulement pour adapter ses exemples à la nouvelle version, mais surtout pour tirer
+	  parti de ses améliorations, qui en font probablement le meilleur outil d'apprentissage de la programmation à l'heure actuelle.</p>
+        <p>Installez donc sur votre système la dernière version disponible (quelques-uns de nos exemples nécessitent désormais la version 3.1 ou une
+	  version postérieure), et amusez-vous bien ! Si toutefois vous devez analyser des scripts développés pour une version antérieure, sachez que des
+	  outils de conversion existent (voir en particulier le script 2to3.py), et que nous maintenons en ligne sur notre site web <span class="italique">http://inforef.be/swi/python.htm</span> la
+	  précédente mouture de ce texte, adaptée aux versions antérieures de Python, et toujours librement téléchargeable. </p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L2-E">2-E. Distribution de Python et bibliographie<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Les différentes versions de Python (pour <span class="italique">Windows</span>, <span class="italique">Unix</span>, etc.), son <b>tutoriel</b> original, son <b>manuel de référence</b>, la
+	  <b>documentation</b> des bibliothèques de fonctions, etc. sont disponibles en téléchargement gratuit depuis Internet, à partir du site web
+	  officiel : <span class="italique">http://www.python.org</span></p>
+        <p>Il existe également de très bons ouvrages imprimés concernant Python. La plupart concernent encore Python 2.x, mais vous ne devrez guère
+	  éprouver de difficultés à adapter leurs exemples à Python 3. En langue française, vous pourrez très profitablement consulter les manuels
+	  ci-après :</p>
+        <ul class="ListeDVP">
+          <li><span class="italique"><b>Au cœur de Python</b></span>, volumes 1 et 2, par Wesley J. Chun, traduction de <span class="italique">Python core programming, 2d edition</span> (Prentice Hall) par
+	    Marie-Cécile Baland, Anne Bohy et Luc Carité, Editions CampusPress, Paris, 2007, respectivement 645 et 385 p., ISBN 978-2-7440-2148-0 et 978-2-7440-2195-4.
+	    C'est un ouvrage de référence indispensable, très bien écrit. </li>
+        </ul>
+        <p>D'autres excellents ouvrages en français étaient proposés par la succursale française de la maison d'éditions O'Reilly, laquelle a
+	  malheureusement disparu. En langue anglaise, le choix est évidemment beaucoup plus vaste. Nous apprécions personnellement beaucoup <span class="italique"><b>Python : How to
+	  program</b></span>, par Deitel, Liperi &amp; Wiedermann, Prentice Hall, Upper Saddle River - NJ 07458, 2002, 1300 p., ISBN 0-13-092361-3, très complet, très
+	  clair, agréable à lire et qui utilise une méthodologie éprouvée.</p>
+        <p>Pour aller plus loin, notamment dans l'utilisation de la bibliothèque graphique <span class="italique"><b>Tkinter</b></span>, on pourra utilement consulter <span class="italique"><b>Python and
+	  Tkinter Programming</b></span>, par John E. Grayson, Manning publications co., Greenwich (USA), 2000, 658 p., ISBN 1-884777-81-3 , et surtout l'incontournable
+	  <span class="italique"><b>Programming Python</b></span> (second edition) de Mark Lutz, Editions O'Reilly, 2001, 1255 p., ISBN 0-596-00085-5, qui est une extraordinaire mine de renseignements
+	  sur de multiples aspects de la programmation moderne (sur tous systèmes).</p>
+        <p>Si vous savez déjà bien programmer, et que vous souhaitez progresser encore en utilisant les concepts les plus avancés de l'algorithmique
+	  Pythonienne, procurez vous <span class="italique"><b>Python cookbook</b></span>, par Alex Martelli et David Ascher, Editions O'Reilly, 2002, 575 p., ISBN 0-596-00167-3 , dont les recettes sont
+	  savoureuses.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L2-F">2-F. Exemples du livre<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Le code source des exemples de ce livre peut être téléchargé <a class="lienArticle https" href="https://python.developpez.com/cours/apprendre-python3/exemples_cours_python.zip">ici</a></p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L2-G">2-G. Remerciements<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Ce livre est pour une partie le résultat d'un travail personnel, mais pour une autre - bien plus importante - la compilation d'informations et
+	  d'idées mises à la disposition de tous par des professeurs et des chercheurs bénévoles. La source qui a inspiré mes premières ébauches
+	  du livre est le cours de A.Downey, J.Elkner &amp; C.Meyers : <span class="italique">How to think like a computer scientist</span> (Voir :
+	  http://greenteapress.com/thinkpython/thinkCSpy). Merci encore à ces professeurs enthousiastes. J'avoue aussi m'être inspiré du tutoriel original
+	  écrit par Guido van Rossum lui-même (l'auteur principal de Python), ainsi que d'exemples et de documents divers émanant de la (très active)
+	  communauté des utilisateurs de Python. Il ne m'est malheureusement pas possible de préciser davantage les références de tous ces textes, mais je
+	  voudrais que leurs auteurs soient assurés de toute ma reconnaissance.</p>
+        <p>Merci également à tous ceux qui œuvrent au développement de Python, de ses accessoires et de sa documentation, à commencer par Guido
+	  van Rossum, bien sûr, mais sans oublier non plus tous les autres ((mal)heureusement trop nombreux pour que je puisse les citer tous ici).</p>
+        <p>Merci encore à mes collègues Freddy Klich et David Carrera, professeurs à l'Institut Saint-Jean Berchmans de Liège, qui ont accepté de
+	  se lancer dans l'aventure de ce nouveau cours avec leurs élèves, et ont également suggéré de nombreuses améliorations. Un merci tout
+	  particulier à Christophe Morvan, professeur à l'IUT de Marne-la-Vallée, pour ses avis précieux et ses encouragements. Grand merci aussi à
+	  Florence Leroy, mon éditrice chez O'Reilly, qui a corrigé mes incohérences et mes belgicismes avec une compétence sans faille. Merci encore à
+	  mes partenaires actuels chez Eyrolles, Sandrine Panie<span style="color:#000000;">l, Muriel Shan Sei Fan, Matthieu Montaudouin et Taï-marc Le Thanh, qui ont
+	  efficacem</span>ent pris en charge cette nouvelle édition.</p>
+        <p>Merci enfin à mon épouse Suzel, pour sa patience et sa compréhension.</p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_1.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_3.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage1" href="#signetNoteBasPage1">(1)</a></div><div class="ContenuUneNoteBasPage">Un logiciel libre (<span class="italique">Free Software</span>) est avant tout un logiciel dont le code source est accessible à tous (<span class="italique">Open source</span>). Souvent
+	  gratuit (ou presque), copiable et modifiable librement au gré de son acquéreur, il est généralement le produit de la collaboration bénévole
+	  de centaines de développeurs enthousiastes dispersés dans le monde entier. Son code source étant « épluché » par de
+	  très nombreux spécialistes (étudiants et professeurs universitaires), un logiciel libre se caractérise la plupart du temps par un très haut
+	  niveau de qualité technique. Le plus célèbre des logiciels libres est le système d'exploitation <span class="italique"><b>GNU/Linux</b></span>, dont la popularité ne
+	  cesse de s'accroître de jour en jour. </div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

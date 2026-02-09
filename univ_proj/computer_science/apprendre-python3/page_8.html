@@ -1,0 +1,647 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L8">8. Fonctions prédéfinies</a><ul class="nav-sommaire-ul Indentation8">
+      
+      
+      <li><a class="summaryIndent1" href="#L8-A">8-A. Affichage : la fonction print()</a></li>
+      <li><a class="summaryIndent1" href="#L8-B">8-B. Interaction avec l'utilisateur : la fonction input()</a><ul class="nav-sommaire-ul Indentation8-B">
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L8-B-1">8-B-1. Remarque importante</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L8-C">8-C. Importer un module de fonctions</a></li>
+      <li><a class="summaryIndent1" href="#L8-D">8-D. Un peu de détente avec le module turtle</a></li>
+      <li><a class="summaryIndent1" href="#L8-E">8-E. Véracité/fausseté d'une expression</a></li>
+      <li><a class="summaryIndent1" href="#L8-F">8-F. Révision</a><ul class="nav-sommaire-ul Indentation8-F">
+        
+        
+        <li><a class="summaryIndent2" href="#L8-F-1">8-F-1. Contrôle du flux - utilisation d'une liste simple</a></li>
+        <li><a class="summaryIndent2" href="#L8-F-2">8-F-2. Boucle while - instructions imbriquées</a></li>
+      </ul></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_7.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_9.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L8">8. Fonctions prédéfinies<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>L'un des concepts les plus importants en programmation est celui de fonction<a class="signetNoteBasPage" id="signetNoteBasPage24" href="#noteBasPage24">(24)</a>. Les fonctions permettent en effet de décomposer un programme complexe en une série de
+	sous-programmes plus simples, lesquels peuvent à leur tour être décomposés en fragments plus petits, et ainsi de suite. D'autre part, les fonctions
+	sont réutilisables : si nous disposons d'une fonction capable de calculer une racine carrée, par exemple, nous pouvons l'utiliser un peu partout dans nos
+	programmes sans avoir à la ré-écrire à chaque fois.</p>
+      
+		<h3 class="TitreSection1" id="L8-A">8-A. Affichage : la fonction print()<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous avons bien évidemment déjà rencontré cette fonction. Précisons simplement ici qu'elle permet d'afficher n'importe quel nombre de
+	  valeurs fournies en arguments (c'est-à-dire entre les parenthèses). Par défaut, ces valeurs seront séparées les unes des autres par un espace,
+	  et le tout se terminera par un saut à la ligne.</p>
+        <p>Vous pouvez remplacer le séparateur par défaut (l'espace) par un autre caractère quelconque (ou même par aucun caractère), grâce
+	  à l'argument « sep ». Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6819">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6819" onclick="selectionCode('contenuCoded0e6819', 'IdTitreCode-d0e6819');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6819" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Bonjour"</code>, <code class="python_literal1">"à"</code>, <code class="python_literal1">"tous"</code>, sep <code class="python_operator">=</code><code class="python_literal1">"*"</code>) 
+Bonjour<code class="python_operator">*</code>à<code class="python_operator">*</code>tous
+ <code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Bonjour"</code>, <code class="python_literal1">"à"</code>, <code class="python_literal1">"tous"</code>, sep <code class="python_operator">=</code><code class="python_literal1">""</code>) 
+Bonjouràtous</code></pre></div>
+        <p>De même, vous pouvez remplacer le saut à la ligne terminal avec l'argument « end » :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6872">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6872" onclick="selectionCode('contenuCoded0e6872', 'IdTitreCode-d0e6872');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6872" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> n <code class="python_operator">=</code><code class="python_digit">0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> n<code class="python_operator">&lt;</code><code class="python_digit">6</code>: 
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"zut"</code>, end <code class="python_operator">=</code><code class="python_literal1">""</code>) 
+...    n <code class="python_operator">=</code> n<code class="python_operator">+</code><code class="python_digit">1</code> 
+... 
+zutzutzutzutzut</code></pre></div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L8-B">8-B. Interaction avec l'utilisateur : la fonction input()<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>La plupart des scripts élaborés nécessitent à un moment ou l'autre une intervention de l'utilisateur (entrée d'un paramètre, clic
+	  de souris sur un bouton, etc.). Dans un script en mode texte (comme ceux que nous avons créés jusqu'à présent), la méthode la plus simple
+	  consiste à employer la fonction intégrée <b>input()</b>. Cette fonction provoque une interruption dans le programme courant. L'utilisateur est invité
+	  à entrer des caractères au clavier et à terminer avec &lt;<span class="italique">Enter</span>&gt;. Lorsque cette touche est enfoncée, l'exécution du programme se
+	  poursuit, et la fonction fournit en retour une chaîne de caractères correspondant à ce que l'utilisateur a entré. Cette chaîne peut alors
+	  être assignée à une variable quelconque, convertie, etc.</p>
+        <p>On peut invoquer la fonction <b>input()</b> en laissant les parenthèses vides. On peut aussi y placer en argument un message explicatif destiné à
+	  l'utilisateur. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6934">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6934" onclick="selectionCode('contenuCoded0e6934', 'IdTitreCode-d0e6934');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6934" class="contenuCode">prenom <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Entrez votre prénom : "</code>)
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Bonjour,"</code>, prenom)</code></pre></div>
+        <p>ou encore :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6957">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6957" onclick="selectionCode('contenuCoded0e6957', 'IdTitreCode-d0e6957');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6957" class="contenuCode"><code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Veuillez entrer un nombre positif quelconque : "</code>, end<code class="python_operator">=</code><code class="python_literal1">" "</code>)
+ch <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>)
+nn <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>ch)	     <code class="python_comment1"># conversion de la chaîne en un nombre entier</code>
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Le carré de"</code>, nn, <code class="python_literal1">"vaut"</code>, nn<code class="python_operator">**</code><code class="python_digit">2</code>)</code></pre></div>
+        
+		<h4 class="TitreSection2" id="L8-B-1">8-B-1. Remarque importante<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ul class="ListeDVP">
+            <li>La fonction <b>input()</b> renvoie toujours une chaîne de caractères<a class="signetNoteBasPage" id="signetNoteBasPage25" href="#noteBasPage25">(25)</a>. Si vous souhaitez que l'utilisateur entre une valeur
+	      numérique, vous devrez donc convertir la valeur entrée (qui sera donc de toute façon de type string) en une valeur numérique du type qui vous
+	      convient, par l'intermédiaire des fonctions intégrées <b>int()</b> (si vous attendez un entier) ou <b>float()</b> (si vous attendez un réel).
+	      Exemple :</li>
+          </ul>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7028">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7028" onclick="selectionCode('contenuCoded0e7028', 'IdTitreCode-d0e7028');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7028" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Entrez une donnée numérique : "</code>)
+Entrez une donnée numérique : <code class="python_digit">52.37</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a><code class="python_operator">(</code>a)
+<code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'str'</code><code class="python_operator">&gt;</code>
+<code class="python_operator">&gt;&gt;&gt;</code> b <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=float#float"><span>float</span></a><code class="python_operator">(</code>a)     <code class="python_comment1"># conversion de la chaîne en un nombre réel</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a><code class="python_operator">(</code>b)
+<code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'float'</code><code class="python_operator">&gt;</code></code></pre></div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L8-C">8-C. Importer un module de fonctions<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Vous avez déjà rencontré des <span class="italique">fonctionsintégrées</span> au langage lui-même, comme la fonction <b>len()</b>, par exemple, qui
+	  permet de connaître la longueur d'une chaîne de caractères. Il va de soi cependant qu'il n'est pas possible d'intégrer toutes les fonctions
+	  imaginables dans le corps standard de Python, car il en existe virtuellement une infinité : vous apprendrez d'ailleurs très bientôt comment en
+	  créer vous-même de nouvelles. Les fonctions intégrées au langage sont relativement peu nombreuses : ce sont seulement celles qui sont
+	  susceptibles d'être utilisées très fréquemment. Les autres sont regroupées dans des fichiers séparés que l'on appelle des
+	  <span class="italique">modules</span>.</p>
+        <blockquote class="citation"><div>Les modules sont des fichiers qui regroupent des ensembles de fonctions<a class="signetNoteBasPage" id="signetNoteBasPage26" href="#noteBasPage26">(26)</a>.</div></blockquote>
+        <p>Vous verrez plus loin combien il est commode de découper un programme important en plusieurs fichiers de taille modeste pour en faciliter la maintenance.
+	  Une application Python typique sera alors constituée d'un programme principal, accompagné de un ou plusieurs modules contenant chacun les définitions d'un
+	  certain nombre de fonctions accessoires.</p>
+        <p>Il existe un grand nombre de modules pré-programmés qui sont fournis d'office avec Python. Vous pouvez en trouver d'autres chez divers fournisseurs.
+	  Souvent on essaie de regrouper dans un même module des ensembles de fonctions apparentées, que l'on appelle des <span class="italique">bibliothèques</span>.</p>
+        <p>Le module <span class="italique">math</span>, par exemple, contient les définitions de nombreuses fonctions mathématiques telles que <span class="italique">sinus</span>, <span class="italique">cosinus</span>,
+	  <span class="italique">tangente</span>, <span class="italique">racinecarrée</span>, etc. Pour pouvoir utiliser ces fonctions, il vous suffit d'incorporer la ligne suivante au début de votre
+	  script :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7150">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7150" onclick="selectionCode('contenuCoded0e7150', 'IdTitreCode-d0e7150');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7150" class="contenuCode"><code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> <code class="python_operator">*</code></code></pre></div>
+        <p>Cette ligne indique à Python qu'il lui faut inclure dans le programme courant <span class="italique">toutes</span> les fonctions (c'est là la signification du symbole
+	  « joker » * ) du module <span class="italique">math</span>, lequel contient une bibliothèque de fonctions mathématiques
+	  pré-programmées.</p>
+        <p>Dans le corps du script lui-même, vous écrirez par exemple :<br/><b><span style="color:#000080;">racine = sqrt(nombre)</span></b> pour assigner à
+	  la variable <b><span style="color:#000080;">racine</span></b> la racine carrée de <b><span style="color:#000080;">nombre</span></b>,<br/><b><span style="color:#000080;">sinusx =
+	  sin(angle)</span></b> pour assigner à la variable <b><span style="color:#000080;">sinusx</span></b> le sinus de <b><span style="color:#000080;">angle</span></b> (en
+	  radians !), etc.</p>
+        <p>
+          <span class="italique">
+            <b>Exemple :</b>
+          </span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7207">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7207" onclick="selectionCode('contenuCoded0e7207', 'IdTitreCode-d0e7207');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7207" class="contenuCode"><code class="python_comment1"># Démo : utilisation des fonctions du module &lt;math&gt;</code>
+ 
+<code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+nombre <code class="python_operator">=</code> <code class="python_digit">121</code>
+angle <code class="python_operator">=</code> pi<code class="python_operator">/</code><code class="python_digit">6</code>	   <code class="python_comment1"># soit 30°</code>
+	  <code class="python_comment1"># (la bibliothèque math inclut aussi la définition de pi)</code>
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"racine carrée de"</code>, nombre, <code class="python_literal1">"="</code>, <code class="python_function">sqrt</code><code class="python_operator">(</code>nombre))
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"sinus de"</code>, angle, <code class="python_literal1">"radians"</code>, <code class="python_literal1">"="</code>, <code class="python_function">sin</code><code class="python_operator">(</code>angle))</code></pre></div>
+        <p>L'exécution de ce script provoque l'affichage suivant :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7277">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7277" onclick="selectionCode('contenuCoded0e7277', 'IdTitreCode-d0e7277');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7277" class="contenuCode">racine carrée de <code class="python_digit">121</code> <code class="python_operator">=</code> <code class="python_digit">11.0</code>
+sinus de <code class="python_digit">0.523598775598</code> radians <code class="python_operator">=</code> <code class="python_digit">0.5</code></code></pre></div>
+        <p>Ce court exemple illustre déjà fort bien quelques caractéristiques importantes des fonctions :</p>
+        <ul class="ListeDVP">
+          <li>une fonction apparaît sous la forme d'<span class="italique">un nom quelconque associé à des parenthèses</span><br/>
+		 exemple : <b>sqrt()</b></li>
+          <li>dans les parenthèses, on <span class="italique">transmet</span> à la fonction un ou plusieurs <span class="italique">arguments</span><br/>
+		 exemple : <b>sqrt(121)</b></li>
+          <li>la fonction fournit une <span class="italique">valeurderetour</span> (on dira aussi qu'elle « retourne », ou mieux : qu'elle « renvoie »
+	    une valeur)<br/>
+		 exemple : <b>11.0</b></li>
+        </ul>
+        <p>Nous allons développer tout ceci dans les pages suivantes. Veuillez noter au passage que les fonctions mathématiques utilisées ici ne
+	  représentent qu'un tout premier exemple. Un simple coup d'œil dans la documentation des bibliothèques Python vous permettra de constater que de très
+	  nombreuses fonctions sont d'ores et déjà disponibles pour réaliser une multitude de tâches, y compris des algorithmes mathématiques très
+	  complexes (Python est couramment utilisé dans les universités pour la résolution de problèmes scientifiques de haut niveau). Il est donc hors de
+	  question de fournir ici une liste détaillée. Une telle liste est aisément accessible dans le système d'aide de Python :</p>
+        <p>
+          <span class="italique">Documentation HTML →Python documentation →Modules index →math</span>
+        </p>
+        <p>Au chapitre suivant, nous apprendrons comment créer nous-mêmes de nouvelles fonctions.</p>
+        <p>Exercices</p>
+        <blockquote class="citation"><div><b>Note :</b> dans tous ces exercices, utilisez la fonction <b>input()</b> pour l'entrée des données.</div></blockquote>
+        <p>.Écrivez un programme qui convertisse en mètres par seconde et en km/h une vitesse fournie par l'utilisateur en miles/heure. (<span class="italique">Rappel : 1 mile =
+	  1609 mètres</span>)</p>
+        <p>.Écrivez un programme qui calcule le périmètre et l'aire d'un triangle quelconque dont l'utilisateur fournit les 3
+	  côtés.<br/><span class="italique">(Rappel : l'aire d'un triangle quelconque se calcule à l'aide de la formule :</span><br/><img src="./images/formule02.png" alt="Image non disponible" width="209" height="22" class="image_verticale"/><br/><span class="italique">dans
+	  laquelle d désigne la longueur du demi-périmètre, et a, b, c celles des trois côtés.)</span></p>
+        <p>.Écrivez un programme qui calcule la période d'un pendule simple de longueur donnée.<br/>
+		 La formule qui permet de calculer la période d'un pendule simple est <img src="./images/formule03.png" alt="Image non disponible" width="79" height="44" class="image_verticale"/> ,<br/><span class="italique"><b>l</b></span> représentant la
+		   longueur du pendule et <span class="italique"><b>g</b></span> la valeur de l'accélération de la pesanteur au lieu d'expérience.</p>
+        <p>.Écrivez un programme qui permette d'encoder des valeurs dans une liste. Ce programme devrait fonctionner en boucle, l'utilisateur étant invité
+	  à entrer sans cesse de nouvelles valeurs, jusqu'à ce qu'il décide de terminer en frappant &lt;<span class="italique">Enter</span>&gt; en guise d'entrée. Le programme se
+	  terminerait alors par l'affichage de la liste. Exemple de fonctionnement :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">Veuillez entrer une valeur : 25</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Veuillez entrer une valeur : 18</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Veuillez entrer une valeur : 6284</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">Veuillez entrer une valeur :</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">[25, 18, 6284]</span>
+          </b>
+        </p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L8-D">8-D. Un peu de détente avec le module turtle<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Comme nous venons de le voir, l'une des grandes qualités de Python est qu'il est extrêmement facile de lui ajouter de nombreuses fonctionnalités
+	  par importation de divers <span class="italique">modules</span>.</p>
+        <p>Pour illustrer cela, et nous amuser un peu avec d'autres objets que des nombres, nous allons explorer un module Python qui permet de réaliser des
+	  « graphiques tortue », c'est-à-dire des dessins géométriques correspondant à la piste laissée derrière elle par une
+	  petite « tortue » virtuelle, dont nous contrôlons les déplacements sur l'écran de l'ordinateur à l'aide d'instructions
+	  simples.</p>
+        <p>Activer cette tortue est un vrai jeu d'enfant. Plutôt que de vous donner de longues explications, nous vous invitons à essayer tout de
+	  suite :</p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image6.png" alt="Image non disponible" width="391" height="295"/></figure></div>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7457">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7457" onclick="selectionCode('contenuCoded0e7457', 'IdTitreCode-d0e7457');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7457" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">from</code> turtle <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">forward</code><code class="python_operator">(</code><code class="python_digit">120</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">left</code><code class="python_operator">(</code><code class="python_digit">90</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">color</code><code class="python_operator">(</code><code class="python_literal1">'red'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">forward</code><code class="python_operator">(</code><code class="python_digit">80</code>)</code></pre></div>
+        <p>L'exercice est évidemment plus riche si l'on utilise des boucles :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7514">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7514" onclick="selectionCode('contenuCoded0e7514', 'IdTitreCode-d0e7514');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7514" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">reset</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> a <code class="python_operator">=</code> <code class="python_digit">0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> a <code class="python_operator">&lt;</code><code class="python_digit">12</code>:
+     a <code class="python_operator">=</code> a <code class="python_operator">+</code><code class="python_digit">1</code>
+     <code class="python_function">forward</code><code class="python_operator">(</code><code class="python_digit">150</code>)
+     <code class="python_function">left</code><code class="python_operator">(</code><code class="python_digit">150</code>)</code></pre></div>
+        <p>Attention cependant : avant de lancer un tel script, assurez-vous toujours qu'il ne comporte pas de boucle sans fin (voir page ), car si c'est le cas vous
+	  risquez de ne plus pouvoir reprendre le contrôle des opérations (en particulier sous <span class="italique">Windows</span>).</p>
+        <p>Amusez-vous à écrire des scripts qui réalisent des dessins suivant un modèle imposé à l'avance. Les principales fonctions mises
+	  à votre disposition dans le module <span class="italique">turtle</span> sont les suivantes :</p>
+        <p><b>reset()</b>On efface tout et on recommence<br/><b>goto(x, y)</b>Aller à l'endroit de coordonnées x, y<br/><b>forward(distance)</b>Avancer d'une
+	  distance donnée<br/><b>backward(distance)</b>Reculer<br/><b>up()</b>Relever le crayon (pour pouvoir avancer sans dessiner)<br/><b>down()</b>Abaisser le crayon (pour
+	  recommencer à dessiner)<br/><b>color(couleur)</b><span class="italique">couleur</span> peut être une chaîne prédéfinie ('red', 'blue',
+	  etc.)<br/><b>left(angle)</b>Tourner à gauche d'un angle donné (exprimé en degrés)<br/><b>right(angle)</b>Tourner à
+	  droite<br/><b>width(épaisseur)</b>Choisir l'épaisseur du tracé<br/><b>fill(1)</b>Remplir un contour fermé à l'aide de la couleur
+	  sélectionnée<br/><b>write(texte)</b><span class="italique">texte</span> doit être une chaîne de caractères</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L8-E">8-E. Véracité/fausseté d'une expression<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Lorsqu'un programme contient des instructions telles que <b>while</b> ou <b>if</b>, l'ordinateur qui exécute ce programme doit évaluer la
+	  véracité d'une condition, c'est-à-dire déterminer si une expression est <span class="italique">vraie</span> ou <span class="italique">fausse</span>. Par exemple, une boucle initiée par
+	  <b><span style="color:#000080;"> while c&lt;20: </span></b> s'exécutera aussi longtemps que la condition <b><span style="color:#000080;">c&lt;20</span></b> restera
+	  <span class="italique">vraie</span><b>.</b></p>
+        <p>Mais comment un ordinateur peut-il déterminer si quelque chose est <span class="italique">vrai</span> ou <span class="italique">faux</span> ?</p>
+        <p>En fait - et vous le savez déjà - un ordinateur ne manipule strictement que des nombres. Tout ce qu'un ordinateur doit traiter doit
+	  d'abord toujours être converti en valeur numérique. Cela s'applique aussi à la notion de vrai/faux. En Python, tout comme en <span class="italique">C</span>, en <span class="italique">Basic</span> et
+	  en de nombreux autres langages de programmation, on considère que toute valeur numérique autre que zéro est « vraie ». Seule la valeur
+	  zéro est « fausse ». Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7682">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7682" onclick="selectionCode('contenuCoded0e7682', 'IdTitreCode-d0e7682');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7682" class="contenuCode">ch <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">'Entrez un nombre entier quelconque'</code>)
+n <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>ch)
+<code class="python_keyword1">if</code> n:
+ <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"vrai"</code>)
+<code class="python_keyword1">else</code>:
+ <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"faux"</code>)</code></pre></div>
+        <p>Le petit script ci-dessus n'affiche « faux » que si vous entrez la valeur 0. Pour toute autre valeur numérique, vous obtiendrez
+	  « vrai ».</p>
+        <p>Ce qui précède signifie donc qu'une expression à évaluer, telle par exemple la condition <b><span style="color:#000080;"> a &gt; 5</span></b>, est d'abord convertie par l'ordinateur en une valeur numérique (<b>1</b> si l'expression est vraie, et
+	  <b>zéro</b> si l'expression est fausse). Ce n'est pas tout à fait évident, parce que l'interpréteur Python est doté d'un dispositif qui traduit
+	  ces deux valeurs en « True » ou « False » lorsqu'on les lui demande explicitement. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7738">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7738" onclick="selectionCode('contenuCoded0e7738', 'IdTitreCode-d0e7738');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7738" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b <code class="python_operator">=</code> <code class="python_digit">3</code>, <code class="python_digit">8</code>
+<code class="python_operator">&gt;&gt;&gt;</code> c <code class="python_operator">=</code> <code class="python_operator">(</code>a <code class="python_operator">&lt;</code> b)
+<code class="python_operator">&gt;&gt;&gt;</code> d <code class="python_operator">=</code> <code class="python_operator">(</code>a <code class="python_operator">&gt;</code> b)
+<code class="python_operator">&gt;&gt;&gt;</code> c
+<code class="python_keyword3">True</code>
+<code class="python_operator">&gt;&gt;&gt;</code> d
+<code class="python_keyword3">False</code></code></pre></div>
+        <p>(L'expression <b><span style="color:#000080;"> a &lt; b </span></b> est évaluée, et son résultat (« vrai ») est
+	  mémorisé dans la variable<b> c</b>. De même pour le résultat de l'expression inverse, dans la variable <b>d</b><a class="signetNoteBasPage" id="signetNoteBasPage27" href="#noteBasPage27">(27)</a>.)</p>
+        <p>À l'aide d'une petite astuce, nous pouvons quand même vérifier que ces valeurs<b><span style="color:#000080;"> True </span></b>et <b><span style="color:#000080;"> False </span></b>sont en réalité les deux nombres 1 et 0 « déguisés » :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7813">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7813" onclick="selectionCode('contenuCoded0e7813', 'IdTitreCode-d0e7813');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7813" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> accord <code class="python_operator">=</code> [<code class="python_literal1">"non"</code>, <code class="python_literal1">"oui"</code>]
+<code class="python_operator">&gt;&gt;&gt;</code> accord[d]
+non
+<code class="python_operator">&gt;&gt;&gt;</code> accord[c]
+oui</code></pre></div>
+        <p>(En utilisant les valeurs des variables <b>c</b> et <b>d</b> comme indices pour extraire les éléments de la liste <b>accord</b>, nous confirmons bien
+	  que False =0 et True =1.)</p>
+        <p>Le petit script ci-après est très similaire au précédent. Il nous permet de tester le caractère « vrai » ou
+	  « faux » d'une chaîne de caractères : </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7848">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7848" onclick="selectionCode('contenuCoded0e7848', 'IdTitreCode-d0e7848');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7848" class="contenuCode">ch <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Entrez une chaîne de caractères quelconque"</code>)
+<code class="python_keyword1">if</code> ch:
+ <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"vrai"</code>)
+<code class="python_keyword1">else</code>:
+ <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"faux"</code>)</code></pre></div>
+        <p>Vous obtiendrez « faux » pour toute chaîne <span class="italique">vide</span>, et « vrai » pour toute chaîne contenant au moins un
+	  caractère. Vous pourriez de la même manière tester la « véracité » d'une liste, et constater qu'une liste vide est
+	  « fausse », alors qu'une liste ayant un contenu quelconque est « vraie »<a class="signetNoteBasPage" id="signetNoteBasPage28" href="#noteBasPage28">(28)</a>.</p>
+        <p>L'instruction <b><span style="color:#000080;"> if ch:</span></b> , à la troisième ligne de cet exemple, est donc équivalente à une
+	  instruction du type : <b><span style="color:#000080;"> if ch !="":</span></b> , du moins de notre point de vue d'êtres humains.</p>
+        <p>Pour l'ordinateur, cependant, ce n'est pas tout à fait pareil. Pour lui, l'instruction <b><span style="color:#000080;"> if ch: </span></b> consiste
+	  à vérifier directement si la valeur de la variable <b>ch</b> est une chaîne vide ou non, comme nous venons de le voir. La seconde formulation, par
+	  contre :<b><span style="color:#000080;"> if ch != "": </span></b>lui impose de commencer par comparer le contenu de <b>ch</b><span class="italique">à la valeur
+	  d'une autre donnée que nous lui fournissons par notre programme</span> (une chaîne vide), puis à évaluer <span class="italique">ensuite</span> si le résultat de cette
+	  comparaison est lui-même « vrai » ou « faux » (ou en d'autres termes, à vérifier si ce résultat est
+	  lui-même « True » ou « False »). Cela lui demande donc deux opérations successives, là où la première
+	  formulation ne lui en demande qu'une seule. La première formulation est donc plus performante.</p>
+        <p>Pour les mêmes raisons, dans un script tel celui-ci :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e7932">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e7932" onclick="selectionCode('contenuCoded0e7932', 'IdTitreCode-d0e7932');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e7932" class="contenuCode">ch <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code><code class="python_literal1">"Veuillez entrer un nombre : "</code>)
+n <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>ch)
+<code class="python_keyword1">if</code> n <code class="python_operator">%</code> <code class="python_digit">2</code>:
+   <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Il s'agit d'un nombre impair."</code>)
+<code class="python_keyword1">else</code>:
+   <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Il s'agit d'un nombre pair."</code>)</code></pre></div>
+        <p>il est plus efficace de programmer la troisième ligne comme nous l'avons fait ci-dessus, plutôt que d'écrire explicitement : <b><span style="color:#000080;"> if n % 2 != 0 </span></b>, car cette formulation imposerait à l'ordinateur d'effectuer deux comparaisons
+	  successives au lieu d'une seule.</p>
+        <p>Ce raisonnement « proche de la machine » vous paraîtra probablement un peu subtil au début, mais croyez bien que cette forme
+	  d'écriture vous deviendra très vite tout à fait familière.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L8-F">8-F. Révision<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans ce qui suit, nous n'allons pas apprendre de nouveaux concepts mais simplement utiliser tout ce que nous connaissons déjà, pour réaliser de
+	  vrais petits programmes.</p>
+        
+		<h4 class="TitreSection2" id="L8-F-1">8-F-1. Contrôle du flux - utilisation d'une liste simple<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Commençons par un petit retour sur les branchements conditionnels (il s'agit peut-être là du groupe d'instructions le plus important, dans
+	    n'importe quel langage !) :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e8004">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e8004" onclick="selectionCode('contenuCoded0e8004', 'IdTitreCode-d0e8004');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e8004" class="contenuCode"><code class="python_comment1"># Utilisation d'une liste et de branchements conditionnels</code>
+ 
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Ce script recherche le plus grand de trois nombres"</code>)
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Veuillez entrer trois nombres séparés par des virgules : "</code>)
+ch <code class="python_operator">=</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>)
+<code class="python_comment1"># Note : l'association des fonctions eval() et list() permet de convertir</code>
+<code class="python_comment1"># en liste toute chaîne de valeurs séparées par des virgules :29En fait, la fonction eval() évalue le contenu de la chaîne fournie en argument comme étant une expression Python</code>
+ dont elle doit renvoyer le résultat. Par exemple :  <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=eval#eval"><span>eval</span></a><code class="python_operator">(</code><code class="python_literal1">"7 + 5"</code>) renvoie l<code class="python_literal1">'entier 12. Si on lui fournit une chaîne de valeurs séparées par des virgules, cela correspond pour</code>
+<code class="python_literal1"> elle à un tuple. Les tuples sont des séquences apparentées aux listes. Ils seront abordés au chapitre 10 (cf. page 199).</code>
+<code class="python_literal1">nn = list(eval(ch))</code>
+<code class="python_literal1">max, index = nn[0], '</code>premie<code class="python_literal1">r'</code>
+<code class="python_literal1">if nn[1] &gt; max: 	    # ne pas omettre le double point !</code>
+<code class="python_literal1"> max = nn[1]</code>
+<code class="python_literal1"> index = '</code>second<code class="python_literal1">'</code>
+<code class="python_literal1">if nn[2] &gt; max:</code>
+<code class="python_literal1"> max = nn[2]</code>
+<code class="python_literal1"> index = '</code>troisième<code class="python_literal1">'</code>
+<code class="python_literal1">print("Le plus grand de ces nombres est", max)</code>
+<code class="python_literal1">print("Ce nombre est le", index, "de votre liste.")</code></code></pre></div>
+          <p>Dans cet exercice, vous retrouvez à nouveau le concept de « bloc d<span class="italique">'</span>instructions », déjà abondamment commenté
+	    aux chapitres 3 et 4, et que vous devez absolument assimiler. Pour rappel, les blocs d<span class="italique">'</span>instructions sont délimités par <span class="italique">l'indentation</span>.
+	    Après la première instruction <b>if</b>, par exemple, il y a deux lignes indentées définissant un bloc d<span class="italique">'</span>instructions. Ces instructions ne
+	    seront exécutées que si la condition <b><span style="color:#000080;">nn[1] &gt; max </span></b>est vraie.</p>
+          <p>La ligne suivante, par contre (celle qui contient la deuxième instruction <b>if </b>) n'est pas indentée. Cette ligne se situe donc au
+	    même niveau que celles qui définissent le corps principal du programme. L'instruction contenue dans cette ligne est donc toujours exécutée, alors
+	    que les deux suivantes (qui constituent encore un autre bloc) ne sont exécutées que si la condition <b><span style="color:#000080;"> nn[2] &gt; max </span></b> est vraie.</p>
+          <p>En suivant la même logique, on voit que les instructions des deux dernières lignes font partie du bloc principal et sont donc toujours
+	    exécutées.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L8-F-2">8-F-2. Boucle while - instructions imbriquées<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Continuons dans cette voie en imbriquant d'autres structures :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e8131">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e8131" onclick="selectionCode('contenuCoded0e8131', 'IdTitreCode-d0e8131');">S&eacute;lectionnez</span></div></div><div style="overflow:auto;" class="code_avec_lignes"><div class="numeros_lignes">1.<br/>2.<br/>3.<br/>4.<br/>5.<br/>6.<br/>7.<br/>8.<br/>9.<br/>10.<br/>11.<br/>12.<br/>13.<br/>14.<br/>15.<br/>16.<br/>17.<br/>18.<br/>19.<br/>20.<br/>21.<br/></div><pre class="code_uniquement" style="margin: 0"><code class="contenuCode" id="contenuCoded0e8131"><code class="python_comment1"># Instructions composées &lt;while&gt; - &lt;if&gt; - &lt;elif&gt; - &lt;else&gt;</code>
+ 
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'Choisissez un nombre de 1 à 3 (ou 0 pour terminer) '</code>, end<code class="python_operator">=</code><code class="python_literal1">' '</code>)
+ch <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>)
+a <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code>ch)	   <code class="python_comment1"># conversion de la chaîne entrée en entier</code>
+<code class="python_keyword1">while</code> a:	<code class="python_comment1"># équivalent à : &lt; while a != 0: &gt;</code>
+  <code class="python_keyword1">if</code> a <code class="python_operator">==</code> <code class="python_digit">1</code>:
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Vous avez choisi un :"</code>)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"le premier, l'unique, l'unité ..."</code>
+  <code class="python_keyword1">elif</code> a <code class="python_operator">==</code> <code class="python_digit">2</code>:
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Vous préférez le deux :"</code>)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"la paire, le couple, le duo ..."</code>)
+  <code class="python_keyword1">elif</code> a <code class="python_operator">==</code> <code class="python_digit">3</code>:
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Vous optez pour le plus grand des trois :"</code>)
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"le trio, la trinité, le triplet ..."</code>)
+  <code class="python_keyword1">else</code> :
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Un nombre entre UN et TROIS, s.v.p."</code>)
+  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">'Choisissez un nombre de 1 à 3 (ou 0 pour terminer) '</code>, end <code class="python_operator">=</code><code class="python_literal1">' '</code>)
+  a <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=int#int"><span>int</span></a><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=input#input"><span>input</span></a><code class="python_operator">(</code>))
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Vous avez entré zéro :"</code>)
+<code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"L'exercice est donc terminé."</code>)
+</code></pre></div></div>
+          <p>Nous retrouvons ici une boucle <b>while</b>, associée à un groupe d'instructions <b>if</b>, <b>elif</b> et <b>else</b>. Notez bien cette fois encore
+	    comment la structure logique du programme est créée à l'aide des indentations (... et n'oubliez pas le caractère « : » à
+	    la fin de chaque ligne d'en-tête !).</p>
+          <p>À la ligne 6, l'instruction <b>while</b> est utilisée de la manière expliquée à la page  : pour la comprendre, il suffit de
+	    vous rappeler que toute valeur numérique autre que zéro est considérée comme « vraie » par l'interpréteur Python. Vous
+	    pouvez remplacer cette forme d'écriture par : «<b><span style="color:#000080;"> while a != 0 </span></b>: » si vous
+	    préférez (rappelons à ce sujet que l'opérateur de comparaison <b><span style="color:#000080;">!=</span></b> signifie « est différent
+	    de »), mais c'est moins efficace.</p>
+          <p>Cette « boucle while » relance le questionnement après chaque réponse de l'utilisateur (du moins jusqu'à ce que celui-ci
+	    décide de « quitter » en entrant une valeur nulle : ).</p>
+          <p>Dans le corps de la boucle, nous trouvons le groupe d'instructions <b>if</b>, <b>elif</b> et <b>else</b> (de la ligne 7 à la ligne 17), qui aiguille le
+	    flux du programme vers les différentes réponses, ensuite une instruction <b>print()</b> et une instruction <b>input()</b> (lignes 18 &amp; 19) qui seront
+	    exécutées dans tous les cas de figure : notez bien leur niveau d'indentation, qui est le même que celui du bloc <b>if</b>, <b>elif</b> et
+	    <b>else</b>. Après ces instructions, le programme boucle et l'exécution reprend à l'instruction <b>while</b> (ligne 6).</p>
+          <p>À la ligne 19, nous utilisons la composition pour écrire un code plus compact, qui est équivalent aux lignes 4 &amp; 5 rassemblées en une
+	    seule.</p>
+          <p>Les deux dernières instructions <b>print()</b> (lignes 20 &amp; 21) ne sont exécutées qu'à la sortie de la boucle.</p>
+          <p>Exercices</p>
+          <p>.Que fait le programme ci-dessous, dans les quatre cas où l'on aurait défini au préalable que la variable <b>a</b> vaut 1, 2, 3 ou
+	    15 ?</p>
+          <p>
+            <b>
+              <span style="color:#000080;">if a !=2:</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">print(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">perdu</span>
+              <span style="color:#000080;">')</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">elif a ==3:</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">print(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">un instant, s.v.p.</span>
+              <span style="color:#000080;">')</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">else :</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">print(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">gagné</span>
+              <span style="color:#000080;">')</span>
+            </b>
+          </p>
+          <p>.Que font ces programmes ?<br/><b><span style="color:#000080;">a) </span><span style="color:#000080;">a = 5</span></b><br/><b><span style="color:#000080;">b =
+	    2</span></b><br/><b><span style="color:#000080;">if (a==5) &amp; (b&lt;2):</span></b><br/><b><span style="color:#000080;">print(</span><span style="color:#000080;">'</span><span style="color:#000080;">"&amp;" signifie "et"; on peut aussi utiliser\</span></b><br/><b><span style="color:#000080;">le mot "and"</span><span style="color:#000080;">')</span></b><br/><b><span style="color:#000080;">b) </span><span style="color:#000080;">a, b = 2, 4</span></b><br/><b><span style="color:#000080;">if (a==4) or
+	    (b!=4):</span></b><br/><b><span style="color:#000080;">print(</span><span style="color:#000080;">'</span><span style="color:#000080;">gagné</span><span style="color:#000080;">')</span></b><br/><b><span style="color:#000080;">elif (a==4) or (b==4):</span></b><br/><b><span style="color:#000080;">print(</span><span style="color:#000080;">'</span><span style="color:#000080;">presque gagné</span><span style="color:#000080;">')</span></b><br/><b><span style="color:#000080;">c) </span><span style="color:#000080;">a = 1</span></b><br/><b><span style="color:#000080;">if not a:</span></b><br/><b><span style="color:#000080;">print(</span><span style="color:#000080;">'</span><span style="color:#000080;">gagné</span><span style="color:#000080;">')</span></b><br/><b><span style="color:#000080;">elif a:</span></b><br/><b><span style="color:#000080;">print(</span><span style="color:#000080;">'</span><span style="color:#000080;">perdu</span><span style="color:#000080;">')</span></b></p>
+          <p>.Reprendre le programme c) avec a = 0 au lieu de a = 1.<br/>
+		 Que se passe-t-il ? Conclure !</p>
+          <p>.Écrire un programme qui, étant données deux bornes entières a et b, additionne les nombres multiples de 3 et de 5 compris entre ces
+	    bornes. Prendre par exemple a = 0, b = 32 ; le résultat devrait être alors 0 + 15 + 30 = 45.<br/>
+		 Modifier légèrement ce programme pour qu'il additionne les nombres multiples de 3 ou de 5 compris entre les bornes a et b. Avec les bornes 0 et 32, le
+		   résultat devrait donc être : 0 + 3 + 5 + 6 + 9 + 10 + 12 + 15 + 18 + 20 + 21 + 24 + 25 + 27 + 30 = 225. </p>
+          <p>.Déterminer si une année (dont le millésime est introduit par l'utilisateur) est bissextile ou non. Une année A est bissextile si A est
+	    divisible par 4. Elle ne l'est cependant pas si A est un multiple de 100, à moins que A ne soit multiple de 400.</p>
+          <p>.Demander à l'utilisateur son nom et son sexe (M ou F). En fonction de ces données, afficher « Cher Monsieur » ou
+	    « Chère Mademoiselle » suivi du nom de la personne.</p>
+          <p>.Demander à l'utilisateur d'entrer trois longueurs a, b, c. À l'aide de ces trois longueurs, déterminer s'il est possible de construire un
+	    triangle. Déterminer ensuite si ce triangle est rectangle, isocèle, équilatéral ou quelconque. Attention : un triangle rectangle peut
+	    être isocèle.</p>
+          <p>.Demander à l'utilisateur qu'il entre un nombre. Afficher ensuite : soit la racine carrée de ce nombre, soit un message indiquant que la racine
+	    carrée de ce nombre ne peut être calculée.</p>
+          <p>.Convertir une note scolaire N quelconque, entrée par l'utilisateur sous forme de points (par exemple 27 sur 85), en une note standardisée suivant
+	    le code ci-dessous :<br/><b><span style="color:#000080;">Note </span><span style="color:#000080;">Appréciation</span></b><br/><b><span style="color:#000080;">N &gt;= 80 %
+	    </span><span style="color:#000080;">A</span></b><br/><b><span style="color:#000080;">80 % &gt; N &gt;= 60 % </span><span style="color:#000080;">B</span></b><br/><b><span style="color:#000080;">60 % &gt; N
+	    &gt;= 50 % </span><span style="color:#000080;">C</span></b><br/><b><span style="color:#000080;">50 % &gt; N &gt;= 40 % </span><span style="color:#000080;">D</span></b><br/><b><span style="color:#000080;">N &lt; 40 % </span><span style="color:#000080;">E</span></b></p>
+          <p>.Soit la liste suivante :<br/><b><span style="color:#000080;">[</span><span style="color:#000080;">'</span><span style="color:#000080;">Jean-Michel</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">'</span><span style="color:#000080;">Marc</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">'</span><span style="color:#000080;">Vanessa</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">'</span><span style="color:#000080;">Anne</span><span style="color:#000080;">'</span><span style="color:#000080;">, 'Maximilien</span><span style="color:#000080;">'</span><span style="color:#000080;">,</span></b><br/><b><span style="color:#000080;">'</span><span style="color:#000080;">Alexandre-Benoît</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">'</span><span style="color:#000080;">Louise</span><span style="color:#000080;">'</span><span style="color:#000080;">]</span></b><br/>
+		 Écrivez un script qui affiche chacun de ces noms avec le nombre de caractères correspondant.</p>
+          <p>.Écrire une boucle de programme qui demande à l'utilisateur d'entrer des notes d'élèves. La boucle se terminera seulement si l'utilisateur
+	    entre une valeur négative. Avec les notes ainsi entrées, construire progressivement une liste. Après chaque entrée d'une nouvelle note (et donc
+	    à chaque itération de la boucle), afficher le nombre de notes entrées, la note la plus élevée, la note la plus basse, la moyenne de toutes les
+	    notes.</p>
+          <p>.Écrivez un script qui affiche la valeur de la force de gravitation s'exerçant entre deux masses de 10 000 kg , pour des distances qui
+	    augmentent suivant une progression géométrique de raison 2, à partir de 5 cm (0,05 mètre).</p>
+          <p>La force de gravitation est régie par la formule <img src="./images/formule04.png" alt="Image non disponible" width="151" height="46" class="image_verticale"/></p>
+          <p>Exemple d'affichage :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">d = .05 m : </span>
+              <span style="color:#000080;">la force vaut </span>
+              <span style="color:#000080;">2.668 N</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">d = .1 m </span>
+              <span style="color:#000080;">: </span>
+              <span style="color:#000080;">la force vaut </span>
+              <span style="color:#000080;">0.667 N</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">d = .2 m </span>
+              <span style="color:#000080;">: </span>
+              <span style="color:#000080;">la force vaut </span>
+              <span style="color:#000080;">0.167 N</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">d = .4 m </span>
+              <span style="color:#000080;">: </span>
+              <span style="color:#000080;">la force vaut </span>
+              <span style="color:#000080;">0.0417 N</span>
+            </b>
+          </p>
+          <p>etc.</p>
+        </div>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_7.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_9.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage24" href="#signetNoteBasPage24">(24)</a></div><div class="ContenuUneNoteBasPage">Sous Python, le terme « fonction » est utilisé
+	indifféremment pour désigner à la fois de véritables fonctions mais également des <b>procédures</b>. Nous indiquerons plus loin la
+	distinction entre ces deux concepts proches. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage25" href="#signetNoteBasPage25">(25)</a></div><div class="ContenuUneNoteBasPage">Dans les versions de Python antérieures à la version 3.0,
+	      la valeur renvoyée par input() était de type variable, suivant ce que l'utilisateur avait entré. Le comportement actuel est en fait celui de
+	      l'ancienne fonction raw_input(), que lui préféraient la plupart des programmeurs. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage26" href="#signetNoteBasPage26">(26)</a></div><div class="ContenuUneNoteBasPage">En toute rigueur, un module peut contenir aussi des définitions de
+	  variables ainsi que des <span class="italique">classes</span>. Nous pouvons toutefois laisser ces précisions de côté, provisoirement.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage27" href="#signetNoteBasPage27">(27)</a></div><div class="ContenuUneNoteBasPage">Ces variables sont d'un
+	  type entier un peu particulier : le type « booléen ». Les variables de ce type ne peuvent prendre que les deux valeurs True et False (en
+	  réalité, 1 et 0).</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage28" href="#signetNoteBasPage28">(28)</a></div><div class="ContenuUneNoteBasPage">Les autres structures de données se
+	  comportent d'une manière similaire. Les <span class="italique">tuples</span> et les <span class="italique">dictionnaires</span> que vous étudierez plus loin (au chapitre 10) sont également
+	  considérés comme « faux » lorsqu'ils sont vides, et « vrais » lorsqu'ils possèdent un contenu.
+	  </div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

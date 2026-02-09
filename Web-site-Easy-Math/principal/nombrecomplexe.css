@@ -1,0 +1,38 @@
+.solution {
+    border-top: dashed 10px;
+    border-bottom: dashed 10px;
+    border-radius: 5%;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    padding: 50px;
+    margin: 50px;
+
+}
+.solution section{
+    border-top: dashed 10px;
+    border-bottom: dashed 10px;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    border-radius: 5%;
+    padding: 50px;
+    margin: 50px;
+}
+.solution h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+body{
+    background: #333;
+}
+
+.titre {
+    border-top: dashed 10px;
+    border-bottom: dashed 10px;
+    border-color: #333;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 50%;
+}

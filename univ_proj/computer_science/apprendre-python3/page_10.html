@@ -1,0 +1,1302 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L10">10. Utilisation de fenêtres et de graphismes</a><ul class="nav-sommaire-ul Indentation10">
+      
+      
+      <li><a class="summaryIndent1" href="#L10-A">10-A. Interfaces graphiques (GUI)</a></li>
+      <li><a class="summaryIndent1" href="#L10-B">10-B. Premiers pas avec tkinter</a><ul class="nav-sommaire-ul Indentation10-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L10-B-1">10-B-1. Examinons à présent plus en détail chacune des lignes de commandes exécutées</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L10-C">10-C. Programmes pilotés par des événements</a><ul class="nav-sommaire-ul Indentation10-C">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L10-C-1">10-C-1. Exemple graphique :tracé de lignes dans un canevas</a></li>
+        <li><a class="summaryIndent2" href="#L10-C-2">10-C-2. Exemple graphique : deux dessins alternés</a></li>
+        <li><a class="summaryIndent2" href="#L10-C-3">10-C-3. Exemple graphique : calculatrice minimaliste</a></li>
+        <li><a class="summaryIndent2" href="#L10-C-4">10-C-4. Exemple graphique : détection et positionnement d'un clic souris</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L10-D">10-D. Les classes de widgets tkinter</a></li>
+      <li><a class="summaryIndent1" href="#L10-E">10-E. Utilisation de la méthode grid() pour contrôler la disposition des widgets</a></li>
+      <li><a class="summaryIndent1" href="#L10-F">10-F. Composition d'instructions pour écrire un code plus compact</a></li>
+      <li><a class="summaryIndent1" href="#L10-G">10-G. Modification des propriétés d'un objet - Animation</a></li>
+      <li><a class="summaryIndent1" href="#L10-H">10-H. Animation automatique - Récursivité</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_9.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_11.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L10">10. Utilisation de fenêtres et de graphismes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>Jusqu'à présent, nous avons utilisé Python exclusivement « en mode texte ». Nous avons procédé ainsi parce qu'il nous
+	fallait absolument d'abord dégager un certain nombre de concepts élémentaires ainsi que la structure de base du langage, avant d'envisager des
+	expériences impliquant des objets informatiques plus élaborés (fenêtres, images, sons, etc.). Nous pouvons maintenant nous permettre une petite
+	incursion dans le vaste domaine des interfaces graphiques, mais ce ne sera qu'un premier amuse-gueule : il nous reste en effet encore bien des choses fondamentales
+	à apprendre, et pour nombre d'entre elles l'approche textuelle reste la plus abordable.</p>
+      
+		<h3 class="TitreSection1" id="L10-A">10-A. Interfaces graphiques (GUI)<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Si vous ne le saviez pas encore, apprenez dès à présent que le domaine des interfaces graphiques (ou <span class="italique">GUI : Graphical User Interfaces</span>) est
+	  extrêmement complexe. Chaque système d'exploitation peut en effet proposer plusieurs « bibliothèques » de fonctions graphiques de
+	  base, auxquelles viennent fréquemment s'ajouter de nombreux compléments, plus ou moins spécifiques de langages de programmation particuliers. Tous ces
+	  composants sont généralement présentés comme des <span class="italique">classes d'objets</span>, dont il vous faudra étudier les <span class="italique">attributs</span> et les
+	  <span class="italique">méthodes</span>. </p>
+        <p>Avec Python, la bibliothèque graphique la plus utilisée jusqu'à présent est la bibliothèque <span class="italique">tkinter</span>, qui est une adaptation de
+	  la bibliothèque <span class="italique">Tk</span> développée à l'origine pour le langage <span class="italique">Tcl</span>. Plusieurs autres bibliothèques graphiques fort intéressantes
+	  ont été proposées pour Python : <span class="italique">wxPython</span>, <span class="italique">pyQT</span>, <span class="italique">pyGTK</span>, etc. Il existe également des possibilités d'utiliser les
+	  bibliothèques de <span class="italique">widgetsJava</span> et les <span class="italique">MFC</span> de <span class="italique">Windows</span>. Dans le cadre de ces notes, nous nous limiterons cependant à <span class="italique">tkinter</span>, dont il
+	  existe fort heureusement des versions similaires (et gratuites) pour les plates-formes <span class="italique">Linux</span>, <span class="italique">Windows</span> et <span class="italique">Mac OS</span>.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L10-B">10-B. Premiers pas avec tkinter<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Pour la suite des explications, nous supposerons bien évidemment que le module <span class="italique">tkinter</span><a class="signetNoteBasPage" id="signetNoteBasPage36" href="#noteBasPage36">(36)</a> a déjà été installé sur votre système. Pour
+	  pouvoir en utiliser les fonctionnalités dans un script Python, il faut que l'une des premières lignes de ce script contienne l'instruction
+	  d'importation :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e11962">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e11962" onclick="selectionCode('contenuCoded0e11962', 'IdTitreCode-d0e11962');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e11962" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code></code></pre></div>
+        <p>Comme toujours sous Python, il n'est même pas nécessaire d'écrire un script. Vous pouvez faire un grand nombre d'expériences directement
+	  à la ligne de commande, en ayant simplement lancé Python en mode interactif.</p>
+        <p>Dans l'exemple qui suit, nous allons créer une fenêtre très simple, et y ajouter deux
+	  <span class="italique">widgets</span><a class="signetNoteBasPage" id="signetNoteBasPage37" href="#noteBasPage37">(37)</a> typiques : un bout de texte (ou <span class="italique">label</span>) et un bouton (ou
+	  <span class="italique">button</span>).</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e11995">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e11995" onclick="selectionCode('contenuCoded0e11995', 'IdTitreCode-d0e11995');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e11995" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_operator">&gt;&gt;&gt;</code> fen1 <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> tex1 <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen1, text<code class="python_operator">=</code><code class="python_literal1">'Bonjour tout le monde !'</code>, fg<code class="python_operator">=</code><code class="python_literal1">'red'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> tex1.<code class="python_function">pack</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> bou1 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen1, text<code class="python_operator">=</code><code class="python_literal1">'Quitter'</code>, command <code class="python_operator">=</code> fen1.destroy)
+<code class="python_operator">&gt;&gt;&gt;</code> bou1.<code class="python_function">pack</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> fen1.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image14.png" alt="Image non disponible" width="123" height="73"/></figure></div>
+        <blockquote class="citation"><div>Suivant la version de Python utilisée, vous verrez déjà apparaître la fenêtre d<span class="italique">'</span>application immédiatement après avoir
+	  entré la deuxième commande de cet exemple, ou bien seulement après la septième<a class="signetNoteBasPage" id="signetNoteBasPage38" href="#noteBasPage38">(38)</a>.</div></blockquote>
+        
+		<h4 class="TitreSection2" id="L10-B-1">10-B-1. Examinons à présent plus en détail chacune des lignes de commandes exécutées<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <ol type="1">
+            <li>Comme cela a déjà été expliqué précédemment, il est aisé de construire différents modules Python, qui
+	      contiendront des scripts, des définitions de fonctions, des classes d'objets, etc. On peut alors importer tout ou partie de ces modules dans n'importe quel
+	      programme, ou même dans l'interpréteur fonctionnant en mode interactif (c'est-à-dire directement à la ligne de commande). C'est ce que nous
+	      faisons à la première ligne de notre exemple : <b>from tkinter import *</b> consiste à importer toutes les classes
+	      contenues dans le module <span class="italique">tkinter</span>.<br/>
+		 Nous devrons de plus en plus souvent parler de ces <span class="italique">classes</span>. En programmation, on appelle ainsi des <span class="italique">générateurs d'objets</span>, lesquels sont
+		   eux-mêmes des morceaux de programmes réutilisables. Nous n'allons pas essayer de vous fournir dès à présent une définition
+		   définitive et précise de ce que sont les objets et les classes, mais plutôt vous proposer d'en utiliser directement quelques-un(e)s. Nous
+		   affinerons notre compréhension petit à petit par la suite.
+		</li>
+            <li>À la deuxième ligne de notre exemple : <b>fen1 = Tk()</b>, nous utilisons l'une des classes
+	      du module <span class="italique">tkinter</span>, la classe <b>Tk()</b>, et nous en créons une <span class="italique">instance</span> (autre terme désignant un objet spécifique), à savoir la
+	      fenêtre <b>fen1</b>.<br/>
+		 Ce processus d'<span class="italique">instanciation d'un objet à partir d'une classe</span> est une opération fondamentale dans les techniques actuelles de programmation.
+		   Celles-ci font en effet de plus en plus souvent appel à une méthodologie que l'on appelle <span class="italique">programmation orientée objet</span> (ou OOP :
+		   <span class="italique">Object Oriented Programming</span>).<br/>
+		 La <b>classe</b> est en quelque sorte un modèle général (ou un moule) à partir duquel on demande à la machine de construire un objet
+		   informatique particulier. La classe contient toute une série de définitions et d'options diverses, dont nous n'utilisons qu'une partie dans l'objet
+		   que nous créons à partir d'elle. Ainsi la classe <b>Tk()</b>, qui est l'une des classes les plus fondamentales de la bibliothèque <span class="italique">tkinter</span>,
+		   contient tout ce qu'il faut pour engendrer différents types de fenêtres d'application, de tailles ou de couleurs diverses, avec ou sans barre de
+		   menus, etc.<br/>
+		 Nous nous en servons ici pour créer notre objet graphique de base, à savoir la fenêtre qui contiendra tout le reste. Dans les parenthèses de
+		   <b>Tk()</b>, nous pourrions préciser différentes options, mais nous laisserons cela pour un peu plus tard.<br/>
+		 L'instruction d'<span class="italique">instanciation</span> ressemble à une simple affectation de variable. Comprenons bien cependant qu'il se passe ici deux choses à la
+		   fois :
+		   <ol type="1"><li><span class="italique">la création d'un nouvel objet</span>, (lequel peut être fort complexe dans certains cas, et par conséquent
+			   occuper un espace mémoire considérable) ;
+			   </li><li><span class="italique">l'affectation d'une variable,</span> qui va désormais servir de
+			   <span class="italique">référence</span> pour manipuler l'objet<a class="signetNoteBasPage" id="signetNoteBasPage39" href="#noteBasPage39">(39)</a>.
+		   		</li></ol></li>
+            <li>À la troisième ligne :<br/><b>tex1 = Label(fen1, text='Bonjour tout le monde !', fg='red')</b>,<br/>
+		 nous créons un autre objet (un <span class="italique">widget</span>), cette fois à partir de la classe <b>Label()</b>.<br/>
+		 Comme son nom l'indique, cette classe définit toutes sortes d'<span class="italique">étiquettes</span> (ou de <span class="italique">libellés</span>). En fait, il s'agit tout simplement de
+		   fragments de texte quelconques, utilisables pour afficher des informations et des messages divers à l'intérieur d'une fenêtre.<br/>
+		 Nous efforçant d'apprendre au passage la manière correcte d'exprimer les choses, nous dirons que nous créons ici l'objet <b>tex1</b> par
+		   <span class="italique">instanciation</span> de la classe <b>Label()</b>.<br/>
+		 Remarquons que nous faisons appel à une classe, de la même manière que nous faisons appel à une fonction : c'est-à-dire en
+		   fournissant un certain nombre d'arguments dans des parenthèses. Nous verrons plus loin qu'une classe est en fait une sorte de
+		   « conteneur » dans lequel sont regroupées des fonctions et des données.<br/>
+		 Quels arguments avons-nous donc fournis pour cette instanciation ?<ol type="1"><li>Le premier argument transmis (<b>fen1</b>), indique que le nouveau
+		   <span class="italique">widget</span> que nous sommes en train de créer sera contenu <span class="italique">dans un autre widget préexistant</span>, que nous désignons donc ici comme son
+		   « maître » : l'objet <b>fen1</b> est le <span class="italique">widget maître</span> de l'objet <b>tex1</b>. On pourra dire aussi que l'objet
+		   <b>tex1</b> est un <span class="italique">widget esclave</span> de l'objet <b>fen1.</b></li><li>Les deux arguments suivants servent à préciser la forme exacte que
+		   doit prendre notre <span class="italique">widget</span>. Ce sont en effet deux options de création, chacune fournie sous la forme d'une chaîne de caractères :
+		   d'abord le texte de l'étiquette, ensuite sa couleur d'avant-plan (ou <span class="italique">foreground</span>, en abrégé <b>fg</b>). Ainsi le texte que nous voulons
+		   afficher est bien défini, et il doit apparaître coloré en rouge.<br/>
+		 Nous pourrions encore préciser bien d'autres caractéristiques : la police à utiliser, ou la couleur d'arrière-plan, par exemple. Toutes
+		   ces caractéristiques ont cependant une valeur par défaut dans les définitions internes de la classe <b>Label()</b>. Nous ne devons indiquer des
+		   options que pour les caractéristiques que nous souhaitons différentes du modèle standard.</li></ol></li>
+            <li>À la quatrième ligne de notre exemple : <b>tex1.pack()</b>, nous activons une <span class="italique">méthode</span>
+	      associée à l'objet <b>tex1</b> : la méthode <b>pack()</b>. Nous avons déjà rencontré ce terme de méthode (à propos des
+	      listes, notamment). Une méthode est une fonction intégrée à un objet (on dira aussi qu'elle est <span class="italique">encapsulée</span> dans l'objet). Nous
+	      apprendrons bientôt qu'un <span class="italique"><b>objet</b></span> informatique est en fait un élément de programme contenant toujours :<ol type="1"><li>un
+	      certain nombre de <span class="italique">données</span> (numériques ou autres), contenues dans des variables de types divers : on les appelle les <span class="italique">attributs</span> (ou les
+	      <span class="italique">propriétés</span>) de l'objet ;</li><li>un certain nombre de <span class="italique">procédures</span> ou de <span class="italique">fonctions</span> (qui sont donc des
+	      algorithmes) : on les appelle les <span class="italique">méthodes</span> de l'objet.<br/>
+		 La méthode <b>pack()</b> fait partie d'un ensemble de méthodes qui sont applicables non seulement aux widgets de la classe <b>Label()</b>, mais aussi
+		   à la plupart des autres widgets <span class="italique">tkinter</span>, et qui agissent sur leur disposition géométrique dans la fenêtre. Comme vous pouvez le
+		   constater par vous-même si vous entrez les commandes de notre exemple une par une, la méthode <b>pack()</b> réduit automatiquement la taille de
+		   la fenêtre « maître » afin qu'elle soit juste assez grande pour contenir les widgets « esclaves » définis
+		   au préalable.</li></ol></li>
+            <li>À la cinquième ligne :<br/><b><span style="color:#000080;">bou1 = Button(fen1, text=</span><span style="color:#000080;">'</span><span style="color:#000080;">Quitter</span><span style="color:#000080;">'</span><span style="color:#000080;">, command = fen1.destroy)</span></b>,<br/>
+		 nous créons notre second widget « esclave » : un bouton.<br/><span style="color:#ffffff;">Z</span><br/>
+		 Comme nous l'avons fait pour le widget précédent, nous appelons la classe <b>Button()</b> en fournissant entre parenthèses un certain nombre
+		   d'arguments. Étant donné qu'il s'agit cette fois d'un objet interactif, nous devons préciser avec l'option <b>command</b> ce qui devra se passer lorsque l'utilisateur effectuera un clic sur le bouton. Dans ce cas précis, nous actionnerons la
+		   méthode <b>destroy</b> associée à l'objet <b>fen1</b>, ce qui devrait provoquer l'effacement de la fenêtre<a class="signetNoteBasPage" id="signetNoteBasPage40" href="#noteBasPage40">(40)</a>.</li>
+            <li>La sixième ligne utilise la méthode <b>pack()</b> pour adapter la géométrie de la fenêtre au nouvel objet que nous venons d'y
+	      intégrer.</li>
+            <li>La septième ligne : <b><span style="color:#000080;">fen1.</span><span style="color:#000080;">mainloop</span><span style="color:#000080;">()</span></b> est très
+	      importante, parce que c'est elle qui provoque le démarrage du <span class="italique">réceptionnaire d'événements</span> associé à la fenêtre. Cette
+	      instruction est nécessaire pour que votre application soit « à l'affût » des clics de souris, des pressions exercées sur les
+	      touches du clavier, etc. C'est donc cette instruction qui « la met en marche », en quelque sorte.<br/>
+		 Comme son nom l'indique (<span class="italique">mainloop</span>), il s'agit d'une méthode de l'objet <b>fen1</b>, qui active une <span class="italique">boucle</span> de programme, laquelle
+		   « tournera » en permanence en tâche de fond, dans l'attente de messages émis par le système d'exploitation de l'ordinateur.
+		   Celui-ci interroge en effet sans cesse son environnement, notamment au niveau des périphériques d'entrée (souris, clavier, etc.). Lorsqu'un
+		   événement quelconque est détecté, divers <span class="italique">messages</span> décrivant cet événement sont expédiés aux programmes qui
+		   souhaitent en être avertis. Voyons cela un peu plus en détail.</li>
+          </ol>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L10-C">10-C. Programmes pilotés par des événements<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Vous venez d'expérimenter votre premier programme utilisant une interface graphique. Ce type de programme est structuré d'une manière
+	  différente des scripts « textuels » étudiés auparavant.</p>
+        <p class="imgtext-perso-bordure" style="background: url(./images/image15.png) no-repeat scroll 10px center;padding-left:70px;padding-top:20px;padding-bottom:20px;">Tous les programmes d'ordinateur comportent <span class="italique">grosso</span>-<span class="italique">modo</span> trois phases principales : <span class="italique">unephased'initialisation</span>,
+	  laquelle contient les instructions qui préparent le travail à effectuer (appel des modules externes nécessaires, ouverture de fichiers, connexion à
+	  un serveur de bases de données ou à l'Internet, etc.), <span class="italique">unephasecentrale</span> où l'on trouve la véritable fonctionnalité du programme
+	  (c'est-à-dire tout ce qu'il est censé faire : afficher des données à l'écran, effectuer des calculs, modifier le contenu d'un fichier,
+	  imprimer, etc.), et enfin <span class="italique">unephasedeterminaison</span> qui sert à clôturer « proprement » les opérations (c'est-à-dire fermer les
+	  fichiers restés ouverts, couper les connexions externes, etc.).<br/>
+			Dans un programme « en mode texte », ces trois phases sont simplement organisées suivant un schéma <span class="italique">linéaire</span> comme
+			  dans l'illustration ci-contre. En conséquence, ces programmes se caractérisent par une <span class="italique">interactivitétrèslimitée</span> avec
+			  l'utilisateur. Celui-ci ne dispose pratiquement d'aucune liberté : il lui est demandé de temps à autre d'entrer des données au
+			  clavier, mais toujours dans un ordre prédéterminé correspondant à la séquence d'instructions du programme.</p>
+        <p>Dans le cas d'un programme qui utilise une interface graphique, par contre, l'organisation interne est différente. On dit d'un tel programme qu'il est
+	  <span class="italique">pilotéparlesévénements</span>. Après sa phase d'initialisation, un programme de ce type se met en quelque sorte « en attente »,
+	  et passe la main à un autre logiciel, lequel est plus ou moins intimement intégré au système d'exploitation de l'ordinateur et
+	  « tourne » en permanence.</p>
+        <p>Ce <span class="italique">réceptionnaired'événements</span> scrute sans cesse tous les périphériques (clavier, souris, horloge, modem, etc.) et réagit
+	  immédiatement lorsqu'un événement y est détecté.<br/>
+		 Un tel événement peut être une action quelconque de l'utilisateur : déplacement de la souris, appui sur une touche, etc., mais aussi un
+		   événement externe ou un automatisme (top d'horloge, par exemple).</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image16.png"><img class="ImgCliquable figure-img-caption" src="./images/image16.png" alt="Image non disponible" width="488" height="325"/></a></figure></div>
+        <p>Lorsqu'il détecte un événement, le réceptionnaire envoie un message spécifique au programme<a class="signetNoteBasPage" id="signetNoteBasPage41" href="#noteBasPage41">(41)</a>, lequel doit être conçu pour réagir en conséquence.</p>
+        <p>La phase d'initialisation d'un programme utilisant une interface graphique comporte un ensemble d'instructions qui mettent en place les divers composants
+	  interactifs de cette interface (fenêtres, boutons, cases à cocher, etc.). D'autres instructions définissent les messages d'événements qui
+	  devront être pris en charge : on peut en effet décider que le programme ne réagira qu'à certains événements en ignorant tous les
+	  autres.</p>
+        <p>Alors que dans un programme « textuel », la phase centrale est constituée d'une suite d'instructions qui décrivent à l'avance
+	  l'ordre dans lequel la machine devra exécuter ses différentes tâches (même s'il est prévu des cheminements différents en réponse
+	  à certaines conditions rencontrées en cours de route), on ne trouve dans la phase centrale d'un programme avec interface graphique qu'un ensemble de fonctions
+	  indépendantes. Chacune de ces fonctions est appelée spécifiquement lorsqu'un événement particulier est détecté par le système
+	  d'exploitation : elle effectue alors le travail que l'on attend du programme en réponse à cet événement, et rien d'autre<a class="signetNoteBasPage" id="signetNoteBasPage42" href="#noteBasPage42">(42)</a>.</p>
+        <p>Il est important de bien comprendre ici que pendant tout ce temps, le réceptionnaire continue à « tourner » et à guetter
+	  l'apparition d'autres événements éventuels.</p>
+        <p>S'il arrive d'autres événements, il peut donc se faire qu'une deuxième fonction (ou une 3<sup>e</sup>, une 4<sup>e</sup>...) soit
+	  activée et commence à effectuer son travail « en parallèle » avec la première qui n'a pas encore terminé le
+	  sien<a class="signetNoteBasPage" id="signetNoteBasPage43" href="#noteBasPage43">(43)</a>. Les systèmes d'exploitation et les langages modernes permettent en effet ce parallélisme
+	  que l'on appelle aussi <span class="italique">multitâche</span>.</p>
+        <p>Au chapitre précédent, nous avons déjà remarqué que la structure du texte d'un programme n'indique pas directement l'ordre dans lequel
+	  les instructions seront finalement exécutées. Cette remarque s'applique encore bien davantage dans le cas d'un programme avec interface graphique, puisque
+	  l'ordre dans lequel les fonctions sont appelées n'est plus inscrit nulle part dans le programme. Ce sont les événements qui pilotent !</p>
+        <p>Tout ceci doit vous paraître un peu compliqué. Nous allons l'illustrer dans quelques exemples.</p>
+        
+		<h4 class="TitreSection2" id="L10-C-1">10-C-1. Exemple graphique :tracé de lignes dans un canevas<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p class="imgtext-perso-bordure" style="background: url(./images/image17.png) no-repeat scroll 10px center;padding-left:70px;padding-top:20px;padding-bottom:20px;">Le script décrit ci-dessous crée une fenêtre comportant trois boutons et un <span class="italique">canevas</span>. Suivant la terminologie de
+	    <span class="italique">tkinter</span>, un <span class="italique">canevas</span> est une surface rectangulaire délimitée, dans laquelle on peut installer ensuite divers dessins et images à l'aide de
+	    méthodes spécifiques<a class="signetNoteBasPage" id="signetNoteBasPage44" href="#noteBasPage44">(44)</a>.<br/>
+			Lorsque l'on clique sur le bouton « Tracer une ligne », une nouvelle ligne colorée apparaît sur le canevas, avec à
+			  chaque fois une inclinaison différente de la précédente.<br/>
+			Si l'on actionne le bouton « Autre couleur », une nouvelle couleur est tirée au hasard dans une série limitée. Cette
+			  couleur est celle qui s'appliquera aux tracés suivants.</p>
+          <p>Le bouton « Quitter » sert bien évidemment à terminer l'application en refermant la fenêtre.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e12546">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e12546" onclick="selectionCode('contenuCoded0e12546', 'IdTitreCode-d0e12546');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e12546" class="contenuCode"><code class="python_comment1"># Petit exercice utilisant la bibliothèque graphique tkinter</code>
+ 
+<code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> random <code class="python_keyword1">import</code> randrange
+ 
+<code class="python_comment1"># --- définition des fonctions gestionnaires d'événements : ---</code>
+<code class="python_keyword1">def</code> <code class="python_function">drawline</code><code class="python_operator">(</code>):
+ <code class="python_literal1">"Tracé d'une ligne dans le canevas can1"</code>
+ <code class="python_keyword1">global</code> x1, y1, x2, y2, coul
+ can1.<code class="python_function">create_line</code><code class="python_operator">(</code>x1,y1,x2,y2,width<code class="python_operator">=</code><code class="python_digit">2</code>,fill<code class="python_operator">=</code>coul)
+ 
+ <code class="python_comment1"># modification des coordonnées pour la ligne suivante :</code>
+ y2, y1 <code class="python_operator">=</code> y2<code class="python_operator">+</code><code class="python_digit">10</code>, y1<code class="python_operator">-</code><code class="python_digit">10</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">changecolor</code><code class="python_operator">(</code>):
+ <code class="python_literal1">"Changement aléatoire de la couleur du tracé"</code>
+ <code class="python_keyword1">global</code> coul
+ pal<code class="python_operator">=</code>[<code class="python_literal1">'purple'</code>,<code class="python_literal1">'cyan'</code>,<code class="python_literal1">'maroon'</code>,<code class="python_literal1">'green'</code>,<code class="python_literal1">'red'</code>,<code class="python_literal1">'blue'</code>,<code class="python_literal1">'orange'</code>,<code class="python_literal1">'yellow'</code>]
+ c <code class="python_operator">=</code> <code class="python_function">randrange</code><code class="python_operator">(</code><code class="python_digit">8</code>)      <code class="python_comment1"># =&gt; génère un nombre aléatoire de 0 à 7</code>
+ coul <code class="python_operator">=</code> pal[c]
+ 
+<code class="python_comment1">#------ Programme principal -------</code>
+ 
+<code class="python_comment1"># les variables suivantes seront utilisées de manière globale :</code>
+x1, y1, x2, y2 <code class="python_operator">=</code> <code class="python_digit">10</code>, <code class="python_digit">190</code>, <code class="python_digit">190</code>, <code class="python_digit">10</code>      <code class="python_comment1"># coordonnées de la ligne</code>
+coul <code class="python_operator">=</code> <code class="python_literal1">'dark green'</code>	      <code class="python_comment1"># couleur de la ligne</code>
+ 
+<code class="python_comment1"># Création du widget principal ("maître") :</code>
+fen1 <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+<code class="python_comment1"># création des widgets "esclaves" :</code>
+can1 <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>fen1,bg<code class="python_operator">=</code><code class="python_literal1">'dark grey'</code>,height<code class="python_operator">=</code><code class="python_digit">200</code>,width<code class="python_operator">=</code><code class="python_digit">200</code>)
+can1.<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT)
+bou1 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Quitter'</code>,command<code class="python_operator">=</code>fen1.quit)
+bou1.<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>BOTTOM)
+bou2 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Tracer une ligne'</code>,command<code class="python_operator">=</code>drawline)
+bou2.<code class="python_function">pack</code><code class="python_operator">(</code>)
+bou3 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Autre couleur'</code>,command<code class="python_operator">=</code>changecolor)
+bou3.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+fen1.<code class="python_function">mainloop</code><code class="python_operator">(</code>)        <code class="python_comment1"># démarrage du réceptionnaire d'événements</code>
+ 
+fen1.<code class="python_function">destroy</code><code class="python_operator">(</code>)	       <code class="python_comment1"># destruction (fermeture) de la fenêtre</code></code></pre></div>
+          <p>Conformément à ce que nous avons expliqué dans le texte des pages précédentes, la fonctionnalité de ce programme est
+	    essentiellement assurée par les deux fonctions <b>drawline()</b> et <b>changecolor()</b>, qui seront activées par des événements, ceux-ci
+	    étant eux-mêmes définis dans la phase d'initialisation.</p>
+          <p>Dans cette phase d'initialisation, on commence par importer l'intégralité du module tkinter ainsi qu'une fonction du module <span class="italique">random</span> qui permet
+	    de tirer des nombres au hasard. On crée ensuite les différents widgets par instanciation à partir des classes <b>Tk()</b>, <b>Canvas()</b> et
+	    <b>Button()</b>. Remarquons au passage que la même classe <b>Button()</b> sert à instancier plusieurs boutons, qui sont des objets similaires pour
+	    l'essentiel, mais néanmoins individualisés grâce aux options de création et qui pourront fonctionner indépendamment l'un de
+	    l'autre.</p>
+          <p>L'initialisation se termine avec l'instruction <b>fen1.mainloop()</b> qui démarre le réceptionnaire d'événements. Les instructions qui
+	    suivent ne seront exécutées qu'à la sortie de cette boucle, sortie elle-même déclenchée par la méthode <b>fen1.quit()</b> (voir
+	    ci-après). </p>
+          <p>L'option <b>command</b> utilisée dans l'instruction d'instanciation des boutons permet de désigner la fonction qui devra être appelée
+	    lorsqu'un événement « <span class="italique">clic gauche de la souris sur le widget</span> » se produira. Il s'agit en fait d'un raccourci pour cet
+	    événement particulier, qui vous est proposé par <span class="italique">tkinter</span> pour votre facilité parce que cet événement est celui que l'on associe
+	    naturellement à un widget de type bouton. Nous verrons plus loin qu'il existe d'autres techniques plus générales pour associer n'importe quel type
+	    d'événement à n'importe quel widget.</p>
+          <p>Les fonctions de ce script peuvent modifier les valeurs de certaines variables qui ont été définies au niveau principal du programme. Cela est
+	    rendu possible grâce à l'instruction <b>global</b> utilisée dans la définition de ces fonctions. Nous nous permettrons de procéder ainsi
+	    pendant quelque temps encore (ne serait-ce que pour vous habituer à distinguer les comportements des variables locales et globales), mais comme vous le
+	    comprendrez plus loin, <span class="italique">cette pratique n'est pas vraiment recommandable,</span> surtout lorsqu'il s'agit d'écrire de grands programmes. Nous apprendrons une
+	    meilleure technique lorsque nous aborderons l'étude des classes.</p>
+          <p>Dans notre fonction <b>changecolor()</b>, une couleur est choisie au hasard dans une liste. Nous utilisons pour ce faire la fonction <b>randrange()</b>
+	    importée du module <span class="italique">random</span>. Appelée avec un argument <b>N</b>, cette fonction renvoie un nombre entier, tiré au hasard entre <b>0</b> et
+	    <b>N-1</b>.</p>
+          <p>La commande liée au bouton « Quitter » appelle la méthode <b>quit()</b> de la fenêtre <b>fen1</b>. Cette méthode sert
+	    à fermer (quitter) le réceptionnaire d'événements (<b>mainloop</b>) associé à cette fenêtre. Lorsque cette méthode est
+	    activée, l'exécution du programme se poursuit avec les instructions qui suivent l'appel de <b>mainloop</b>. Dans notre exemple, cela consiste donc à
+	    effacer (<b>destroy</b>) la fenêtre.</p>
+          <p>Exercices</p>
+          <p>.Comment faut-il modifier le programme pour ne plus avoir que des lignes de couleur <span class="italique">cyan, maroon </span>et <span class="italique">green </span>?</p>
+          <p>.Comment modifier le programme pour que toutes les lignes tracées soient horizontales et parallèles ?</p>
+          <p>.Agrandissez le canevas de manière à lui donner une largeur de 500 unités et une hauteur de 650. Modifiez également la taille des lignes,
+	    afin que leurs extrémités se confondent avec les bords du canevas.</p>
+          <p>.Ajoutez une fonction <b>drawline2</b> qui tracera deux lignes rouges en croix au centre du canevas : l'une horizontale et l'autre verticale. Ajoutez
+	    également un bouton portant l'indication « viseur ». Un clic sur ce bouton devra provoquer l'affichage de la croix.</p>
+          <p>.Reprenez le programme initial. Remplacez la méthode <b>create_line</b> par <b>create_rectangle</b>. Que se passe-t-il ?<br/>
+		 De la même façon, essayez aussi <b>create_arc</b>, <b>create_oval</b>, et <b>create_polygon</b>.<br/>
+		 Pour chacune de ces méthodes, notez ce qu'indiquent les coordonnées fournies en paramètres.<br/>
+		 (Remarque : pour le polygone, il est nécessaire de modifier légèrement le programme !)</p>
+          <p>.- Supprimez la ligne <b>global x1, y1, x2, y2</b> dans la fonction <b>drawline</b> du programme original. Que se passe-t-il ? Pourquoi ?<br/>
+		 - Si vous placez plutôt « x1, y1, x2, y2 » entre les parenthèses, dans la ligne de définition de la fonction <b>drawline</b>,
+		   de manière à transmettre ces variables à la fonction en tant que paramètres, le programme fonctionne-t-il encore ? N'oubliez pas de
+		   modifier aussi la ligne du programme qui fait appel à cette fonction !<br/>
+		 - Si vous définissez <b>x1, y1, x2, y2 = 10, 390, 390, 10</b> à la place de <b>global x1, y1, ...</b>, que se passe-t-il ? Pourquoi ? Quelle
+		   conclusion pouvez-vous tirer de tout cela ?</p>
+          <p>.a) Créez un court programme qui dessinera les 5 anneaux olympiques dans un rectangle de fond blanc (white). Un bouton « Quitter »
+	    doit permettre de fermer la fenêtre.<br/>
+		 b) Modifiez le programme ci-dessus en y ajoutant 5 boutons. Chacun de ces boutons provoquera le tracé de chacun des 5 anneaux</p>
+          <p>.Dans votre cahier de notes, établissez un tableau à deux colonnes. Vous y noterez à gauche les définitions des classes d'objets
+	    déjà rencontrées (avec leur liste de paramètres), et à droite les méthodes associées à ces classes (également avec leurs
+	    paramètres). Laissez de la place pour compléter ultérieurement.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L10-C-2">10-C-2. Exemple graphique : deux dessins alternés<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Cet autre exemple vous montrera comment vous pouvez exploiter les connaissances que vous avez acquises précédemment, concernant les boucles, les
+	    listes et les fonctions, afin de réaliser de nombreux dessins avec seulement quelques lignes de code. Il s'agit d'une petite application qui affiche l'un ou
+	    l'autre des deux dessins reproduits ci-dessous, en fonction du bouton choisi :</p>
+          <p>
+            <img src="./images/image18.png" alt="Image non disponible" width="223" height="275" class="image_verticale"/>
+            <img src="./images/image19.png" alt="Image non disponible" width="223" height="275" class="image_verticale"/>
+          </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e13018">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e13018" onclick="selectionCode('contenuCoded0e13018', 'IdTitreCode-d0e13018');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e13018" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">cercle</code><code class="python_operator">(</code>x, y, r, coul <code class="python_operator">=</code><code class="python_literal1">'black'</code>):
+  <code class="python_literal1">"tracé d'un cercle de centre (x,y) et de rayon r"</code>
+  can.<code class="python_function">create_oval</code><code class="python_operator">(</code>x<code class="python_operator">-</code>r, y<code class="python_operator">-</code>r, x<code class="python_operator">+</code>r, y<code class="python_operator">+</code>r, outline<code class="python_operator">=</code>coul)
+ 
+<code class="python_keyword1">def</code> <code class="python_function">figure_1</code><code class="python_operator">(</code>):
+  <code class="python_literal1">"dessiner une cible"</code>
+  <code class="python_comment1"># Effacer d'abord tout dessin préexistant :</code>
+  can.<code class="python_function">delete</code><code class="python_operator">(</code>ALL)
+  <code class="python_comment1"># tracer les deux lignes (vert. Et horiz.) :</code>
+  can.<code class="python_function">create_line</code><code class="python_operator">(</code><code class="python_digit">100</code>, <code class="python_digit">0</code>, <code class="python_digit">100</code>, <code class="python_digit">200</code>, fill <code class="python_operator">=</code><code class="python_literal1">'blue'</code>)
+  can.<code class="python_function">create_line</code><code class="python_operator">(</code><code class="python_digit">0</code>, <code class="python_digit">100</code>, <code class="python_digit">200</code>, <code class="python_digit">100</code>, fill <code class="python_operator">=</code><code class="python_literal1">'blue'</code>)
+  <code class="python_comment1"># tracer plusieurs cercles concentriques :</code>
+  rayon <code class="python_operator">=</code> <code class="python_digit">15</code>
+  <code class="python_keyword1">while</code> rayon <code class="python_operator">&lt;</code> <code class="python_digit">100</code>:
+      <code class="python_function">cercle</code><code class="python_operator">(</code><code class="python_digit">100</code>, <code class="python_digit">100</code>, rayon)
+      rayon <code class="python_operator">+=</code> <code class="python_digit">15</code> 
+ 
+<code class="python_keyword1">def</code> <code class="python_function">figure_2</code><code class="python_operator">(</code>):
+  <code class="python_literal1">"dessiner un visage simplifié"</code>
+  <code class="python_comment1"># Effacer d'abord tout dessin préexistant :</code>
+  can.<code class="python_function">delete</code><code class="python_operator">(</code>ALL)
+  <code class="python_comment1"># Les caractéristiques de chaque cercle sont</code>
+  <code class="python_comment1"># placées dans une liste de listes :</code>
+  cc <code class="python_operator">=</code>[[<code class="python_digit">100</code>, <code class="python_digit">100</code>, <code class="python_digit">80</code>, <code class="python_literal1">'red'</code>],	   <code class="python_comment1"># visage</code>
+    [<code class="python_digit">70</code>, <code class="python_digit">70</code>, <code class="python_digit">15</code>, <code class="python_literal1">'blue'</code>],      <code class="python_comment1"># yeux</code>
+    [<code class="python_digit">130</code>, <code class="python_digit">70</code>, <code class="python_digit">15</code>, <code class="python_literal1">'blue'</code>],	
+    [<code class="python_digit">70</code>, <code class="python_digit">70</code>, <code class="python_digit">5</code>, <code class="python_literal1">'black'</code>],      
+    [<code class="python_digit">130</code>, <code class="python_digit">70</code>, <code class="python_digit">5</code>, <code class="python_literal1">'black'</code>],
+    [<code class="python_digit">44</code>, <code class="python_digit">115</code>, <code class="python_digit">20</code>, <code class="python_literal1">'red'</code>],      <code class="python_comment1"># joues</code>
+    [<code class="python_digit">156</code>, <code class="python_digit">115</code>, <code class="python_digit">20</code>, <code class="python_literal1">'red'</code>],
+    [<code class="python_digit">100</code>, <code class="python_digit">95</code>, <code class="python_digit">15</code>, <code class="python_literal1">'purple'</code>],   <code class="python_comment1"># nez</code>
+    [<code class="python_digit">100</code>, <code class="python_digit">145</code>, <code class="python_digit">30</code>, <code class="python_literal1">'purple'</code>]]  <code class="python_comment1"># bouche</code>
+  <code class="python_comment1"># on trace tous les cercles à l'aide d'une boucle :</code>
+  i <code class="python_operator">=</code><code class="python_digit">0</code>
+  <code class="python_keyword1">while</code> i <code class="python_operator">&lt;</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=len#len"><span>len</span></a><code class="python_operator">(</code>cc):	  <code class="python_comment1"># parcours de la liste</code>
+      el <code class="python_operator">=</code> cc[i]      <code class="python_comment1"># chaque élément est lui-même une liste</code>
+      <code class="python_function">cercle</code><code class="python_operator">(</code>el[<code class="python_digit">0</code>], el[<code class="python_digit">1</code>], el[<code class="python_digit">2</code>], el[<code class="python_digit">3</code>])
+      i <code class="python_operator">+=</code> <code class="python_digit">1</code>
+ 
+<code class="python_comment1">##### Programme principal : ############</code>
+ 
+fen <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+can <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>fen, width <code class="python_operator">=</code><code class="python_digit">200</code>, height <code class="python_operator">=</code><code class="python_digit">200</code>, bg <code class="python_operator">=</code><code class="python_literal1">'ivory'</code>)
+can.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>TOP, padx <code class="python_operator">=</code><code class="python_digit">5</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>)
+b1 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen, text <code class="python_operator">=</code><code class="python_literal1">'dessin 1'</code>, command <code class="python_operator">=</code>figure_1)
+b1.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT, padx <code class="python_operator">=</code><code class="python_digit">3</code>, pady <code class="python_operator">=</code><code class="python_digit">3</code>)
+b2 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen, text <code class="python_operator">=</code><code class="python_literal1">'dessin 2'</code>, command <code class="python_operator">=</code>figure_2)
+b2.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>RIGHT, padx <code class="python_operator">=</code><code class="python_digit">3</code>, pady <code class="python_operator">=</code><code class="python_digit">3</code>)
+fen.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Commençons par analyser le programme principal, à la fin du script :</p>
+          <p>Nous y créons une fenêtre, par instanciation d'un objet de la classe <b>Tk()</b> dans la variable <b>fen</b>.<br/>
+		 Ensuite, nous installons 3 widgets dans cette fenêtre : un canevas et deux boutons. Le canevas est instancié dans la variable <b>can</b>, et les
+		   deux boutons dans les variables <b>b1</b> et <b>b2</b>. Comme dans le script précédent, les widgets sont mis en place dans la fenêtre à
+		   l'aide de leur méthode <b>pack()</b>, mais cette fois nous utilisons celle-ci avec des options :</p>
+          <ul class="ListeDVP">
+            <li>l'option <b>side</b> peut accepter les valeurs TOP, BOTTOM, LEFT ou RIGHT, pour « pousser » le widget du côté correspondant dans la fenêtre. Ces noms écrits en majuscules sont en fait ceux d'une série de variables importées avec le module tkinter, et que vous pouvez  considérer comme des « pseudo-constantes ».</li>
+            <li>les options <b>padx</b> et <b>pady</b> permettent de réserver un petit espace autour du widget. Cet espace est exprimé en nombre de pixels : <b>padx</b> réserve un espace à gauche et à droite du widget, <b>pady</b> réserve un espace au-dessus et au-dessous du widget.</li>
+          </ul>
+          <p>Les boutons commandent l'affichage des deux dessins, en invoquant les fonctions <b>figure_1()</b> et <b>figure_2()</b>. Considérant que nous aurions
+	    à tracer un certain nombre de cercles dans ces dessins, nous avons estimé qu'il serait bien utile de définir d'abord une fonction <b>cercle()</b>
+	    spécialisée. En effet, vous savez probablement déjà que le canevas tkinter est doté d'une méthode <b>create_oval()</b> qui permet de
+	    dessiner des ellipses quelconques (et donc aussi des cercles), mais cette méthode doit être invoquée avec quatre arguments qui seront les
+	    coordonnées des coins supérieur gauche et inférieur droit d'un rectangle fictif, dans lequel l'ellipse viendra alors s'inscrire. Cela n'est pas
+	    très pratique dans le cas particulier du cercle : il nous semblera plus naturel de commander ce tracé en fournissant les coordonnées de son centre
+	    ainsi que son rayon. C'est ce que nous obtiendrons avec notre fonction <b>cercle()</b>, laquelle invoque la méthode <b>create_oval()</b> en effectuant la
+	    conversion des coordonnées. Remarquez aussi que cette fonction attend un argument facultatif en ce qui concerne la couleur du cercle à tracer (noir par
+	    défaut).</p>
+          <p>L'efficacité de cette approche apparaît clairement dans la fonction <b>figure_1()</b>, ou nous trouvons une simple boucle de répétition
+	    pour dessiner toute la série de cercles (de même centre et de rayon croissant). Notez au passage l'utilisation de l'opérateur <b>+=</b> qui permet
+	    d'incrémenter une variable (dans notre exemple, la variable <b>r</b> voit sa valeur augmenter de 15 unités à chaque itération).</p>
+          <p>Le second dessin est un peu plus complexe, parce qu'il est composé de cercles de tailles variées centrés sur des points différents. Nous
+	    pouvons tout de même tracer tous ces cercles à l'aide d'une seule boucle de répétition, si nous mettons à profit nos connaissances concernant
+	    les listes.</p>
+          <p>En effet, ce qui différencie les cercles que nous voulons tracer tient en quatre caractéristiques : coordonnées <b>x</b> et <b>y</b> du
+	    centre, rayon et couleur. Pour chaque cercle, nous pouvons placer ces quatre caractéristiques dans une petite liste, et rassembler toutes les petites listes ainsi
+	    obtenues dans une autre liste plus grande. Nous disposerons ainsi d'une liste de listes, qu'il suffira ensuite de parcourir à l'aide d'une boucle pour effectuer
+	    les tracés correspondants.<br/></p>
+          <p>Exercices</p>
+          <p>.Inspirez-vous du script précédent pour écrire une petite application qui fait apparaître un damier (dessin de cases noires sur fond
+	    blanc) lorsque l'on clique sur un bouton : <img src="./images/image20.png" alt="Image non disponible" width="223" height="275" class="image_verticale"/></p>
+          <p>.À l'application de l'exercice précédent, ajoutez un bouton qui fera apparaître des pions au hasard sur le damier (chaque pression sur le
+	    bouton fera apparaître un nouveau pion).</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L10-C-3">10-C-3. Exemple graphique : calculatrice minimaliste<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p class="imgtext-perso-bordure" style="background: url(./images/image21.png) no-repeat scroll 10px center;padding-left:70px;padding-top:20px;padding-bottom:20px;">Bien que très court, le petit script ci-dessous implémente une calculatrice complète, avec laquelle vous pourrez
+	    même effectuer des calculs comportant des parenthèses et des fonctions scientifiques. N'y voyez rien d'extraordinaire. Toute cette fonctionnalité n'est
+	    qu'une conséquence du fait que vous utilisez un interpréteur plutôt qu'un compilateur pour exécuter vos programmes.</p>
+          <p>Comme vous le savez, le compilateur n'intervient qu'une seule fois, pour traduire l'ensemble de votre code source en un programme exécutable. Son
+	    rôle est donc terminé <span class="italique">avant même</span> l'exécution du programme. L'interpréteur, quant à lui, est toujours actif <span class="italique">pendant</span>
+	    l'exécution du programme, et donc tout à fait disponible pour traduire un nouveau code source quelconque, comme une expression mathématique entrée
+	    au clavier par l'utilisateur.</p>
+          <p>Les langages interprétés disposent donc toujours de fonctions permettant d'évaluer une chaîne de caractères comme une suite
+	    d'instructions du langage lui-même. Il devient alors possible de construire en peu de lignes des structures de programmes très dynamiques. Dans l'exemple
+	    ci-dessous, nous utilisons la fonction intégrée <b>eval()</b> pour analyser l'expression mathématique entrée par l'utilisateur dans le champ
+	    prévu à cet effet, et nous n'avons plus ensuite qu'à afficher le résultat.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e13620">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e13620" onclick="selectionCode('contenuCoded0e13620', 'IdTitreCode-d0e13620');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e13620" class="contenuCode"><code class="python_comment1"># Exercice utilisant la bibliothèque graphique tkinter et le module math</code>
+ 
+<code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+<code class="python_keyword1">from</code> math <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_comment1"># définition de l'action à effectuer si l'utilisateur actionne</code>
+<code class="python_comment1"># la touche "enter" alors qu'il édite le champ d'entrée :</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">evaluer</code><code class="python_operator">(</code>event):
+ chaine.<code class="python_function">configure</code><code class="python_operator">(</code>text <code class="python_operator">=</code> <code class="python_literal1">"Résultat = "</code> <code class="python_operator">+</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=eval#eval"><span>eval</span></a><code class="python_operator">(</code>entree.<code class="python_function">get</code><code class="python_operator">(</code>))))
+ 
+<code class="python_comment1"># ----- Programme principal : -----</code>
+ 
+fenetre <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+entree <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fenetre)
+entree.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">"&lt;Return&gt;"</code>, evaluer)
+chaine <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fenetre)
+entree.<code class="python_function">pack</code><code class="python_operator">(</code>)
+chaine.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+fenetre.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Au début du script, nous commençons par importer les modules <b>tkinter</b> et <b>math</b>, ce dernier étant nécessaire afin que la dite
+	    calculatrice puisse disposer de toutes les fonctions mathématiques et scientifiques usuelles : sinus, cosinus, racine carrée, etc.</p>
+          <p>Ensuite nous définissons une fonction <b>evaluer()</b>, qui sera en fait la commande exécutée par le programme lorsque l'utilisateur actionnera
+	    la touche <span class="italique">Return</span> (ou <span class="italique">Enter</span>) après avoir entré une expression mathématique quelconque dans le champ d'entrée décrit plus
+	    loin.</p>
+          <p>Cette fonction utilise la méthode <b>configure()</b> du widget <b>chaine</b><a class="signetNoteBasPage" id="signetNoteBasPage45" href="#noteBasPage45">(45)</a>, pour modifier son attribut <b>text</b>. L'attribut en question
+	    reçoit donc ici une nouvelle valeur, déterminée par ce que nous avons écrit à la droite du signe égale : il s'agit en l'occurrence
+	    d'une chaîne de caractères construite dynamiquement, à l'aide de deux fonctions intégrées dans Python : <b>eval()</b> et <b>str()</b>, et
+	    d'une méthode associée à un widget <span class="italique">tkinter</span> : la méthode <b>get()</b>.</p>
+          <p><b>eval()</b> fait appel à l'interpréteur pour évaluer une expression Python qui lui est transmise dans une chaîne de caractères. Le
+	    résultat de l'évaluation est fourni en retour. Exemple :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e13789">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e13789" onclick="selectionCode('contenuCoded0e13789', 'IdTitreCode-d0e13789');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e13789" class="contenuCode">chaine <code class="python_operator">=</code> <code class="python_literal1">"(25 + 8)/3"</code>    <code class="python_comment1"># chaîne contenant une expression mathématique</code>
+res <code class="python_operator">=</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=eval#eval"><span>eval</span></a><code class="python_operator">(</code>chaine)     <code class="python_comment1"># évaluation de l'expression contenue dans la chaîne</code>
+<code class="python_keyword1">print</code><code class="python_operator">(</code>res <code class="python_operator">+</code><code class="python_digit">5</code>)	      <code class="python_comment1"># =&gt; le contenu de la variable res est numérique</code></code></pre></div>
+          <p><b>str()</b> transforme une expression numérique en chaîne de caractères. Nous devons faire appel à cette fonction parce que la
+	    précédente renvoie une valeur numérique, que nous convertissons à nouveau en chaîne de caractères pour pouvoir l'incorporer au message
+	    <b><span style="color:#000080;">Résultat =</span></b>. </p>
+          <p><b>get()</b> est une méthode associée aux widgets de la classe <b>Entry</b>. Dans notre petit programme exemple, nous utilisons un widget de ce type
+	    pour permettre à l'utilisateur d'entrer une expression numérique quelconque à l'aide de son clavier. La méthode <b>get()</b> permet en quelque
+	    sorte « d'extraire » du widget <b>entree</b> la chaîne de caractères qui lui a été fournie par l'utilisateur.</p>
+          <p>Le corps du programme principal contient la phase d'initialisation, qui se termine par la mise en route de l'observateur d'événements
+	    (<b>mainloop</b>). On y trouve l'instanciation d'une fenêtre <b>Tk()</b>, contenant un widget <b>chaine</b> instancié à partir de la classe
+	    <b>Label()</b>, et un widget <b>entree</b> instancié à partir de la classe <b>Entry()</b>.</p>
+          <p><span class="italique"><b>Attention :</b></span> afin que ce dernier widget puisse vraiment faire son travail, c'est-à-dire transmettre au programme l'expression que
+	    l'utilisateur y aura encodée, nous lui associons un événement à l'aide de la méthode <b>bind()</b><a class="signetNoteBasPage" id="signetNoteBasPage46" href="#noteBasPage46">(46)</a> :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e13882">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e13882" onclick="selectionCode('contenuCoded0e13882', 'IdTitreCode-d0e13882');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e13882" class="contenuCode">entree.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">"&lt;Return&gt;"</code>,evaluer)</code></pre></div>
+          <p>Cette instruction signifie : « <span class="italique">Lier l'événement &lt;pression sur la touche Return&gt; à l'objet &lt;entree&gt;, le gestionnaire de
+	    cet événement étant la fonction &lt;evaluer&gt;</span> ».</p>
+          <p>L'événement à prendre en charge est décrit dans une chaîne de caractères spécifique (dans notre exemple, il s'agit de la
+	    chaîne <b><span style="color:#000080;">"&lt;Return&gt;"</span></b>. Il existe un grand nombre de ces événements (mouvements et clics de la souris, enfoncement des
+	    touches du clavier, positionnement et redimensionnement des fenêtres, passage au premier plan, etc.). Vous trouverez la liste des chaînes spécifiques de
+	    tous ces événements dans les ouvrages de référence traitant de tkinter.</p>
+          <p>Remarquez bien qu'il n'y a pas de parenthèses après le nom de la fonction <b>evaluer</b>. En effet : dans cette instruction, nous ne souhaitons
+	    pas déjà invoquer la fonction elle-même (ce serait prématuré) ; ce que nous voulons, c'est établir un lien entre un type
+	    d'événement particulier et cette fonction, de manière à ce qu'elle soit invoquée plus tard, chaque fois que l'événement se produira.
+	    Si nous mettions des parenthèses, l'argument qui serait transmis à la méthode <b>bind()</b> serait la valeur de retour de cette fonction et non sa
+	    référence. </p>
+          <p>Profitons aussi de l'occasion pour observer encore une fois la syntaxe des instructions destinées à mettre en œuvre une méthode
+	    associée à un objet :</p>
+          <p>
+            <span class="italique">
+              <b>objet.méthode(arguments)</b>
+            </span>
+          </p>
+          <p>On écrit d'abord le nom de l'objet sur lequel on désire intervenir, puis le point (qui fait office d'opérateur), puis le nom de la méthode
+	    à mettre en œuvre ; entre les parenthèses associées à cette méthode, on indique enfin les arguments qu'on souhaite lui
+	    transmettre.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L10-C-4">10-C-4. Exemple graphique : détection et positionnement d'un clic souris<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Dans la définition de la fonction « evaluer » de l'exemple précédent, vous aurez remarqué que nous avons fourni un
+	    argument <b>event</b> (entre les parenthèses).</p>
+          <p>Cet argument est obligatoire<a class="signetNoteBasPage" id="signetNoteBasPage47" href="#noteBasPage47">(47)</a>. Lorsque vous définissez une fonction gestionnaire
+	    d'événement qui est associée à un widget quelconque à l'aide de sa méthode <b>bind()</b>, vous devez toujours l'utiliser comme premier
+	    argument. Cet argument désigne en effet un objet créé automatiquement par tkinter, qui permet de transmettre au gestionnaire d'événement un
+	    certain nombre d'attributs de l'événement :</p>
+          <ul class="ListeDVP">
+            <li>le type d'événement : déplacement de la souris, enfoncement ou relâchement de l'un de ses boutons, appui sur une touche du clavier,
+	      entrée du curseur dans une zone prédéfinie, ouverture ou fermeture d'une fenêtre, etc.</li>
+            <li>une série de propriétés de l'événement : l'instant où il s'est produit, ses coordonnées, les caractéristiques du
+	      ou des widget(s) concerné(s), etc.</li>
+          </ul>
+          <p>Nous n'allons pas entrer dans trop de détails. Si vous voulez bien encoder et expérimenter le petit script ci-dessous, vous aurez vite compris le
+	    principe.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e13965">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e13965" onclick="selectionCode('contenuCoded0e13965', 'IdTitreCode-d0e13965');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e13965" class="contenuCode"><code class="python_comment1"># Détection et positionnement d'un clic de souris dans une fenêtre :</code>
+ 
+<code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">pointeur</code><code class="python_operator">(</code>event):
+ chaine.<code class="python_function">configure</code><code class="python_operator">(</code>text <code class="python_operator">=</code> <code class="python_literal1">"Clic détecté en X ="</code> <code class="python_operator">+</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>event.x) <code class="python_operator">+</code>\
+	     <code class="python_literal1">", Y ="</code> <code class="python_operator">+</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>event.y))
+ 
+fen <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+cadre <code class="python_operator">=</code> <code class="python_function">Frame</code><code class="python_operator">(</code>fen, width <code class="python_operator">=</code><code class="python_digit">200</code>, height <code class="python_operator">=</code><code class="python_digit">150</code>, bg<code class="python_operator">=</code><code class="python_literal1">"light yellow"</code>)
+cadre.<code class="python_function">bind</code><code class="python_operator">(</code><code class="python_literal1">"&lt;Button-1&gt;"</code>, pointeur)
+cadre.<code class="python_function">pack</code><code class="python_operator">(</code>)
+chaine <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen)
+chaine.<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+fen.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Le script fait apparaître une fenêtre contenant un <span class="italique">cadre</span> (<b>Frame</b>) rectangulaire de couleur jaune pâle, dans lequel l'utilisateur
+	    est invité à effectuer des clics de souris.</p>
+          <p>La méthode <b>bind()</b> du widget <span class="italique">cadre</span> associe l'événement &lt;<span class="italique">clic à l'aide du premier bouton de la souris</span>&gt; au
+	    gestionnaire d'événement « pointeur ».</p>
+          <p>Ce gestionnaire d'événement peut utiliser les attributs <b>x</b> et <b>y</b> de l'objet <b>event</b> généré automatiquement par
+	    tkinter, pour construire la chaîne de caractères qui affichera la position de la souris au moment du clic.</p>
+          <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image22.png" alt="Image non disponible" width="208" height="196"/></figure></div>
+          <p>Exercice</p>
+          <p>
+            <span style="color:#000000;">.Modifiez le script ci-dessus de manière à faire apparaître un petit cercle rouge à l'endroit où l'utilisateur a
+	      effectué son clic (vous devrez d'abord remplacer le widget </span>
+            <b>Frame</b>
+            <span style="color:#000000;">par un widget Canvas).</span>
+          </p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L10-D">10-D. Les classes de widgets tkinter<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <blockquote class="citation"><div>
+          <span style="color:#000000;">Tout au long de cet ouvrage, nous vous présenterons petit à petit le mode d</span>
+          <span class="italique">'</span>
+          <span style="color:#000000;">utilisation d</span>
+          <span class="italique">'</span>
+          <span style="color:#000000;">un certain nombre de </span>
+          <b>
+            <span style="color:#000000;">widgets</span>
+          </b>
+          <span style="color:#000000;">. Comprenez bien cependant qu</span>
+          <span class="italique">'</span>
+          <span style="color:#000000;">il n'entre pas dans nos intentions de fournir ici un manuel de référence complet sur </span>
+          <b>
+            <span style="color:#000000;">tkinter</span>
+          </b>
+          <span style="color:#000000;">. Nous limiterons nos explications aux widgets qui nous semblent les plus intéressants d</span>
+          <span class="italique">'</span>
+          <span style="color:#000000;">un point de vue didactique, c</span>
+          <span class="italique">'</span>
+          <span style="color:#000000;">est-à-dire ceux qui pourront nous aider à mettre en évidence des concepts de programmation importants, tels ceux de classe et
+	    d'objet. Veuillez donc consulter la littérature (voir page ) si vous souhaitez davantage de précisions.</span>
+        </div></blockquote>
+        <p>Il existe 15 classes de base pour les widgets tkinter  :</p>
+        <div class="TextAlign-center"><table class="tableau" style="border-width:1px;" border="1">
+          <tr>
+            <td class="colonne" style="">Widget</td>
+            <td class="colonne" style="">Description</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Button</td>
+            <td class="colonne" style="">Un bouton classique, à utiliser pour provoquer l'exécution d'une commande quelconque.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Canvas</td>
+            <td class="colonne" style="">Un espace pour disposer divers éléments graphiques. Ce widget peut être utilisé pour dessiner, créer des éditeurs graphiques, et
+	      aussi pour implémenter des widgets personnalisés.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Checkbutton</td>
+            <td class="colonne" style="">Une case à cocher qui peut prendre deux états distincts (la case est cochée ou non). Un clic sur ce widget provoque le changement
+	      d'état.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Entry</td>
+            <td class="colonne" style="">Un champ d'entrée, dans lequel l'utilisateur du programme pourra insérer un texte quelconque à partir du clavier.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Frame</td>
+            <td class="colonne" style="">Une surface rectangulaire dans la fenêtre, où l'on peut disposer d'autres widgets. Cette surface peut être colorée. Elle peut aussi
+	      être décorée d'une bordure. </td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Label</td>
+            <td class="colonne" style="">Un texte (ou libellé) quelconque (éventuellement une image).</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Listbox</td>
+            <td class="colonne" style="">Une liste de choix proposés à l'utilisateur, généralement présentés dans une sorte de boîte. On peut également
+	      configurer la Listbox de telle manière qu'elle se comporte comme une série de « boutons radio » ou de cases à cocher.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Menu</td>
+            <td class="colonne" style="">Un menu. Ce peut être un menu déroulant attaché à la barre de titre, ou bien un menu « <span class="italique">pop up</span> » apparaissant
+	      n'importe où à la suite d'un clic.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Menubutton</td>
+            <td class="colonne" style="">Un bouton-menu, à utiliser pour implémenter des menus déroulants.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Message</td>
+            <td class="colonne" style="">Permet d'afficher un texte. Ce widget est une variante du widget Label, qui permet d'adapter automatiquement le texte affiché à une certaine taille
+	      ou à un certain rapport largeur/hauteur.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Radiobutton</td>
+            <td class="colonne" style="">Représente (par un point noir dans un petit cercle) une des valeurs d'une variable qui peut en posséder plusieurs. Cliquer sur un bouton radio donne
+	      la valeur correspondante à la variable, et « vide » tous les autres boutons radio associés à la même variable.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Scale</td>
+            <td class="colonne" style="">Vous permet de faire varier de manière très visuelle la valeur d'une variable, en déplaçant un curseur le long d'une règle.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Scrollbar</td>
+            <td class="colonne" style="">Ascenseur ou barre de défilement que vous pouvez utiliser en association avec les autres widgets : Canvas, Entry, Listbox, Text.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Text</td>
+            <td class="colonne" style="">Affichage de texte formaté. Permet aussi à l'utilisateur d'éditer le texte affiché. Des images peuvent également être
+	      insérées.</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">Toplevel</td>
+            <td class="colonne" style="">Une fenêtre affichée séparément, au premier plan.</td>
+          </tr>
+        </table></div>
+        <p>Ces classes de widgets intègrent chacune un grand nombre de méthodes. On peut aussi leur associer (lier) des événements, comme nous venons
+	  de le voir dans les pages précédentes. Vous allez apprendre en outre que tous ces widgets peuvent être positionnés dans les fenêtres à
+	  l'aide de trois méthodes différentes : la méthode <b>grid()</b>, la méthode <b>pack()</b> et la méthode <b>place()</b>.</p>
+        <p>L'utilité de ces méthodes apparaît clairement lorsque l'on s'efforce de réaliser des programmes portables (c'est-à-dire susceptibles de
+	  fonctionner de manière identique sur des systèmes d'exploitation aussi différents que <span class="italique">Unix</span>, <span class="italique">Mac OS</span> ou <span class="italique">Windows</span>), et dont les
+	  fenêtres soient <span class="italique">redimensionnables.</span></p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L10-E">10-E. Utilisation de la méthode grid() pour contrôler la disposition des widgets<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Jusqu'à présent, nous avons toujours disposé les widgets dans leur fenêtre à l'aide de la méthode <b>pack()</b>. Cette
+	  méthode présentait l'avantage d'être extraordinairement simple, mais elle ne nous donnait pas beaucoup de liberté pour disposer les widgets à
+	  notre guise. Comment faire, par exemple, pour obtenir la fenêtre ci-contre ? <img src="./images/image23.png" alt="Image non disponible" width="216" height="64" class="image_verticale"/></p>
+        <p><span style="color:#000000;">Nous pourrions effectuer un certain nombre de tentatives en fournissant à la méthode </span><b>pack()</b><span style="color:#000000;">
+	  des arguments de type « side = », comme nous l</span>'<span style="color:#000000;">avons déjà fait précédemment, mais cela ne nous
+	  mène pas très loin. Essayons par exemple :</span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e14395">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e14395" onclick="selectionCode('contenuCoded0e14395', 'IdTitreCode-d0e14395');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e14395" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+fen1 <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+txt1 <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen1, text <code class="python_operator">=</code> <code class="python_literal1">'Premier champ :'</code>)
+txt2 <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen1, text <code class="python_operator">=</code> <code class="python_literal1">'Second :'</code>)
+entr1 <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fen1)
+entr2 <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fen1)
+txt1.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT)
+txt2.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>LEFT)
+entr1.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>RIGHT)
+entr2.<code class="python_function">pack</code><code class="python_operator">(</code>side <code class="python_operator">=</code>RIGHT)
+ 
+fen1.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        <p><span style="color:#000000;">... mais le résultat n</span>'<span style="color:#000000;">est pas vraiment celui que nous recherchions !</span></p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image24.png" alt="Image non disponible" width="391" height="46"/></figure></div>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/10000000000001870000002E0999B977.png" alt="Image non disponible" width="391" height="46"/></figure></div>
+        <p>
+          <span style="color:#000000;">Il est temps que nous apprenions à utiliser une autre approche du problème. Veuillez donc analyser le script ci-dessous : il contient en
+	    effet (presque) la solution :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e14512">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e14512" onclick="selectionCode('contenuCoded0e14512', 'IdTitreCode-d0e14512');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e14512" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+fen1 <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+txt1 <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen1, text <code class="python_operator">=</code> <code class="python_literal1">'Premier champ :'</code>)
+txt2 <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen1, text <code class="python_operator">=</code> <code class="python_literal1">'Second :'</code>)
+entr1 <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fen1)
+entr2 <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fen1)
+txt1.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">0</code>)
+txt2.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">1</code>)
+entr1.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">0</code>, column <code class="python_operator">=</code><code class="python_digit">1</code>)
+entr2.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">1</code>, column <code class="python_operator">=</code><code class="python_digit">1</code>)
+fen1.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image25.gif" alt="Image non disponible" width="216" height="64"/></figure></div>
+        <p>Dans ce script, nous avons donc remplacé la méthode <b>pack()</b> par la méthode <b>grid()</b>. Comme vous pouvez le constater, l'utilisation de
+	  la méthode <b>grid()</b> est très simple. Cette méthode considère la fenêtre comme un tableau (ou une grille). Il suffit alors de lui indiquer
+	  dans quelle ligne (<b>row</b>) et dans quelle colonne (<b>column</b>) de ce tableau on souhaite placer les widgets. On peut numéroter les lignes et les colonnes
+	  comme on veut, en partant de zéro, ou de un, ou encore d'un nombre quelconque : tkinter ignorera les lignes et colonnes vides. Notez cependant que si vous ne
+	  fournissez aucun numéro pour une ligne ou une colonne, la valeur par défaut sera zéro.</p>
+        <p><span class="italique">Tkinter</span><span style="color:#000000;"> détermine automatiquement le nombre de lignes et de colonnes nécessaire. Mais ce n</span>'<span style="color:#000000;">est pas tout : si vous examinez en détail la petite fenêtre produite par le script ci-dessus, vous constaterez que nous n</span>'<span style="color:#000000;">avons pas encore tout à fait atteint le but poursuivi. Les deux chaînes apparaissant dans la partie gauche de la fenêtre sont
+	  </span><span class="italique">centrées</span><span style="color:#000000;">, alors que nous souhaitions les </span><span class="italique">aligner</span><span style="color:#000000;"> l</span>'<span style="color:#000000;">une et
+	  l</span>'<span style="color:#000000;">autre par la droite. Pour obtenir ce résultat, il nous suffit d</span>'<span style="color:#000000;">ajouter un argument dans l</span>'<span style="color:#000000;">appel de la méthode </span><b>grid()</b><span style="color:#000000;"> utilisée pour ces widgets. L</span>'<span style="color:#000000;">option
+	  </span><b>sticky</b><span style="color:#000000;"> peut prendre l</span>'<span style="color:#000000;">une des quatre valeurs </span><b>N, S, W, E</b><span style="color:#000000;"> (les quatre
+	  points cardinaux en anglais). En fonction de cette valeur, on obtiendra un alignement des widgets par le haut, par le bas, par la gauche ou par la droite. Remplacez donc
+	  les deux premières instructions </span><b>grid()</b><span style="color:#000000;"> du script par :</span></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e14704">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e14704" onclick="selectionCode('contenuCoded0e14704', 'IdTitreCode-d0e14704');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e14704" class="contenuCode">txt1.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">0</code>, sticky <code class="python_operator">=</code>E)
+txt2.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">1</code>, sticky <code class="python_operator">=</code>E)</code></pre></div>
+        <p>
+          <span style="color:#000000;">.,. et vous atteindrez enfin exactement le but recherché.</span>
+        </p>
+        <p>
+          <span class="italique">
+            <b>Analysons à présent la fenêtre suivante :</b>
+          </span>
+        </p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image26.png" alt="Image non disponible" width="400" height="200"/></figure></div>
+        <p>Cette fenêtre comporte 3 colonnes : une première avec les 3 chaînes de caractères, une seconde avec les 3 champs d'entrée, et une
+	  troisième avec l'image. Les deux premières colonnes comportent chacune 3 lignes, mais l'image située dans la dernière colonne <span class="italique">s'étale</span> en
+	  quelque sorte sur les trois.</p>
+        <p>Le code correspondant est le suivant : </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e14759">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e14759" onclick="selectionCode('contenuCoded0e14759', 'IdTitreCode-d0e14759');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e14759" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+fen1 <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+ 
+<code class="python_comment1"># création de widgets 'Label' et 'Entry' :</code>
+txt1 <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen1, text <code class="python_operator">=</code><code class="python_literal1">'Premier champ :'</code>)
+txt2 <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen1, text <code class="python_operator">=</code><code class="python_literal1">'Second :'</code>)
+txt3 <code class="python_operator">=</code> <code class="python_function">Label</code><code class="python_operator">(</code>fen1, text <code class="python_operator">=</code><code class="python_literal1">'Troisième :'</code>)
+entr1 <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fen1)
+entr2 <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fen1)
+entr3 <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fen1)
+ 
+<code class="python_comment1"># création d'un widget 'Canvas' contenant une image bitmap :</code>
+can1 <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>fen1, width <code class="python_operator">=</code><code class="python_digit">160</code>, height <code class="python_operator">=</code><code class="python_digit">160</code>, bg <code class="python_operator">=</code><code class="python_literal1">'white'</code>)
+photo <code class="python_operator">=</code> <code class="python_function">PhotoImage</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=file#file"><span>file</span></a> <code class="python_operator">=</code><code class="python_literal1">'martin_p.gif'</code>)
+item <code class="python_operator">=</code> can1.<code class="python_function">create_image</code><code class="python_operator">(</code><code class="python_digit">80</code>, <code class="python_digit">80</code>, image <code class="python_operator">=</code>photo)
+ 
+<code class="python_comment1"># Mise en page à l'aide de la méthode 'grid' :</code>
+txt1.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">1</code>, sticky <code class="python_operator">=</code>E)
+txt2.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">2</code>, sticky <code class="python_operator">=</code>E)
+txt3.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">3</code>, sticky <code class="python_operator">=</code>E)
+entr1.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">1</code>, column <code class="python_operator">=</code><code class="python_digit">2</code>)
+entr2.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">2</code>, column <code class="python_operator">=</code><code class="python_digit">2</code>)
+entr3.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">3</code>, column <code class="python_operator">=</code><code class="python_digit">2</code>)
+can1.<code class="python_function">grid</code><code class="python_operator">(</code>row <code class="python_operator">=</code><code class="python_digit">1</code>, column <code class="python_operator">=</code><code class="python_digit">3</code>, rowspan <code class="python_operator">=</code><code class="python_digit">3</code>, padx <code class="python_operator">=</code><code class="python_digit">10</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>)
+ 
+<code class="python_comment1"># démarrage :</code>
+fen1.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>Pour pouvoir faire fonctionner ce script, il vous faudra probablement remplacer le nom du fichier image (<span class="italique">martin_p.gif</span>) par le nom d'une image de votre
+	  choix. Attention : la bibliothèque tkinter standard n'accepte qu'un petit nombre de formats pour cette image. Choisissez de préférence le format
+	  GIF<a class="signetNoteBasPage" id="signetNoteBasPage48" href="#noteBasPage48">(48)</a>.</p>
+        <p>Nous pouvons remarquer un certain nombre de choses dans ce script :</p>
+        <ol type="1">
+          <li>La technique utilisée pour incorporer une image :<br/>
+		 tkinter ne permet pas d'insérer directement une image dans une fenêtre. Il faut d'abord installer un canevas, et ensuite positionner l'image dans
+		   celui-ci. Nous avons opté pour un canevas de couleur blanche, afin de pouvoir le distinguer de la fenêtre. Vous pouvez remplacer le paramètre
+		   <b><span style="color:#000080;">bg ='white'</span></b> par <b><span style="color:#000080;">bg ='gray'</span></b> si vous souhaitez que le canevas devienne
+		   invisible. Étant donné qu'il existe de nombreux types d'images, nous devons en outre déclarer l'objet image comme étant un bitmap GIF,
+		   à partir de la classe <b>PhotoImage()</b>.</li>
+          <li>La ligne où nous installons l'image dans le canevas est la ligne :<br/><b><span style="color:#000080;"> item = can1.create_image(80, 80, image
+	    =photo)</span></b><br/>
+		 Pour employer un vocabulaire correct, nous dirons que nous utilisons ici la méthode <b>create_image()</b> associée à l'objet <b>can1</b> (lequel
+		   objet est lui-même une instance de la classe <b>Canvas</b>). Les deux premiers arguments transmis (<b>80</b>, <b>80</b>) indiquent les coordonnées
+		   <b>x</b> et <b>y</b>du canevas où il faut placer le centre de l'image. Les dimensions du canevas étant de 160x160, notre choix aboutira donc à un
+		   centrage de l'image au milieu du canevas.</li>
+          <li>La numérotation des lignes et colonnes dans la méthode <b>grid()</b> :<br/>
+		 On peut constater que la numérotation des lignes et des colonnes dans la méthode <b>grid()</b> utilisée ici commence cette fois à partir de 1
+		   (et non à partir de zéro comme dans le script précédent). Comme nous l'avons déjà signalé plus haut, ce choix de
+		   numérotation est tout à fait libre.<br/>
+		 On pourrait tout aussi bien numéroter : 5, 10, 15, 20... puisque tkinter ignore les lignes et les colonnes vides. Numéroter à partir de l
+		   augmente probablement la lisibilité de notre code.</li>
+          <li>Les arguments utilisés avec <b>grid()</b> pour positionner le canevas :<br/><b><span style="color:#000080;">can1.grid(row =1, column =3, rowspan =3, padx
+	    =10, pady =5)</span></b><br/>
+		 Les deux premiers arguments indiquent que le canevas sera placé dans la première ligne de la troisième colonne. Le troisième (<b><span style="color:#000080;">rowspan =3</span></b>) indique qu'il pourra « s'étaler » sur trois lignes.<br/>
+		 Les deux derniers (<b><span style="color:#000080;">padx =10, pady =5</span></b>) indiquent la dimension de l'espace qu'il faut réserver autour de ce widget (en
+		   largeur et en hauteur).</li>
+          <li>Et tant que nous y sommes, profitons de cet exemple de script, que nous avons déjà bien décortiqué, pour apprendre à simplifier quelque
+	    peu notre code…</li>
+        </ol>
+      </div>
+      
+		<h3 class="TitreSection1" id="L10-F">10-F. Composition d'instructions pour écrire un code plus compact<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Python étant un langage de programmation de haut niveau, il est souvent possible (et souhaitable) de retravailler un script afin de le rendre plus
+	  compact.</p>
+        <p>Vous pouvez par exemple assez fréquemment utiliser la composition d'instructions pour appliquer la méthode de mise en page des widgets (<b>grid()</b>,
+	  <b>pack()</b> ou <b>place()</b>) au moment même où vous créez ces widgets. Le code correspondant devient alors un peu plus simple, et parfois plus
+	  lisible. Vous pouvez par exemple remplacer les deux lignes :<br/><br/><b><span style="color:#000080;">txt1 = Label(fen1, text =</span><span style="color:#000080;">'</span><span style="color:#000080;">Premier champ :</span><span style="color:#000080;">'</span><span style="color:#000080;">)</span></b><br/><b><span style="color:#000080;">txt1.grid(row =1, sticky
+	  =E)</span></b></p>
+        <p>du script précédent par une seule, telle que :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">Label(fen1, text =</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Premier champ :</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">).grid(row =1, sticky =E)</span>
+          </b>
+        </p>
+        <p>Dans cette nouvelle écriture, vous pouvez constater que nous faisons l'économie de la variable intermédiaire <b>txt1</b>. Nous avions
+	  utilisé cette variable pour bien dégager les étapes successives de notre démarche, mais elle n'est pas toujours indispensable. Le simple fait
+	  d'invoquer la classe <b>Label()</b> provoque en effet l'instanciation d'un objet de cette classe, même si l'on ne mémorise pas la référence de cet
+	  objet dans une variable (tkinter la conserve de toute façon dans sa représentation interne de la fenêtre). Si l'on procède ainsi, la
+	  référence est perdue pour le restant du script, mais elle peut tout de même être transmise à une méthode de mise en page telle que
+	  <b>grid()</b> au moment même de l'instanciation, en une seule instruction composée. Voyons cela un peu plus en détail.</p>
+        <p>Jusqu'à présent, nous avons créé des objets divers (par instanciation à partir d'une classe quelconque), en les affectant à chaque
+	  fois à des variables. Par exemple, lorsque nous avons écrit :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">txt1 = Label(fen1, text =</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Premier champ :</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">)</span>
+          </b>
+        </p>
+        <p>nous avons créé une instance de la classe <b>Label()</b>, que nous avons assignée à la variable <b>txt1.</b></p>
+        <p>La variable <b>txt1 </b>peut alors être utilisée pour faire référence à cette instance, partout ailleurs dans le script, mais dans les
+	  faits nous ne l'utilisons qu'une seule fois pour lui appliquer la méthode <b>grid()</b>, le widget dont il est question n'étant rien d'autre qu'une simple
+	  étiquette descriptive. Or, créer ainsi une nouvelle variable pour n'y faire référence ensuite qu'une seule fois (et directement après sa
+	  création) n'est pas une pratique très recommandable, puisqu'elle consiste à réserver inutilement un certain espace mémoire.</p>
+        <p>Lorsque ce genre de situation se présente, il est plus judicieux d'utiliser la composition d'instructions. Par exemple, on préférera le plus
+	  souvent remplacer les deux instructions :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">somme = 45 + 72</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">print(somme)</span>
+          </b>
+        </p>
+        <p>par une seule instruction composée, telle que :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">print(45 + 72)</span>
+          </b>
+        </p>
+        <p>on fait ainsi l'économie d'une variable.</p>
+        <p>De la même manière, lorsque l'on met en place des widgets auxquels on ne souhaite plus revenir par la suite, comme c'est souvent le cas pour les
+	  widgets de la classe <b>Label()</b>, on peut en général appliquer la méthode de mise en page (<b>grid()</b> , <b>pack()</b> ou <b>place()</b>) directement
+	  au moment de la création du widget, en une seule instruction composée.</p>
+        <p>Cela s'applique seulement aux widgets qui ne sont plus référencés après qu'on les ait créés. <span class="italique">Tous les autres doivent
+	  impérativement être assignés à des variables, afin que l'on puisse encore interagir avec eux ailleurs dans le script.</span></p>
+        <p>Et dans ce cas, il faut obligatoirement utiliser deux instructions distinctes, l'une pour instancier le widget, et l'autre pour lui appliquer ensuite la
+	  méthode de mise en page. Vous ne pouvez pas, par exemple, construire une instruction composée telle que :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">entree = Entry(fen1).pack()</span>
+          </b>
+          <span class="italique">
+            <span style="color:#666699;"># faute de programmation !!!</span>
+          </span>
+        </p>
+        <p>En apparence, cette instruction devrait instancier un nouveau widget et l'assigner à la variable <b>entree</b>, la mise en page s'effectuant dans la
+	  même opération à l'aide de la méthode <b>pack()</b>.<br/>
+		 Dans la réalité, cette instruction produit bel et bien un nouveau widget de la classe <b>Entry()</b>, et la méthode <b>pack()</b> effectue bel et
+		   bien sa mise en page dans la fenêtre, mais la valeur qui est mémorisée dans la variable <b>entree</b> n'est pas la référence du
+		   widget ! C'est <span class="italique">la valeur de retour de la méthode</span><b>pack()</b> : vous devez vous rappeler en effet que les méthodes, comme les
+		   fonctions, renvoient toujours une valeur au programme qui les appelle. Et vous ne pouvez rien faire de cette valeur de retour : il s'agit en l'occurrence
+		   d'un objet vide (<b>None</b>).</p>
+        <p>Pour obtenir une vraie référence du widget, vous devez obligatoirement utiliser deux instructions :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e15350">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e15350" onclick="selectionCode('contenuCoded0e15350', 'IdTitreCode-d0e15350');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e15350" class="contenuCode">entree <code class="python_operator">=</code> <code class="python_function">Entry</code><code class="python_operator">(</code>fen1)	   <code class="python_comment1"># instanciation du widget</code>
+entree.<code class="python_function">pack</code><code class="python_operator">(</code>)	      <code class="python_comment1"># application de la mise en page</code></code></pre></div>
+        <blockquote class="citation"><div>
+          <span style="color:#000000;">Lorsque vous utilisez la méthode grid(), vous pouvez simplifier encore un peu votre code, en omettant l'indication de nombreux numéros de
+	    lignes et de colonnes. À partir du moment où c'est la la méthode grid()qui est utilisée pour positionner les widgets, tkinter considère en
+	    effet qu'il existe forcément des lignes et des colonnes</span>
+          <a class="signetNoteBasPage" id="signetNoteBasPage49" href="#noteBasPage49">(49)</a>
+          <span style="color:#000000;">. Si un numéro de ligne ou de colonne n'est pas indiqué, le widget correspondant est placé dans la première case vide
+	    disponible.</span>
+        </div></blockquote>
+        <p>
+          <span style="color:#000000;">Le script ci-dessous intègre les simplifications que nous venons d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">expliquer :</span>
+        </p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L10-G">10-G. Modification des propriétés d'un objet - Animation<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>À ce stade de votre apprentissage, vous souhaitez probablement pouvoir faire apparaître un petit dessin quelconque dans un canevas, et puis le
+	  déplacer à volonté, par exemple à l'aide de boutons.</p>
+        <p>
+          <span style="color:#000000;">Veuillez donc écrire, tester, puis analyser le script ci-dessous :</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e15421">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e15421" onclick="selectionCode('contenuCoded0e15421', 'IdTitreCode-d0e15421');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e15421" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_comment1"># procédure générale de déplacement :</code>
+<code class="python_keyword1">def</code> <code class="python_function">avance</code><code class="python_operator">(</code>gd, hb):
+ <code class="python_keyword1">global</code> x1, y1
+ x1, y1 <code class="python_operator">=</code> x1 <code class="python_operator">+</code>gd, y1 <code class="python_operator">+</code>hb
+ can1.<code class="python_function">coords</code><code class="python_operator">(</code>oval1, x1,y1, x1<code class="python_operator">+</code><code class="python_digit">30</code>,y1<code class="python_operator">+</code><code class="python_digit">30</code>)
+ 
+<code class="python_comment1"># gestionnaires d'événements :</code>
+<code class="python_keyword1">def</code> <code class="python_function">depl_gauche</code><code class="python_operator">(</code>):
+ <code class="python_function">avance</code><code class="python_operator">(-</code><code class="python_digit">10</code>, <code class="python_digit">0</code>)
+ 
+<code class="python_keyword1">def</code> <code class="python_function">depl_droite</code><code class="python_operator">(</code>):
+ <code class="python_function">avance</code><code class="python_operator">(</code><code class="python_digit">10</code>, <code class="python_digit">0</code>)
+ 
+<code class="python_keyword1">def</code> <code class="python_function">depl_haut</code><code class="python_operator">(</code>):
+ <code class="python_function">avance</code><code class="python_operator">(</code><code class="python_digit">0</code>, <code class="python_operator">-</code><code class="python_digit">10</code>)
+ 
+<code class="python_keyword1">def</code> <code class="python_function">depl_bas</code><code class="python_operator">(</code>):
+ <code class="python_function">avance</code><code class="python_operator">(</code><code class="python_digit">0</code>, <code class="python_digit">10</code>)	  
+<code class="python_comment1">#------ Programme principal -------</code>
+ 
+<code class="python_comment1"># les variables suivantes seront utilisées de manière globale :</code>
+x1, y1 <code class="python_operator">=</code> <code class="python_digit">10</code>, <code class="python_digit">10</code>        <code class="python_comment1"># coordonnées initiales</code>
+ 
+<code class="python_comment1"># Création du widget principal ("maître") :</code>
+fen1 <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+fen1.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">"Exercice d'animation avec tkinter"</code>)
+ 
+<code class="python_comment1"># création des widgets "esclaves" :</code>
+can1 <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>fen1,bg<code class="python_operator">=</code><code class="python_literal1">'dark grey'</code>,height<code class="python_operator">=</code><code class="python_digit">300</code>,width<code class="python_operator">=</code><code class="python_digit">300</code>)
+oval1 <code class="python_operator">=</code> can1.<code class="python_function">create_oval</code><code class="python_operator">(</code>x1,y1,x1<code class="python_operator">+</code><code class="python_digit">30</code>,y1<code class="python_operator">+</code><code class="python_digit">30</code>,width<code class="python_operator">=</code><code class="python_digit">2</code>,fill<code class="python_operator">=</code><code class="python_literal1">'red'</code>)
+can1.<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT)
+<code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Quitter'</code>,command<code class="python_operator">=</code>fen1.quit).<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>BOTTOM)
+<code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Gauche'</code>,command<code class="python_operator">=</code>depl_gauche).<code class="python_function">pack</code><code class="python_operator">(</code>)
+<code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Droite'</code>,command<code class="python_operator">=</code>depl_droite).<code class="python_function">pack</code><code class="python_operator">(</code>)
+<code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Haut'</code>,command<code class="python_operator">=</code>depl_haut).<code class="python_function">pack</code><code class="python_operator">(</code>)
+<code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Bas'</code>,command<code class="python_operator">=</code>depl_bas).<code class="python_function">pack</code><code class="python_operator">(</code>)
+ 
+<code class="python_comment1"># démarrage du réceptionnaire d'évènements (boucle principale) :</code>
+fen1.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/image27.png" alt="Image non disponible" width="265" height="231"/></figure></div>
+        <p>Le corps de ce programme reprend de nombreux éléments connus : nous y créons une fenêtre <b>fen1</b>, dans laquelle nous installons un
+	  canevas contenant lui-même un cercle coloré, plus cinq boutons de contrôle. Veuillez remarquer au passage que nous n'instancions pas les widgets boutons
+	  dans des variables (c'est inutile, puisque nous n'y faisons plus référence par la suite) : nous devons donc appliquer la méthode <b>pack()</b>
+	  directement au moment de la création de ces objets.</p>
+        <p>La vraie nouveauté de ce programme réside dans la fonction <b>avance()</b> définie au début du script. Chaque fois qu'elle sera
+	  appelée, cette fonction redéfinira les coordonnées de l'objet « cercle coloré » que nous avons installé dans le canevas, ce
+	  qui provoquera l'animation de cet objet.</p>
+        <p>Cette manière de procéder est tout à fait caractéristique de la programmation « orientée objet » : on commence
+	  par créer des objets, puis <span class="italique">on agit sur ces objets en modifiant leurs propriétés, par l'intermédiaire de méthodes</span>.</p>
+        <p>En programmation impérative « à l'ancienne » (c'est-à-dire sans utilisation d'objets), on anime des figures en les
+	  effaçant à un endroit pour les redessiner ensuite un petit peu plus loin. En programmation « orientée objet », par contre, ces
+	  tâches sont prises en charge automatiquement par les classes dont les objets dérivent, et il ne faut donc pas perdre son temps à les
+	  reprogrammer.</p>
+        <p>Exercices</p>
+        <p>.Écrivez un programme qui fait apparaître une fenêtre avec un canevas. Dans ce canevas on verra deux cercles (de tailles et de couleurs
+	  différentes), qui sont censés représenter deux astres. Des boutons doivent permettre de les déplacer à volonté tous les deux dans toutes
+	  les directions. Sous le canevas, le programme doit afficher en permanence : a) la distance séparant les deux astres; b) la force gravitationnelle qu'ils exercent
+	  l'un sur l'autre (penser à afficher en haut de fenêtre les masses choisies pour chacun d'eux, ainsi que l'échelle des distances). Dans cet exercice, vous
+	  utiliserez évidemment la loi de la gravitation universelle de Newton (cf. exercice 6.16, page , et un manuel de Physique générale).</p>
+        <p>.En vous inspirant du programme qui détecte les clics de souris dans un canevas, modifiez le programme ci-dessus pour y réduire le nombre de
+	  boutons : pour déplacer un astre, il suffira de le choisir avec un bouton, et ensuite de cliquer sur le canevas pour que cet astre se positionne à
+	  l'endroit où l'on a cliqué. </p>
+        <p>.Extension du programme ci-dessus. Faire apparaître un troisième astre, et afficher en permanence la force résultante agissant sur chacun des
+	  trois (en effet : chacun subit en permanence l'attraction gravitationnelle exercée par les deux autres !).</p>
+        <p>.Même exercice avec des charges électriques (loi de Coulomb). Donner cette fois une possibilité de choisir le signe des charges.</p>
+        <p>.Écrivez un petit programme qui fait apparaître une fenêtre avec deux champs : l'un indique une température en degrés <span class="italique">Celsius</span>,
+	  et l'autre la même température exprimée en degrés <span class="italique">Fahrenheit</span>. Chaque fois que l'on change une quelconque des deux températures, l'autre
+	  est corrigée en conséquence. Pour convertir les degrés <span class="italique">Fahrenheit</span> en <span class="italique">Celsius</span> et vice-versa, on utilise la formule <img src="./images/formule06.png" alt="Image non disponible" width="131" height="24" class="image_verticale"/> . Revoyez aussi le petit programme concernant la calculatrice simplifiée (page ).</p>
+        <p>.Écrivez un programme qui fait apparaître une fenêtre avec un canevas. Dans ce canevas, placez un petit cercle censé représenter une
+	  balle. Sous le canevas, placez un bouton. Chaque fois que l'on clique sur le bouton, la balle doit avancer d'une petite distance vers la droite, jusqu'à ce qu'elle
+	  atteigne l'extrémité du canevas. Si l'on continue à cliquer, la balle doit alors revenir en arrière jusqu'à l'autre extrémité, et
+	  ainsi de suite.</p>
+        <p>.Améliorez le programme ci-dessus pour que la balle décrive cette fois une trajectoire circulaire ou elliptique dans le canevas (lorsque l'on clique
+	  continuellement). Note : pour arriver au résultat escompté, vous devrez nécessairement définir une variable qui représentera l'angle
+	  décrit, et utiliser les fonctions <span class="italique">sinus</span> et <span class="italique">cosinus</span> pour positionner la balle en fonction de cet angle.</p>
+        <p>.Modifiez le programme ci-dessus de telle manière que la balle, en se déplaçant, laisse derrière elle une trace de la trajectoire
+	  décrite.</p>
+        <p>.Modifiez le programme ci-dessus de manière à tracer d'autres figures. Consultez votre professeur pour des suggestions (courbes de
+	  <span class="italique">Lissajous</span>).</p>
+        <p>.Écrivez un programme qui fait apparaître une fenêtre avec un canevas et un bouton. Dans le canevas, tracez un rectangle gris foncé, lequel
+	  représentera une route, et par-dessus, une série de rectangles jaunes censés représenter un passage pour piétons. Ajoutez quatre cercles
+	  colorés pour figurer les feux de circulation concernant les piétons et les véhicules. Chaque utilisation du bouton devra provoquer le changement de
+	  couleur des feux : <a data-lightbox="lightbox[article]" href="./images/image28.png"><img src="./images/image28.png" alt="Image non disponible" width="381" height="325" class="ImgCliquable image_verticale"/></a></p>
+        <p>
+          <span style="color:#000000;">.Écrivez un programme qui montre un canevas dans lequel est dessiné un circuit électrique simple (générateur +
+	    interrupteur + résistance). La fenêtre doit être pourvue de champs d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">entrée qui permettront de paramétrer chaque élément (c</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">est-à-dire choisir les valeurs des résistances et tensions). L</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">interrupteur doit être fonctionnel (prévoyez un bouton « Marche/arrêt » pour cela). Des
+	    « étiquettes » doivent afficher en permanence les tensions et intensités résultant des choix effectués par l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">utilisateur. </span>
+        </p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L10-H">10-H. Animation automatique - Récursivité<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>
+          <span style="color:#000000;">Pour conclure cette première prise de contact avec l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">interface graphique tkinter, voici un dernier exemple d</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">animation, qui fonctionne cette fois de manière autonome dès qu</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">on l</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">a mise en marche.</span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e15895">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e15895" onclick="selectionCode('contenuCoded0e15895', 'IdTitreCode-d0e15895');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e15895" class="contenuCode"><code class="python_keyword1">from</code> tkinter <code class="python_keyword1">import</code> <code class="python_operator">*</code>
+ 
+<code class="python_comment1"># définition des gestionnaires</code>
+<code class="python_comment1"># d'événements :</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">move</code><code class="python_operator">(</code>):
+  <code class="python_literal1">"déplacement de la balle"</code>
+  <code class="python_keyword1">global</code> x1, y1, dx, dy, flag
+  x1, y1 <code class="python_operator">=</code> x1 <code class="python_operator">+</code>dx, y1 <code class="python_operator">+</code> dy
+  <code class="python_keyword1">if</code> x1 <code class="python_operator">&gt;</code><code class="python_digit">210</code>:
+      x1, dx, dy <code class="python_operator">=</code> <code class="python_digit">210</code>, <code class="python_digit">0</code>, <code class="python_digit">15</code>
+  <code class="python_keyword1">if</code> y1 <code class="python_operator">&gt;</code><code class="python_digit">210</code>:
+      y1, dx, dy <code class="python_operator">=</code> <code class="python_digit">210</code>, <code class="python_operator">-</code><code class="python_digit">15</code>, <code class="python_digit">0</code>
+  <code class="python_keyword1">if</code> x1 <code class="python_operator">&lt;</code><code class="python_digit">10</code>:
+      x1, dx, dy <code class="python_operator">=</code> <code class="python_digit">10</code>, <code class="python_digit">0</code>, <code class="python_operator">-</code><code class="python_digit">15</code>
+  <code class="python_keyword1">if</code> y1 <code class="python_operator">&lt;</code><code class="python_digit">10</code>:
+      y1, dx, dy <code class="python_operator">=</code> <code class="python_digit">10</code>, <code class="python_digit">15</code>, <code class="python_digit">0</code>
+  can1.<code class="python_function">coords</code><code class="python_operator">(</code>oval1,x1,y1,x1<code class="python_operator">+</code><code class="python_digit">30</code>,y1<code class="python_operator">+</code><code class="python_digit">30</code>)
+  <code class="python_keyword1">if</code> flag <code class="python_operator">&gt;</code><code class="python_digit">0</code>: 
+      fen1.<code class="python_function">after</code><code class="python_operator">(</code><code class="python_digit">50</code>,move)      <code class="python_comment1"># =&gt; boucler, après 50 millisecondes</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">stop_it</code><code class="python_operator">(</code>):
+  <code class="python_literal1">"arrêt de l'animation"</code>
+  <code class="python_keyword1">global</code> flag	  
+  flag <code class="python_operator">=</code><code class="python_digit">0</code>
+ 
+<code class="python_keyword1">def</code> <code class="python_function">start_it</code><code class="python_operator">(</code>):
+  <code class="python_literal1">"démarrage de l'animation"</code>
+  <code class="python_keyword1">global</code> flag
+  <code class="python_keyword1">if</code> flag <code class="python_operator">==</code><code class="python_digit">0</code>:	     <code class="python_comment1"># pour ne lancer qu'une seule boucle</code>
+     flag <code class="python_operator">=</code><code class="python_digit">1</code>
+     <code class="python_function">move</code><code class="python_operator">(</code>)
+ 
+<code class="python_comment1">#========== Programme principal =============</code>
+ 
+<code class="python_comment1"># les variables suivantes seront utilisées de manière globale :</code>
+x1, y1 <code class="python_operator">=</code> <code class="python_digit">10</code>, <code class="python_digit">10</code>        <code class="python_comment1"># coordonnées initiales</code>
+dx, dy <code class="python_operator">=</code> <code class="python_digit">15</code>, <code class="python_digit">0</code>		 <code class="python_comment1"># 'pas' du déplacement</code>
+flag <code class="python_operator">=</code><code class="python_digit">0</code> 	   <code class="python_comment1"># commutateur</code>
+ 
+<code class="python_comment1"># Création du widget principal ("parent") :</code>
+fen1 <code class="python_operator">=</code> <code class="python_function">Tk</code><code class="python_operator">(</code>)
+fen1.<code class="python_function">title</code><code class="python_operator">(</code><code class="python_literal1">"Exercice d'animation avec tkinter"</code>)
+<code class="python_comment1"># création des widgets "enfants" :</code>
+can1 <code class="python_operator">=</code> <code class="python_function">Canvas</code><code class="python_operator">(</code>fen1,bg<code class="python_operator">=</code><code class="python_literal1">'dark grey'</code>,height<code class="python_operator">=</code><code class="python_digit">250</code>, width<code class="python_operator">=</code><code class="python_digit">250</code>)
+can1.<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>LEFT, padx <code class="python_operator">=</code><code class="python_digit">5</code>, pady <code class="python_operator">=</code><code class="python_digit">5</code>)
+oval1 <code class="python_operator">=</code> can1.<code class="python_function">create_oval</code><code class="python_operator">(</code>x1, y1, x1<code class="python_operator">+</code><code class="python_digit">30</code>, y1<code class="python_operator">+</code><code class="python_digit">30</code>, width<code class="python_operator">=</code><code class="python_digit">2</code>, fill<code class="python_operator">=</code><code class="python_literal1">'red'</code>)
+bou1 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen1,text<code class="python_operator">=</code><code class="python_literal1">'Quitter'</code>, width <code class="python_operator">=</code><code class="python_digit">8</code>, command<code class="python_operator">=</code>fen1.quit)
+bou1.<code class="python_function">pack</code><code class="python_operator">(</code>side<code class="python_operator">=</code>BOTTOM)
+bou2 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen1, text<code class="python_operator">=</code><code class="python_literal1">'Démarrer'</code>, width <code class="python_operator">=</code><code class="python_digit">8</code>, command<code class="python_operator">=</code>start_it)
+bou2.<code class="python_function">pack</code><code class="python_operator">(</code>)
+bou3 <code class="python_operator">=</code> <code class="python_function">Button</code><code class="python_operator">(</code>fen1, text<code class="python_operator">=</code><code class="python_literal1">'Arrêter'</code>, width <code class="python_operator">=</code><code class="python_digit">8</code>, command<code class="python_operator">=</code>stop_it)
+bou3.<code class="python_function">pack</code><code class="python_operator">(</code>)
+<code class="python_comment1"># démarrage du réceptionnaire d'événements (boucle principale) :</code>
+fen1.<code class="python_function">mainloop</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>La seule nouveauté mise en œuvre dans ce script se trouve tout à la fin de la définition de la fonction <b>move()</b> : vous y noterez
+	  l'utilisation de la méthode <b>after()</b>. Cette méthode peut s'appliquer à un widget quelconque. Elle déclenche l'appel d'une fonction
+	  <span class="italique">après qu'un certain laps de temps se soit écoulé</span>. Ainsi par exemple, <b><span style="color:#000080;">window.after(200,qqc)</span></b> déclenche pour
+	  le widget <b>window</b> un appel de la fonction <b>qqc()</b> après une pause de 200 millisecondes.</p>
+        <p>Dans notre script, la fonction qui est appelée par la méthode <b>after()</b> est la fonction <b>move()</b> elle-même. Nous utilisons donc ici
+	  pour la première fois une technique de programmation très puissante, que l'on appelle <span class="italique">récursivité</span>. Pour faire simple, nous dirons que la
+	  récursivité est ce qui se passe lorsqu'une fonction s'appelle elle-même. On obtient bien évidemment ainsi un bouclage, qui peut se perpétuer
+	  indéfiniment si l'on ne prévoit pas aussi un moyen pour l'interrompre.</p>
+        <p>Voyons comment cela fonctionne dans notre exemple.</p>
+        <p>La fonction <b>move()</b> est invoquée une première fois lorsque l'on clique sur le bouton « Démarrer ». Elle effectue son
+	  travail (c'est-à-dire positionner la balle). Ensuite, par l'intermédiaire de la méthode <b>after()</b>, elle s'invoque elle-même après une
+	  petite pause. Elle repart donc pour un second tour, puis s'invoque elle-même à nouveau, et ainsi de suite indéfiniment...</p>
+        <p>C'est du moins ce qui se passerait si nous n'avions pas pris la précaution de placer quelque part dans la boucle une instruction de sortie. En
+	  l'occurrence, il s'agit d'un simple test conditionnel : à chaque itération de la boucle, nous examinons le contenu de la variable <b>flag</b> à
+	  l'aide d'une instruction <b>if</b>. Si le contenu de la variable <b>flag</b> est zéro, alors le bouclage ne s'effectue plus et l'animation s'arrête. Remarquez
+	  que nous avons pris la précaution de définir <b>flag</b> comme une variable globale. Ainsi nous pouvons aisément changer sa valeur à l'aide d'autres
+	  fonctions, en l'occurrence celles que nous avons associées aux boutons « Démarrer » et « Arrêter ».</p>
+        <p>Nous obtenons ainsi un mécanisme simple pour lancer ou arrêter notre animation : un premier clic sur le bouton
+	  « Démarrer » assigne une valeur non-nulle à la variable <b>flag</b>, puis provoque immédiatement un premier appel de la fonction
+	  <b>move()</b>. Celle-ci s'exécute, puis continue ensuite à s'appeler elle-même toutes les 50 millisecondes, tant que <b>flag</b> ne revient pas à
+	  zéro. Si l'on continue à cliquer sur le bouton « Démarrer », la fonction <b>move()</b> ne peut plus être appelée, parce que
+	  la valeur de <b>flag</b> vaut désormais 1. On évite ainsi le démarrage de plusieurs boucles concurrentes.</p>
+        <p>Le bouton « Arrêter » remet <b>flag</b> à zéro, et la boucle s'interrompt.</p>
+        <p>Exercices</p>
+        <p>.Dans la fonction <b>start_it()</b>, supprimez l'instruction <b><span style="color:#000080;">if flag == 0: </span></b>(et l'indentation des deux lignes suivantes). Que
+	  se passe-t-il ? (Cliquez plusieurs fois sur le bouton « Démarrer ».)<br/>
+		 Tâchez d'exprimer le plus clairement possible votre explication des faits observés.</p>
+        <p>.Modifiez le programme de telle façon que la balle change de couleur à chaque « virage ».</p>
+        <p>.Modifiez le programme de telle façon que la balle effectue des mouvements obliques comme une bille de billard qui rebondit sur les bandes (« en
+	  zig-zag »).</p>
+        <p>.Modifiez le programme de manière à obtenir d'autres mouvements. Tâchez par exemple d'obtenir un mouvement circulaire (comme dans les exercices
+	  de la page ).</p>
+        <p>.Modifiez ce programme, ou bien écrivez-en un autre similaire, de manière à simuler le mouvement d'une balle qui tombe (sous l'effet de la
+	  pesanteur), et rebondit sur le sol. Attention : il s'agit cette fois de mouvements accélérés !</p>
+        <p>.À partir des scripts précédents, vous pouvez à présent écrire un programme de jeu fonctionnant de la manière suivante :
+	  une balle se déplace au hasard sur un canevas, à vitesse faible. Le joueur doit essayer de cliquer sur cette balle à l'aide de la souris. S'il y arrive,
+	  il gagne un point, mais la balle se déplace désormais un peu plus vite, et ainsi de suite. Arrêter le jeu après un certain nombre de clics et
+	  afficher le score atteint.</p>
+        <p>.Variante du jeu précédent : chaque fois que le joueur parvient à « l'attraper », la balle devient plus petite (elle
+	  peut également changer de couleur).</p>
+        <p>.Écrivez un programme dans lequel évoluent plusieurs balles de couleurs différentes, qui rebondissent les unes sur les autres ainsi que sur les
+	  parois.</p>
+        <p>.Perfectionnez le jeu des précédents exercices en y intégrant l'algorithme ci-dessus. Il s'agit à présent pour le joueur de cliquer
+	  seulement sur la balle rouge. Un clic erroné (sur une balle d'une autre couleur) lui fait perdre des points.</p>
+        <p>.Écrivez un programme qui simule le mouvement de deux planètes tournant autour du soleil sur des orbites circulaires différentes (ou deux
+	  électrons tournant autour d'un noyau d'atome...).</p>
+        <p>.Écrivez un programme pour le jeu du serpent : un « serpent » (constitué en fait d'une courte ligne de carrés) se
+	  déplace sur le canevas dans l'une des 4 directions : droite, gauche, haut, bas. Le joueur peut à tout moment changer la direction suivie par le serpent à
+	  l'aide des touches fléchées du clavier. Sur le canevas se trouvent également des « proies » (des petits cercles fixes disposés au
+	  hasard). Il faut diriger le serpent de manière à ce qu'il « mange » les proies sans arriver en contact avec les bords du canevas. À
+	  chaque fois qu'une proie est mangée, le serpent s'allonge d'un carré, le joueur gagne un point, et une nouvelle proie apparaît ailleurs. La partie
+	  s'arrête lorsque le serpent touche l'une des parois, ou lorsqu'il a atteint une certaine taille. </p>
+        <p>
+          <span style="color:#000000;">.Perfectionnement du jeu précédent : la partie s</span>
+          <span style="color:#000080;">'</span>
+          <span style="color:#000000;">arrête également si le serpent « se recoupe ».</span>
+        </p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_9.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_11.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage36" href="#signetNoteBasPage36">(36)</a></div><div class="ContenuUneNoteBasPage">Dans les versions de Python antérieures
+	  à la version 3.0, le nom de ce module commençait par une majuscule. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage37" href="#signetNoteBasPage37">(37)</a></div><div class="ContenuUneNoteBasPage">« <span class="italique">widget »</span> est le résultat de la contraction de l'expression « <span class="italique">window gadget »</span>.
+	  Dans certains environnements de programmation, on appellera cela plutôt un « contrôle » ou un « composant graphique ».
+	  Ce terme désigne en fait toute entité susceptible d'être placée dans une fenêtre d'application, comme par exemple un bouton, une case à
+	  cocher, une image, etc., et parfois aussi la fenêtre elle-même. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage38" href="#signetNoteBasPage38">(38)</a></div><div class="ContenuUneNoteBasPage">Si vous effectuez cet exercice sous <span class="italique">Windows</span>, nous
+	  vous conseillons d'utiliser de préférence une version standard de Python dans une fenêtre DOS ou dans IDLE plutôt que <span class="italique">PythonWin.</span> Vous pourrez
+	  mieux observer ce qui se passe après l'entrée de chaque commande.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage39" href="#signetNoteBasPage39">(39)</a></div><div class="ContenuUneNoteBasPage">Cette concision du langage est une conséquence du typage dynamique des variables en vigueur
+			   sous Python. D'autres langages utilisent une instruction particulière (telle que <b>new</b>) pour instancier un nouvel objet.
+			   Exemple :<br/><b>maVoiture = new Cadillac</b> (instanciation d'un objet de classe <b>Cadillac</b>, référencé dans la variable
+			   <b>maVoiture</b>).</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage40" href="#signetNoteBasPage40">(40)</a></div><div class="ContenuUneNoteBasPage">Attention :
+		   l'appel de cette méthode <span class="italique">destroy</span> n'a pas lieu ici (c'est-à-dire dans l'instruction décrivant le bouton). Il ne faut donc pas accoler des
+		   parenthèses à son nom. C'est tkinter qui se chargera d'effectuer l''appel de destroy(), lorsqu'un utilisateur cliquera sur ce
+		   bouton.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage41" href="#signetNoteBasPage41">(41)</a></div><div class="ContenuUneNoteBasPage">Ces messages sont souvent
+	  notés WM (<span class="italique">Window messages</span>) dans un environnement graphique constitué de fenêtres (avec de nombreuses zones réactives : boutons, cases à
+	  cocher, menus déroulants, etc.). Dans la description des algorithmes, il arrive fréquemment aussi qu'on confonde ces messages avec les événements
+	  eux-mêmes.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage42" href="#signetNoteBasPage42">(42)</a></div><div class="ContenuUneNoteBasPage">Au sens
+	  strict, une telle fonction qui ne devra renvoyer aucune valeur est donc plutôt une <span class="italique"><b>procédure </b></span>(cf. page ). </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage43" href="#signetNoteBasPage43">(43)</a></div><div class="ContenuUneNoteBasPage">En particulier, la même fonction peut être appelée plusieurs fois en réponse à l'occurrence de quelques événements
+	  identiques, la même tâche étant alors effectuée en plusieurs exemplaires concurrents. Nous verrons plus loin qu'il peut en résulter des
+	  « effets de bord » gênants. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage44" href="#signetNoteBasPage44">(44)</a></div><div class="ContenuUneNoteBasPage">Ces dessins pourront éventuellement être animés dans une phase ultérieure.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage45" href="#signetNoteBasPage45">(45)</a></div><div class="ContenuUneNoteBasPage">La méthode <b>configure()</b> peut s'appliquer à
+	    n'importe quel widget préexistant, pour en modifier les propriétés.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage46" href="#signetNoteBasPage46">(46)</a></div><div class="ContenuUneNoteBasPage">En anglais, le mot <span class="italique">bind</span>
+	    signifie « lier ».</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage47" href="#signetNoteBasPage47">(47)</a></div><div class="ContenuUneNoteBasPage">La présence d'un argument est obligatoire, mais le nom <span class="italique">event</span> est une simple convention. Vous pourriez
+	    utiliser un autre nom quelconque à sa place, bien que cela ne soit pas recommandé.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage48" href="#signetNoteBasPage48">(48)</a></div><div class="ContenuUneNoteBasPage">D'autres formats d'image sont possibles, mais à la condition de les traiter à l'aide des modules graphiques de la bibliothèque PIL
+	  (<span class="italique">Python Imaging Library</span>), qui est une extension de Python disponible sur : <span class="italique">http://www.pythonware.com/products/pil/</span>. Cette bibliothèque permet en outre
+	  d'effectuer une multitude de traitements divers sur des images, mais l'étude de ces techniques dépasse largement le cadre que nous nous sommes fixés pour
+	  ce manuel. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage49" href="#signetNoteBasPage49">(49)</a></div><div class="ContenuUneNoteBasPage">Surtout, n'utilisez pas plusieurs méthodes de positionnement différentes dans la même fenêtre !<br/>
+		 Les méthodes <b>grid()</b>, <b>pack()</b> et <b>place()</b> sont mutuellement exclusives.</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

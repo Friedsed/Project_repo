@@ -1,0 +1,64 @@
+
+.information{
+    
+    
+    padding: 5%;
+    margin: 5%;
+   
+    
+    
+}
+
+.information h1{
+    border-bottom: solid 5px;
+    text-align: center;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+}
+
+
+
+.information h2{
+    text-align: center;
+ 
+}
+
+body{
+    background-color: #333;
+}
+main{
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    border-top: dashed 10px ;
+    border-bottom: dashed 10px;
+    border-top-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+
+}
+
+.websiteslink{
+        position: relative;
+        border: inset 30px ;
+        border-top-color: greenyellow;
+        border-right-color: greenyellow;
+        border-left-color:yellow ;
+        border-bottom-color: yellow;
+        margin-left: 15%;
+        margin-bottom: 25%;
+        padding-left: 50px;
+        width: 75%;
+        padding-top: 7%;
+        padding-bottom: 10%;
+        text-align: justify;
+        background-color: white;
+        border-radius: 5px;
+
+
+}
+
+.websiteslink h1{
+    text-transform: capitalize;
+    text-decoration: rgb(43, 226, 104);
+}
+
+.websiteslink a{
+    
+}

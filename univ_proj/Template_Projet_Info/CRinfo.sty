@@ -1,0 +1,129 @@
+%  CRinfo.sty   Cédric Roosz, 16/11/2022
+%
+%  Style dédié aux comptes rendus d'Informatique Scientifique 3
+%  Université Toulouse III Paul Sabatier
+
+% Packages nécessaires langue française %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fourier} % Bibliothèque de caractères
+\usepackage{natbib} % Format de bibliographie
+\usepackage{babel}
+%\usepackage{pygmentex} % Pour l'insertion de code source   
+
+% Packages écriture, format, symboles, etc. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fourier,amssymb,amsfonts,amsmath,latexsym,fontawesome,setspace,enumitem} % Librairies diverses (police, symboles, listes)
+\usepackage{lipsum,ulem,hyperref} % Librairies diverses (lipsum, soulignage, liens URL)
+\hypersetup{colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=cyan}
+\usepackage[a4paper, margin=2.5cm]{geometry} % Format des marges
+\usepackage{fancyhdr,eso-pic} % Format des entêtes, pieds de pages, fonds
+\setlength{\headheight}{15pt} % Taille de l'entête
+\fancyhead[L]{\scshape\@noms} % Paramètre de l'entête gauche
+\fancyhead[R]{\leftmark} % Paramètre de l'entête droite
+\renewcommand{\headrulewidth}{1pt} % Ligne sous l'entête
+\renewcommand{\footrulewidth}{1pt} % Ligne sur le pied de page
+\fancyfoot[C]{\thepage} % Numéro de page
+\pagestyle{fancy}
+\usepackage{booktabs,tabularx,array,graphicx} % Format des tableaux, figures
+\usepackage{tikz} % Outils de dessins
+\setlength{\parindent}{0pt} % Pas d'indentation en début de paragraphe
+\setlist[itemize]{label=$\bullet$} % Symbole pour les listes
+
+% Paramètrage insertion de code%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{minted} % Permet d'afficher des bouts de codes
+%\usemintedstyle[python]{default}  % Thème d'affichage python
+\usemintedstyle[latex]{default}  % Thème d'affichage latex
+\setminted[python]{frame=lines,framesep=2mm,baselinestretch=1.2,bgcolor=GrisClair,fontsize=\footnotesize,linenos}
+\setminted[latex]{frame=lines,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize}
+\renewcommand{\listingscaption}{Extrait de code} % Légende code
+\renewcommand{\listoflistingscaption}{Liste des extraits de codes} %Titre liste de codes
+\newminted{python}{frame=lines,framesep=2mm,baselinestretch=1.2,bgcolor=GrisClair,fontsize=\footnotesize,linenos}
+
+% Charte graphique UPS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\definecolor{Orange-UPS}{RGB}{243,150,47}
+\definecolor{Jaune-UPS}{RGB}{251,202,0}
+\definecolor{Gris-UPS}{RGB}{53,53,53}
+\definecolor{GrisClair}{RGB}{240,240,240}
+\definecolor{BlancCasse}{RGB}{244,237,222}
+
+% Format page de garde %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def \UEm {\@matiere}
+\def \UEc {\@UEcourt}
+
+\makeatletter
+\def\@titre{titre}
+\newcommand{\titre}[1]{\def\@titre{#1}}
+
+\def\@soustitre{soustitre}
+\newcommand{\soustitre}[1]{\def\@soustitre{#1}}
+
+\def\@pgimage{pgimage}
+\newcommand{\pgimage}[1]{\def\@pgimage{#1}}
+
+\def\@etudiants{etudiants}
+\newcommand{\etudiants}[1]{\def\@etudiants{#1}}
+
+\def\@noms{noms}
+\newcommand{\noms}[1]{\def\@noms{#1}}
+
+\def\@matiere{matiere}
+\newcommand{\matiere}[1]{\def\@matiere{#1}}
+
+\def\@UEcourt{UEcourt}
+\newcommand{\UEcourt}[1]{\def\@UEcourt{#1}}
+
+\makeatother
+
+
+
+\newcommand\BackgroundPic{ %
+	\begin{tikzpicture}[remember picture, overlay]
+        \begin{scope}[shift={(current page.west)}]
+            \draw[draw=Jaune-UPS,fill=Jaune-UPS] (0,-50) rectangle (25,50);
+            \draw[draw=Gris-UPS,fill=Gris-UPS] (0.75,-14.25) rectangle (25,-50);
+            \draw[draw=Gris-UPS,fill=Gris-UPS] (0.5,-12.75) rectangle (1.5,-12.25);
+            \draw[draw=Gris-UPS,fill=Gris-UPS] (0.5,-13) rectangle (1.5,-13.5);
+            \draw[draw=Gris-UPS,fill=Gris-UPS] (0.5,-13.75) rectangle (1.5,-15);
+            \node[rotate=90,anchor=west] at(0.75,-12){\textcolor{darkgray}{\Large\textbf{\textsc{\UEm}}}};
+            \node[rotate=90,anchor=west] at(1.25,-12){\textcolor{darkgray}{\textsc{\UEc}}};
+            \draw[draw=Gris-UPS,fill=Gris-UPS] (0.5,-3.25) rectangle (1.5,-3);
+            \draw[draw=Gris-UPS,fill=Gris-UPS] (0.5,-2.75) rectangle (1.5,-2.25);
+            \draw[draw=Gris-UPS,fill=Gris-UPS] (0.5,-2) rectangle (1.5,-1);
+            \draw[draw=Gris-UPS,fill=Gris-UPS] (0.5,-0.75) rectangle (1.5,50);
+            %
+            \node[inner sep=0pt,anchor=north east] at (20.5,14.5) {\includegraphics[width=.5\textwidth]{Template/UT3_N.png}};
+        \end{scope}
+    \end{tikzpicture}}
+
+\makeatletter
+\newcommand{\pagedegarde}{
+\newgeometry{top=2.5cm, bottom=1cm, left=2cm, right=1cm}
+\AddToShipoutPicture*{\BackgroundPic}
+  \begin{titlepage}
+  \centering
+    \vspace*{4cm}
+    	{\huge\bfseries\color{Gris-UPS} \@titre}\\
+    	{\LARGE\color{Gris-UPS}\@soustitre}\\
+    \vspace{1cm}
+    	{\Large {\bfseries\color{Gris-UPS} \@etudiants}}\\
+    \vfill
+        \hspace*{6cm}\includegraphics[width=.85\textwidth]{\@pgimage}
+    \vfill
+    	{\color{Gris-UPS}le \@date} \\
+  \end{titlepage}
+\restoregeometry
+}
+\makeatother
+
+% Commandes spécifiques %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Changement de marges
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist

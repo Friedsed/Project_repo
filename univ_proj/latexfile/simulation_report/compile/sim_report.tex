@@ -1,0 +1,217 @@
+\documentclass[11pt,a4paper]{article}
+
+% =========================
+% PACKAGES
+% =========================
+\usepackage[utf8]{inputenc}      % Encodage UTF-8
+\usepackage[T1]{fontenc}         % Encodage des fontes
+\usepackage[french]{babel}       % Typographie française [web:7][web:9]
+\usepackage{amsmath, amssymb}    % Maths avancées [web:11]
+\usepackage{physics}             % Notation vectorielle, dérivées, etc.
+\usepackage{graphicx}            % Insertion d'images
+\usepackage{siunitx}             % Unités SI
+\usepackage{geometry}            % Marges
+\usepackage{hyperref}            % Liens cliquables (TOC, références, URLs)
+\usepackage{float}               % Contrôle des flottants (H, h, etc.)
+\usepackage{caption}             % Légendes
+\usepackage{subcaption}          % Sous-figures
+\usepackage[absolute,overlay]{textpos} % pour le placement absolu
+
+% Réglages de mise en page
+\geometry{margin=2.5cm}
+\setlength{\parskip}{1em}
+
+% Répertoire des figures
+\graphicspath{{../Images/}}
+\usepackage{media9}
+
+
+% =========================
+% INFORMATIONS
+% =========================
+\title{\textbf{Battery container report}}
+\author{
+	Toulouse racing \\ \\
+	Powertrain division \\ \\
+	\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+	\textbf{WOLI Sedjro Friedly }
+	\\ \\ \\ \\ \\ \\ \\ \\ \\ \\  \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+}
+\date{Année universitaire 2025--2026}
+
+\begin{document}
+		
+	
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	
+	\section{Battery Container Simulation on Ansys}
+	
+	This section presents the finite element analysis (FEA) of a battery container carried out using Ansys Mechanical. The objective is to evaluate the structural response of the container under combined pressure and acceleration loads representative of in-service conditions.
+		
+	
+		\subsection{Geometry}
+		
+		The initial geometry consisted of a container with two lateral pipes on each side, which significantly increased the geometrical complexity and led to convergence difficulties during the simulation. 
+		To obtain a stable and computationally efficient solution, the model was simplified to a single-chamber container while preserving the main load paths and boundary conditions relevant for the structural assessment.
+		
+		This simplification reduces the number of elements and improves mesh quality, while still providing a sufficiently accurate representation of the global stiffness and deformation behavior of the structure.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{geometry0.png}
+			\caption{Geometry used  }
+			\label{fig: Geometry }
+		\end{figure}
+		
+		
+		\subsection{Material characteristic}
+		
+		
+		Aluminum is selected as the simulation material to match the target container design, providing realistic stiffness and strength predictions under the applied loading conditions.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{aluminuim.png}
+			\caption{Aluminum  }
+			\label{fig: Material}
+		\end{figure}
+		
+		\subsection{Loading and Boundary Conditions}
+		
+			\subsubsection{Applied Pressure}
+			
+				A uniform pressure of \(p = 1000~\text{Pa}\) is applied on the bottom surface of the container to represent the effect of the internal pressure acting on the structure due to the weight.
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{pressure_on_bottom_surface.png}
+					\caption{Pressure on the bottom surface}
+					\label{fig: Pressure force}
+				\end{figure}
+			
+			\subsubsection{Fixed Supports}
+			
+				To simulate the real-world constraints of the container mounted in a larger assembly, fixed supports (zero-displacement boundary conditions) are applied along four bottom lines of the structure.
+				These fixed supports prevent any translational motion at the constrained locations.
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{fixed_support.png}
+					\caption{ Fixed supports }
+					\label{fig; Fixed supprot}
+				\end{figure}
+				
+				
+				
+			\subsubsection{Acceleration Load}
+			
+				In addition to the pressure loading, a total acceleration field is applied according to rule-based requirements:
+				\begin{itemize}
+					\item \(40g\) in the longitudinal direction (\(x\)),
+					\item \(40g\) in the lateral direction (\(y\)),
+					\item \(20g\) in the vertical direction (\(z\)).
+				\end{itemize}
+		
+				
+				These components are combined to obtain a resultant acceleration vector of the form \[ \vec{a} = 40g\,\vec{x} + 40g\,\vec{y} + 20g\,\vec{z} \] . 
+			
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{acceleration1.png}
+					\caption{Acceleration on the container }
+					\label{fig: Acceleration}
+				\end{figure}
+			
+			\subsection{Meshing Strategy and Numerical Constraints}
+			
+				\subsubsection{Final Mesh Settings}
+				
+					A structured meshing strategy is employed with a refined element size on the bottom surface, where stresses and deformations are expected to be critical.
+					The final mesh uses a bottom surface element sizing of \(0.01~\text{m}\).
+					
+					\begin{figure}[H]
+						\centering
+						\includegraphics[width=0.7\textwidth]{meshing1.png}
+						\caption{Meshing result }
+						\label{fig: meshing result }
+					\end{figure}
+					
+				
+				
+			
+			\subsection{Total Deformation}
+			
+				The total deformation plot represents the magnitude of displacement \(|\vec{u}|\) experienced by each point of the container under the combined effect of the 1000~Pa pressure and the applied acceleration field. 
+		
+				
+				These results help determine whether the container satisfies functional requirements, such as maximum allowable deflection, and provide guidance for potential design improvements.
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{total_deformation.png}
+					\caption{Total deformation }
+					\label{fig: Total deformation }
+				\end{figure}
+				
+				Red zones max deformation  $ 3.5 $ mm  occur at the top front corner and upper walls, driven by bending under inertial forces.
+				
+				Blue or green areas near fixed lines show near-zero displacement, confirming proper boundary conditions.
+				
+				
+			\subsection{Directional Deformation}
+		
+				Directional deformation plots are used to analyze displacements along specific axes (e.g., \(x\)-, \(y\)-, or \(z\)-direction), which is useful for evaluating relative motion in directions that are critical for assembly interfaces or clearance requirements. 
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{directionnal_defromation.png}
+					\caption{Directionnal deformation }
+					\label{fig:directional deformation}
+				\end{figure}
+				
+			\subsection{Equivalent (von Mises) Stress}
+		
+				The equivalent von Mises stress field is computed to evaluate the structural integrity of the container under the combined loading scenario.
+				Regions showing the highest von Mises stress are typically located near load introduction points or geometric discontinuities, where stress concentrations develop. 
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{equivqlent_stress0.png}
+					\caption{Equivalent Von Mises Stress}
+					\label{fig: Stress}
+				\end{figure}
+				
+				
+				\subsection{Some video for understanding }
+				
+					You have some video and other picture to strengthen your understanding of the simulation result.
+					
+				
+		
+	% ==================================================
+	\section{Conclusion}
+	% =================================================
+			
+		\textbf{Potential Improvements}
+		
+		Increase wall thickness or add ribs at red regions to reduce peak deformation . 
+		
+		
+	
+		\textbf{I stay open to any suggestion of correction}
+		
+		\vspace{1cm}
+		\begin{center}
+			\textcolor[RGB]{34,139,34}{\textbf{Thank you for your reading.}}
+		\end{center}
+		
+		
+		
+\end{document}

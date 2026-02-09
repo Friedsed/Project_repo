@@ -1,0 +1,583 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L4">4. Premiers pas</a><ul class="nav-sommaire-ul Indentation4">
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L4-A">4-A. Calculer avec Python</a></li>
+      <li><a class="summaryIndent1" href="#L4-B">4-B. Données et variables</a></li>
+      <li><a class="summaryIndent1" href="#L4-C">4-C. Noms de variables et mots réservés</a></li>
+      <li><a class="summaryIndent1" href="#L4-D">4-D. Affectation (ou assignation)</a></li>
+      <li><a class="summaryIndent1" href="#L4-E">4-E. Afficher la valeur d' une variable</a></li>
+      <li><a class="summaryIndent1" href="#L4-F">4-F. Typage des variables</a></li>
+      <li><a class="summaryIndent1" href="#L4-G">4-G. Affectations multiples</a></li>
+      <li><a class="summaryIndent1" href="#L4-H">4-H. Opérateurs et expressions</a></li>
+      <li><a class="summaryIndent1" href="#L4-I">4-I. Priorité des opérations</a></li>
+      <li><a class="summaryIndent1" href="#L4-J">4-J. Composition</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_3.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_5.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L4">4. Premiers pas<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span class="italique">La programmation est donc l'art de commander à un ordinateur de faire exactement ce que vous voulez, et Python compte parmi les langages qu'il est capable de
+	  comprendre pour recevoir vos ordres. Nous allons essayer cela tout de suite avec des ordres très simples concernant des nombres, puisque ce sont les nombres qui
+	  constituent son matériau de prédilection. Nous allons lui fournir nos premières « instructions », et préciser au passage la
+	  définition de quelques termes essentiels du vocabulaire informatique, que vous rencontrerez constamment dans la suite de cet ouvrage.</span>
+      </p>
+      <p>Remarque préliminaire : Comme nous l'avons expliqué dans la préface (voir : Versions du langage, page ), nous avons pris le parti
+	d'utiliser dans ce cours la nouvelle version 3 de Python, laquelle a introduit quelques changements syntaxiques par rapport aux versions précédentes. Dans la
+	mesure du possible, nous vous indiquerons ces différences dans le texte, afin que vous puissiez sans problème analyser ou utiliser d'anciens programmes
+	écrits pour Python 1 ou 2.</p>
+      
+		<h3 class="TitreSection1" id="L4-A">4-A. Calculer avec Python<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Python présente la particularité de pouvoir être utilisé de plusieurs manières différentes. Vous allez d'abord l'utiliser <span class="italique">en
+	  mode interactif</span>, c'est-à-dire d'une manière telle que vous pourrez dialoguer avec lui directement depuis le clavier. Cela vous permettra de découvrir
+	  très vite un grand nombre de fonctionnalités du langage. Dans un second temps, vous apprendrez comment créer vos premiers programmes (scripts) et les
+	  sauvegarder sur disque.</p>
+        <p>L'interpréteur peut être lancé directement depuis la ligne de commande (dans un « shell » <span class="italique">Linux</span>, ou bien dans une
+	  fenêtre <span class="italique">DOS</span> sous <span class="italique">Windows</span>) : il suffit d'y taper la commande <b><span style="color:#000080;">python3</span></b> (en supposant que le logiciel
+	  lui-même ait été correctement installé, et qu'il s'agisse d'une des dernières versions de Python), ou <b><span style="color:#000080;">python</span></b>
+	  (si la version de Python installée sur votre ordinateur est antérieure à la version 3.0). </p>
+        <p>Si vous utilisez une interface graphique telle que <span class="italique">Windows</span>, <span class="italique">Gnome</span>, <span class="italique">WindowMaker</span> ou <span class="italique">KDE</span>, vous préférerez vraisemblablement
+	  travailler dans une « fenêtre de terminal », ou encore dans un environnement de travail spécialisé tel que <span class="italique">IDLE</span>. Voici par
+	  exemple ce qui apparaît dans une fenêtre de terminal <span class="italique">Gnome</span> (sous <span class="italique">Ubuntu Linux</span>)<a class="signetNoteBasPage" id="signetNoteBasPage5" href="#noteBasPage5">(5)</a> :</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image1.png"><img class="ImgCliquable figure-img-caption" src="./images/image1.png" alt="Image non disponible" width="550" height="173"/></a></figure></div>
+        <p>Avec <span class="italique">IDLE</span> sous <span class="italique">Windows</span>, votre environnement de travail ressemblera à celui-ci :</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image2.png"><img class="ImgCliquable figure-img-caption" src="./images/image2.png" alt="Image non disponible" width="550" height="130"/></a></figure></div>
+        <p>Par exemple, vous pouvez tout de suite utiliser l'interpréteur comme une simple calculatrice de bureau. Veuillez donc vous-même tester les commandes
+	  ci-dessous (Prenez l'habitude d'utiliser votre cahier d'exercices pour noter les résultats qui apparaissent à l'écran) :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e1456">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e1456" onclick="selectionCode('contenuCoded0e1456', 'IdTitreCode-d0e1456');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e1456" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">5</code><code class="python_operator">+</code><code class="python_digit">3</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">2</code> ? <code class="python_digit">9</code>      <code class="python_comment1"># les espaces sont optionnels</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">7</code> <code class="python_operator">+</code> <code class="python_digit">3</code> <code class="python_operator">*</code> <code class="python_digit">4</code>	   <code class="python_comment1"># la hiérarchie des opérations mathématiques</code>
+	 <code class="python_comment1"># est-elle respectée ?</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_operator">(</code><code class="python_digit">7</code><code class="python_operator">+</code><code class="python_digit">3</code>)<code class="python_operator">*</code><code class="python_digit">4</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">20</code> <code class="python_operator">/</code> <code class="python_digit">3</code>	<code class="python_comment1"># attention : ceci fonctionnerait différemment sous Python 2</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">20</code> <code class="python_operator">//</code> <code class="python_digit">3</code></code></pre></div>
+        <p>Comme vous pouvez le constater, les opérateurs arithmétiques pour l'addition, la soustraction, la multiplication et la division sont respectivement +,
+	  -, * et /. Les parenthèses ont la fonction attendue.</p>
+        <blockquote class="citation"><div>Sous Python 3, l'opérateur de division / effectue une division réelle. Si vous souhaitez obtenir une division entière (c'est-à-dire dont le
+	  résultat - tronqué - ne peut être qu'un entier), vous devez utiliser l'opérateur //. Veuillez bien noter que ceci est l'un des changements
+	  de syntaxe apportés à la version 3 de Python, par rapport aux versions précédentes. Si vous utilisez l'une de ces versions, sachez que
+	  l'opérateur / y effectue par défaut une division entière, si on lui fournit des arguments qui sont eux-mêmes des entiers, et une division
+	  réelle, si au moins l'un des arguments est un réel. Cet ancien comportement de Python a été heureusement abandonné car il pouvait parfois
+	  conduire à des bugs difficilement repérables.</div></blockquote>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e1553">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e1553" onclick="selectionCode('contenuCoded0e1553', 'IdTitreCode-d0e1553');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e1553" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">20.5</code> <code class="python_operator">/</code> <code class="python_digit">3</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">8</code>,<code class="python_digit">7</code> <code class="python_operator">/</code> <code class="python_digit">5</code>	   <code class="python_comment1"># Erreur !</code></code></pre></div>
+        <p>Veuillez remarquer au passage ce qui est la règle dans tous les langages de programmation, à savoir que les conventions mathématiques de base
+	  sont celles qui sont en vigueur dans les pays anglophones : le séparateur décimal y est donc toujours un point, et non une virgule comme chez nous. Notez
+	  aussi que dans le monde de l'informatique, les nombres réels sont souvent désignés comme des nombres « à virgule flottante »
+	  (<span class="italique">floating point numbers</span>).</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-B">4-B. Données et variables<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous aurons l'occasion de détailler plus loin les différents types de données numériques. Mais avant cela, nous pouvons dès à
+	  présent aborder un concept de grande importance.</p>
+        <p>L'essentiel du travail effectué par un programme d'ordinateur consiste à manipuler des <span class="italique">données</span>. Ces données peuvent être
+	  très diverses (tout ce qui est <span class="italique">numérisable</span>, en fait<a class="signetNoteBasPage" id="signetNoteBasPage6" href="#noteBasPage6">(6)</a>), mais dans la mémoire de l'ordinateur elles se
+	  ramènent toujours en définitive à <span class="italique">unesuitefiniedenombresbinaires</span>.</p>
+        <p>Pour pouvoir accéder aux données, le programme d'ordinateur (quel que soit le langage dans lequel il est écrit) fait abondamment usage d'un grand
+	  nombre de <span class="italique">variables</span> de différents types.</p>
+        <p>Une variable apparaît dans un langage de programmation sous un <span class="italique">nomdevariable</span> à peu près quelconque (voir ci-après), mais pour
+	  l'ordinateur il s'agit d'une <span class="italique">référence</span> désignant une adresse mémoire, c'est-à-dire un emplacement précis dans la mémoire
+	  vive.</p>
+        <p>À cet emplacement est stockée une <span class="italique">valeur</span> bien déterminée. C'est la donnée proprement dite, qui est donc stockée sous la
+	  forme d'une suite de nombres binaires, mais qui n'est pas nécessairement un nombre aux yeux du langage de programmation utilisé. Cela peut être en fait
+	  à peu près n'importe quel « objet » susceptible d'être placé dans la mémoire d'un ordinateur, par exemple : un nombre
+	  entier, un nombre réel, un nombre complexe, un vecteur, une chaîne de caractères typographiques, un tableau, une fonction, etc.</p>
+        <p>Pour distinguer les uns des autres ces divers contenus possibles, le langage de programmation fait usage de différents types de variables (le type
+	  <span class="italique">entier</span>, le type <span class="italique">réel</span>, le type <span class="italique">chaînedecaractères</span>, le type <span class="italique">liste</span>, etc.). Nous allons expliquer tout cela dans les pages
+	  suivantes.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-C">4-C. Noms de variables et mots réservés<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Les noms de variables sont des noms que vous choisissez vous-même assez librement. Efforcez-vous cependant de bien les choisir : de
+	  préférence assez courts, mais aussi explicites que possible, de manière à exprimer clairement ce que la variable est censée contenir. Par
+	  exemple, des noms de variables tels que <span class="italique">altitude</span>, <span class="italique">altit</span> ou <span class="italique">alt</span> conviennent mieux que x pour exprimer une altitude.</p>
+        <blockquote class="citation"><div>
+          <span class="italique">
+            <b>Un bon programmeur doit veiller à ce que ses lignes d'instructions soient faciles à lire.</b>
+          </span>
+        </div></blockquote>
+        <p>Sous Python, les noms de variables doivent en outre obéir à quelques règles simples :</p>
+        <ul class="ListeDVP">
+          <li>Un nom de variable est une séquence de lettres (a → z , A → Z) et de chiffres (0 → 9), qui doit toujours commencer par une
+	    lettre.</li>
+          <li>Seules les lettres ordinaires sont autorisées. Les lettres accentuées, les cédilles, les espaces, les caractères spéciaux tels que $,
+	    #, @, etc. sont interdits, à l'exception du caractère _ (souligné).</li>
+          <li>La casse est significative (les caractères majuscules et minuscules sont distingués).<br/><span class="italique">Attention : Joseph, joseph, JOSEPH sont donc des
+	    variables différentes. Soyez attentifs !</span></li>
+        </ul>
+        <p>Prenez l'habitude d'écrire l'essentiel des noms de variables en caractères minuscules (y compris la première lettre<a class="signetNoteBasPage" id="signetNoteBasPage7" href="#noteBasPage7">(7)</a>). Il s'agit d'une simple
+	  convention, mais elle est largement respectée. N'utilisez les majuscules qu'à l'intérieur même du nom, pour en augmenter éventuellement la
+	  lisibilité, comme dans <span class="italique">tableDesMatieres</span>.</p>
+        <p>En plus de ces règles, il faut encore ajouter que vous ne pouvez pas utiliser comme nom de variables les 33 « mots réservés »
+	  ci-dessous (ils sont utilisés par le langage lui-même) :</p>
+        <div class="TextAlign-center"><table class="tableau" style="border-width:0px;">
+          <tr>
+            <td class="colonne" style="">and</td>
+            <td class="colonne" style="">as</td>
+            <td class="colonne" style="">assert</td>
+            <td class="colonne" style="">break</td>
+            <td class="colonne" style="">class</td>
+            <td class="colonne" style="">continue</td>
+            <td class="colonne" style="">def</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">del</td>
+            <td class="colonne" style="">elif</td>
+            <td class="colonne" style="">else</td>
+            <td class="colonne" style="">except</td>
+            <td class="colonne" style="">False</td>
+            <td class="colonne" style="">finally</td>
+            <td class="colonne" style="">for</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">from</td>
+            <td class="colonne" style="">global</td>
+            <td class="colonne" style="">if</td>
+            <td class="colonne" style="">import</td>
+            <td class="colonne" style="">in</td>
+            <td class="colonne" style="">is</td>
+            <td class="colonne" style="">lambda</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">None</td>
+            <td class="colonne" style="">nonlocal</td>
+            <td class="colonne" style="">not</td>
+            <td class="colonne" style="">or</td>
+            <td class="colonne" style="">pass</td>
+            <td class="colonne" style="">raise</td>
+            <td class="colonne" style="">return</td>
+          </tr>
+          <tr>
+            <td class="colonne" style="">True</td>
+            <td class="colonne" style="">try</td>
+            <td class="colonne" style="">while</td>
+            <td class="colonne" style="">with</td>
+            <td class="colonne" style="">yield</td>
+            <td class="colonne" style=""> </td>
+            <td class="colonne" style=""> </td>
+          </tr>
+        </table></div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-D">4-D. Affectation (ou assignation)<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Nous savons désormais comment choisir judicieusement un nom de variable. Voyons à présent comment nous pouvons <span class="italique">définir</span> une variable
+	  et lui <span class="italique">affecter</span> une valeur. Les termes « affecter une valeur » ou « assigner une valeur » à une variable sont
+	  équivalents. Ils désignent l'opération par laquelle on établit un lien entre le nom de la variable et sa valeur (son contenu).</p>
+        <p>En Python comme dans de nombreux autres langages, l'opération d'affectation est représentée par le signe <span class="italique">égale</span><a class="signetNoteBasPage" id="signetNoteBasPage8" href="#noteBasPage8">(8)</a> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e1861">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e1861" onclick="selectionCode('contenuCoded0e1861', 'IdTitreCode-d0e1861');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e1861" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> n <code class="python_operator">=</code> <code class="python_digit">7</code>	      <code class="python_comment1"># définir n et lui donner la valeur 7</code>
+<code class="python_operator">&gt;&gt;&gt;</code> msg <code class="python_operator">=</code> <code class="python_literal1">"Quoi de neuf ?"</code>    <code class="python_comment1"># affecter la valeur "Quoi de neuf ?" à msg</code>
+<code class="python_operator">&gt;&gt;&gt;</code> pi <code class="python_operator">=</code> <code class="python_digit">3.14159</code>	 <code class="python_comment1"># assigner sa valeur à la variable pi</code></code></pre></div>
+        <p>Les exemples ci-dessus illustrent des instructions d'affectation Python tout à fait classiques. Après qu'on les ait exécutées, il existe
+	  dans la mémoire de l'ordinateur, à des endroits différents :</p>
+        <ul class="ListeDVP">
+          <li>trois noms de variables, à savoir <b>n</b>, <b>msg</b> et <b>pi</b> ;</li>
+          <li>trois séquences d'octets, où sont encodées le nombre entier <b>7</b>, la chaîne de caractères <b>Quoi de neuf ?</b> et le nombre
+	    réel <b>3,14159</b>.</li>
+        </ul>
+        <p>Les trois instructions d'affectation ci-dessus ont eu pour effet chacune de réaliser plusieurs opérations dans la mémoire de
+	  l'ordinateur :</p>
+        <ul class="ListeDVP">
+          <li>créer et mémoriser un <b>nom de variable</b> ;</li>
+          <li>lui attribuer un <b>type</b> bien déterminé (ce point sera explicité à la page suivante) ;</li>
+          <li>créer et mémoriser une <b>valeur</b> particulière ;</li>
+          <li>établir un <b>lien</b> (par un système interne de pointeurs) entre le nom de la variable et l'emplacement mémoire de la valeur
+	    correspondante.</li>
+        </ul>
+        <p>On peut mieux se représenter tout cela par un diagramme d'état tel que celui-ci :</p>
+        <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image3.png"><img class="ImgCliquable figure-img-caption" src="./images/image3.png" alt="Image non disponible" width="550" height="122"/></a></figure></div>
+        <p>Les trois noms de variables sont des <span class="italique">références</span>, mémorisées dans une zone particulière de la mémoire que l'on appelle
+	  espace de noms, alors que les valeurs correspondantes sont situées ailleurs, dans des emplacements parfois fort éloignés les uns des autres. Nous aurons
+	  l'occasion de préciser ce concept plus loin dans ces pages.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-E">4-E. Afficher la valeur d' une variable<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>À la suite de l'exercice ci-dessus, nous disposons donc des trois variables <b>n</b>, <b>msg</b> et <b>pi</b>.<br/>
+		 Pour afficher leur valeur à l'écran, il existe deux possibilités. La première consiste à entrer au clavier le nom de la variable, puis
+		   &lt;<span class="italique">Enter</span>&gt;. Python répond en affichant la valeur correspondante :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e1992">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e1992" onclick="selectionCode('contenuCoded0e1992', 'IdTitreCode-d0e1992');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e1992" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> n
+<code class="python_digit">7</code>
+<code class="python_operator">&gt;&gt;&gt;</code> msg
+<code class="python_literal1">'Quoi de neuf ?'</code>
+<code class="python_operator">&gt;&gt;&gt;</code> pi
+<code class="python_digit">3.14159</code></code></pre></div>
+        <p>Il s'agit cependant là d'une fonctionnalité secondaire de l'interpréteur, qui est destinée à vous faciliter la vie lorsque vous faites
+	  de simples exercices à la ligne de commande. À l'intérieur d'un programme, vous utiliserez toujours la fonction <b><span style="color:#000080;">print()</span></b><a class="signetNoteBasPage" id="signetNoteBasPage9" href="#noteBasPage9">(9)</a> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2023">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2023" onclick="selectionCode('contenuCoded0e2023', 'IdTitreCode-d0e2023');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2023" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>msg)
+Quoi de neuf ?
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>n)
+<code class="python_digit">7</code></code></pre></div>
+        <p>Remarquez la subtile différence dans les affichages obtenus avec chacune des deux méthodes. La fonction <b><span style="color:#000080;">print()</span></b>
+	  n'affiche strictement que la valeur de la variable, telle qu'elle a été encodée, alors que l'autre méthode (celle qui consiste à entrer
+	  seulement le nom de la variable) affiche aussi des apostrophes afin de vous rappeler que la variable traitée est du type « chaîne de
+	  caractères » : nous y reviendrons.</p>
+        <blockquote class="citation"><div>Dans les versions de Python antérieures à la version 3.0, le rôle de la <b>fonction<span style="color:#000080;">print()</span></b> était assuré
+	  par une <b>instruction<span style="color:#000080;">print</span></b> particulière, faisant d'ailleurs l'objet d'un mot réservé (voir page ). Cette
+	  instruction s'utilisait sans parenthèses. Dans les exercices précédents, il fallait donc entrer « <b><span style="color:#000080;">print
+	  n</span></b> » ou « <b><span style="color:#000080;">print msg</span></b> ». Si vous essayez plus tard de faire fonctionner sous Python 3, des
+	  programmes écrits dans l'une ou l'autre version ancienne, sachez donc que vous devrez ajouter des parenthèses après chaque instruction <b><span style="color:#000080;">print</span></b> afin de convertir celle-ci en fonction (des utilitaires permettent de réaliser cela automatiquement). Dans ces mêmes versions
+	  anciennes, les chaînes de caractères étaient traitées différemment (nous en reparlerons en détail plus loin). Suivant la configuration de
+	  votre ordinateur, vous pouviez alors parfois rencontrer quelques effets bizarres avec les chaînes contenant des caractères accentués, tels que par
+	  exemple :</div></blockquote>
+        <blockquote class="citation"><div>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; msg = "Mon prénom est Chimène" </span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">&gt;&gt;&gt; msg </span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">'Mon pr\xe9nom est Chim\xe8ne'</span>
+          </b>
+        </div></blockquote>
+        <blockquote class="citation"><div>Ces bizarreries appartiennent désormais au passé, mais nous verrons plus loin qu'un programmeur digne de ce nom doit savoir de quelle manière sont
+	  encodés les caractères typographiques rencontrés dans différentes sources de données, car les normes définissant ces encodages ont
+	  changé au cours des années, et il faut connaître les techniques qui permettent de les convertir.</div></blockquote>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-F">4-F. Typage des variables<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Sous Python, il n'est pas nécessaire d'écrire des lignes de programme spécifiques pour définir le type des variables avant de pouvoir les
+	  utiliser. Il vous suffit en effet d'assigner une valeur à un nom de variable pour que celle-ci soit <span class="italique">automatiquement créée avec le type qui correspond
+	  au mieux à la valeur fournie</span>. Dans l'exercice précédent, par exemple, les variables <b>n</b>, <b>msg</b> et <b>pi</b> ont été
+	  créées automatiquement chacune avec un type différent (« nombre entier » pour <b>n</b>, « chaîne de
+	  caractères » pour <b>msg</b>, « nombre à virgule flottante » (ou « <span class="italique">float</span> », en anglais) pour
+	  <b>pi</b>).</p>
+        <p>Ceci constitue une particularité intéressante de Python, qui le rattache à une famille particulière de langages où l'on trouve aussi
+	  par exemple <span class="italique">Lisp</span>, <span class="italique">Scheme</span>, et quelques autres. On dira à ce sujet que <span class="italique">le typage des variables sous Python est un typage dynamique</span>, par
+	  opposition au <span class="italique">typage statique</span> qui est de règle par exemple en C++ ou en Java. Dans ces langages, il faut toujours - par des instructions
+	  distinctes - d'abord déclarer (définir) le nom et le type des variables, et ensuite seulement leur assigner un contenu, lequel doit bien entendu
+	  être compatible avec le type déclaré.</p>
+        <p>Le typage statique est préférable dans le cas des langages compilés, parce qu'il permet d'optimiser l'opération de compilation (dont le
+	  résultat est un code binaire « figé »).</p>
+        <p>Le typage dynamique quant à lui permet d'écrire plus aisément des constructions logiques de niveau élevé (métaprogrammation,
+	  réflexivité), en particulier dans le contexte de la programmation orientée objet (polymorphisme). Il facilite également l'utilisation de structures
+	  de données très riches telles que les listes et les dictionnaires.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-G">4-G. Affectations multiples<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Sous Python, on peut assigner une valeur à plusieurs variables simultanément. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2166">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2166" onclick="selectionCode('contenuCoded0e2166', 'IdTitreCode-d0e2166');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2166" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> x <code class="python_operator">=</code> y <code class="python_operator">=</code> <code class="python_digit">7</code>
+<code class="python_operator">&gt;&gt;&gt;</code> x
+<code class="python_digit">7</code>
+<code class="python_operator">&gt;&gt;&gt;</code> y
+<code class="python_digit">7</code></code></pre></div>
+        <p>On peut aussi effectuer des <span class="italique">affectations parallèles</span> à l'aide d'un seul opérateur :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2197">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2197" onclick="selectionCode('contenuCoded0e2197', 'IdTitreCode-d0e2197');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2197" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b <code class="python_operator">=</code> <code class="python_digit">4</code>, <code class="python_digit">8.33</code>
+<code class="python_operator">&gt;&gt;&gt;</code> a
+<code class="python_digit">4</code>
+<code class="python_operator">&gt;&gt;&gt;</code> b
+<code class="python_digit">8.33</code></code></pre></div>
+        <p>Dans cet exemple, les variables <b>a</b> et <b>b</b> prennent simultanément les nouvelles valeurs <b>4</b> et <b>8,33</b>.</p>
+        <blockquote class="citation"><div>Les francophones que nous sommes avons pour habitude d<span class="italique">'</span>utiliser la virgule comme séparateur <span class="italique"><b>décimal, alors que les langages de
+	  programmation utilisent toujours la convention en vigueur dans les pays de langue anglaise, c</b>'</span>est-à-dire le point décimal. La virgule, quant à
+	  elle, est très généralement utilisée pour séparer différents éléments (arguments, etc.) comme on le voit dans notre exemple, pour
+	  les variables elles-mêmes ainsi que pour les valeurs qu<span class="italique">'</span>on leur attribue.</div></blockquote>
+        <p>Exercices</p>
+        <p><span style="color:#000000;">.</span>Décrivez le plus clairement et le plus complètement possible ce qui se passe à chacune des trois lignes de
+	  l'exemple ci-dessous :<br/></p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2260">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2260" onclick="selectionCode('contenuCoded0e2260', 'IdTitreCode-d0e2260');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2260" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> largeur <code class="python_operator">=</code> <code class="python_digit">20</code>
+<code class="python_operator">&gt;&gt;&gt;</code> hauteur <code class="python_operator">=</code> <code class="python_digit">5</code> <code class="python_operator">*</code> <code class="python_digit">9.3</code>
+<code class="python_operator">&gt;&gt;&gt;</code> largeur <code class="python_operator">*</code> hauteur
+<code class="python_digit">930</code></code></pre></div>
+        <p>.Assignez les valeurs respectives 3, 5, 7 à trois variables a, b, c.<br/>
+		 Effectuez l'opération <span class="italique">a - b//c</span>. Interprétez le résultat obtenu.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-H">4-H. Opérateurs et expressions<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>On manipule les valeurs et les variables qui les référencent en les combinant avec des <span class="italique">opérateurs</span> pour former des <span class="italique">expressions</span>.
+	  Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2317">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2317" onclick="selectionCode('contenuCoded0e2317', 'IdTitreCode-d0e2317');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2317" class="contenuCode">a, b <code class="python_operator">=</code> <code class="python_digit">7.3</code>, <code class="python_digit">12</code>
+y <code class="python_operator">=</code> <code class="python_digit">3</code><code class="python_operator">*</code>a <code class="python_operator">+</code> b<code class="python_operator">/</code><code class="python_digit">5</code></code></pre></div>
+        <p>Dans cet exemple, nous commençons par affecter aux variables <b>a</b> et <b>b</b> les valeurs <b>7,3</b> et <b>12</b>.<br/>
+		 Comme déjà expliqué précédemment, Python assigne automatiquement le type « réel » à la variable <b>a</b>,
+		   et le type « entier » à la variable <b>b</b>.</p>
+        <p>La seconde ligne de l'exemple consiste à affecter à une nouvelle variable <b>y</b> le résultat d'une expression qui combine les
+	  <span class="italique">opérateurs</span><b>*</b> , <b>+</b> et <b>/</b> avec les <span class="italique">opérandes</span><b>a</b>, <b>b</b>, <b>3</b> et <b>5</b>. Les opérateurs sont les symboles
+	  spéciaux utilisés pour représenter des opérations mathématiques simples, telles l'addition ou la multiplication. Les opérandes sont les
+	  valeurs combinées à l'aide des opérateurs.</p>
+        <p>Python évalue chaque expression qu'on lui soumet, aussi compliquée soit-elle, et le résultat de cette évaluation est toujours lui-même
+	  une valeur. À cette valeur, il attribue automatiquement un type, lequel dépend de ce qu'il y a dans l'expression. Dans l'exemple ci-dessus, y sera du type
+	  réel, parce que l'expression évaluée pour déterminer sa valeur contient elle-même au moins un réel.</p>
+        <p>Les opérateurs Python ne sont pas seulement les quatre opérateurs mathématiques de base. Nous avons déjà signalé l'existence de
+	  l'opérateur de division entière //. Il faut encore ajouter l'opérateur <b>**</b> pour l'exponentiation, ainsi qu'un certain nombre d'opérateurs
+	  logiques, des opérateurs agissant sur les chaînes de caractères, des opérateurs effectuant des tests d'identité ou d'appartenance, etc. Nous
+	  reparlerons de tout cela plus loin. </p>
+        <p>Signalons au passage la disponibilité de l'opérateur <span class="italique">modulo</span>, représenté par le caractère typographique <b>%</b>. Cet
+	  opérateur fournit <span class="italique">le reste de la division entière</span> d'un nombre par un autre. Essayez par exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2419">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2419" onclick="selectionCode('contenuCoded0e2419', 'IdTitreCode-d0e2419');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2419" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">10</code> <code class="python_operator">%</code> <code class="python_digit">3</code>	   <code class="python_comment1"># (et prenez note de ce qui se passe !)</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">10</code> <code class="python_operator">%</code> <code class="python_digit">5</code></code></pre></div>
+        <p>Cet opérateur vous sera très utile plus loin, notamment pour tester si un nombre <b>a</b> est divisible par un nombre <b>b</b>. Il suffira en effet de
+	  vérifier que <b>a % b </b>donne un résultat égal à zéro.</p>
+        <p>
+          <b>Exercice</b>
+        </p>
+        <p>
+          <span style="color:#000000;">.Testez les lignes d'instructions suivantes. Décrivez dans votre cahier ce qui se passe :</span>
+          <br/>
+          <b>
+            <span style="color:#000000;">&gt;&gt;&gt; </span>
+            <span style="color:#000000;">r , pi = 12, 3.14159</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000000;">&gt;&gt;&gt; </span>
+            <span style="color:#000000;">s = pi * r**2 </span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000000;">&gt;&gt;&gt; </span>
+            <span style="color:#000000;">print(s)</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000000;">&gt;&gt;&gt; </span>
+            <span style="color:#000000;">print(type(r), type(pi), type(s))</span>
+          </b>
+        </p>
+        <p>Quelle est, à votre avis, l'utilité de la <span class="italique">fonction</span>type() ?<br/>
+		 (Note : les <span class="italique">fonctions</span> seront décrites en détail aux chapitres 6 et 7.)</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-I">4-I. Priorité des opérations<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Lorsqu'il y a plus d'un opérateur dans une expression, l'ordre dans lequel les opérations doivent être effectuées dépend de
+	  <span class="italique">règles de priorité</span>. Sous Python, les règles de priorité sont les mêmes que celles qui vous ont été enseignées au cours de
+	  mathématique. Vous pouvez les mémoriser aisément à l'aide d'un « truc » mnémotechnique, l'acronyme
+	  <span class="italique">PEMDAS</span> :</p>
+        <ul class="ListeDVP">
+          <li><span class="italique">P</span> pour <span class="italique">parenthèses</span>. Ce sont elles qui ont la plus haute priorité. Elles vous permettent donc de « forcer »
+	    l'évaluation d'une expression dans l'ordre que vous voulez.<br/>
+		 Ainsi <b><span style="color:#000080;">2*(3-1) = 4</span></b> , et <b><span style="color:#000080;">(1+1)**(5-2) = 8</span></b>.</li>
+          <li><span class="italique">E</span> pour <span class="italique">exposants</span>. Les exposants sont évalués ensuite, avant les autres opérations.<br/>
+		 Ainsi <b><span style="color:#000080;">2**1+1 = 3</span></b> (et non 4), et <b><span style="color:#000080;">3*1**10 = 3</span></b> (et non 59049 !). </li>
+          <li><span class="italique">M</span> et <span class="italique">D</span> pour <span class="italique">multiplication</span> et <span class="italique">division</span>, qui ont la même priorité. Elles sont évaluées avant <span class="italique">l'additionA</span>
+	    et <span class="italique">lasoustractionS</span>, lesquelles sont donc effectuées en dernier lieu.<br/>
+		 Ainsi <b><span style="color:#000080;">2*3-1 = 5</span></b> (plutôt que 4), et <b><span style="color:#000080;">2/3-1 = -0.3333...</span></b> (plutôt que
+		   1.0).</li>
+          <li>Si deux opérateurs ont la même priorité, l'évaluation est effectuée de gauche à droite.<br/>
+		 Ainsi dans l'expression <span style="color:#000080;">59*100//60</span>, la multiplication est effectuée en premier, et la machine doit donc ensuite effectuer
+		   5900//60, ce qui donne 98. Si la division était effectuée en premier, le résultat serait 59 (rappelez-vous ici que l'opérateur // effectue
+		   une division entière, et vérifiez en effectuant 59*(100//60)).</li>
+        </ul>
+      </div>
+      
+		<h3 class="TitreSection1" id="L4-J">4-J. Composition<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Jusqu'ici nous avons examiné les différents éléments d'un langage de programmation, à savoir : les <span class="italique">variables</span>, les
+	  <span class="italique">expressions</span> et les <span class="italique">instructions</span>, mais sans traiter de la manière dont nous pouvons les combiner les unes avec les autres.</p>
+        <p>Or l'une des grandes forces d'un langage de programmation de haut niveau est qu'il permet de construire des instructions complexes par assemblage de fragments
+	  divers. Ainsi par exemple, si vous savez comment additionner deux nombres et comment afficher une valeur, vous pouvez combiner ces deux instructions en une
+	  seule :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2639">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2639" onclick="selectionCode('contenuCoded0e2639', 'IdTitreCode-d0e2639');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2639" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_digit">17</code> <code class="python_operator">+</code> <code class="python_digit">3</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_digit">20</code></code></pre></div>
+        <p>Cela n'a l'air de rien, mais cette fonctionnalité qui paraît si évidente va vous permettre de programmer des algorithmes complexes de façon
+	  claire et concise. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2665">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2665" onclick="selectionCode('contenuCoded0e2665', 'IdTitreCode-d0e2665');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2665" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> h, m, s <code class="python_operator">=</code> <code class="python_digit">15</code>, <code class="python_digit">27</code>, <code class="python_digit">34</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"nombre de secondes écoulées depuis minuit = "</code>, h<code class="python_operator">*</code><code class="python_digit">3600</code> <code class="python_operator">+</code> m<code class="python_operator">*</code><code class="python_digit">60</code> <code class="python_operator">+</code> s)</code></pre></div>
+        <p>Attention, cependant : il y a une limite à ce que vous pouvez combiner ainsi :</p>
+        <p><b>Dans une expression</b>, ce que vous placez à la gauche du signe égale doit toujours être une variable, et non une expression. Cela provient
+	  du fait que le signe égale n'a pas ici la même signification qu'en mathématique : comme nous l'avons déjà signalé, il s'agit d'un
+	  symbole d'affectation (nous plaçons un certain contenu dans une variable) et non un symbole d'égalité. Le symbole d'égalité (dans un test
+	  conditionnel, par exemple) sera évoqué un peu plus loin.</p>
+        <p>Ainsi par exemple, l'instruction  <b><span style="color:#000080;">m + 1 = b</span></b>  est tout à fait <b>illégale</b>.</p>
+        <p>Par contre, écrire  <b><span style="color:#000080;">a = a + 1</span></b>est inacceptable en mathématique, alors que cette forme d'écriture est
+	  très fréquente en programmation. L'instruction <b><span style="color:#000080;">a = a + 1</span></b> signifie en l'occurrence « augmenter la valeur de la
+	  variable a d'une unité » (ou encore : « incrémenter a »).</p>
+        <p>Nous aurons l'occasion de revenir bientôt sur ce sujet. Mais auparavant, il nous faut encore aborder un autre concept de grande importance.</p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_3.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_5.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage5" href="#signetNoteBasPage5">(5)</a></div><div class="ContenuUneNoteBasPage">Sous <span class="italique">Windows,</span> vous aurez surtout le choix entre
+	  l'environnement <span class="italique">IDLE</span> développé par Guido Van Rossum, auquel nous donnons nous-même la préférence, et <span class="italique">PythonWin</span>, une interface de
+	  développement développée par Mark Hammond. D'autres environnements de travail plus sophistiqués existent aussi, tels l'excellent <span class="italique">Boa
+	  Constructor</span> par exemple (qui fonctionne de façon très similaire à <span class="italique">Delphi</span>), mais nous estimons qu'ils ne conviennent guère aux
+	  débutants. Pour tout renseignement complémentaire, veuillez consulter le site Web de Python.<br/>
+		 Sous <span class="italique">Linux</span>, nous préférons personnellement travailler dans une simple fenêtre de terminal pour lancer l'interpréteur Python ou
+		   l'exécution des scripts, et faire appel à un éditeur de texte ordinaire tel que <span class="italique">Gedit</span>, <span class="italique">Kate</span>, ou un peu plus spécialisé
+		   comme <span class="italique">Geany</span> pour l'édition de ces derniers. </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage6" href="#signetNoteBasPage6">(6)</a></div><div class="ContenuUneNoteBasPage"><span class="italique">Que peut-on numériser au juste ?</span> Voilà une question très
+	  importante, qu'il vous faudra débattre dans votre cours d'informatique générale.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage7" href="#signetNoteBasPage7">(7)</a></div><div class="ContenuUneNoteBasPage">Les noms
+	  commençant par une majuscule ne sont pas interdits, mais l'usage veut qu'on le réserve plutôt aux variables qui désignent des <span class="italique">classes</span> (le
+	  concept de classe sera abordé plus loin dans cet ouvrage). Il arrive aussi que l'on écrive entièrement en majuscules certaines variables que l'on souhaite
+	  traiter comme des pseudo-constantes (c'est-à-dire des variables que l'on évite de modifier au cours du programme).</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage8" href="#signetNoteBasPage8">(8)</a></div><div class="ContenuUneNoteBasPage">Il faut
+	  bien comprendre qu'il ne s'agit en aucune façon d'une égalité, et que l'on aurait très bien pu choisir un autre symbolisme, tel que <b>n 
+	  7</b> par exemple, comme on le fait souvent dans certains pseudo-langages servant à décrire des algorithmes, pour bien montrer qu'il s'agit de relier un
+	  contenu (la valeur 7) à un contenant (la variable n). </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage9" href="#signetNoteBasPage9">(9)</a></div><div class="ContenuUneNoteBasPage">les <span class="italique">fonctions</span> seront définies en détail dans les chapitres 6 et 7 (voir
+	  page ).</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

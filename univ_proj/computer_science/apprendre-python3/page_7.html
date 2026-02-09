@@ -1,0 +1,798 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L7">7. Principaux types de données</a><ul class="nav-sommaire-ul Indentation7">
+      
+      
+      <li><a class="summaryIndent1" href="#L7-A">7-A. Les données numériques</a><ul class="nav-sommaire-ul Indentation7-A">
+        
+        
+        <li><a class="summaryIndent2" href="#L7-A-1">7-A-1. Le type integer</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L7-B">7-B. Le type float</a></li>
+      <li><a class="summaryIndent1" href="#L7-C">7-C. Les données alphanumériques</a><ul class="nav-sommaire-ul Indentation7-C">
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L7-C-1">7-C-1. Le type string</a><ul class="nav-sommaire-ul Indentation7-C-1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <li><a class="summaryIndent3" href="#L7-C-1-A">7-C-1-A. Remarques</a></li>
+          <li><a class="summaryIndent3" href="#L7-C-1-B">7-C-1-B. Triple quotes</a></li>
+        </ul></li>
+        <li><a class="summaryIndent2" href="#L7-C-2">7-C-2. Accès aux caractères individuels d'une chaîne</a></li>
+        <li><a class="summaryIndent2" href="#L7-C-3">7-C-3. Opérations élémentaires sur les chaînes</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L7-D">7-D. Les listes (première approche)</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_6.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_8.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L7">7. Principaux types de données<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>Dans le chapitre 2, nous avons déjà manipulé des données de différents types : des nombres entiers ou réels, et des
+	chaînes de caractères. Il est temps à présent d'examiner d'un peu plus près ces types de données, et également de vous en faire
+	découvrir d'autres.</p>
+      
+		<h3 class="TitreSection1" id="L7-A">7-A. Les données numériques<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Dans les exercices réalisés jusqu'à présent, nous avons déjà utilisé des données de deux types : les nombres
+	  <span class="italique">entiers</span> ordinaires et les nombres <span class="italique">réels</span> (aussi appelés nombres <span class="italique">à virgule flottante</span>). Tâchons de mettre en évidence les
+	  caractéristiques (et les limites) de ces concepts.</p>
+        
+		<h4 class="TitreSection2" id="L7-A-1">7-A-1. Le type integer<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Supposons que nous voulions modifier légèrement notre précédent exercice sur la suite de Fibonacci, de manière à obtenir
+	    l'affichage d'un plus grand nombre de termes. A priori, il suffit de modifier la condition de bouclage, dans la deuxième ligne. Avec  <b><span style="color:#000080;">while c &lt;50: </span></b>, nous devrions obtenir quarante-neuf termes. Modifions donc légèrement l'exercice, de manière à
+	    afficher aussi le type de la variable principale :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4616">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4616" onclick="selectionCode('contenuCoded0e4616', 'IdTitreCode-d0e4616');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4616" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b, c <code class="python_operator">=</code> <code class="python_digit">1</code>, <code class="python_digit">1</code>, <code class="python_digit">1</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> c <code class="python_operator">&lt;</code><code class="python_digit">50</code>:
+     <code class="python_keyword1">print</code><code class="python_operator">(</code>c, <code class="python_literal1">":"</code>, b, <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=type#type"><span>type</span></a><code class="python_operator">(</code>b))
+     a, b, c <code class="python_operator">=</code> b, a<code class="python_operator">+</code>b, c<code class="python_operator">+</code><code class="python_digit">1</code>
+...
+...
+...  <code class="python_operator">(</code>affichage des <code class="python_digit">43</code> premiers termes)
+... 
+<code class="python_digit">44</code> : <code class="python_digit">1134903170</code> <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'int'</code><code class="python_operator">&gt;</code> 
+<code class="python_digit">45</code> : <code class="python_digit">1836311903</code> <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'int'</code><code class="python_operator">&gt;</code> 
+<code class="python_digit">46</code> : <code class="python_digit">2971215073</code> <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'int'</code><code class="python_operator">&gt;</code> 
+<code class="python_digit">47</code> : <code class="python_digit">4807526976</code> <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'int'</code><code class="python_operator">&gt;</code> 
+<code class="python_digit">48</code> : <code class="python_digit">7778742049</code> <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'int'</code><code class="python_operator">&gt;</code> 
+<code class="python_digit">49</code> : <code class="python_digit">12586269025</code> <code class="python_operator">&lt;</code><code class="python_keyword1">class</code> <code class="python_literal1">'int'</code><code class="python_operator">&gt;</code></code></pre></div>
+          <p>Que pouvons-nous constater ?</p>
+          <p>Il semble que Python soit capable de traiter des nombres entiers de taille illimitée. La fonction <b>type()</b> nous permet de vérifier à
+	    chaque itération que le type de la variable <b>b</b> reste bien en permanence de ce type. </p>
+          <p>L'exercice que nous venons de réaliser pourrait cependant intriguer ceux d'entre vous qui s'interrogent sur la représentation
+	    « interne » des nombres dans un ordinateur. Vous savez probablement en effet que le « cœur » de celui-ci est
+	    constitué par un circuit intégré électronique (une « puce » de silicium) à très haut degré d'intégration,
+	    qui peut effectuer plus d'un milliard d'opérations en une seule seconde, mais seulement sur des nombres binaires de taille limitée : 32 bits
+	    actuellement<a class="signetNoteBasPage" id="signetNoteBasPage19" href="#noteBasPage19">(19)</a>. Or, la
+	    gamme de valeurs décimales qu'il est possible d'encoder sous forme de nombres binaires de 32 bits s'étend de -2147483648 à +2147483647.</p>
+          <p>Les opérations effectuées sur des entiers compris entre ces deux limites sont donc toujours très rapides, parce que le processeur est capable
+	    de les traiter directement. En revanche, lorsqu'il est question de traiter des nombres entiers plus grands, ou encore des nombres réels (nombres
+	    « à virgule flottante »), les logiciels que sont les interpréteurs et compilateurs doivent effectuer un gros travail de
+	    codage/décodage, afin de ne présenter en définitive au processeur que des opérations binaires sur des nombres entiers, de 32 bits au
+	    maximum.</p>
+          <p>Vous n'avez pas à vous préoccuper de ces considérations techniques. Lorsque vous lui demandez de traiter des entiers quelconques, Python les
+	    transmet au processeur sous la forme de nombres binaires de 32 bits chaque fois que cela est possible, afin d'optimiser la vitesse de calcul et d'économiser
+	    l'espace mémoire. Lorsque les valeurs à traiter sont des nombres entiers se situant au-delà des limites indiquées plus haut, leur encodage dans la
+	    mémoire de l'ordinateur devient plus complexe, et leur traitement par le processeur nécessite alors plusieurs opérations successives, mais tout cela se
+	    fait automatiquement, sans que vous n'ayez à vous en soucier<a class="signetNoteBasPage" id="signetNoteBasPage20" href="#noteBasPage20">(20)</a>.</p>
+          <p>Vous pouvez donc effectuer avec Python des calculs impliquant des valeurs entières comportant un nombre de chiffres significatifs quelconque. Ce nombre
+	    n'est limité en effet <span class="italique">que par la taille de la mémoire disponible sur l'ordinateur utilisé.</span> Il va de soi cependant que les calculs impliquant de
+	    très grands nombres devront être décomposés par l'interpréteur en calculs multiples sur des nombres plus simples, ce qui pourra
+	    nécessiter un temps de traitement considérable dans certains cas.</p>
+          <p>
+            <span class="italique">
+              <b>Exemple :</b>
+            </span>
+          </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4811">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4811" onclick="selectionCode('contenuCoded0e4811', 'IdTitreCode-d0e4811');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4811" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b, c <code class="python_operator">=</code> <code class="python_digit">3</code>, <code class="python_digit">2</code>, <code class="python_digit">1</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> c <code class="python_operator">&lt;</code> <code class="python_digit">15</code>:
+     <code class="python_keyword1">print</code><code class="python_operator">(</code>c, <code class="python_literal1">": "</code>, b)
+     a, b, c <code class="python_operator">=</code> b, a<code class="python_operator">*</code>b, c<code class="python_operator">+</code><code class="python_digit">1</code>
+ 
+<code class="python_digit">1</code> :  <code class="python_digit">2</code>
+<code class="python_digit">2</code> :  <code class="python_digit">6</code>
+<code class="python_digit">3</code> :  <code class="python_digit">12</code>
+<code class="python_digit">4</code> :  <code class="python_digit">72</code>
+<code class="python_digit">5</code> :  <code class="python_digit">864</code>
+<code class="python_digit">6</code> :  <code class="python_digit">62208</code>
+<code class="python_digit">7</code> :  <code class="python_digit">53747712</code>
+<code class="python_digit">8</code> :  <code class="python_digit">3343537668096</code>
+<code class="python_digit">9</code> :  <code class="python_digit">179707499645975396352</code>
+<code class="python_digit">10</code> :  <code class="python_digit">600858794305667322270155425185792</code>
+<code class="python_digit">11</code> :  <code class="python_digit">107978831564966913814384922944738457859243070439030784</code>
+<code class="python_digit">12</code> :  <code class="python_digit">64880030544660752790736837369104977695001034284228042891827649456186234</code>
+<code class="python_digit">582611607420928</code>
+<code class="python_digit">13</code> :  <code class="python_digit">70056698901118320029237641399576216921624545057972697917383692313271754</code>
+<code class="python_digit">88362123506443467340026896520469610300883250624900843742470237847552</code>
+<code class="python_digit">14</code> :  <code class="python_digit">45452807645626579985636294048249351205168239870722946151401655655658398</code>
+<code class="python_digit">64222761633581512382578246019698020614153674711609417355051422794795300591700</code>
+<code class="python_digit">96950422693079038247634055829175296831946224503933501754776033004012758368256</code>
+<code class="python_operator">&gt;&gt;&gt;</code></code></pre></div>
+          <p>Dans l'exemple ci-dessus, la valeur des nombres affichés augmente très rapidement, car chacun d'eux est égal au produit des deux termes
+	    précédents.</p>
+          <p>Vous pouvez bien évidemment continuer cette suite mathématique plus loin si vous voulez. La progression continue avec des nombres de plus en plus
+	    gigantesques, mais la vitesse de calcul diminue au fur et à mesure.</p>
+          <p>Note complémentaire : les entiers de valeur comprise entre les deux limites indiquées plus haut occupent chacun 32 bits dans la mémoire de
+	    l'ordinateur. Les très grands entiers occupent une place variable, en fonction de leur taille.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L7-B">7-B. Le type float<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Vous avez déjà rencontré précédemment cet autre type de donnée numérique : le type « nombre
+	  réel », ou « nombre à virgule flottante », désigné en anglais par l'expression <span class="italique">floatingpointnumber</span>, et que pour
+	  cette raison on appellera type <b>float</b> sous Python.</p>
+        <p>Ce type autorise les calculs sur de très grands ou très petits nombres (données scientifiques, par exemple), avec un degré de précision
+	  constant.</p>
+        <p>Pour qu'une donnée numérique soit considérée par Python comme étant du type <b>float</b>, il suffit qu'elle contienne dans sa
+	  formulation un élément tel qu'un point décimal ou un exposant de 10.</p>
+        <p>Par exemple, les données :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e4994">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e4994" onclick="selectionCode('contenuCoded0e4994', 'IdTitreCode-d0e4994');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e4994" class="contenuCode">3.14	10.	.001	   1e100      3.14e-10</code></pre></div>
+        <p>sont automatiquement interprétées par Python comme étant du type <span class="italique"><b>float</b></span>.</p>
+        <p>Essayons donc ce type de données dans un nouveau petit programme (inspiré du précédent) :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e5007">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e5007" onclick="selectionCode('contenuCoded0e5007', 'IdTitreCode-d0e5007');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e5007" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a, b, c <code class="python_operator">=</code> <code class="python_digit">1.</code>, <code class="python_digit">2.</code>, <code class="python_digit">1</code> 	 <code class="python_comment1"># =&gt; a et b seront du type 'float'</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">while</code> c <code class="python_operator">&lt;</code><code class="python_digit">18</code>:
+...    a, b, c <code class="python_operator">=</code> b, b<code class="python_operator">*</code>a, c<code class="python_operator">+</code><code class="python_digit">1</code>
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code>b)
+ 
+<code class="python_digit">2.0</code>
+<code class="python_digit">4.0</code>
+<code class="python_digit">8.0</code>
+<code class="python_digit">32.0</code>
+<code class="python_digit">256.0</code>
+<code class="python_digit">8192.0</code>
+<code class="python_digit">2097152.0</code>
+<code class="python_digit">17179869184.0</code>
+<code class="python_digit">3.6028797019e+16</code>
+<code class="python_digit">6.18970019643e+26</code>
+<code class="python_digit">2.23007451985e+43</code>
+<code class="python_digit">1.38034926936e+70</code>
+<code class="python_digit">3.07828173409e+113</code>
+<code class="python_digit">4.24910394253e+183</code>
+<code class="python_digit">1.30799390526e+297</code>
+      Inf
+      Inf</code></pre></div>
+        <p>Comme vous l'aurez certainement bien compris, nous affichons cette fois encore une série dont les termes augmentent extrêmement vite, chacun d'eux
+	  étant égal au produit des deux précédents. Au huitième terme, nous dépassons déjà largement la capacité d'un <span class="italique">integer</span>.
+	  Au neuvième terme, Python passe automatiquement à la notation scientifique (« e+n » signifie en fait : « fois dix à
+	  l'exposant n »). Après le quinzième terme, nous assistons à nouveau à un dépassement de capacité (sans message d'erreur) :
+	  les nombres vraiment trop grands sont tout simplement notés « inf » (pour « infini »).</p>
+        <p>Le type <span class="italique">float</span> utilisé dans notre exemple permet de manipuler des nombres (positifs ou négatifs) compris entre 10<sup>-308</sup> et
+	  10<sup>308</sup> avec une précision de 12 chiffres significatifs. Ces nombres sont encodés d'une manière particulière sur 8 octets (64 bits) dans la
+	  mémoire de la machine : une partie du code correspond aux 12 chiffres significatifs, et une autre à l'ordre de grandeur (exposant de 10).</p>
+        <p>Exercices</p>
+        <p>.Écrivez un programme qui convertisse en radians un angle fourni au départ en degrés, minutes, secondes.</p>
+        <p>.Écrivez un programme qui convertisse en degrés, minutes, secondes un angle fourni au départ en radians.</p>
+        <p>.Écrivez un programme qui convertisse en degrés Celsius une température exprimée au départ en degrés Fahrenheit, ou
+	  l'inverse.<br/>
+		 La formule de conversion est : <img src="./images/formule01.png" alt="Image non disponible" width="127" height="24" class="image_verticale"/>.</p>
+        <p>.Écrivez un programme qui calcule les intérêts accumulés chaque année pendant 20 ans, par capitalisation d'une somme de 100 euros
+	  placée en banque au taux fixe de 4,3 %</p>
+        <p>
+          <span style="color:#000000;">.Une légende de l'Inde ancienne raconte que le jeu d'échecs a été inventé par un vieux sage, que son roi voulut remercier
+	    en lui affirmant qu'il lui accorderait n'importe quel cadeau en récompense. Le vieux sage demanda qu'on lui fournisse simplement un peu de riz pour ses vieux
+	    jours, et plus précisément un nombre de grains de riz suffisant pour que l'on puisse en déposer 1 seul sur la première case du jeu qu'il venait
+	    d'inventer, deux sur la suivante, quatre sur la troisième, et ainsi de suite jusqu'à la 64</span>
+          <sup>
+            <span style="color:#000000;">e</span>
+          </sup>
+          <span style="color:#000000;">case.</span>
+          <br/>
+          <span style="color:#000000;">Écrivez un programme Python qui affiche le nombre de grains à déposer sur chacune des 64 cases du jeu. Calculez ce nombre de deux
+	    manières :</span>
+        </p>
+        <ul class="ListeDVP">
+          <li>
+            <span style="color:#000000;">le nombre exact de grains (nombre entier) ;</span>
+          </li>
+          <li>
+            <span style="color:#000000;">le nombre de grains en notation scientifique (nombre réel).</span>
+          </li>
+        </ul>
+      </div>
+      
+		<h3 class="TitreSection1" id="L7-C">7-C. Les données alphanumériques<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Jusqu'à présent nous n'avons manipulé que des nombres. Mais un programme d'ordinateur peut également traiter des caractères
+	  alphabétiques, des mots, des phrases, ou des suites de symboles quelconques. Dans la plupart des langages de programmation, il existe pour cet usage des structures
+	  de données particulières que l'on appelle « chaînes de caractères ».</p>
+        <blockquote class="citation"><div>Nous apprendrons plus loin (au chapitre 10) qu'il ne faut pas confondre les notions de « chaîne de caractères » et
+	  « séquence d'octets » comme le faisaient abusivement les langages e programmation anciens (dont les premières versions de Python). Pour
+	  l'instant, contentons-nous de nous réjouir que Python traite désormais de manière parfaitement cohérente toutes les chaînes de caractères,
+	  ceux-ci pouvant faire partie d'alphabets quelconques<a class="signetNoteBasPage" id="signetNoteBasPage21" href="#noteBasPage21">(21)</a>.</div></blockquote>
+        
+		<h4 class="TitreSection2" id="L7-C-1">7-C-1. Le type string<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Une donnée de type <span class="italique">string</span> peut se définir en première approximation comme une suite quelconque de caractères. Dans un script
+	    python, on peut délimiter une telle suite de caractères, soit par des apostrophes (simple quotes), soit par des guillemets (double quotes).
+	    Exemples :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e5206">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e5206" onclick="selectionCode('contenuCoded0e5206', 'IdTitreCode-d0e5206');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e5206" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> phrase1 <code class="python_operator">=</code> <code class="python_literal1">'les oeufs durs.'</code>
+<code class="python_operator">&gt;&gt;&gt;</code> phrase2 <code class="python_operator">=</code> <code class="python_literal1">'"Oui", répondit-il,'</code>
+<code class="python_operator">&gt;&gt;&gt;</code> phrase3 <code class="python_operator">=</code> <code class="python_literal1">"j'aime bien"</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>phrase2, phrase3, phrase1)
+<code class="python_literal1">"Oui"</code>, répondit<code class="python_operator">-</code>il, j<code class="python_literal1">'aime bien les oeufs durs.</code></code></pre></div>
+          <p>Les 3 variables <b>phrase1</b>, <b>phrase2</b>, <b>phrase3</b> sont donc des variables de type <span class="italique">string</span>.</p>
+          <p>Remarquez l'utilisation des guillemets pour délimiter une chaîne dans laquelle il y a des apostrophes, ou l'utilisation des apostrophes pour
+	    délimiter une chaîne qui contient des guillemets. Remarquez aussi encore une fois que la fonction <b>print()</b> insère un espace entre les
+	    éléments affichés.</p>
+          <p>Le caractère spécial « \ » (<span class="italique">antislash</span>) permet quelques subtilités complémentaires :</p>
+          <ul class="ListeDVP">
+            <li>En premier lieu, il permet d'écrire sur plusieurs lignes une commande qui serait trop longue pour tenir sur une seule (cela vaut pour n'importe quel type
+	      de commande).</li>
+            <li>À l'intérieur d'une chaîne de caractères, l'<span class="italique">antislash</span> permet d'insérer un certain nombre de codes spéciaux (sauts à
+	      la ligne, apostrophes, guillemets, etc.). Exemples :</li>
+          </ul>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e5290">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e5290" onclick="selectionCode('contenuCoded0e5290', 'IdTitreCode-d0e5290');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e5290" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> txt3 <code class="python_operator">=</code> <code class="python_literal1">'"N</code><code class="python_literal4">\'</code><code class="python_literal1">est-ce pas ?" répondit-elle.'</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>txt3)
+<code class="python_literal1">"N'est-ce pas ?"</code> répondit<code class="python_operator">-</code>elle.
+<code class="python_operator">&gt;&gt;&gt;</code> Salut <code class="python_operator">=</code> <code class="python_literal1">"Ceci est une chaîne plutôt longue</code><code class="python_literal4">\n</code><code class="python_literal1"> contenant plusieurs lignes \</code>
+<code class="python_literal1">... de texte (Ceci fonctionne</code><code class="python_literal4">\n</code><code class="python_literal1"> de la même façon en C/C++.</code><code class="python_literal4">\n</code><code class="python_literal1">\</code>
+<code class="python_literal1">...    Notez que les blancs en début</code><code class="python_literal4">\n</code><code class="python_literal1"> de ligne sont significatifs.</code><code class="python_literal4">\n</code><code class="python_literal1">"</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>Salut)
+Ceci est une chaîne plutôt longue
+ contenant plusieurs lignes de texte <code class="python_operator">(</code>Ceci fonctionne
+ de la même façon en C<code class="python_operator">/</code>C<code class="python_operator">++</code>.
+ Notez que les blancs en début
+ de ligne sont significatifs.</code></pre></div>
+          
+		<h5 class="TitreSection3" id="L7-C-1-A">7-C-1-A. Remarques<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <ul class="ListeDVP">
+              <li>La séquence <b><span style="color:#000080;">\n</span></b> dans une chaîne provoque un saut à la ligne.</li>
+              <li>La séquence <b><span style="color:#000080;">\</span><span style="color:#000080;">'</span></b> permet d'insérer une apostrophe dans une chaîne
+		délimitée par des apostrophes. De la même manière, la séquence <b><span style="color:#000080;">\"</span></b> permet d'insérer des guillemets
+		dans une chaîne délimitée elle-même par des guillemets.</li>
+              <li>Rappelons encore ici que la casse est significative dans les noms de variables (il faut respecter scrupuleusement le choix initial de majuscules ou
+		minuscules).</li>
+            </ul>
+          </div>
+          
+		<h5 class="TitreSection3" id="L7-C-1-B">7-C-1-B. Triple quotes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h5><div class="BlocSection3">
+            
+            <p>Pour insérer plus aisément des caractères spéciaux ou « exotiques » dans une chaîne, sans faire usage de
+	      l'<span class="italique">antislash</span>, ou pour faire accepter l'<span class="italique">antislash</span> lui-même dans la chaîne, on peut encore délimiter la chaîne à l'aide de
+	      <span class="italique">triplesguillemets</span> ou de <span class="italique">triplesapostrophes</span> :</p>
+            <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e5423">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e5423" onclick="selectionCode('contenuCoded0e5423', 'IdTitreCode-d0e5423');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e5423" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> a1 <code class="python_operator">=</code> <code class="python_literal2">"""</code>
+<code class="python_operator">...</code> Usage: trucmuche[OPTIONS]
+<code class="python_operator">...</code> { <code class="python_operator">-</code>h
+<code class="python_operator">...</code>   <code class="python_operator">-</code>H hôte
+<code class="python_operator">...</code> }<code class="python_literal2">"""</code>
+<code class="python_literal2"> </code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>a1)
+<code class="python_literal2"> </code>
+<code class="python_literal2">Usage: trucmuche[OPTIONS]</code>
+<code class="python_literal2">{ -h</code>
+<code class="python_literal2"> -H hôte</code>
+<code class="python_literal2">}</code></code></pre></div>
+          </div>
+        </div>
+        
+		<h4 class="TitreSection2" id="L7-C-2">7-C-2. Accès aux caractères individuels d'une chaîne<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Les chaînes de caractères constituent un cas particulier d'un type de données plus général que l'on appelle des <span class="italique">données
+	    composites</span>. Une donnée composite est une entité qui rassemble dans une seule structure un ensemble d'entités plus simples : dans le cas d'une
+	    chaîne de caractères, par exemple, ces entités plus simples sont évidemment les caractères eux-mêmes. En fonction des circonstances, nous
+	    souhaiterons traiter la chaîne de caractères, tantôt comme un seul objet, tantôt comme une collection de caractères distincts. Un langage de
+	    programmation tel que Python doit donc être pourvu de mécanismes qui permettent d'accéder séparément à chacun des caractères d'une
+	    chaîne. Comme vous allez le voir, cela n'est pas bien compliqué.</p>
+          <p>Python considère qu'une chaîne de caractères est un objet de la catégorie des <span class="italique">séquences</span>, lesquelles sont des <span class="italique">collections
+	    ordonnées d'éléments</span>. Cela signifie simplement que les caractères d'une chaîne sont toujours disposés dans un certain ordre. Par
+	    conséquent, chaque caractère de la chaîne peut être désigné par sa place dans la séquence, à l'aide d'un
+	    <span class="italique">index</span>.</p>
+          <p>Pour accéder à un caractère bien déterminé, on utilise le nom de la variable qui contient la chaîne et on lui accole, entre deux
+	    crochets, l'index numérique qui correspond à la position du caractère dans la chaîne.</p>
+          <p><span class="italique">Attention cependant : </span>comme vous aurez l'occasion de le vérifier par ailleurs, les données informatiques sont presque toujours
+	    numérotées <span class="italique">à partir de zéro</span> (et non à partir de un). C'est le cas pour les caractères d'une chaîne.</p>
+          <p><span class="italique"><b>Exemple</b></span> :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e5522">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e5522" onclick="selectionCode('contenuCoded0e5522', 'IdTitreCode-d0e5522');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e5522" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> ch <code class="python_operator">=</code> <code class="python_literal1">"Christine"</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>ch[<code class="python_digit">0</code>], ch[<code class="python_digit">3</code>], ch[<code class="python_digit">5</code>])
+C i t</code></pre></div>
+          <p>Vous pouvez recommencer l'exercice de l'exemple ci-dessus en utilisant cette fois un ou deux caractères « non-ASCII », tels que
+	    lettres accentuées, cédilles, etc. Contrairement à ce qui pouvait se passer dans certains cas avec les versions de Python antérieures à la
+	    version 3.0, vous obtenez sans surprise les résultats attendus :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e5553">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e5553" onclick="selectionCode('contenuCoded0e5553', 'IdTitreCode-d0e5553');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e5553" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> ch <code class="python_operator">=</code><code class="python_literal1">"Noël en Décembre"</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>ch[<code class="python_digit">1</code>],ch[<code class="python_digit">2</code>],ch[<code class="python_digit">3</code>],ch[<code class="python_digit">4</code>],ch[<code class="python_digit">8</code>],ch[<code class="python_digit">9</code>],ch[<code class="python_digit">10</code>],ch[<code class="python_digit">11</code>],ch[<code class="python_digit">12</code>])
+o ë l	 D é c e m</code></pre></div>
+          <p>Ne vous préoccupez pas pour l'instant de savoir de quelle manière exacte Python mémorise et traite les caractères typographiques dans la
+	    mémoire de l'ordinateur. Sachez cependant que la technique utilisée exploite la norme internationale <b>unicode</b>. qui permet de distinguer de façon
+	    univoque n'importe quel caractère de n'importe quel alphabet. Vous pourrez donc mélanger dans une même chaîne des caractères latins, grecs,
+	    cyrilliques, arabes, ... (y compris les caractères accentués), ainsi que des symboles mathématiques, des pictogrammes, etc. Nous verrons au
+	    chapitre 10 comment faire apparaître d'autres caractères que ceux qui sont directement accessibles au clavier.</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L7-C-3">7-C-3. Opérations élémentaires sur les chaînes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Python intègre de nombreuses <span class="italique">fonctions</span> qui permettent d'effectuer divers traitements sur les chaînes de caractères (conversions
+	    majuscules/minuscules, découpage en chaînes plus petites, recherche de mots, etc.). Une fois de plus, cependant, nous devons vous demander de
+	    patienter : ces questions ne seront développées qu'à partir du chapitre 10.</p>
+          <p>Pour l'instant, nous pouvons nous contenter de savoir qu'il est possible d'accéder individuellement à chacun des caractères d'une chaîne,
+	    comme cela a été expliqué dans la section précédente. Sachons en outre que l'on peut aussi :</p>
+          <ul class="ListeDVP">
+            <li>assembler plusieurs petites chaînes pour en construire de plus grandes. Cette opération s'appelle <span class="italique">concaténation</span> et on la réalise
+	      sous Python à l'aide de l'opérateur <b>+</b> (cet opérateur réalise donc l'opération d'addition lorsqu'on l'applique à des nombres, et
+	      l'opération de concaténation lorsqu'on l'applique à des chaînes de caractères). Exemple :</li>
+          </ul>
+          <p>
+            <b>
+              <span style="color:#000080;">a = </span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">Petit poisson</span>
+              <span style="color:#000080;">'</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">b = </span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">deviendra grand</span>
+              <span style="color:#000080;">'</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">c = a + b</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">print(c)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">petit poisson deviendra grand</span>
+            </b>
+          </p>
+          <ul class="ListeDVP">
+            <li>déterminer la longueur (c'est-à-dire le nombre de caractères) d'une chaîne, en faisant appel à la fonction intégrée
+	      <b>len() </b>:</li>
+          </ul>
+          <p>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; ch =</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">Georges</span>
+              <span style="color:#000080;">'</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; print(len(ch))</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">7</span>
+            </b>
+          </p>
+          <p>Cela marche tout aussi bien si la chaîne contient des caractères accentués :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; ch =</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">René</span>
+              <span style="color:#000080;">'</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; print(len(ch))</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">4</span>
+            </b>
+          </p>
+          <ul class="ListeDVP">
+            <li>Convertir en nombre véritable une chaîne de caractères qui représente un nombre. Exemple :</li>
+          </ul>
+          <p><b><span style="color:#000080;">&gt;&gt;&gt; ch = </span><span style="color:#000080;">'</span><span style="color:#000080;">8647</span><span style="color:#000080;">'</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; print(ch + 45)</span></b><br/>
+		 → *** erreur *** : on ne peut pas additionner une chaîne et un nombre <br/><b><span style="color:#000080;">&gt;&gt;&gt; n = int(ch) </span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; print(n + 65)</span></b><br/><b><span style="color:#000080;">8712 </span></b><span class="italique"><span style="color:#666699;"># OK : on peut additionner 2 nombres
+		   </span></span></p>
+          <p>Dans cet exemple, la fonction intégrée <b>int()</b> convertit la chaîne en nombre entier. Il serait également possible de convertir une
+	    chaîne de caractères en nombre réel, à l'aide de la fonction intégrée <b>float()</b>.</p>
+          <p>Exercices</p>
+          <p>.Écrivez un script qui détermine si une chaîne contient ou non le caractère « e ».</p>
+          <p>.Écrivez un script qui compte le nombre d'occurrences du caractère « e » dans une chaîne.</p>
+          <p><span style="color:#000000;">.Écrivez un script qui recopie une chaîne (dans une nouvelle variable), en insérant des astérisques entre les
+	    caractères.</span><br/><span style="color:#000000;">Ainsi par exemp</span>le, « <b><span style="color:#000080;">gaston</span></b> » devra devenir
+	    « <b><span style="color:#000080;">g*a*s*t*o*n</span></b> »</p>
+          <p><span style="color:#000000;">.Écrivez un script qui recopie un</span>e chaîne (dans une nouvelle variable) en l'inversant.<br/>
+		 Ainsi par exemple, « <b><span style="color:#000080;">zorglub</span></b> » deviendra « <b><span style="color:#000080;">bulgroz</span></b> ».</p>
+          <p>
+            <span style="color:#000000;">.En partant de l'exercice précédent, écrivez un script qui détermine si une chaîne de caractères donnée est un
+	      </span>
+            <span class="italique">palindrome</span>
+            <span style="color:#000000;">(c'est-à-dire une chaîne qui peut se lire indifféremment dans les deux sens), comme par exemple « radar » ou
+	      « s.o.s ».</span>
+          </p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L7-D">7-D. Les listes (première approche)<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Les chaînes que nous avons abordées à la rubrique précédente constituaient un premier exemple de <span class="italique">données composites</span>. On
+	  appelle ainsi les structures de données qui sont utilisées pour regrouper de manière structurée des ensembles de valeurs. Vous apprendrez
+	  progressivement à utiliser plusieurs autres types de données composites, parmi lesquelles les <span class="italique">listes</span>, les <span class="italique">tuples</span> et les
+	  <span class="italique">dictionnaires</span><a class="signetNoteBasPage" id="signetNoteBasPage22" href="#noteBasPage22">(22)</a>. Nous n'allons cependant aborder ici que le premier de ces trois types, et ce de façon assez sommaire. Il
+	  s'agit-là en effet d'un sujet fort vaste, sur lequel nous devrons revenir à plusieurs reprises.</p>
+        <p>Sous Python, on peut définir une liste comme <span class="italique">une collection d'éléments séparés par des virgules, l'ensemble étant enfermé
+	  dans des crochets</span>. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e5903">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e5903" onclick="selectionCode('contenuCoded0e5903', 'IdTitreCode-d0e5903');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e5903" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> jour <code class="python_operator">=</code> [<code class="python_literal1">'lundi'</code>, <code class="python_literal1">'mardi'</code>, <code class="python_literal1">'mercredi'</code>, <code class="python_digit">1800</code>, <code class="python_digit">20.357</code>, <code class="python_literal1">'jeudi'</code>, <code class="python_literal1">'vendredi'</code>]
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>jour)
+[<code class="python_literal1">'lundi'</code>, <code class="python_literal1">'mardi'</code>, <code class="python_literal1">'mercredi'</code>, <code class="python_digit">1800</code>, <code class="python_digit">20.357</code>, <code class="python_literal1">'jeudi'</code>, <code class="python_literal1">'vendredi'</code>]</code></pre></div>
+        <p>Dans cet exemple, la valeur de la variable <b>jour</b> est une liste.</p>
+        <p>Comme on peut le constater dans le même exemple, les éléments individuels qui constituent une liste peuvent être de types variés. Dans
+	  cet exemple, en effet, les trois premiers éléments sont des chaînes de caractères, le quatrième élément est un entier, le
+	  cinquième un réel, etc. (nous verrons plus loin qu'un élément d'une liste peut lui-même être une liste !). À cet égard, le
+	  concept de liste est donc assez différent du concept de « tableau » (<span class="italique">array</span>) ou de « variable indicée » que l'on
+	  rencontre dans d'autres langages de programmation.</p>
+        <p>Remarquons aussi que, comme les chaînes de caractères, les listes sont des <span class="italique">séquences</span>, c'est-à-dire des <span class="italique">collections ordonnées
+	  d'objets</span>. Les divers éléments qui constituent une liste sont en effet toujours disposés dans le même ordre, et l'on peut donc accéder à
+	  chacun d'entre eux individuellement si l'on connaît son <span class="italique">index</span> dans la liste. Comme c'était déjà le cas pour les caractères dans une
+	  chaîne, il faut cependant retenir que la numérotation de ces index commence <span class="italique">à partir de zéro</span>, et non à partir de un.</p>
+        <p>
+          <span class="italique">
+            <b>Exemples :</b>
+          </span>
+        </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e5997">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e5997" onclick="selectionCode('contenuCoded0e5997', 'IdTitreCode-d0e5997');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e5997" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> jour <code class="python_operator">=</code> [<code class="python_literal1">'lundi'</code>, <code class="python_literal1">'mardi'</code>, <code class="python_literal1">'mercredi'</code>, <code class="python_digit">1800</code>, <code class="python_digit">20.357</code>, <code class="python_literal1">'jeudi'</code>, <code class="python_literal1">'vendredi'</code>]
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>jour[<code class="python_digit">2</code>])
+mercredi
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>jour[<code class="python_digit">4</code>])
+<code class="python_digit">20.357</code></code></pre></div>
+        <p>À la différence de ce qui se passe pour les chaînes, qui constituent un type de données <span class="italique">non-modifiables</span> (nous aurons plus loin
+	  diverses occasions de revenir là-dessus), il est possible de changer les éléments individuels d'une liste :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6056">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6056" onclick="selectionCode('contenuCoded0e6056', 'IdTitreCode-d0e6056');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6056" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>jour)
+[<code class="python_literal1">'lundi'</code>, <code class="python_literal1">'mardi'</code>, <code class="python_literal1">'mercredi'</code>, <code class="python_digit">1800</code>, <code class="python_digit">20.357</code>, <code class="python_literal1">'jeudi'</code>, <code class="python_literal1">'vendredi'</code>]
+<code class="python_operator">&gt;&gt;&gt;</code> jour[<code class="python_digit">3</code>] <code class="python_operator">=</code> jour[<code class="python_digit">3</code>] <code class="python_operator">+</code><code class="python_digit">47</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>jour)
+[<code class="python_literal1">'lundi'</code>, <code class="python_literal1">'mardi'</code>, <code class="python_literal1">'mercredi'</code>, <code class="python_digit">1847</code>, <code class="python_digit">20.357</code>, <code class="python_literal1">'jeudi'</code>, <code class="python_literal1">'vendredi'</code>]</code></pre></div>
+        <p>On peut donc remplacer certains éléments d'une liste par d'autres, comme ci-dessous  :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6136">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6136" onclick="selectionCode('contenuCoded0e6136', 'IdTitreCode-d0e6136');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6136" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> jour[<code class="python_digit">3</code>] <code class="python_operator">=</code> <code class="python_literal1">'Juillet'</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>jour)
+[<code class="python_literal1">'lundi'</code>, <code class="python_literal1">'mardi'</code>, <code class="python_literal1">'mercredi'</code>, <code class="python_literal1">'Juillet'</code>, <code class="python_digit">20.357</code>, <code class="python_literal1">'jeudi'</code>, <code class="python_literal1">'vendredi'</code>]</code></pre></div>
+        <p>La <span class="italique">fonction intégrée</span><b>len()</b>, que nous avons déjà rencontrée à propos des chaînes, s'applique aussi aux listes.
+	  Elle renvoie le nombre d'éléments présents dans la liste :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6187">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6187" onclick="selectionCode('contenuCoded0e6187', 'IdTitreCode-d0e6187');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6187" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=len#len"><span>len</span></a><code class="python_operator">(</code>jour))
+<code class="python_digit">7</code></code></pre></div>
+        <p>Une autre <span class="italique">fonction intégrée</span> permet de supprimer d'une liste un élément quelconque (à partir de son index). Il s'agit de la
+	  fonction <b>del() </b><a class="signetNoteBasPage" id="signetNoteBasPage23" href="#noteBasPage23">(23)</a>:</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6221">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6221" onclick="selectionCode('contenuCoded0e6221', 'IdTitreCode-d0e6221');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6221" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">del</code><code class="python_operator">(</code>jour[<code class="python_digit">4</code>])
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>jour)
+[<code class="python_literal1">'lundi'</code>, <code class="python_literal1">'mardi'</code>, <code class="python_literal1">'mercredi'</code>, <code class="python_literal1">'juillet'</code>, <code class="python_literal1">'jeudi'</code>, <code class="python_literal1">'vendredi'</code>]</code></pre></div>
+        <p>Il est également tout à fait possible d'ajouter un élément à une liste, mais pour ce faire, il faut considérer que la liste est un
+	  <span class="italique">objet</span>, dont on va utiliser l'une des <span class="italique">méthodes</span>. Les concepts informatiques <span class="italique">d'objet</span> et de <span class="italique">méthode</span> ne seront expliqués qu'un peu
+	  plus loin dans ces notes, mais nous pouvons dès à présent montrer « comment ça marche » dans le cas particulier d'une
+	  liste :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6275">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6275" onclick="selectionCode('contenuCoded0e6275', 'IdTitreCode-d0e6275');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6275" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> jour.<code class="python_function">append</code><code class="python_operator">(</code><code class="python_literal1">'samedi'</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>jour)
+[<code class="python_literal1">'lundi'</code>, <code class="python_literal1">'mardi'</code>, <code class="python_literal1">'mercredi'</code>, <code class="python_literal1">'juillet'</code>, <code class="python_literal1">'jeudi'</code>, <code class="python_literal1">'vendredi'</code>, <code class="python_literal1">'samedi'</code>]
+<code class="python_operator">&gt;&gt;&gt;</code></code></pre></div>
+        <p>Dans la première ligne de l'exemple ci-dessus, nous avons appliqué la <span class="italique">méthode</span><b>append()</b> à <span class="italique">l'objet</span><b>jour</b>, avec
+	  <span class="italique">l'argument</span>'samedi'. Si l'on se rappelle que le mot « append » signifie « ajouter » en anglais, on peut comprendre que la
+	  méthode <b>append()</b> est une sorte de <span class="italique">fonction</span> qui est en quelque manière attachée ou intégrée aux objets du type
+	  « liste ». L'argument que l'on utilise avec cette fonction est bien entendu l'élément que l'on veut ajouter à la fin de la
+	  liste.</p>
+        <p>Nous verrons plus loin qu'il existe ainsi toute une série de ces <span class="italique">méthodes</span> (c'est-à-dire des fonctions intégrées, ou plutôt
+	  « encapsulées » dans les objets de type « liste »). Notons simplement au passage que l'on applique une méthode à
+	  un objet <span class="italique">en reliant les deux à l'aide d'un point</span>. (D'abord le nom de la variable qui référence l'objet, puis le point, puis le nom de la
+	  méthode, cette dernière toujours accompagnée d'une paire de parenthèses.)</p>
+        <p>Comme les chaînes de caractères, les listes seront approfondies plus loin dans ces notes. Nous en savons cependant assez pour commencer à les
+	  utiliser dans nos programmes. Veuillez par exemple analyser le petit script ci-dessous et commenter son fonctionnement :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e6352">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e6352" onclick="selectionCode('contenuCoded0e6352', 'IdTitreCode-d0e6352');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e6352" class="contenuCode">jour <code class="python_operator">=</code> [<code class="python_literal1">'dimanche'</code>,<code class="python_literal1">'lundi'</code>,<code class="python_literal1">'mardi'</code>,<code class="python_literal1">'mercredi'</code>,<code class="python_literal1">'jeudi'</code>,<code class="python_literal1">'vendredi'</code>,<code class="python_literal1">'samedi'</code>]
+a, b <code class="python_operator">=</code> <code class="python_digit">0</code>, <code class="python_digit">0</code>
+<code class="python_keyword1">while</code> a<code class="python_operator">&lt;</code><code class="python_digit">25</code>:
+  a <code class="python_operator">=</code> a <code class="python_operator">+</code> <code class="python_digit">1</code>
+  b <code class="python_operator">=</code> a <code class="python_operator">%</code> <code class="python_digit">7</code>
+  <code class="python_keyword1">print</code><code class="python_operator">(</code>a, jour[b])</code></pre></div>
+        <p>La 5<sup>e</sup> ligne de cet exemple fait usage de l'opérateur « <span class="italique">modulo</span> » déjà rencontré précédemment
+	  et qui peut rendre de grands services en programmation. On le représente par % dans de nombreux langages (dont Python). Quelle est l'opération effectuée
+	  par cet opérateur ?</p>
+        <p>Exercices</p>
+        <p>.Soient les listes suivantes :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">t1 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">t2 = [</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Janvier</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Février</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Mars</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Avril</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Mai</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Juin</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">,</span>
+          </b>
+          <br/>
+          <b>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Juillet</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Août</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Septembre</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, 'Octobre</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Novembre</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Décembre</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">]</span>
+          </b>
+        </p>
+        <p>Écrivez un petit programme qui crée une nouvelle liste <b>t3</b>. Celle-ci devra contenir tous les éléments des deux listes en les
+	  alternant, de telle manière que chaque nom de mois soit suivi du nombre de jours correspondant :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">[</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Janvier</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">,31,</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Février</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">,28,</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Mars</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">,31, etc...].</span>
+          </b>
+        </p>
+        <p>.Écrivez un programme qui affiche « proprement » tous les éléments d'une liste. Si on l'appliquait par exemple à la
+	  liste <b>t2</b> de l'exercice ci-dessus, on devrait obtenir :</p>
+        <p>
+          <b>
+            <span style="color:#000080;">Janvier Février Mars Avril Mai Juin Juillet Août Septembre Octobre Novembre Décembre</span>
+          </b>
+        </p>
+        <p>.Écrivez un programme qui recherche le plus grand élément présent dans une liste donnée. Par exemple, si on l'appliquait à la
+	  liste <b><span style="color:#000080;">[32, 5, 12, 8, 3, 75, 2, 15]</span></b>, ce programme devrait afficher :</p>
+        <p>
+          <b><span style="color:#000080;">le plus grand élément de cette liste a la valeur 75</span>.</b>
+        </p>
+        <p><span style="color:#000000;">.Écrive</span>z un programme qui analyse un par un tous les éléments d'une liste de nombres (par exemple celle de
+	  l'exercice précédent) pour générer deux nouvelles listes. L'une contiendra seulement les nombres <span class="italique">pairs</span> de la liste initiale, et l'autre les
+	  nombres <span class="italique">impairs</span>. Par exemple, si la liste initiale est celle de l'exercice précédent, le programme devra construire une liste <b>pairs</b> qui
+	  contiendra <b><span style="color:#000080;">[32, 12, 8, 2]</span></b>, et une liste <b>impairs</b> qui contiendra <b><span style="color:#000080;">[5, 3, 75, 15]</span></b>.
+	  Astuce : pensez à utiliser l'opérateur <b>modulo</b> (%) déjà cité pr<span style="color:#000000;">écédemment.</span></p>
+        <p>
+          <span style="color:#000000;">.Écrivez un programme qui analyse un par un tous les éléments d'une liste de mots (par exemple : </span>
+          <b>
+            <span style="color:#000080;">[</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Jean</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Maximilien</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Brigitte</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Sonia</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Jean-Pierre</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">, </span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">Sandra</span>
+            <span style="color:#000080;">'</span>
+            <span style="color:#000080;">]</span>
+          </b>
+          <span style="color:#000000;">) pour générer deux nouvelles listes. L'une contiendra les mots comportant moins de 6 caractères, l'autre les mots comportant 6
+	    caractères ou davantage.</span>
+        </p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_6.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_8.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage19" href="#signetNoteBasPage19">(19)</a></div><div class="ContenuUneNoteBasPage">La plupart des ordinateurs de bureau actuels contiennent un microprocesseur à registres de 32 bits (même s'il s'agit d'un
+	    modèle « dual core ». Les processeurs « 64 bits » seront cependant bientôt monnaie courante.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage20" href="#signetNoteBasPage20">(20)</a></div><div class="ContenuUneNoteBasPage">Les précédentes versions de Python disposaient de deux types d'entiers :
+	    « integer » et « long integer », mais la conversion entre ces deux types est devenue automatique dès la version
+	    2.2.</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage21" href="#signetNoteBasPage21">(21)</a></div><div class="ContenuUneNoteBasPage">Ceci constitue donc l'une des grandes nouveautés de la version 3 de Python par rapport aux versions
+	  précédentes. Dans celles-ci, une donnée de type<span class="italique"> string</span> était en réalité une <span class="italique">séquence d'octets</span> et non une
+	  <span class="italique">séquence de caractères</span>. Cela ne posait guère de problèmes pour traiter des textes contenant seulement les caractères principaux des
+	  langues d'Europe occidentale, car il était possible d'encoder chacun de ces caractères sur un seul octet (en suivant par exemple la norme Latin-1). Cela
+	  entraînait cependant de grosses difficultés si l'on voulait rassembler dans un même texte des caractères tirés d'alphabets différents, ou
+	  simplement utiliser des alphabets comportant plus de 256 caractères, des symboles mathématiques particuliers, etc. (Vous trouverez davantage d'informations
+	  à ce sujet au chapitre 10). </div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage22" href="#signetNoteBasPage22">(22)</a></div><div class="ContenuUneNoteBasPage">Vous pourrez même créer vos propres types de données composites, lorsque vous aurez assimilé le concept de
+	  <span class="italique"><b>classe</b></span> (voir page ).</div></div><div class="UneNoteBasDePage"><div class="NumerotationNoteBasPage"><a class="noteBasPage" id="noteBasPage23" href="#signetNoteBasPage23">(23)</a></div><div class="ContenuUneNoteBasPage">Il existe en fait tout un ensemble de techniques qui permettent de découper une liste en tranches, d'y insérer des
+	  groupes d'éléments, d'en enlever d'autres, etc., en utilisant une syntaxe particulière où n'interviennent que les index.<br/>
+		 Cet ensemble de techniques (qui peuvent aussi s'appliquer aux chaînes de caractères) porte le nom générique de <span class="italique">slicing</span> (tranchage). On
+		   le met en œuvre en plaçant plusieurs indices au lieu d'un seul entre les crochets que l'on accole au nom de la variable. Ainsi jour[1:3] désigne
+		   le sous-ensemble ['mardi', 'mercredi'].<br/>
+		 Ces techniques un peu particulières sont décrites plus loin (voir pages et suivantes).</div></div><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

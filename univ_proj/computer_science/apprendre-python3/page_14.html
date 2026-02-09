@@ -1,0 +1,1017 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre à programmer avec Python 3</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Apprendre à programmer avec Python 3"/>
+	<meta name="author" content="Gérard Swinnen"/>
+	<meta name="keywords" content="python, debuter,programmer,Python 3,Gérard Swinnen,Swinnen,apprendre,"> 
+  	<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="https://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body><header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    <h1 class="titre-article" itemprop="name">Apprendre à programmer avec Python 3</h1><h2 class="soustitre-article">
+    <a data-lightbox="lightbox[article]" href="./images/apprendre-python3.jpg"><img src="./images/apprendre-python3-miniature.jpg" alt="Image de couverture python 3" class="ImgCliquable image_verticale"/></a>
+  </h2></header>
+    <article id="contenuArticle" class="ArticleComplet " itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		
+<nav class="nav-sommaire"><h2 class="TitreHeader ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h2><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#L14">14. Classes, méthodes, héritage</a><ul class="nav-sommaire-ul Indentation14">
+      
+      
+      
+      
+      
+      
+      <li><a class="summaryIndent1" href="#L14-A">14-A. Définition d'une méthode</a><ul class="nav-sommaire-ul Indentation14-A">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L14-A-1">14-A-1. Définition concrète d'une méthode dans un script</a></li>
+        <li><a class="summaryIndent2" href="#L14-A-2">14-A-2. Essai de la méthode, dans une instance quelconque</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L14-B">14-B. La méthode constructeur</a><ul class="nav-sommaire-ul Indentation14-B">
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L14-B-1">14-B-1. Exemple</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L14-C">14-C. Espaces de noms des classes et instances</a></li>
+      <li><a class="summaryIndent1" href="#L14-D">14-D. Héritage</a></li>
+      <li><a class="summaryIndent1" href="#L14-E">14-E. Héritage et polymorphisme</a><ul class="nav-sommaire-ul Indentation14-E">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#L14-E-1">14-E-1. Commentaires</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#L14-F">14-F. Modules contenant des bibliothèques de classes</a></li>
+    </ul></li>
+  
+  
+</ul></nav><div class="contenu"><section><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_13.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_15.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div>
+  
+  
+  
+  
+  
+  
+  
+		<h2 class="TitreSection0" id="L14">14. Classes, méthodes, héritage<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection0">
+      
+      <p>
+        <span class="italique">Les classes que nous avons définies dans le chapitre précédent peuvent être considérées comme des espaces de noms particuliers, dans
+	  lesquels nous n'avons placé jusqu'ici que des variables (les attributs d'instance). Il nous faut à présent doter ces classes d'une
+	  fonctionnalité.</span>
+      </p>
+      <p>L'idée de base de la programmation orientée objet consiste en effet à regrouper dans un même ensemble (l'objet), à la fois un certain
+	nombre de données (ce sont les <span class="italique">attributs d'instance</span>), et les algorithmes destinés à effectuer divers traitements sur ces données (ce sont les
+	<span class="italique">méthodes</span>, à savoir des fonctions particulières encapsulées dans l'objet).</p>
+      <p>
+        <span class="italique">
+          <b>Objet = [ attributs + méthodes ]</b>
+        </span>
+      </p>
+      <p>Cette façon d'associer dans une même « capsule » les propriétés d'un objet et les fonctions qui permettent d'agir sur
+	elles, correspond chez les concepteurs de programmes à une volonté de construire des entités informatiques dont le comportement se rapproche du comportement
+	des objets du monde réel qui nous entoure.</p>
+      <p>Considérons par exemple un <span class="italique">widget</span> « bouton » dans une application graphique. Il nous paraît raisonnable de souhaiter que
+	l'objet informatique que nous appelons ainsi ait un comportement qui ressemble à celui d'un bouton d'appareil quelconque dans le monde réel. Or nous savons que
+	la fonctionnalité d'un bouton réel (sa capacité de fermer ou d'ouvrir un circuit électrique) est bien intégrée dans l'objet lui-même (au
+	même titre que d'autres propriétés, telles que sa taille, sa couleur, etc.). De la même manière, nous souhaiterons donc que les différentes
+	caractéristiques de notre bouton logiciel (sa taille, son emplacement, sa couleur, le texte qu'il supporte), mais aussi la définition de ce qui se passe lorsque
+	l'on effectue différentes actions de la souris sur ce bouton, soient regroupés dans une entité bien précise à l'intérieur du programme, de
+	telle sorte qu'il n'y ait pas de confusion entre ce bouton et un autre, ou <span class="italique">a fortiori</span> entre ce bouton et d'autres entités.</p>
+      
+		<h3 class="TitreSection1" id="L14-A">14-A. Définition d'une méthode<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Pour illustrer notre propos, nous allons définir une nouvelle classe <b>Time()</b>, laquelle devrait nous permettre d'effectuer toute une série
+	  d'opérations sur des instants, des durées, etc. :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30235">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30235" onclick="selectionCode('contenuCoded0e30235', 'IdTitreCode-d0e30235');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30235" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Time</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>): 
+...    <code class="python_literal1">"définition d'objets temporels"</code></code></pre></div>
+        <p>Créons à présent un objet de ce type, et ajoutons-lui des variables d'instance pour mémoriser les heures, minutes et
+	  secondes :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30255">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30255" onclick="selectionCode('contenuCoded0e30255', 'IdTitreCode-d0e30255');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30255" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> instant <code class="python_operator">=</code> <code class="python_function">Time</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> instant.heure <code class="python_operator">=</code> <code class="python_digit">11</code>
+<code class="python_operator">&gt;&gt;&gt;</code> instant.minute <code class="python_operator">=</code> <code class="python_digit">34</code>
+<code class="python_operator">&gt;&gt;&gt;</code> instant.seconde <code class="python_operator">=</code> <code class="python_digit">25</code></code></pre></div>
+        <p>À titre d'exercice, écrivez maintenant vous-même une fonction <b>affiche_heure()</b> , qui serve à visualiser le contenu d'un objet de
+	  classe <b>Time()</b> sous la forme conventionnelle « heures:minutes:secondes ». Appliquée à l'objet instant créé ci-dessus, cette
+	  fonction devrait donc afficher  <b><span style="color:#000080;">11:34:25 </span></b> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30307">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30307" onclick="selectionCode('contenuCoded0e30307', 'IdTitreCode-d0e30307');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30307" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_function">affiche_heure</code><code class="python_operator">(</code>instant)
+<code class="python_digit">11</code>:<code class="python_digit">34</code>:<code class="python_digit">25</code></code></pre></div>
+        <p>Votre fonction ressemblera probablement à ceci :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30328">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30328" onclick="selectionCode('contenuCoded0e30328', 'IdTitreCode-d0e30328');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30328" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">affiche_heure</code><code class="python_operator">(</code>t): 
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>t.heure) <code class="python_operator">+</code><code class="python_literal1">":"</code> <code class="python_operator">+</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>t.minute) <code class="python_operator">+</code><code class="python_literal1">":"</code> <code class="python_operator">+</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=str#str"><span>str</span></a><code class="python_operator">(</code>t.seconde))</code></pre></div>
+        <p>... ou mieux encore, à ceci :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30377">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30377" onclick="selectionCode('contenuCoded0e30377', 'IdTitreCode-d0e30377');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30377" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">def</code> <code class="python_function">affiche_heure</code><code class="python_operator">(</code>t): 
+...    <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"{}:{}:{}"</code>.<code class="python_function">format</code><code class="python_operator">(</code>t.heure, t.minute, t.seconde))</code></pre></div>
+        <p>en application de la technique de formatage des chaînes décrite à la page .</p>
+        <p>Si par la suite vous deviez utiliser fréquemment des objets de la classe <b>Time()</b>, cette fonction d'affichage vous serait probablement fort
+	  utile.</p>
+        <p>Il serait donc judicieux d'arriver à <span class="italique">encapsuler</span> cette fonction <b>affiche_heure()</b> dans la classe <b>Time()</b> elle-même, de manière
+	  à s'assurer qu'elle soit toujours automatiquement disponible, chaque fois que l'on aura à manipuler des objets de la classe <b>Time()</b>.</p>
+        <p>Une fonction que l'on aura ainsi encapsulée dans une classe s'appelle préférentiellement une <span class="italique">méthode</span>.</p>
+        <p>Vous avez évidemment déjà rencontré des méthodes à de nombreuses reprises dans les chapitres précédents de cet ouvrage,
+	  et vous savez donc déjà qu'une méthode est bien une fonction associée à une classe particulière d'objets. Il vous reste seulement à
+	  apprendre comment construire une telle fonction.</p>
+        
+		<h4 class="TitreSection2" id="L14-A-1">14-A-1. Définition concrète d'une méthode dans un script<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>On définit une méthode comme on définit une fonction, c'est-à-dire en écrivant un bloc d'instructions à la suite du mot
+	    réservé <b>def</b>, mais cependant avec deux différences :</p>
+          <ul class="ListeDVP">
+            <li>la définition d'une méthode est toujours placée <span class="italique">à l'intérieur de la définition d'une classe</span>, de manière à ce
+	      que la relation qui lie la méthode à la classe soit clairement établie ;</li>
+            <li>la définition d'une méthode doit toujours comporter au moins un paramètre, lequel doit être <span class="italique">une référence d'instance</span>, et
+	      ce paramètre particulier doit toujours être listé en premier.</li>
+          </ul>
+          <p>Vous pourriez en principe utiliser un nom de variable quelconque pour ce premier paramètre, mais il est vivement conseillé de respecter la
+	    convention qui consiste à toujours lui donner le nom : <b>self</b>.</p>
+          <p>Ce paramètre <b>self</b> est nécessaire, parce qu'il faut pouvoir désigner <span class="italique">l'instance à laquelle la méthode sera
+	    associée</span>, dans les instructions faisant partie de sa définition. Vous comprendrez cela plus facilement avec les exemples ci-après.</p>
+          <blockquote class="citation"><div>Remarquons que la définition d<span class="italique">'</span>une méthode comporte toujours au moins un paramètre : self, alors que la définition d<span class="italique">'</span>une
+	    fonction peut n<span class="italique">'</span>en comporter aucun.</div></blockquote>
+          <p>Voyons comment cela se passe en pratique :</p>
+          <p>Pour faire en sorte que la fonction <b>affiche_heure()</b> devienne une méthode de la classe <b>Time()</b>, il nous suffit de déplacer sa
+	    définition à l'intérieur de celle de la classe :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30500">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30500" onclick="selectionCode('contenuCoded0e30500', 'IdTitreCode-d0e30500');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30500" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Time</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+...    <code class="python_literal1">"Nouvelle classe temporelle"</code>
+...    <code class="python_keyword1">def</code> <code class="python_function">affiche_heure</code><code class="python_operator">(</code>t):
+...	  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"{}:{}:{}"</code>.<code class="python_function">format</code><code class="python_operator">(</code>t.heure, t.minute, t.seconde))</code></pre></div>
+          <p>Techniquement, c'est tout à fait suffisant, car le paramètre <b>t</b> peut parfaitement désigner l'instance à laquelle seront
+	    attachés les attributs <b>heure</b>, <b>minute</b> et <b>seconde</b>. Étant donné son rôle particulier, il est cependant fortement recommandé
+	    de changer son nom en <b>self</b> :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30556">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30556" onclick="selectionCode('contenuCoded0e30556', 'IdTitreCode-d0e30556');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30556" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Time</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>): 
+...    <code class="python_literal1">"Nouvelle classe temporelle"</code> 
+...    <code class="python_keyword1">def</code> <code class="python_function">affiche_heure</code><code class="python_operator">(</code>self): 
+...	  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"{}:{}:{}"</code>.<code class="python_function">format</code><code class="python_operator">(</code>self.heure, self.minute, self.seconde))</code></pre></div>
+          <p>La définition de la méthode <b>affiche_heure() </b>fait maintenant partie du bloc d'instructions indentées suivant l'instruction <b>class</b>
+	    (et dont fait partie aussi la chaîne documentaire « Nouvelle classe temporelle »).</p>
+        </div>
+        
+		<h4 class="TitreSection2" id="L14-A-2">14-A-2. Essai de la méthode, dans une instance quelconque<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>Nous disposons donc dès à présent d'une classe <b>Time()</b>, dotée d'une méthode <b>affiche_heure()</b>. En principe, nous devons
+	    maintenant pouvoir créer des objets de cette classe, et leur appliquer cette méthode. Voyons si cela fonctionne. Pour ce faire, commençons par
+	    instancier un objet :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30618">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30618" onclick="selectionCode('contenuCoded0e30618', 'IdTitreCode-d0e30618');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30618" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> maintenant <code class="python_operator">=</code> <code class="python_function">Time</code><code class="python_operator">(</code>)</code></pre></div>
+          <p>Si nous essayons un peu trop vite de tester notre nouvelle méthode sur cet objet, cela ne marche pas :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30634">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30634" onclick="selectionCode('contenuCoded0e30634', 'IdTitreCode-d0e30634');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30634" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> maintenant.<code class="python_function">affiche_heure</code><code class="python_operator">(</code>)
+<code class="python_keyword3">AttributeError</code>: <code class="python_literal1">'Time'</code> <a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a> has no attribute <code class="python_literal1">'heure'</code></code></pre></div>
+          <p>C'est normal : nous n'avons pas encore créé les attributs d'instance. Il faudrait faire par exemple :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30658">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30658" onclick="selectionCode('contenuCoded0e30658', 'IdTitreCode-d0e30658');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30658" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> maintenant.heure <code class="python_operator">=</code> <code class="python_digit">13</code>
+<code class="python_operator">&gt;&gt;&gt;</code> maintenant.minute <code class="python_operator">=</code> <code class="python_digit">34</code>
+<code class="python_operator">&gt;&gt;&gt;</code> maintenant.seconde <code class="python_operator">=</code> <code class="python_digit">21</code></code></pre></div>
+          <p>... et réessayer. À présent, ça marche :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30689">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30689" onclick="selectionCode('contenuCoded0e30689', 'IdTitreCode-d0e30689');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30689" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> maintenant.<code class="python_function">affiche_heure</code><code class="python_operator">(</code>)
+<code class="python_digit">13</code>:<code class="python_digit">34</code>:<code class="python_digit">21</code></code></pre></div>
+          <p>À plusieurs reprises, nous avons cependant déjà signalé qu'il n'est pas recommandable de créer ainsi des attributs d'instance par
+	    assignation directe en dehors de l'objet lui-même. Entre autres désagréments, cela conduirait fréquemment à des erreurs comme celle que nous
+	    venons de rencontrer. Voyons donc à présent comment nous pouvons mieux faire.</p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L14-B">14-B. La méthode constructeur<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>L'erreur que nous avons rencontrée au paragraphe précédent est-elle évitable ?</p>
+        <p>Elle ne se produirait effectivement pas, si nous nous étions arrangés pour que la méthode <b>affiche_heure()</b> puisse toujours afficher quelque
+	  chose, sans qu'il ne soit nécessaire d'effectuer au préalable une manipulation sur l'objet nouvellement créé. En d'autres termes, il serait judicieux
+	  que <span class="italique">les variables d'instance soient prédéfinies</span> elles aussi à l'intérieur de la classe, avec pour chacune d'elles une valeur « par
+	  défaut ».</p>
+        <p>Pour obtenir cela, nous allons faire appel à une méthode particulière, que l'on désignera par la suite sous le nom de <span class="italique">constructeur</span>.
+	  Une méthode constructeur a ceci de particulier qu'<span class="italique">elle est exécutée automatiquement</span> lorsque l'on instancie un nouvel objet à partir de la
+	  classe. On peut donc y placer tout ce qui semble nécessaire pour initialiser automatiquement l'objet que l'on crée.</p>
+        <p>Afin qu'elle soit reconnue comme telle par Python, la méthode constructeur devra obligatoirement s'appeler <b>__init__</b> (deux caractères
+	  « souligné », le mot <b>init</b>, puis encore deux caractères « souligné »).</p>
+        
+		<h4 class="TitreSection2" id="L14-B-1">14-B-1. Exemple<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30752">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30752" onclick="selectionCode('contenuCoded0e30752', 'IdTitreCode-d0e30752');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30752" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Time</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>): 
+...    <code class="python_literal1">"Encore une nouvelle classe temporelle"</code> 
+...    <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self): 
+...	  self.heure <code class="python_operator">=</code><code class="python_digit">12</code> 
+...	  self.minute <code class="python_operator">=</code><code class="python_digit">0</code> 
+...	  self.seconde <code class="python_operator">=</code><code class="python_digit">0</code>
+...    <code class="python_keyword1">def</code> <code class="python_function">affiche_heure</code><code class="python_operator">(</code>self): 
+...	  <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"{}:{}:{}"</code>.<code class="python_function">format</code><code class="python_operator">(</code>self.heure, self.minute, self.seconde))</code></pre></div>
+          <p>Comme précédemment, créons un objet de cette classe et testons-en la méthode <b>affiche_heure()</b> : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30819">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30819" onclick="selectionCode('contenuCoded0e30819', 'IdTitreCode-d0e30819');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30819" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> tstart <code class="python_operator">=</code> <code class="python_function">Time</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> tstart.<code class="python_function">affiche_heure</code><code class="python_operator">(</code>)
+<code class="python_digit">12</code>:<code class="python_digit">0</code>:<code class="python_digit">0</code></code></pre></div>
+          <p>Nous n'obtenons plus aucune erreur, cette fois. En effet : lors de son instanciation, l'objet <b>tstart</b> s'est vu attribuer automatiquement les trois
+	    attributs <b>heure</b>, <b>minute</b> et <b>seconde</b> par la méthode constructeur, avec 12 et zéro comme valeurs par défaut. Dès lors qu'un objet
+	    de cette classe existe, on peut donc tout de suite demander l'affichage de ces attributs.</p>
+          <p>L'intérêt de cette technique apparaîtra plus clairement si nous ajoutons encore quelque chose.</p>
+          <p>Comme toute méthode qui se respecte, la méthode <b>__init__()</b> peut être dotée de paramètres. Et dans le cas de cette méthode
+	    particulière qu'est le constructeur, les paramètres peuvent jouer un rôle très intéressant, parce qu'ils vont permettre d'initialiser
+	    certaines de ses variables d'instance au moment même de l'instanciation de l'objet.</p>
+          <p>Veuillez donc reprendre l'exemple précédent, en modifiant la définition de la méthode <b>__init__()</b> comme suit : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30878">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30878" onclick="selectionCode('contenuCoded0e30878', 'IdTitreCode-d0e30878');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30878" class="contenuCode">...	  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, hh <code class="python_operator">=</code><code class="python_digit">12</code>, mm <code class="python_operator">=</code><code class="python_digit">0</code>, ss <code class="python_operator">=</code><code class="python_digit">0</code>): 
+...	  self.heure <code class="python_operator">=</code>hh 
+...	  self.minute <code class="python_operator">=</code>mm 
+...	  self.seconde <code class="python_operator">=</code>ss</code></pre></div>
+          <p>Notre nouvelle méthode <b>__init__()</b> comporte à présent 3 paramètres, avec pour chacun une valeur par défaut. Nous obtenons ainsi
+	    une classe encore plus perfectionnée. Lorsque nous instancions un objet de cette classe, nous pouvons maintenant initialiser ses principaux attributs à
+	    l'aide d'arguments, au sein même de l'instruction d'instanciation. Et si nous omettons tout ou partie d'entre eux, les attributs reçoivent de toute
+	    manière des valeurs par défaut.</p>
+          <p>Lorsque l'on écrit l'instruction d'instanciation d'un nouvel objet, et que l'on veut lui transmettre des arguments, il suffit de placer ceux-ci dans les
+	    parenthèses qui accompagnent le nom de la classe. On procède donc exactement de la même manière que lorsque l'on invoque une fonction
+	    quelconque.</p>
+          <p>Voici par exemple la création et l'initialisation simultanées d'un nouvel objet <b>Time() </b>:</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30928">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30928" onclick="selectionCode('contenuCoded0e30928', 'IdTitreCode-d0e30928');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30928" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> recreation <code class="python_operator">=</code> <code class="python_function">Time</code><code class="python_operator">(</code><code class="python_digit">10</code>, <code class="python_digit">15</code>, <code class="python_digit">18</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> recreation.<code class="python_function">affiche_heure</code><code class="python_operator">(</code>)
+<code class="python_digit">10</code>:<code class="python_digit">15</code>:<code class="python_digit">18</code></code></pre></div>
+          <p>Puisque les variables d'instance possèdent maintenant des valeurs par défaut, nous pouvons aussi bien créer de tels objets <b>Time()</b> en
+	    omettant un ou plusieurs arguments :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e30971">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e30971" onclick="selectionCode('contenuCoded0e30971', 'IdTitreCode-d0e30971');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e30971" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> rentree <code class="python_operator">=</code> <code class="python_function">Time</code><code class="python_operator">(</code><code class="python_digit">10</code>, <code class="python_digit">30</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> rentree.<code class="python_function">affiche_heure</code><code class="python_operator">(</code>)
+<code class="python_digit">10</code>:<code class="python_digit">30</code>:<code class="python_digit">0</code></code></pre></div>
+          <p>ou encore :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e31008">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e31008" onclick="selectionCode('contenuCoded0e31008', 'IdTitreCode-d0e31008');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e31008" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> rendezVous <code class="python_operator">=</code> <code class="python_function">Time</code><code class="python_operator">(</code>hh <code class="python_operator">=</code><code class="python_digit">18</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> rendezVous.<code class="python_function">affiche_heure</code><code class="python_operator">(</code>)
+<code class="python_digit">18</code>:<code class="python_digit">0</code>:<code class="python_digit">0</code></code></pre></div>
+          <p>Exercices</p>
+          <p>.Définissez une classe <b>Domino()</b> qui permette d'instancier des objets simulant les pièces d'un jeu de dominos. Le constructeur de cette classe
+	    initialisera les valeurs des points présents sur les deux faces A et B du domino (valeurs par défaut = 0).<br/>
+		 Deux autres méthodes seront définies :</p>
+          <ul class="ListeDVP">
+            <li>une méthode <b>affiche_points()</b> qui affiche les points présents sur les deux faces ;</li>
+            <li>une méthode <b>valeur()</b> qui renvoie la somme des points présents sur les 2 faces.</li>
+          </ul>
+          <p>Exemples d'utilisation de cette classe :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; d1 = Domino(2,6)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; d2 = Domino(4,3)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; d1.affiche_points()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">face A : 2 </span>
+              <span style="color:#000080;">face B : 6</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; d2.affiche_points()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">face A : 4 </span>
+              <span style="color:#000080;">face B : 3</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; print("total des points :", d1.valeur() + d2.valeur())</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">15</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; liste_dominos = []</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; for i in range(7):</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">... </span>
+              <span style="color:#000080;">liste_dominos.append(Domino(6, i))</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; print(liste_dominos[3])</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&lt;__main__.Domino object at 0xb758b92c&gt;</span>
+            </b>
+          </p>
+          <p>etc.</p>
+          <p>.Définissez une classe <b>CompteBancaire()</b>, qui permette d'instancier des objets tels que <b>compte1</b>, <b>compte2</b>, etc. Le constructeur de
+	    cette classe initialisera deux attributs d'instance <b>nom</b> et <b>solde</b>, avec les valeurs par défaut 'Dupont' et 1000.<br/>
+		 Trois autres méthodes seront définies :</p>
+          <ul class="ListeDVP">
+            <li><b>depot(somme)</b>permettra d'ajouter une certaine somme au solde ;</li>
+            <li><b>retrait(somme)</b>permettra de retirer une certaine somme du solde ;</li>
+            <li><b>affiche()</b>permettra d'afficher le nom du titulaire et le solde de son compte.</li>
+          </ul>
+          <p>Exemples d'utilisation de cette classe :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; compte1 = CompteBancaire(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">Duchmol</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">, 800)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; compte1.depot(350)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; compte1.retrait(200)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; compte1.affiche()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">Le solde du compte bancaire de Duchmol est de 950 euros.</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; compte2 = CompteBancaire()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; compte2.depot(25)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; compte2.affiche()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">Le solde du compte bancaire de Dupont est de 1025 euros.</span>
+            </b>
+          </p>
+          <p>.Définissez une classe <b>Voiture()</b> qui permette d'instancier des objets reproduisant le comportement de voitures automobiles. Le constructeur de
+	    cette classe initialisera les attributs d'instance suivants, avec les valeurs par défaut indiquées :<br/><b><span style="color:#000080;">marque = </span><span style="color:#000080;">'</span><span style="color:#000080;">Ford</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">couleur = </span><span style="color:#000080;">'</span><span style="color:#000080;">rouge</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">pilote = </span><span style="color:#000080;">'</span><span style="color:#000080;">personne</span><span style="color:#000080;">'</span><span style="color:#000080;">, </span><span style="color:#000080;">vitesse =
+	    0</span></b>.</p>
+          <p>Lorsque l'on instanciera un nouvel objet <b>Voiture()</b>, on pourra choisir sa marque et sa couleur, mais pas sa vitesse, ni le nom de son conducteur.<br/>
+		 Les méthodes suivantes seront définies :</p>
+          <ul class="ListeDVP">
+            <li><b>choix_conducteur(nom)</b> permettra de désigner (ou changer) le nom du conducteur.</li>
+            <li><b>accelerer(taux, duree)</b> permettra de faire varier la vitesse de la voiture. La variation de vitesse obtenue sera égale au produit :
+	      <b>taux</b> × <b>duree</b>. Par exemple, si la voiture accélère au taux de 1,3 m/s pendant 20 secondes, son gain de vitesse doit être
+	      égal à 26 m/s. Des taux négatifs seront acceptés (ce qui permettra de décélérer). La variation de vitesse ne sera pas
+	      autorisée si le conducteur est 'personne'.</li>
+            <li><b>affiche_tout()</b> permettra de faire apparaître les propriétés présentes de la voiture, c'est-à-dire sa marque, sa couleur, le
+	      nom de son conducteur, sa vitesse.</li>
+          </ul>
+          <p>Exemples d'utilisation de cette classe :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a1 = Voiture(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">Peugeot</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">, </span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">bleue</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a2 = Voiture(couleur = </span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">verte</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a3 = Voiture(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">Mercedes</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a1.choix_conducteur(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">Roméo</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a2.choix_conducteur(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">Juliette</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a2.accelerer(1.8, 12)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a3.accelerer(1.9, 11)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">Cette voiture n</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">a pas de conducteur !</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a2.affiche_tout()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">Ford verte pilotée par Juliette, vitesse = 21.6 m/s.</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; a3.affiche_tout()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">Mercedes rouge pilotée par personne, vitesse = 0 m/s.</span>
+            </b>
+          </p>
+          <p>.Définissez une classe <b>Satellite()</b> qui permette d'instancier des objets simulant des satellites artificiels lancés dans l'espace, autour de
+	    la terre. Le constructeur de cette classe initialisera les attributs d'instance suivants, avec les valeurs par défaut indiquées :<br/><b><span style="color:#000080;">masse = 100, </span><span style="color:#000080;">vitesse = 0.</span></b><br/>
+		 Lorsque l'on instanciera un nouvel objet <b>Satellite()</b>, on pourra choisir son nom, sa masse et sa vitesse.<br/>
+		 Les méthodes suivantes seront définies :</p>
+          <ul class="ListeDVP">
+            <li><b>impulsion(force, duree)</b> permettra de faire varier la vitesse du satellite. Pour savoir comment, rappelez-vous votre cours de physique : la
+	      variation de vitesse <b>Δv</b>subie par un objet de masse <b>m</b> soumis à l'action d'une force <b>F</b> pendant un temps <b>t</b> vaut <img src="./images/formule07.png" alt="Image non disponible" width="81" height="41" class="image_verticale"/>. Par exemple : un satellite de 300 kg qui subit une force de 600 Newtons pendant 10 secondes voit sa vitesse
+	      augmenter (ou diminuer) de 20 m/s. </li>
+            <li><b>affiche_vitesse()</b> affichera le nom du satellite et sa vitesse courante.</li>
+            <li><b>energie()</b> renverra au programme appelant la valeur de l'énergie cinétique du satellite.<br/>
+		 Rappel : l'énergie cinétique se calcule à l'aide de la formule <img src="./images/formule08.png" alt="Image non disponible" width="82" height="46" class="image_verticale"/></li>
+          </ul>
+          <p>Exemples d'utilisation de cette classe :</p>
+          <p>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; s1 = Satellite(</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">Zoé</span>
+              <span style="color:#000080;">'</span>
+              <span style="color:#000080;">, masse =250, vitesse =10)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; s1.impulsion(500, 15)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; s1.affiche_vitesse()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">vitesse du satellite Zoé = 40 m/s.</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; print(s1.energie())</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">200000</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; s1.impulsion(500, 15)</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; s1.affiche_vitesse()</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">vitesse du satellite Zoé = 70 m/s.</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">&gt;&gt;&gt; print(s1.energie())</span>
+            </b>
+            <br/>
+            <b>
+              <span style="color:#000080;">612500</span>
+            </b>
+          </p>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L14-C">14-C. Espaces de noms des classes et instances<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Vous avez appris précédemment (voir page ) que les variables définies à l'intérieur d'une fonction sont des variables locales,
+	  inaccessibles aux instructions qui se trouvent à l'extérieur de la fonction. Cela vous permet d'utiliser les mêmes noms de variables dans différentes
+	  parties d'un programme, sans risque d'interférence.</p>
+        <p>Pour décrire la même chose en d'autres termes, nous pouvons dire que chaque fonction possède son propre <span class="italique">espace de noms</span>, indépendant
+	  de l'espace de noms principal.</p>
+        <p>Vous avez appris également que les instructions se trouvant à l'intérieur d'une fonction peuvent accéder aux variables définies au
+	  niveau principal, mais <span class="italique">en consultation seulement</span> : elles peuvent utiliser les valeurs de ces variables, mais pas les modifier (à moins de faire appel
+	  à l'instruction <b>global</b>).</p>
+        <p>Il existe donc une sorte de hiérarchie entre les espaces de noms. Nous allons constater la même chose à propos des classes et des objets. En
+	  effet :</p>
+        <ul class="ListeDVP">
+          <li>Chaque classe possède son propre espace de noms. Les variables qui en font partie sont appelées <span class="italique">variables de classe </span>ou<span class="italique"> attributs de
+	    classe</span>. </li>
+          <li>Chaque objet instance (créé à partir d'une classe) obtient son propre espace de noms. Les variables qui en font partie sont appelées
+	    <span class="italique">variables d'instance</span> ou <span class="italique">attributs d'instance</span>.</li>
+          <li>Les classes peuvent utiliser (mais pas modifier) les variables définies au niveau principal.</li>
+          <li>Les instances peuvent utiliser (mais pas modifier) les variables définies au niveau de la classe et les variables définies au niveau
+	    principal.</li>
+        </ul>
+        <p>Considérons par exemple la classe <b>Time()</b> définie précédemment. À la page , nous avons instancié trois objets de cette
+	  classe : <b>recreation</b>, <b>rentree</b> et <b>rendezVous</b>. Chacun a été initialisé avec des valeurs différentes, indépendantes. Nous
+	  pouvons modifier et réafficher ces valeurs à volonté dans chacun de ces trois objets, sans que l'autre n'en soit affecté :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e31793">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e31793" onclick="selectionCode('contenuCoded0e31793', 'IdTitreCode-d0e31793');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e31793" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> recreation.heure <code class="python_operator">=</code> <code class="python_digit">12</code>
+<code class="python_operator">&gt;&gt;&gt;</code> rentree.<code class="python_function">affiche_heure</code><code class="python_operator">(</code>)
+<code class="python_digit">10</code>:<code class="python_digit">30</code>:<code class="python_digit">0</code>
+<code class="python_operator">&gt;&gt;&gt;</code> recreation.<code class="python_function">affiche_heure</code><code class="python_operator">(</code>)
+<code class="python_digit">12</code>:<code class="python_digit">15</code>:<code class="python_digit">18</code></code></pre></div>
+        <p>Veuillez à présent encoder et tester l'exemple ci-dessous : </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e31840">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e31840" onclick="selectionCode('contenuCoded0e31840', 'IdTitreCode-d0e31840');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e31840" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Espaces</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):		<code class="python_comment1"># 1</code>
+...    aa <code class="python_operator">=</code> <code class="python_digit">33</code>			 <code class="python_comment1"># 2</code>
+...    <code class="python_keyword1">def</code> <code class="python_function">affiche</code><code class="python_operator">(</code>self):	      <code class="python_comment1"># 3</code>
+...	  <code class="python_keyword1">print</code><code class="python_operator">(</code>aa, Espaces.aa, self.aa)     <code class="python_comment1"># 4</code>
+...
+<code class="python_operator">&gt;&gt;&gt;</code> aa <code class="python_operator">=</code> <code class="python_digit">12</code>			 <code class="python_comment1"># 5</code>
+<code class="python_operator">&gt;&gt;&gt;</code> essai <code class="python_operator">=</code> <code class="python_function">Espaces</code><code class="python_operator">(</code>)		       <code class="python_comment1"># 6</code>
+<code class="python_operator">&gt;&gt;&gt;</code> essai.aa <code class="python_operator">=</code> <code class="python_digit">67</code>		   <code class="python_comment1"># 7</code>
+<code class="python_operator">&gt;&gt;&gt;</code> essai.<code class="python_function">affiche</code><code class="python_operator">(</code>)		     <code class="python_comment1"># 8</code>
+<code class="python_digit">12</code> <code class="python_digit">33</code> <code class="python_digit">67</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>aa, Espaces.aa, essai.aa)	     <code class="python_comment1"># 9</code>
+<code class="python_digit">12</code> <code class="python_digit">33</code> <code class="python_digit">67</code></code></pre></div>
+        <p>Dans cet exemple, le même nom <b>aa</b> est utilisé pour définir trois variables différentes : une dans l'espace de noms de la classe
+	  (à la ligne 2), une autre dans l'espace de noms principal (à la ligne 5), et enfin une dernière dans l'espace de nom de l'instance (à la ligne 7).
+	  <br/>
+		 La ligne 4 et la ligne 9 montrent comment vous pouvez accéder à ces trois espaces de noms (de l'intérieur d'une classe, ou au niveau principal), en
+		   utilisant la qualification par points. Notez encore une fois l'utilisation de <b>self</b> pour désigner l'instance à l'intérieur de la
+		   définition d'une classe.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L14-D">14-D. Héritage<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Les classes constituent le principal outil de la programmation orientée objet (<span class="italique">Object Oriented Programming ou OOP</span>), qui est considérée de
+	  nos jours comme la technique de programmation la plus performante. L'un des principaux atouts de ce type de programmation réside dans le fait que l'on peut toujours
+	  se servir d'une classe préexistante pour en créer une nouvelle, qui <span class="italique">héritera</span> toutes ses propriétés mais pourra modifier certaines d'entre
+	  elles et/ou y ajouter les siennes propres. Le procédé s'appelle <span class="italique">dérivation</span>. Il permet de créer toute une hiérarchie de classes allant du
+	  général au particulier.</p>
+        <p>Nous pouvons par exemple définir une classe <b>Mammifere()</b>, qui contienne un ensemble de caractéristiques propres à ce type d'animal. À
+	  partir de cette classe <span class="italique">parente</span>, nous pouvons dériver une ou plusieurs classes <span class="italique">filles</span>, comme : une classe <b>Primate()</b>, une classe
+	  <b>Rongeur()</b>, une classe <b>Carnivore()</b>, etc., qui hériteront toutes les caractéristiques de la classe <b>Mammifere()</b>, en y ajoutant leurs
+	  spécificités.</p>
+        <p>Au départ de la classe <b>Carnivore()</b>, nous pouvons ensuite dériver une classe <b>Belette()</b>, une classe <b>Loup()</b>, une classe
+	  <b>Chien()</b>, etc., qui hériteront encore une fois toutes les caractéristiques de la classe parente avant d'y ajouter les leurs. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e32031">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e32031" onclick="selectionCode('contenuCoded0e32031', 'IdTitreCode-d0e32031');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e32031" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Mammifere</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>):
+...    caract1 <code class="python_operator">=</code> <code class="python_literal1">"il allaite ses petits ;"</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Carnivore</code><code class="python_operator">(</code>Mammifere):
+...    caract2 <code class="python_operator">=</code> <code class="python_literal1">"il se nourrit de la chair de ses proies ;"</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">class</code> <code class="python_function">Chien</code><code class="python_operator">(</code>Carnivore):
+...    caract3 <code class="python_operator">=</code> <code class="python_literal1">"son cri s'appelle aboiement ;"</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> mirza <code class="python_operator">=</code> <code class="python_function">Chien</code><code class="python_operator">(</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>mirza.caract1, mirza.caract2, mirza.caract3)
+il allaite ses petits ; il se nourrit de la chair de ses proies ;
+son cri s<code class="python_literal1">'appelle aboiement ;</code></code></pre></div>
+        <p>Dans cet exemple, nous voyons que l'objet <b>mirza</b> , qui est une instance de la classe <b>Chien()</b>, hérite non seulement l'attribut défini pour
+	  cette classe, mais également les attributs définis pour les classes parentes.</p>
+        <p>Vous voyez également dans cet exemple comment il faut procéder pour dériver une classe à partir d'une classe parente : on utilise
+	  l'instruction <b>class</b>, suivie comme d'habitude du nom que l'on veut attribuer à la nouvelle classe, et on place entre parenthèses le nom de la classe
+	  parente. Les classes les plus fondamentales dérivent quant à elles de l'objet « ancêtre » <b>object</b>. </p>
+        <p>Notez bien que les attributs utilisés dans cet exemple sont des attributs des classes (et non des attributs d'instances). L'instance <b>mirza</b> peut
+	  accéder à ces attributs, mais pas les modifier :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e32131">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e32131" onclick="selectionCode('contenuCoded0e32131', 'IdTitreCode-d0e32131');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e32131" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> mirza.caract2 <code class="python_operator">=</code> <code class="python_literal1">"son corps est couvert de poils ;"</code>	   <code class="python_comment1"># 1</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>mirza.caract2)		 <code class="python_comment1"># 2</code>
+son corps est couvert de poils ;	     <code class="python_comment1"># 3</code>
+<code class="python_operator">&gt;&gt;&gt;</code> fido <code class="python_operator">=</code> <code class="python_function">Chien</code><code class="python_operator">(</code>)		       <code class="python_comment1"># 4</code>
+<code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">print</code><code class="python_operator">(</code>fido.caract2) 		 <code class="python_comment1"># 5</code>
+il se nourrit de la chair de ses proies ;	  <code class="python_comment1"># 6</code></code></pre></div>
+        <p>Dans ce nouvel exemple, la ligne 1 ne modifie pas l'attribut <b>caract2</b> de la classe <b>Carnivore()</b>, contrairement à ce que l'on pourrait penser au
+	  vu de la ligne 3. Nous pouvons le vérifier en créant une nouvelle instance <b>fido</b> (lignes 4 à 6).</p>
+        <p>Si vous avez bien assimilé les paragraphes précédents, vous aurez compris que l'instruction de la ligne 1 crée une nouvelle variable
+	  d'instance associée seulement à l'objet <b>mirza</b>. Il existe donc dès ce moment deux variables avec le même nom <b>caract2</b> : l'une dans
+	  l'espace de noms de l'objet <b>mirza</b>, et l'autre dans l'espace de noms de la classe <b>Carnivore()</b>.</p>
+        <p>Comment faut-il alors interpréter ce qui s'est passé aux lignes 2 et 3 ? </p>
+        <p>Comme nous l'avons vu plus haut, l'instance <b>mirza</b> peut accéder aux variables situées dans son propre espace de noms, mais aussi à celles
+	  qui sont situées dans les espaces de noms de toutes les classes parentes. S'il existe des variables aux noms identiques dans plusieurs de ces espaces, laquelle sera
+	  sélectionnée lors de l'exécution d'une instruction comme celle de la ligne 2 ?</p>
+        <p>Pour résoudre ce conflit, Python respecte une règle de priorité fort simple. Lorsqu'on lui demande d'utiliser la valeur d'une variable
+	  nommée <b>alpha</b>, par exemple, il commence par rechercher ce nom dans l'espace local (le plus « interne », en quelque sorte). Si une variable
+	  <b>alpha</b> est trouvée dans l'espace local, c'est celle-là qui est utilisée, et la recherche s'arrête. Sinon, Python examine l'espace de noms de la
+	  structure parente, puis celui de la structure grand-parente, et ainsi de suite jusqu'au niveau principal du programme.</p>
+        <p>À la ligne 2 de notre exemple, c'est donc la variable d'instance qui sera utilisée. À la ligne 5, par contre, c'est seulement au niveau de la
+	  classe grand-parente qu'une variable répondant au nom <b>caract2</b> peut être trouvée. C'est donc celle-là qui est affichée.</p>
+      </div>
+      
+		<h3 class="TitreSection1" id="L14-E">14-E. Héritage et polymorphisme<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Analysez soigneusement le script de la page suivante. Il met en œuvre plusieurs concepts décrits précédemment, en particulier le concept
+	  d'héritage.</p>
+        <p>Pour bien comprendre ce script, il faut cependant d'abord vous rappeler quelques notions élémentaires de <span class="italique">chimie</span>. Dans votre cours de chimie,
+	  vous avez certainement dû apprendre que les <span class="italique">atomes</span> sont des entités, constitués d'un certain nombre de <span class="italique">protons</span> (particules chargées
+	  d'électricité positive), <span class="italique">d'électrons</span> (chargés négativement) et de <span class="italique">neutrons</span> (neutres).</p>
+        <p>Le type d'atome (ou élément) est déterminé par le nombre de protons, que l'on appelle également <span class="italique">numéroatomique</span>. Dans son
+	  état fondamental, un atome contient autant d'électrons que de protons, et par conséquent il est électriquement neutre. Il possède également
+	  un nombre variable de neutrons, mais ceux-ci n'influencent en aucune manière la charge électrique globale.</p>
+        <p>Dans certaines circonstances, un atome peut gagner ou perdre des électrons. Il acquiert de ce fait une charge électrique globale, et devient alors un
+	  <span class="italique">ion</span> (il s'agit d'un <span class="italique">ionnégatif</span> si l'atome a gagné un ou plusieurs électrons, et d'un <span class="italique">ionpositif</span> s'il en a perdu). La charge
+	  électrique d'un ion est égale à la différence entre le nombre de protons et le nombre d'électrons qu'il contient.</p>
+        <p>Le script reproduit à la page suivante génère des objets <b>Atome()</b> et des objets <b>Ion()</b>. Nous avons rappelé ci-dessus qu'un ion
+	  est simplement un atome modifié. Dans notre programmation, la classe qui définit les objets <b>Ion()</b> sera donc une <span class="italique">classe dérivée</span> de la
+	  classe <b>Atome()</b> : elle héritera d'elle tous ses attributs et toutes ses méthodes, en y ajoutant les siennes propres.</p>
+        <p>L'une de ces méthodes ajoutées (la méthode <b>affiche()</b>) remplace une méthode de même nom héritée de la classe
+	  <b>Atome()</b>. Les classes <b>Atome()</b> et <b>Ion()</b> possèdent donc chacune une méthode de même nom, mais qui effectuent un travail différent.
+	  On parle dans ce cas de <span class="italique">polymorphisme</span>. On pourra dire également que la méthode <b>affiche()</b> de la classe <b>Atome()</b> a été
+	  <span class="italique">surchargée</span>.</p>
+        <p>Il sera évidemment possible d'instancier un nombre quelconque d'atomes et d'ions à partir de ces deux classes. Or l'une d'entre elles, la classe
+	  <b>Atome()</b>, doit contenir une version simplifiée du tableau périodique des éléments (tableau de Mendeleïev), de façon à pouvoir
+	  attribuer un nom d'élément chimique, ainsi qu'un nombre de neutrons, à chaque objet généré. Comme il n'est pas souhaitable de recopier tout
+	  ce tableau dans chacune des instances, nous le placerons dans un <span class="italique">attribut de classe</span>. Ainsi ce tableau n'existera qu'en un seul endroit en mémoire, tout en
+	  restant accessible à tous les objets qui seront produits à partir de cette classe.</p>
+        <p>Voyons concrètement comment toutes ces idées s'articulent :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e32339">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e32339" onclick="selectionCode('contenuCoded0e32339', 'IdTitreCode-d0e32339');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e32339" class="contenuCode"><code class="python_keyword1">class</code> Atome: 
+  <code class="python_literal2">"""atomes simplifiés, choisis parmi les 10 premiers éléments du TP"""</code> 
+  table <code class="python_operator">=</code>[<code class="python_keyword3">None</code>, <code class="python_operator">(</code><code class="python_literal1">'hydrogène'</code>,<code class="python_digit">0</code>),<code class="python_operator">(</code><code class="python_literal1">'hélium'</code>,<code class="python_digit">2</code>),<code class="python_operator">(</code><code class="python_literal1">'lithium'</code>,<code class="python_digit">4</code>), 
+      <code class="python_operator">(</code><code class="python_literal1">'béryllium'</code>,<code class="python_digit">5</code>),<code class="python_operator">(</code><code class="python_literal1">'bore'</code>,<code class="python_digit">6</code>),<code class="python_operator">(</code><code class="python_literal1">'carbone'</code>,<code class="python_digit">6</code>),<code class="python_operator">(</code><code class="python_literal1">'azote'</code>,<code class="python_digit">7</code>), 
+      <code class="python_operator">(</code><code class="python_literal1">'oxygène'</code>,<code class="python_digit">8</code>),<code class="python_operator">(</code><code class="python_literal1">'fluor'</code>,<code class="python_digit">10</code>),<code class="python_operator">(</code><code class="python_literal1">'néon'</code>,<code class="python_digit">10</code>)] 
+ 
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, nat): 
+      <code class="python_literal1">"le n° atomique détermine le n. de protons, d'électrons et de neutrons"</code>
+      self.np, self.ne <code class="python_operator">=</code> nat, nat	 <code class="python_comment1"># nat = numéro atomique </code>
+      self.nn <code class="python_operator">=</code> Atome.table[nat][<code class="python_digit">1</code>] 
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">affiche</code><code class="python_operator">(</code>self): 
+      <code class="python_keyword1">print</code><code class="python_operator">(</code>) 
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Nom de l'élément :"</code>, Atome.table[self.np][<code class="python_digit">0</code>]) 
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"</code><code class="python_literal4">%s</code><code class="python_literal1"> protons, </code><code class="python_literal4">%s</code><code class="python_literal1"> électrons, </code><code class="python_literal4">%s</code><code class="python_literal1"> neutrons"</code> <code class="python_operator">%</code> \ 
+	 <code class="python_operator">(</code>self.np, self.ne, self.nn)) 
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Ion</code><code class="python_operator">(</code>Atome): 
+  <code class="python_literal2">"""les ions sont des atomes qui ont gagné ou perdu des électrons"""</code> 
+ 
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, nat, charge): 
+      <code class="python_literal1">"le n° atomique et la charge électrique déterminent l'ion"</code> 
+      Atome.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, nat) 
+      self.ne <code class="python_operator">=</code> self.ne <code class="python_operator">-</code> charge 
+      self.charge <code class="python_operator">=</code> charge 
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">affiche</code><code class="python_operator">(</code>self): 
+      Atome.<code class="python_function">affiche</code><code class="python_operator">(</code>self) 
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Particule électrisée. Charge ="</code>, self.charge)	
+ 
+<code class="python_comment1">### Programme principal : ###	 </code>
+ 
+a1 <code class="python_operator">=</code> <code class="python_function">Atome</code><code class="python_operator">(</code><code class="python_digit">5</code>) 
+a2 <code class="python_operator">=</code> <code class="python_function">Ion</code><code class="python_operator">(</code><code class="python_digit">3</code>, <code class="python_digit">1</code>) 
+a3 <code class="python_operator">=</code> <code class="python_function">Ion</code><code class="python_operator">(</code><code class="python_digit">8</code>, <code class="python_operator">-</code><code class="python_digit">2</code>) 
+a1.<code class="python_function">affiche</code><code class="python_operator">(</code>) 
+a2.<code class="python_function">affiche</code><code class="python_operator">(</code>) 
+a3.<code class="python_function">affiche</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>L'exécution de ce script provoque l'affichage suivant :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e32619">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e32619" onclick="selectionCode('contenuCoded0e32619', 'IdTitreCode-d0e32619');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e32619" class="contenuCode">Nom de l<code class="python_literal1">'élément : bore</code>
+<code class="python_literal1">5 protons, 5 électrons, 6 neutrons</code>
+<code class="python_literal1"> </code>
+<code class="python_literal1">Nom de l'</code>élément : lithium
+<code class="python_digit">3</code> protons, <code class="python_digit">2</code> électrons, <code class="python_digit">4</code> neutrons
+Particule électrisée. Charge <code class="python_operator">=</code> <code class="python_digit">1</code>
+ 
+Nom de l<code class="python_literal1">'élément : oxygène</code>
+<code class="python_literal1">8 protons, 10 électrons, 8 neutrons</code>
+<code class="python_literal1">Particule électrisée. Charge = -2</code></code></pre></div>
+        <p>Au niveau du programme principal, vous pouvez constater que l'on instancie les objets <b>Atome()</b> en fournissant leur numéro atomique (lequel doit
+	  être compris entre 1 et 10). Pour instancier des objets <b>Ion()</b>, par contre, on doit fournir un numéro atomique et une charge électrique globale
+	  (positive ou négative). La même méthode <b>affiche()</b> fait apparaître les propriétés de ces objets, qu'il s'agisse d'atomes ou d'ions,
+	  avec dans le cas de l'ion une ligne supplémentaire (<span class="italique">polymorphisme</span>).</p>
+        
+		<h4 class="TitreSection2" id="L14-E-1">14-E-1. Commentaires<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h4><div class="BlocSection2">
+          
+          <p>La définition de la classe <b>Atome()</b> commence par l'assignation de la variable <b>table</b>. Une variable définie à cet endroit fait
+	    partie de l'espace de noms de la classe. C'est donc un <span class="italique">attribut de classe</span>, dans lequel nous plaçons une liste d'informations concernant les 10 premiers
+	    éléments du tableau périodique de <span class="italique">Mendeleïev.</span></p>
+          <p>Pour chacun de ces éléments, la liste contient un tuple : (nom de l'élément, nombre de neutrons), à l'indice qui correspond au
+	    numéro atomique. Comme il n'existe pas d'élément de numéro atomique zéro, nous avons placé à l'indice zéro dans la liste,
+	    l'objet spécial <span class="italique">None</span>. Nous aurions pu placer à cet endroit n'importe quelle autre valeur, puisque cet indice ne sera pas utilisé. L'objet
+	    <span class="italique">None</span> de Python nous semble cependant particulièrement explicite.</p>
+          <p>Viennent ensuite les définitions de deux méthodes :</p>
+          <ul class="ListeDVP">
+            <li>Le constructeur <b>__init__()</b> sert essentiellement ici à générer trois <span class="italique">attributs d'instance</span>, destinés à mémoriser
+	      respectivement les nombres de protons, d'électrons et de neutrons pour chaque objet atome construit à partir de cette classe (rappelez-vous que les
+	      attributs d'instance sont des variables liées au paramètre <b>self</b>).<br/>
+		 Notez au passage la technique utilisée pour obtenir le nombre de neutrons à partir de l'attribut de classe, en mentionnant le nom de la classe
+		   elle-même dans une qualification par points, comme dans l'instruction : <b><span style="color:#000080;">self.nn = Atome.table[nat][1]</span></b>.</li>
+            <li>La méthode <b>affiche()</b> utilise à la fois les attributs d'instance, pour retrouver les nombres de protons, d'électrons et de neutrons de
+	      l'objet courant, et l'attribut de classe (lequel est commun à tous les objets) pour en extraire le nom d'élément correspondant.</li>
+          </ul>
+          <p>La définition de la classe <b>Ion()</b> inclut dans ses parenthèses le nom de la classe <b>Atome()</b> qui précède.</p>
+          <p>Les méthodes de cette classe sont des variantes de celles de la classe <b>Atome()</b>. Elles devront donc vraisemblablement faire appel à celles-ci.
+	    Cette remarque est importante : comment peut-on, à l'intérieur de la définition d'une classe, faire appel à une méthode définie dans
+	    une autre classe ?</p>
+          <p>Il ne faut pas perdre de vue, en effet, qu'une méthode se rattache toujours à l'instance qui sera générée à partir de la classe
+	    (instance représentée par <b>self</b> dans la définition). Si une méthode doit faire appel à une autre méthode définie dans une
+	    autre classe, il faut pouvoir lui transmettre la référence de l'instance à laquelle elle doit s'associer. Comment faire ? C'est très
+	    simple :</p>
+          <blockquote class="citation"><div>Lorsque dans la définition d<span class="italique">'</span>une classe, on souhaite faire appel à une méthode définie dans une autre classe, il suffit de
+	    l<span class="italique">'</span>invoquer directement, via cette autre classe, en lui transmettant la référence de l<span class="italique">'</span>instance comme
+	    premier argument.</div></blockquote>
+          <p>C'est ainsi que dans notre script, par exemple, la méthode <b>affiche()</b> de la classe <b>Ion()</b> peut faire appel à la méthode
+	    <b>affiche()</b> de la classe <b>Atome()</b> : les informations affichées seront bien celles de l'objet-ion courant, puisque sa référence a
+	    été transmise dans l'instruction d'appel :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e32778">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e32778" onclick="selectionCode('contenuCoded0e32778', 'IdTitreCode-d0e32778');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e32778" class="contenuCode">     Atome.<code class="python_function">affiche</code><code class="python_operator">(</code>self)</code></pre></div>
+          <p>Dans cette instruction, <b>self</b> est bien entendu la référence de l'instance courante.</p>
+          <p>De la même manière (vous en verrez de nombreux autres exemples plus loin), la méthode constructeur de la classe <b>Ion()</b> fait appel à
+	    la méthode constructeur de sa classe parente, dans :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e32798">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e32798" onclick="selectionCode('contenuCoded0e32798', 'IdTitreCode-d0e32798');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e32798" class="contenuCode">     Atome.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, nat)</code></pre></div>
+          <p>Cet appel est nécessaire, afin que les objets de la classe <b>Ion()</b> soient initialisés de la même manière que les objets de la classe
+	    <b>Atome()</b>. Si nous n'effectuons pas cet appel, les objets-ions n'hériteront pas automatiquement les attributs <b>ne</b>, <b>np</b> et <b>nn</b>, car ceux ci
+	    sont des <span class="italique">attributs d'instance</span> créés par la méthode constructeur de la classe <b>Atome()</b>, et celle-ci <span class="italique">n'est pas invoquée
+	    automatiquement</span> lorsqu'on instancie des objets d'une classe dérivée.</p>
+          <p>Comprenez donc bien que l'héritage ne concerne que les classes, et non les instances de ces classes. Lorsque nous disons qu'une classe dérivée
+	    hérite toutes les propriétés de sa classe parente, cela ne signifie pas que les propriétés des instances de la classe parente sont
+	    automatiquement transmises aux instances de la classe fille. En conséquence, retenez bien que :</p>
+          <blockquote class="citation"><div>Dans la méthode constructeur d<span class="italique">'</span>une classe dérivée, il faut presque toujours prévoir un appel à la méthode constructeur de
+	    sa classe parente.</div></blockquote>
+          <div class="div-figure"><figure class="figure-center"><a data-lightbox="lightbox[article]" href="./images/image35.png"><img class="ImgCliquable figure-img-caption" src="./images/image35.png" alt="Image non disponible" width="241" height="325"/></a></figure></div>
+        </div>
+      </div>
+      
+		<h3 class="TitreSection1" id="L14-F">14-F. Modules contenant des bibliothèques de classes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection1">
+        
+        <p>Vous connaissez déjà depuis longtemps l'utilité des modules Python (cf. pages et ). Vous savez qu'ils servent à regrouper des
+	  bibliothèques de classes et de fonctions. À titre d'exercice de révision, vous allez créer vous-même un nouveau module de classes, en encodant
+	  les lignes d'instruction ci-dessous dans un fichier-module que vous nommerez <b>formes.py</b> :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e32857">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e32857" onclick="selectionCode('contenuCoded0e32857', 'IdTitreCode-d0e32857');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e32857" class="contenuCode"><code class="python_keyword1">class</code> <code class="python_function">Rectangle</code><code class="python_operator">(</code><a class="python_keyword2 lien_documentation_code" target="_blank" href="https://docs.python.org/fr/3/search.html?q=object#object"><span>object</span></a>): 
+  <code class="python_literal1">"Classe de rectangles"</code> 
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, longueur <code class="python_operator">=</code><code class="python_digit">0</code>, largeur <code class="python_operator">=</code><code class="python_digit">0</code>): 
+      self.L <code class="python_operator">=</code> longueur 
+      self.l <code class="python_operator">=</code> largeur 
+      self.nom <code class="python_operator">=</code><code class="python_literal1">"rectangle"</code> 
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">perimetre</code><code class="python_operator">(</code>self): 
+      <code class="python_keyword1">return</code> <code class="python_literal1">"(</code><code class="python_literal4">%d</code><code class="python_literal1"> + </code><code class="python_literal4">%d</code><code class="python_literal1">) * 2 = </code><code class="python_literal4">%d</code><code class="python_literal1">"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>self.L, self.l, 
+		       <code class="python_operator">(</code>self.L <code class="python_operator">+</code> self.l)<code class="python_operator">*</code><code class="python_digit">2</code>) 
+  <code class="python_keyword1">def</code> <code class="python_function">surface</code><code class="python_operator">(</code>self): 
+      <code class="python_keyword1">return</code> <code class="python_literal1">"</code><code class="python_literal4">%d</code><code class="python_literal1"> * </code><code class="python_literal4">%d</code><code class="python_literal1"> = </code><code class="python_literal4">%d</code><code class="python_literal1">"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>self.L, self.l, self.L<code class="python_operator">*</code>self.l) 
+ 
+  <code class="python_keyword1">def</code> <code class="python_function">mesures</code><code class="python_operator">(</code>self): 
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"Un </code><code class="python_literal4">%s</code><code class="python_literal1"> de </code><code class="python_literal4">%d</code><code class="python_literal1"> sur </code><code class="python_literal4">%d</code><code class="python_literal1">"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>self.nom, self.L, self.l)) 
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"a une surface de </code><code class="python_literal4">%s</code><code class="python_literal1">"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>self.<code class="python_function">surface</code><code class="python_operator">(</code>),)) 
+      <code class="python_keyword1">print</code><code class="python_operator">(</code><code class="python_literal1">"et un périmètre de </code><code class="python_literal4">%s\n</code><code class="python_literal1">"</code> <code class="python_operator">%</code> <code class="python_operator">(</code>self.<code class="python_function">perimetre</code><code class="python_operator">(</code>),)) 
+ 
+<code class="python_keyword1">class</code> <code class="python_function">Carre</code><code class="python_operator">(</code>Rectangle): 
+  <code class="python_literal1">"Classe de carrés"</code> 
+  <code class="python_keyword1">def</code> <code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, cote): 
+      Rectangle.<code class="python_keyword3">__init__</code><code class="python_operator">(</code>self, cote, cote) 
+      self.nom <code class="python_operator">=</code><code class="python_literal1">"carré"</code> 
+ 
+<code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code> <code class="python_literal1">"__main__"</code>: 
+  r1 <code class="python_operator">=</code> <code class="python_function">Rectangle</code><code class="python_operator">(</code><code class="python_digit">15</code>, <code class="python_digit">30</code>) 
+  r1.<code class="python_function">mesures</code><code class="python_operator">(</code>)	  
+  c1 <code class="python_operator">=</code> <code class="python_function">Carre</code><code class="python_operator">(</code><code class="python_digit">13</code>) 
+  c1.<code class="python_function">mesures</code><code class="python_operator">(</code>)</code></pre></div>
+        <p>Une fois ce module enregistré, vous pouvez l'utiliser de deux manières : soit vous en lancez l'exécution comme celle d'un programme
+	  ordinaire, soit vous l'importez dans un script quelconque ou depuis la ligne de commande, pour en utiliser les classes. Exemple :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e33133">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e33133" onclick="selectionCode('contenuCoded0e33133', 'IdTitreCode-d0e33133');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e33133" class="contenuCode"><code class="python_operator">&gt;&gt;&gt;</code> <code class="python_keyword1">import</code> formes
+<code class="python_operator">&gt;&gt;&gt;</code> f1 <code class="python_operator">=</code> formes.<code class="python_function">Rectangle</code><code class="python_operator">(</code><code class="python_digit">27</code>, <code class="python_digit">12</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> f1.<code class="python_function">mesures</code><code class="python_operator">(</code>)
+Un rectangle de <code class="python_digit">27</code> sur <code class="python_digit">12</code>
+a une surface de <code class="python_digit">27</code> <code class="python_operator">*</code> <code class="python_digit">12</code> <code class="python_operator">=</code> <code class="python_digit">324</code>
+et un périmètre de <code class="python_operator">(</code><code class="python_digit">27</code> <code class="python_operator">+</code> <code class="python_digit">12</code>) <code class="python_operator">*</code> <code class="python_digit">2</code> <code class="python_operator">=</code> <code class="python_digit">78</code>
+ 
+<code class="python_operator">&gt;&gt;&gt;</code> f2 <code class="python_operator">=</code> formes.<code class="python_function">Carre</code><code class="python_operator">(</code><code class="python_digit">13</code>)
+<code class="python_operator">&gt;&gt;&gt;</code> f2.<code class="python_function">mesures</code><code class="python_operator">(</code>)
+Un carré de <code class="python_digit">13</code> sur <code class="python_digit">13</code>
+a une surface de <code class="python_digit">13</code> <code class="python_operator">*</code> <code class="python_digit">13</code> <code class="python_operator">=</code> <code class="python_digit">169</code>
+et un périmètre de <code class="python_operator">(</code><code class="python_digit">13</code> <code class="python_operator">+</code> <code class="python_digit">13</code>) <code class="python_operator">*</code> <code class="python_digit">2</code> <code class="python_operator">=</code> <code class="python_digit">52</code></code></pre></div>
+        <p>On voit dans ce script que la classe <b>Carre()</b> est construite par dérivation à partir de la classe <b>Rectangle()</b> dont elle hérite
+	  toutes les caractéristiques. En d'autres termes, la classe <b>Carre()</b> est une classe fille de la classe <b>Rectangle()</b>.</p>
+        <p>Vous pouvez remarquer encore une fois que le constructeur de la classe <b>Carre()</b> doit faire appel au constructeur de sa classe parente ( <b><span style="color:#000080;">Rectangle.__init__(self, ...)</span></b> ), en lui transmettant la référence de l'instance (<b>self</b>) comme premier argument.</p>
+        <p>Quant à l'instruction : </p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e33304">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e33304" onclick="selectionCode('contenuCoded0e33304', 'IdTitreCode-d0e33304');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e33304" class="contenuCode"><code class="python_keyword1">if</code> <code class="python_keyword3">__name__</code> <code class="python_operator">==</code> <code class="python_literal1">"__main__"</code>:</code></pre></div>
+        <p>placée à la fin du module, elle sert à déterminer si le module est « lancé » en tant que programme autonome (auquel
+	  cas les instructions qui suivent doivent être exécutées), ou au contraire utilisé comme une bibliothèque de classes importée ailleurs. Dans
+	  ce cas cette partie du code est sans effet.</p>
+        <p>Exercices</p>
+        <p>.Définissez une classe <b>Cercle()</b>. Les objets construits à partir de cette classe seront des cercles de tailles variées. En plus de la
+	  méthode constructeur (qui utilisera donc un paramètre <b>rayon</b>), vous définirez une méthode <b>surface()</b>, qui devra renvoyer la surface du
+	  cercle.</p>
+        <p>Définissez ensuite une classe <b>Cylindre()</b> dérivée de la précédente. Le constructeur de cette nouvelle classe comportera les deux
+	  paramètres <b>rayon</b> et <b>hauteur</b>. Vous y ajouterez une méthode <b>volume()</b> qui devra renvoyer le volume du cylindre (rappel : volume d'un cylindre
+	  = surface de section × hauteur).</p>
+        <p>Exemple d'utilisation de cette classe :<br/><b><span style="color:#000080;">&gt;&gt;&gt; cyl = Cylindre(5, 7)</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt;
+	  print(cyl.surface())</span></b><br/><b><span style="color:#000080;">78.54</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; print(cyl.volume())</span></b><br/><b><span style="color:#000080;">549.78</span></b></p>
+        <p>.Complétez l'exercice précédent en lui ajoutant encore une classe <b>Cone()</b>, qui devra dériver cette fois de la classe
+	  <b>Cylindre()</b>, et dont le constructeur comportera lui aussi les deux paramètres <b>rayon</b> et <b>hauteur</b>. Cette nouvelle classe possédera sa propre
+	  méthode <b>volume()</b>, laquelle devra renvoyer le volume du cône (rappel : volume d'un cône = volume du cylindre correspondant divisé par
+	  3).</p>
+        <p>Exemple d'utilisation de cette classe :<br/><b><span style="color:#000080;">&gt;&gt;&gt; co = Cone(5,7)</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt;
+	  print(co.volume())</span></b><br/><b><span style="color:#000080;">183.26</span></b></p>
+        <p>.Définissez une classe <b>JeuDeCartes()</b> permettant d'instancier des objets dont le comportement soit similaire à celui d'un vrai jeu de cartes. La
+	  classe devra comporter au moins les quatre méthodes suivantes :</p>
+        <ul class="ListeDVP">
+          <li>méthode constructeur : création et remplissage d'une liste de 52 éléments, qui sont eux-mêmes des tuples de 2 entiers. Cette liste de
+	    tuples contiendra les caractéristiques de chacune des 52 cartes. Pour chacune d'elles, il faut en effet mémoriser séparément un entier indiquant la
+	    valeur (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, les 4 dernières valeurs étant celles des valet, dame, roi et as), et un autre entier indiquant la couleur
+	    de la carte (c'est-à-dire 3,2,1,0 pour Cœur, Carreau, Trèfle et Pique). <br/>
+		 Dans une telle liste, l'élément (11,2) désigne donc le valet de Trèfle, et la liste terminée doit être du type :<br/><b><span style="color:#000080;">[(2, 0), (3,0), (3,0), (4,0), ..... (12,3), (13,3), (14,3)]</span></b></li>
+          <li>méthode <b>nom_carte() </b>: cette méthode doit renvoyer, sous la forme d'une chaîne, l'identité d'une carte quelconque dont on lui a
+	    fourni le tuple descripteur en argument. Par exemple, l'instruction : <b><span style="color:#000080;">print(jeu.nom_carte((14, 3)))</span></b> doit provoquer l'affichage
+	    de :<b><span style="color:#000080;"> As de pique</span></b></li>
+          <li>méthode <b>battre() </b>: comme chacun sait, battre les cartes consiste à les mélanger.<br/>
+		 Cette méthode sert donc à mélanger les éléments de la liste contenant les cartes, quel qu'en soit le nombre.</li>
+          <li>méthode <b>tirer() </b>: lorsque cette méthode est invoquée, une carte est retirée du jeu. Le tuple contenant sa valeur et sa couleur est
+	    renvoyé au programme appelant. On retire toujours la première carte de la liste. Si cette méthode est invoquée alors qu'il ne reste plus aucune
+	    carte dans la liste, il faut alors renvoyer l'objet spécial <b>None</b> au programme appelant. Exemple d'utilisation de la classe
+	    <b>JeuDeCartes()</b> :<br/><br/><b><span style="color:#000080;">jeu = JeuDeCartes() </span></b><span class="italique"><span style="color:#666699;"># instanciation d</span></span><b><span style="color:#666699;">'</span></b><span class="italique"><span style="color:#666699;">un objet</span></span><br/><b><span style="color:#000080;">jeu.battre() </span></b><span class="italique"><span style="color:#666699;"># mélange
+	    des cartes</span></span><br/><b><span style="color:#000080;">for n in range(53): </span></b><span class="italique"><span style="color:#666699;"># tirage des 52 cartes :</span></span><br/><b><span style="color:#000080;">c = jeu.tirer() </span></b><br/><b><span style="color:#000080;">if c == None: </span></b><span class="italique"><span style="color:#666699;"># il ne reste plus aucune
+	    carte</span></span><br/><b><span style="color:#000080;">print(</span><span style="color:#000080;">'</span><span style="color:#000080;">Terminé !</span><span style="color:#000080;">')</span></b><span class="italique"><span style="color:#666699;"># dans la liste</span></span><br/><b><span style="color:#000080;">else:</span></b><br/><b><span style="color:#000080;">print(jeu.nom_carte(c)) </span></b><span class="italique"><span style="color:#666699;"># valeur et couleur de la carte</span></span><br/></li>
+        </ul>
+        <p><span style="color:#000000;">.</span>Complément de l'exercice précédent : définir deux joueurs A et B. Instancier deux jeux de cartes (un pour
+	  chaque joueur) et les mélanger. Ensuite, à l'aide d'une boucle, tirer 52 fois une carte de chacun des deux jeux et comparer leurs valeurs. Si c'est la
+	  première des deux qui a la valeur la plus élevée, on ajoute un point au joueur A. Si la situation contraire se présente, on ajoute un point au joueur
+	  B. Si les deux valeurs sont égales, on passe au tirage suivant. Au terme de la boucle, comparer les comptes de A et B pour déterminer le gagnant.</p>
+        <p><span style="color:#000000;">.</span>Écrivez un nouveau script qui récupère le code de l'exercice 12.2 (compte bancaire) en l'important comme un module.
+	  Définissez-y une nouvelle classe <b>CompteEpargne()</b>, dérivant de la classe <b>CompteBancaire()</b> importée, qui permette de créer des comptes
+	  d'épargne rapportant un certain intérêt au cours du temps. Pour simplifier, nous admettrons que ces intérêts sont calculés tous les
+	  mois.<br/>
+		 Le constructeur de votre nouvelle classe devra initialiser un taux d'intérêt mensuel par défaut égal à <b>0,3 %</b>. Une méthode
+		   <b>changeTaux(valeur)</b> devra permettre de modifier ce taux à volonté.<br/>
+		 Une méthode <b>capitalisation(nombreMois)</b> devra :</p>
+        <ul class="ListeDVP">
+          <li>afficher le nombre de mois et le taux d'intérêt pris en compte ;</li>
+          <li>calculer le solde atteint en capitalisant les intérêts composés, pour le taux et le nombre de mois qui auront été choisis.</li>
+        </ul>
+        <p>Exemple d'utilisation de la nouvelle classe :<br/><br/><b><span style="color:#000080;">&gt;&gt;&gt; c1 = CompteEpargne(</span><span style="color:#000080;">'</span><span style="color:#000080;">Duvivier</span><span style="color:#000080;">'</span><span style="color:#000080;">, 600) </span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt;
+	  c1.depot(350)</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; c1.affiche()</span></b><br/><b><span style="color:#000080;">Le solde du compte bancaire de Duvivier est de 950 euros.
+	  </span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; c1.capitalisation(12)</span></b><br/><b><span style="color:#000080;">Capitalisation sur 12 mois au taux mensuel de 0.3
+	  %.</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; c1.affiche()</span></b><br/><b><span style="color:#000080;">Le solde du compte bancaire de Duvivier est de 984.769981274 euros.
+	  </span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; c1.changeTaux(.5)</span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; c1.capitalisation(12)</span></b><br/><b><span style="color:#000080;">Capitalisation sur 12 mois au taux mensuel de 0.5 %. </span></b><br/><b><span style="color:#000080;">&gt;&gt;&gt; c1.affiche()</span></b><br/><b><span style="color:#000080;">Le
+	  solde du compte bancaire de Duvivier est de 1045.50843891 euros.</span></b></p>
+      </div>
+    </div>
+  
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="page_13.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><a class="lientelechargement" href="page_15.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+  
+  
+  
+  
+  
+  <section><section class="SectionNoteBasPage articleBody"><hr class="hr-separation clear"/></section></section>
+  
+  
+</div><p class="licence"><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/></a><br/>Le contenu de cet article est rédigé par Gérard Swinnen et est mis à disposition selon les termes de la <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.fr"> Licence Creative Commons Attribution 3.0 non transposé</a>.<br/>Les logos Developpez.com, en-tête, pied de page, css, et look &amp; feel de l'article sont Copyright © 2021 Developpez.com.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

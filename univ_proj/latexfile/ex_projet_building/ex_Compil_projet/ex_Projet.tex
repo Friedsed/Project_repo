@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=red]{hyperref}
+\usepackage{graphicx}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{stmaryrd}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+	\usetikzlibrary{decorations.pathreplacing,decorations.markings, intersections, calc, angles, arrows}
+\usepackage{epsfig}
+
+
+%________________________________________________________________
+
+\usepackage{amsthm}
+
+\newtheorem{theo}{Théorème}
+\newtheorem{prop}{Proposition}
+\newtheorem{defi}{Définition}
+\newtheorem{expl}{Exemple}
+\newtheorem{coro}{Corolaire}
+
+
+% text to be compile
+
+\begin{document}
+
+\author{Sedjro}
+\title{To be modified title}
+
+
+
+
+
+%-----------------------------------------------------------------------------------------------
+
+\section{Introduction}
+Souvent SEDJRO Friedly un problème concret fourni par l'analyse, la mécanique, la physique, la biologie , l'économie ,... se ramène à la résolution d'équations ou de systèmes différentielle. C'est dans cette otique que j'ai décide de vous faire un bref résumé de la résolution de ces gens de problème. 
+\section{}
+%----------------------------------------------
+
+\subsection{Équation différentiel linéaire du premier ordre}
+
+
+\begin{defi}
+On appelle equation linéaire du premier ordre une equation de la forme:
+\begin{equation}
+\forall x \in \mathbb{R}, y'(x)+a(x)y(x)=f(x)
+\end{equation}
+ou $a$ et $f$ sont deux fonctions données, continues sur $I$ un intervalle non vide de  $\mathbb{R}$.
+La fonction $a$ s'appelle de coefficient et le fonction $f$ le second membre de l'équation $(E)$.
+\end{defi}
+
+\begin{expl}
+L'équation suivante est une equation différentiel linéaire du premier ordre:
+\begin{equation}
+\forall x\in \mathbb{R}, y'(x)+2xy(x)=x
+\end{equation}
+
+\end{expl}
+
+\begin{defi}Définition
+On appelle équation homogène associée à $(E)$ l'équation $(E_{H})$ obtenue en remplaçant $f$ par $0$ dans $(E)$:
+\begin{equation}
+\forall x \in I, y'(x)+a(x)y(x)=0
+\end{equation}
+\end{defi}
+
+
+\begin{prop}
+Si $y_{1}$ et $y_{2}$ sont deux solutions de l'équation $(E)$, alors $y_{1}-y_{2}$ est une solution de $(E_{H})$.
+\end{prop}
+
+
+\begin{theo}
+Soit $S_{H}$ l'ensemble des solutions de $E_{H}$, l'équation homogène associée à $(E)$ et soit $yp$ une solution particulière de $(E)$.
+Alors l'ensemble $S$ des solutions de $(E)$ est défini par: 
+$$ S=y_{p}+y_{h},$$\quad $y_{h} \in S_{h}$
+\end{theo}
+
+
+\begin{coro}
+Soit $A$ une primitive quelconque de $a$ sur $I$ et soit $y_{p}$ une solution particulière de $(E)$. Alors, nous avons 
+\begin{equation}
+ S = \{y_{p} +y_{h},\quad y_{h} \in S_{h}\}
+\end{equation} 
+\end{coro}
+
+
+
+\subsection{Recherche de solution particulière par variation de la constante}
+
+Nous allons déterminer une solution particulière $Y_{p}$ de la forme $ \forall x\in I,$ \qquad$ y_{p}(x)= v(x)y_{H}(x)$
+ou $y_{H}(x)$ est une solutions de $(E_{h}$, l'équation homogène associée à $(E)$ est $v$ est une fonction dérivable du $I$ à déterminer.\newline
+En effet, si $y_{p}$ est solutions de $(E)$ alors $\forall x \in I$
+\begin{align}
+y'_{p}(x)+ a(x)y_{p}(x)=f(x)
+\\v'(x)y_{H}(x)+ v(x)y'_{H}(x) + a(x)v(x)y_{H}(x) = f(x) 
+\\v'(x)y_{H}(x)+ v(x)( y'_{H}(x)+ a(x)y_{H}(x))=f(x)
+\end{align}
+d'où puisque $y_{H}$ ne s'annule pas sur $\mathbb{I}$:
+\begin{equation}
+\forall x \in I,  v'(x)=\frac{f(x)}{y_{H}(x)}
+\end{equation}
+
+Nous sommes ainsi ramenés a un nouveau à la recherche d'une primitive .
+Dans la pratique, les solutions de l'équation homogène associés sont de la forme $x\longrightarrow C \exp(x) $
+
+
+\eqref{1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+
+
+
+\end{document}
