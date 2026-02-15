@@ -7,7 +7,7 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page and don't use a cv template
-\documentclass[10pt,A4]{article}	
+\documentclass[8pt,A4]{article}	
 
 
 %----------------------------------------------------------------------------------------
@@ -98,7 +98,7 @@
 \usepackage[a4paper]{geometry}
 
 % remove all possible margins
-\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
+\geometry{top=0.7cm, bottom=0.7cm, left=1cm, right=1cm}
 
 \usepackage{fancyhdr}
 \pagestyle{empty}
@@ -145,18 +145,17 @@
 \usepackage{transparent}
 \usepackage{color}
 
-% primary color
-\definecolor{maincol}{RGB}{ 225, 0, 0 }
+% Couleur principale (brun terracotta doux)
+\definecolor{maincol}{RGB}{176, 125, 92}
 
-% accent color, secondary
-% \definecolor{accentcol}{RGB}{ 250, 150, 10 }
+% Texte foncé
+\definecolor{darkcol}{RGB}{50, 50, 50}
 
-% dark color
-\definecolor{darkcol}{RGB}{70, 70, 70}  % ← GRIS FONCÉ ACTUEL
+% Fond beige clair
+\definecolor{lightcol}{RGB}{235, 222, 212}
 
-
-% light color
-\definecolor{lightcol}{RGB}{245,245,245}
+% Couleur très claire secondaire
+\definecolor{accentcol}{RGB}{245, 238, 232}
 
 
 % Package for links, must be the last package used
@@ -207,10 +206,10 @@
 % Renders a a CV section headline with a nice underline in main color.
 % param 1: section title
 \newcommand{\cvsection}[1] {
-	\vspace{8pt}
+	\vspace{4pt}
 	\cvtext{
-		\textbf{\Large{\textcolor{darkcol}{\uppercase{#1}}}}\\[-2pt]
-		%\textcolor{maincol}{ \rule{0.1\textwidth}{0.5pt} } \\
+		\textbf{\Large{\textcolor{maincol}{\uppercase{#1}}}}\\[-2pt]
+		\textcolor{maincol}{ \rule{0.1\textwidth}{0.5pt} } \\
 	}
 }
 
@@ -268,11 +267,11 @@
 	\textcolor{maincol} {\cvtext{\textbf{\begin{flushleft}#1\end{flushleft}}}}
 
 	\ifthenelse{\isempty{#2}}{}{
-	\textcolor{darkcol} {\cvtext{\textbf{#2}} }
+	\textcolor{maincol} {\cvtext{\textbf{#2}} }
 	}
 
 	\ifthenelse{\isempty{#2}}{}{
-		\textcolor{darkcol} {\cvtext{\textbf{#2}} }
+		\textcolor{maincol} {\cvtext{\textbf{#2}} }
 	}
 
 	\cvtext{#4}\\[14pt]
@@ -292,8 +291,8 @@
 %============================================================================%
 \begin{document}
 	\columnratio{0.31}
-	\setlength{\columnsep}{1.5em}
-	\setlength{\columnseprule}{3pt}
+	\setlength{\columnsep}{2em}
+	\setlength{\columnseprule}{4pt}
 	\colseprulecolor{lightcol}
 	
 	\begin{paracol}{2}
@@ -303,15 +302,23 @@
 			%---------------------------------------------------------------------------------------
 			%	META IMAGE
 			%----------------------------------------------------------------------------------------
-			\includegraphics[width=\linewidth]{Untitled.jpg}	
+			%\includegraphics[width=4cm ]{Untitled.jpg}	
 			
+			\vspace{-6pt}
+			{\centering
+				\begin{tikzpicture}
+					\clip (0,0) circle (2cm);
+					\node at (0,0) {\includegraphics[width=4cm]{Untitled.jpg}};
+				\end{tikzpicture}
+				\par}
+			\vspace{-4pt}
 			%---------------------------------------------------------------------------------------
 			%	META SKILLS
 			%---------------------------------------------------------------------------------------
-			\vspace{8pt}
+			\vspace{10pt}
 			\cvsection{CONTACT}
 			
-				\icontext{MapMarker}{12}{3 Rue George Bernanos}{black}\\[10pt]
+				\icontext{MapMarker}{12}{Toulouse / Nancy }{black}\\[10pt]
 				\icontext{MobilePhone}{12}{+33 7 67 33 92 90}{black}\\[10pt]
 				\iconemail{Envelope}{12}{friedlysedjro@gmail.com}{contact@example.com}{black}\\[10pt]
 				\iconhref{Github}{12}{github.com/Friedsed}{https://github.com/Friedsed}{black}\\[10pt]
@@ -335,21 +342,33 @@
 			
 			\vspace*{8pt}
 			\cvsection{LANGUES}
+				\cvlist{	
+					\item Francais: Langue maternelle 
+					\item Anglais: Niveau B2
+
+					
+				
+				
+				}
 			
-				\cvskill{Français} {} {0.95} \\[-2pt]
-				
-				\cvskill{Anglais} {} {0.8} \\[-2pt]
-				
-				\cvskill{Allemand} {} {0.2} \\[-2pt]
-				
 			\vspace*{8pt}	
-			\cvsection{CENTRE D'INTERET}
+			\cvsection{CENTRES D'INTÉRÊT}
 				
 				\cvlist{
 					\item \textbf{Sport} : course à pied, basketball
-					\item \textbf{Voyage} : Angleterre, Allemangne, Espagne
+					\item \textbf{Voyage} : Angleterre, Allemagne, Espagne
 				
 				
+				}
+					\vspace*{8pt}	
+				\cvsection{QUALITÉS}
+				
+				\cvlist{
+					\item Rigueur
+					\item Sens de l'organisation
+					\item Esprit d'équipe
+					
+					
 				}
 				
 
@@ -370,7 +389,7 @@
 			%---------------------------------------------------------------------------------------
 			%	TITLE  HEADER
 			%----------------------------------------------------------------------------------------
-			\fcolorbox{white}{darkcol}{\begin{minipage}[c][3cm][c]{1\mpwidth}
+		\fcolorbox{white}{maincol}{\begin{minipage}[c][2cm][c]{1\mpwidth}
 				\begin {center}
 					\Huge{ \textbf{ \textcolor{white}{ \uppercase{ Friedly WOLI } } } } \\[-24pt]
 					\textcolor{white}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
@@ -383,19 +402,19 @@
 			%	PROFILE
 			%----------------------------------------------------------------------------------------
 			%
-			\cvsection{PROFILE}
+			\cvsection{PROFIL}
 			
-				\cvtext{Étudiant en L3 Mécanique Énergétique, je suis à la recherche d’un contrat d’alternance débutant en Septembre 2026 dans le domaine de la mécanique et de la simulation numérique. Mon objectif est de m'investir au sein d’une équipe sur le long terme pour contribuer à des projets d'innovation complexes
+				\cvtext{Étudiant en L3 Mécanique Énergétique, je suis à la recherche d’un contrat d’alternance débutant en Septembre 2026 dans le domaine de la mécanique et de la simulation numérique. Mon objectif est de m'investir au sein d’une équipe sur le long terme pour contribuer à des projets d'innovation complexes.
 				}
 			
 			%---------------------------------------------------------------------------------------
 			%	Formation
 			%----------------------------------------------------------------------------------------
 			\vspace{12pt}
-			\cvsection{FORMATION}
+			\cvsection{FORMATIONS}
 			
 				\cvevent
-				{Sept 2024 - Juin 2025}
+				{Sept 2025 - Juin 2026}
 				{Université de Toulouse}
 				{L3 Mécanique énergétique}
 				{}
@@ -407,7 +426,7 @@
 				\cvevent
 				{Sept 2024 - Juin 2025}
 				{INSA Toulouse}        % pas d'espace avant/après
-				{Génie mécanique}
+				{1ere année du cycle ingénieur en génie mécanique}
 				{}
 				{\cvlist{
 						\item Conception mécanique, CAO avec Creo et 3D Experience, Métrologie, Asservisement
@@ -432,7 +451,7 @@
 			%	WORK EXPERIENCE
 			%----------------------------------------------------------------------------------------
 
-			\cvsection{EXPÉRIENCE PROFESSIONNELLE}
+			\cvsection{EXPÉRIENCES PROFESSIONNELLES}
 			
 				\cvevent
 				{Jan 2025}
@@ -447,7 +466,7 @@
 				\\\\
 			\cvevent
 				{Sept 2024 - Juin 2025}
-				{Projet personnel}
+				{Projet web personnel}
 				{Développeur}
 				{}
 				{\cvlist{
@@ -462,7 +481,7 @@
 				{}
 				{\cvlist{
 						\item Organisation et animation de séances de tutorat en mathématiques et en physique pour des lycéens
-						\item Accompagnement individualisé d'élèves (collège/lycée) en maths/physique pour consolider les bases et préparer les examens
+						\item Accompagnement individualisé de collègiens et lycéens en maths et physique pour consolider les bases et préparer les examens
 				}}
 			
 				
