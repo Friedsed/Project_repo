@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-t=2
+t=3
 if t==0:
 
     t=np.linspace(0,2*np.pi, 1000)
@@ -64,3 +64,17 @@ elif t==2:
     plt.title("Coeur for SierraOscaPapaHotelIndiaEcho")
     plt.show()
 
+
+elif t==3:
+
+
+    def prime(n):
+        for i in range(2,n-1):
+            if n%i== 0 :
+                return False
+            
+            else :
+                return True
+            
+
+    print(prime(109))
