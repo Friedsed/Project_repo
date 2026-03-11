@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.18)  15 FEB 2026 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.12.20)  11 MAR 2026 07:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**french-resume.tex
-(./french-resume.tex
+**apprentiship.tex
+(./apprentiship.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -83,7 +83,12 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic
 .tex)
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.
-tex)) (/usr/share/texlive/texmf-dist/tex/latex/paracol/paracol.sty
+tex)) (/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language89
+LaTeX Info: Redefining \_ on input line 43.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/paracol/paracol.sty
 Package: paracol 2018/12/31 v1.35 
 \pcol@currcol=\count266
 \pcol@nextcol=\count267
@@ -707,27 +712,27 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [8pt,A4].
 
-(./french-resume.aux)
-\openout1 = `french-resume.aux'.
+(./apprentiship.aux)
+\openout1 = `apprentiship.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 292.
-LaTeX Font Info:    ... okay on input line 292.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -785,241 +790,214 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 292.
+Package hyperref Info: Link coloring OFF on input line 293.
 
-(./french-resume.out) (./french-resume.out)
+(./apprentiship.out) (./apprentiship.out)
 \@outlinefile=\write4
-\openout4 = `french-resume.out'.
+\openout4 = `apprentiship.out'.
 
 <Untitled.jpg, id=7, 2055.68pt x 2055.68pt>
 File: Untitled.jpg Graphic file (type jpg)
 <use Untitled.jpg>
-Package pdftex.def Info: Untitled.jpg  used on input line 311.
+Package pdftex.def Info: Untitled.jpg  used on input line 312.
 (pdftex.def)             Requested size: 113.81102pt x 113.79987pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 319.
+(Font)              <7> on input line 320.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 319.
+(Font)              <5> on input line 320.
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--319
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
 
  []
 
 
-Overfull \hbox (8.77156pt too wide) in alignment at lines 319--319
+Overfull \hbox (8.77156pt too wide) in alignment at lines 320--320
 [] 
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
-ut line 321.
+ut line 322.
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
-Overfull \hbox (2.9687pt too wide) in paragraph at lines 321--326
+Overfull \hbox (2.9687pt too wide) in paragraph at lines 322--327
 []$[]$   $[]$ 
  []
 
 
-Overfull \hbox (2.9687pt too wide) in paragraph at lines 321--326
+Overfull \hbox (2.9687pt too wide) in paragraph at lines 322--327
 []$   $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
+Underfull \hbox (badness 10000) in paragraph at lines 332--332
 
  []
 
 
-Overfull \hbox (8.77156pt too wide) in alignment at lines 331--331
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 333--333
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
-
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 335--335
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
-
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 337--337
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
-
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 339--339
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
-
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 341--341
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
-
- []
-
-
-Overfull \hbox (8.77156pt too wide) in alignment at lines 344--344
+Overfull \hbox (8.77156pt too wide) in alignment at lines 332--332
 [] 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-352.
+341.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 355--355
+Underfull \hbox (badness 10000) in paragraph at lines 349--349
+
+ []
+
+
+Overfull \hbox (8.77156pt too wide) in alignment at lines 349--349
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 [][]\T1/cmss/bx/n/14.4 CENTRES
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--355
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 
  []
 
 
-Overfull \hbox (8.77156pt too wide) in alignment at lines 355--355
+Overfull \hbox (8.77156pt too wide) in alignment at lines 360--360
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Overfull \hbox (9.88011pt too wide) in paragraph at lines 366--366
+[]\T1/cmss/bx/n/10 Loisirs créat-ifs \T1/cmss/m/n/10 : cou-ture, brico-lage 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 
  []
 
 
-Overfull \hbox (8.77156pt too wide) in alignment at lines 364--364
+Overfull \hbox (8.77156pt too wide) in alignment at lines 369--369
 [] 
  []
 
 
-Overfull \hbox (0.79999pt too wide) in paragraph at lines 398--400
+Overfull \hbox (0.79999pt too wide) in paragraph at lines 402--404
 [][] [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--405
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
 
  []
 
 
-Overfull \hbox (4.81406pt too wide) in alignment at lines 405--405
+Overfull \hbox (4.81406pt too wide) in alignment at lines 409--409
 [] 
  []
 
 
-Overfull \hbox (4.81406pt too wide) in alignment at lines 408--408
+Overfull \hbox (4.81406pt too wide) in alignment at lines 412--412
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--414
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 
  []
 
 
-Overfull \hbox (4.81406pt too wide) in alignment at lines 414--414
+Overfull \hbox (4.81406pt too wide) in alignment at lines 418--418
 [] 
  []
 
 
-Overfull \hbox (31.06592pt too wide) in alignment at lines 425--425
+Overfull \hbox (31.06592pt too wide) in alignment at lines 429--429
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--425
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
 
  []
 
 
-Overfull \hbox (31.06592pt too wide) in alignment at lines 435--435
+Overfull \hbox (31.06592pt too wide) in alignment at lines 439--439
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--435
+Underfull \hbox (badness 10000) in paragraph at lines 439--439
 
  []
 
 
-Overfull \hbox (31.06592pt too wide) in alignment at lines 446--446
+Overfull \hbox (11.2765pt too wide) in paragraph at lines 439--439
+[]\T1/cmss/m/n/10 Conception mé-canique, CAO avec Creo et 3D Ex-pe-ri-ence, Mét
+rolo-gie, As-servise-ment 
+ []
+
+
+Overfull \hbox (31.06592pt too wide) in alignment at lines 450--450
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--454
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
 
  []
 
 
-Overfull \hbox (4.81406pt too wide) in alignment at lines 454--454
+Overfull \hbox (4.81406pt too wide) in alignment at lines 458--458
 [] 
  []
 
 
-Overfull \hbox (31.06592pt too wide) in alignment at lines 466--466
+Overfull \hbox (31.06592pt too wide) in alignment at lines 470--470
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--466
+Underfull \hbox (badness 10000) in paragraph at lines 470--470
 
  []
 
 
-Overfull \hbox (31.06592pt too wide) in alignment at lines 476--476
+Overfull \hbox (2.58638pt too wide) in paragraph at lines 470--470
+[]\T1/cmss/m/n/10 Présentation du pro-jet à Sil-ver-stone en juil-let 2025 de-v
+ant des ju-rys in-ter-na-tionaux,
+ []
+
+
+Overfull \hbox (31.06592pt too wide) in alignment at lines 480--480
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
+Underfull \hbox (badness 10000) in paragraph at lines 480--480
 
  []
 
 
-Overfull \hbox (31.06592pt too wide) in alignment at lines 487--487
+Overfull \hbox (22.02608pt too wide) in paragraph at lines 480--480
+[]\T1/cmss/m/n/10 Développement d'un site Web in-ter-ac-tif pour la ré-so-lu-ti
+on de prob-lèmes math-é-ma-tiques 
+ []
+
+
+Overfull \hbox (31.06592pt too wide) in alignment at lines 491--491
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--487
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
 
  []
 
@@ -1028,28 +1006,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 487--487
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/f
 ontawesome/fontawesometwo.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-sup
-er-ts1.enc} <./Untitled.jpg>] (./french-resume.aux)
+er-ts1.enc} <./Untitled.jpg>] (./apprentiship.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `french-resume.out' has not changed.
+Package rerunfilecheck Info: File `apprentiship.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25055 strings out of 474222
- 487374 string characters out of 5748733
- 1967975 words of memory out of 5000000
- 46896 multiletter control sequences out of 15000+600000
- 563330 words of font info for 44 fonts, out of 8000000 for 9000
+ 25080 strings out of 474222
+ 487655 string characters out of 5748732
+ 1962975 words of memory out of 5000000
+ 46917 multiletter control sequences out of 15000+600000
+ 563329 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,93p,445b,765s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,93p,444b,765s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm
+onts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfsx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1440.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb>
-Output written on french-resume.pdf (1 page, 419747 bytes).
+Output written on apprentiship.pdf (1 page, 418331 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream

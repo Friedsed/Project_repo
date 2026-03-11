@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.12.20)  16 FEB 2026 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.12.20)  6 MAR 2026 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**intership.tex
-(./intership.tex
+**master-cv.tex
+(./master-cv.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -707,8 +707,8 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [8pt,A4].
 
-(./intership.aux)
-\openout1 = `intership.aux'.
+(./master-cv.aux)
+\openout1 = `master-cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 292.
 LaTeX Font Info:    ... okay on input line 292.
@@ -787,15 +787,32 @@ e
 ))
 Package hyperref Info: Link coloring OFF on input line 292.
 
-(./intership.out) (./intership.out)
+(./master-cv.out) (./master-cv.out)
 \@outlinefile=\write4
-\openout4 = `intership.out'.
+\openout4 = `master-cv.out'.
 
-<Untitled.jpg, id=7, 2055.68pt x 2055.68pt>
-File: Untitled.jpg Graphic file (type jpg)
-<use Untitled.jpg>
-Package pdftex.def Info: Untitled.jpg  used on input line 311.
-(pdftex.def)             Requested size: 113.81102pt x 113.79987pt.
+
+
+LaTeX Warning: File `Untitled.jpg' not found on input line 311.
+
+
+! Package pdftex.def Error: File `Untitled.jpg' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.311 ...\includegraphics[width=4cm]{Untitled.jpg}
+                                                  };
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+11.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 319.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -1028,31 +1045,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 487--487
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/f
 ontawesome/fontawesometwo.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-sup
-er-ts1.enc} <./Untitled.jpg>] (./intership.aux)
+er-ts1.enc}] (./master-cv.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `intership.out' has not changed.
+Package rerunfilecheck Info: File `master-cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25055 strings out of 474222
- 487298 string characters out of 5748732
+ 25099 strings out of 474222
+ 488471 string characters out of 5748732
  1967975 words of memory out of 5000000
- 46896 multiletter control sequences out of 15000+600000
- 563330 words of font info for 44 fonts, out of 8000000 for 9000
+ 46936 multiletter control sequences out of 15000+600000
+ 563643 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,93p,441b,765s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,93p,441b,863s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfsx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1440.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb>
-Output written on intership.pdf (1 page, 419918 bytes).
+</usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sftt1000.pfb>
+Output written on master-cv.pdf (1 page, 97347 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

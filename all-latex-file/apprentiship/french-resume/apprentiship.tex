@@ -91,6 +91,7 @@
 % page outer frames (debug-only)
 % \usepackage{showframe}		
 
+\usepackage[none]{hyphenat}
 % we use paracol to display breakable two columns
 \usepackage{paracol}
 
@@ -223,11 +224,11 @@
 		\textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
 	\end{tabular*}%
 	
-	\hspace{2pt}
-	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
-		\fill [lightcol] (0,0) rectangle (1\mpwidth, 0.12);
-		\fill [maincol] (0,0) rectangle (#3\mpwidth, 0.12);
-	\end{tikzpicture}%
+	%\hspace{2pt}
+	%\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
+	%	\fill [lightcol] (0,0) rectangle (1\mpwidth, 0.12);
+		%\fill [maincol] (0,0) rectangle (#3\mpwidth, 0.12);
+		%\end{tikzpicture}%
 }
 
 
@@ -318,7 +319,7 @@
 			\vspace{10pt}
 			\cvsection{CONTACT}
 			
-			\icontext{MapMarker}{12}{Toulouse / Nancy }{black}\\[10pt]
+			\icontext{MapMarker}{12}{Toulouse }{black}\\[10pt]
 			\icontext{MobilePhone}{12}{+33 7 67 33 92 90}{black}\\[10pt]
 			\iconemail{Envelope}{12}{friedlysedjro@gmail.com}{contact@example.com}{black}\\[10pt]
 			\iconhref{Github}{12}{github.com/Friedsed}{https://github.com/Friedsed}{black}\\[10pt]
@@ -329,16 +330,20 @@
 			\vspace*{8pt}
 			
 			\cvsection{COMPÉTENCES}
+				
+				\cvlist{
+					\item Python, C++, MATLAB
+					\item Bash (Shell)
+					\item ANSYS, Abaqus
+					\item 3DEXPERIENCE
+					\item HTML, JavaScript, CSS
+					\item Trello, Microsoft Teams
+				}
+				
+				
+				
 			
-			\cvskill{Python/ Matlab} {} {0.7} \\[-2pt]
 			
-			\cvskill{Ansys/Abaqus} {} {0.6} \\[-2pt]
-			
-			\cvskill{3D Experience} {} {0.5} \\[-2pt]
-			
-			\cvskill{Html/CSS/JS} {} {0.5} \\[-2pt]
-			
-			\cvskill{C++} {} {0.4} \\[-2pt]
 			
 			\vspace*{8pt}
 			\cvsection{LANGUES}
@@ -357,19 +362,18 @@
 			\cvlist{
 				\item \textbf{Sport} : course à pied, basketball
 				\item \textbf{Voyage} : Angleterre, Allemagne, Espagne
-				
-				
+				\item \textbf{Loisirs créatifs} : couture, bricolage
 			}
+			
 			\vspace*{8pt}	
 			\cvsection{QUALITÉS}
 			
 			\cvlist{
 				\item Rigueur
-				\item Sens de l'organisation
 				\item Esprit d'équipe
-				
-				
+				\item Curiosité
 			}
+			
 			
 			
 			
@@ -393,7 +397,7 @@
 					\begin {center}
 					\Huge{ \textbf{ \textcolor{white}{ \uppercase{ Friedly WOLI } } } } \\[-24pt]
 					\textcolor{white}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
-					\large{ \textcolor{white} {Recherche d'alternance en simulation numérique  } }
+					\Large{ \textcolor{white} {Recherche d'alternance en simulation numérique  } }
 					\end {center}
 			\end{minipage}} \\[14pt]
 			\vspace{-12pt}
@@ -404,7 +408,7 @@
 			%
 			\cvsection{PROFIL}
 			
-			\cvtext{Étudiant en L3 Mécanique Énergétique, je suis à la recherche d’un contrat d’alternance débutant en Septembre 2026 dans le domaine de la mécanique et de la simulation numérique. Mon objectif est de m'investir au sein d’une équipe sur le long terme pour contribuer à des projets d'innovation complexes.
+			\cvtext{Étudiant en L3 Mécanique Énergétique, je recherche une alternance en calcul mécanique et simulation numérique à partir de septembre 2026. Passionné par la modélisation physique des structures ou des fluides, je souhaite développer mes compétences en simulation éléments finis, analyse mécanique et optimisation des systèmes industriels.
 			}
 			
 			%---------------------------------------------------------------------------------------
@@ -454,9 +458,9 @@
 			\cvsection{EXPÉRIENCES PROFESSIONNELLES}
 			
 			\cvevent
-			{Jan 2025}
+			{Depuis Janvier 2025}
 			{ISAE Supaero}
-			{Toulouse Racing Division: Powertrain}
+			{TLS'e Racing Division: Powertrain}
 			{}
 			{\cvlist{
 					\item Projet de conception d’un véhicule électrique
@@ -481,7 +485,7 @@
 			{}
 			{\cvlist{
 					\item Organisation et animation de séances de tutorat en mathématiques et en physique pour des lycéens
-					\item Accompagnement individualisé de collègiens et lycéens en maths et physique pour consolider les bases et préparer les examens
+					\
 			}}
 			
 			
