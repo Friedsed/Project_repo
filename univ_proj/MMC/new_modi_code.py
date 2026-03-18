@@ -2,13 +2,14 @@
 """
 Created on Tue Mar  7 08:03:58 2023
 
+#Le code fonctionne bien
+# derniere modification mardi 2024-06-10 à 17h54
 
 """
 
 from sympy import *
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 
 
