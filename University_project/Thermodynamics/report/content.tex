@@ -1,0 +1,342 @@
+
+% ----------------------------------------------
+\chapter{Manipulation}
+
+
+	 Valeurs experimentale obtenues 
+	
+	\begin{lstlisting} language=python, numbers=none]
+		
+		
+		Vol=[4,   3.8,  3.6,  3.4,  3.2,   3,   2.8,  2.6,   2.4, 2.2, 2 ,   1.8,  1.6,  1.4,   1.2,   1, 0.8, 0.6,0.4]
+		
+		P=  [9.7, 10.2, 10.7,11.2, 11.9, 12.6, 13.3, 14.1, 15.15, 16, 17.1, 18.3 , 19.6, 19.8, 20.1, 19.8, 20, 20 ,20.2]
+		P= [i+1 for i in P]
+		P1=  [9.8, 10.2, 10.7,11.3, 11.9, 12.6, 13.4, 14.2, 15.1, 16.2, 17.3, 18.5 , 19.9, 20.6, 20.6, 20.7, 20.8, 20.9,20.1]
+		P1= [i+1 for i in P1]
+		P2 =[9.7, 10.2, 10.7,11.3, 11.9, 12.6, 13.3, 14.1, 15, 16.1, 17.2, 18.4 , 19.5, 20.1, 20.2, 20.3, 20.3, 20.4,20.8]
+		P2= [i+1 for i in P2]
+		P3 = [9.7, 10.1, 10.7,11.2, 11.8, 12.5, 13.3, 14.1, 15, 16, 17.1, 18.3 , 19.6, 19.9, 20, 20, 20.1, 20.2,20.4]
+		P3= [i+1 for i in P3]
+		
+		
+	\end{lstlisting}
+
+% ############################################
+\section*{Analyse}
+
+	\subsection*{}
+	\textcolor{blue}{Reponse 1: }
+	
+		Tracer des isothermes d'Andrews sur le meme graphe $ (P,V) $
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{graphe1.png}
+			\caption{Graphe des isthermes d Andrews}
+		\end{figure}
+		
+		
+		Identification du palier horizontal de liquefaction
+		
+		
+		
+		
+		
+		
+	\subsection*{}
+	\textcolor{blue}{Reponse 2: Les volumes du liquide et de la vapeur saturante}\\
+	
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			Isotherme en$ ^0 C$ & Psat(bar)  & Vl ($cm^3$) & Vg ($cm^3$) & Largeur(Vg-Vl) \\ \hline
+			20 & 20.8   & 1.4  &  1.8 & 0.4   \\ \hline
+			25 & 21.6   & 1.4  &  1.7 & 0.3   \\ \hline
+			35 & 21.2   & 1.4  &  1.6 & 0.2   \\ \hline
+			40 & 20.9   & 1.4  &  1.6 & 0.2   \\ \hline
+		\end{tabular}
+		
+		
+		
+	\subsection*{}
+	\textcolor{blue}{Reponse 3: Application de la loi des gaz parfaits pour un point en phase gazeuse }
+	
+		
+		
+		On choisit un point sur la branche \textbf{vapeur sèche} de l'isotherme $T = 25^\circ$C :
+		
+		\begin{itemize}
+			\item $P = 12,6 \, \text{bar} = 1,26 \times 10^6 \, \text{Pa}$
+			\item $V = 3,0 \, \text{cm}^3 = 3,0 \times 10^{-6} \, \text{m}^3$
+			\item $T = 25 + 273.15 = 298.15 \, \text{K}$
+		\end{itemize}
+		
+		La loi des gaz parfaits s'écrit :
+		\begin{equation}
+			PV = nRT
+		\end{equation}
+		
+		On en déduit le nombre de moles :
+		\begin{align}
+			n &= \frac{PV}{RT} \\
+			n &= 1,525 \times 10^{-3} \, \text{mol}
+		\end{align}
+		
+	
+	
+	\subsection*{}	
+	\textcolor{blue}{Reponse 4: Enthalpie de vaporisation à $T = 22,5^\circ$C}
+		
+		On utilise la relation de Clapeyron :
+		\begin{equation}
+			\frac{dP_\text{sat}}{dT} = \frac{\Delta H_\text{vap}}{T (V_g - V_l)}
+		\end{equation}
+		
+		Entre $T_1 = 20^\circ$C et $T_2 = 25^\circ$C (isothermes expérimentales) :
+		\[
+		\Delta H_\text{vap} \approx \frac{\Delta P_\text{sat}}{\Delta T} \times T_m \times (V_g - V_l)
+		\]
+		
+		\textbf{Données :}
+		\begin{itemize}
+			\item $\Delta T = 5\,\text{K}$
+			\item $T_m = 22,5 + 273 = 295,5\,\text{K}$
+			\item $V_g - V_l \approx 0,4\,\text{cm}^3 = 4\times10^{-7}\,\text{m}^3$
+			\item $\Delta P_\text{sat} \approx 0,8\,\text{bar} = 8\times10^4\,\text{Pa}$
+		\end{itemize}
+		
+		\textbf{Calcul :}
+		\begin{align}
+			\Delta H_\text{vap} &= \frac{8\times10^4}{5} \times 295,5 \times 4\times10^{-7} \\
+			&= 1,89\times10^3 \,\text{J/mol} = 59\,\text{kJ/mol}
+		\end{align}
+		
+		\textbf{Enthalpie massique :}
+		\[
+		\Delta h_\text{vap} = \frac{59\times10^3}{200,59} = 294\,\text{kJ/kg}
+		\]
+		
+		
+		
+		
+	\subsection*{}
+	\textcolor{blue}{Reponse 5: Rapport $\frac{P_c V_{mc}}{RT_c}$ (SF$_6$)}
+		
+		\textbf{Données SF$_6$}
+		\begin{itemize}
+			\item $T_c = 45,5^\circ$C $= 318,65\,\text{K}$
+			\item $P_c = 37,6\,\text{bar} = 3,76\times10^6\,\text{Pa}$
+			\item $R = 8,314\,\text{J/mol·K}$
+		\end{itemize}
+		
+		\textbf{Théorie Van der Waals}
+		\[
+		V_{mc} = 3b, \quad b = \frac{RT_c}{8P_c}
+		\]
+		
+		\[
+		\frac{P_c V_{mc}}{RT_c} = \frac{P_c \cdot 3b}{RT_c} = \frac{3}{8} = 0,375
+		\]
+		
+		\textbf{Valeur expérimentale}
+		\[
+		V_{mc} \approx 0,32\,\text{L/mol} = 3,2\times10^{-4}\,\text{m}^3\text{mol}^{-1}
+		\]
+		\[
+		\frac{P_c V_{mc}}{RT_c} = \frac{3,76\times10^6 \times 3,2\times10^{-4}}{8,314 \times 318,65} = 0,37
+		\]
+		
+		\textbf{Comparaison : $0,37$ vs $0,375$ (accord excellent !)}
+		
+		
+		
+		
+	\subsection*{}	
+	\textcolor{blue}{Reponse 6:  Constantes de l'équation de Van der Waals}
+		
+		\textbf{Expressions théoriques}
+		\begin{align}
+			a &= \frac{27 R^2 T_c^2}{64 P_c} \\
+			b &= \frac{R T_c}{8 P_c}
+		\end{align}
+		
+		\textbf{Calcul pour SF$_6$}
+		\begin{align}
+			b &= \frac{8,314 \times 318,65}{8 \times 3,76\times10^6} = 8,82\times10^{-5} \, \text{m}^3\text{mol}^{-1} \\
+			a &= \frac{27 \times (8,314)^2 \times (318,65)^2}{64 \times 3,76\times10^6} = 7,15 \, \text{Pa·m}^6\text{mol}^{-2}
+		\end{align}
+		
+		\textbf{Unités SI}
+		\begin{itemize}
+			\item $a$ : $\text{Pa·m}^6\text{mol}^{-2}$ (ou $\text{N·m}^4\text{mol}^{-2}$)
+			\item $b$ : $\text{m}^3\text{mol}^{-1}$
+		\end{itemize}
+		
+		\begin{center}
+			\fbox{\begin{minipage}{0.9\textwidth}
+					\textbf{Résumé des résultats :}
+					
+					\begin{itemize}
+						\item $\Delta H_\text{vap} = 59\,\text{kJ/mol} = 294\,\text{kJ/kg}$
+						\item $\frac{P_c V_{mc}}{RT_c} = 0,37$ (vs $0,375$ théorique)
+						\item $a = 7,15\,\text{Pa·m}^6\text{mol}^{-2}$
+						\item $b = 8,82\times10^{-5}\,\text{m}^3\text{mol}^{-1}$
+					\end{itemize}
+			\end{minipage}}
+		\end{center}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	\end{document}
+% ############################################
+\section{Lists}
+
+Unordered Lists:
+\begin{itemize}
+\item This is an unordered list. 
+\item Item 2.
+\item It has three items.
+\end{itemize}
+
+Ordered List:
+\begin{enumerate}
+\item This is an ordered list.
+\item Item 2.
+\item It has three items.
+\end{enumerate}
+
+Ordered List (alphabetical):
+\begin{enumerate}[label=\Alph*.]
+\item This is an ordered list.
+\item Item 2.
+\item It has three items.
+\end{enumerate}
+
+% ----------------------------------------------
+\chapter{Figures}\label{ch:figures}
+
+% ############################################
+\section{Images}\label{sec:images}
+
+\autoref{fig:image1} shows how to display images.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{f1.jpg}
+    \caption{Image}
+
+	\label{fig:image1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{f4.jpg}
+    \caption{Image with Source}
+    \captionsource{\cite{mus:16}}	
+	\label{fig:image2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{f7.jpg}
+    \caption{Image with Source and Link}
+    \captionsource[https://example.org]{J. Doe}	
+	\label{fig:image3}
+\end{figure}
+
+% ############################################
+
+% ----------------------------------------------
+
+\chapter{Conclusion}\label{ch:conclusion}
+
+% ############################################
+\section{Mathematics}\label{sec:maths}
+
+\subsection{Definitions}
+
+\begin{define}	
+A function $f: X \rightarrow Y$ is injective if and only if for all $x_1, x_2 \in X$, $x_1 \neq x_2$ implies $f(x_1) \neq f(x_2)$.
+\end{define}
+
+\subsection{Formulas}
+
+Formulas can be included inline, e.g. $K_E^{CID}$ to $S$ or as an own block.
+$$ otp = f_k(i, k), \qquad i = 1, ..., n $$
+
+\pagebreak
+% ############################################
+\section{Code Listings}\label{sec:code}
+
+Code can be displayed inline, e.g. \code{UPDATE} or \code{factorial(n)}.
+
+Code listings can have numbered lines, captions, syntax highlighting, ... .
+
+\begin{lstlisting}[caption={[Code Without Line Numbers] Code Without Line Numbers \\ \captionsource{\cite{mus:16}}}, label={lst:codeExample}, language=python, numbers=none]
+ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 
+ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Code With Line Numbers}, label={lst:factorial}, language=Java]
+public int factorial(int n) {
+	if (n == 1) {
+		return 1;
+	} else {
+		return n * factorial(n - 1) ;
+	}
+}
+\end{lstlisting}

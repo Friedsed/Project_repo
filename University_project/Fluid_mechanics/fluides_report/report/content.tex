@@ -1,0 +1,488 @@
+% ----------------------------------------------
+\chapter{Travail Preliminaire}
+
+
+% ############################################
+
+	
+	\textcolor{blue}{Reponse 1: Montrons que $ \Delta P = P_{A}-P{B} = \rho g ( h_{A} - h{B}) + \rho g ( z_{A} - z_{B})   $ }
+
+		
+		On applique la loi de l'hydrostatique :
+		\[
+		\nabla P = -\rho \vec{g} \quad \Rightarrow \quad P = -\rho g z + Cste
+		\]
+		
+		Pour les prises de pression :
+		\begin{align*}
+			P_A &= -\rho g z_A + Cste \\
+			P_B &= -\rho g z_B + Cste
+		\end{align*}
+		
+		A la surface :
+		\[
+		P_0 = -\rho g h_A + Cste \quad d'ou \quad 		Cste = P_0 + \rho g h_A 
+		\]
+		
+		
+		Ainsi :
+		\begin{align*}
+			P_A &= P_0 + \rho g (- z_A + h_A) \\
+			P_B &= P_0 + \rho g (- z_B + h_B)
+		\end{align*}
+
+		On obtient alors :
+		\[
+		P_A - P_B = \rho g \left[ (z_A + h_A) - (z_B + h_B) \right] = \rho g (h_A - h_B) + \rho g (z_B - z_A)
+		\]
+	
+
+
+
+	\textcolor{blue}{Reponse 2: Déduisons les valeurs à mesurer pour déterminer expérimentalement $Q$}
+
+		Pour établir la loi expérimentale $Q = f(\Delta P)$, on doit mesurer : 
+		
+		\begin{enumerate}
+			\item 	le debit volumique Q 
+			\item	Les hauteurdeau $h_A et h_B$ 
+			\item 	la differece d altitude $z_B et z_A$ entre les prises 
+		\end{enumerate}
+		
+
+\section{Manipulation } 
+
+	Les expériences ont été faites et les valeurs sont les suivantes :
+	
+	\begin{lstlisting}[caption={[] \\ \captionsource{\cite{mus:16}}}, label={lst:codeExample}, language=python, numbers=none]
+		
+		Flotteur = np.array([160, 140, 120, 100, 80, 60, 40, 20])  # en m
+		
+		c1=np.array([323, 343, 354, 361, 364, 365, 366, 366])
+		c2=np.array([182, 233, 271, 299, 320, 346, 349, 357])
+		c3=np.array([298, 323, 338, 348, 354, 358, 361, 363])
+		c4=np.array([305, 328, 342, 352, 357, 360, 362, 364])
+		c5=np.array([312, 333, 347, 355, 359, 361, 363, 364])
+		c6=np.array([148, 209, 252, 284, 310, 330, 345, 355])
+		c7=np.array([178, 230, 268, 297, 318, 334, 348, 355])
+		c8=np.array([145, 204, 249, 281, 308, 328, 344, 353])
+		c9=np.array([29, 195, 140, 176, 204, 225, 241, 252])
+		
+		
+	\end{lstlisting}
+		
+		
+		
+% ----------------------------------------------
+
+\chapter{Analyse des mesures}
+
+% ############################################
+\textbf{Tube de Venturi}
+
+		% reponse a la question 4	
+		\textcolor{blue}{Reponse 4- Montrons que ................... }
+		
+		%Demonstration...........................................
+		
+		\subsection*{Hypothèses}
+		
+		\begin{itemize}
+			\item écoulement stationnaire
+			\item fluide incompressible  
+			\item pertes de charge négligeables
+		\end{itemize}
+		
+		On applique la loi de Bernoulli entre les sections A et B :
+		\[
+		P_A + \frac{v_A^2}{2} +\rho g z_A = P_B + \frac{v_B^2}{2} +\rho g z_B
+		\]
+		
+		\subsection*{Équation de continuité}
+		
+		Conservation de la masse :$	S_A v_A = S_B v_B  $
+		
+		
+		
+		\subsection*{Développement}
+		
+		
+	
+		En utilisant Bernoulli on a: 
+		\[
+		 P_A - P_B + \rho g (z_A - z_B) = \frac{1}{2} \rho \left( v_B^2 - v_A^2 \right)
+		\]
+		
+		\[
+			\rho g (h_A - h_B) = \frac{1}{2} \rho \left( v_B^2 - v_A^2 \right) = \frac{1}{2} \rho v_A^2 \left( \frac{S_A^2}{S_B^2} - 1 \right)
+		\]
+		
+		\[
+			 g (h_A - h_B) = \frac{1}{2} v_A^2 \left( \frac{d_A^4}{d_B^4} - 1 \right)
+		\]
+		
+		\[
+		v_A= \sqrt{ \frac{2 g (h_A h_B)  } {\left(   \frac{d_A ^4}{d_B^4} \left(  1 - \frac{d_B ^4}{d_A^4}  \right) \right)  } }
+		\]
+		
+		\subsection*{Expression finale}
+		
+			On sait que
+			
+			 \[ Q = \frac{dvolume}{dt} = S* \frac{dx}{dt} = S_A v_A = \pi \frac{d_A^2}{4} v_A
+			\]
+		
+		Donc on définit le coefficient :
+		\[
+		C = \frac{\pi d_B^2 \sqrt{g}}{\sqrt{8\left(1 - \left(\frac{d_B}{d_A}\right)^4\right)}}
+		\]
+		
+		Donc :
+		\[
+		Q = C \sqrt{h_A - h_B}
+		\]
+		
+		
+		% reponse a la question 5	
+		\textcolor{blue}{Reponse 5- Courbe expérimentale $Q = f\left( \sqrt{h_A -h_B} \right)$}
+		
+		Demonstration...........................................
+		
+		
+		
+		
+		% reponse a la question 6	
+		\textcolor{blue}{Reponse 6-  Tracer pour chaque points des barres d'erreur }
+		
+		Demonstration...........................................
+		
+		
+		
+		% reponse a la question 7	
+		\textcolor{blue}{Reponse 7- Tracer sous la forme d'une courbe la prédiction théorique }
+		
+		Demonstration...........................................
+		
+		
+		
+		
+		
+		% reponse a la question 8	
+		\textcolor{blue}{Reponse 8- Reprise du même travail pour B et C }
+		
+		Demonstration...........................................
+		
+		
+		
+		% reponse a la question 9	
+		\textcolor{blue}{Reponse 9- Comparaison des résultats théoriques et expérimentaux }
+		
+		Demonstration...........................................
+
+% ############################################
+\section{Diaphragme}
+
+	% reponse a la question 10	
+	\textcolor{blue}{Reponse 10: Evolution de profil de vitesse entre les section E et F  }\\	
+		Entre E et G, les lignes de courant se resserrent au passage de l’orifice, puis s’écartent en aval. La vitesse augmente dans la zone contractée, puis diminue après l’orifice. 
+		\\	
+	% reponse a la question 11	
+	\textcolor{blue}{Reponse 11: Explication de porquoi $ h_F < h_G $} \\
+		Entre F et G, l’écoulement accélère au niveau de l’orifice, donc la pression statique diminue. Cela explique que la hauteur mesurée en F soit inférieure à celle en G.
+	
+	
+	
+	
+	% reponse a la question 12	
+	\textcolor{blue}{Reponse 12: : Loi théorique $Q = f(\sqrt{h_E - h_F})$}
+		
+		
+		
+		On applique le théorème de Bernoulli entre les sections E et F du diaphragme, en supposant un écoulement stationnaire, incompressible et sans pertes de charge :
+		
+		\begin{equation}
+			\frac{P_E}{\rho g} + \frac{v_E^2}{2g} + z_E = \frac{P_F}{\rho g} + \frac{v_F^2}{2g} + z_F
+		\end{equation}
+		
+		Si les prises sont au même niveau ($z_E = z_F$), cela donne :
+		\begin{equation}
+			P_E - P_F = \frac{\rho}{2} (v_F^2 - v_E^2)
+		\end{equation}
+		
+		Par conservation de la masse (équation de continuité) :
+		\begin{equation}
+			S_E v_E = S_F v_F \quad \Rightarrow \quad v_E = \frac{Q}{S_E}, \quad v_F = \frac{Q}{S_F}
+		\end{equation}
+		
+		En substituant :
+		\begin{equation}
+			\rho g (h_E - h_F) = \frac{\rho}{2} Q^2 \left( \frac{1}{S_F^2} - \frac{1}{S_E^2} \right)
+		\end{equation}
+		
+		Donc :
+		\begin{equation}
+			Q = \frac{S_F}{\sqrt{1 - \left(\frac{S_F}{S_E}\right)^2}} \sqrt{2g (h_E - h_F)}
+		\end{equation}
+		
+		
+		
+	% reponse a la question 13	
+	\textcolor{blue}{Reponse 13:  Perte de charge du diaphragme }
+	
+		La perte de charge entre E et G s'obtient par différence hydrostatique :
+		\begin{equation}
+			\Delta X = \rho g (h_E - h_G)
+		\end{equation}
+		
+		Cette perte correspond à l'énergie mécanique dissipée par les turbulences et les frottements.
+	
+	
+	
+	
+	
+	% reponse a la question 14	
+	\textcolor{blue}{ Reponse 14:  La perte de charge est-elle négligeable ?}
+	
+	
+	On compare le rapport :
+	\begin{equation}
+		\frac{h_E - h_G}{h_E - h_F}
+	\end{equation}
+	
+	Si ce rapport est $\ll 1$, la perte est négligeable. En pratique, pour un diaphragme, ce rapport est souvent de l'ordre de 10-30\%, donc non négligeable.
+	
+	
+	
+	% reponse a la question 15	
+	\textcolor{blue}{Reponse 15: Détermination du coefficient $C_c$ }
+		
+		-----------  A detreminer a pres compilation de code et utilisation d outil d interpolation lieaire pour obtenir  le coeficient directeur ---------------
+		
+		La loi corrigée est :
+		\begin{equation}
+			Q = C_c \frac{\pi d_F^2}{\sqrt{8}} \sqrt{\frac{g (h_E - h_F)}{1 - \left(\frac{d_F}{d_E}\right)^4}}
+		\end{equation}
+		
+		Le coefficient $C_c$ se détermine expérimentalement par :
+		\begin{equation}
+			C_c = \frac{Q_{\text{exp}} \sqrt{8} \sqrt{1 - \left(\frac{d_F}{d_E}\right)^4}}{\pi d_F^2 \sqrt{g (h_E - h_F)}}
+		\end{equation}
+		
+
+	% ############################################
+	\section{Rotametre}
+	
+		% reponse a la question 16	
+		\textbf{Reponses 16 : Lignes de courant dans le rotamètre  }
+		Les lignes de courant se resserrent dans l'espace annulaire entre le flotteur et la paroi conique du rotamètre. La vitesse est maximale dans cette zone de passage réduit.
+		---------------------- Images -------------------------------------- \\
+		% reponse a la question 17
+	\textcolor{blue}{Reponse 17: Forces agissant sur le flotteur  }
+	
+	À l'équilibre, le flotteur subit trois forces principales :
+	
+	\begin{enumerate}
+		\item \textbf{Poids} : $P = m g$ (vers le bas)
+		\item \textbf{Poussée d'Archimède} : $P_A = \rho_f V_{\text{immergé}} g$ (vers le haut)
+		\item \textbf{Force hydrodynamique} : due à la différence de pression autour du flotteur (vers le haut)
+	\end{enumerate}
+	
+	Équilibre : $P = P_A + F_{\text{hyd}}$
+	
+	
+	% reponse a la question 19	
+	\textcolor{blue}{Reponse 18 :  Augmentation du débit à $L$ constant}
+	
+		Si on augmente $Q$ en maintenant $L$ constant :
+		\begin{itemize}
+			\item La vitesse dans l'espace annulaire augmente
+			\item La différence de pression $\Delta P$ autour du flotteur augmente
+			\item $F_{\text{hyd}}$ augmente
+			\item Le flotteur n'est plus en équilibre et tend à monter
+		\end{itemize}
+	
+	
+	% reponse a la question 19	
+	\textcolor{blue}{Reponse 19: Pourquoi le flotteur monte-t-il ? }
+	
+	
+	Quand on relâche le flotteur :
+	\begin{enumerate}
+		\item $F_{\text{hyd}} > P - P_A$ $\Rightarrow$ le flotteur monte
+		\item En montant, la section annulaire $S_{\text{ann}}$ augmente
+		\item La vitesse $v = Q/S_{\text{ann}}$ diminue
+		\item $\Delta P$ et $F_{\text{hyd}}$ diminuent jusqu'au nouvel équilibre
+	\end{enumerate}
+	
+	
+	% reponse a la question 20	
+	\textcolor{blue}{Reponse 20:  Pertes de charge du rotamètre}
+	
+	Les pertes de charge sont :
+	\begin{equation}
+		\Delta X = \rho g (h_H - h_I)
+	\end{equation}
+	
+	Elles sont dues à :
+	\begin{itemize}
+		\item Frottements visqueux dans l'espace annulaire
+		\item Turbulences autour du flotteur
+		\item Changements brusques de section
+	\end{itemize}
+	
+	% reponse a la question 21	
+	\textcolor{blue}{Reponse 21: Courbe $\Delta X = f(Q)$ }
+	
+	---------------------- Images -------------------------------------- \\
+	
+		On trace $\Delta X$ en fonction de $Q$. On observe généralement :
+		\begin{itemize}
+			\item Relation croissante (plus de débit = plus de pertes)
+			\item Courbe non linéaire (pertes quadratiques avec la vitesse)
+		\end{itemize}
+	
+		% reponse a la question 22	
+	\textcolor{blue}{Reponse 22: Courbe $\Delta X = f(Q)$ }
+	
+	---------------------- Images -------------------------------------- \\
+	
+	On ajuste expérimentalement une loi du type :
+	\begin{equation}
+		Q = a L + b
+	\end{equation}
+	
+	ou plus généralement :
+	\begin{equation}
+		Q = k L^n
+	\end{equation}
+	
+	où $a$, $b$, $k$, $n$ sont déterminés par régression linéaire ou non linéaire des mesures.
+	
+
+		\end{document}
+	
+\pagebreak
+
+% ############################################
+\section{Lists}
+
+Unordered Lists:
+\begin{itemize}
+\item This is an unordered list. 
+\item Item 2.
+\item It has three items.
+\end{itemize}
+
+Ordered List:
+\begin{enumerate}
+\item This is an ordered list.
+\item Item 2.
+\item It has three items.
+\end{enumerate}
+
+Ordered List (alphabetical):
+\begin{enumerate}[label=\Alph*.]
+\item This is an ordered list.
+\item Item 2.
+\item It has three items.
+\end{enumerate}
+
+% ----------------------------------------------
+\chapter{Figures}\label{ch:figures}
+
+% ############################################
+\section{Images}\label{sec:images}
+
+\autoref{fig:image1} shows how to display images.
+
+\begin{figure}[H]
+	\centering
+%	\includegraphics[width=0.5\textwidth]{f1.jpg}
+    \caption{Image}
+
+	\label{fig:image1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+%	\includegraphics[width=0.5\textwidth]{f4.jpg}
+    \caption{Image with Source}
+    \captionsource{\cite{mus:16}}	
+	\label{fig:image2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+%	\includegraphics[width=0.5\textwidth]{f7.jpg}
+    \caption{Image with Source and Link}
+    \captionsource[https://example.org]{J. Doe}	
+	\label{fig:image3}
+\end{figure}
+
+% ############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ----------------------------------------------
+
+\chapter{Conclusion}\label{ch:conclusion}
+
+% ############################################
+\section{Mathematics}\label{sec:maths}
+
+\subsection{Definitions}
+
+\begin{define}	
+A function $f: X \rightarrow Y$ is injective if and only if for all $x_1, x_2 \in X$, $x_1 \neq x_2$ implies $f(x_1) \neq f(x_2)$.
+\end{define}
+
+\subsection{Formulas}
+
+Formulas can be included inline, e.g. $K_E^{CID}$ to $S$ or as an own block.
+$$ otp = f_k(i, k), \qquad i = 1, ..., n $$
+
+\pagebreak
+% ############################################
+\section{Code Listings}\label{sec:code}
+
+Code can be displayed inline, e.g. \code{UPDATE} or \code{factorial(n)}.
+
+Code listings can have numbered lines, captions, syntax highlighting, ... .
+
+\begin{lstlisting}[caption={[Code Without Line Numbers] Code Without Line Numbers \\ \captionsource{\cite{mus:16}}}, label={lst:codeExample}, language=python, numbers=none]
+ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 
+ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Code With Line Numbers}, label={lst:factorial}, language=Java]
+public int factorial(int n) {
+	if (n == 1) {
+		return 1;
+	} else {
+		return n * factorial(n - 1) ;
+	}
+}
+\end{lstlisting}
+
+
+
+
+
+
+
