@@ -62,7 +62,7 @@ def Tnp1_explicite(Tn, Dx, Dy, dt, D, f_func, t, x, y, omega, Lx, Ly):
 # -----------------------------------------------------------------------------
 
 Lx, Ly = 1.0, 1.0
-Nx, Ny = 60, 60
+Nx, Ny = 3, 3
 Dx = Lx / Nx
 Dy = Ly / Ny
 dt = 0.000080
@@ -112,12 +112,14 @@ erreur_max_globale = 0.0
 # -----------------------------------------------------------------------------
 t_start = time.time()
 
+dict_temp={}
 
 while t < Tmax:
     
     # Solution numerique à t n+1   
     Tn = Tnp1_explicite(Tn, Dx, Dy, dt, D, f_func, t, x, y, omega, Lx, Ly)
     t += dt
+    dict_temp["T^"+str(t)]=Tn
     
     # Solution exacte à t n+1 
     Tex = T_ex(X, Y, t, D, omega, Lx, Ly)
