@@ -10,7 +10,7 @@
 		
 		On applique la loi de l'hydrostatique :
 		\[
-		\nabla P = -\rho \vec{g} \quad \Rightarrow \quad P = -\rho g z + Cste
+		\nabla P = \rho \vec{g} \quad \Rightarrow \quad P = -\rho g z + Cste
 		\]
 		
 		Pour les prises de pression :
@@ -81,7 +81,7 @@
 \textbf{Tube de Venturi}
 
 		% reponse a la question 4	
-		\textcolor{blue}{Reponse 4- Montrons que ................... }
+		\textcolor{blue}{Reponse 4-}
 		
 		%Demonstration...........................................
 		
@@ -146,24 +146,47 @@
 		% reponse a la question 5	
 		\textcolor{blue}{Reponse 5- Courbe expérimentale $Q = f\left( \sqrt{h_A -h_B} \right)$}
 		
-		Demonstration...........................................
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.5\textwidth]{question5.png}
+				\caption{Trac de Q= A * Flotteur + B  }
+				\label{fig:image3}
+			\end{figure}
+			
+		\textbf{Observation:} On observe une répartition linéaire des points expérimentaux (points bleus). Cela indique que la relation entre le débit et la variable mesurée suit une loi de proportionnalité 
 		
 		
 		
 		
 		% reponse a la question 6	
-		\textcolor{blue}{Reponse 6-  Tracer pour chaque points des barres d'erreur }
+		\textcolor{blue}{Reponse 6-  Tracé pour chaque points des barres d'erreur }
 		
-		Demonstration...........................................
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{question6.png}
+			\caption{Controle de la difference d'erreur  }
+			\label{fig:image3}
+		\end{figure}
+		
+		\textbf{Observation:} Il existe un écart systématique entre la théorie et l'expérience. La courbe théorique (orange) se situe nettement en dessous de nos points expérimentaux.\\
+		
+		\textbf{Commentaire sur l'écart:}  Dans la réalité, un fluide n'est pas parfait. Les frottements visqueux et les pertes de charge (que ce soit dans le Venturi ou le diaphragme) font que le débit réel diffère du débit théorique idéal \\
+		On constate aussi que l'écart est dit significatif et ne peut pas être expliqué uniquement par l'imprécision de lecture.
 		
 		
 		
 		% reponse a la question 7	
-		\textcolor{blue}{Reponse 7- Tracer sous la forme d'une courbe la prédiction théorique }
+		\textcolor{blue}{Reponse 7- Tracé sous la forme d'une courbe la prédiction théorique }
 		
-		Demonstration...........................................
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{question7.png}
+			\caption{Courbe continue de la prédiction théorique  }
+			\label{fig:image3}
+		\end{figure}
 		
-		
+		\textbf{Utilité : }  Elle sert de référence idéale. Elle montre que, selon Bernoulli, le débit devrait augmenter avec la racine carrée de la dénivelée piézométrique
 		
 		
 		
@@ -177,8 +200,21 @@
 		% reponse a la question 9	
 		\textcolor{blue}{Reponse 9- Comparaison des résultats théoriques et expérimentaux }
 		
-		Demonstration...........................................
-
+		\begin{itemize}
+			\item \textbf{Analyse qualitative :} 
+			D'après les graphiques obtenues (notamment le tracé de $Q = f(\sqrt{h_A - h_B})$), on observe que les points expérimentaux suivent une tendance linéaire très marquée. Cela valide qualitativement la \textbf{loi de Bernoulli} pour un fluide incompressible, confirmant que le débit volumique $Q$ est bien proportionnel à la racine carrée de la dénivelée piézométrique : $Q \propto \sqrt{\Delta h}$ .
+			
+			\item \textbf{Analyse quantitative et écarts :} 
+			Bien que la forme de la courbe soit respectée, on note un écart entre la courbe théorique et les points expérimentaux. Dans nos mesures, le débit expérimental est supérieur à la prédiction théorique simplifiée ($Q_{exp} > Q_{th}$). Cet écart peut s'expliquer par plusieurs facteurs :
+			\begin{itemize}
+				\item \textbf{Hypothèse du fluide parfait :} La théorie repose sur l'absence de viscosité. En réalité, l'eau est un fluide parfait. Les frottements visqueux aux parois et les turbulences dissipent de l'énergie sous forme de \textbf{pertes de charge} .
+				\item \textbf{Coefficient de décharge ($C_c$) :} Pour compenser ces effets et la contraction du jet (vena contracta), il est nécessaire d'introduire un coefficient de correction $C_c$. La valeur théorique calculée avec la géométrie pure ne suffit pas à décrire parfaitement le système réel .
+				\item \textbf{Incertitudes de mesure :} Les erreurs de lecture des hauteurs d'eau sur les tubes piézométriques (erreur de parallaxe) et l'imprécision lors du chronométrage manuel pour la mesure du débit au bac d'étalonnage contribuent à la dispersion des points .
+			\end{itemize}
+			
+			\item \textbf{Conclusion :} 
+			La loi de Bernoulli est vérifiée dans son principe de fonctionnement. Toutefois, pour une utilisation précise du tube de Venturi comme instrument de mesure industriel, un \textbf{étalonnage préalable} est indispensable afin de déterminer le coefficient de décharge réel du dispositif.
+		\end{itemize}
 % ############################################
 \section{Diaphragme}
 
@@ -255,8 +291,15 @@
 	
 	% reponse a la question 15	
 	\textcolor{blue}{Reponse 15: Détermination du coefficient $C_c$ }
+	
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{question14.png}
+			\caption{ Tracé de la courbe expérimentale  }
+			\label{fig:image3}
+		\end{figure}
 		
-		-----------  A detreminer a pres compilation de code et utilisation d outil d interpolation lieaire pour obtenir  le coeficient directeur ---------------
+		Le facteur de correction donne:  $ C_c =  0.12383292187219626 $
 		
 		La loi corrigée est :
 		\begin{equation}
@@ -282,7 +325,7 @@
 	À l'équilibre, le flotteur subit trois forces principales :
 	
 	\begin{enumerate}
-		\item \textbf{Poids} : $P = m g$ (vers le bas)
+		\item \textbf{Poids} : $P =- m g$ (vers le bas)
 		\item \textbf{Poussée d'Archimède} : $P_A = \rho_f V_{\text{immergé}} g$ (vers le haut)
 		\item \textbf{Force hydrodynamique} : due à la différence de pression autour du flotteur (vers le haut)
 	\end{enumerate}
@@ -333,13 +376,32 @@
 	% reponse a la question 21	
 	\textcolor{blue}{Reponse 21: Courbe $\Delta X = f(Q)$ }
 	
-	---------------------- Images -------------------------------------- \\
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{question21.png}
+		\caption{Tracé de la courbe expérimentale $\Delta X = f(Q)$}
+		\label{fig:deltaX_Q}
+	\end{figure}
 	
-		On trace $\Delta X$ en fonction de $Q$. On observe généralement :
+		
+		
 		\begin{itemize}
-			\item Relation croissante (plus de débit = plus de pertes)
-			\item Courbe non linéaire (pertes quadratiques avec la vitesse)
+			\item \textbf{Observations :}
+			La courbe expérimentale représentant l'évolution de la perte de charge $\Delta X$ (définie par $\rho g(h_H - h_I)$) en fonction du débit volumique $Q$ présente une allure \textbf{parabolique}. Contrairement aux courbes d'étalonnage précédentes, la pente de ce tracé n'est pas constante et croît avec le débit.
+			
+			\item \textbf{Interprétation physique :}
+			Cette forme quadratique est caractéristique des \textbf{pertes de charge singulières} en régime inertiel. Pour un organe de mesure comme le rotamètre, le fluide subit un rétrécissement puis un élargissement brusque en contournant le flotteur. La théorie prévoit que la perte d'énergie mécanique suit une loi proportionnelle au carré de la vitesse :
+			\[ \Delta X = \frac{1}{2} \rho u^2 K \]
+			Sachant que la vitesse $u$ est proportionnelle au débit volumique ($Q = u \cdot S$), on obtient bien une relation de type $\Delta X = \alpha Q^2$.
+			
+			\item \textbf{Origine du phénomène :}
+			La dissipation d'énergie ne provient pas ici du frottement visqueux linéaire, mais du brassage intense du fluide et de la création de \textbf{tourbillons} dans le sillage du flotteur. Ces phénomènes turbulents dissipent une énergie mécanique proportionnelle à l'énergie cinétique du jet annulaire, expliquant ainsi la dépendance au carré du débit.
+			
+			\item \textbf{Conclusion :}
+			Le résultat obtenu valide le caractère inertiel de l'écoulement au sein du rotamètre. La perte de charge n'est pas négligeable et augmente de façon significative pour les hauts débits.
 		\end{itemize}
+		
+		
 	
 		% reponse a la question 22	
 	\textcolor{blue}{Reponse 22: Courbe $\Delta X = f(Q)$ }
