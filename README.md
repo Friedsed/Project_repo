@@ -13,6 +13,9 @@ Ces projets couvrent notamment plusieurs domaines de la mécanique et du calcul 
 
   * la méthode de **Jacobi**
   * la méthode de **Gauss-Seidel**
+  * La méthode des **différences finis**
+  * Résolution explicite et implicite de l'équation de la chaleur de 2D
+  * Résolution implicite par la methode ADI
 
 D’autres projets et outils seront ajoutés progressivement au fur et à mesure de l’évolution de mes travaux.
 
