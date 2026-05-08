@@ -74,6 +74,8 @@ T0, T1, T2 = sp.symbols("T0 T1 T2")
 V1, V2 = sp.symbols("V1 V2")
 C_L_alpha, C_L_alpha_sect, alpha, alpha_0 = sp.symbols("C_L_alpha C_L_alpha_sect alpha alpha_0")
 
+
+
 # Expressions aérodynamiques
 C_L_alpha_sect = 2 * sp.pi * (alpha - alpha_0)
 C_L_alpha = C_L_alpha_sect / (1 + C_L_alpha_sect / (sp.pi * Ra))
@@ -92,3 +94,48 @@ pre_dist = (W / g) * (V - Vhw) / (T - D - Fr)
 dis = sp.integrate(pre_dist, (V, V1, V2))
 
 print("La distance est :", dis)
+
+
+def Kti(Vip1, Vi, koi, k2i, k1i , kwi):
+
+    fi = koi + k1i * Vi + k2i * Vi**2
+    fip1 = koi + k1i * Vip1 + k2i * Vip1**2
+    dfi = k1i + 2* k2i * Vi
+    dfip1 = k1i + 2*k2i * Vip1
+    kri = 4* koi * k2i - k1i **2
+
+    if k2i == 0 and k1i == 0 :
+
+        return (Vip1**2 - Vi**2)/ 2* koi
+    
+    elif k2i == 0 and k1i != 0 :
+
+        return ( koi/ k1i**2 ) * np.ln(fi/fip1) + (Vip1 - Vi)/ k1i
+    
+    else:
+
+        return (1/ 2* k2i )* np.ln(fip1/fi) - (k1i * kwi ) / 2*k2i
+
+
+def kwi(Vip1, Vi, koi, k2i, k1i , kwi):
+
+
+    fi = koi + k1i * Vi + k2i * Vi**2
+    fip1 = koi + k1i * Vip1 + k2i * Vip1**2
+    dfi = k1i + 2* k2i * Vi
+    dfip1 = k1i + 2*k2i * Vip1
+    kri = 4* koi * k2i - k1i **2
+
+    if k2i==0 and k1i==0 : 
+
+        return (Vip1 - Vi ) / koi 
+    
+    elif k1i !=0 and k2i == 0 :
+
+        return (1/ k1i )
+
+
+
+
+
+
