@@ -48,9 +48,9 @@ Vhw = 29.33
 g= g_ref
 V1 = 29.33
 V2= 104.44
-Toi = 1200  
-Ti = -4
-Tii = 0
+Toi = 1200                  # experimentally determined coef for the thrust
+Ti = -4                     # experimentally determined coef for the thrust
+Tii = 0                     # experimentally determined coef for the thrust
 
 
 aicraft1= Aircraft( W, hw, Sw, bw )

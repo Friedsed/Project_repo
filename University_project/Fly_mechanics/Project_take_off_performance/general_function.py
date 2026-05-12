@@ -4,7 +4,7 @@ Date: 27th of april 2026
 
 Students in third year in mechanics and energetic at Toulouse university
 
-Modified the 05/05/2026
+Modified the 08/05/2026 à 20h00
 
 
 
@@ -65,44 +65,80 @@ print(" la distance est ", dis)
 
 
 
+# on au total 36 variables
 
 # Définition des symboles
+
+"""
 hw, bw, Ra, e, mu, g = sp.symbols("hw bw Ra e mu g")
-rho, V, Vhw, Sw, W, D, T, L = sp.symbols("rho V Vhw Sw W D T L")
+rho, V, Vhw, Sw, W, D, T, L, Fr = sp.symbols("rho V Vhw Sw W D T L Fr")
 C_D0, C_D0l, C_L, C_D = sp.symbols("C_D0 C_D0l C_L C_D")
 T0, T1, T2 = sp.symbols("T0 T1 T2")
 V1, V2 = sp.symbols("V1 V2")
 C_L_alpha, C_L_alpha_sect, alpha, alpha_0 = sp.symbols("C_L_alpha C_L_alpha_sect alpha alpha_0")
 
+Vip1, Vi, koi, k2i, k1i , kwi = sp.symbols("Vip1, Vi, koi, k2i, k1i , kwi")
+dfi, dfip1, kri = sp.symbols("dfi, dfip1, kri ")
+
+"""
+
+
+
 
 
 # Expressions aérodynamiques
-C_L_alpha_sect = 2 * sp.pi * (alpha - alpha_0)
-C_L_alpha = C_L_alpha_sect / (1 + C_L_alpha_sect / (sp.pi * Ra))
-C_L = C_L_alpha * (alpha - alpha_0)
+def C_L_alpha_sect(alpha, alpha_0):
+    
+    return  2 * sp.pi * (alpha - alpha_0)
 
-C_D = C_D0 + C_D0l * C_L + ((16 * hw / bw)**2 * C_L**2) / (1 + (16 * hw / bw)) * sp.pi * e * Ra
+
+def C_L_alpha(C_L_alpha_sect, Ra ):
+    
+    return  C_L_alpha_sect / (1 + C_L_alpha_sect / (sp.pi * Ra))
+
+
+def C_L_function (C_L_alpha, alpha, alpha_0 ):
+    
+    return C_L_alpha * (alpha - alpha_0)
+
+
+
+def C_D_function (C_D0, C_D0l, C_L, hw, bw, e, Ra ):
+    
+    return C_D0 + C_D0l * C_L + ((16 * hw / bw)**2 * C_L**2) / (1 + (16 * hw / bw)) * np.pi * e * Ra
 
 # Forces
-L = 0.5 * V**2 * Sw * C_L
-D = 0.5 * V**2 * Sw * C_D
-T = T0 + T1 * V + T2 * V**2
-Fr = mu * (W - L)
+def lift ( V, Sw, C_L ):
+
+    return  0.5 * V**2 * Sw * C_L
+
+
+def drag(V, Sw, C_D):
+    
+    return  0.5 * V**2 * Sw * C_D
+
+
+def trust(T0, T1, V, T2):
+    
+    return  T0 + T1 * V + T2 * V**2
+
+
+def friction(W, L, mu ):
+    
+    return  mu * (W - L)
 
 # Intégrale
-pre_dist = (W / g) * (V - Vhw) / (T - D - Fr)
-dis = sp.integrate(pre_dist, (V, V1, V2))
+#pre_dist = (W / g) * (V - Vhw) / (T - D - Fr)
+#dis = sp.integrate(pre_dist, (V, V1, V2))
 
-print("La distance est :", dis)
+#print("La distance est :", dis)
 
 
 def Kti(Vip1, Vi, koi, k2i, k1i , kwi):
 
     fi = koi + k1i * Vi + k2i * Vi**2
     fip1 = koi + k1i * Vip1 + k2i * Vip1**2
-    dfi = k1i + 2* k2i * Vi
-    dfip1 = k1i + 2*k2i * Vip1
-    kri = 4* koi * k2i - k1i **2
+    
 
     if k2i == 0 and k1i == 0 :
 
@@ -117,7 +153,7 @@ def Kti(Vip1, Vi, koi, k2i, k1i , kwi):
         return (1/ 2* k2i )* np.ln(fip1/fi) - (k1i * kwi ) / 2*k2i
 
 
-def kwi(Vip1, Vi, koi, k2i, k1i , kwi):
+def kwi(Vip1, Vi, koi, k2i, k1i ):
 
 
     fi = koi + k1i * Vi + k2i * Vi**2
@@ -132,10 +168,36 @@ def kwi(Vip1, Vi, koi, k2i, k1i , kwi):
     
     elif k1i !=0 and k2i == 0 :
 
-        return (1/ k1i )
+        return (1/ k1i )*np.ln(fip1/fi)
+    
+    elif kri <0 :
+
+        return (1/np.sqrt(-kri)) *np.ln ( (dfip1 - np.sqrt(-kri) ) * (dfi  + np.sqrt(-kri) ) / (dfip1 + np.sqrt(-kri))*(dfi - np.sqrt(-kri) ))
+
+
+    elif kri ==0 :
+
+        return (2/dfi) - 2/dfip1
+    
+    else :
+
+        return (2/np.sqrt(kri) ) * (  1/ np.tan(dfip1 / np.sqrt(kri)) - 1/ np.tan(dfi / np.sqrt( kri)) )
 
 
 
 
 
 
+
+
+# Let's solve a problem 
+
+S_w , b_w , h_w, W, Ta= 320, 54, 6, 20000 , 6500
+
+Cdo , Cdol, e, Clmax, Cl =  0.0333, 0.0, 0.74, 1.6, 0.4
+
+Ra = 0.0099
+
+mu, tr = 0.04, 1 
+
+print ("the drag coefficient is ", C_D_function (Cdo, Cdol, Cl, h_w, b_w, e, Ra ) )
