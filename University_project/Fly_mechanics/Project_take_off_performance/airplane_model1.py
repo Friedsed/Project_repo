@@ -110,3 +110,6 @@ class Aircraft :
         d = I.subs ([(V1, Vi), (V2, Vip1), (a, -1* Vhw) , (b, 1) , (d0, K0i) , (d1, K1i) , (d2, K2i) ])
 
         return d/g
+
+
+

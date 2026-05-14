@@ -25,3 +25,6 @@ I = sp.integrate(f, (V, V1, V2))
 
 print("\nIntégrale définie :")
 sp.pprint(I)
+
+
+
