@@ -7,11 +7,11 @@ import sympy as sp
 # Variables
 V = sp.symbols('V')
 a, b = sp.symbols('a b')
-d0, d1, d2 = sp.symbols('d0 d1 d2')
+A, B, C = sp.symbols('A B C')
 
 # Fonction
-D = d0 + d1*V + d2*V**2
-f = (-b + a*V)/D
+D = A + B*V + C*V**2
+f = D/ (-b + V)
 
 # Intégrale symbolique
 F = sp.integrate(f, V)
@@ -23,8 +23,8 @@ sp.pprint(F)
 V1, V2 = sp.symbols('V1 V2')
 I = sp.integrate(f, (V, V1, V2))
 
-print("\nIntégrale définie :")
-sp.pprint(I)
+#print("\nIntégrale définie :")
+#sp.pprint(I)
 
 
 

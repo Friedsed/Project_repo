@@ -4,9 +4,9 @@ Date: 27th of april 2026
 
 Students in third year in mechanics and energetic at Toulouse university
 
-Modified the 13 mai 2026 à 11h18
+Modified the 13 mai 2026 à 15h39
 
-la fonction calcule de distance fonctionne avec l'exemple de la page 348 du livre flight of mechanics by Warren
+la fonction calcule de distance fonctionne avec les exemples des pages 348 et aussi 350 du livre flight of mechanics by Warren
 
 
 
@@ -92,6 +92,38 @@ def distance_integral_direct (Vhw, koi, k1i, k2i,Vi, Vip1, g ):
 
     return I/g
 
+# ============================================================
+# Plot distance versus speed
+# ============================================================
+
+def plot_dist_speed(Vhw, koi, k1i, k2i, Vi, Vip1, g):
+
+    speed = np.linspace(Vi, Vip1, 100)
+
+    S = np.array([
+        distance_integral_direct(Vhw, koi, k1i, k2i, Vi, v, g)
+        for v in speed
+    ])
+
+    plt.figure(figsize=(8, 5))
+    plt.plot(speed, S)
+    plt.xlabel("Velocity (ft/s)")
+    plt.ylabel("Distance (ft)")
+    plt.title("Distance vs Velocity")
+    plt.grid(True)
+    plt.show()
+
+def plot_acc_speed ( koi, k1i, k2i, Vi, Vip1, g):
+
+    v=np.linspace( Vi, Vip1, 100)
+    a= ((koi + k1i *v + k2i *v**2 ) *g )
+
+
+    plt.figure()
+    plt.plot(v,a)
+    plt.xlabel("la vitesse ")
+    plt.ylabel("l'acceleration ")
+    plt.show ( )
 
 
 #=============================================================
@@ -231,9 +263,7 @@ def calcule_distance (alpha, alpha_0, Sw , bw , hw,rho, W, Ra, Cdo , Cdol, e, Cl
     dist = distance( Kt, Vhw, Kw, g)
     dist_integ = distance_integral_direct (Vhw, Ko, K1, K2,Vi, Vip1, g )
 
-    v=np.linspace( Vi, Vip1, 100)
-    a= (Ko + K1 *v + K2 *v**2 ) *g
-
+   
 
     print (" La valeur de Ko est ", Ko )
     print ("")
@@ -270,12 +300,8 @@ def calcule_distance (alpha, alpha_0, Sw , bw , hw,rho, W, Ra, Cdo , Cdol, e, Cl
     print ("")
     print ("")
 
-    plt.figure()
-    plt.plot(v,a)
-    plt.xlabel("la vitesse ")
-    plt.ylabel("l'acceleration ")
-    #plt.show ( )
-
+    plot_acc_speed ( Ko, K1, K2,  Vi, Vip1, g)
+    plot_dist_speed(Vhw, Ko, K1, K2, Vi, Vip1, g)
 
 
 
@@ -314,7 +340,7 @@ print ("the drag coefficient is ", C_D_function (Cdo, Cdol, Cl, hw, bw, e, Ra ) 
 
 
 
-#calcule_distance (alpha, alpha_0, Sw , bw , hw,rho, W, Ra, Cdo , Cdol, e, Clmax, Cl, mu, T0, T1, T2, Vhw, g, Vi)
+calcule_distance (alpha, alpha_0, Sw , bw , hw,rho, W, Ra, Cdo , Cdol, e, Clmax, Cl, mu, T0, T1, T2, Vhw, g, Vi)
 
 
 
@@ -324,7 +350,7 @@ print ("the drag coefficient is ", C_D_function (Cdo, Cdol, Cl, hw, bw, e, Ra ) 
 
 
 
-calcule_distance(alpha=0 ,alpha_0=0 ,Sw=180, bw=33, hw=6, rho=0.0023769 , W=2700, Ra=6.05 , Cdo= 0.036 , Cdol=0, e=0.82, Clmax= 1.4, Cl= 0.3485 ,  mu= 0.04, T0= 1200 , T1= -4 , T2=0 , Vhw=29.33 , g=9.81, Vi=29.33  )
+calcule_distance(alpha=0 ,alpha_0=0 ,Sw=180, bw=33, hw=6, rho=0.0023769 , W=2700, Ra=6.05 , Cdo= 0.036 , Cdol=0, e=0.82, Clmax= 1.4, Cl= 0.3485 ,  mu= 0.04, T0= 1200 , T1= -4 , T2=0 , Vhw=29.33 , g=32.2, Vi=29.33  )
 
 #dist= (Kti, Vhw, Kwi, g)
 #print("la distance de decollage est ", dist)
