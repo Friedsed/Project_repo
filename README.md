@@ -10,6 +10,37 @@ In this repository, you will find a selection of my programming projects develop
 ## 📚 University_project
 These projects cover several areas of mechanics and scientific computing, including:
 
+# ✈️ Flight Mechanics
+
+## Modeling of Aircraft Takeoff Distance
+
+This project focuses on the **modeling and simulation of aircraft takeoff distance** using Python.
+
+The objective is to develop a numerical and analytical model to estimate the takeoff distance of an aircraft by considering aerodynamic forces, thrust, friction, and environmental conditions.
+
+### Project features
+- Analytical computation of takeoff distance
+- Numerical integration for validation
+- Comparison between analytical and numerical methods
+- Plotting acceleration and distance versus velocity
+- Unit conversion between **US** and **SI** systems
+- Object-oriented implementation using Python classes
+
+### Current status
+This project is currently under development and continuously improving.
+
+You can follow my latest updates and progress here.
+
+### Feedback
+If you notice any mistakes or have suggestions for improvement, feel free to contact me or open an issue.  
+All comments and feedback are welcome — they help improve the project.
+
+Thank you for your support.
+
+---
+**Author:** Friedly WOLI  
+Mechanical and Energetics Engineering Student — University of Toulouse
+
 - 🌊 **Fluid Mechanics**  
 - 🔥 **Heat Transfer**  
 - 🏗️ **Structural Mechanics** *(projects currently in progress)*  
