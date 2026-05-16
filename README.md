@@ -106,7 +106,7 @@ Additional projects will be progressively added, including:
 
 **Friedly WOLI**  
 Mechanical and Energetics Engineering Student  
-:contentReference[oaicite:2]{index=2}
+
 
 Thank you for visiting this repository.  
 Feedback, suggestions, and comments are always welcome.
