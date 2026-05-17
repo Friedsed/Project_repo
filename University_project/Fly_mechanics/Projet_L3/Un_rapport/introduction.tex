@@ -1,0 +1,291 @@
+% Chapter introduction
+\label{sec:introduction}
+% **********************************
+\section{Introduction}
+% **********************************
+
+Dans la vie d'un étudiant et d'un professionnel, on doit rédiger des rapports. \`A l'université on considère
+par défaut que l'étudiant doit apprendre par lui-même à faire celà en cherchant des exemples. Dans des universités
+étrangères cela fait partie d'un enseignement. 
+
+On peut s'apercevoir que au final, après 5 années d'études, peu savent préparer et rédiger un beau rapport ou un beau compte-rendu
+d'un travail donné.
+
+Il m'a semblé donc important de préparer un document assez complet, mais pas exhausitif rappelant les points essentiels,
+distribuables à tous les niveaux de la licence au master. 
+
+Ce document est rédigé sur la base de mon expérience dans l'écriture de cours,
+ de livres, d'articles, de rapports techniques.
+ Il prend aussi en compte  l'expérience acquise par des expertises très nombreuses de projets scientifiques ou d'articles pour des revues internationales.
+
+Enfin, mon expérience a été renforcée  au cours de ma carrière par la lecture  de centaines de rapports
+de stage ou de projets, et un grand nombre de thèses de doctorat.
+
+Enfin la lecture d'ouvrage de référence sur l'écriture de rapports joints dans la bibliographie a permis de compléter l'ensemble.
+ 
+Ce rapport en latex pourra servir d'exemple (templates) modifiable, mais les conseils donnés sont aisément transposables, 
+parfois même plus facilement dans d'autres types de logiciels comme MS Word ou OO Writer.
+Bien que  Latex présente des facilités  bien pratiques à l'écriture de rapport il n'est pas préféré au sein du monde industriel
+qui favorise largement MS Word. Rappelons que Latex est un logiciel libre et 
+donc privilégié à l'université et dans le monde de la recherche.
+ 
+Enfin pour clore cette section il faut préciser qu'on ne perd par plus de temps à faire bien les choses que de mal les faire.
+Même souvent c'est le contraire, car bien faire les choses amènent des questions utiles pour améliorer le contenu.
+
+
+% ********************************
+\section{Compétences à acquérir}
+% *******************************
+
+La vocation des Masters est de fournir aux étudiants des connaissances scientifiques et techniques et des compétences 
+dans le but de favoriser au mieux une future insertion professionnelle.
+ On peut y ajouter l'introduction des méthodologies de travail, des méthodes de pensées qui permettront d'aider à une
+ formation tout au long de la vie, en autonomie ou pas. 
+
+Il existe suivant les domaines scientifiques, d'ingénierie, de professions visées, 
+ un grand nombre de compétences à acquérir tout au long des études dans l'enseignement supérieure, 
+avec des niveaux  de difficultés progressifs.
+
+Une des plus importantes  compétences transversales,  commune  consiste à 
+ savoir rédiger correctement un rapport de qualité  qui est un document écrit en général archivé et donc transmissible.
+
+Le rapport est une trace, voir un signature de l'auteur qu'il laisse derrière lui,
+et qui met en avant ses compétences ou parfois son manque de compétence. 
+
+Les exigences en termes de qualité et de rendu ont augmenté progressivement au cours des années,
+ notamment à cause de l'arrivée d'outils informatiques très performants pour l'aide à l'écriture et à la publication.
+
+Il convient donc se de former, et d'apprendre en autonomie à rédiger un document de qualité. 
+
+Des recherches sur internet montrent que finalement on trouve très peu de documents qui indiquent clairement 
+aux étudiants comment rédiger un compte rendu de TP ou un rapport de stage ou de projet. 
+ 
+
+Un premier document a été rédigé  sur l'écriture d'un compte-rendu de TP.
+Je continue  cette démarche en proposant ce document sur la rédaction d'un rapport de projet ou de stage.
+
+Les documents ne sont pas parfaits et finalement présentent mon point de vue personnel.
+Certaines parties peuvent notamment être plus tournées vers la science ou l'ingénierie, et ne conviendront pas naturellement 
+à des rapports
+dans d'autres domaines comme la santé,  les sciences humaines, les sciences économiques ou le droit.
+
+J'espère  que ce document sera partagé, et que par des retours pourront  participer à son amélioration.
+
+
+On peut conclure cette section en rappelant quelques compétences à acquérir pour rédiger un rapport de qualité, au moins dans la forme:
+
+\begin{itemize}
+\item être capable de maîtriser un ou plusieurs  logiciels de publication (MS Word, OO Write, Latex). Cela inclus:
+	\begin{itemize}
+	\item le choix ou la définition d'un style global
+	\item l'ajout de tableaux ou de figures avec numérotation et titre
+	\item la gestion de haut et bas de page
+	\item la gestion d'une bibliographie avec référencement automatique, associée  à une  base de donnée bibliographique
+	\item la gestion de la mise en page (figures et tableau à la bonne position par exemple)
+	\end{itemize} 
+\item être capable d'utiliser (voir de maîtriser) des outils de traitement d'images (GIMP par exemple) et des outils de dessin vectoriel (INKSCAPE par exemple).
+       Des exemples sont données par la suite.
+\item être capable de rédiger dans un français correct (ou un anglais correct) 
+\item être capable d'organiser ses réflexions, ses analyses pour produire un document structuré 
+\item être en mesure d'utiliser les fonctions graphiques de logiciels ou de langage (Python, ...) afin de produire des figures de qualité
+\item \alert{A COMPLETER} 
+\end{itemize}
+
+
+
+%**********************
+\section{Les rapports}
+%**********************
+
+%****************************************
+\subsection{Différents types de rapport}
+%***************************************
+
+Pour un étudiant on peut considérer trois types de rapports:
+\begin{itemize}
+\item un compte-rendu de TP  qui est un petit rapport sur une activité très contrôlée et très formatée par un énoncé relativement précis qui sert de guide.
+En général le compte-rendu ne dépasse pas les 20 pages, et très souvent les 10 pages.
+\item un rapport de projet, scientifique ou technique. C'est un rapport plus libre qui doit mettre en avant un travail en autonomie d'un étudiant. 
+Sa longueur est entre 10 et 30 pages. 
+\item un rapport de stage. Ce dernier est une version améliorée d'un rapport de projet. La durée d'un stage est de plusieurs mois. Pour cette durée
+ on estime qu'une longueur d'une quarantaine de pages, hors annexes, est amplement suffisante.
+\end{itemize}
+
+La taille d'un rapport suivant son type  est rappelée dans le tableau \ref{table:report}. 
+La dernière ligne du tableau donne un élément de réflexion sur sa structure primaire, et donc la  possibilité d'utiliser
+ des chapitres qui ne sont pas nécessaires si le document contient trop peu de pages.
+
+\begin{table}[htb]
+\setstretch{1.2}
+\small
+\centering
+\begin{tabular}{p{2cm} p{4.5cm} p{4.5cm} p{4.5cm}}
+ \Xhline{2pt}
+type &   comte-rendu de TP  & rapport de projet &  rapport de stage \\ \Xhline{1pt}
+pages &  5 - 20              & 10 - 30          &  30 - 40 \\
+Chapitre & Non               & Peut-être        & Probable \\  \Xhline{2pt}
+\end{tabular}
+\caption{Longueur de différents rapports et existence de chapitre.}
+\label{table:report}
+\end{table}
+
+\textbf{Un certain nombre d'indications fournies dans le document sur la rédaction d'un compte-rendu de Travail Pratique\footnote{travail de laboratoire (labwork en anglais)} restent valables et sont reprises dans ce document.}
+
+
+%*******************************************************
+\subsection{Rapport scientifique ou rapport technique}
+%*******************************************************
+
+La différence majeure entre un rapport scientifique et un rapport technique 
+se situe dans le contenu.
+ Naturellement cela parfois se répercute  aussi sur la forme. 
+ Un rapport scientifique est beaucoup plus difficile à écrire et souvent plus long qu'un rapport technique.
+
+On va prendre un exemple classique dans le milieu de la recherche afin d'illustrer les différences fondamentales.
+
+%*********************************
+\subsubsection{Rapport technique}
+%*********************************
+
+Une entreprise contacte une équipe de recherche  pour mener des essais en soufflerie. 
+On doit effectuer voir concevoir le montage,  les essais et rédiger un rapport technique.
+Ce rapport décrit le montage, explique comment les essais ont été menés et fournit les résultats des essais 
+ainsi que des statistiques permettant d'évaluer les erreurs de mesure.
+
+Un rapport technique contient donc uniquement des données techniques, utilisables plus tard. 
+
+On peut y trouver parfois un peu de traitement de données (i.e sur les résultats).
+
+Il ne faut pas oublier cependant que certaines techniques ou objet technique 
+font appel à beaucoup de sciences, et ainsi la description des moyens de mesure employés peuvent
+demander des connaissances pointues. 
+
+
+%*********************************
+\subsubsection{Rapport scientifique}
+%*********************************
+
+Une entreprise contacte une équipe de rechercher 
+pour mener une étude aérodynamique sur le décollement de la couche limite (l'écoulement) autour d'un profil d'aile, en utilisant en partie les moyens
+expérimentaux à disposition, comme une soufflerie ou un canal hydrodynamique.
+
+On effectue le montage et les essais.
+ En plus de cela est fournie  une bibliographie sur la problématique qui requiert des connaissances scientifiques sur la problématique, et une capacité de synthèse.
+  Ensuite  des calculs de couche limite ou des simulations numériques sont effectuées.
+  Enfin on doit conduire un post-traitement des données expérimentales en les comparant aux résultats des simulations.
+ \'Eventuellement des codes plus ou moins important devront être écrits.   
+   Finalement on conclut ce travail en donnant des perspectives sur l'évolution du projet.
+
+On voit ici qu'il y a eu un travail scientifique sérieux qui a été effectué et qui doit être rédigé.
+Le rapport sera un rapport scientifique qui contiendra à la fois les aspects expérimentaux, la théorie, les simulations et toutes les analyses produites,
+ avec une conclusion sur les aspects scientifiques du problème.
+
+Un rapport scientifique peut se baser sur un rapport technique afin d'avoir des résultats de référence.
+
+
+%**********************************
+\subsection{Rapport de projet}
+%*********************************
+
+Dans l'industrie ou la recherche tout travail est lié à un projet
+ et donc le rapport de projet est une synthèse  partielle ou complète 
+ des actions menées dans le projet, concaténant des informations de rapports techniques et scientifiques éventuellement.
+ Il peut être complété par des informations ou des parties traitant des aspects organisationnels et économiques.
+
+\`A l'image de cela, un rapport de projet dans l'enseignement doit contenir un certain nombres d'informations assez similaires à celles d'un projet
+scientifique ou industriel.
+
+Une  thèse  de doctorat entre  dans cette catégorie.
+
+Cela sera discuté dans le chapitre \ref{cha:structure}. 
+
+
+%**********************************
+\subsection{Rapport de stage}
+%*********************************
+
+Un rapport de stage est formaté comme un rapport de projet. Quelques différences notables sont à ajourer:
+\begin{itemize}
+\item La page des remerciements est obligatoire, il faut remercier l'entreprise et les collègues qui vous ont aidés
+\item Il faut rajouter un chapitre ou une section de 2 à 4 pages qui décrit les activités de l'entreprise et la position du stagiaire au sein de l'entreprise
+\item Les attendues du stage doivent être indiquées dans l'introduction
+\item Il faut mettre en avant le travail effectué et les apports pour l'entreprise.
+\item Il faut éviter, comme dans tous les rapports, un plagiat en reprenant des pages entières de rapport des stagiaires
+ qui ont déjà travaillé sur une partie projet. Cela se voit facilement en général et donne une mauvaise impression au lecteur évaluateur.
+\end{itemize}
+
+% ************************************
+\subsection{Evaluation d'un rapport}
+% ************************************
+
+Un document écrit est toujours évalué sur deux aspects:
+
+\begin{itemize}
+\item \textbf{la forme} qui correspond à des choix éditoriaux, de style, de mise en forme du texte, des images, des figures et des sections. 
+Utiliser des items par exemple est un choix de style qui permet de mettre en évidence des points plus facilement.
+\item \textbf{le fond} 
+ qui  correspond au texte écrit, ou choix du contenu des figures,
+  des tableaux et  des équations présentées.
+  
+  Le fond couvre tout ce qui dépend  du sujet du rapport.
+\end{itemize}
+
+
+On pourrait  penser a priori que les deux aspects sont totalement découplés et donc en négliger un par rapport à l'autre.
+Dans la réalité, il est très rare d'avoir un bon fond quand la forme est très mauvaise. Quelqu'un qui a passé 
+du temps à produire un beau document a aussi 
+passé du temps à produire un travail scientifique de qualité.
+
+Dans la suite de ce document on parlera uniquement de la forme. 
+Le fond de ce document est de donner des lignes de conduite, des guides
+afin d'écrire un rapport de qualité sur la forme.
+
+
+%*****************************************
+\section{Outils utilisés pour ce rapport}
+%****************************************
+
+Ce rapport a été écrit avec Latex, en choisissant la langue anglaise (ce qui explique que les noms des grandes structures soient en anglais).
+Les figures sont souvent générées ou retravaillées avec Inkscape et les courbes sont obtenues en Python.
+La bibliographie fait appel à Bibtex et peut être modifiée par exemple avec Jabref. Tous ces outils sont gratuits et sur toutes les plateformes
+logiciels habituelles.
+
+
+%**********************************
+\section{Contenu de l'introduction}
+%**********************************
+
+\Important{A mettre plus loin ?}
+
+Une bonne introduction est fondamentalement importante pour donner envie au lecteur de lire la suite. C'est le premier regard sur le document, il est 
+donc déterminant. 
+
+Il est courant de dire que l'introduction doit être écrite en dernier. Elle doit être relativement courte (au plus 4 ou 5 pages)
+
+Elle  permet d'amener le contexte général et la motivation du projet
+notamment en indiquant des applications possibles.
+
+Ensuite elle propose les  objectifs à atteindre 
+et  la démarche et les méthodologies employées pour les atteindre.
+
+Enfin  elle expose les résultats attendus.
+
+Des éléments bibliographiques doivent étayer les informations fournies.
+
+L'introduction finalement se conclut en présentant la structure
+du document, qui naturellement doit suivre globalement la table des matières. 
+
+Contrairement à ce qui est présenté ici, une introduction peut ne pas contenir de section, mais uniquement un texte avec des paragraphes.
+
+Voici un exemple d'une fin d'introduction qui concerne ce document par ailleurs:
+
+\vs{1.5}
+
+\textit{Le document décrit d'abord dans le chapitre 2 la structure d'un rapport, avec 
+les éléments nécessaires et ceux optionnels qui sont présents en fonction du contexte. 
+Le chapitre 3 aborde le format des éléments importants d'un document et 
+quelques points sur le style. 
+Le chapitre 4 est plus focalisé sur le contenu propre à chaque chapitre. 
+Des conclusions et perspectives sont données dans le chapitre suivant. Un exemple de bibliographie suit le chapitre 5. 
+Le document se termine par un exemple d'annexe.
+}

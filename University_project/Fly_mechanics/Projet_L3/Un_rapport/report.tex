@@ -1,0 +1,226 @@
+\documentclass[12pt]{report}                 % hauteur des fontes (11 ou 12 pt), on peut ajouter d'autres options
+                                             % on indique aussi le type de document (paper, report, thesis, ...)
+% Ajout des packages : il en existe de très nombreux. 
+% la liste ici est assez minimaliste.
+
+% IL EST CONSEILLE D'APPELER LE FICHIER PRINCIPAL "main.tex" ou bien un nom très simple explicite (ici report.tex)
+
+\usepackage[english]{babel}                  % choix ce la langue
+%
+%  choix de la fonte:
+%\usepackage{times}
+\usepackage{palatino}
+% sinon fonte par défaut
+\usepackage[T1]{fontenc}
+
+\usepackage{setspace}                           % gestion de l'interligne%\usepackage{floatflt,fancyheadings}
+\usepackage{fancyhdr}                           % présentation de la page (bas , haut, numéros, etc ...)
+\usepackage{amssymb,amsmath}                    % symbôles mathématiques 
+\usepackage{empheq}                             % complément à amsmath pour améliorer les équations (subequations)
+\usepackage{float}                              % Positionnement des figures
+\usepackage{graphicx,caption}                   % fogures, graphiques, légendes
+%\usepackage{psfig,epsfig,epsf}                 % pour gérer les fichiers postscript (éviter de les utiliser)
+\usepackage{color}                              % gestion des couleurs, attention, interférences avec package xcolor
+\usepackage{mdframed}                           % pour faire de jolies encadrements
+\usepackage[most]{tcolorbox}                    % Pour ajouter de la couleur dans les encadrements
+\usepackage{makecell}                           % Pour améliorer le rendu des tableaux
+
+\bibliographystyle{acm}                         % gestion du rendu de la bibliographie. Peut être mis dans le corps du fichier
+
+% gestion de la géométrie de page, en pouces et mm
+\hoffset=-1in                                   % décalage horizontal
+\voffset=-1.5in                                 % décalage vertical
+\topmargin=15mm                                 % marge supérieure 
+\headheight=5mm                         
+\headsep=15mm
+\textheight=240mm                               % taille de la page où on peut écrire
+\oddsidemargin=15mm                             % marge des pages impaires
+\evensidemargin=15mm                            % marge des pages paires
+\textwidth=180mm                                % largeur de la page où on peut écrire 
+\pagestyle{headings}                            % style de la page (cf fancyhdr)
+
+
+%    COMMANDES GENERALES PERSONNELLES
+
+\renewcommand{\textfraction}{.10}
+% mathématiques:
+\newcommand{\derp}[2]{ \frac{ \partial #1 }{ \partial #2}}
+\newcommand{\der}[2]{ \frac{ d #1 }{ d #2}}
+\newcommand{\dsp}{\displaystyle}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\degree}{\ensuremath{^\circ}}
+% tailles de fontes
+\newcommand{\sr}{\scriptsize}
+\newcommand{\st}{\tiny}
+% style et espacements
+\newcommand{\itemb}{\item [$\bullet$]}
+\newcommand{\vs}[1]{\vspace{ #1 cm}}
+\newcommand{\hs}[1]{\hspace{ #1 cm}}
+% couleurs
+\newcommand{\rouge}[1]{\textcolor{red}{ \it  #1}}
+\newcommand{\bleu}[1]{\textcolor{blue}{ \it  #1}}
+\newcommand{\gris}[1]{\textcolor{gray}{ \it  #1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\alert}[1]{\textcolor{red}{ \bf  #1}}   % en référence à Beamer, pour mettre en valeur
+
+
+% Cadres colorés avec messages:
+\newcommand{\todo}[1]{\tcbset{colback=red!5!white,colframe=red!85!black,
+code={},
+fonttitle=\bfseries}
+\begin{tcolorbox}[code={},
+title= To do]
+#1
+\end{tcolorbox}
+}
+\newcommand{\Note}[1]{\tcbset{colback=red!5!white,colframe=green!65!black,
+code={},
+fonttitle=\bfseries}
+\begin{tcolorbox}[code={},
+title= Note]
+#1
+\end{tcolorbox}
+}
+\newcommand{\Attention}[1]{\tcbset{colback=red!30!white,colframe=blue!50!red,
+code={},
+fonttitle=\bfseries}
+\begin{tcolorbox}[code={},
+title= Attention]
+#1
+\end{tcolorbox}
+}
+\newcommand{\Important}[1]{\tcbset{colback=red!10!white,colframe=blue!50!red,
+code={},
+fonttitle=\bfseries}
+\begin{tcolorbox}[code={},
+title= Important]
+#1
+\end{tcolorbox}
+}
+\newcommand{\Def}[2]{\tcbset{colback=blue!10!white,colframe=green!70!white,coltitle=black,
+code={},
+fonttitle=\bfseries}
+\begin{tcolorbox}[code={},
+title= Definition : #1]
+#2
+\end{tcolorbox}
+}
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!30, boxrule=1pt,
+    #1}
+
+% Dossiers par défaut contenant les figures (TRES IMPORTANT)
+\graphicspath{{Figures/},} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                    DEBUT DU DOCUMENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% créer une page spécifique pour le titre
+\input{./title_page.tex}
+\cleardoublepage  
+\pagenumbering{roman}   % numérotation des pages avant l'introduction
+
+\setcounter{page}{1}
+\setcounter{secnumdepth}{3}        
+\setcounter{tocdepth}{4}       % pour définir la profondeur du sommaire  
+
+% Tables des matières, ajouter le nom en haut de la page
+\markboth{{Table des mati\`eres}}{}
+\markright{{Table des mati\`eres}}
+\tableofcontents
+% 
+\cleardoublepage
+
+% ajout des noms du chapitre en haut de page
+\renewcommand{\chaptermark}[1]{\markboth{{\thechapter.\ #1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{{\thesection.\ #1}}}
+
+% ajout du résumé (recommandé en français et anglais)
+\addcontentsline{toc}{chapter}{Résumé}
+%*******************
+\section*{Résumé}
+%*******************
+%\input{resume}
+
+% ajout d'une nomenclature (optionnel)
+\addcontentsline{toc}{chapter}{Nomenclature}
+%***********************
+\chapter*{Nomenclature}
+%**********************
+\input{nomenclature}
+\cleardoublepage
+
+% ajout d'une liste des figures (optionnel)
+\listoffigures
+\cleardoublepage
+
+% ajout d'une liste des tableaux (optionnel)
+\listoftables
+\cleardoublepage
+
+% Numérotation des pages en chiffres classiques,réinitialisaiton à 1.
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1} 
+
+% On ajoute maintenant les sections oo les chapitres,
+% dans des fichiers spécifiques. Plus facile à gérer.
+
+% ********************************
+\chapter{Introduction}
+% *******************************
+\input{introduction}
+
+% ********************************
+\chapter{La structure}
+% *******************************
+\label{cha:structure}
+\input{structure}
+
+% ********************************
+\chapter{Le format et le style}
+% *******************************
+\input{format}
+
+% ********************************
+\chapter{Le contenu}
+% *******************************
+%\input{contenu}
+
+%*********************************
+\chapter{Conclusions, perspectives}
+%*********************************
+%\input{conclusions}
+
+% une façon de faire apparaitre toute la bibliographie
+\cite{*}
+
+% on finit par une ligne horizontale pour indiquer que c'est la fin ... (optionnel)
+\hrule height 0.5 mm 
+
+\vs{0.5}
+
+% ajout de la bibliographie (obligatoire)
+
+\addcontentsline{toc}{chapter}{Bibliographie}
+\markboth{{Bibliography}}{}
+\markright{{Bibliography}}{}
+\bibliography{biblio_reporting}
+
+% Ajout des annexes (optionnel)
+%*********************************
+\chapter{Annexes}
+%*********************************
+%\input{annexes}
+
+\end{document}
+
+% Tout ce qui est écrit après end{document} ne sera pas pris en compte.
+

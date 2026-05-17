@@ -1,0 +1,46 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Résumé}{iii}{}%
+\contentsline {chapter}{Nomenclature}{iii}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{}%
+\contentsline {section}{\numberline {1.2}Compétences à acquérir}{1}{}%
+\contentsline {section}{\numberline {1.3}Les rapports}{3}{}%
+\contentsline {subsection}{\numberline {1.3.1}Différents types de rapport}{3}{}%
+\contentsline {subsection}{\numberline {1.3.2}Rapport scientifique ou rapport technique}{3}{}%
+\contentsline {subsubsection}{\numberline {1.3.2.1}Rapport technique}{3}{}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Rapport scientifique}{4}{}%
+\contentsline {subsection}{\numberline {1.3.3}Rapport de projet}{4}{}%
+\contentsline {subsection}{\numberline {1.3.4}Rapport de stage}{4}{}%
+\contentsline {subsection}{\numberline {1.3.5}Evaluation d'un rapport}{5}{}%
+\contentsline {section}{\numberline {1.4}Outils utilisés pour ce rapport}{5}{}%
+\contentsline {section}{\numberline {1.5}Contenu de l'introduction}{5}{}%
+\contentsline {chapter}{\numberline {2}La structure}{7}{}%
+\contentsline {section}{\numberline {2.1}Introduction}{7}{}%
+\contentsline {section}{\numberline {2.2}Un rapport structuré}{7}{}%
+\contentsline {section}{\numberline {2.3}Numérotation des pages}{9}{}%
+\contentsline {section}{\numberline {2.4}Page de titre}{9}{}%
+\contentsline {section}{\numberline {2.5}Sommaire }{9}{}%
+\contentsline {section}{\numberline {2.6}Nomenclature}{10}{}%
+\contentsline {section}{\numberline {2.7}Introduction - Conclusions}{11}{}%
+\contentsline {subsection}{\numberline {2.7.1}Introduction}{11}{}%
+\contentsline {subsection}{\numberline {2.7.2}Conclusion}{11}{}%
+\contentsline {section}{\numberline {2.8}Bibliographie}{11}{}%
+\contentsline {section}{\numberline {2.9}Les annexes}{12}{}%
+\contentsline {section}{\numberline {2.10}Les remerciements}{13}{}%
+\contentsline {chapter}{\numberline {3}Le format et le style}{14}{}%
+\contentsline {section}{\numberline {3.1}Introduction}{14}{}%
+\contentsline {section}{\numberline {3.2}Mise en forme}{15}{}%
+\contentsline {section}{\numberline {3.3}style}{15}{}%
+\contentsline {subsection}{\numberline {3.3.1}Hauteur du texte, aération, couleur}{15}{}%
+\contentsline {section}{\numberline {3.4}Présentation et mise en forme des éléments importants}{16}{}%
+\contentsline {subsection}{\numberline {3.4.1}Equations et symbôle mathématiques}{16}{}%
+\contentsline {subsection}{\numberline {3.4.2}Figures}{18}{}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}Figures en général}{18}{}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}Graphiques scientifiques}{19}{}%
+\contentsline {subsection}{\numberline {3.4.3}Table, tableaux}{21}{}%
+\contentsline {section}{\numberline {3.5}Styles spéciaux}{23}{}%
+\contentsline {section}{\numberline {3.6}Conclusion}{23}{}%
+\contentsline {chapter}{\numberline {4}Le contenu}{24}{}%
+\contentsline {chapter}{\numberline {5}Conclusions, perspectives}{25}{}%
+\contentsline {chapter}{Bibliographie}{25}{}%
+\contentsline {chapter}{\numberline {6}Annexes}{27}{}%

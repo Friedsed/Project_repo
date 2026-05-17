@@ -1,0 +1,115 @@
+% Equations
+
+On utilise très souvent des équations ou des symbôles mathématiques  dans un document scientifique. 
+Il suffit d'ouvrir  un livre ou un article pour voir de bons exemples. 
+
+Il faut distinguer différentes configurations lorsqu'on introduit des équations ou bien des symbôles mathématiques:
+
+\begin{itemize}
+\item les équations sont au milieu du texte
+\item les équations sont séparées du texte
+\end{itemize}
+
+
+
+Observer l'exemple suivant:
+
+
+\textit{
+L'accélération $a$ est définie comme la dérivée de la vitesse $v$ par $a = \dot v$. On peut aussi l'écrire sous la forme
+$a = dv/dt$ ou bien $a = \frac{dv}{dt}$. Finalement on peut préférer la forme $a =\dfrac{dv}{dt}$ ou bien $\dsp v = \int a(t) dt$.
+Si on l'écrit sur une ligne à part on a alors:
+}
+
+\begin{equation}
+\dsp a = \der{v}{t}
+\label{eq:acceleration}
+\end{equation}
+
+
+
+Séparer l'équation met en évidence une relation spécifique très utile à connaître. L'équation au milieu du texte correspond plus à
+un rappel d'une définition ou d'une quantité déjà bien connue. Le choix de la hauteur de la formule joue un rôle sur sa mise en valeur
+et sa lisibilité au milieu du texte en modifiant ou pas l'interlignage.
+
+Il est plutôt préconisé de choisir la même hauteur que le texte pour les relations mélangées à celui-ci.
+ 
+
+
+
+
+Quelques recommandations très simples 
+
+\begin{itemize}
+\item Centrer les équations sur une ligne
+\item Aligner sur le signe = quand il y a plusieurs équations
+\item Bien gérer les espacements horizontaux et verticaux
+\item Numéroter uniquement les équations que vous appellerez dans le texte
+\item Quand on fait des développements avec des détails, préférer les mettre dans un annexe et ne mettre dans le corps du texte qu'un ou deux étapes (aucune évidente, comme les simplifications basiques)
+\item On encadre rarement les équations, mais parfois cela fait partie du style du document, pour celles qui sont vraiment importantes.
+\end{itemize}
+
+On pourra donc analyser la mise en forme des équations suivantes, présentées de la meilleure façon à la pire.
+
+\begin{equation}
+\dsp
+x (t) ~=~\dfrac{1}{2}~\textrm{e}^{k t}~\sin\omega t, \qquad \der{x}{t}~=~\dfrac{1}{2}~ \rm{e}^{k t}~(k~\sin \omega t~-~\omega~\cos\omega t)
+\label{eq:xv1}
+\end{equation}
+
+
+\setstretch{2}
+\begin{eqnarray}
+\dsp
+x (t) &=&\dfrac{1}{2}~\textrm{e}^{k t}~\sin\omega t \label{eq:xv2a} \\
+\dsp \der{x}{t}&=& \dfrac{1}{2}~ \rm{e}^{k t}~(k~\sin \omega t~+~\omega~\cos\omega t)
+\label{eq:xv2b}
+\end{eqnarray}
+\setstretch{1}
+
+\begin{equation}
+\begin{array}{l}
+x(t) = 1/2 \textrm{e}^{k t} \sin\omega t\\
+\der{x}{t}=\frac{1}{2}\rm{e}^{k t}(k~\sin \omega t+\omega\cos\omega t)
+\end{array}
+\label{eq:xv3}
+\end{equation}
+
+\begin{equation}
+x(t) = e^{k t} sin(\omega t)/2,   \der{x}{t}=e^{k t}(k sin \omega t+\omega\cos\omega t) / 2
+\label{eq:xv4}
+\end{equation}
+
+Commentons:
+
+\begin{itemize}
+\item Pour l'équation \eqref{eq:xv1}:
+	\begin{itemize}
+	\item on a mis des espaces avant et après le signe "=" et avant les fonctions $\cos$ et $\sin$
+    \item les fonctions sont en lettres romanes alors que les variables sont en italiques
+    \item On n'a enlevé les parenthèses évidentes dans le cosinus et le sinus.	
+    \item On a mis les deux équations sur une seule ligne, car cela correspond à une définition d'une fonction et de sa dérivée temporelle, mais l'espacement
+    entre les deux équations est suffisamment important pour les mettre en évidence.
+	\end{itemize}
+\item La forme de la seconde équation \eqref{eq:xv1} est aussi très correcte.
+  En plus du cas précédent on a ajouté des numéros à chaque équation, et elles sont
+alignées sur le signe "=". On a aussi augmenté l'interlignage pour une meilleure lisibilité.
+
+La numérotation pourrait aussi être de la forme 3.3a et 3.3b. Mais ce n'est pas absolument nécessaire.
+
+\item L'équation \eqref{eq:xv3} n'est pas très belle. Le facteur 1/2 est écrit de deux façons différentes, les signes "=" ne sont pas alignés,  la dérivée 
+et le facteur 1/2 apparaîssent  tout petit. Enfin la gestion des espacements est aléatoire.
+
+\item La dernière équation est peu lisible et les fonctions apparaissent en italique comme les variables. Le facteur multiplicateur 1/2 apparaît à la fin. En général
+on met les constantes au début de l'équation.
+\end{itemize}
+
+
+Enfin \textbf{il faut respecter les règles des mathématiques} en mettant des parenthèses quand c'est nécessaire.
+ On trouve trop souvent l'erreur 
+$f = \omega~/~2~\pi$ au lieu de $f = \omega~/~(2~\pi)$. La première écriture signifie mathématiquement $f = 0.5~\omega~/~\pi$
+et elle est totalement fausse pour le lien entre pulsation et fréquence. 
+
+
+
+

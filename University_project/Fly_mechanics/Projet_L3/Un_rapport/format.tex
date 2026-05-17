@@ -1,0 +1,268 @@
+% chapter format et style
+
+%***********************
+\section{Introduction}
+%***********************
+
+
+\rouge{
+Ce présent document est écrit avec Latex (outil texmaker), avec le choix du langage anglais ce qui explique les titres les noms en anglais pour chapitre ou liste des tableaux. C'est très facilement modifiable.
+Dans l'idéal ce document devrait être écrit en anglais car beaucoup d'entreprise exige des rapports uniquement en anglais, pour diffusion dans les filiales
+internationales ou vers les clients ou les autorités de certifications internationales.
+}
+
+
+
+Il faut lorsqu'on rédige un document distinguer ce qui concerne le format de ce qui concerne le style.
+
+On peut le voir assez facilement dans les logiciels de traitement de texte car ces deux notions se retrouvent dans deux menus différents, mais aussi parce qu'il est
+très souvent possible de trouver des documents pré-formatés, ou avec des styles spécifiques. On parle de "templates" en anglais.
+
+
+Le format concerne pour l'essentiel:
+\begin{itemize}
+\item La taille du document (A3, Bx, format américain)
+\item La taille des marges droites/gauches, haut/bas
+\item la taille des images, des figures, des tableaux, etc ...
+\item l'interlignage (espacement entre les lignes)
+\item la présence et la position des numéros de page
+\item la présence d'informations prédéfinies dans la haut et le pied de page
+\end{itemize}
+Le format fait essentiellement référence à de la géométrie. 
+
+
+\vs{0.5}
+
+Le style concerne pour l'essentiel:
+
+\begin{itemize}
+\item Le choix des types de fontes, leur taille pour un chapitre, une section, un paragraphe, le corps du texte
+\item Les couleurs
+\item l'ajout d'éléments de mise en valeur (cadre, traits épais de séparation, ...)
+\item Le choix de l'écriture des légendes de figures et de tableaux,
+\item la façon de présenter les équations, leur numérotation
+\end{itemize}
+
+
+
+
+%************************
+\section{Mise en forme}
+%************************
+
+
+
+
+
+
+
+
+\begin{figure}[h]
+  \begin{center}
+  \input{Figures/configurations.pdf_tex}
+  \caption{ Wind turbine rotor and propeller stream tube.}
+  \label{fig:configs}
+  \end{center}
+\end{figure}
+
+
+
+ 
+
+
+
+\section{style}
+
+
+% **********************************************
+\subsection{Hauteur du texte, aération, couleur}
+% **********************************************
+
+Le premier coup d'oeil sur un document va tout de suite donner envie de le lire ou 
+de ne pas le lire. Pour cela il faut respecter quelques données de base:
+\begin{itemize}
+\item Le document doit posséder des marges (haut, bas, droite, gauche) respectables, mais sans exagération, couramment de 1 à 2 cm.
+
+\item La taille du texte doit être 11 ou 12 points. 
+10 points est une taille trop petit pour un document, c'est fatiguant à la lecture sur papier et mauvais pour les yeux. 14 points voir plus donne l'impression qu'on a essayé  d'allonger le rapport en augmentant la taille du texte.
+
+\item L'écartement entre les lignes qu'on appelle interligne est toujours à la base de 1. Si on n'imprime pas le document, il faut mieux l'augmenter à 1.25 ou 1.5. Le document devient beaucoup plus lisible et donc appréciable. On peut passer localement à 2, par exemple pour les tableaux.
+
+\item Le texte à l'intérieur des paragraphes soit être justifié c'est-à-dire qu'il doit prendre toute la largeur de la page sans les marges.
+ C'est une option basique de tous les éditeurs de texte.\footnote{Des spécialistes indiquent qu'en fait c'est mauvais pour les dysléxiques et propice à se tromper de ligne, par rapport à des lignes irrégulières.}
+ 
+\item On évite les demi-pages ou 1/4 ou 3/4 de pages blanches. Donc on ne change pas de page à chaque section.
+
+\item On peut ajouter de la couleur dans un document, mais il faut mieux choisir un thème ou une couleur fondamentale et la déclinée plus ou moins foncée ou claire. Il faut éviter d'en ajouter de trop pour éviter l'effet arc-en-ciel.
+
+\item Autrement on peut utiliser les fontes \textbf{épaisses (bold)} et \textit{italique} si on veut mettre un mot ou un morceau de phrase en valeur.
+
+\item \texttt{Changer de fonte} peut aussi être un bon moyen.
+\end{itemize}
+
+% ***************************************************************
+\section{Présentation et mise en forme des éléments importants}  
+% **************************************************************   
+
+Trois éléments se retrouvent systématiquement dans un rapport scientifique:
+des équations, des figures et des tableaux.
+
+Leur présentation suit des règles relativement strictes. 
+
+
+
+% *********************************************
+\subsection{Equations et symbôle mathématiques}
+% **********************************************
+
+\input{equations}
+
+     
+% **************************
+\subsection{Figures}
+% **************************
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics{Figures/architecture.png}
+\caption{Exemple de figure: architecture du projet}
+\label{fig:2}
+\end{center}
+\end{figure}
+
+Des figures très soignées ou très jolies impressionnent toujours le lecteur.
+
+Il faut pour cela apprendre à maîtriser les options graphiques des langages comme Matlab ou Python.
+
+ Encore mieux, pour les plus experts, il faut savoir utiliser des logiciels de traitement d'images, comme GIMP par exemple, et des logiciels graphiques vectoriels comme Inkscape. Ces deux logiciels permettent de faire des choses très complexes comme introduire du texte ou des équations dans une figure ou images, ou de superposer des graphes à des images, ou d'autres choses plus complexes. Il faut du temps pour apprendre ces logiciels, mais c'est un investissement rentable pour toute la carrière, en plus des études. 
+
+\subsubsection{Figures en général}
+
+Il existe trois types génériques de figures:
+\begin{itemize}
+\item des dessins qui illustrent quelque chose, une géométrie, une configuration, une expérience, des mesures,  etc ...
+\item des images
+\item des graphiques contenant des représentations de résultats numériques sous différentes formes.
+\end{itemize}
+
+Parfois une figure est un mélange des trois cas.
+
+Pour tous ces types la figure doit :
+\begin{itemize}
+\item avoir un numéro  (souvent automatique avec les éditeurs de texte)
+\item avoir une légende qui indique clairement le contenu de la figure. La légende peut aller jusqu'à 4 ou 5 lignes parfois, si elle est très descriptive
+\item  être centrée sur la largeur de page
+\item  avoir une hauteur de 3 à 7 cm. Exceptionnellement elle peut prendre une moitié ou une hauteur totale de page, notamment quand une figure est composé de plusieurs sous-figures.
+\item avoir une bonne définition en pixels. Attention aux copies d'écran ou aux images basses définitions qu'on récupère à droite ou à gauche, et qui donne au final un rendu flou
+\item respecter le rapport d'aspect de la figure ou image originale. Le rapport d'aspect est le rapport hauteur/largeur. Sinon l'image à l'air d'être étirée dans une direction, ce qui donne un rendu affreux
+\item  avoir des  textes  lisible sà l'échelle  100\%, surtout  s'ils sont importants pour comprendre la figure.
+\item être positionnée judicieusement dans le document, c'est-à-dire proche de l'endroit où on la décrit. Si ce n'est pas possible, cela indique qu'il n'y a pas assez de commentaires sur les figures et que certaines sont inutiles ou à positionner dans une annexe. 
+Deux autres conseils peuvent être donnés:
+\begin{itemize}
+\item En général on préfère mettre une figure en haut de page ou vers le milieu. 
+\item On évite d'avoir une ligne ou deux de texte entre des figures, car en général le lecteur ne les verra pas.
+\end{itemize}
+
+
+\end{itemize}
+
+\subsubsection{Graphiques scientifiques}
+
+Pour les figures représentant des nombres, des fonctions ou  des isolignes ou autre,  il faut veiller à:
+\begin{itemize}
+\item avoir une légende sur l'axe des abscisses et très très souvent aussi sur l'axe des ordonnées
+\item avoir une bonne visibilité des courbes. Cela implique un choix de couleurs, d'épaisseurs ou de taille de symbôles judicieux. 
+\item éviter la surcharge de courbe. Au-delà de quelques courbes (3 à 5) on ne voit plus rien sur une figure, sauf si les courbes sont étagées. 
+\item avoir une légende pour chaque courbe quand il y en a plusieurs
+\item avoir l'échelle des couleurs quand on a des isobarres ou l'échelle des valeurs si possible, quand on a des isolignes.
+\item avoir une taille de fonte lisible pour  des nombres et les textes
+ sur les axes des abscisses, des ordonnées pour le  titre et les légendes
+\item ajouter des lettres lorsqu'on a des sous-figures. Des hauteurs des sous-figures doivent rester décentes (supérieures à 1.5 ou 2 cm). 
+\item ce que les échelles sur les deux axes soient choisies judicieusement de manière à ce que le graphique remplisse globalement le cadre. 
+\item choisir correctement les axes, en semi log ou log-log ou échelles linéaires
+en faisant attention aux signes des valeurs naturellement.
+\item  ajouter une grille bien définie si on souhaite prendre des valeurs sur les courbes
+
+\item comparer correctement des résultats lors de validation. On doit avoir par exemple quand c'est possible la courbe résultat et la courbe de référence sur le même graphe, et pas sur deux graphes côte à côte. Lors qu'on est obligé de comparer deux figures côte à côte il faut respecter les dimensions des figures, et avoir des valeurs identiques sur les deux axes, avec une grille.
+\end{itemize}
+
+Enfin, quand on fait un commentaire sur une figure, on doit \textbf{faire référence au numéro de la figure}. Le commentaire doit faire quelques lignes. La première chose est de décrire ce qui est représenté. Ensuite on commente les tendances, les variations, les points particuliers (maximun, minimun, discontinuités, ...)
+
+Voici un exemple de commentaire :
+
+La figure \ref{fig:1} représente l'expérience sur un anneau tourbillonnaire (a), un exemple de visualisation à un instant donné(b), et enfin une reconstruction 
+de l'anneau tourbillonnaire dans un plan. ... bla bla ...
+
+\bleu{On peut remarque que les nombres sur la figure (c) ont été agrandis et que les épaisseurs des traits sur toutes les figures ont été forcés.}
+
+Deux remarques lorsqu'on veut conserver un graphe pour un rapport ou une présentation:
+
+\begin{itemize}
+\item En général dans tous les langages classiques comme Python ou Matlab, les épaisseurs des traits et les hauteurs des nombres par défaut sont optimisées pour la visualisation sur un écran (de grande dimension). Pour une sauvegarde et
+une introduction dans un rapport il faut toujours définir les hauteurs et épaisseurs dans le programme et ne pas se contenter des valeurs par défaut. Il faut aussi tenir compte de la possible réduction de l'image dans le document.
+
+\item En toute logique, pour une présentation orale des résultats il faut
+refaire des figures spécifiques en augmentant encore la hauteur des textes et l'épaisseur des traits pour améliorer la visibilité via un vidéo-projecteur.
+\end{itemize} 
+
+Les figures doivent apparaître dans l'ordre où elles sont nommées. Par exemple ici, je me suis trompé  volontairement en parlant d'abord de la figure \ref{fig:1}
+alors que la première à apparaître est la figure \ref{fig:2}.
+
+
+ 
+\begin{figure}[htb]
+\input{Figures/experiment.pdf_tex}
+\caption{Vortex ring experiment and results \cite{Albagnac}, a) experimental set-up,b) example of picture, c) example of the velocity field.}
+\label{fig:1}
+\end{figure}
+
+
+ 
+
+
+%**************************
+\subsection{Table, tableaux}
+%*************************
+
+
+ 
+ 
+ 
+
+
+\input{table_examples}
+
+
+
+
+
+
+ 
+ 
+
+% *******************************************************
+\section{Styles spéciaux}
+% *******************************************************
+
+En fonction du contexte on peut appliquer des styles spéciaux pour mettre en avant 
+des choses importantes. Il faut rester malgré tout sobre.
+
+  
+
+\Attention{Message d'avertissement avec une mention en anglais.}
+
+ 
+  \Important{Il faut absolument éviter le plus possible les fautes de grammaire et d'orthographe ainsi que les erreurs typographiques.
+  
+  Pour cela il faut :
+  \begin{itemize}
+  \item utiliser les dictionnaires intégrés au logiciel de publication
+  \item relire le rapport plusieurs fois, en laissant du temps (heures, jours) entre les lectures.
+  \end{itemize}
+  
+  }
+  
+  
+
+
+\section{Conclusion}

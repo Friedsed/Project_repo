@@ -1,0 +1,86 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'disk_rotor_scheme.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{510.23622047bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.31111111)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{disk_rotor_scheme.pdf}}%
+    \put(0.0090795,0.09687082){\color[rgb]{1,0,0}\rotatebox{15.1704431}{\makebox(0,0)[lb]{\smash{$V_0(r)$}}}}%
+    \put(0.48562992,0.26297637){\color[rgb]{1,0,0}\rotatebox{15.1704431}{\makebox(0,0)[lb]{\smash{$V_1(r)$}}}}%
+    \put(0.31823789,0.21227521){\color[rgb]{1,0,0}\rotatebox{15.1704431}{\makebox(0,0)[lb]{\smash{$U_x(r)$}}}}%
+    \put(0.36823393,0.1043994){\color[rgb]{0,0,0}\rotatebox{5.17044332}{\makebox(0,0)[lb]{\smash{$d~S$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{disk_rotor_scheme.pdf}}%
+    \put(0.31136845,0.04660803){\color[rgb]{0,0,0}\rotatebox{5.17044332}{\makebox(0,0)[lb]{\smash{$S$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{disk_rotor_scheme.pdf}}%
+    \put(0.2969357,0.10505268){\color[rgb]{0,0,0}\rotatebox{5.17044332}{\makebox(0,0)[lb]{\smash{$r$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{disk_rotor_scheme.pdf}}%
+    \put(0.33187846,0.17817137){\color[rgb]{0,0,0}\rotatebox{5.17044332}{\makebox(0,0)[lb]{\smash{$R$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{disk_rotor_scheme.pdf}}%
+    \put(0.18326024,0.24659831){\color[rgb]{0,0,0}\rotatebox{5.17044318}{\makebox(0,0)[lb]{\smash{blade}}}}%
+    \put(0.26558028,0.0119367){\color[rgb]{0,0,0}\rotatebox{1.77211799}{\makebox(0,0)[lb]{\smash{rotor}}}}%
+    \put(0.32618255,0.00664896){\color[rgb]{0,0,0}\rotatebox{0.19207799}{\makebox(0,0)[lb]{\smash{section}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{disk_rotor_scheme.pdf}}%
+    \put(0.51272124,0.22457336){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_0$}}}%
+    \put(0.93041098,0.26821794){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1$}}}%
+    \put(0.73847879,0.23650467){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p^+$}}}%
+    \put(0.69644548,0.23072505){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p^-$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{disk_rotor_scheme.pdf}}%
+    \put(0.77158013,0.18553918){\color[rgb]{1,0,0}\makebox(0,0)[lb]{\smash{$U_x$}}}%
+    \put(0.95683122,0.23931139){\color[rgb]{1,0,0}\makebox(0,0)[lb]{\smash{$V_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{disk_rotor_scheme.pdf}}%
+    \put(0.58028396,0.21993884){\color[rgb]{1,0,0}\makebox(0,0)[lb]{\smash{$V_0$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{disk_rotor_scheme.pdf}}%
+    \put(0.69997297,0.0830833){\color[rgb]{0,0,0}\rotatebox{89.99999963}{\makebox(0,0)[lb]{\smash{$r$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{disk_rotor_scheme.pdf}}%
+    \put(0.68058684,0.23645089){\color[rgb]{0,0,0}\rotatebox{89.99999963}{\makebox(0,0)[lb]{\smash{$dr$}}}}%
+    \put(0.95449668,0.02193478){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
+    \put(0.69591883,0.30005529){\color[rgb]{0,0,0}\rotatebox{1.77211799}{\makebox(0,0)[lb]{\smash{rotor section}}}}%
+    \put(0.76306558,0.23663004){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{disk_rotor_scheme.pdf}}%
+  \end{picture}%
+\endgroup%

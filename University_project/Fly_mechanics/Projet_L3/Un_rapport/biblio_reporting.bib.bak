@@ -1,0 +1,64 @@
+@Book{Lebrun2007,
+  author    = {Lebrun, J. L.},
+  publisher = {EDP Science},
+  title     = {Guide pratique de la rédaction scientifique},
+  year      = {2007},
+  isbn      = {978-2-866883-904-6},
+  file      = {:D\:/Bibliotheque_livres/Reporting/Guide pratique de rédaction scientifique  Comment écrire pour le lecteur scientifique international by Jean-Luc Lebrun (z-lib.org).pdf:PDF},
+  keywords  = {Reporting},
+}
+
+@Book{Hering2010,
+  author    = {Hering, H.},
+  publisher = {Springer},
+  title     = {{How to Write Technical Reports}},
+  year      = {2010},
+  edition   = {Second},
+  isbn      = {978-3-662-58105-6},
+  doi       = {https://doi.org/10.1007/978-3-662-58107-0},
+  file      = {:D\:/Bibliotheque_livres/Reporting/How to Write Technical Reports Understandable Structure, Good Design, Convincing Presentation by Heike Hering (z-lib.org).pdf:PDF},
+  keywords  = {Reporting},
+}
+
+@Book{Kalika2016,
+  author    = {Kalika, M.},
+  publisher = {Dunod},
+  title     = {Le M\'emoire de master},
+  year      = {2016},
+  edition   = {Fourth},
+  isbn      = {978-2-10-074614-9},
+  file      = {:D\:/Bibliotheque_livres/Reporting/Le memoire de master  piloter un memoire, rediger un rapport, preparer une soutenance by Kalika, Michel (z-lib.org).pdf:PDF},
+}
+
+@Book{Constant2015,
+  author    = {Constant, A.-S. and L\'evy, A.},
+  publisher = {Gualino},
+  title     = {Réussir Mémoire, thèse et {HDR}},
+  year      = {2015},
+  edition   = {Fifth},
+  isbn      = {978 - 2 - 297 - 03913 - 0},
+  file      = {:D\:/Bibliotheque_livres/Reporting/Réussir mémoire, thèse et HDR by Anne-Sophie Constant, Aldo Levy (z-lib.org).pdf:PDF},
+  keywords  = {Reporting},
+}
+
+@Book{Greuter2014,
+  author    = {Greuter, M},
+  publisher = {L'\'etudiant},
+  title     = {R\'eussir son m\'emoire et son rapport de stage},
+  year      = {2014},
+  isbn      = {978-2-8176-0406-0},
+  file      = {:D\:/Bibliotheque_livres/Reporting/Réussir son mémoire et son rapport de stage by Myriam Greuter (z-lib.org).pdf:PDF},
+}
+
+@Book{Riordan2012,
+  author    = {Riordan, D.G.},
+  publisher = {Cengage Learning},
+  title     = {{Reporting Writing Today}},
+  year      = {2012},
+  edition   = {tenth},
+  isbn      = {978-1-133-60738-0},
+  file      = {:D\:/Bibliotheque_livres/Reporting/Technical Report Writing Today by Daniel G. Riordan (z-lib.org).pdf:PDF},
+  keywords  = {Reporting},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

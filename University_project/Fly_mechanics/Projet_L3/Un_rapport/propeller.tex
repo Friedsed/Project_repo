@@ -1,0 +1,740 @@
+%****************************************
+\section{Introduction}
+%****************************************
+
+The BEM theory has been first developped for propellers, used in boat and
+aircrafts. Application to wind mills came some years later with Betz.
+
+A wind turbine usually, does not moved, or at very low velocity, and the upstream wind is always
+quite small, with a possible shear in the upstream wind.
+
+At the opposite, propellers are used for aircraft, flying sometimes at more than Mach number equal to 0.5
+and the upstream velocity profile is considered constant because of the small diameter of the propellers (few meters).
+
+Another important difference is the shape of the stream tube englobing the rotor. Invertely to wind turbine, the 
+tube section decreases with the streamwise direction leading to an acceletation of the flow.
+To get this effect which is necessary to get a postive thrust on the aircraft, the pitch of the airfoil along
+the blade is symmetrical with respect to the airfoil axis, comparing to a wind turbine.
+
+All these differences are translated in the BEMT by some changes described in this chapter. 
+Many details will not be given, the reader will be refer to the previous chapter.
+
+%***********************************************************
+\section{Non dimensional coefficients for propeller design}
+%***********************************************************
+
+The notation for propeller can be different from the those for wind turbine.
+The main parameters for non dimensionnalisation are :
+\begin{itemize}
+\item $n$ : angular velocity in round/s
+\item $V_0$ : upstream (aircraft) velocity
+\item $D$ : propeller diameter
+\item $\rho$ : air density
+\item $q = \frac{1}{2} \rho V_0^2$
+\end{itemize}
+
+\Important{
+$$ \begin{array}{llcl}
+\textrm{Advance ratio}                &J &=& \dfrac{V_0}{nD}  \vs{0.3}\\
+\textrm{Thrust}                       &T &=& \rho~D^4~n^2~k_T   \vs{0.3}\\
+\textrm{Torque}                       &Q &=& \rho~D^5~n^2~k_Q   \vs{0.3}\\
+\textrm{useful power}                 &P_u &=& \rho~D^5~n^3~k_{P_u} = T \times V_0 \qquad \Longrightarrow \qquad k_{P_u} = J \times k_T \vs{0.3}\\
+\textrm{required power}               &P   &=& \rho~D^5~n^3~k_{P}   = Q \times \Omega \qquad \Longrightarrow \qquad k_{P} = 2\pi \times k_Q \vs{0.3}\\
+\textrm{Propulsion efficiency} \hs{1} &\eta &=& \dfrac{P_u}{P} = \dfrac{T \times V_0}{Q \times \Omega} = \dfrac{k_T}{k_Q} \times \dfrac{J}{2\pi}    
+\end{array}$$
+}
+
+\begin{itemize}
+  \item The required power for the propeller is usually refered as airscrew power. 
+  \item The useful power $P_u$ is the available power for the aircraft refers as $P_a$.
+  \item we can also define the non dimensional coefficient as : 
+  $$ \begin{array}{lcl}
+    C_T &=& \dfrac{T}{q~S}  \vs{0.3}\\
+    C_Q &=& \dfrac{Q}{q~S~D} \vs{0.3}\\
+    C_P &=& \dfrac{Q}{q~S~V_0}
+  \end{array}$$ 
+\end{itemize}
+%****************************************
+\section{Rotor disk theory}
+%****************************************
+
+The two approaches developped in the previous chapter  will also be reported here, 
+under a simplified form.
+
+
+
+%*****************************
+\subsection{Large stream tube}
+%******************************
+
+\begin{figure}[htb]
+  \begin{center}
+  \input{Figures/config_propeller.pdf_tex}
+  \caption{Propeller rotor stream tube.}
+  \label{fig:config_propeller}
+  \end{center}
+\end{figure}
+
+
+%**********************************************
+\subsubsection{\sc Assumptions and mass flow rate }
+%**********************************************
+
+see section \ref{sec:assumptions}
+
+
+
+%**********************************************
+\subsubsection{\sc Axial force}
+%**********************************************
+Developpement are identical to section \ref{sec:axial_force}.
+
+However, because of the tube stream geometry, the definition of the
+\textbf{axial induction factor} $a$ is slightly modified :
+
+\begin{equation} \dsp 
+U_x = (1+a) V_0
+\label{eq:def_a_0_prop}
+\end{equation}
+
+$a$ is small and positive, the axial fluid velocity across the rotor  disk is greater than the upstream velocity.
+We also  get $$V_1 = V_0 (1+2 a)$$
+
+Comparing to wing turbine we just have to change the sign of $a$ in the formulas.
+
+Finally by substituting $V_1$ , it is found :
+
+\begin{equation} \dsp 
+T =  2~S~\rho~U_x~(U_x-V_0) = - T_{fluid\to rotor}
+\end{equation}
+
+
+The thrust coefficient is defined from $T$ as :
+
+$$
+\dsp
+C_T = \frac{T_{fluid\to rotor}}{q S} = \frac{-T}{q S} = - 4 \epsilon (\epsilon -1) = - 4 a (1+ a) < 0
+$$
+
+
+
+where the dynamic pressure is given by $q =\dsp \frac{1}{2} \rho V_0^2$, 
+$\epsilon$ is  the nondimensionnal velocity $U_x/V_0$ and $\epsilon = 1 + a$
+
+
+
+\Note{
+\begin{itemize}
+\item The axial force which is a thrust has changed of sign comparing to wind turbine.
+\item For simplification, in the following we will forget the sign, and the axial force is assumed to be in $-x$ direction.
+\end{itemize}}
+
+
+So now we have $C_T = 4 a (1+ a)$.
+
+We can   express $a$ from the $C_T$:
+$$ \dsp
+a = \frac{-1+\sqrt{1+C_T}}{2} = \dfrac{U_x-V_0}{V_0}
+$$
+Here we only have a single possible solution, since $a$ is a positive number.
+
+
+%***************************************************
+\subsubsection{\sc Available power and efficiency}
+%**************************************************
+
+\begin{itemize}
+\item The power provided by the flow to the propeller is given by
+$$
+P = T \times U_x
+$$
+\item The power available for the aircraft propulsion is :
+$$ 
+P_a = T \times V_0 
+$$
+\item the induced power is given from the induced velocity $U_x - V_0$:
+$$ P_i = T \times (U_x - V_0) $$
+\end{itemize}
+
+
+The \textbf{ideal efficiency} is defined by
+$$\dsp
+\eta_i = \frac{P_a}{P} = \frac{T \times V_0}{T \times U_x} = \frac{V_0}{(1+a) V_0} = \frac{1}{1+a}
+= \frac{2}{1+\sqrt{1+C_T}}
+$$
+
+
+The power coefficient is a non dimensional coefficient defined as:
+
+\begin{equation} \dsp 
+  C_P = \frac{P}{q S V_0} = 4 a (1+ a)^2 = C_T~(1+a) = (1+\sqrt{1+C_T}) \times \frac{C_T}{2}
+  \label{eq:Pa_0_prop}
+\end{equation}
+
+
+
+
+%********************************************
+\subsubsection{\sc Torque }
+%********************************************
+
+The torque $Q$ provided by the engine is calculated from the  power provided by the flow $P$ :
+
+$$ 
+Q \times \Omega = P = T \times U_x \qquad  \Longrightarrow \qquad
+Q =  \frac{P}{\Omega} = q S \frac{V_0}{\Omega} C_P
+$$
+
+Considering $D$ as the diameter of the rotor disk ($S = \pi D^2/4$) then the non dimensional torque coefficient can
+be written as:
+
+$$\dsp
+C_Q = \frac{Q}{q S D} = \frac{V_0}{D \Omega} C_P = \frac{C_T}{2~\lambda_R}
+$$
+
+where $\lambda_R$  the reduced velocity $\lambda_R = \dsp \frac{R~\Omega}{V_0}$.
+
+Usually the reduced velocity is related to  \textbf{advance ratio parameter} $J$:
+$$
+J \times \lambda_R = \pi
+$$
+
+
+
+
+
+
+%***********************************************
+\subsection{Momentum theory with wake rotation}
+%***********************************************
+
+The theory does not differ from the one given in the previous chapter.
+The difference is the changed of signe in front of $a$.
+Therefore we get for the elementary thrust \eqref{eq:Tf-r} and elementary torque the equations:
+
+
+\begin{eqnarray}
+  dT(r) &=& 4~\pi~r~\rho~V_0^2~a~(1+a)~dr \label{eq:Tf-r2}  \vs{0.5} \\
+  dQ(r) &=& 4~\pi~\rho~r^3~V_0~\Omega~a'(1+a)~dr \label{eq:def_dM2}
+\end{eqnarray}
+
+  
+
+
+%****************************************
+\section{Blade Element Momentum Theory}
+%****************************************
+
+
+%*****************************************
+\subsection{Geometry}
+%*****************************************
+
+%**************************************
+\subsubsection{\sc Pitch of propeller}
+%**************************************
+
+\todo{See \cite{VonMises1959} pages 289-295, for the geometry of a propeller and the
+calculation of the pitch angle}
+
+%*******************************
+\subsubsection{\sc Discretisation}
+%******************************
+
+\begin{figure}
+  \begin{center}
+  \input{Figures/propeller.pdf_tex}
+  \caption{Rotor disk  of a propeller of the Airbus A400 M.}
+  \label{fig:propeller_alone}
+  \end{center}
+\end{figure}
+
+A example of modern aircraft propeller is shown in figure \ref{fig:propeller_alone}.
+
+For additional details read the section \ref{sec:wt_gmtry}
+
+
+%******************************
+\subsection{Upstream conditions}
+%******************************
+
+As mentioned before, the upstream velocity is assumed constant: $V(r) = V_0$ in any equation.
+
+
+%***********************
+\subsection{Velocities}
+%***********************
+
+\begin{figure}[htb]
+  \begin{center}
+  \input{Figures/propeller_side_notations.pdf_tex}
+  \caption{Scheme of a modern propeller, side view (left) and airfoil section with velocity and force decompositions (right)}
+  \label{fig:propeller_side_notations}
+  \end{center}
+  \end{figure}
+  
+  To develop the BEM theory we have to refer to the figure \ref{fig:propeller_side_notations} which provides
+  velocity and force decompositions.
+  
+  \Important{
+  The main difference between a rotor blade section and a propeller blade section is the direction of the airfoil with respect
+  to the rotation plane. The orientation on a propeller is choosen to produce positive thrust.
+  }
+
+
+  This orientation naturally modifies slightly the velocity and force directions and amplitudes as explained below.
+
+
+  Let's consider a given airfoil section located at a distance $r$ from the axis of rotation (fig. \ref{fig:propeller_alone}). 
+  The BEMT consists on analyzing the decomposition of the \textbf{apparent velocity} vector refered as $\bs{W}$ 
+  which is the air velocity seen by the airfoil section and
+  which allow to determine an angle of attack $\alpha$.
+  
+  The apparent velocity is the sum of :
+  \begin{itemize}
+  \item the constant upstream  velocity $\bs{V}$
+  
+  \item the tangential velocity related to the disk rotation $\bs{V_t} = - r~\Omega~\bs{e_t}$,
+  where $\bs{e_t} = \bs{e_x} \times \bs{e_r}$. 
+  
+  \item the induced velocity $\bs{w}$ whose direction is defined by the induced angle of attack $\alpha_i$. 
+  It is due to the tip vortex of the blade. Its direction is assumed orthogonal to the airfoil section axis.   
+  \end{itemize}
+  
+  
+  In addition we can define the relative velocity $\bs{V_R} = \bs{V} + \bs{V_t}$ whose direction is the angle $\varphi$.
+
+  It can be easily demonstrated that :
+  \begin{equation}
+  \tan \varphi =  \frac{V}{r~\Omega} = \dfrac{J}{\pi \tilde r}, \qquad \tilde r = \dfrac{2~r}{D} 
+\label{eq:varphi_prop}  
+\end{equation}
+  
+  And finally, the apparent velocity can be projected into the $\bs{e_x}$ and $\bs{e_t}$ directions as :
+  
+  \begin{equation}
+  \bs{W} = U_x~\bs{e_x} + U_t~\bs{e_t}
+  \label{eq:W_def2}
+  \end{equation} 
+  
+  where :
+  \begin{itemize}
+    \item $U_x(r)$ is the axial velocity, air velocity crossing the propeller plane
+    \item $U_t(r)$ is the tangential velocity, in the propeller plane. 
+  \end{itemize}
+  
+  All these velocities are drawn on figure  \ref{fig:propeller_side_notations}.
+
+  \Note{
+  In addition the tangential induced velocity $u_t = V_t - U_t$ is drawn in blue. Because of the direction
+  of the airfoil section this velocity is opposite comparing to the rotor case, and because of the direction
+  of the induced velocity $w$ we can notice that $U_x > V$.}
+
+%********************
+\subsection{Angles}
+%********************
+
+Angles play an important role to define velocity and force directions.
+
+Different angles are defined from the velocities and aerodynamics :
+\begin{itemize}
+  \item the induced angle of attack $\alpha_i$
+  \item the relative velocity angle $\varphi$
+  \item the local flow angle $\phi$ with 
+  $$
+  \phi = \alpha_i  + \varphi
+  $$
+  \item the pitching angle $\theta$, which comes from the geometry
+  \item the real angle of attack $\alpha$
+  \item the aerodynamic efficiency angle $\gamma$ with $\tan \gamma = C_d/C_\ell = 1/f$.
+\end{itemize}
+
+$f$ is here the aerodynamic efficiency. $C_d$ and $C_{\ell}$ are the usual lift and drag aerodynamic 
+coefficients  used in the next section.
+
+
+To determine forces exerted on the airfoil section we need to clearly defined the angle of attack  by :
+
+\Important{
+\begin{equation}
+\alpha = \theta-\phi
+\label{eq:alpha_prop}
+\end{equation}
+}
+
+\gris{We can see that the angle of attack equation is the opposite for a wind turbine rotor}
+
+%************************************
+\subsection{Forces on a wing section}
+%************************************
+
+On figure \ref{fig:propeller_side_notations} are drawn the aerodynamics force on a wing section.
+
+Let write the equations for a given section, and for a single blade :
+
+\begin{itemize}
+    \item the lift 
+    $$
+      \dsp \bs{dL} = q~dS~C_\ell~\bs{j_a}  
+    $$
+    \item the drag 
+    $$
+      \dsp \bs{dD} = q~dS~C_d ~\bs{i_a}
+    $$
+    \item the aerodynamic force $\bs{dF}$
+    $$\dsp
+    \bs{dF} = dL~\bs{j_a} + dD~\bs{i_a} = \bs{dT} + \bs{dF_t}
+    $$
+    \item the normal aerodynamic force :
+    $$
+    dT = \bs{dF}\cdot\bs{e_x} = q~dS~C_n
+    $$
+    \item the tangential aerodynamic force:
+    $$
+    dF_t = \bs{dF}\cdot\bs{e_y} = q~dS~C_t
+    $$
+
+\end{itemize}
+
+with 
+\begin{itemize}
+  \item $q=\frac{1}{2} \rho W^2$, the local dynamic pressure
+  % \item $S = c(r) \times b(r) $ where $b(r)$ is the span of the local element.
+  \item $C_\ell, C_d$ are the aerodynamic lift and drag coefficients dependent on the airfoil.
+  \item $C_n, C_t$ are the aerodynamic normal and tangential  coefficient dependent on the $C_{\ell}$ and $C_d$.
+  \item $(\bs{i_a}, \bs{j_a})$ is the local aerodynamic base ($\bs{W} = W~\bs{i_a}$) (see fig.~\ref{fig:rotor_side_notations})
+  \item $ dS = c(r)~ dr$ is the area of a blade element
+\end{itemize}
+
+In addition it it easy to show that :
+\begin{eqnarray}
+dT &=& \cos\phi ~ dL - \sin\phi~ dD   \label{eq:dT}\\
+dF_t &=& \sin\phi ~ dL + \cos\phi~ dD \label{eq:dFt} 
+\end{eqnarray}
+
+From equations \ref{eq:dT} and \ref{eq:dFt}  it is found :
+\begin{equation}
+\begin{array}{lcl}
+C_n &=& C_\ell \cos\phi - C_d \sin \phi \\
+C_t &=& C_\ell \sin\phi + C_d \cos \phi
+\end{array}
+\label{eq:CnCt}
+\end{equation}
+
+
+%********************************************
+\subsection{BEM theory algorithm}
+%********************************************
+
+To develop the Blade Element Momentum Theory, several steps are necessary and some reduced quantities are 
+introduced (ever discussed in the disk rotor theory).
+
+%******************************************************************
+\subsubsection{\sc Step 1 : induced factor and apparent velocity}
+%*****************************************************************
+The BEMT use different reduced quantities and the most important are the induced flow factor $a$ and $a'$ defined as :
+
+\begin{itemize}
+\item the induced axial velocity factor $a$ is given by :
+\Def{induced axial velocity factor $a$}{
+  \begin{equation}
+  U_x~/~V = 1 + a
+  \label{eq:a_def_prop}
+  \end{equation}
+}
+
+From the figure \ref{fig:propeller_side_notations} it can be seen that $U_x > V$, that means that $0 < a $ and $a$ should be small.
+
+
+\item the induced radial velocity factor $a'$ is given by 
+\Def{induced radial velocity factor $a'$}{  
+\begin{equation}
+    U_t  = (1-a')~V_t = (1-a') ~r~\Omega
+  \label{eq:aprime_def_prop}
+  \end{equation}
+}
+
+
+
+\item We can then find :
+\begin{equation} \dsp
+\tan \phi = \frac{U_x}{U_t} = \frac{1 + a}{1-a'} \times \frac{V}{r~\Omega}, \qquad U_x = W \sin\phi, \qquad U_t = W \cos\phi
+\label{eq:tanphi_prop}
+\end{equation}
+\end{itemize}
+
+It is now possible to express the modulus of the apparent velocity as a function of the induced factors :
+\begin{equation}
+\dsp W = \sqrt{V^2(1+a)^2 + r^2 \Omega^2 (1-a')^2} = V  \sqrt{(1+a)^2 + \left(\frac{r \Omega}{V}\right)^2 (1-a')^2}
+\label{eq:W_prop}
+\end{equation}
+
+
+From the previous equation, we can defined a reduced velocity parameter  refers as \textbf{local tip speed ratio}
+and ever seen in equation \eqref{eq:varphi_prop}:
+  
+\begin{equation} \dsp
+  \lambda_r =  \frac{r \Omega}{V} = \frac{1}{\tan \varphi}  = \frac{\pi~\tilde r}{J}
+  \label{eq:lambda_r_prop}
+\end{equation}
+
+
+Finally, by using the previous equations, we can show the result:
+
+\begin{equation} \dsp
+\dfrac{a'}{a} = \frac{C_t}{\lambda_r C_n}
+  \label{eq:aprime_over_a}
+\end{equation}
+
+
+
+%******************************************************
+\subsubsection{\sc Step 2 : equations for induction factors}
+%******************************************************
+
+The next step is to make the relationship between velocity, induced factors 
+and aerodynamic coefficients.
+
+\begin{itemize}
+
+\item  \textbf{axial induction factor} equation.
+
+First we can write the elementary axial force   for $N_b$ blades as :
+$$ \dsp
+dT = N_b~q~dS~C_n = \frac{1}{2} \rho W^2 C_n  N_b~c(r)~dr, \quad {\rm with}\qquad U_x = W \sin\phi 
+$$
+
+The  $dT$ is also given from the rotor disk theory by the
+equation \eqref{eq:Tf-r2}  
+
+Equating the both  equations leads to :
+\begin{equation}
+\frac{C_n~N_b~c}{8 \pi r ~\sin^2\phi} =  \frac{a}{1+a}  
+\label{eq:tmp1_prop}
+\end{equation}
+
+
+Here can be introduced the
+\textbf{solidity function}  $\sigma$ (sometimes refered as $s$): 
+
+\Def{Solidity $\sigma$}{
+\begin{equation}
+  \sigma = \dfrac{N_b~c(r)}{2\pi~r} = \dfrac{N_b~c(r)}{\pi~D} ~\frac{1}{\tilde r}
+\end{equation}
+}
+where $c(r)$ is the chord law and $N_b$ the number of blades.
+
+
+For propellers, as the one shown on figure   \ref{fig:rotor_and_propeller} the solidity is much larger, but
+decreases with increasing $r$.
+
+
+
+Finally the equation \eqref{eq:tmp1_prop} can be simplified 
+by introducing the solidity parameter as  
+
+\begin{equation} \dsp \dfrac{a}{1+a} = \dfrac{\sigma C_n}{4 \sin^2\phi}, \qquad
+  \dfrac{1}{a} =  \dfrac{4 \sin^2\phi}{\sigma C_n}  - 1
+  \label{eq:a_prop}\end{equation} 
+
+\item  \textbf{tangential induction factor} equation :
+
+
+The elementary torque on $N_b$ blades,
+ from figure \ref{fig:rotor_side_notations} is given by 
+$$
+dQ = N_b~r~dF_t = N_b~r~q~c(r)~dr~C_t = \frac{\rho}{2} W^2~N_b~r~c(r)~dr~C_t
+$$
+
+In this equation we rewrite 
+$\dsp W^2 = W\times W  =  \frac{U_x~U_t}{\cos\phi~\sin\phi}$ with
+$U_t = r~\Omega~(1-a')$
+
+It is equal to the elementary momentum given by the rotor disk theory equation
+\eqref{eq:def_dM2} written as :
+$$
+dQ =  4 \  \pi \ \rho \ V \ \Omega \  a' \ (1+a)  \ r^3~dr= 4~\pi~\rho~r^3~\Omega~a'~U_x~dr
+$$
+
+
+finally we find :
+
+
+\begin{equation} \dsp 
+  \dfrac{a'}{1-a'}  =   \dfrac{\sigma C_t}{4 \sin\phi \cos\phi} \qquad
+  \Longrightarrow \qquad \dfrac{1}{a'} = \dfrac{4 \sin\phi \cos\phi}{\sigma C_t}+1 
+\label{eq:ap_prop}\end{equation}  
+
+\item Local flow angle $\phi$, from the equation \eqref{eq:tanphi} we get
+$$\sin\phi = \dfrac{V}{W} (1+a), \qquad  \cos\phi = \dfrac{r \Omega}{W} (1-a')
+$$
+\begin{equation}\lambda_r \tan \phi = \dfrac{1+a}{1-a'} \label{eq:lam_prop}\end{equation}  
+
+\gris{This equation has ever been introduced in equation \eqref{eq:tanphi_prop}.}
+\end{itemize}
+
+A single equation without the induction factors $a$ and $a'$ can be obtained from 
+equations \eqref{eq:a_prop}, \eqref{eq:ap_prop} and  \eqref{eq:lam_prop}
+
+\Important{
+  \begin{equation} \dsp 
+      F_{\rm Newton}(\phi, r) = 0 =  - 1 +   \frac{1}{\lambda_r(r)} \ \frac{2 \sin2\phi +\sigma(r) C_t(\phi)}{4 \sin^2\phi - \sigma(r) C_n(\phi)} 
+  \label{eq:Phi_prop}
+  \end{equation} 
+}
+
+%******************************************************
+\subsubsection{\sc Step 3 : thrust and torque}
+%******************************************************
+
+\begin{itemize}
+  \item the elementary thust is given from previous section as :
+  $$ \dsp
+   \der{T}{r} =  \dfrac{1}{2}~\rho~N_b~V^2~c(r)~\dfrac{(1+a)^2}{\sin^2\phi}~C_n~=~
+   4 \ \pi \ \rho \ V^2 \ a \ (1+a) \ r
+  $$
+  
+  and the total  thrust is :
+  $$ \dsp
+  T  = \int_{r_0}^{D/2} dT
+  $$
+  
+  \item the elementary torque has ever been calculated  as well:
+  $$\dsp
+  \der{Q}{r} =  \dfrac{1}{2}~\rho~N_b~(r~\Omega)^2~r~c(r)~\dfrac{(1-a')^2}{\cos^2\phi}~C_t~=~
+   4~\pi~\rho~r^3~V~\Omega~a'(1+a)
+  $$
+  and the total torque is 
+  
+  $$ \dsp
+  Q  = \int_{r_0}^{D/2} dQ
+  $$
+  \end{itemize}
+
+%******************************************************
+\subsubsection{\sc Step 4 : power and efficiency}
+%******************************************************
+
+\begin{itemize}
+  \item the input propeller power is :
+  $$ \dsp
+  P_{in}  = \int_{r_0}^{D/2} \Omega\times dQ = \Omega \times Q 
+  $$
+  
+  
+  \item the output thrust power is 
+    
+  $$ \dsp
+  P_{in}   = \int_{r_0}^{D/2} V \times dT = V \times T
+  $$
+  
+  \item the efficiency is therefore:
+  $$\dsp
+  \eta = \frac{P_{out}}{P_{in}} = \frac{V}{\Omega} \times \frac{T}{Q} = \frac{V^2}{\Omega^2} \times
+  \frac{\dsp \int_{r_0}^{D/2}  a (1+a) r~dr }{\dsp \int_{r_0}^{D/2} a'(1+a)r^3~dr} =
+  \frac{J^2}{\pi^2} \times
+  \frac{\dsp \int_{\tilde r_0}^{1}  a (1+a) \tilde r~d\tilde r }{\dsp \int_{\tilde r_0}^{1} a'(1+a)\tilde r^3~d\tilde r}
+  $$
+  \end{itemize}
+  
+
+
+%*******************************************************
+\subsection{Tip loss}
+%*******************************************************
+
+In the previous theory the tip loss existing because the blade is a wing of finite span has not been taken
+into account. Prandtl has proposed a correction  to the BEMT theory by introducing a function $F(r)$ as follows :
+
+\begin{itemize}
+\item for elementary torque and thrust :
+$$ \dsp
+\der{Q}{r} = 4 \  \pi \ \rho \ V \ \Omega \  a' \ (1+a)  \ r^3~F(\phi,r)
+$$
+
+$$ \dsp
+\der{T}{r} =    4 \ \pi \ \rho \ V^2 \ a \ (1+a) \ r~F(\phi,r)
+$$
+
+with
+$$ \dsp
+F(\phi,r) = \dfrac{2}{\pi} \arccos {\rm e}^{-f} , \qquad f =  \dfrac{N_b}{2} \ \dfrac{R-r}{r \sin\phi})
+$$
+
+\item the induction factor equations are modified  as :
+
+\begin{equation}
+\begin{array}{lcl}
+\dsp \dfrac{1}{a} &=& \dsp \dfrac{4 F \sin^2\phi}{\sigma C_n} - 1 \vs{0.3} \\
+\dsp \dfrac{1}{a'} &=&\dsp \dfrac{4 F \sin\phi \cos\phi}{\sigma C_t}+1
+\end{array}
+\label{eq:aap_with_correction_prop}
+\end{equation}
+
+
+By combining equations \eqref{eq:aap_with_correction_prop} and  \eqref{eq:lam_prop} we get a non trivial
+equation with  $\phi$ angle as variable :
+
+\begin{empheq}[box={\mymath[colback=green!20,drop lifted shadow, sharp corners]}]{equation}
+\dsp 
+    F_{\rm Newton}(\phi, r) = 0 =  - 1 +    \frac{1}{\lambda_r(r)} \ \frac{2 F(\phi,r) \sin2\phi + \sigma(r) C_t(\phi)}{4 F(\phi,r) \sin^2\phi - \sigma(r) C_n(\phi)} 
+\label{eq:phi+tiploss_prop}
+\end{empheq}
+
+\end{itemize}
+
+
+
+
+%****************************************
+\subsection{Resolution, full algorithm}
+%****************************************
+
+
+The algorithm is :
+
+\begin{enumerate}
+\item read the data : blade geometry, airfoil characteristics ($C_\ell, C_d$)
+\item discretise the blade, define the elements and panel function of  $r$ 
+\item for each elements :
+      \begin{enumerate}
+      \item Solve $\phi(r)$ with the equation \eqref{eq:Phi_prop}, or equation \eqref{eq:phi+tiploss_prop}
+      if tip loss are taken into account,
+      find the local angle of attack $\alpha$ from \eqref{eq:alpha_prop}
+      \item Calculate $C_t$, $C_n$  from equations \eqref{eq:CnCt_prop} then $a$ and $a'$, from equations 
+      \eqref{eq:a_prop} and \eqref{eq:ap_prop}  or  \eqref{eq:aap_with_correction_prop}
+      \item Calculate the distribution of $dT$ and $dQ$
+      \end{enumerate}
+\item Calculate the total force, total torque, powers and efficiency.
+\item Plots all the desired curves and save data.
+\end{enumerate}
+
+The crucial points, which quite fast is the Newton method in step 3a).
+
+
+% \begin{figure}
+% \begin{center}
+% \input{Figures/propeller_side.pdf_tex}
+% \label{fig:propeller_side}
+% \caption{Scheme of a modern propeller, side view}
+% \end{center}
+% \end{figure}
+
+% \begin{figure}
+% \begin{center}
+% \input{Figures/forces.pdf_tex}
+% \label{fig:forces}
+% \caption{Scheme of the forces on a element}
+% \end{center}
+% \end{figure}
+
+
+\begin{figure}[htb]
+  \begin{center}
+  \input{Figures/pitch.pdf_tex}
+  \caption{Propeller pitch.}
+  \label{fig:pitch_propeller}
+  \end{center}
+\end{figure}
+
+

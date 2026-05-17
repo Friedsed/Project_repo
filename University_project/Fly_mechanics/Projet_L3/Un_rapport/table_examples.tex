@@ -1,0 +1,134 @@
+% Exemple de tableaux
+
+
+
+
+
+Un  tableau permet de synthétiser des résultats issus de simulations numériques ou des valeurs expérimentales 
+ou de fournir des paramètres en un coup d'oeil. 
+Il contient donc toujours des informations jugées  essentielles sous la forme de données numériques ou de texte.
+
+\begin{itemize}
+\item Il est déconseillé de positionner des tableaux au milieu du texte lorsque cela diminue sa visibilité.
+\item Il vaut mieux les insérer comme des figures avec un numéro et une légende.
+\item Il ne faut pas oublier de positionner le tableau près de l'endroit où il est évoqué et de le nommer par sa référence
+\item Un tableau doit rester sobre.  
+ \item On peut ajouter quelques couleurs par alternance, par lignes lorsqu'il y a beaucoup de lignes pour améliorer la lecture
+ et minimiser les erreurs de lecture. On peut aussi procéder ainsi pour les colonnes.
+\item Préférer un tableau avec des colonnes larges que des colonnes serrées et il faut  centrer le tableau sur la page.
+\item le tableau devra être amélioré en ajoutant des couleurs et en augmentant les tailles de fontes 
+pour une présentation en mode diapositive
+\item s'il y a beaucoup d'information à faire passer, il faut mieux proposer plusieurs tableaux qu'un tableau illisible ou incompréhensible
+\end{itemize}
+
+
+
+
+\begin{table}[htb]
+
+\vs{0.5}
+
+\setstretch{1.4}
+\small
+\centering
+\begin{tabular}{p{1.5cm}p{2.5cm}p{2.5cm}p{3.5cm}p{3cm}p{2cm} }
+\Xhline{2pt}
+Case    &      Fluid    & Velocity     & Reynolds number   &  Flow rate     & Length \\ 
+        &               & $U$~[m/s]    & $Re$ in $10^6$  &  $q_m$~[kg/m$^3$] &  $\ell$~[mm] \\ \Xhline{1pt}
+1       & Air           & $100$        &   $1.5$         &  $100$            &  $35.33$     \\
+2       & Water         &  $\;\;10$        &   $0.1$         &  $\;\;78$             &  $\;\;5.24$  \\
+\Xhline{2pt}
+\end{tabular}
+\caption{Premier exemple  de format de tableau (excellent).}           
+\label{tab:exemple1}   
+\normalsize
+\setstretch{1}
+\end{table}
+
+
+Les tableaux tabs.~\ref{tab:exemple1}, \ref{tab:exemple2} et \ref{tab:exemple3} sont trois exemples qu'on peut rencontrer.
+
+Commentons les.
+
+
+
+\begin{enumerate}
+\item Le premier tableau tab.~\ref{tab:exemple1} est rencontré dans les publications scientifiques. Il respecte les consignes suivantes:
+		\begin{itemize}
+		\item Il est sobre avec deux lignes épaisses pour délimiter le tableau dans le plan vertical et une ligne fine
+		 qui démarque le titre des colonnes
+		 \item Les grandeurs sont clairement décrites avec leur symbôle et leur unités physiques 
+		 \item l'interlignage ou espacement vertical est suffisamment important pour améliorer la lisibilité
+		 \item les valeurs ou textes sont positionnés à gauche et alignés (on peut aligner sur le . pour les nombres réels)
+		 \item le tableau occupe presque la largeur de la page, les colonnes sont dimensionnées précisément.
+		 \item le tableau est bien séparé du texte et ressort bien
+		 \item on peut remarquer que la hauteur de fonte est légèrement inférieure à celle du texte principale, ce qui peut
+		 permettre d'ajouter plus de colonnes et de lignes sans occuper trop de place.
+		\end{itemize}
+		
+		C'est la référence à suivre.
+		
+
+		
+\item Le second tableau tab.~\ref{tab:exemple1} est aussi acceptable mais souffre de quelques défauts:
+		\begin{itemize}
+		\item on ne connaît pas le sens des variables
+		\item les unités sont répétées inutilement
+		\item les colonnes sont trop serrées, elles n'occupent pas l'espace en largeur
+		\end{itemize}	
+		on peut ajouter qu'il n'y a pas de délimitation horizontale et que l'interlignage est très fort. Mais celà
+		n'est pas nécessairement négatif.
+		
+		On peut alors rajouter le sens des variables dans la légende qu'il faut bien lire pour comprendre le tableau.
+		
+\begin{table}[htb]
+\centering
+\setstretch{2}
+\begin{tabular}{c|cccc}
+Case             & Fluid    & $U$               & $Re$                   &   $q_m$ \\ \hline\hline
+1                & Air     & $100$~m/s        &   $1.5 \times 10^6$    &  $100$~kg/m$^3$                       \\
+2                & Water   &  $10$~m/s        &   $0.1 \times 10^6$    &   $5$ ~kg/m$^3$      \\
+\end{tabular}
+\caption{Deuxième exemple de format de tableau (acceptable). La vitesse est notée $U$ et le débit massique $q_m$. }           
+\label{tab:exemple2}   
+\normalsize
+\setstretch{1}
+\end{table}
+		
+\item Le dernier exemple  tab.~\ref{tab:exemple1} est une représentation très basique des données sans aucune réflexion sur le rendu. Ils souffrent de tous les défauts possibles
+	   qui sont le contraire des qualités du premier tableau. Il n'est en particulier pas nécessaire de marquer les lignes et
+	   les colonnes quand c'est évident. Et il n'y ni unité, ni explication sur le sens des variables. Enfin les lignes et les colonnes sont très resserrées.
+	   On peut aussi remarquer que le tableau n'est pas centré sur la page.
+	   
+	   Cette représentation est à proscrire!
+	   
+	   
+\begin{table}[htb]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Case             & Fluid    & $U$          & $Re$                   &   $q_m$ \\ \hline
+1                & Air     & $100$        &   $1.5 \times 10^6$    &  $100$    \\ \hline
+2                & Water   &  $10$        &   $0.1 \times 10^6$    &   $5$      \\ \hline
+\end{tabular}
+\caption{Troisième exemple de format de tableau (le plus mauvais) }           
+\label{tab:exemple3}   
+\normalsize
+\setstretch{1}
+\end{table}
+	   
+\end{enumerate}
+
+
+On peut aussi:
+
+\begin{itemize}
+\item ajouter de la couleur soit par ligne, soit par colonne, soit une ligne sur deux et une colonne sur deux pour encore améliorer la visibilité.
+\item choisir une couleur unique avec une teinte foncée et claire pour éviter l'effet "arc-en-ciel"
+\item encore jouer sur les épaisseurs des traits.
+\item modifier les types de fontes par rapport à celle du texte principal pour insister sur le contenu des colonnes
+\end{itemize}
+
+
+
+
+

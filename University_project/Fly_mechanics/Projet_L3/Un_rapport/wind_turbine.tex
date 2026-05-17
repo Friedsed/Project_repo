@@ -1,0 +1,926 @@
+
+%********************************************
+\section{Rotor disk theory}
+%*******************************************
+
+%**************************
+\subsection{Introduction}
+%**************************
+
+Disk rotor theory is often refered as  "Froude theory".
+
+It is the basic one-dimensional inviscid theory first developped to analyse
+mass flow, pressure drop, momentun, thrust and power on rotor systems.
+
+
+The conservation equations can be written by isolating  :
+
+  \begin{enumerate}
+    \item a large streamtube, englobing the full rotor section. This approach is commonly used in many situation,
+    including in jet propulsion case.
+    \item a small streamtube defined between $r$ and $r+dr$.
+    It will be used section \ref{sec:thrust} to develop BEM theory.
+  \end{enumerate}
+
+
+%*****************************
+\subsection{Large stream tube}
+%******************************
+
+\begin{figure}[h]
+  \begin{center}
+  \input{Figures/config_wind_turbine.pdf_tex}
+  \caption{ Wind turbine rotor stream tube.}
+  \label{fig:config_wind_turbine}
+  \end{center}
+\end{figure}
+
+
+
+%**********************************************
+\subsubsection{\sc Assumptions and mass flow rate }
+%**********************************************
+\label{sec:assumptions}
+
+Now let us consider the first case  and notations of the figure  \ref{fig:config_wind_turbine}.
+The conservation equations  are written twice between:
+
+  \begin{itemize}
+    \item the inlet section and the rotor plane
+    \item the rotor plane and the outlet section 
+  \end{itemize}
+
+
+The main assumptions can be summerized as :
+
+\begin{itemize}
+\item steady incompressible 2D flow 
+\item uniform velocity in a given section
+\item viscosity and turbulence are not taken into account \textit{i.e.} laminar inviscid flow
+\item no heat transfer 
+\item the rotor is considered as a plane, with an infinite number of blades.
+\item the inlet and outlet pressure are equal to atmospheric pressure (reference pressure)
+\item thrust is uniformly distributed on the disk
+\end{itemize}
+
+
+The mass flow rate $q_m$ is given by :
+
+\begin{equation}
+  q_m = \rho S_0 V_0 = \rho S_1 V_1 = \rho S U_x
+  \label{eq:qm}
+\end{equation}
+
+$U_x$ is the streamwise velocity across the rotor disk.
+
+%**********************************************
+\subsubsection{\sc Axial force}
+%**********************************************
+\label{sec:axial_force}
+
+the axial force $T$ exerted by the rotor on the fluid is obtained from
+the momentum equation projected on the streamwise direction : 
+\begin{equation}
+T = q_m (V_1 - V_0) =  \rho S U_x (V_1 - V_0) 
+\label{eq:momentum_x}
+\end{equation}
+
+
+Let know consider the Bernoulli equation in the streamline arriving on the disk rotor from upstream,
+and the same,  between the section just behind the rotor disk and the outlet section:
+
+$$ \dsp 
+p_0 +\rho  \frac{V_0^2}{2} = p^- + \rho  \frac{U_x^2}{2}, \qquad
+p_1 +\rho  \frac{V_1^2}{2} = p^+ + \rho  \frac{U_x^2}{2}
+$$
+
+with $p_0=p_1=p_a$. The  axial force exerted by the rotor disk  on the fluid
+is therefore :
+
+\begin{equation} \dsp 
+T = S \times (p^+-p^-) = \frac{S ~\rho}{2}~(V_1^2-V_0^2)= S ~\rho~(V_1-V_0)~ \frac{V_1+V_0}{2}
+\label{eq:T_0}
+\end{equation}
+
+By comparing equation \eqref{eq:momentum_x} and \eqref{eq:T_0} it is found :
+$$ \dsp
+U_x = \frac{V_1+V_0}{2}  \qquad {\rm and} \qquad V_1 = 2 U_x -V_0
+$$
+
+
+
+An \textbf{axial induction factor} $a$ is usually defined to quantify the variation  of axial velocity across the 
+rotor disk as :
+\begin{equation} \dsp 
+U_x = (1-a) V_0
+\label{eq:def_a_0}
+\end{equation}
+$a$ is small and positive, the axial fluid velocity across the rotor  disk is smaller that the upstream velocity.
+We also  get $$V_1 = V_0 (1-2 a)$$
+
+
+Finally by substituting $V_1$ , it is found :
+
+\begin{equation} \dsp 
+T =  2~S~\rho~U_x~(U_x-V_0) = - T_{fluid\to rotor}
+\end{equation}
+
+
+The thrust coefficient is defined from $T$ as :
+
+$$
+\dsp
+C_T = \frac{T_{fluid\to rotor}}{q S} = \frac{-T}{q S} = - 4 \epsilon (\epsilon -1) = 4 a (1- a)
+$$
+
+
+where the dynamic pressure is given by $q =\dsp \frac{1}{2} \rho V_0^2$, 
+$\epsilon$ is  the nondimensionnal velocity $U_x/V_0$ and $\epsilon = 1 - a$
+
+The maximun thrust coefficient is obtained for $a=1/2$ and $C_{T_{\max}} = 1$.
+
+We can also express $a$ from the $C_T$:
+$$ \dsp
+a = \frac{1\pm\sqrt{1-C_T}}{2}
+$$
+
+For a given value of the $C_T$ we can be found two values of $a$, the first one in $[0, 1/2]$
+and the second one in $[1/2, 1]$, as it shown on figure \ref{fig:C_T}.
+
+\begin{figure}[h]
+  \begin{center}
+  \input{Figures/C_T.pdf_tex}
+  \caption{ Wind turbine : $C_T$ and $C_P$ function of $a$.}
+  \label{fig:C_T}
+  \end{center}
+\end{figure}
+
+%***************************************************
+\subsubsection{\sc Available power and efficiency}
+%**************************************************
+
+The power extracted (available power) from the actuator disk is given by:
+$$
+P_a = T_{fluid\to rotor} \times U_x  = -2~S~\rho~U_x^2~(U_x-V_0) 
+$$
+
+The power coefficient is a non dimensional coefficient defined as:
+
+\begin{equation} \dsp 
+  C_P = \frac{P_a}{q S V_0} = - 4 \epsilon^2 (\epsilon -1) = 4 a (1- a)^2
+  \label{eq:Pa_0}
+\end{equation}
+
+It can easily be shown that $C_P$ is maximun for $a=1/3$, and $C_{P_{\max}} = 16/27\approx 0.593$ (see fig. \ref{fig:C_T}).
+
+This coefficient can be interpreted as an efficiency, where $q S V_0$ should be the maximun
+power provided by the wind. It is called the Betz limit. 
+
+
+%********************************************
+\subsubsection{\sc Torque }
+%********************************************
+
+The torque $Q$ exerted by the fluid on the rotor disk is calculated from the available power:
+
+$$ 
+Q \times \Omega = P_a = T_{fluid\to rotor} \times U_x \qquad  \Longrightarrow \qquad
+Q =  \frac{T_{fluid\to rotor} \times U_x}{\Omega} = q S \frac{V_0}{\Omega} C_P
+$$
+
+Considering $R$ as the radius of the rotor disk ($S = \pi R^2$) then the non dimensional torque coefficient can
+be written as:
+
+$$\dsp
+C_Q = \frac{Q}{q S R} = \frac{V_0}{R \Omega} C_P = \frac{C_P}{\lambda_r}
+$$
+
+In the following we will define the reduced velocity $\lambda_R = \dsp \frac{R~\Omega}{V_0}$.
+
+Usually the reduced velocity is defined by the \textbf{advanced ratio parameter} $J$:
+
+$$\dsp J = \frac{V_0}{N D} = \frac{V_0}{2 R \frac{\pi}{30} \Omega} = \dfrac{\pi}{15 \lambda_r} $$
+where $N$ is the rotation velocity in rpm (rounds per minute).
+
+and 
+
+
+$$\dsp
+C_Q = \frac{15 J}{\pi} C_P
+$$
+
+\Note{
+One can found different formulas if we use $N$ , $D=2 \times R$ and $\rho V_0^2$ instead of $\Omega$, $R$ and $q$
+as reference quantities. In that case the coefficients can be named $k_T$, $k_Q$ and $k_P$ instead of
+$C_T$, $C_Q$ and $C_P$.}
+
+ 
+
+
+%***********************************************
+\subsection{Momentum theory with wake rotation}
+%***********************************************
+
+
+
+%**********************************
+\subsubsection{\sc New assumption}
+%**********************************
+
+\begin{figure}[h]
+  \begin{center}
+  \input{Figures/disk_rotor_scheme.pdf_tex}
+  \caption{Scheme of stream tube englobing the disk rotor (left), 
+  in blue a streamline when rotational wake is added. On the right,
+  a cut in a ($x, r$) plane, with useful notations.}
+  \label{fig:disk_rotor_scheme}
+  \end{center}
+\end{figure}
+
+The previous theory assumed that the rotor disk does not generate any rotation in the wake, which is not exactly true.
+Therefore the momentum theory has been modified to allow flow rotation in the wake, assuming:
+
+\begin{itemize}
+  \item the upstream flow is not affected by the rotation
+  \item immediatly behind the rotor section a tangential flow is generated and related to the
+    downstream wake by an angular induction factor :
+    \begin{equation} \dsp
+      a' = \frac{\omega}{\Omega}
+    \label{eq:ap0}
+    \end{equation} 
+    \todo{Verify if not $a' = \frac{\omega}{2\Omega}$, may be confusion between propeller and turbine}
+
+    where $\Omega$ is the angular velocity of the rotor, $2 \times \omega$ 
+    is the angular velocity imparted by the wake, and related to 
+    wake vorticity with the additional assumption $\omega << \Omega$.
+\end{itemize}
+
+On figure \ref{fig:disk_rotor_scheme} is illustrated the effect of rotation assumption on a streamline (in blue).
+
+%*******************************
+\subsubsection{ \sc Thrust}
+%*******************************
+\label{sec:thrust}
+
+The thrust calculation is also refered as the  momentum theory.
+
+
+Let's considerer the rotor disk as infinitly thin and a thin stream tube of thickness $dr$ which provides
+an axial force $dT$ on a small part of the blades, as depicted in figure \ref{fig:disk_rotor_scheme}.
+
+From the momentum equation  (similarly to section \label{sec:axial_force})  it is found that :
+
+\begin{equation} \dsp 
+dT = dq_m (V_1(r) - V_0(r)) = \rho~dS~U_x~(V_1 -V_0 )
+\label{eq:1}
+\end{equation}
+
+$dq_m$ is the elementary mass flow rate accross the stream tube, $dS = 2 \pi r dr$ is the section of the tube
+at the location of the rotor disk, and $V_0$ and $V_1$ are the inlet and outlet tube velocities.
+$U_x$ remains the fluid velocity across the rotor disk 
+
+Let know consider the Bernoulli equation in the streamline arriving on the disk rotor,
+and another one which starts from this section:
+
+$$ \dsp 
+p_0 +\rho  \frac{V_0^2}{2} = p^- + \rho  \frac{U_x^2}{2}, \qquad
+p_1 +\rho  \frac{V_1^2}{2} = p^+ + \rho  \frac{U_x^2}{2}
+$$
+
+with $p_0=p_1$. The elementary axial force exerted by the disk rotor on the fluid
+is therefore :
+
+\begin{equation} \dsp 
+dT = dS \times (p^+-p^-) = \frac{dS ~\rho}{2}~(V_1^2-V_0^2)= dS ~\rho~(V_1-V_0)~ \frac{V_1+V_0}{2}
+\label{eq:2}
+\end{equation}
+
+By comparing equation \eqref{eq:1} and \eqref{eq:2} it is found :
+$$ \dsp
+\dsp U_x = \frac{V_1+V_0}{2}  \qquad {\rm and} \qquad V_1 = 2 U_x -V_0
+$$
+
+The relation is the same as the one found in the previous section, but here the velocities depends on the
+radial coordinate $r$.
+
+Finally by substituting $V_1$ , it is found :
+
+\begin{equation} \dsp 
+dT =  2~dS~\rho~U_x~(U_x-V_0) = 4~\pi~r~\rho~U_x~(U_x-V_0)~dr
+\label{eq:3}
+\end{equation}
+
+
+The \textbf{axial induction factor} $a$ can always be defined    as :
+
+\begin{equation} \dsp 
+U_x(r) = (1-a(r)) V_0(r)
+  \label{eq:def_ap}
+\end{equation}
+
+and the elementary axial force becomes
+$\dsp  dT = - 4~\pi~r~\rho~V_0^2~a~(1-a)~dr$
+
+and finally
+
+\begin{equation}
+dT_{fluid\to rotor}(r) = 4~\pi~r~\rho~V_0^2~a~(1-a)~dr
+\label{eq:Tf-r}
+\end{equation}
+ 
+
+
+
+%********************************************
+\subsubsection{\sc Tangential velocity and torque}
+%********************************************
+\label{secsec:ut}
+
+The theory to determine the torque is also known as Tangential Momentum Theory.
+
+Before the stream flow goes trough the rotor disk, no rotation is observed.
+Across the rotor disk, in the rotation based at angular  velocity $\Omega$,
+the fluid rotates at a different angular velocity $\omega$, opposite at the rotation direction of the rotor,
+leading to a tangential perturbation velocity $u_t$, small, but proportional to $r~\Omega$.
+Considering a  stream tube (cf. fig. \ref{fig:disk_rotor_scheme}),
+tangential velocity perturbation is defined by   
+a \textbf{tangential induction factor} $a'$
+
+\begin{equation}
+u_t = r ~\omega = a'(r)~r~\Omega 
+\label{eq:def_aprime}
+\end{equation}
+
+In the outlet section of the stream tube, Glauert assumes that the angular velocity is $2\omega$,
+and therefore the perturbation of tangential velocity is approximately twice 
+the perturbation velocity in the disk rotor section. 
+
+The variation of torque $dQ_{fluid\to rotor}=dQ$ due to the variation of tangential velocity is given by the second
+Newton's law for the moment, written between the inlet and the outlet of the stream tube :
+
+$$
+dQ = \rho~U_x~r~u_{t_{outlet}}~dS= dq_m~r~u_{t_{outlet}} =  \rho~U_x~2\pi~r~dr~r~2~u_t
+$$
+
+Finaly by introducing the tangential and axial induction factor it yields :
+
+\begin{equation}
+dQ = 4~\pi~\rho~r^3~V_0(r)~\Omega~a'(1-a)~dr
+\label{eq:def_dM}
+\end{equation}
+
+
+
+%********************************************
+\subsubsection{\sc Power and propulsive efficiency}
+%********************************************
+
+
+The efficiency is the ratio between the output power to the input power, on the small stream tube of thickness $dr$ :
+
+$$ \dsp
+\eta =  \frac{\int \Omega~dQ}{\int V_0~dT_{fluid\to rotor}}  
+$$
+ 
+
+
+%****************************************
+\section{Blade Element Momentum Theory}
+%****************************************
+
+%*************************
+\subsection{Methodology}
+%*************************
+
+Different steps are to be developped:
+
+\begin{enumerate}
+\item blade geometry and discretisation
+\item characteristic of the upstream flow
+\item velocity decomposition
+\item forces and torque
+\item power and efficiency
+\end{enumerate}
+
+The velocity and forces section are related to aerodynamics.
+
+When all these points are treated it remains to propose an algorithm to solve
+the problem numerically and to discuss about options.
+
+Results and conclusion will end the chapter.
+
+
+
+%*****************************************
+\subsection{Geometry}
+%*****************************************
+\label{sec:wt_gmtry}
+
+\begin{figure}
+  \begin{center}
+  \input{Figures/rotor_and_propeller.pdf_tex}
+  \caption{Rotor disk  of a wind turbine and propeller of an aircraft.}
+  \label{fig:rotor_and_propeller}
+  \end{center}
+  \end{figure}
+
+The description of the geometry is the same for a propeller and and wind turbine rotor.
+
+The propeller and the rotor are build with $N_b$ blades distributed equally spaced (optionally) in the rotor section 
+(fig. \ref{fig:rotor_and_propeller}). 
+Blade  geometry is defined in figure \ref{fig:blades}.
+
+The blade is discretized into $n$ elements, along the radial direction, each element is located between $r_k$ and $r_{k+1}$
+for $k \in \{ 0, n \}$ and the zone of interest is for $r \in \{r_0, R\}$.
+
+The airfoil section changes along the blade span so the blade is divided into $n_p$ panels, each panel is assumed to have the same airfoil section.
+
+The blade is also defined by two laws:
+\begin{itemize}
+  \item the chord law $c(r)$
+  \item the pitching angle law $\theta(r)$
+\end{itemize}
+
+
+The local polar base is $(\bs{e_x},\bs{e_r},\bs{e_t})$ (fig. \ref{fig:rotor_and_propeller}).
+
+\begin{figure}
+\begin{center}
+\input{Figures/wind_turbine_blade.pdf_tex}
+\caption{Schemes of wind rotor(bottom) and modern propeller (top) blades.}
+\label{fig:blades}
+\end{center}
+\end{figure}
+
+% \begin{figure}
+% \begin{center}
+% \input{Figures/propeller.pdf_tex}
+% \caption{Rotor disk  of a modern propeller.}
+% \label{fig:propeller}
+% \end{center}
+% \end{figure}
+
+
+
+% \begin{figure}
+% \begin{center}
+% \input{Figures/propeller_side.pdf_tex}
+% \label{fig:propeller_side}
+% \caption{Scheme of a modern propeller, side view}
+% \end{center}
+% \end{figure}
+
+% \begin{figure}
+% \begin{center}
+% \input{Figures/forces.pdf_tex}
+% \label{fig:forces}
+% \caption{Scheme of the forces on a element}
+% \end{center}
+% \end{figure}
+
+%******************************
+\subsection{Upstream conditions}
+%******************************
+
+The wind turbine  is submitted to an upstream flow. The basic assumption is to consider it
+uniform at velocity  $V_0$.
+
+However, for large rotor size of wind turbine, this assumption is no longer true, because of the 
+ground boundary layer. In this situation the upstream velocity is a profile $V(r)$ with some shear.
+The velocity $V_0$ is then defined as a mean value given by 
+
+$$ \dsp
+V_0 = \frac{1}{S} \int_{r_0}^R V(r) dS
+$$
+
+where $S = \pi~ (R^2-r_0^2)$ is the wetted (or useful) rotor disk area.
+
+In the following the upstream velocity is therefore refers as $V(r)$ or simply $V$.
+
+
+%***********************
+\subsection{Velocities}
+%***********************
+
+To develop the BEM theory we have to refer to the figure \ref{fig:rotor_side_notations} which provides
+velocity and force decompositions.
+
+
+
+Let's consider a given airfoil section located at a distance $r$ from the axis of rotation (fig. \ref{fig:blades}). 
+The BEMT consists on analyzing the decomposition of the \textbf{apparent velocity} vector refered as $\bs{W}$ 
+which is the air velocity seen by the airfoil section and
+which allow to determine an angle of attack $\alpha$.
+
+The apparent velocity is the sum of :
+\begin{itemize}
+\item the upstream  velocity $\bs{V}$
+
+\item the tangential velocity related to the disk rotation $\bs{V_t} = - r~\Omega~\bs{e_t}$,
+ where $\bs{e_t} = \bs{e_x} \times \bs{e_r}$. 
+
+\item the induced velocity $\bs{w}$ whose direction is defined by the induced angle of attack $\alpha_i$. 
+It is due to the tip vortex of the blade. Its direction is assumed orthogonal to the airfoil section axis.   
+\end{itemize}
+
+
+In addition we can define the relative velocity $\bs{V_R} = \bs{V} + \bs{V_t}$ whose direction is the angle $\varphi$, with 
+
+$$ \dsp \tan\varphi = \frac{V(r)}{|V_t|} = \frac{V(r)}{r\Omega}$$
+
+And finally, the apparent velocity can be projected into the $\bs{e_x}$ and $\bs{e_t}$ directions as :
+
+\begin{equation}
+ \bs{W} = U_x~\bs{e_x} + U_t~\bs{e_t}
+\label{eq:W_def}
+\end{equation} 
+
+where :
+\begin{itemize}
+  \item $U_x(r)$ is the axial velocity, air velocity crossing the rotor plane
+  \item $U_t(r)$ is the tangential velocity, in the rotor plane. 
+\end{itemize}
+
+All these velocities are drawn on figure  \ref{fig:rotor_side_notations}.
+
+\begin{figure}[htb]
+  \begin{center}
+  \input{Figures/rotor_side_notations.pdf_tex}
+  \caption{Scheme of a wind turbine rotor, side view (left) and airfoil section with velocity and force decompositions (right)}
+  \label{fig:rotor_side_notations}
+  \end{center}
+  \end{figure}
+
+
+In addition on the close-up of fig.  \ref{fig:rotor_side_notations} is shown the tangential induced velocity $u_t = U_t - r~\Omega$
+discussed in section \ref{secsec:ut}.
+
+%********************
+\subsection{Angles}
+%********************
+
+Angles play an important role to define velocity and force directions.
+
+Different angles are defined from the velocities and aerodynamics :
+\begin{itemize}
+  \item the induced angle of attack $\alpha_i$
+  \item the relative velocity angle $\varphi$
+  \item the local flow angle $\phi$ with 
+  $$
+    \phi = \varphi - \alpha_i
+  $$
+
+  \item the pitching angle $\theta$, which comes from the geometry
+  \item the real angle of attack $\alpha$
+  \item the aerodynamic efficiency angle $\gamma$ with $\tan \gamma = C_d/C_\ell = 1/f$.
+\end{itemize}
+
+$f$ is here the aerodynamic efficiency. $C_d$ and $C_{\ell}$ are the usual lift and drag aerodynamic 
+coefficients  used in the next section.
+
+
+To determine forces exerted on the airfoil section we need to clearly defined the angle of attack  by :
+
+\begin{equation}
+\alpha =  \phi-\theta
+\label{eq:alpha}
+\end{equation}
+
+%************************************
+\subsection{Forces on a wing section}
+%************************************
+
+On figure \ref{fig:rotor_side_notations} are drawn the aerodynamics force on a wing section.
+
+Let write the equations for a given section, and for a single blade :
+
+\begin{itemize}
+    \item the lift 
+    $$
+      \dsp \bs{dL} = q~dS~C_\ell~\bs{j_a}  
+    $$
+    \item the drag 
+    $$
+      \dsp \bs{dD} = q~dS~C_d ~\bs{i_a}
+    $$
+    \item the aerodynamic force $\bs{dF}$
+    $$\dsp
+    \bs{dF} = dL~\bs{j_a} + dD~\bs{i_a} = \bs{dT} + \bs{dF_t}
+    $$
+    \item the normal aerodynamic force :
+    $$
+    dT = \bs{dF}\cdot\bs{e_x} = q~dS~C_n
+    $$
+    \item the tangential aerodynamic force:
+    $$
+    dF_t = \bs{dF}\cdot\bs{e_y} = q~dS~C_t
+    $$
+
+\end{itemize}
+
+with 
+\begin{itemize}
+  \item $q=\frac{1}{2} \rho W^2$, the local dynamic pressure
+  % \item $S = c(r) \times b(r)$ where $b(r)$ is the span of the local element.
+  \item $C_\ell, C_d$ are the aerodynamic lift and drag coefficients dependent on the airfoil.
+  \item $C_n, C_t$ are the aerodynamic normal and tangential  coefficient dependent on the $C_{\ell}$ and $C_d$.
+  \item $(\bs{i_a}, \bs{j_a})$ is the local aerodynamic base ($\bs{W} = W~\bs{i_a}$) (see fig.~\ref{fig:rotor_side_notations})
+  \item $ dS = c(r)~ dr$ is the area of a blade element
+\end{itemize}
+
+In addition it it easy to show that :
+\begin{eqnarray}
+dT &=& \cos\phi ~ dL + \sin\phi~ dD   \label{eq:dT_prop}\\
+dF_t &=& \sin\phi ~ dL - \cos\phi~ dD \label{eq:dFt_prop} 
+\end{eqnarray}
+
+From equations \ref{eq:dT_prop} and \ref{eq:dFt_prop}  it is found :
+\begin{equation}
+\begin{array}{lcl}
+C_n &=& C_\ell \cos\phi + C_d \sin \phi \\
+C_t &=& C_\ell \sin\phi - C_d \cos \phi
+\end{array}
+\label{eq:CnCt_prop}
+\end{equation}
+
+\Note{The sign in front of $C_d$ is opposite between turbine and propeller:
+\begin{itemize}
+  \item In propeller, airfoil drag has a negative effect on the thrust, which is the system output
+  \item In turbine, airfoil drag as a negative effect on $dF_t$, i.e. the momentum $dQ$, which is the system output
+\end{itemize}
+}
+
+%********************************************
+\subsection{BEM theory algorithm}
+%********************************************
+
+
+To develop the Blade Element Momentum Theory, several steps are necessary and some reduced quantities are 
+introduced (ever discussed in the disk rotor theory).
+
+%******************************************************************
+\subsubsection{\sc Step 1 : induced factor and apparent velocity}
+%*****************************************************************
+
+
+The BEMT use different reduced quantities and the most important are the induced flow factor $a$ and $a'$ defined as :
+
+\begin{itemize}
+\item the induced axial velocity factor $a$ is given by :
+  \begin{equation}
+  U_x~/~V = 1 - a
+  \label{eq:a_def}
+  \end{equation}
+
+From the figure \ref{fig:rotor_side_notations} it can be seen that $U_x < V$, that means that $0 < a < 1$.
+
+\item the induced radial velocity factor $a'$ is given by 
+  \begin{equation}
+    U_t  = (1+a')~V_t = (1+a') ~r~\Omega
+  \label{eq:aprime_def}
+  \end{equation}
+
+\item We can then find :
+\begin{equation} \dsp
+\tan \phi = \frac{U_x}{U_t} = \frac{1 - a}{1+a'} \times \frac{V}{r~\Omega}, \qquad U_x = W \sin\phi, \qquad U_t = W \cos\phi
+\label{eq:tanphi}
+\end{equation}
+\end{itemize}
+
+It is now possible to express the modulus of the apparent velocity as a function of the induced factors :
+\begin{equation}
+\dsp W = \sqrt{V^2(1-a)^2 + r^2 \Omega^2 (1+a')^2} = V  \sqrt{(1-a)^2 + \left(\frac{r \Omega}{V}\right)^2 (1+a')^2}
+\label{eq:W}
+\end{equation}
+
+
+From the previous equation, we can defined a reduced velocity parameter  refers as \textbf{local tip speed ratio}:
+
+\begin{equation}
+    \lambda_r =  \frac{r \Omega}{V(r)} = \frac{1}{\tan \varphi}
+  \label{eq:lambda_r}
+\end{equation}
+
+It has been also encountered in the rotor disk theory.
+
+
+%******************************************************
+\subsubsection{\sc Step 2 : equations for induction factors}
+%******************************************************
+
+The next step is to make the relationship between velocity, induced factors 
+and aerodynamic coefficients.
+
+\begin{itemize}
+
+\item  \textbf{axial induction factor} equation.
+
+First we can write the elementary axial force \underline{exerted by the fluid on the element}, for $N_b$ blades as :
+$$ \dsp
+dT = N_b~q~dS~C_n = \frac{1}{2} \rho W^2 C_n  N_b~c(r)~dr, \quad {\rm with}\qquad U_x = W \sin\phi 
+$$
+
+The  $dT$ is also given from the rotor disk theory by the
+equation \eqref{eq:Tf-r} (or the opposite of equation \eqref{eq:3})
+
+Equating the both  equations leads to :
+\begin{equation}
+\frac{C_n~N_b~c}{8 \pi r ~\sin^2\phi} = \frac{V}{U_x}-1 = \frac{1}{1-a} -1 
+\label{eq:tmp1}
+\end{equation}
+
+
+Here can be introduced the
+\textbf{solidity function}  $\sigma$ (sometimes refered as $s$): 
+    
+\begin{equation}
+  \sigma = \dfrac{N_b~c(r)}{2\pi r}
+\end{equation}
+
+where $c(r)$ is the chord law and $N_b$ the number of blades.
+
+For a wind turbine rotor, there are few blades (two to five) and the total area of the blade
+is much lower than the disk aera, therefore the solidity is a small number.
+
+
+Finally the equation \eqref{eq:tmp1} can be simplified 
+by introducing the solidity parameter as  
+
+\begin{equation} \dsp \dfrac{1}{a} = 1+ \dfrac{4 \sin^2\phi}{\sigma C_n}, \qquad   
+ \dfrac{a}{1-a} = \dfrac{\sigma C_n}{4 \sin^2\phi}
+  \label{eq:a}\end{equation} 
+
+\item  \textbf{tangential induction factor} :
+
+
+The elementary torque on $N_b$ blades,
+ from figure \ref{fig:rotor_side_notations} is given by 
+$$
+dQ = N_b~r~dF_t = N_b~r~q~c(r)~dr~C_t = \frac{\rho}{2} W^2~N_b~r~c(r)~dr~C_t
+$$
+
+In this equation we rewrite 
+$\dsp W^2 = W\times W  =  \frac{U_x~U_t}{\cos\phi~\sin\phi}$ with
+$U_t = r~\Omega~(1+a')$
+
+It is equal to the elementary momentum given by the rotor disk theory equation
+\eqref{eq:def_dM} written as :
+$$
+dQ =  4 \  \pi \ \rho \ V(r) \ \Omega \  a' \ (1-a)  \ r^3~dr= 4~\pi~\rho~r^3~\Omega~a'~U_x~dr
+$$
+
+
+finally we find :
+
+
+\begin{equation} \dsp 
+  \dfrac{a'}{1+a'}  =   \dfrac{\sigma C_t}{4 \sin\phi \cos\phi} \qquad
+  \Longrightarrow \qquad \dfrac{1}{a'} = \dfrac{4 \sin\phi \cos\phi}{\sigma C_t}-1 
+\label{eq:ap}\end{equation}  
+
+\item Local flow angle $\phi$, from the equation \eqref{eq:tanphi} we get
+$$\sin\phi = \dfrac{V}{W} (1-a), \qquad  \cos\phi = \dfrac{r \Omega}{W} (1+a')
+$$
+\begin{equation}\lambda_r \tan \phi = \dfrac{1-a}{1+a'} \label{eq:lam}\end{equation}  
+
+\end{itemize}
+
+%******************************************************
+\subsubsection{\sc Step 3 : thrust and torque}
+%******************************************************
+
+\begin{itemize}
+\item the elementary thust is given from previous section as :
+$$ \dsp
+ \der{T}{r} =  \dfrac{1}{2}~\rho~N_b~V^2~c(r)~\dfrac{(1-a)^2}{\sin^2\phi}~C_n~=~
+ 4 \ \pi \ \rho \ V^2(r) \ a \ (1-a) \ r
+$$
+
+and the total  thrust is :
+$$ \dsp
+T  = \int_{r_0}^{R} dT
+$$
+
+\item the elementary torque has ever been calculated  as well:
+$$\dsp
+\der{Q}{r} =  \dfrac{1}{2}~\rho~N_b~(r~\Omega)^2~r~c(r)~\dfrac{(1+a')^2}{\cos^2\phi}~C_t~=~
+ 4~\pi~\rho~r^3~V(r)~\Omega~a'(1-a)
+$$
+and the total torque is 
+
+$$ \dsp
+Q  = \int_{r_0}^{R} dQ
+$$
+\end{itemize}
+
+
+
+%******************************************************
+\subsubsection{\sc Step 4 : power and efficiency}
+%******************************************************
+
+\begin{itemize}
+\item the input power is :
+$$ \dsp
+P_{in}   = \int_{r_0}^{R} V(r) \times dT
+$$
+
+\item the output power, obtained from the torque is 
+  
+
+$$ \dsp
+P_{out}  = \int_{r_0}^{R} \Omega\times dQ = \Omega \times Q 
+$$
+\item the efficiency is therefore:
+$$\dsp
+\eta = \frac{P_{out}}{P_{in}} 
+$$
+\end{itemize}
+
+
+%*******************************************************
+\subsection{Tip loss}
+%*******************************************************
+
+In the previous theory the tip loss existing because the blade is a wing of finite span has not been taken
+into account. Prandtl has proposed a correction  to the BEMT theory by introducing a function $F(r)$ as follows :
+
+\begin{itemize}
+\item for elementary torque and thrust :
+$$ \dsp
+\der{Q}{r} = 4 \  \pi \ \rho \ V_0(r) \ \Omega \  a' \ (1-a)  \ r^3~F(r)
+$$
+
+$$ \dsp
+\der{T}{r} =    4 \ \pi \ \rho \ V_0^2 \ a \ (1-a) \ r~F(r)
+$$
+
+with
+$$ \dsp
+F(\phi,r) = \dfrac{2}{\pi} \arccos e^{-f} , \qquad f =  \dfrac{N_b}{2} \ \dfrac{R-r}{r \sin\phi}
+$$
+
+\item the induction factor equations are modified  as :
+
+\begin{equation}
+\begin{array}{lcl}
+\dsp \dfrac{1}{a} &=& \dsp 1+ \dfrac{4 F \sin^2\phi}{\sigma C_n} \vs{0.3} \\
+\dsp \dfrac{1}{a'} &=&\dsp \dfrac{4 F \sin\phi \cos\phi}{\sigma C_t}-1
+\end{array}
+\label{eq:aap_with_correction}
+\end{equation}
+
+
+By combining equations \eqref{eq:aap_with_correction} and  \eqref{eq:lam} we get a non trivial
+equation with  $\phi$ angle as variable :
+
+\begin{empheq}[box={\mymath[colback=green!20,drop lifted shadow, sharp corners]}]{equation}
+\dsp 
+    f_{\rm Newton} (\phi, r)= 0 = -1 +  \frac{1}{\lambda_r(r)} \ \frac{2 F(\phi,r) \sin2\phi - \sigma(r) C_t(\phi)}{4 F(\phi,r) \sin^2\phi + \sigma(r) C_n(\phi)} 
+\label{eq:phi+tiploss}
+\end{empheq}
+
+\end{itemize}
+
+
+
+%****************************************
+\subsection{Resolution, full algorithm}
+%****************************************
+
+To solve the problem an iteration procedure is required to first determined $a$ and $a'$ for every element, and 
+a basic procedure, always retains by people have been proposed by Glauert.
+
+Here we propose something new:
+
+By combining equations \eqref{eq:a}, \eqref{eq:ap} and  \eqref{eq:lam} we get a non trivial
+equation with  $\phi$ angle as variable :
+
+\begin{empheq}[box={\mymath[colback=green!20,drop lifted shadow, sharp corners]}]{equation}
+\dsp 
+f_{\rm Newton} (\phi, r)= 0 = -1   \frac{1}{\lambda_r(r)} \ \frac{2 \sin2\phi - \sigma(r) C_t(\phi)}{4 \sin^2\phi + \sigma(r) C_n(\phi)} 
+\label{eq:Phi}
+\end{empheq}
+
+where $C_n$ and $C_t$ depend on  $\alpha$,  $\phi$ and of the pitching law $\theta(r)$.
+
+This procedure only requires a Newton procedure to solve \eqref{eq:Phi}, and then all the unknowns are calculated 
+from $\phi$, $a$ and $a'$.
+
+The algorithm is now :
+
+\begin{enumerate}
+\item read the data : blade geometry, airfoil characteristics ($C_\ell, C_d$)
+\item discretise the blade, define the elements and panel function of  $r$ 
+\item for each elements :
+      \begin{enumerate}
+      \item Solve $\phi(r)$ with the equation \eqref{eq:Phi}, or equation \eqref{eq:phi+tiploss} if tip loss are taken into account,
+      find the local angle of attack $\alpha$ from \eqref{eq:alpha}
+      \item Calculate $C_t$, $C_n$  from equations \eqref{eq:CnCt} then $a$ and $a'$, from equations  \eqref{eq:a} and \eqref{eq:ap}  or  \eqref{eq:aap_with_correction}
+      \item Calculate the distribution of $dT$ and $dQ$
+      \end{enumerate}
+\item Calculate the total force, total torque, powers and efficiency.
+\item Plots all the desired curves and save data.
+\end{enumerate}
+
+The crucial points, which quite fast is the Newton method in step 3a).

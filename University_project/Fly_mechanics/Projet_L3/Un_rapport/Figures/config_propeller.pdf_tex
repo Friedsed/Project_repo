@@ -1,0 +1,67 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'config_propeller.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{255.11811024bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.55555556)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{config_propeller.pdf}}%
+    \put(0.93814089,0.27667261){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{config_propeller.pdf}}%
+    \put(0.07869072,0.53029978){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V_0$}}}%
+    \put(0.48796175,0.17552614){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$U_x$}}}%
+    \put(0.84032429,0.21392173){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V_1$}}}%
+    \put(0.01461654,0.31532276){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_0$}}}%
+    \put(0.83669221,0.31972903){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p_1$}}}%
+    \put(0.41421584,0.024123){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$S$}}}%
+    \put(0.02085484,0.21883788){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$S_0$}}}%
+    \put(0.84298601,0.13889597){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$S_1$}}}%
+    \put(0.35565697,0.35538137){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p^-$}}}%
+    \put(0.47939887,0.35435473){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p^+$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{config_propeller.pdf}}%
+  \end{picture}%
+\endgroup%

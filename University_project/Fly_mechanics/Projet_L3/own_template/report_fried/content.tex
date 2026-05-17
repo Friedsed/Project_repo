@@ -1,0 +1,373 @@
+% ----------------------------------------------
+\chapter{Introduction}\label{ch:structure}
+
+Ce projet porte sur la modélisation de la distance de décollage d’un avion à l’aide d’un modèle simplifié basé sur les équations fondamentales de la mécanique du vol.
+
+L’objectif est d’identifier les principaux paramètres influençant la distance de décollage et de proposer un modèle de simulation permettant d’estimer cette distance dans différentes conditions.
+
+\vspace{1cm}
+
+%------------------------------------------------
+
+\section{Explication des forces appliquées à l’avion}\label{sec:section1}
+
+De manière générale, plusieurs forces s’appliquent sur un avion : le poids, les forces aérodynamiques (portance et traînée), la poussée, ainsi que la force de frottement avec le sol pendant la phase de roulage.
+
+\begin{enumerate}
+	
+	\item \textbf{Le poids ($W$)} correspond au poids total de l’avion, c’est-à-dire la somme du poids à vide, du poids des passagers et du carburant.
+	
+	\item \textbf{La portance ($L$)} est une force aérodynamique générée par la différence de pression entre l’intrados et l’extrados de l’aile. Elle permet à l’avion de décoller.
+	
+	\item \textbf{La traînée ($D$)} est une force aérodynamique qui s’oppose au mouvement de l’avion.
+	
+	\item \textbf{La poussée ($T$)} est la force produite par les moteurs permettant à l’avion d’accélérer.
+	
+	\item \textbf{La force de frottement ($F_r$)} est due au contact entre les roues de l’avion et la piste. Elle diminue progressivement à mesure que la portance augmente et devient nulle au moment du décollage.
+	
+\end{enumerate}
+
+\vspace{1cm}
+
+%------------------------------------------------
+
+\section{Les éléments influençant la distance de décollage}
+
+La distance de décollage dépend de plusieurs paramètres :
+
+\begin{itemize}
+	\item la masse totale de l’avion ;
+	\item la poussée des moteurs ;
+	\item la densité de l’air ;
+	\item la vitesse du vent ;
+	\item la longueur et la nature de la piste ;
+	\item les caractéristiques aérodynamiques de l’avion.
+\end{itemize}
+
+\vspace{1cm}
+
+%------------------------------------------------
+
+\section{Modèle de base de simulation}
+	
+	\subsection{Distance parcourue au sol}
+	
+		En appliquant la seconde loi de Newton à l’avion pendant sa phase de roulage au sol, on obtient :
+		
+		\begin{equation}
+			\frac{W}{g}\frac{dV}{dt}=T-D-F_r	\tag{1.1}
+		\end{equation}
+		En utilisant la relation de dérivation totale :
+		\begin{equation}
+			\frac{dV}{dt} 	=	\frac{ds}{dt}\frac{dV}{ds}	=	(V-V_{hw})\frac{dV}{ds}
+		\end{equation}
+		On obtient alors :
+		\begin{equation}
+			\frac{ds}{dV}	=	\frac{W(V-V_{hw})}	{g(T-D-F_r)}
+		\end{equation}
+		En intégrant entre deux vitesses successives :
+		\begin{equation}
+			s_{i+1}-s_i	=	\frac{W}{g}	\int_{V_i}^{V_{i+1}}	\frac{(V-V_{hw})\,dV}	{T-D-F_r}	\tag{1.2}
+		\end{equation}
+		où $s$ représente la distance parcourue sur la piste.
+		\begin{align}
+			S_{i+1} - S_i
+			&= \frac{W}{g}\int_{V_i}^{V_{i+1}} 	\frac{V - V_{hw}}{T - D - F_r}\, dV \\	
+			&= \frac{1}{g}\int_{V_i}^{V_{i+1}} 	\frac{V - V_{hw}}{\dfrac{T - D - F_r}{W}}\, dV
+		\end{align}
+		
+			\begin{align}
+			T - D - F_r
+			&= (T_0)_i + (T')_i V + (T'')_i V^2  - \frac{1}{2}\rho V^2 S_w C_D 	- \mu_r W + \frac{1}{2}\mu_r \rho_w C_L V^2
+		\end{align}
+		En posant :
+		\begin{align}
+			\frac{T - D - F_r}{W} &= A + BV + CV^2
+		\end{align}
+		avec
+		\begin{align}
+			A &= \frac{(T_0)_i}{W} - \mu_r, \\
+			B &= \frac{(T')_i}{W}, \\
+			C &= \frac{(T'')_i}{W} 	- \frac{1}{2}\frac{\rho}{W/\!S_w}\left(\mu_r C_L - C_D\right).
+		\end{align}
+		L'équation devient :
+		\begin{align}
+			S_{i+1} - S_i
+			&= \frac{W}{g}\int_{V_i}^{V_{i+1}}
+			\frac{V - V_{hw}}{A + BV + CV^2}\, dV
+		\end{align}
+	
+	\vspace{1cm}
+
+%------------------------------------------------
+
+	\subsection{Modélisation des forces}
+	
+		\subsubsection*{Traînée}
+		La force de traînée est donnée par :
+		\begin{equation}
+			D=\frac{1}{2}\rho V^2 S_w C_D
+		\end{equation}
+		avec :
+		\begin{equation}
+			C_D=	C_{D0}	+	C_{D0,L}C_L	+	\frac{		\left(\dfrac{16h_w}{b_w}\right)^2	}{		1+\left(\dfrac{16h_w}{b_w}\right)^2	}	\cdot	\frac{C_L^2}{\pi e R_A}
+		\end{equation}
+		où :
+		\[h_w : \text{hauteur de l’aile par rapport au sol et }   b_w : \text{envergure de l’aile}\]
+		
+		\vspace{0.5cm}
+		
+		\subsubsection*{Force de frottement}
+		Pendant le roulage :
+		\begin{equation}
+			F_r	=	\mu_r (W-L)	=	\mu_r	\left(	W-\frac{1}{2}\rho V^2 S_w C_L	\right)
+		\end{equation}
+		
+		\vspace{0.5cm}
+		
+		\subsubsection*{Poussée}
+		
+		La poussée est modélisée par :
+		
+		\begin{equation}
+			T=	(T_0)_i	+	(T')_iV	+	(T'')_iV^2
+		\end{equation}
+		
+		où $(T_0)_i$, $(T')_i$ et $(T'')_i$ sont des coefficients déterminés expérimentalement.
+		
+		\vspace{0.5cm}
+		
+		\subsubsection*{Portance}
+		
+		Le coefficient de portance est défini par :
+		
+		\begin{equation}
+			L = \frac{1}{2}\rho V^2 S_w C_L
+			\tilde{C}_L=2\pi(\alpha-\alpha_{L0})
+		\end{equation}
+		
+		avec :
+		
+		\begin{equation}
+			\alpha_{L0} =	\frac{1}{\pi}	\int_0^{\pi}	\frac{dz_c}{dx}(1-\cos\theta)\, d\theta	-	\frac{\delta_f}{\pi}	\int_0^{\theta_f} (1-\cos\theta)\, d\theta
+		\end{equation}
+		
+		
+		
+			
+			
+	\subsection{Tracer la distance en fonction de la vitesse}
+	
+	On sait que :
+	
+	\begin{align}
+		\frac{dV}{ds}(V - V_{hw}) &= \frac{dV}{dt}
+	\end{align}
+	
+	Donc :
+	
+	\begin{align}
+		\frac{dV}{ds}
+		&= \frac{g}{W}\frac{T - D - F_r}{V - V_{hw}}
+		\approx \frac{g\left(A + BV + CV^2\right)}{V - V_{hw}}
+	\end{align}
+	
+	Par intégration des deux côtés, on obtient la distance en fonction de la vitesse, qui a été tracée dans le code :
+	
+	\begin{align}
+		\int \frac{V - V_{hw}}{A + BV + CV^2}\, dV
+		&= g \int ds
+	\end{align}
+	
+	
+	
+	
+	
+% ----------------------------------------------
+
+\chapter{Conclusion}\label{ch:conclusion}
+
+Ce modèle permet d’estimer la distance de décollage d’un avion en tenant compte des principales forces appliquées durant la phase de roulage. Il constitue une base de simulation utile pour analyser l’influence des différents paramètres sur les performances au décollage.
+
+% ----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+	
+	
+	
+	% ----------------------------------------------
+	\cleardoublepage
+	\chapter{Expression mathematique de la distance }
+	
+	% ############################################
+	\section{New Commands}
+	
+	
+	% ############################################
+	\section{Acronyms and References}
+	
+	A popular acronym is \acs{LOL}. \acf{IMHO} is another one. 
+	
+	Citations can have page numbers \cite[p. 473]{smi:60}, \cite[pp. 359 - 360]{doe:16}, but they can be left out as well \cite{wai:99}, \cite{mus:16}, \cite{wri:81}, \cite{stu:89}.
+	
+	You can also add footnotes.\footnote{It is displayed at the bottom of the page.}
+	
+	\pagebreak
+	
+	% ############################################
+	\section{Lists}
+	
+	Unordered Lists:
+	\begin{itemize}
+		\item This is an unordered list. 
+		\item Item 2.
+		\item It has three items.
+	\end{itemize}
+	
+	Ordered List:
+	\begin{enumerate}
+		\item This is an ordered list.
+		\item Item 2.
+		\item It has three items.
+	\end{enumerate}
+	
+	Ordered List (alphabetical):
+	\begin{enumerate}[label=\Alph*.]
+		\item This is an ordered list.
+		\item Item 2.
+		\item It has three items.
+	\end{enumerate}
+	
+	% ----------------------------------------------
+	\chapter{Figures}\label{ch:figures}
+	
+	% ############################################
+	\section{Images}\label{sec:images}
+	
+	\autoref{fig:image1} shows how to display images.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{f1.jpg}
+		\caption{Image}
+		
+		\label{fig:image1}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{f4.jpg}
+		\caption{Image with Source}
+		\captionsource{\cite{mus:16}}	
+		\label{fig:image2}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{f7.jpg}
+		\caption{Image with Source and Link}
+		\captionsource[https://example.org]{J. Doe}	
+		\label{fig:image3}
+	\end{figure}
+	
+	
+	
+	
+
+\section{Mathematics}\label{sec:maths}
+
+\subsection{Definitions}
+
+\begin{define}	
+	A function $f: X \rightarrow Y$ is injective if and only if for all $x_1, x_2 \in X$, $x_1 \neq x_2$ implies $f(x_1) \neq f(x_2)$.
+\end{define}
+
+\subsection{Formulas}
+
+Formulas can be included inline, e.g. $K_E^{CID}$ to $S$ or as an own block.
+$$ otp = f_k(i, k), \qquad i = 1, ..., n $$
+
+\pagebreak
+% ############################################
+\section{Code Listings}\label{sec:code}
+
+Code can be displayed inline, e.g. \code{UPDATE} or \code{factorial(n)}.
+
+Code listings can have numbered lines, captions, syntax highlighting, ... .
+
+\begin{lstlisting}[caption={[Code Without Line Numbers] Code Without Line Numbers \\ \captionsource{\cite{mus:16}}}, label={lst:codeExample}, language=python, numbers=none]
+	0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 
+	A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Code With Line Numbers}, label={lst:factorial}, language=Java]
+	public int factorial(int n) {
+		if (n == 1) {
+			return 1;
+		} else {
+			return n * factorial(n - 1) ;
+		}
+	}
+\end{lstlisting}
+
+
+
+\end{comment}
