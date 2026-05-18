@@ -240,12 +240,55 @@ class AircraftTakeoff:
         S = np.array([   self.distance_integral_partial(v)    for v in V     ])
 
         plt.figure(figsize=(8,5))
-        plt.plot(V, S)
-        plt.xlabel("Velocity (ft/s)")
-        plt.ylabel("Distance (ft)")
+        plt.plot(S, V)
+        plt.xlabel("Velocity ")
+        plt.ylabel("Distance ")
         plt.title("Distance vs Velocity")
         plt.grid()
         plt.show()
+
+    def plot_acceleration(self):
+
+        Vi = self.p["Vi"]
+        Vip1 = self.Vlo()
+        v=np.linspace( Vi, Vip1, 100)
+        a= ((self.K0() + self.K1() *v + self .K2() *v**2 ) /self.p["g"] )
+
+
+        plt.figure()
+        plt.plot(v,a)
+        plt.xlabel("la vitesse ")
+        plt.ylabel("l'acceleration ")
+        plt.grid
+        plt.show ( )
+
+    def plot_forces (self):
+
+        Vi = self.p["Vi"]
+        Vip1 = self.Vlo()
+        v=np.linspace( Vi, Vip1, 100)
+        L = self.lift(v)
+        D= self.drag(v)
+        T= self.thrust(v)
+        F= self.friction(v)
+
+        plt.figure()
+        plt.plot(v, L, 'b-', linewidth=2, label='Lift (L)')
+        plt.plot(v, D, 'r--', linewidth=2, label='Drag (D)')
+        plt.plot(v, T, 'k-.', linewidth=2, label='Thrust (T)')
+        plt.plot(v, F, 'g:', linewidth=2, label='Friction (F)')
+
+        plt.xlabel("la vitesse ")
+        plt.ylabel(" forces ")
+        plt.legend()
+        plt.grid
+        plt.show ( )
+
+
+
+
+
+
 
     def distance_integral_partial(self, v):
 
@@ -271,45 +314,37 @@ class AircraftTakeoff:
         print("Kt =", self.Kt())
         print("Distance analytical =", self.distance())
         print("Distance integral =", self.distance_integral())
+        #self.plot_distance()
+        #self.plot_acceleration()
+        self.plot_forces()
 
 
 # ============================================================
 # MAIN
 # ============================================================
 
-params = {
-    "Sw": 180,
-    "bw": 33,
-    "hw": 6,
-    "W": 2700,
-    "Ra": 6.05,
-    "Cdo": 0.036,
-    "Cdol": 0.0,
-    "e": 0.82,
-    "Clmax": 1.4,
-    "Cl": 0.3485,
-    "mu": 0.04,
-    "T0": 1200,
-    "T1": -4,
-    "T2": 0,
-    "rho": 0.0023769,
-    "alpha": 0,
-    "alpha_0": 0,
-    "Vhw": 29.33,
-    "g": 32.2,
-    "Vi": 29.33
-}
+params = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
+params1 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
+params2 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
+params3 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
+params4 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
+params5 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
+params6 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
+params7 = {"Sw": 144.9, "bw": 33, "hw": 6, "W": 3400,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.69,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
 
-plane = AircraftTakeoff(params, Unit="US") # here the parameters are in US unit
 
-plane.convert_units("US")
-print(plane.p)
 
-plane.convert_units("SI")
-print(plane.p)
 
-plane_new=AircraftTakeoff(plane.p,  Unit="IS") # here i change the unit of the dictionnary (params) into IS unit that i used for a new AircraftTakeoff
-plane_new.summary()
+plane = AircraftTakeoff(params7, Unit="US") # here the parameters are in US unit
+
+#plane.convert_units("US")
+#print(plane.p)
+
+#plane.convert_units("SI")
+#print(plane.p)
+
+#plane_new=AircraftTakeoff(plane.p,  Unit="IS") # here i change the unit of the dictionnary (params) into IS unit that i used for a new AircraftTakeoff
+plane.summary()
 
 
 

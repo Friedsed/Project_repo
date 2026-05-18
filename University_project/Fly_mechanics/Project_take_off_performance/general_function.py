@@ -106,7 +106,7 @@ def plot_dist_speed(Vhw, koi, k1i, k2i, Vi, Vip1, g):
     ])
 
     plt.figure(figsize=(8, 5))
-    plt.plot(speed, S)
+    plt.plot(S, speed)
     plt.xlabel("Velocity (ft/s)")
     plt.ylabel("Distance (ft)")
     plt.title("Distance vs Velocity")
