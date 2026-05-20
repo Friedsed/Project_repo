@@ -314,8 +314,8 @@ class AircraftTakeoff:
         print("Kt =", self.Kt())
         print("Distance analytical =", self.distance())
         print("Distance integral =", self.distance_integral())
-        #self.plot_distance()
-        #self.plot_acceleration()
+        self.plot_distance()
+        self.plot_acceleration()
         self.plot_forces()
 
 
