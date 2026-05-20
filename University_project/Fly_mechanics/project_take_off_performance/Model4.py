@@ -35,6 +35,8 @@ Example 18.7 ;          Notice:     the ground run distance after running the co
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
+from conversion import *
+import pandas as pd
 
 # self.p[""]
 
@@ -44,48 +46,11 @@ from scipy.integrate import quad
 
 class AircraftTakeoff:
 
-    def __init__(self, params, unit):
+    def __init__(self, params):
         """
         Initialize all parameters from dictionary
         """
         self.p = params
-        self.unit = unit
-
-        # Conversion factors: US -> SI
-        self.CONV = {
-            "Sw": 0.3048**2,
-            "bw": 0.3048,
-            "hw": 0.3048,
-            "W": 4.44822,
-            "T0": 4.44822,
-            "T1": 4.44822 / 0.3048,
-            "T2": 4.44822 / (0.3048**2),
-            "rho": 515.3788,
-            "Vhw": 0.3048,
-            "Vi": 0.3048,
-            "g": 0.3048
-        }
-
-    # =====================================================
-    # Unit conversion
-    # =====================================================
-    def convert_units(self, new_unit="SI"):
-
-        if self.unit == new_unit:
-            print(f"Already in {new_unit}")
-            return
-
-        if self.unit == "US" and new_unit == "SI":
-            for key, value in self.CONV.items():
-                if key in self.p:
-                    self.p[key] *= value
-
-        elif self.unit == "SI" and new_unit == "US":
-            for key, value in self.CONV.items():
-                if key in self.p:
-                    self.p[key] /= value
-
-        self.unit = new_unit
 
     #==============================================
     # Lift at rotation speed
@@ -138,19 +103,54 @@ class AircraftTakeoff:
 
         return {  "times": t,     "drag": D,     "lift": L,      "thrust": T,    "acceleration": A,   "speed": V,     "distance": S     }
 
+    # =====================================================
+    # Plotting forces, speed, and acceleration
+    # =====================================================
 
-# =====================================================
-# Parameters
-# =====================================================
+    def plot_forces (self):
 
-param = {  "W": 3400,  "Sw": 144.9,  "Clmax": 1.69,  "Clto": 0.5, "Cdto": 0.0417, "g": 32.2, "mu": 0.04, "P": 310, "rho": 0.002378,  "T": 1169,
-                "lamdba": 0,  "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-08,  "A4": -6.21e-11 }
+        dict= self.ground_run()
+        L = dict["lift"]
+        D= dict["drag"]
+        T= dict["thrust"]
+        S= dict["distance"]
+        plt.figure()
+        plt.plot(S, L, 'b-', linewidth=2, label='Lift (L)')
+        plt.plot(S, D, 'r--', linewidth=2, label='Drag (D)')
+        plt.plot(S, T, 'k-.', linewidth=2, label='Thrust (T)')
+        plt.xlabel(" the distance ")
+        plt.ylabel(" forces ")
+        plt.legend()
+        plt.grid
+        plt.show ( )
 
-model = AircraftTakeoff(param, "US")
 
-distance = model.ground_run()
+    def plot_speed (self):
+
+        dict= self.ground_run()
+        V = dict["speed"]
+        S= dict["distance"]
+        plt.figure()
+        plt.plot(S, V, 'b-', linewidth=2, label='Speed ')
+        plt.xlabel(" the distance ")
+        plt.ylabel(" Speed ")
+        plt.legend()
+        plt.grid
+        plt.show ( )
+
+    def plot_acceleration (self):
+
+        dict= self.ground_run()
+        A= dict["acceleration"]
+        S= dict["distance"]
+        plt.figure()
+        plt.plot(S, A, 'r--', linewidth=2, label='Acceleration')
+        plt.xlabel(" the distance ")
+        plt.ylabel(" Accelaretion ")
+        plt.legend()
+        plt.grid
+        plt.show ( )
 
 
-for i in range(len(distance)):
-    print(list(distance.keys())[i], "est :", distance[list(distance.keys())[i]])
-    print("")
+
+

@@ -5,12 +5,39 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 16 mai 2026
+Modified: 20 May 2026
+
+B1: Book used Mechanic of flight by Warren
+
+--------------------------------
+Methode developped in this code | Ground run estimation using numerical Integration method ;       page 793 et 799
+--------------------------------
+
+------------
+Advantages 1| : Handle all the Take-off problems but more complex;      Can model the braking distance to simulate an engine faillure
+Advantages 2| : Useful to solve some problem enconterred during the take-off 
+------------|
+
+-----------
+Asumption | V_lof is assumed to be 1.1* stalling speed  
+----------
+
 """
+
+# Which exercices are being validated by my code 
+"""
+Example 3.10.2 ;    Page 350      Notice:     .......................
+Example 3.10.1;     Page 347      Notice: ...................................
+
+
+"""
+
 
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
+from conversion import *
+import pandas as pd
 
 
 # ============================================================
@@ -19,62 +46,14 @@ from scipy.integrate import quad
 
 class AircraftTakeoff:
 
-    def __init__(self, params, Unit):
+    def __init__(self, params):
         """
         Initialize all parameters from dictionary
         """
         self.p = params
-        self.Unit=Unit
-
-        self.CONV = {
-        "Sw": 0.3048**2,        # ft² -> m²
-        "bw": 0.3048,           # ft -> m
-        "hw": 0.3048,           # ft -> m
-        "W": 4.44822,           # lbf -> N
-        "T0": 4.44822,          # lbf -> N
-        "T1": 4.44822/0.3048,   # lbf/ft/s -> N/m/s
-        "T2": 4.44822/(0.3048**2),
-        "rho": 515.3788,        # slug/ft³ -> kg/m³
-        "Vhw": 0.3048,          # ft/s -> m/s
-        "Vi": 0.3048,           # ft/s -> m/s
-        "g": 0.3048,            # ft/s² -> m/s²
-    }
-
-    #========================================================
-    #Changing of unity from american to Internationnal system unit
-    #========================================================
-
-     # =====================================================
-    # conversion factors
-    # =====================================================
-    
 
 
 
-    def convert_units(self, new_unit="SI"):
-
-        if self.Unit== new_unit:
-            print(f"Already in {new_unit}")
-            return
-
-        # from US to SI
-        if self.Unit == "US" and new_unit == "SI":
-            for key, value in self.CONV.items():
-                if key in self.p:
-                    self.p[key] = self.p[key]* value
-
-        # from SI to US
-        elif self.Unit == "SI" and new_unit == "US":
-            for key, value in self.CONV.items():
-                if key in self.p:
-                    self.p[key] = self.p[key] / value
-
-        
-        
-
-
-
-    
     # ========================================================
     # Aerodynamic functions
     # ========================================================
@@ -241,8 +220,8 @@ class AircraftTakeoff:
 
         plt.figure(figsize=(8,5))
         plt.plot(S, V)
-        plt.xlabel("Velocity ")
-        plt.ylabel("Distance ")
+        plt.xlabel("Distance ")
+        plt.ylabel("Velocity")
         plt.title("Distance vs Velocity")
         plt.grid()
         plt.show()
@@ -317,34 +296,6 @@ class AircraftTakeoff:
         self.plot_distance()
         self.plot_acceleration()
         self.plot_forces()
-
-
-# ============================================================
-# MAIN
-# ============================================================
-
-params = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-params1 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-params2 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-params3 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-params4 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-params5 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-params6 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-params7 = {"Sw": 144.9, "bw": 33, "hw": 6, "W": 3400,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.69,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-
-
-
-
-plane = AircraftTakeoff(params7, Unit="US") # here the parameters are in US unit
-
-#plane.convert_units("US")
-#print(plane.p)
-
-#plane.convert_units("SI")
-#print(plane.p)
-
-#plane_new=AircraftTakeoff(plane.p,  Unit="IS") # here i change the unit of the dictionnary (params) into IS unit that i used for a new AircraftTakeoff
-plane.summary()
 
 
 
