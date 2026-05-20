@@ -26,8 +26,7 @@ Asumption | V_lof is assumed to be 1.1* stalling speed
 
 # Which exercices are being validated by my code 
 """
-Example 18.5 page 797 in book B2     ; with a little bit of error
-Example 18.6 page 798 in book B2     ; with      little bit of error
+Example 18.7 ;          Notice:     the ground run distance after running the code is 1111.04 
 
 
 """
@@ -145,7 +144,7 @@ class AircraftTakeoff:
 # =====================================================
 
 param = {  "W": 3400,  "Sw": 144.9,  "Clmax": 1.69,  "Clto": 0.5, "Cdto": 0.0417, "g": 32.2, "mu": 0.04, "P": 310, "rho": 0.002378,  "T": 1169,
-                "lamdba": 0,  "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-8,  "A4": -6.21e-11 }
+                "lamdba": 0,  "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-08,  "A4": -6.21e-11 }
 
 model = AircraftTakeoff(param, "US")
 
