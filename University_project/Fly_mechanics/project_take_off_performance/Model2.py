@@ -136,7 +136,7 @@ class AircraftTakeoff:
     def summary(self):
 
         Vr= self.Vr()
-        C_lige, C_dige =  0, 0 # need to be modify 
+      #  C_lige, C_dige =  0, 0 # need to be modify 
         L =  self.lift()
         D = self.drag()
 
@@ -149,7 +149,7 @@ class AircraftTakeoff:
         S= self.ground_run()
 
         print("The rotation speed is :", Vr)
-        print("The C_lige coefficient", C_lige , " and the C_dige coefficient is :", C_dige)
+       # print("The C_lige coefficient", C_lige , " and the C_dige coefficient is :", C_dige)
         print ("The lift is :", L)
         print ("The drag is : ", D)
         print(" The thrust is :", T)

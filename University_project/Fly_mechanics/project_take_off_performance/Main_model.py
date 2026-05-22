@@ -215,9 +215,9 @@ elif i== 4 :
     model.plot_speed()
     model.plot_acceleration()
 
-    for i in range(len(distance)):
-        print(list(distance.keys())[i], "est :", distance[list(distance.keys())[i]])
-        print("")
+#    for i in range(len(distance)):
+#       print(list(distance.keys())[i], "est :", distance[list(distance.keys())[i]])
+#        print("")
 
             
 
