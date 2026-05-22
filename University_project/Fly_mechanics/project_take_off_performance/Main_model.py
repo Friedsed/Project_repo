@@ -35,10 +35,12 @@ from conversion import *
 
 import pandas as pd
 
-df = pd.read_excel("excel_file/data_1.ods")
+df = pd.read_excel("excel_file/data_1.ods", sheet_name="new1")
 
-#print ("some part of the dictionnary are :",df["Model"] )
-i=4
+print ("some part of the dictionnary are :",df["Model"] )
+
+
+i=0
 
 
  
