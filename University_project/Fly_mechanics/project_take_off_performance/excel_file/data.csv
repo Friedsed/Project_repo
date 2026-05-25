@@ -1,0 +1,10 @@
+Name,Engine ,Engine type,Seats,Cabin width,Cabin height, Cabin length,Exterior Length,Tail height,Fuselage diameter ,Wing span,Bagage volume, Gross weight,Empty weight,Max takeoff weight,Max landing weight,Max payload ,Fuel Capacity, Max cruise speed ,Max speed ,Cruise speed,Approach speed ,Range,Fuel burn,Ceilling,Rate of climb,Takeoff distance ,Landing distance ,Thrust
+,,,,ft,,ft,ft,ft,ft,ft,ft^3 ,,,Ib,Ib,Ib,litre ,mph,,,mph,nm,nm/gal,ft,ft/min,ft,ft,Ibf
+,2 × CFM International LEAP-1A ,Turbofan ,244,12,,113,146,38,13,117,2084,,,214000,176500,56000,32900,544,,,161,4000,,40000,2500,7250,5250,
+Aerospatial-BAC Concorde,4 × Rolls-Royce / SNECMA Olympus 593 Mk 610 ,Jet,,8,6,129,202,40,9,84,237,,,408000,,24300,119200,1448,,,190,3900,0.12,60000,5000,11300,7200,152200
+Airbus A220-100,Airbus A220-100,,116,10,6,77,114,,12,115,837,,,139000,,33300,21900,541,,,,3400,,41000,,4800,4550,23300
+Airbus A220-300,2 × Pratt & Whitney PW1500G ,Turbofan ,141,10,6,90,127,,12,115,1116,,,154000,,41300,21900,514,,,,6200,,41000,,6200,4950,46600
+Aibus 318,2 × CFM56-5B ,Turbofan ,220,12,7,70,103,41,13,111,749,,,150000,127000,31000,24200,605,,,150,3100,0.59,41000,3000,5850,4050,
+Airbus A390-100,2 × International Aero Engines V2500 ,Turbofan ,280,12,7,78,111,38,13,111,976,,,166500,138000,30900,23900,592,,,,3672,0.54,41000,3500,6400,4750,47000
+Boeing 707,4 × Pratt and Whitney PW JT3D-7 ,Turbofan ,341,11,7,111,152,42,12,145,1766,,,334000,247000,88000,90300,627,,,121,50000,0.16,43000,3550,10000,6200,76000
+Boeing 737 Max 10,2 × LEAP-1B from CFM International ,Turbofan ,230,11,13,,143,40,12,117,1814,,,198000,164000,41400,25800,521,,,161,3300,,41000,3000,8200,5600,62000

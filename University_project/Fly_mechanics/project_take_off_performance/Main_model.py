@@ -33,12 +33,18 @@ import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from conversion import *
 
-import pandas as pd
+#import pandas as pd
 
-df = pd.read_excel("excel_file/data_1.ods", sheet_name="new1")
+#df = pd.read_excel("excel_file/data.ods", sheet_name="Sheet3")
 
-print ("some part of the dictionnary are :",df["Model"] )
+#print ("some part of the dictionnary are :",df["Airbus A220-300"] )
 
+
+import csv
+fichier = csv.DictReader(open("excel_file/data.csv"))
+passagers = list(fichier)
+print (passagers[1])
+#print(passagers[1].keys())
 
 i=0
 
