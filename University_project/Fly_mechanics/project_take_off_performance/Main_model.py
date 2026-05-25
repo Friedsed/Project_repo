@@ -23,6 +23,30 @@ Advantages 2| : Useful to solve some problem enconterred during the take-off
 Asumption | V_lof is assumed to be 1.1* stalling speed  
 ----------
 
+Seats
+Cabin width
+Cabin height
+Cabin length
+Tail height
+Fuselage diameter
+Baggage volume
+Gross weight
+Maximum takeoff weight
+Maximum landing weight
+Fuel capacity
+Maximum payload
+Maximum speed
+Cruise speed
+Approach speed
+Range
+Fuel burn
+Ceiling
+Rate of climb
+Takeoff distance
+Landing distance
+Thrust
+
+
 """
 
 
