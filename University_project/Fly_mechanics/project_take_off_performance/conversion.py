@@ -6,7 +6,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 20 May 2026
+Modified: 27 May 2026
 
 
 --------------------------------
@@ -53,14 +53,55 @@ def convert_units(p, new_unit , last_unit):
 
     return p
 
+# =========================================================
+# FUNCTION THAT MODIFY THE VALUE OF A DICO : DATA;  WITH ANOTHER DICO : PARAM
+# =========================================================
 
-def modify_dict(data, param):
-    data = convert_units(data, "US", "SI")
 
+def modify_dict(param, data):
+    
     for key in data:
         if key in param:
             param[key] = data[key]
 
-    return data, param
 
+
+
+
+
+# =========================================================
+# FONCTION QUI SORT LE BON DICTIONNAIRE
+# =========================================================
+
+def get_model_params(model, data):
+
+    # ---------------- MODELE 4 ----------------
+    if model == "Model4":
+
+        keys = [ "name" , "engine", "W", "Sw", "Clmax", "Clto", "Cdto", "g", "mu", "P", "rho", "T", "n", "A1", "A2", "A3", "A4"  ]
+
+
+    # ---------------- MODELE 2,3 ----------------
+    elif model == "Model2":
+
+        keys = [  "name" ,  "engine", "W", "Sw", "Clmax", "Clto", "Cdto", "engine", "g", "mu", "P", "rho", "efficiency", "T" , "name"   ]
+
+
+    # ---------------- MODELE 1 ----------------
+    elif model == "Model1":
+
+        keys = [  "name" , "engine", "Sw", "bw", "hw", "W", "Ra", "Cdo", "Cdol", "e", "Clmax", "Cl", "mu", "T0", "T1", "T2", "rho", "alpha", "alpha_0", "Vhw", "g", "Vi"  , "name"]
+
+    else:
+        return "Modele introuvable"
+
+
+    # Création du dictionnaire final
+    result = {}
+
+    for key in keys:
+        if key in data:
+            result[key] = data[key]
+
+    return result
 

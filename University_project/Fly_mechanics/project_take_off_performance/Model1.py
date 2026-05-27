@@ -283,6 +283,12 @@ class AircraftTakeoff:
 
     def summary(self):
 
+        print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
+        print(" The name of the aicraft is :", self.p["name"])
+        print(" The type of the engine is :", self.p["engine"])
+        print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
+
+
         print("Cd =", self.C_D_function())
         print("K0 =", self.K0())
         print("K1 =", self.K1())

@@ -28,6 +28,9 @@ Asumption | V_lof is assumed to be 1.1* stalling speed
 """
 Example 18.7 ;          Notice:     the ground run distance after running the code is 1111.04 
 
+    param = {  "W": 13488.54,  "Sw": 269.1,  "Clmax": 1.69,  "Clto": 1.2, "Cdto": 0.03, "g": 32.2,
+     "mu": 0.03, "P": 310, "rho": 0.002378,  "T": 3372.135,
+                      "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-08,  "A4": -6.21e-11 }
 
 """
 
@@ -151,6 +154,27 @@ class AircraftTakeoff:
         plt.grid
         plt.show ( )
 
+    def summary(self):
 
+        dict= self.ground_run()
+        L = dict["lift"]
+        D= dict["drag"]
+        T= dict["thrust"]
+        S= dict["distance"]
+        V = dict["speed"]
+        A= dict["acceleration"]
+
+        print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
+        print("To confirm, the parameters are :", self.p)
+        print(" The name of the aicraft is :", self.p["name"])
+        print(" The type of the engine is :", self.p["engine"])
+        print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
+
+        print("The ground distance is :", S[-1])
+        print(" The lift at the lift off point is :" , L[-1])
+        print("The lift off speed is :",  V[-1])
+        print("The drag during the lift off is :",  D[-1])
+        print("The thrust during the lift off is :",  T[-1])
+        print("The acceleration during the lift off is :",  A[-1])
 
 

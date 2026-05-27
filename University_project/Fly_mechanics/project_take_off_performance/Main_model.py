@@ -6,7 +6,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 20 May 2026
+Modified: 27 May 2026
 
 B2: Book used Mechanic of flight by Warren
 
@@ -51,31 +51,68 @@ Thrust
 
 
 
-
+import csv
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from conversion import *
 from data import *
 
-#import pandas as pd
-
-#df = pd.read_excel("excel_file/data.ods", sheet_name="Sheet3")
-
-#print ("some part of the dictionnary are :",df["Airbus A220-300"] )
 
 
-import csv
+
+# ============================================================/////////////////////////////////////////////////////////////////////////////////////////
+# Management of the running data                                                                                                                             |
+# ============================================================////////////////////////////////////////////////////////////////////////////////////////
+
 fichier = csv.DictReader(open("excel_file/data.csv"))
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
 passagers = list(fichier)
-print (passagers[2])
+#print (passagers[2])
 #print(passagers[1].keys())
+
+
+
+data = { "name": "None", "W": 13488.54,  "Sw": 269.1, "Clmax": 1.69,  "Clto": 1.2,  "Cdto": 0.03,   "g": 32.2,  "mu": 0.03,  "P": 310, "rho": 0.002378,  "T": 3372.135,  "n": 35,  "A1": 1.158e-2,
+    "A2": -5.277e-05,  "A3": 9.273e-08,   "A4": -6.21e-11,   "engine": "piston",  "efficiency": 0.5,    "bw": 33,   "hw": 6,   "Ra": 6.05,   "Cdo": 0.036,   "Cdol": 0.0,
+    "e": 0.82,   "Cl": 0.3485,   "T0": 1200,   "T1": -4,   "T2": 0,   "alpha": 0,   "alpha_0": 0,   "Vhw": 29.33,   "Vi": 29.33 }
+
+modify_dict(data, param1)
+# =====================================================
+#Conversion of unit
+# =====================================================
+
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
+#data = convert_units(data, "SI" , "US")
+#print("Checking the unity : ", data)
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
-i=4
+
+
+
+
+
+
+
+print("Choose the Model you want to compile ")
+i=int (input("Choose the Model you wanna Run "))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
@@ -93,24 +130,13 @@ if i==1 :
     # definition of the parameter
     # ============================================================
 
-    params = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 29.33,"g": 32.2, "Vi": 29.33 }
-    params1 = {"Sw": 180, "bw": 33, "hw": 6, "W": 2700,"Ra": 6.05, "Cdo": 0.036, "Cdol": 0.0,"e": 0.82, "Clmax": 1.4,"Cl": 0.3485,"mu": 0.04,"T0": 1200,"T1": -4, "T2": 0,"rho": 0.0023769, "alpha": 0, "alpha_0": 0,"Vhw": 0,"g": 32.2, "Vi": 0 }
-
-    # ============================================================
-    # Conversion 
-    # ============================================================
-
-    param = convert_units(params1, "SI", "US")
-    print("Checking the unity : ", param)
-
+    param = get_model_params("Model1", data)
 
     # ============================================================
     # definition of the parameter
     # ============================================================
 
-
     plane = AircraftTakeoff(param) # here the parameters are in US unit
-
 
     # ============================================================
     # Printing and plotting 
@@ -136,18 +162,7 @@ elif i== 2 :
     # Parameters
     # =====================================================
 
-
-    param = { "W": 3400, "Sw": 144.9, "Clmax": 1.69, "Clto": 0.5, "Cdto": 0.0417, "engine": "piston", "g": 32.2, "mu": 0.04,  "P": 310, "rho": 0.002378,  "efficiency": 0.5, "T": 7000, "lamdba": 0, "wing type": "Trapezed"}
-    param1 = { "W": 21500, "Sw": 311.6, "Clmax": 1.65, "Clto": 0.9, "Cdto": 0.045, "engine": "jet", "g": 32.2, "mu": 0.02,  "P": 0, "rho": 0.002378,  "efficiency": 0, "T": 7000, "lamdba": 0, "wing type": "Trapezed"}
-
-
-    # =====================================================
-    #Conversion of unit
-    # =====================================================
-
-    param = convert_units(param, "SI" , "US")
-    print("Checking the unity : ", param)
-
+    param = get_model_params("Model2", data)
 
     # =====================================================
     #Definition of the model 
@@ -182,10 +197,7 @@ elif i== 3 :
     # Parameters
     # =====================================================
 
-
-    param = { "W": 3400, "Sw": 144.9, "Clmax": 1.69, "Clto": 0.5, "Cdto": 0.0417, "engine": "piston", "g": 32.2, "mu": 0.04,  "P": 310, "rho": 0.002378,  "efficiency": 0.5, "T": 7000, "lamdba": 0, "wing type": "Trapezed"}
-    param1 = { "W": 21500, "Sw": 311.6, "Clmax": 1.65, "Clto": 0.9, "Cdto": 0.045, "engine": "jet", "g": 32.2, "mu": 0.02,  "P": 0, "rho": 0.002378,  "efficiency": 0, "T": 7000, "lamdba": 0, "wing type": "Trapezed"}
-
+    param = get_model_params("Model2", data)
 
     # =====================================================
     #Conversion of unit
@@ -229,18 +241,7 @@ elif i== 4 :
     # Parameters
     # =====================================================
 
-    param = {  "W": 13488.54,  "Sw": 269.1,  "Clmax": 1.69,  "Clto": 1.2, "Cdto": 0.03, "g": 32.2, "mu": 0.03, "P": 310, "rho": 0.002378,  "T": 3372.135,
-                      "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-08,  "A4": -6.21e-11 }
-
-    # =====================================================
-    #Conversion of unit
-    # =====================================================
-
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-    #param = convert_units(param, "SI" , "US")
-    print("Checking the unity : ", param)
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-
+    param = get_model_params("Model4", data)
 
     # =====================================================
     #Definition of the model 
@@ -251,11 +252,11 @@ elif i== 4 :
     #plotting and Computing
     # =====================================================
 
-    distance = model.ground_run()
-
+    model.summary()
     model.plot_forces()
     model.plot_speed()
     model.plot_acceleration()
+
 
 
 elif i==5 :

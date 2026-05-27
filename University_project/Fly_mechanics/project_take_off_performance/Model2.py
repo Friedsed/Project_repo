@@ -5,7 +5,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 20 May 2026
+Modified: 27 May 2026
 
 B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON
 
@@ -25,6 +25,11 @@ Asumption: As the trust, drag, and lift depend on the speed we approximate the s
 """
 Example 18.5 page 797 in book B2     ; with a little bit of error
 Example 18.6 page 798 in book B2     ; with      little bit of error
+
+
+param = { "W": 3400, "Sw": 144.9, "Clmax": 1.69, "Clto": 0.5, "Cdto": 0.0417,
+ "engine": "piston", "g": 32.2, "mu": 0.04,  "P": 310, "rho": 0.002378,  "efficiency": 0.5, 
+ "T": 7000}
 
 
 """
@@ -49,32 +54,6 @@ class AircraftTakeoff:
         """
         self.p = params
 
-
-
-    # =====================================================
-    # Drag coefficients C_dige and C_lige
-    # =====================================================
-
-    def C_dige(self): # Note complete need to be improved
-        
-
-        if self.p["wing type"] == Elliptic :
-
-            beta_L= 1 - (0.269* self.Cl **1.45 ) / ( self.p["AR"] ** 3.18 * (h/b)**1.12 )
-            gamma_L = 1 - 2.25 *( self.p["lambda"] **0.00273 - 0.997) * ( self.p["AR"]** 0.717 + 13.6 )
-            beta_D = 1 + (0.0361* self.Cl**1.21) / (self.p["AR"]**1.19 * ( h/b)**1.51 )
-            gamma_D = 1- 0.157 * (self.p["lamdba"] **0.775 - 0.373) * ( self.p["AR"]**0.417 - 1.27 )
-
-            phi_L = (1/beta_L) * ( 1 + ( 288*(sel.p["h"] / self.p["b"] )**0.787 / self.p["AR"] **0.882 )* np.exp(-9.14*( self.p["h"] / self.p["b"] )**0.327) )
-            phi_D =  beta_D * ( 1- np.exp(-4.74*(h/b)**0.814 ) - (h/b)**2 * np.exp(-3.88 * (h/b)**0.758 ) )
-
-        elif self.p["wing type"] == Trapered :
-
-            phi_L = (1/beta_L) * ( 1 + gamma_L * ( 288*( self.p["h"] / self.p["b"])**0.787 / self.p["AR"] **0.882 )* np.exp(-9.14*( self.p["h"] / self.p["b"])**0.327) )
-            phi_D =  beta_D * ( 1- gamma_D * np.exp(-4.74*(h/b)*0.814 ) - (h/b)**2 * np.exp(-3.88 * (h/b)**0.758 ) )
-
-
-        return phi_L**2 * phi_D # need to be complete page 380 
 
 
     # =====================================================
@@ -147,6 +126,11 @@ class AircraftTakeoff:
             T = self.thrust_jet_powered()
 
         S= self.ground_run()
+        print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
+        print("To confirm, the parameters are :", self.p)
+        print(" The name of the aicraft is :", self.p["name"])
+        print(" The type of the engine is :", self.p["engine"])
+        print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
 
         print("The rotation speed is :", Vr)
        # print("The C_lige coefficient", C_lige , " and the C_dige coefficient is :", C_dige)
@@ -156,4 +140,79 @@ class AircraftTakeoff:
         print (" The ground run distance is :", S)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+Part No used 
+
+
+    # =====================================================
+    # Drag coefficients C_dige and C_lige
+    # =====================================================
+
+    def C_dige(self): # Note complete need to be improved
+        
+
+        if self.p["wing type"] == Elliptic :
+
+            beta_L= 1 - (0.269* self.Cl **1.45 ) / ( self.p["AR"] ** 3.18 * (h/b)**1.12 )
+            gamma_L = 1 - 2.25 *( self.p["lambda"] **0.00273 - 0.997) * ( self.p["AR"]** 0.717 + 13.6 )
+            beta_D = 1 + (0.0361* self.Cl**1.21) / (self.p["AR"]**1.19 * ( h/b)**1.51 )
+            gamma_D = 1- 0.157 * (self.p["lamdba"] **0.775 - 0.373) * ( self.p["AR"]**0.417 - 1.27 )
+
+            phi_L = (1/beta_L) * ( 1 + ( 288*(sel.p["h"] / self.p["b"] )**0.787 / self.p["AR"] **0.882 )* np.exp(-9.14*( self.p["h"] / self.p["b"] )**0.327) )
+            phi_D =  beta_D * ( 1- np.exp(-4.74*(h/b)**0.814 ) - (h/b)**2 * np.exp(-3.88 * (h/b)**0.758 ) )
+
+        elif self.p["wing type"] == Trapered :
+
+            phi_L = (1/beta_L) * ( 1 + gamma_L * ( 288*( self.p["h"] / self.p["b"])**0.787 / self.p["AR"] **0.882 )* np.exp(-9.14*( self.p["h"] / self.p["b"])**0.327) )
+            phi_D =  beta_D * ( 1- gamma_D * np.exp(-4.74*(h/b)*0.814 ) - (h/b)**2 * np.exp(-3.88 * (h/b)**0.758 ) )
+
+
+        return phi_L**2 * phi_D # need to be complete page 380 
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 
