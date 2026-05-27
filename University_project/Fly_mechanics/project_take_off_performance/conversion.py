@@ -54,3 +54,13 @@ def convert_units(p, new_unit , last_unit):
     return p
 
 
+def modify_dict(data, param):
+    data = convert_units(data, "US", "SI")
+
+    for key in data:
+        if key in param:
+            param[key] = data[key]
+
+    return data, param
+
+

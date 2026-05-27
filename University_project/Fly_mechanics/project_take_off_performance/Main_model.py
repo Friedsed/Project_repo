@@ -56,6 +56,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from conversion import *
+from data import *
 
 #import pandas as pd
 
@@ -66,12 +67,15 @@ from conversion import *
 
 import csv
 fichier = csv.DictReader(open("excel_file/data.csv"))
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
+
 passagers = list(fichier)
-print (passagers[1])
+print (passagers[2])
 #print(passagers[1].keys())
 
-i=4
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
+i=4
 
  
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
@@ -80,9 +84,10 @@ i=4
 
 if i==1 :
     from Model1 import *
-
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     print( " Ground run estimation using numerical Integration method")
     print(" B1: Book used Mechanic of flight by Warren")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
     # ============================================================
     # definition of the parameter
@@ -123,10 +128,10 @@ if i==1 :
 
 elif i== 2 :
     from Model2 import *
-
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     print( " General ground run estimation using Average Acceleration ; page 796 ")
     print(" B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON ")
-
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     # =====================================================
     # Parameters
     # =====================================================
@@ -168,9 +173,10 @@ elif i== 2 :
 
 elif i== 3 :
     from Model3 import *
-
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     print( " General ground run estimation using Average Acceleration for tricycle propeller aicraft ONLY ;       page 797 ")
     print(" B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON ")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
     # =====================================================
     # Parameters
@@ -214,22 +220,26 @@ elif i== 3 :
     
 elif i== 4 :
     from Model4 import *
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     print( " Ground run estimation using numerical Integration method")
     print(" B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON ")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
     # =====================================================
     # Parameters
     # =====================================================
 
-    param = {  "W": 3400,  "Sw": 144.9,  "Clmax": 1.69,  "Clto": 0.5, "Cdto": 0.0417, "g": 32.2, "mu": 0.04, "P": 310, "rho": 0.002378,  "T": 1169,
-                    "lamdba": 0,  "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-08,  "A4": -6.21e-11 }
+    param = {  "W": 13488.54,  "Sw": 269.1,  "Clmax": 1.69,  "Clto": 1.2, "Cdto": 0.03, "g": 32.2, "mu": 0.03, "P": 310, "rho": 0.002378,  "T": 3372.135,
+                      "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-08,  "A4": -6.21e-11 }
 
     # =====================================================
     #Conversion of unit
     # =====================================================
 
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     #param = convert_units(param, "SI" , "US")
     print("Checking the unity : ", param)
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
 
     # =====================================================
