@@ -57,6 +57,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from conversion import *
 from data import *
+import pandas as pd 
 
 
 
@@ -64,40 +65,28 @@ from data import *
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
 # Management of the running data                                                                                                                             |
 # ============================================================////////////////////////////////////////////////////////////////////////////////////////
-
-fichier = csv.DictReader(open("excel_file/data.csv"))
+#fichier = csv.DictReader(open("excel_file/data.csv"))
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-
-passagers = list(fichier)
+#passagers = list(fichier)
 #print (passagers[2])
 #print(passagers[1].keys())
-
-
-
-data = { "name": "None", "W": 13488.54,  "Sw": 269.1, "Clmax": 1.69,  "Clto": 1.2,  "Cdto": 0.03,   "g": 32.2,  "mu": 0.03,  "P": 310, "rho": 0.002378,  "T": 3372.135,  "n": 35,  "A1": 1.158e-2,
-    "A2": -5.277e-05,  "A3": 9.273e-08,   "A4": -6.21e-11,   "engine": "piston",  "efficiency": 0.5,    "bw": 33,   "hw": 6,   "Ra": 6.05,   "Cdo": 0.036,   "Cdol": 0.0,
-    "e": 0.82,   "Cl": 0.3485,   "T0": 1200,   "T1": -4,   "T2": 0,   "alpha": 0,   "alpha_0": 0,   "Vhw": 29.33,   "Vi": 29.33 }
-
-modify_dict(data, param1)
 # =====================================================
 #Conversion of unit
 # =====================================================
-
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 #data = convert_units(data, "SI" , "US")
 #print("Checking the unity : ", data)
-
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
-
-
-
-
-
-
+dict = data1
+df = pd.DataFrame(list(dict.items()), columns=["Paramètre", "Valeur"])
+print(" Aicraft  ",dict["name"], " caratetriqtique is ", df)
 
 print("Choose the Model you want to compile ")
 i=int (input("Choose the Model you wanna Run "))
+
+
+
 
 
 
@@ -130,7 +119,7 @@ if i==1 :
     # definition of the parameter
     # ============================================================
 
-    param = get_model_params("Model1", data)
+    param = get_model_params("Model1", dict)
 
     # ============================================================
     # definition of the parameter
@@ -162,7 +151,7 @@ elif i== 2 :
     # Parameters
     # =====================================================
 
-    param = get_model_params("Model2", data)
+    param = get_model_params("Model2", dict)
 
     # =====================================================
     #Definition of the model 
@@ -173,10 +162,10 @@ elif i== 2 :
     # =====================================================
     #plotting and Computing
     # =====================================================
-    distance = model.ground_run()
+
     model.summary()
 
-    print("distance est", distance)
+
 
 
 
@@ -197,14 +186,7 @@ elif i== 3 :
     # Parameters
     # =====================================================
 
-    param = get_model_params("Model2", data)
-
-    # =====================================================
-    #Conversion of unit
-    # =====================================================
-
-    param = convert_units(param, "SI" , "US")
-    print("Checking the unity : ", param)
+    param = get_model_params("Model2", dict)
 
 
     # =====================================================
@@ -216,10 +198,8 @@ elif i== 3 :
     # =====================================================
     #plotting and Computing
     # =====================================================
-    distance = model.ground_run()
-    model.summary()
 
-    print("distance est", distance)
+    model.summary()
 
 
 
@@ -241,7 +221,7 @@ elif i== 4 :
     # Parameters
     # =====================================================
 
-    param = get_model_params("Model4", data)
+    param = get_model_params("Model4", dict)
 
     # =====================================================
     #Definition of the model 
@@ -253,9 +233,6 @@ elif i== 4 :
     # =====================================================
 
     model.summary()
-    model.plot_forces()
-    model.plot_speed()
-    model.plot_acceleration()
 
 
 
@@ -364,3 +341,74 @@ elif i==5 :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+
+
+
+
+
+# Geometry and aircraft data
+Sw = None        # Wing surface area
+bw = None        # Wing span
+hw = None        # Height of the wing above the ground
+W = None         # Weight
+Ra = None        # Aspect ratio coefficient
+lambda_ = None   # Aspect ratio parameter
+
+# Aerodynamic coefficients
+Cdo = None       # Zero-lift drag coefficient
+Cdol = None      # Additional drag coefficient term
+Cd = None        # Drag coefficient
+Cl = None        # Lift coefficient
+Clmax = None     # Maximum lift coefficient
+e = None         # Oswald efficiency coefficient
+
+# Ground and motion parameters
+mu = None        # Ground friction coefficient
+Vlo = None       # Lift-off speed
+Vhw = None       # Reference speed
+Vi = None        # Initial speed for integration
+Vip1 = None      # Final speed for integration
+g = None         # Gravity
+rho = None       # Air density
+
+# Propulsion parameters
+P = None         # Piston engine power in BHP
+T = None         # Jet engine thrust
+efficiency = None  # Propeller efficiency
+T0 = None        # Initial thrust or experimental thrust coefficient
+T1 = None        # Experimental thrust coefficient
+T2 = None        # Experimental thrust coefficient
+A1 = None        # Thrust formula coefficient
+A2 = None        # Thrust formula coefficient
+A3 = None        # Thrust formula coefficient
+A4 = None        # Thrust formula coefficient
+
+# Numerical parameter
+n = None         # Number of iterations
+
+
+
+
+
+
+
+"""

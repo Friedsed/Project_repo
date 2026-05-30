@@ -123,7 +123,8 @@ class AircraftTakeoff:
         S= self.ground_run()
 
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
-        print(" The name of the aicraft is :" self.p["name"])
+        print(" The Unit is  :", self.p["Unit"])
+        print(" The name of the aicraft is :", self.p["name"])
         print(" The type of the engine is :", self.p["engine"])
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
 

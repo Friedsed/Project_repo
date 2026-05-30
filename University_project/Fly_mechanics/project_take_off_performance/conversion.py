@@ -75,22 +75,25 @@ def modify_dict(param, data):
 
 def get_model_params(model, data):
 
-    # ---------------- MODELE 4 ----------------
-    if model == "Model4":
 
-        keys = [ "name" , "engine", "W", "Sw", "Clmax", "Clto", "Cdto", "g", "mu", "P", "rho", "T", "n", "A1", "A2", "A3", "A4"  ]
+    # ---------------- MODELE 1 ----------------
+    if model == "Model1":
 
+        keys = [ "Unit", "name" , "engine", "Sw", "bw", "hw", "W", "Ra", "Cdo", "Cdol", "e", "Clmax", "Cl", "mu", "T0", "T1", "T2", "rho", "alpha", "alpha_0", "Vhw", "g", "Vi"  ]
 
+    
     # ---------------- MODELE 2,3 ----------------
     elif model == "Model2":
 
-        keys = [  "name" ,  "engine", "W", "Sw", "Clmax", "Clto", "Cdto", "engine", "g", "mu", "P", "rho", "efficiency", "T" , "name"   ]
+        keys = [ "Unit", "name" ,  "engine", "W", "Sw", "Clmax", "Cl", "Cd",  "g", "mu", "P", "rho", "efficiency", "T"    ]
+
+# ---------------- MODELE 4 ----------------
+    elif model == "Model4":
+
+        keys = [ "Unit", "name" , "engine", "W", "Sw", "Clmax", "Cl", "Cd", "g", "mu", "P", "rho", "T", "n", "A1", "A2", "A3", "A4"  ]
 
 
-    # ---------------- MODELE 1 ----------------
-    elif model == "Model1":
 
-        keys = [  "name" , "engine", "Sw", "bw", "hw", "W", "Ra", "Cdo", "Cdol", "e", "Clmax", "Cl", "mu", "T0", "T1", "T2", "rho", "alpha", "alpha_0", "Vhw", "g", "Vi"  , "name"]
 
     else:
         return "Modele introuvable"

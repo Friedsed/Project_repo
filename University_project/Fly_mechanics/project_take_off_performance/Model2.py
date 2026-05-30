@@ -27,7 +27,7 @@ Example 18.5 page 797 in book B2     ; with a little bit of error
 Example 18.6 page 798 in book B2     ; with      little bit of error
 
 
-param = { "W": 3400, "Sw": 144.9, "Clmax": 1.69, "Clto": 0.5, "Cdto": 0.0417,
+param = { "W": 3400, "Sw": 144.9, "Clmax": 1.69, "Cl": 0.5, "Cd": 0.0417,
  "engine": "piston", "g": 32.2, "mu": 0.04,  "P": 310, "rho": 0.002378,  "efficiency": 0.5, 
  "T": 7000}
 
@@ -40,6 +40,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from conversion import *
 import pandas as pd
+from forces import *
 
 # self.p[""]
 # ============================================================
@@ -53,8 +54,7 @@ class AircraftTakeoff:
         Initialize all parameters from dictionary
         """
         self.p = params
-
-
+    
 
     # =====================================================
     # Rotation speed
@@ -62,52 +62,44 @@ class AircraftTakeoff:
     def Vr(self):
         return 1.1 * np.sqrt(2 * self.p["W"] / (self.p["rho"] * self.p["Sw"] * self.p["Clmax"]))
 
-    # =====================================================
-    # Lift at rotation speed
-    # =====================================================
-    def lift(self):
-        return 0.5 * self.p["rho"] * ( self.Vr() / np.sqrt(2) )**2 * self.p["Sw"] * self.p["Clto"] 
+   
 
     # =====================================================
-    # Drag at rotation speed
+    # Lift
     # =====================================================
-    def drag(self):
-        return 0.5 * self.p["rho"] * ( self.Vr() / np.sqrt(2) )**2 * self.p["Sw"] * self.p["Cdto"]
+    def lift2(self):
+        return lift2( self.p["rho"],  self.Vr(),  self.p["Sw"],  self.p["Cl"]  )
+    
+    # =====================================================
+    # Drag
+    # =====================================================
+    def drag2(self):
+        return drag2(  self.p["rho"],  self.Vr(),   self.p["Sw"],   self.p["Cd"]    )
 
+    
     # =====================================================
-    # Thrust for piston engine
+    # Thrust
     # =====================================================
-    def thrust_piston(self):
-        return self.p["efficiency"] * 550 * self.p["P"] * np.sqrt(2) / self.Vr()
+    def thrust2(self):
+        if self.p["engine"] == "piston":
+            return thrust_piston2(   self.p["efficiency"], self.p["P"],  self.Vr()    )
 
-    # =====================================================
-    # Thrust for jet engine
-    # =====================================================
-    def thrust_jet_powered(self):
-        return self.p["T"] # (self.Vr() / np.sqrt(2))
+        elif self.p["engine"] == "jet":
 
-    # =====================================================
-    # Friction
-    # =====================================================
-    def friction(self):
-        return self.p["mu"] * (self.p["W"] - self.lift())
+            return thrust_jet_powered2(self.p["T"])
+            
+          
+
 
     # =====================================================
     # Ground run distance
     # =====================================================
     def ground_run(self):
 
-        D = self.drag()
-        L = self.lift()
+        D = self.drag2()
+        L = self.lift2()
+        T =  self.thrust2()
 
-        if self.p["engine"] == "piston":
-            T = self.thrust_piston()
-
-        elif self.p["engine"] == "jet":
-            T = self.thrust_jet_powered()
-
-        else:
-            raise ValueError("engine must be 'piston' or 'jet'")
 
         return (self.Vr()**2 * self.p["W"]) / (2 * self.p["g"] * (T - D - self.p["mu"] * (self.p["W"] - L) ) )
 
@@ -116,24 +108,20 @@ class AircraftTakeoff:
 
         Vr= self.Vr()
       #  C_lige, C_dige =  0, 0 # need to be modify 
-        L =  self.lift()
-        D = self.drag()
+        L =  self.lift2()
+        D = self.drag2()
+        T =  self.thrust2()
 
-        if self.p["engine"] == "piston":
-            T = self.thrust_piston()
 
-        elif self.p["engine"] == "jet":
-            T = self.thrust_jet_powered()
 
         S= self.ground_run()
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
-        print("To confirm, the parameters are :", self.p)
+        print(" The Unit is  :", self.p["Unit"])
         print(" The name of the aicraft is :", self.p["name"])
         print(" The type of the engine is :", self.p["engine"])
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
 
         print("The rotation speed is :", Vr)
-       # print("The C_lige coefficient", C_lige , " and the C_dige coefficient is :", C_dige)
         print ("The lift is :", L)
         print ("The drag is : ", D)
         print(" The thrust is :", T)

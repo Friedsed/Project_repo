@@ -38,6 +38,8 @@ import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from conversion import *
 import pandas as pd
+from forces import *
+
 
 
 # ============================================================
@@ -59,34 +61,38 @@ class AircraftTakeoff:
     # ========================================================
 
     def C_L_alpha_sect(self):
-        return 2 * np.pi * (self.p["alpha"] - self.p["alpha_0"])
+    
+        return C_L_alpha_sect1( self.p["alpha"],  self.p["alpha_0"]  )
 
     def C_L_alpha(self):
-        cl_alpha_sect = self.C_L_alpha_sect()
-        return cl_alpha_sect / (1 + cl_alpha_sect / (np.pi * self.p["Ra"]))
+    
+        return C_L_alpha1( self.p["alpha"],  self.p["alpha_0"],  self.p["Ra"]  )
 
     def C_L_function(self):
-        return self.C_L_alpha() * (self.p["alpha"] - self.p["alpha_0"])
+   
+         return C_L_function1(  self.p["alpha"],  self.p["alpha_0"], self.p["Ra"]  )
 
     def C_D_function(self):
-        p = self.p
-        return ( p["Cdo"]  + p["Cdol"] * p["Cl"]  + ((16 * p["hw"] / p["bw"]) ** 2 * p["Cl"] ** 2) / ((1 + (16 * p["hw"] / p["bw"]) ** 2) * np.pi * p["e"] * p["Ra"])     )
+    
+        return C_D_function1(  self.p["Cdo"],  self.p["Cdol"],   self.p["Cl"],  self.p["hw"],   self.p["bw"],  self.p["e"],  self.p["Ra"]  )
 
     # ========================================================
     # Forces
     # ========================================================
 
     def lift(self, V):
-        return 0.5 * V**2 * self.p["Sw"] * self.p["Cl"]
+        return lift1(  V,  self.p["Sw"],    self.p["Cl"]   )
 
     def drag(self, V):
-        return 0.5 * V**2 * self.p["Sw"] * self.C_D_function()
+        Cd = self.C_D_function()
+        return drag1(  V,  self.p["Sw"],    Cd   )
 
     def thrust(self, V):
-        return self.p["T0"] + self.p["T1"] * V + self.p["T2"] * V**2
+        return thrust1(  V,   self.p["T0"], self.p["T1"], self.p["T2"]    )
 
     def friction(self, V):
-        return self.p["mu"] * (self.p["W"] - self.lift(V))
+        L = self.lift(V)
+        return friction( self.p["mu"],  self.p["W"],   L    )
 
     # ========================================================
     # K parameters
@@ -230,7 +236,7 @@ class AircraftTakeoff:
 
         Vi = self.p["Vi"]
         Vip1 = self.Vlo()
-        v=np.linspace( Vi, Vip1, 100)
+        v = np.linspace(Vi, Vip1, 100)
         a= ((self.K0() + self.K1() *v + self .K2() *v**2 ) /self.p["g"] )
 
 
@@ -245,19 +251,21 @@ class AircraftTakeoff:
 
         Vi = self.p["Vi"]
         Vip1 = self.Vlo()
-        v=np.linspace( Vi, Vip1, 100)
-        L = self.lift(v)
-        D= self.drag(v)
-        T= self.thrust(v)
-        F= self.friction(v)
+        V = np.linspace(Vi, Vip1, 100)
+
+        S = np.array([   self.distance_integral_partial(v)    for v in V     ])
+        L = np.array([   self.lift(v)    for v in V     ])
+        D= np.array([   self.drag(v)    for v in V     ])
+        T= np.array([   self.thrust(v)    for v in V     ])
+        F= np.array([   self.friction(v)    for v in V     ])
 
         plt.figure()
-        plt.plot(v, L, 'b-', linewidth=2, label='Lift (L)')
-        plt.plot(v, D, 'r--', linewidth=2, label='Drag (D)')
-        plt.plot(v, T, 'k-.', linewidth=2, label='Thrust (T)')
-        plt.plot(v, F, 'g:', linewidth=2, label='Friction (F)')
+        plt.plot(S, L, 'b-', linewidth=2, label='Lift (L)')
+        plt.plot(S, D, 'r--', linewidth=2, label='Drag (D)')
+        plt.plot(S, T, 'k-.', linewidth=2, label='Thrust (T)')
+        plt.plot(S, F, 'g:', linewidth=2, label='Friction (F)')
 
-        plt.xlabel("la vitesse ")
+        plt.xlabel("la distance ")
         plt.ylabel(" forces ")
         plt.legend()
         plt.grid
@@ -284,6 +292,7 @@ class AircraftTakeoff:
     def summary(self):
 
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
+        print(" To ensure the values   :", self.p)
         print(" The name of the aicraft is :", self.p["name"])
         print(" The type of the engine is :", self.p["engine"])
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")

@@ -28,9 +28,6 @@ Asumption | V_lof is assumed to be 1.1* stalling speed
 """
 Example 18.7 ;          Notice:     the ground run distance after running the code is 1111.04 
 
-    param = {  "W": 13488.54,  "Sw": 269.1,  "Clmax": 1.69,  "Clto": 1.2, "Cdto": 0.03, "g": 32.2,
-     "mu": 0.03, "P": 310, "rho": 0.002378,  "T": 3372.135,
-                      "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-08,  "A4": -6.21e-11 }
 
 """
 
@@ -59,13 +56,14 @@ class AircraftTakeoff:
     # Lift at rotation speed
     # =====================================================
     def lift(self, V):
-        return 0.5 * self.p["rho"] * V**2 * self.p["Sw"] * self.p["Clto"]
+        return 0.5 * self.p["rho"] * V**2 * self.p["Sw"] * self.p["Cl"]
 
     # =====================================================
     # Drag at rotation speed
     # =====================================================
     def drag(self, V):
-        return 0.5 * self.p["rho"] * V**2 * self.p["Sw"] * self.p["Cdto"]
+
+        return 0.5 * self.p["rho"] * V**2 * self.p["Sw"] * self.p["Cd"]
 
     # =====================================================
     # Thrust for piston engine
@@ -154,6 +152,8 @@ class AircraftTakeoff:
         plt.grid
         plt.show ( )
 
+
+
     def summary(self):
 
         dict= self.ground_run()
@@ -163,6 +163,11 @@ class AircraftTakeoff:
         S= dict["distance"]
         V = dict["speed"]
         A= dict["acceleration"]
+
+        self.plot_forces()
+        self.plot_speed()
+        self.plot_acceleration()
+
 
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
         print("To confirm, the parameters are :", self.p)
@@ -178,3 +183,47 @@ class AircraftTakeoff:
         print("The acceleration during the lift off is :",  A[-1])
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+"""
+  param = {  "W": 3400,  "Sw": 144.9,  "Clmax": 1.69,  "Cl": 0.5, "Cd": 0.0417, "g": 32.2, "mu": 0.04, "P": 310, "rho": 0.002378,  "T": 1169,
+                      "n": 35,  "A1": 1.158e-2,  "A2": -5.277e-05,  "A3": 9.273e-08,  "A4": -6.21e-11 }
+
+W : Weight 
+Sw : Wing surface 
+Clmax : Lift coefficient max 
+Cl : 
+Cd :
+g : Gravity 
+mu : Ground frictionnal coefficient
+P :
+rho :
+T : Thrust at the begining
+lambda : 
+n : number of iteration
+A1, A2, A3, A4  : is the thrust coefficient used in the formulat of the thurst  
+ 
+
+
+"""
