@@ -16,5 +16,58 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}\enddatalist
+\datalist[entry]{nty/global//global/global}
+  \entry{smi:60}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GS}{%
+         family={Gudmundsson},
+         familyi={G\bibinitperiod},
+         given={Snorri},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Butterworth-Heinemann}%
+    }
+    \strng{namehash}{GS1}
+    \strng{fullhash}{GS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{edition}{2}
+    \field{title}{General Aviation Aircraft Design: Applied Methods and
+  Procedures}
+    \list{location}{1}{%
+      {Oxford}%
+    }
+    \field{year}{2022}
+  \endentry
+
+  \entry{War:09}{book}{}
+    \name{author}{1}{}{%
+      {{hash=PWF}{%
+         family={Phillips},
+         familyi={P\bibinitperiod},
+         given={Warren\bibnamedelima F.},
+         giveni={W\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley \& Sons}%
+    }
+    \strng{namehash}{PWF1}
+    \strng{fullhash}{PWF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{edition}{2}
+    \field{title}{Mechanics of Flight}
+    \list{location}{1}{%
+      {Hoboken, N.J.}%
+    }
+    \field{year}{2010}
+  \endentry
+\enddatalist
 \endinput
