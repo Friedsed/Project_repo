@@ -65,10 +65,11 @@ import pandas as pd
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
 # Management of the running data                                                                                                                             |
 # ============================================================////////////////////////////////////////////////////////////////////////////////////////
-#fichier = csv.DictReader(open("excel_file/data.csv"))
+fichier = csv.DictReader(open("excel_file/data.csv"))
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-#passagers = list(fichier)
-#print (passagers[2])
+passagers = list(fichier)
+print (passagers[1])
+
 #print(passagers[1].keys())
 # =====================================================
 #Conversion of unit
@@ -77,8 +78,23 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #data = convert_units(data, "SI" , "US")
 #print("Checking the unity : ", data)
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
+print (" Choose the model to compile i mean the parameter you would like : ")
+model= input("Choose between ; A for data ;B for  data1; C for  data2; D for  data3; E for  data4; ")
 
-dict = data1
+if model == "A":
+    dict=data
+elif model == "B" :
+    dict = data1
+elif model == "C" :
+    dict = data2
+elif model == "D" :
+    dict = data3
+elif model == "E" :
+    dict = data4
+
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
+
 df = pd.DataFrame(list(dict.items()), columns=["Paramètre", "Valeur"])
 print(" Aicraft  ",dict["name"], " caratetriqtique is ", df)
 
