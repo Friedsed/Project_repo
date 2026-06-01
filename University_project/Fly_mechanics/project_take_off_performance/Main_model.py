@@ -65,10 +65,10 @@ import pandas as pd
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
 # Management of the running data                                                                                                                             |
 # ============================================================////////////////////////////////////////////////////////////////////////////////////////
-fichier = csv.DictReader(open("excel_file/data.csv"))
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-passagers = list(fichier)
-print (passagers[1])
+#fichier = csv.DictReader(open("excel_file/data.csv"))
+#print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
+#passagers = list(fichier)
+#print (passagers[1])
 
 #print(passagers[1].keys())
 # =====================================================
@@ -78,8 +78,14 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #data = convert_units(data, "SI" , "US")
 #print("Checking the unity : ", data)
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
+
 print (" Choose the model to compile i mean the parameter you would like : ")
-model= input("Choose between ; A for data ;B for  data1; C for  data2; D for  data3; E for  data4; ")
+print("Choose between ; A for data ;     B for  data1;    C for  data2;      D for  data3;    E for  data4;      F for Beluga XL;      G for the Cessna ")
+print("Choose between     E for  data4;      F for Beluga XL;      G for the Cessna ;   H for the Lockeed martin C-130J Military aicraft;   I for Dassault rafale ")
+
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
+model= input(" Enter your letter then ")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
 if model == "A":
     dict=data
@@ -91,12 +97,21 @@ elif model == "D" :
     dict = data3
 elif model == "E" :
     dict = data4
+elif model == "F" :
+    dict = data5
+elif model == "G" :
+    dict = data6
+elif model == "H" :
+    dict = data7
+
+elif model == "I" :
+    dict = data9
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
-df = pd.DataFrame(list(dict.items()), columns=["Paramètre", "Valeur"])
-print(" Aicraft  ",dict["name"], " caratetriqtique is ", df)
+#df = pd.DataFrame(list(dict.items()), columns=["Paramètre", "Valeur"])
+#print(" Aicraft  ",dict["name"], " caratetriqtique is ", df)
 
 print("Choose the Model you want to compile ")
 i=int (input("Choose the Model you wanna Run "))

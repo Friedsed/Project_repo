@@ -86,7 +86,7 @@ class AircraftTakeoff:
 
         elif self.p["engine"] == "jet":
 
-            return thrust_jet_powered2(self.p["T"])
+            return self.p["T"]
             
           
 
@@ -101,7 +101,7 @@ class AircraftTakeoff:
         T =  self.thrust2()
 
 
-        return (self.Vr()**2 * self.p["W"]) / (2 * self.p["g"] * (T - D - self.p["mu"] * (self.p["W"] - L) ) )
+        return (self.Vr()**2 * self.p["W"]) / (2 * self.p["g"] * ( T - D - self.p["mu"] * (self.p["W"] - L) ) )
 
 
     def summary(self):

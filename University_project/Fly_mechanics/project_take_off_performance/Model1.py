@@ -53,6 +53,7 @@ class AircraftTakeoff:
         Initialize all parameters from dictionary
         """
         self.p = params
+        self.p["Ra"] = self.p["bw"]**2 / self.p["Sw"]
 
 
 
@@ -211,6 +212,7 @@ class AircraftTakeoff:
 
         return I / self.p["g"]
 
+
     # ========================================================
     # Plot
     # ========================================================
@@ -352,3 +354,96 @@ T1    # Thrust coefficient determined experimentally
 T2    # Thrust coefficient determined experimentally
 
 """
+
+
+
+
+
+
+
+
+
+
+
+"""
+     ========================================================
+     climbing distance
+     ========================================================
+
+    def velocity_obstacle(self):
+        return 1.2* ( np.sqrt(2/ self.p["Clmax"])* np.sqrt(  self.p["W"]/ ( self.p["Sw"] * self.p["rho"] )  ))
+
+    def cimb_distance (self):
+
+        Cloc = self.p["W"] / (0.5* self.p["rho"] * self.p["Sw"] self.velocity_obstacle() **2 )
+        Cdoc = p["Cdo"]  + p["Cdol"] * Cloc  + ( Cloc**2 /  np.pi * p.["e"] * p.["Ra"] )
+        Doc = 0.5*p.["rho"] * self.velocity_obstacle() **2 * p.["Sw"] * Cdoc
+        Toc = thrust(velocity_obstacle())
+        gamma = np.arcsin ( (Toc - Doc)/p.["W"])
+        Cloc_2 =  ( self.p["W"]*np.cos(gamma) ) / (0.5* self.p["rho"] * self.p["Sw"] self.velocity_obstacle() **2 )
+        Cdoc_2 =  C_D_function1(  self.p["Cdo"],  self.p["Cdol"],   Cloc_2,  self.p["hw"],   self.p["bw"],  self.p["e"],  self.p["Ra"]  )
+        D_2 = 0.5 * p.["rho"] * velocity_obstacle() **2 * p["Sw"] * Cdoc_2      # the improved estimate drag force at obstacle cleareance 
+
+   """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

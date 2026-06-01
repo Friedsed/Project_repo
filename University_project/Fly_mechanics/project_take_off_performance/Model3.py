@@ -5,7 +5,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 20 May 2026
+Modified: 27 May 2026
 
 B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON
 
@@ -123,7 +123,7 @@ class AircraftTakeoff:
         S= self.ground_run()
 
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
-        print(" The Unit is  :", self.p["Unit"])
+        print("To confirm, the parameters are :", self.p)
         print(" The name of the aicraft is :", self.p["name"])
         print(" The type of the engine is :", self.p["engine"])
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")

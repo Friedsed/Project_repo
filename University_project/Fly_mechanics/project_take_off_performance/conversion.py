@@ -107,4 +107,3 @@ def get_model_params(model, data):
             result[key] = data[key]
 
     return result
-

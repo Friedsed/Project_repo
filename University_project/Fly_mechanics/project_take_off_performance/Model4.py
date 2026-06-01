@@ -164,9 +164,7 @@ class AircraftTakeoff:
         V = dict["speed"]
         A= dict["acceleration"]
 
-        self.plot_forces()
-        self.plot_speed()
-        self.plot_acceleration()
+        
 
 
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
@@ -181,6 +179,10 @@ class AircraftTakeoff:
         print("The drag during the lift off is :",  D[-1])
         print("The thrust during the lift off is :",  T[-1])
         print("The acceleration during the lift off is :",  A[-1])
+
+        self.plot_forces()
+        self.plot_speed()
+        self.plot_acceleration()
 
 
 
