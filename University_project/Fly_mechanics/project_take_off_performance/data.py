@@ -217,85 +217,23 @@ data9 = {
     "engine": "jet",
 
     # Geometry
-    "W": 54013,                 # MTOW [lb]
-    "W_empty": 22478,           # Empty weight [lb]
-    "Sw": 491.911,              # Wing area [ft²]
-    "bw": 35.63,                # Wingspan [ft]
-    "hw": 17.52,                # Height [ft]
-    "length": 50.10,            # Length [ft]
+    "W": 54013,   "Sw": 491.911,     "bw": 35.63,    "hw": 17.52,           
 
     # Aerodynamics (estimates)
-    "Clmax": 1.8,
-    "Cl": 0.4,
-    "Cd": 0.03,
-    "Cdo": 0.022,
-    "Cdol": 0.0,
-    "e": 0.8,
+    "Clmax": 1.8,  "Cl": 0.4,  "Cd": 0.03,  "Cdo": 0.022,  "Cdol": 0.0,  "e": 0.8,
 
     # Environment
-    "g": 32.174,                # ft/s²
-    "mu": 0.02,
-    "rho": 0.0023769,           # slug/ft³ (sea level ISA)
+    "g": 32.174,    "mu": 0.02,  "rho": 0.0023769,     
 
     # Propulsion
-    "P": 14000,                 # fuel weight [lb] ≈ 10362 lb + reserve
-    "T": 33710,                 # total thrust with afterburner [lbf]
-    "T0": 33710,                # static thrust [lbf]
-    "T1": 0,
-    "T2": 0,
-    "efficiency": 0.5,
+    "P": 14000,   "T": 33710,    "T0": 33710,     "T1": 0,   "T2": 0,   "efficiency": 0.5,
 
-    # Wind
-    "Vhw": 0,                   # headwind [ft/s]
-    "Vi": 0,
+    "Vhw": 0,         "Vi": 0,    "alpha": 0,  "alpha_0": 0,
 
-    # Runway
-    "alpha": 0,
-    "alpha_0": 0,
+    "A1": 1.158e-2,    "A2": -5.277e-05,   "A3": 9.273e-08,   "A4": -6.21e-11,
 
-    # Atmospheric model
-    "A1": 1.158e-2,
-    "A2": -5.277e-05,
-    "A3": 9.273e-08,
-    "A4": -6.21e-11,
-
-    # Numerical integration
     "n": 35,
 
-    # Additional aircraft data
-    "MTOW": 54013,              # lb
-    "MLW": 33069,               # lb
-    "Fuel_weight": 10362,       # lb
-
-    "Takeoff_distance": 1312,   # ft
-    "Landing_distance": 1476,   # ft
-
-    "Cruise_speed": 1064,       # mph
-    "Vmax_SL": 863,             # mph
-    "Vmax_HA": 1188,            # mph
-
-    "Range": 808,               # miles
-    "Ferry_range": 1265,        # miles
-
-    "Ceiling": 50000,           # ft
-    "ROC": 1000,                # ft/s
-
-    "Load_factor_max": 9.0,
-    "Load_factor_min": -3.2,
-
-    "Roll_rate": 270,           # deg/s
-
-    "Mach_max_SL": 1.1,
-    "Mach_max_HA": 1.8,
-
-    "Wing_loading_MTOW": 109.8, # lb/ft²
-    "Wing_loading_empty": 45.7, # lb/ft²
-
-    "TW_ratio_MTOW_AB": 0.624,
-    "TW_ratio_empty_AB": 1.50,
-
-    "Crew": 1,
-    "Ejection_seat": "Martin-Baker F16F"
 }
 
 

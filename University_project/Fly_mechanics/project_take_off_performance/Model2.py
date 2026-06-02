@@ -47,7 +47,7 @@ from forces import *
 # Class AircraftTakeoff
 # ============================================================
 
-class AircraftTakeoff:
+class AircraftTakeoff2:
 
     def __init__(self, params):
         """

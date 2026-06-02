@@ -42,7 +42,7 @@ import pandas as pd
 # Class AircraftTakeoff
 # ============================================================
 
-class AircraftTakeoff:
+class AircraftTakeoff3:
 
     def __init__(self, params):
         """
