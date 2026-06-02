@@ -18,50 +18,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DONNÉES THÈSE/RAPPORT %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\thesisTitle}{ Modélisation pour le calcul d'une distance de décollage d'un avion }
-% Titre principal du document (utilisé partout : page titre, PDF metadata...)
+%=========================================================
+% Informations générales
+%=========================================================
+
+\newcommand{\thesisTitle}{Modélisation du calcul de la distance de décollage d'un avion}
+
 \newcommand{\authorName}{Friedly WOLI}
-% Nom auteur principal
-\newcommand{\thesisDate}{$15 $ juin $ 2026 $}
-% Date thèse : $19^{th}$ = exposant "th" pour "19th"
+
+\newcommand{\thesisDate}{15 juin 2026}
 
 \newcommand{\city}{Toulouse}
-% Ville du projet/université
-%%%%% Éléments page de garde détaillée
-\newcommand{\reportType}{L3 Mécanique énergetique}
-% Type document : "Project Report", "Master Thesis", "PhD Dissertation"...
-\newcommand{\courseOfStudies}{ Mechanical Engineering }
-% Filière/formation : "Mechanical Engineering", "Informatique"...
-\newcommand{\university}{Universite de Toulouse }
-% Nom université complète
-\newcommand{\timeOfProject}{ 04/2026 -- 06/2026}
-% Période stage/projet : format MM/YYYY -- MM/YYYY
-\newcommand{\studentId}{1234567}
-% Numéro étudiant
-\newcommand{\course}{XYZ1234}
-% Code matière/cours
-\newcommand{\company}{MyCompany}
-% Entreprise stage (si applicable)
-\newcommand{\supervisorName}{Christophe Airiau}
-% Tuteur principal
-\newcommand{\secondSupervisorName}{Jane Doe}
-% Deuxième correcteur (optionnel)
-%%%%% Labels interface (multilingue anglais/allemand)
-\newcommand{\byTitle}{by}
-\newcommand{\courseOfStudiesTitle}{Course of Studies}
-\newcommand{\timeOfProjectTitle}{Time of Project}
-\newcommand{\studentIdTitle}{Student Number}
-\newcommand{\courseTitle}{Course}
-\newcommand{\companyTitle}{Company}
-\newcommand{\supervisorTitle}{Supervisor}
-\newcommand{\secondSupervisorTitle}{Reviewer}
-% Permet traduction facile byTitle → "par", "von", etc.
-\newcommand{\universityLogo}{example-image-16x9.pdf}
-% Fichier logo université (remplacer par vrai logo)
-\newcommand{\companyLogo}{example-image-16x9.pdf}
-% Fichier logo entreprise (remplacer par vrai logo)
-\usepackage{comment}
 
+\newcommand{\reportType}{Projet Universitaire}
+
+\newcommand{\courseOfStudies}{Licence 3 Mécanique Énergétique}
+
+\newcommand{\university}{Université de Toulouse}
+
+\newcommand{\timeOfProject}{Avril 2026 -- Juin 2026}
+
+\newcommand{\supervisorName}{Christophe Airiau}
+
+%=========================================================
+% Labels
+%=========================================================
+
+\newcommand{\byTitle}{Auteur}
+\newcommand{\courseOfStudiesTitle}{Formation}
+\newcommand{\timeOfProjectTitle}{Période du projet}
+\newcommand{\studentIdTitle}{Numéro étudiant}
+\newcommand{\courseTitle}{Parcours}
+\newcommand{\companyTitle}{Laboratoire}
+\newcommand{\Studentname}{Étudiant}
+\newcommand{\secondSupervisorTitle}{Examinateur}
 
 %%%%% Titres des listes automatiques (anglais/allemand)
 \newcommand{\ListOfFiguresTitle}{List of Figures}
@@ -102,7 +92,7 @@
 % En-têtes/pieds de page COMPLETEMENT personnalisables
 \usepackage[bottom]{footmisc}
 % Notes de bas de page ANCRE en bas (pas milieu)
-\usepackage[printonlyused]{acronym}
+\usepackage{acronym}
 % Abréviations intelligentes : première occurrence = "CFD (Computational Fluid Dynamics)"
 \usepackage{appendix}
 % Annexes : A, B, C... (pas continuation chapitres)
@@ -114,7 +104,8 @@
 % Guillemets typographiques «français» "anglais" „allemand“
 \usepackage{emptypage}
 % Pages vides SANS numéro (après chapitres pairs)
-
+\usepackage{subcaption} % to run multiple pisture 
+\usepackage{multirow}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COULEURS CMYK (IMPRESSION PRO) %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -307,7 +298,7 @@
 	% 3 eme page 
 	\addtocounter{page}{6}							% +6 pages (compense frontmatter)
 	\input{acronyms}								% Fichier abréviations					%%%%%%%%%%%%		FAIRE APPEL
-	\addcontentsline{toc}{chapter}{\ListOfAbbreviationsTitle}	% Ajoute à TOC
+	\addcontentsline{toc}{chapter}{Liste des abréviations}	% Ajoute à TOC
 	% 3 eme page
 	
 
@@ -349,8 +340,8 @@
 	%%%%% ANNEXES
 	% ============================================================================
 	
-	\fancyhead[LE,RO]{A  \ -- \ \nouppercase\leftmark}	% En-tête : "A -- Annexe"
-	\input{appendix}				% Contenu facultatifs si je veux seulement         	%%%%%%%%%%%%		FAIRE APPEL
+	%\fancyhead[LE,RO]{A  \ -- \ \nouppercase\leftmark}	% En-tête : "A -- Annexe"
+	%\input{appendix}				% Contenu facultatifs si je veux seulement         	%%%%%%%%%%%%		FAIRE APPEL
 	
 	
 	

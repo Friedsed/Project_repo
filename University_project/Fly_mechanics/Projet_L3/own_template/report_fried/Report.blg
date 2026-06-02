@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2025/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Report.aux
 The style file: biblatex.bst
@@ -19,35 +19,35 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Report-blx.bib
 Database file #2: bibliography.bib
-Biblatex version: 3.19
+Biblatex version: 3.21
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 3 entries,
-            6399 wiz_defined-function locations,
-            1216 strings with 9181 characters,
-and the built_in function-call counts, 13119 in all, are:
+            6402 wiz_defined-function locations,
+            1216 strings with 9188 characters,
+and the built_in function-call counts, 13129 in all, are:
 = -- 942
 > -- 283
 < -- 104
 + -- 286
 - -- 76
-* -- 747
+* -- 749
 := -- 1358
 add.period$ -- 0
 call.type$ -- 3
 change.case$ -- 75
 chr.to.int$ -- 42
 cite$ -- 4
-duplicate$ -- 1200
-empty$ -- 1189
+duplicate$ -- 1202
+empty$ -- 1191
 format.name$ -- 98
-if$ -- 2860
+if$ -- 2862
 int.to.chr$ -- 0
 int.to.str$ -- 8
 missing$ -- 0
 newline$ -- 72
 num.names$ -- 147
-pop$ -- 709
+pop$ -- 711
 preamble$ -- 1
 purify$ -- 79
 quote$ -- 0

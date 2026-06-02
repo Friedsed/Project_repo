@@ -13,8 +13,9 @@ L’objectif est d’identifier les principaux paramètres influençant la dista
 %
 %================================================================================================================
 
-\section{\textcolor{blue}{Starter to be modify} }
-	\subsection{Compétence à acquerir}
+\section{Starter to be modify} 
+
+	\subsection{Compétence à acquérir}
 	L'analyse de ce rapport permettra de développer les compétences suivantes :
 	\begin{itemize}[itemsep=0pt]
 		\item \textbf{Comprendre :} la disposition des force (comment elle affecte notre avion ) lors d'une montée stable et importante de l'angle de montée ($\gamma$)
@@ -24,17 +25,17 @@ L’objectif est d’identifier les principaux paramètres influençant la dista
 	\end{itemize}
 
 	
-	\subsection{\textcolor{green}{Outils utiliser pour ce rapport}}
+	\subsection{Outils utiliser pour ce rapport}
 	
-	Pour mener cette etude ,nous avons utiliser 
-	\begin{itemize}
-		\item  Les modèles mathématiques de performance de montée proviennent du cours de mécanique du vol, issu de different livre.
-		\item Nous utilisons des applications comme VS Code pour la programmation python des codes afin de réaliser des analyses graphiques (courbes de poussée et de puissance) et des calculs numériques pour résoudre des équations  telle que celle de ratio de vitesse (Rv).
-	\end{itemize}
+		Pour mener cette étude ,nous avons utiliser 
+		\begin{itemize}
+			\item  Les modèles mathématiques de performance de montée proviennent du cours de mécanique du vol, issu de différent livre.
+			\item Nous utilisons des applications comme VS Code pour la programmation python des codes afin de réaliser des analyses graphiques (courbes de poussée et de puissance) et des calculs numériques pour résoudre des équations  telle que celle de ratio de vitesse (Rv).
+		\end{itemize}
 
 	
 %------------------------------------------------
-\section{\textcolor{blue}{Forces appliquées à l’avion}}\label{sec:section1}
+\section{Forces appliquées à l’avion}\label{sec:section1}
 	
 	De manière générale, plusieurs forces s’appliquent à un avion : le poids, les forces aérodynamiques (portance et traînée), la poussée ainsi que la force de frottement avec le sol pendant la phase de roulage.
 	
@@ -63,7 +64,7 @@ L’objectif est d’identifier les principaux paramètres influençant la dista
 	
 	
 	%------------------------------------------------
-	\subsection{\textcolor{green}{Paramètres influençant la distance de décollage}}
+	\section{Paramètres influençant la distance de décollage}
 	
 		La distance de décollage dépend de plusieurs paramètres :
 		
@@ -81,12 +82,6 @@ L’objectif est d’identifier les principaux paramètres influençant la dista
 		
 		
 		
-		
-		
-		\vspace{1cm}
-
-	
-	
 	
 	
 	
@@ -111,129 +106,3 @@ L’objectif est d’identifier les principaux paramètres influençant la dista
 
 
 
-
-
-
-
-\begin{comment}
-	
-	
-	
-	% ----------------------------------------------
-	\cleardoublepage
-	\chapter{Expression mathematique de la distance }
-	
-	% ############################################
-	\section{New Commands}
-	
-	
-	% ############################################
-	\section{Acronyms and References}
-	
-	A popular acronym is \acs{LOL}. \acf{IMHO} is another one. 
-	
-	Citations can have page numbers \cite[p. 473]{smi:60}, \cite[pp. 359 - 360]{doe:16}, but they can be left out as well \cite{wai:99}, \cite{mus:16}, \cite{wri:81}, \cite{stu:89}.
-	
-	You can also add footnotes.\footnote{It is displayed at the bottom of the page.}
-	
-	\pagebreak
-	
-	% ############################################
-	\section{Lists}
-	
-	Unordered Lists:
-	\begin{itemize}
-		\item This is an unordered list. 
-		\item Item 2.
-		\item It has three items.
-	\end{itemize}
-	
-	Ordered List:
-	\begin{enumerate}
-		\item This is an ordered list.
-		\item Item 2.
-		\item It has three items.
-	\end{enumerate}
-	
-	Ordered List (alphabetical):
-	\begin{enumerate}[label=\Alph*.]
-		\item This is an ordered list.
-		\item Item 2.
-		\item It has three items.
-	\end{enumerate}
-	
-	% ----------------------------------------------
-	\chapter{Figures}\label{ch:figures}
-	
-	% ############################################
-	\section{Images}\label{sec:images}
-	
-	\autoref{fig:image1} shows how to display images.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\textwidth]{f1.jpg}
-		\caption{Image}
-		
-		\label{fig:image1}
-	\end{figure}
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\textwidth]{f4.jpg}
-		\caption{Image with Source}
-		\captionsource{\cite{mus:16}}	
-		\label{fig:image2}
-	\end{figure}
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\textwidth]{f7.jpg}
-		\caption{Image with Source and Link}
-		\captionsource[https://example.org]{J. Doe}	
-		\label{fig:image3}
-	\end{figure}
-	
-	
-	
-	
-
-\section{Mathematics}\label{sec:maths}
-
-\subsection{Definitions}
-
-\begin{define}	
-	A function $f: X \rightarrow Y$ is injective if and only if for all $x_1, x_2 \in X$, $x_1 \neq x_2$ implies $f(x_1) \neq f(x_2)$.
-\end{define}
-
-\subsection{Formulas}
-
-Formulas can be included inline, e.g. $K_E^{CID}$ to $S$ or as an own block.
-$$ otp = f_k(i, k), \qquad i = 1, ..., n $$
-
-\pagebreak
-% ############################################
-\section{Code Listings}\label{sec:code}
-
-Code can be displayed inline, e.g. \code{UPDATE} or \code{factorial(n)}.
-
-Code listings can have numbered lines, captions, syntax highlighting, ... .
-
-\begin{lstlisting}[caption={[Code Without Line Numbers] Code Without Line Numbers \\ \captionsource{\cite{mus:16}}}, label={lst:codeExample}, language=python, numbers=none]
-	0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 
-	A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  
-\end{lstlisting}
-
-\begin{lstlisting}[caption={Code With Line Numbers}, label={lst:factorial}, language=Java]
-	public int factorial(int n) {
-		if (n == 1) {
-			return 1;
-		} else {
-			return n * factorial(n - 1) ;
-		}
-	}
-\end{lstlisting}
-
-
-
-\end{comment}

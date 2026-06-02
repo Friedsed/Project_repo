@@ -1,3 +1,113 @@
 %============================================================================================================
 %PARTIE COMPARAISON AVEC DES MODELES AVEC LES DIFFERENT AVION UTILISE 
 %================================================================================================================
+
+
+\chapter{ Comparaison    }\label{ch:structure}
+
+\section{Avions étudiés}
+
+	La distance de décollage dépend fortement des caractéristiques aérodynamiques, de la masse, de la motorisation et des performances globales de l'appareil. Afin d'évaluer l'influence de ces paramètres, plusieurs catégories d'avions ont été sélectionnées pour cette étude.
+	
+	Le choix des aéronefs s'est porté sur des appareils représentatifs de différents domaines de l'aviation :
+	
+	\begin{itemize}
+		\item le \textbf{Cessna 172}, représentant les avions légers de l'aviation générale ;
+		\item l'\textbf{Airbus A320}, représentant les avions commerciaux moyen-courriers ;
+		\item le \textbf{Belugar Xl}, représentant les avions de grande capacités
+		\item le \textbf{Lockheed Martin C-130J Super Hercules}, représentant les avions militaires de transport ;
+		\item le \textbf{Dassault Rafale}, représentant les avions de combat modernes.
+	\end{itemize}
+	
+	Ces appareils présentent des caractéristiques et des performances très différentes, permettant ainsi d'étudier l'influence du poids, de la poussée disponible, de la surface alaire et de la configuration aérodynamique sur la distance de décollage.
+	
+	Les résultats obtenus pour chaque avion seront ensuite comparés afin d'identifier les principaux paramètres influençant les performances au décollage.
+	
+	\begin{figure}[H]
+		\centering
+		
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Cessna172.png}
+			\caption{Cessna 172}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{A320.png}
+			\caption{Airbus A320}
+		\end{subfigure}
+		\vspace{0.5cm}
+		
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{begura.png}
+			\caption{Belugar XL}
+		\end{subfigure}
+		
+		\vspace{0.5cm}
+		
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{C-130J_super_hercules.png}
+			\caption{C-130J Super Hercules}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Dassault_rafale.png}
+			\caption{Dassault Rafale}
+		\end{subfigure}
+		
+		\caption{Avions retenus pour l'étude comparative des performances au décollage.}
+		\label{fig:aircraft_comparison}
+	\end{figure}
+	
+	
+	
+	\section{Analyse des résultats de simulation}
+	
+	L'analyse des résultats de simulations nous conduire à ce tableau:
+	
+	\begin{table}[H]
+		\centering
+		\caption{Comparaison des distances de décollage}
+		\label{tab:takeoff_distance}
+		\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textbf{Avion} & \textbf{Modèle} & \textbf{Distance au sol (ft)} & \textbf{Distance jusqu'à l'obstacle (ft)} & \textbf{Distance réel au sol (ft))} \\
+			\hline
+			
+			\multirow{3}{*}{Cessna 172 SP}
+			& Modèle 1 & 1081.26		& 	     	&  			\\ \cline{3-3}
+			& Modèle 2 & 1046.50 			& 1630	 	& 920	 	\\ \cline{3-3}
+			& Modèle 3 & 155			& 		 	&  			\\ \cline{3-3}
+			& Modèle 4 & 920 			& 		 	&  			\\ \hline
+			
+			\multirow{3}{*}{Airbus A320}
+			& Modèle 1 & 155 			& 	 		&  			\\ \cline{3-3}
+			& Modèle 2 & 155 			& 	 		&	1312 	\\ \cline{3-3}
+			& Modèle 3 & 155 			&  		& 			\\ \cline{3-3}
+			& Modèle 4 & 1490 			&   		& 			\\ \hline
+			
+			\multirow{3}{*}{Belugar XL}
+			& Modèle 1 & 4153.78 			& 	 		&  			\\ \cline{3-3}
+			& Modèle 2 & 4044.11 			& 	 		&	1500 	\\ \cline{3-3}
+			& Modèle 3 & 155 			&  		& 			\\ \cline{3-3}
+			& Modèle 4 & 8401.95 			&   		& 			\\ \hline
+			
+			\multirow{3}{*}{C-130J Super Hercules}
+			& Modèle 1 & 155 			& 	 		&  			\\ \cline{3-3}
+			& Modèle 2 & 155 			& 2000	 	&		 	\\ \cline{3-3}
+			& Modèle 3 & 155 			&  		& 			\\ \cline{3-3}
+			& Modèle 4 & 1490 			&   		& 			\\ \hline
+			
+			\multirow{3}{*}{Dassault Rafale}
+			& Modèle 1 & 1632.71 			& 	 		&  			\\ \cline{3-3}
+			& Modèle 2 & 1617.49 			& 	 		&	1312 	\\ \cline{3-3}
+			& Modèle 3 & 155 			&  		& 			\\ \cline{3-3}
+			& Modèle 4 & 2613.85 			&   		& 			\\ \hline
+			
+		\end{tabular}   }
+	\end{table}

@@ -2,248 +2,250 @@
 %DISTANCE DE DECOLLAGE AVEC LES DIFFERENTES METHODE 
 %================================================================================================================
 %------------------------------------------------
-\section{\textcolor{blue}{Distance parcourue au sol} }
 
-En appliquant la seconde loi de Newton à l’avion pendant sa phase de roulage au sol, on obtient :
+\chapter{ Distance parcourue au sol   }\label{ch:structure}
 
-\begin{equation}
-	\frac{W}{g}\frac{dV}{dt}=T-D-F_r
-	\tag{1.1}
-\end{equation}
 
-Le principe fondamental de la dynamique (PFD) est utilisé de différentes manières dans le calcul de la distance de décollage.
+	En appliquant la seconde loi de Newton à l’avion pendant sa phase de roulage au sol, on obtient :	
+	\begin{equation}
+		\frac{W}{g}\frac{dV}{dt}=T-D-F_r
+		\tag{1.1}
+	\end{equation}
+	
+	Le principe fondamental de la dynamique (PFD) est utilisé de différentes manières dans le calcul de la distance de décollage.
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	%------------------------------------------------
-	\subsection{\textcolor{green} {Modèle 1 : méthode analytique} }
-	Cette méthode est présentée dans \cite{War:09}. 
-	\textbf{\textcolor{yellow}{Avantages}}
+	\section{ Modèle 1 : méthode analytique }
+		Cette méthode est présentée dans le livre  \cite{War:09}. 
+		Pour la méthode analytique, la vitesse de décollage $V_{LOF}$ est connue à l'avance. Le calcul de la distance de décollage consiste alors à intégrer l'équation du mouvement entre la vitesse initiale, généralement nulle, et la vitesse de décollage.
+		
+		
+		\subsection{Avantages}
+		
+			Cette méthode est applicable à tous les avions et les forces dépendent de la vitesse et sont implémenté en fonction de la vitesse a chaque instant. Elle peut être utilisée pour les avions à réaction ainsi que pour les avions à hélices. la seul différence est le calcule de la poussée.
+			
+			\vspace{0.3cm}
+			
+		\subsection{Hypothèses}
+		
+			La vitesse de décollage $V_{LOF}$ est connue à l'avance
+			Considère que le moteur à développer toute sa poussée avant le départ ,
+		\vspace{0.3cm}
+		
+		\subsection{Méthode}
+			En utilisant la relation de dérivation totale :
+			
+			\begin{equation}
+				\frac{dV}{dt}=\frac{ds}{dt}\frac{dV}{ds}=(V-V_{hw})\frac{dV}{ds}
+			\end{equation}
+			
+			On obtient alors :
+			
+			\begin{equation}
+				\frac{ds}{dV}=\frac{W(V-V_{hw})}{g(T-D-F_r)}
+			\end{equation}
+			
+			En intégrant entre deux vitesses successives :
+			
+			\begin{align}
+				S_{i+1}-S_i= \frac{1}{g} \int_{V_i}^{V_{i+1}} \frac{V-V_{hw}} {\dfrac{T-D-F_r}{W}} \, dV
+			\end{align}
+			
+			Dans ce modèle, les forces sont de la forme :
+			
+			\begin{align}
+				D &= \frac{1}{2}\rho V^2 S_w C_D \\
+				F_r &= \mu_r W - \frac{1}{2}\mu_r \rho S_w C_L V^2 \\
+				T &= (T_0)_i + (T')_i V + (T'')_i V^2
+			\end{align}
+			
+			En posant :
+			
+			\begin{align}
+				\frac{T-D-F_r}{W}=A+BV+CV^2
+			\end{align}
+			
+			avec :
+			
+			\begin{align}
+				A &= \frac{(T_0)_i}{W}-\mu_r \\
+				B &= \frac{(T')_i}{W} \\
+				C &= \frac{(T'')_i}{W} 	-\frac{1}{2} \frac{\rho}{W/S_w} (\mu_r C_L-C_D)
+			\end{align}
+			
+			L’équation devient :
+			
+			\begin{align}
+				S_{i+1}-S_i	=	\frac{W}{g}	\int_{V_i}^{V_{i+1}} \frac{V-V_{hw}} {A+BV+CV^2} \, dV
+			\end{align}
+			
+			\vspace{1cm}
+		
+		%------------------------------------------------
+		\subsection{Modélisation des forces}
+		
+			\textbf{Traînée}
+			
+				La force de traînée est donnée par :
+				
+				\begin{align}
+					D=\frac{1}{2}\rho V^2 S_w C_D
+				\end{align}
+				avec
+				\begin{align}
+					C_D= C_{D0}	+	C_{D0,L}C_L +
+					\frac{	\left(\dfrac{16h_w}{b_w}\right)^2  }{ 1+\left(\dfrac{16h_w}{b_w}\right)^2 }	\cdot \frac{C_L^2}{\pi e R_A}
+				\end{align}
+				
+			
+			\vspace{0.5cm}
+			
+			\textbf{Force de frottement}
+			
+				Pendant le roulage :
+				\begin{equation}
+					F_r= \mu_r(W-L)	= \mu_r	\left( 	W-\frac{1}{2}\rho V^2 S_w C_L  \right)
+				\end{equation}
+			
+			\vspace{0.5cm}
+			
+			\textbf{Poussée}
+			
+				La poussée est modélisée par :
+				\begin{equation}
+					T=(T_0)_i+(T')_iV+(T'')_iV^2
+				\end{equation}
+				où $(T_0)_i$, $(T')_i$ et $(T'')_i$ sont des coefficients déterminés expérimentalement.
+		
+		%------------------------------------------------
 	
-	Cette méthode est applicable à tous les avions et les forces dépendent de la vitesse et sont implementé en focntion de la vitesse a chaque instant. Elle peut être utilisée pour les avions à réaction ainsi que pour les avions à hélices.
-	
-	\vspace{0.3cm}
-	
-	\textbf{\textcolor{yellow}{Aproximation}}
-	
-	.............................
-	
-	\vspace{0.3cm}
-	
-	
-	En utilisant la relation de dérivation totale :
-	
-	\begin{equation}
-		\frac{dV}{dt}=\frac{ds}{dt}\frac{dV}{ds}=(V-V_{hw})\frac{dV}{ds}
-	\end{equation}
-	
-	On obtient alors :
-	
-	\begin{equation}
-		\frac{ds}{dV}=\frac{W(V-V_{hw})}{g(T-D-F_r)}
-	\end{equation}
-	
-	En intégrant entre deux vitesses successives :
-	
-	\begin{align}
-		S_{i+1}-S_i= \frac{1}{g} \int_{V_i}^{V_{i+1}} \frac{V-V_{hw}} {\dfrac{T-D-F_r}{W}} \, dV
-	\end{align}
-	
-	Dans ce modèle, les forces sont de la forme :
-	
-	\begin{align}
-		D &= \frac{1}{2}\rho V^2 S_w C_D \\
-		F_r &= \mu_r W - \frac{1}{2}\mu_r \rho S_w C_L V^2 \\
-		T &= (T_0)_i + (T')_i V + (T'')_i V^2
-	\end{align}
-	
-	En posant :
-	
-	\begin{align}
-		\frac{T-D-F_r}{W}=A+BV+CV^2
-	\end{align}
-	
-	avec :
-	
-	\begin{align}
-		A &= \frac{(T_0)_i}{W}-\mu_r \\
-		B &= \frac{(T')_i}{W} \\
-		C &= \frac{(T'')_i}{W} 	-\frac{1}{2} \frac{\rho}{W/S_w} (\mu_r C_L-C_D)
-	\end{align}
-	
-	L’équation devient :
-	
-	\begin{align}
-		S_{i+1}-S_i	=	\frac{W}{g}	\int_{V_i}^{V_{i+1}} \frac{V-V_{hw}} {A+BV+CV^2} \, dV
-	\end{align}
-	
-	\vspace{1cm}
-	
-	%------------------------------------------------
-	\subsubsection{\textcolor{red}{Modélisation des forces}}
-	
-	\textbf{Traînée}
-	
-	La force de traînée est donnée par :
-	
-	\begin{align}
-		D=\frac{1}{2}\rho V^2 S_w C_D
-	\end{align}
-	
-	avec
-	
-	\begin{align}
-		C_D= C_{D0}	+	C_{D0,L}C_L +
-		\frac{	\left(\dfrac{16h_w}{b_w}\right)^2  }{ 1+\left(\dfrac{16h_w}{b_w}\right)^2 }	\cdot \frac{C_L^2}{\pi e R_A}
-	\end{align}
-	
-	où :
-	
-	\[	h_w : \text{ hauteur de l’aile par rapport au sol}	\]	
-	\[ b_w :	\text{ envergure de l’aile}	\]
-	
-	\vspace{0.5cm}
-	
-	\textbf{Force de frottement}
-	
-	Pendant le roulage :
-	
-	\begin{equation}
-		F_r= \mu_r(W-L)	= \mu_r	\left( 	W-\frac{1}{2}\rho V^2 S_w C_L  \right)
-	\end{equation}
-	
-	\vspace{0.5cm}
-	
-	\textbf{Poussée}
-	
-	La poussée est modélisée par :
-	
-	\begin{equation}
-		T=(T_0)_i+(T')_iV+(T'')_iV^2
-	\end{equation}
-	
-	où $(T_0)_i$, $(T')_i$ et $(T'')_i$ sont des coefficients déterminés expérimentalement.
 
-%------------------------------------------------
-	\subsection{\textcolor{blue} { Modèle 2 : méthode simplifiée et méthode numérique   }}
-	Cette méthode est présentée dans \cite{smi:60}.
+
+
 %============================================================================================================
 %
 %================================================================================================================
 		%------------------------------------------------
-		\subsubsection{\textcolor{green} { Méthode générale d’estimation utilisant une vitesse moyenne de décollage } }
+		\section{ Méthode générale d’estimation utilisant une vitesse moyenne de décollage } 
+		Cette méthode est présentée dans le livre \cite{smi:60}.
 		
-		\textbf{\textcolor{yellow}{Avantages}}
+		Il s'agit d'une approximation dans laquelle les forces agissant sur l'avion sont supposées constantes. Ces forces sont évaluées à la vitesse $V_R/\sqrt{2}$. Cette valeur est choisie car elle fournit une bonne approximation de la valeur moyenne des forces entre le début de la course au décollage et la vitesse de rotation. Ainsi, la variation réelle des forces est remplacée par une valeur constante représentative de l'ensemble de l'intervalle considéré.
+
+		Dans ce modèle, la vitesse de décollage n'est pas connue a priori. Elle est estimée à partir de la vitesse de décrochage selon la relation :
 		
-		Cette méthode est applicable à tous les avions si les forces peuvent être approximées. Elle peut être utilisée pour les avions à réaction ainsi que pour les avions à hélices.
+		\[		V_{LOF} = 1.1 \, V_s		\]
 		
-		\vspace{0.3cm}
+		où $V_s$ désigne la vitesse de décrochage de l'avion.
 		
-		\textbf{\textcolor{yellow}{Aproximation}}
-		
-		On considère les forces constantes pendant le roulage sur la piste. Elles sont calculées à la vitesse moyenne $V_R/2$, qui permet une bonne approximation sur cet intervalle.
-		
-		\vspace{0.3cm}
-		
-		\textbf{Méthode}
-		
-		La distance de décollage après application du PFD est donnée par :
-		
-		\begin{equation*}
-			S_G= \frac{ V_R^2 W	}{ 2g[T-D-\mu(W-L)]	}
-			\quad
-			\text{évaluée en }
-			\left(\frac{V_R}{2}\right)
-		\end{equation*}
-		
-		La poussée dépend ici du type de moteur.
-		
-		\vspace{0.3cm}
-		
-		\textbf{Moteur à piston}
-		
-		\[ T= 	\frac{n_p(550P_{BHP})	}{	V_R/\sqrt{2}	}	\]
-		
-		\vspace{0.3cm}
-		
-		\textbf{Moteur à turbopropulseur}
-		
-		\[	T=T\left(\frac{V_R}{\sqrt{2}}\right)	\]
-		
-		\vspace{0.3cm}
-		
-		Un cas particulier de cette méthode consiste à déterminer la distance de décollage pour un train tricycle.
-		
-		Dans ce cas :
-		
-		\begin{equation*}
-			S_G=	\frac{	V_R^2 W	}{	n_p 550 P_H		+	16.09\rho V_R^3 S 	(\mu C_{LTO}-C_{DTO})	-	2g\mu W V_R		}
-		\end{equation*}
-		
+			\subsection{Avantages}
+			
+				Cette méthode est applicable à tous les avions si les forces peuvent être approximées. Elle peut être utilisée pour les avions à plusieurs piston radiale utilié par le passé. ainsi que pour les avions à hélices. Elle permet également de simuler la distance de freinages en cas de problème de moteurs ou tout autre problèmes.
+			
+			\vspace{0.3cm}
+			
+			\subsection{Hypothèse}
+			
+				On considère les forces constantes pendant le roulage sur la piste. Elles sont calculées à la vitesse moyenne $\frac{V_r}{\sqrt{2}}$, qui permet une bonne approximation sur cet intervalle.
+				
+				\vspace{0.3cm}
+				
+			\subsection{Méthode}
+				
+				La distance de décollage après application du PFD est donnée par :
+				
+				\begin{equation*}
+					S_G= \frac{ V_R^2 W	}{ 2g[T-D-\mu(W-L)]	}
+					\quad
+					\text{évaluée en }
+					\left(\frac{V_R}{2}\right)
+				\end{equation*}
+				
+				La poussée dépend ici du type de moteur.
+				
+				\vspace{0.3cm}
+				
+				\textbf{Moteur à piston}				\[ T= 	\frac{n_p(550P_{BHP})	}{	V_R/\sqrt{2}	}	\]
+			
+				\textbf{Moteur à turbopropulseur}		\[	T=T\left(\frac{V_R}{\sqrt{2}}\right)	\]
+			
+				\vspace{0.3cm}
+				
+				Un cas particulier de cette méthode consiste à déterminer la distance de décollage pour un train tricycle.
+				
+				Dans ce cas :
+				
+				\begin{equation*}
+					S_G=	\frac{	V_R^2 W	}{	n_p 550 P_H		+	16.09\rho V_R^3 S 	(\mu C_{LTO}-C_{DTO})	-	2g\mu W V_R		}
+				\end{equation*}
+			
 		%============================================================================================================
 		%
 		%================================================================================================================
-		\subsubsection{ \textcolor{green} { Méthode d’intégration numérique}}
+		\section{  Méthode d’intégration numérique}
+			Cette méthode est présentée dans le livre \cite{smi:60}.
 		
-		\textbf{\textcolor{yellow}{Avantages}}
-		
-		Cette méthode permet de modéliser les cas de décollage les plus complexes, notamment les distances de freinage en cas de panne moteur.
-		
-		\vspace{0.3cm}
-		
-		\textbf{\textcolor{yellow}{Approximation}}
-		
-		La vitesse de décollage est approximée par :	\[	V_{LOF}=1.1V_s	\]	où $V_s$ est la vitesse de décrochage.
-		
-		\vspace{0.3cm}
-		
-
-		
-		La méthode numérique utilisée pour calculer la distance de roulement repose sur une intégration pas à pas des équations du mouvement.
-		
-		\paragraph{Étape 1 : Calcul des forces}
-		
-		À chaque pas de temps $i$, calculer :
-		
-		\begin{itemize}
-			\item la poussée : $T_i$
-			\item la traînée : $D_i$
-			\item la portance : $L_i$
-		\end{itemize}
-		
-		La pression dynamique :		\[ q_i=\frac{1}{2}\rho V_{i-1}^2 \] où :
-		
-		\begin{itemize}
-			\item $\rho$ est la densité de l’air ;
-			\item $V_{i-1}$ est la vitesse au pas précédent.
-		\end{itemize}
-		
-		\paragraph{Étape 2 : Calcul de l’accélération}
-		
-		\[ a_i= \frac{g}{W}	\left[	T_i-D_i-\mu(W-L_i)	\right]	\] 	avec :		
-		\begin{itemize}
-			\item $g$ : accélération gravitationnelle ;
-			\item $W$ : poids de l’avion ;
-			\item $\mu$ : coefficient de frottement.
-		\end{itemize}
-		
-		\paragraph{Étape 3 : Mise à jour de la vitesse et de la distance}
-		
-		\[	V_i=V_{i-1}+a_i\Delta t_i	\]
-		
-		\[	S_i=S_{i-1}	+ V_{i-1}\Delta t_i + \frac{1}{2}a_i\Delta t_i^2 \]		avec :	\[	\Delta t_i=t_i-t_{i-1}	\]
-		
-		\paragraph{Étape 4 : Condition de décollage}
-		
-		Le calcul est répété jusqu’à :	\[	V_i=V_{LOF}	\]
-		
-		La distance obtenue :		\[	S_i=S_G	\]
-		
-		représente la distance totale de roulement au sol.
-		
-		
-		
-		
-		
-		
+			\subsection{Avantages}
+			
+				Cette méthode permet de modéliser les cas de décollage les plus complexes, notamment les distances de freinage en cas de panne moteur.
+			
+			\vspace{0.3cm}
+			
+			\subsection{Hypothèses}
+			
+			La vitesse de décollage est approximée par :	\[	V_{LOF}=1.1V_s	\]	où $V_s$ est la vitesse de décrochage.
+			
+			\vspace{0.3cm}
+			
+	
+			
+			La méthode numérique utilisée pour calculer la distance de roulement repose sur une intégration pas à pas des équations du mouvement.
+			
+			\subsection{Méthodes}
+			\textbf{Étape 1 : Calcul des forces} 
+			
+				À chaque pas de temps $i$, calculer :
+				
+				\begin{itemize}
+					\item la poussée : $T_i$
+					\item la traînée : $D_i$
+					\item la portance : $L_i$
+					\item $\rho$ est la densité de l’air ;
+					\item $V_{i-1}$ est la vitesse au pas précédent.
+				\end{itemize}
+				
+			\textbf{Étape 2 : Calcul de l’accélération}
+				\[ a_i= \frac{g}{W}	\left[	T_i-D_i-\mu(W-L_i)	\right]	\] 		
+				
+				
+			\textbf{Étape 3 : Mise à jour de la vitesse et de la distance}
+			
+				\[	V_i=V_{i-1}+a_i\Delta t_i	\]
+				
+				\[	S_i=S_{i-1}	+ V_{i-1}\Delta t_i + \frac{1}{2}a_i\Delta t_i^2 \]		avec :	\[	\Delta t_i=t_i-t_{i-1}	\]
+				
+			\textbf{Étape 4 : Condition de décollage}
+			
+			Le calcul est répété jusqu’à :	\[	V_i=V_{LOF}	\]
+			
+			La distance obtenue :		\[	S_i=S_G	\]
+			
+			représente la distance totale de roulement au sol.
+			
+	
+			
+			
+			
+			
+			
 		
 		
 		
