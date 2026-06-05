@@ -5,7 +5,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 27 May 2026
+Modified: 04 juin 2026
 
 B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON
 
@@ -41,6 +41,8 @@ from scipy.integrate import quad
 from conversion import *
 import pandas as pd
 from forces import *
+from tkinter import *
+from matplotlib.figure import Figure
 
 # self.p[""]
 # ============================================================
@@ -61,9 +63,6 @@ class AircraftTakeoff2:
     # =====================================================
     def Vr(self):
         return 1.1 * np.sqrt(2 * self.p["W"] / (self.p["rho"] * self.p["Sw"] * self.p["Clmax"]))
-
-   
-
     # =====================================================
     # Lift
     # =====================================================
@@ -75,8 +74,6 @@ class AircraftTakeoff2:
     # =====================================================
     def drag2(self):
         return drag2(  self.p["rho"],  self.Vr(),   self.p["Sw"],   self.p["Cd"]    )
-
-    
     # =====================================================
     # Thrust
     # =====================================================
@@ -87,10 +84,6 @@ class AircraftTakeoff2:
         elif self.p["engine"] == "jet":
 
             return self.p["T"]
-            
-          
-
-
     # =====================================================
     # Ground run distance
     # =====================================================
@@ -99,22 +92,17 @@ class AircraftTakeoff2:
         D = self.drag2()
         L = self.lift2()
         T =  self.thrust2()
-
-
         return (self.Vr()**2 * self.p["W"]) / (2 * self.p["g"] * ( T - D - self.p["mu"] * (self.p["W"] - L) ) )
 
 
-    def summary(self):
+    def set_result(self):
 
-        Vr= self.Vr()
-      #  C_lige, C_dige =  0, 0 # need to be modify 
-        L =  self.lift2()
-        D = self.drag2()
-        T =  self.thrust2()
+       
+        return {"Runaway distance is": self.ground_run() , "The lift off speed": self.lift2() }
 
 
 
-        S= self.ground_run()
+"""
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
         print(" The Unit is  :", self.p["Unit"])
         print(" The name of the aicraft is :", self.p["name"])
@@ -127,16 +115,7 @@ class AircraftTakeoff2:
         print(" The thrust is :", T)
         print (" The ground run distance is :", S)
 
-
-
-
-
-
-
-
-
-
-
+"""
 
 
 

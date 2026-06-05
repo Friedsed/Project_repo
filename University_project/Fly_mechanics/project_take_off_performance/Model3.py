@@ -5,7 +5,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 27 May 2026
+Modified: 04 juin 2026
 
 B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON
 
@@ -37,7 +37,6 @@ from scipy.integrate import quad
 from conversion import *
 import pandas as pd
 
-# self.p[""]
 # ============================================================
 # Class AircraftTakeoff
 # ============================================================

@@ -5,7 +5,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 20 May 2026
+Modified: 04 juin 2026
 
 B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON
 
@@ -62,7 +62,6 @@ class AircraftTakeoff4:
     # Drag at rotation speed
     # =====================================================
     def drag(self, V):
-
         return 0.5 * self.p["rho"] * V**2 * self.p["Sw"] * self.p["Cd"]
 
     # =====================================================
@@ -81,35 +80,54 @@ class AircraftTakeoff4:
     def ground_run(self):
 
         t = np.linspace(0, 17, self.p["n"])
-
         S, dS = np.zeros(self.p["n"]), np.zeros(self.p["n"])
         A, V = np.zeros(self.p["n"]), np.zeros(self.p["n"])
         D, L, T = np.zeros(self.p["n"]), np.zeros(self.p["n"]), np.zeros(self.p["n"])
-
         D[0], L[0] = 0, 0
         A[0] = 9.78
-
         for i in range(1, self.p["n"] ):
             D[i] = self.drag(V[i-1])
             L[i] = self.lift(V[i-1])
             T[i] = self.thrust_piston(V[i-1])
-
             A[i] = (self.p["g"] / self.p["W"]) * (   T[i] - D[i] - self.p["mu"] * ( self.p["W"] - L[i] )  )
-
             V[i] = V[i-1] + A[i] * (t[i] - t[i-1])
-
             dS[i] = V[i-1] * (t[i] - t[i-1]) + 0.5 * A[i] * (t[i] - t[i-1])**2
-
             S[i] = S[i-1] + dS[i]
-
         return {  "times": t,     "drag": D,     "lift": L,      "thrust": T,    "acceleration": A,   "speed": V,     "distance": S     }
+
+    # =====================================================
+    # Rotation distance or the climb distance or the transition distance
+    # =====================================================
+    def part2(self):
+
+        W = self.p["W"]
+        h_oc = self.p["hoc"]
+        dict_run = self.ground_run()
+        V = dict_run["speed"]
+        V_lo = V[len(V)-1] * 1.15 / 1.1 
+        T = self.thrust_piston(V_lo)
+        D = self.drag(V_lo)
+        L = self.lift(V_lo)
+        gamma_climb = np.arcsin(np.clip((T - D) / W, -1, 1))
+        n = L / W
+        R = V_lo**2 / ((n - 1) * self.p["g"])
+        S_R = R * np.sin(gamma_climb)
+        h_R = R * (1 - np.cos(gamma_climb))
+        if h_R < h_oc:
+            S_C = (h_oc - h_R) / np.tan(gamma_climb)
+            S_obs = S_R + S_C
+        else:
+            S_obs = np.sqrt(R**2 - (R - h_oc)**2)
+            S_C = 0 
+        dico = {   "V_st*1.15 is  : ": V_lo, "T : ": T,   "D : ": D,  "L : ": L,  "gamma_climb : ": gamma_climb,   "n=L/w : ": n,    "Raduis : ": R        }
+        
+        return S_C, S_obs, dico
 
     # =====================================================
     # Plotting forces, speed, and acceleration
     # =====================================================
 
     def plot_forces (self):
-
         dict= self.ground_run()
         L = dict["lift"]
         D= dict["drag"]
@@ -125,9 +143,7 @@ class AircraftTakeoff4:
         plt.grid
         plt.show ( )
 
-
     def plot_speed (self):
-
         dict= self.ground_run()
         V = dict["speed"]
         S= dict["distance"]
@@ -140,7 +156,6 @@ class AircraftTakeoff4:
         plt.show ( )
 
     def plot_acceleration (self):
-
         dict= self.ground_run()
         A= dict["acceleration"]
         S= dict["distance"]
@@ -153,8 +168,7 @@ class AircraftTakeoff4:
         plt.show ( )
 
 
-
-    def summary(self):
+    def set_result(self):
 
         dict= self.ground_run()
         L = dict["lift"]
@@ -165,25 +179,36 @@ class AircraftTakeoff4:
         A= dict["acceleration"]
 
         
+       
+        return {
+            "Runaway distance is": S[-1], " The lift off speed": V[-1], 
+                "The drag during the lift off is" :  D[-1], 
+                "The thrust during the lift off is" :  T[-1], 
+                "The rotating distance also called the transition is" :  self.part2()[0],
+                 "The climbing distance is" :  self.part2()[1]
+                  }
 
 
+"""
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
         print("To confirm, the parameters are :", self.p)
         print(" The name of the aicraft is :", self.p["name"])
         print(" The type of the engine is :", self.p["engine"])
         print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
-
         print("The ground distance is :", S[-1])
         print(" The lift at the lift off point is :" , L[-1])
         print("The lift off speed is :",  V[-1])
         print("The drag during the lift off is :",  D[-1])
         print("The thrust during the lift off is :",  T[-1])
         print("The acceleration during the lift off is :",  A[-1])
+        print("The rotating distance also called the transition is  :",  self.part2()[0])
+        print("The climbing distance is  :",  self.part2()[1])
+        print("Some values are ", self.part2()[2])
 
         self.plot_forces()
         self.plot_speed()
         self.plot_acceleration()
-
+"""
 
 
 

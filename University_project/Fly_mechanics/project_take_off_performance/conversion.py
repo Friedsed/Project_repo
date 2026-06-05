@@ -6,7 +6,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 27 May 2026
+Modified: 04 juin 2026
 
 
 --------------------------------
@@ -29,7 +29,7 @@ from scipy.integrate import quad
 
 
      # Conversion factors: US -> SI
-CONV = {"Sw": 0.3048**2, "bw": 0.3048, "hw": 0.3048, "W": 4.44822,  "T0": 4.44822, "T1": 4.44822 / 0.3048,  "T2": 4.44822 / (0.3048**2),  "rho": 515.3788,  "Vhw": 0.3048,  "Vi": 0.3048,  "g": 0.3048 }
+CONV = {"Sw": 0.3048**2, "bw": 0.3048, "hw": 0.3048, "W": 4.44822,  "T0": 4.44822, "T1": 4.44822 / 0.3048,  "T2": 4.44822 / (0.3048**2),  "rho": 515.3788,  "Vhw": 0.3048,  "Vi": 0.3048,  "g": 0.3048 , "P": 745.7, "hoc": 0.3048 , "T": 4.44822}
 
 # =====================================================
 # Unit conversion
@@ -65,10 +65,6 @@ def modify_dict(param, data):
             param[key] = data[key]
 
 
-
-
-
-
 # =========================================================
 # FONCTION QUI SORT LE BON DICTIONNAIRE
 # =========================================================
@@ -79,9 +75,8 @@ def get_model_params(model, data):
     # ---------------- MODELE 1 ----------------
     if model == "Model1":
 
-        keys = [ "Unit", "name" , "engine", "Sw", "bw", "hw", "W", "Ra", "Cdo", "Cdol", "e", "Clmax", "Cl", "mu", "T0", "T1", "T2", "rho", "alpha", "alpha_0", "Vhw", "g", "Vi"  ]
+        keys = [ "Unit", "name" , "engine", "Sw", "bw", "hw", "W", "Ra", "Cdo", "Cdol", "e", "Clmax", "Cl", "mu", "T0", "T1", "T2", "rho", "alpha", "alpha_0", "Vhw", "g", "Vi" , "tr", "hoc" ]
 
-    
     # ---------------- MODELE 2,3 ----------------
     elif model == "Model2":
 
@@ -90,10 +85,7 @@ def get_model_params(model, data):
 # ---------------- MODELE 4 ----------------
     elif model == "Model4":
 
-        keys = [ "Unit", "name" , "engine", "W", "Sw", "Clmax", "Cl", "Cd", "g", "mu", "P", "rho", "T", "n", "A1", "A2", "A3", "A4"  ]
-
-
-
+        keys = [ "Unit", "name" , "engine", "W", "Sw", "Clmax", "Cl", "Cd", "g", "mu", "P", "rho", "T", "n", "A1", "A2", "A3", "A4" , "hoc" ]
 
     else:
         return "Modele introuvable"

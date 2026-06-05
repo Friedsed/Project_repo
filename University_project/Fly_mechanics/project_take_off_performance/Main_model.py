@@ -6,7 +6,7 @@ Date: 27 April 2026
 Student in third year in Mechanics and Energetics
 University of Toulouse
 
-Modified: 27 May 2026
+Modified: 04 juin 2026
 
 B2: Book used Mechanic of flight by Warren
 
@@ -60,7 +60,7 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 model= input(" Enter your letter then ")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
 
-if model == "A":
+if model == "A":0 2026
     dict=data
 elif model == "B" :
     dict = data1
@@ -85,96 +85,59 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #df = pd.DataFrame(list(dict.items()), columns=["Paramètre", "Valeur"])
 #print(" Aicraft  ",dict["name"], " caratetriqtique is ", df)
-
-print("Choose the Model you want to compile ")
-i=int (input("Choose the Model you wanna Run "))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print("Choose the Model you want to run ")
+i=int (input("Choose the Model you wanna run "))
  
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
 # Code of Model1.py                                                                                                                                   |
 # ============================================================////////////////////////////////////////////////////////////////////////////////////////
-
 if i==1 :
     from Model1 import *
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     print( " Ground run estimation using numerical Integration method")
     print(" B1: Book used Mechanic of flight by Warren")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-
     param = get_model_params("Model1", dict)
-    plane = AircraftTakeoff(param) # here the parameters are in US unit
+    plane = AircraftTakeoff1(param) # here the parameters are in US unit
     plane.summary()
-
-
 
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
 # Code of Model2.py                                                                                                                                   |
 # ============================================================////////////////////////////////////////////////////////////////////////////////////////
-
-
-
 elif i== 2 :
     from Model2 import *
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     print( " General ground run estimation using Average Acceleration ; page 796 ")
     print(" B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON ")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-
     param = get_model_params("Model2", dict)
-    model = AircraftTakeoff(param)
+    model = AircraftTakeoff2(param)
     model.summary()
-
-
-
-
 
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
 # Code of Model3.py                                                                                                                                   |
 # ============================================================////////////////////////////////////////////////////////////////////////////////////////
-
 elif i== 3 :
     from Model3 import *
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     print( " General ground run estimation using Average Acceleration for tricycle propeller aicraft ONLY ;       page 797 ")
     print(" B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON ")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-
     param = get_model_params("Model2", dict)
-    model = AircraftTakeoff(param)
+    model = AircraftTakeoff3(param)
     model.summary()
-
 
 # ============================================================/////////////////////////////////////////////////////////////////////////////////////////
 # Code of Model4.py                                                                                                                                   |
 # ============================================================////////////////////////////////////////////////////////////////////////////////////////
-
 elif i== 4 :
     from Model4 import *
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
     print( " Ground run estimation using numerical Integration method")
     print(" B2: Book used General Aviation Aicraft  Design ; Applied Methods and Procedures ; SNORRI GUDMUNDSSON ")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ")
-
     param = get_model_params("Model4", dict)
-    model = AircraftTakeoff(param)
+    model = AircraftTakeoff4(param)
     model.summary()
 
 
