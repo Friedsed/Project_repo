@@ -1,0 +1,53 @@
+\documentclass[12pt]{report}
+
+
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=red]{hyperref}
+\usepackage{graphicx}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{stmaryrd}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,decorations.markings, intersections, calc, angles, arrows}
+\usepackage{epsfig}
+\usepackage{subcaption} % to run multiple picture 
+\usepackage{multirow}
+\usepackage{float}
+
+\input{commandes.tex}
+\graphicspath{{../Images/}}	%Affichage des images 
+
+
+\begin{document}
+	
+	
+	%============================FIRST PAGE, SOMMAIRE,================================
+
+	\input{firstpage}							% FIRST PAGE
+	\renewcommand{\contentsname}{Sommaire}		%SOMMAIRE
+	{
+		\hypersetup{linkcolor=black}
+		\tableofcontents
+	}
+	
+	%============================THE MAIN COURSES================================== 
+	
+	\input{content}								
+	\input{content1}
+	\input{content2}
+	\clearpage									% Saut page avant biblio
+	
+	%============================BIBLIOGRAPHIE ================================== 
+	
+	\addcontentsline{toc}{section}{Bibliographie}
+	\bibliographystyle{abbrv}
+	\bibliography{bibliography}
+	
+	
+\end{document}

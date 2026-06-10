@@ -21,202 +21,148 @@ Advantages 2| : Useful to solve some problem enconterred during the take-off
 -----------
 Asumption | V_lof is assumed to be 1.1* stalling speed  
 ----------
+Which exercices are being validated by my code 
 
-"""
-
-# Which exercices are being validated by my code 
-"""
 Example 3.10.2 ;    Page 350      Notice:     .......................
 Example 3.10.1;     Page 347      Notice: ...................................
 
 
+
 """
 
 
+
 import numpy as np
-import matplotlib.pyplot as plt
-from scipy.integrate import quad
-from conversion import *
 import pandas as pd
-from forces import *
-from tkinter import *
+import matplotlib.pyplot as plt
+
+from scipy.integrate import quad
 from matplotlib.figure import Figure
 
-
+from conversion import *
+from forces import *
 
 # ============================================================
 # Class AircraftTakeoff
 # ============================================================
 
 class AircraftTakeoff1:
-
+    """This class represente a way to compute the takeoff distance.  """
     def __init__(self, params):
         """
-        Initialize all parameters from dictionary
+        Initialize all parameters of input.
+
+        The input of the Class is a dictionnary type.
         """
         self.p = params
         self.p["Ra"] = self.p["bw"]**2 / self.p["Sw"]
-      
 
-
-
-    # ========================================================
-    # Aerodynamic functions
-    # ========================================================
 
     def C_L_alpha_sect(self):
-        return C_L_alpha_sect1( self.p["alpha"],  self.p["alpha_0"]  )
+        return C_L_alpha_sect1(self.p["alpha"], self.p["alpha_0"])
+
 
     def C_L_alpha(self):
-        return C_L_alpha1( self.p["alpha"],  self.p["alpha_0"],  self.p["Ra"]  )
+        return C_L_alpha1(self.p["alpha"], self.p["alpha_0"], self.p["Ra"])
+
 
     def C_L_function(self):
-         return C_L_function1(  self.p["alpha"],  self.p["alpha_0"], self.p["Ra"]  )
+         return C_L_function1(self.p["alpha"], self.p["alpha_0"], self.p["Ra"])
+
 
     def C_D_function(self):
-        return C_D_function1(  self.p["Cdo"],  self.p["Cdol"],   self.p["Cl"],  self.p["hw"],   self.p["bw"],  self.p["e"],  self.p["Ra"]  )
+        return C_D_function1(self.p["Cdo"], self.p["Cdol"],  
+                self.p["Cl"], self.p["hw"], self.p["bw"], self.p["e"], self.p["Ra"])
 
-    # ========================================================
-    # Forces
-    # ========================================================
 
     def lift(self, V):
-        return lift1(  V,  self.p["Sw"],    self.p["Cl"]   )
+        return lift1(V, self.p["Sw"], self.p["Cl"])
+
 
     def drag(self, V):
         Cd = self.C_D_function()
-        return drag1(  V,  self.p["Sw"],    Cd   )
+        return drag1(V, self.p["Sw"], Cd)
+
 
     def thrust(self, V):
-        return thrust1(  V,   self.p["T0"], self.p["T1"], self.p["T2"]    )
+        return thrust1(V, self.p["T0"], self.p["T1"], self.p["T2"])
+
 
     def friction(self, V):
         L = self.lift(V)
-        return friction( self.p["mu"],  self.p["W"],   L    )
+        return friction(self.p["mu"], self.p["W"], L)
 
-    # ========================================================
-    # K parameters
-    # ========================================================
-
-    def K0(self):
-        return self.p["T0"] / self.p["W"] - self.p["mu"]
-
-    def K1(self):
-        return self.p["T1"] / self.p["W"]
-
-    def K2(self):
-        p = self.p
-        Cd = self.C_D_function()
-
-        return (  p["T2"] / p["W"]   + p["rho"] / (2 * p["W"] / p["Sw"])  * (p["Cl"] * p["mu"] - Cd)   )
-
-    def Kr(self):
-        return 4 * self.K0() * self.K2() - self.K1()**2
-
-    # ========================================================
-    # Intermediate functions
-    # ========================================================
 
     def Vlo(self):
         p = self.p
         return 1.1 * np.sqrt(2 / p["Clmax"]) * np.sqrt(p["W"] / (p["Sw"] * p["rho"]))
 
-    def fi(self, V):
-        return self.K0() + self.K1() * V + self.K2() * V**2
 
-    def dfi(self, V):
-        return self.K1() + 2 * self.K2() * V
+    def K0(self):
+        """ 
+        Detail use in the book 
+        """
+        return self.p["T0"] / self.p["W"] - self.p["mu"]
 
-    # ========================================================
-    # Kw
-    # ========================================================
 
-    def Kw(self):
+    def K1(self):
+        """ 
+        Detail use in the book 
+        """
+        return self.p["T1"] / self.p["W"]
 
-        Vi = self.p["Vi"]
-        Vip1 = self.Vlo()
-        k0 = self.K0()
-        k1 = self.K1()
-        k2 = self.K2()
-        kr = self.Kr()
-        fi = self.fi(Vi)
-        fip1 = self.fi(Vip1)
-        dfi = self.dfi(Vi)
-        dfip1 = self.dfi(Vip1)
-        if k2 == 0 and k1 == 0:
-            return (Vip1 - Vi) / k0
-        elif k1 != 0 and k2 == 0:
-            return (1 / k1) * np.log(fip1 / fi)
-        elif kr < 0:
-            return (1 / np.sqrt(-kr)) * np.log( ((dfip1 - np.sqrt(-kr)) * (dfi + np.sqrt(-kr)))  / ((dfip1 + np.sqrt(-kr)) * (dfi - np.sqrt(-kr)))   )
-        elif kr == 0:
-            return (2 / dfi) - (2 / dfip1)
-        else:
-            return (2 / np.sqrt(kr)) * ( 1 / np.tan(dfip1 / np.sqrt(kr)) - 1 / np.tan(dfi / np.sqrt(kr))  )
 
-    # ========================================================
-    # Kt
-    # ========================================================
+    def K2(self):
+        """ 
+        Detail use in the book 
+        """
+        p = self.p
+        Cd = self.C_D_function()
+        return (p["T2"] / p["W"] + p["rho"] / (2 * p["W"] / p["Sw"]) * (p["Cl"] * p["mu"] - Cd))
 
-    def Kt(self):
-
-        Vi = self.p["Vi"]
-        Vip1 = self.Vlo()
-        k0 = self.K0()
-        k1 = self.K1()
-        k2 = self.K2()
-        fi = self.fi(Vi)
-        fip1 = self.fi(Vip1)
-        kw = self.Kw()
-        if k2 == 0 and k1 == 0:
-            return (Vip1**2 - Vi**2) / (2 * k0)
-        elif k2 == 0 and k1 != 0:
-            return (k0 / k1**2) * np.log(fi / fip1) + (Vip1 - Vi) / k1
-        else:
-            return (1 / (2 * k2)) * np.log(fip1 / fi) - (k1 * kw) / (2 * k2)
-
-    # ========================================================
-    # Distance
-    # ========================================================
-
-    def distance(self):
-        return (self.Kt() - self.p["Vhw"] * self.Kw()) / self.p["g"]
-
-    # ========================================================
-    # Numerical integration
-    # ========================================================
 
     def distance_integral(self):
-
+        """ 
+        The computing of ground roll distance
+        """
         Vi = self.p["Vi"]
         Vip1 = self.Vlo()
-        f = lambda V: (  (-self.p["Vhw"] + V)   / (self.K0() + self.K1() * V + self.K2() * V**2)    )
+        f = lambda V: ((-self.p["Vhw"] + V) / (self.K0() + self.K1() * V + self.K2() * V ** 2))
         I, _ = quad(f, Vi, Vip1)
-        
         return I / self.p["g"]
 
      # ========================================================
     # Distance above they earth
     # ========================================================
     def part(self, gamma):
-
+        """ 
+        Step to calculat the rotation distance 
+        """
         V_oc = 1.2 * np.sqrt((2 * self.p["W"]) / (self.p["Clmax"] * self.p["Sw"] * self.p["rho"]))
         V_lo = 1.1 * np.sqrt((2 * self.p["W"]) / (self.p["Clmax"] * self.p["Sw"] * self.p["rho"]))
         C_L_oc = (self.p["W"] * np.cos(gamma)) / (0.5 * self.p["rho"] * self.p["Sw"] * V_oc**2)
-        coef = ( (16 * (self.p["hw"] + self.p["hoc"]) / self.p["bw"])**2  ) / ( 1 + (16 * (self.p["hw"] + self.p["hoc"]) / self.p["bw"])**2  )
-        C_D_oc = (  self.p["Cdo"]  + self.p["Cdol"] * C_L_oc + coef * C_L_oc**2 / (np.pi * self.p["e"] * self.p["Ra"])   )
-        D_oc = (  0.5 * self.p["rho"]  * V_oc**2     * self.p["Sw"]  * C_D_oc  )
+        coef = ((16 * (self.p["hw"] + self.p["hoc"]) / self.p["bw"])**2) / ( 1 + 
+                    (16 * (self.p["hw"] + self.p["hoc"]) / self.p["bw"])**2)
+        C_D_oc = (self.p["Cdo"]  + self.p["Cdol"] * C_L_oc + coef * C_L_oc**2 / 
+                    (np.pi * self.p["e"] * self.p["Ra"]))
+        D_oc = (0.5 * self.p["rho"]  * V_oc**2     * self.p["Sw"]  * C_D_oc  )
+        # The angle gamma of climbing
         gamma = np.arcsin((self.p["T0"] - D_oc) / self.p["W"])
         # --- Phase lift-off --
-        C_L_lo = self.p["W"] / (  0.5 * self.p["rho"] * V_lo**2 * self.p["Sw"]  )
-        coeff = ( (16 * self.p["hw"] / self.p["bw"])**2  ) / (   1 + (16 * self.p["hw"] / self.p["bw"])**2  )
-        C_D_lo = (   self.p["Cdo"]   + self.p["Cdol"] * C_L_lo  + coeff * C_L_lo**2 / (np.pi * self.p["e"] * self.p["Ra"])   )
-        D_lo = (  0.5 * self.p["rho"]  * V_lo**2  * self.p["Sw"]  * C_D_lo  )
+        C_L_lo = self.p["W"] / (0.5 * self.p["rho"] * V_lo**2 * self.p["Sw"])
+        coeff = ((16 * self.p["hw"] / self.p["bw"])**2) / (1 + 
+                    (16 * self.p["hw"] / self.p["bw"])**2)
+        C_D_lo = (self.p["Cdo"] + self.p["Cdol"] * C_L_lo  + coeff * C_L_lo**2
+                     / (np.pi * self.p["e"] * self.p["Ra"]))
+        D_lo = (0.5 * self.p["rho"]  * V_lo**2  * self.p["Sw"] * C_D_lo)
         
         return V_oc, V_lo, C_L_oc, C_D_oc, D_oc, gamma, C_L_lo, C_D_lo, D_lo
 
 
     def clearance_dist(self):
+        """ 
+        The Clearance distance as compute in the book
+        """
         list = self.part(0)
         list = self.part(list[5])
         V_oc = list[0]
@@ -227,31 +173,20 @@ class AircraftTakeoff1:
         coef_LO = self.p["T0"] - D_lo
         coef_OC = (self.p["T0"] - D_oc) / np.cos(gamma)
         F = (coef_LO + coef_OC) / 2
-        Sc = ( (self.p["W"]) / F ) * (  self.p["hoc"] + (V_oc**2 - V_lo**2) / (2 * self.p["g"])    )   
+        Sc = ((self.p["W"]) / F) * (self.p["hoc"] + (V_oc**2 - V_lo**2) / (2 * self.p["g"]))   
         Sr = self.p["tr"]*V_lo
         Sa = self.distance_integral()
         St = Sa + Sr + Sc
-
         return Sa, Sr, Sc, St
 
 
-    # ========================================================
-    # Plot
-    # ========================================================
-
     def plot_distance(self):
-
         list = self.part(0)
         list = self.part(list[5])
         list1 = self.clearance_dist()
-
         Vi = self.p["Vi"]
-        #Vip1 = list[0]
-
         V = np.linspace(Vi, list[0], 100)
-
-        S = np.array([   self.distance_integral_partial(v)    for v in V     ])
-
+        S = np.array([self.distance_integral_partial(v) for v in V])
         plt.figure(figsize=(8,5))
         plt.plot(S, V)
         plt.xlabel("Distance ")
@@ -260,8 +195,8 @@ class AircraftTakeoff1:
         plt.grid()
         plt.show()
 
-    def plot_acceleration(self):
 
+    def plot_acceleration(self):
         list = self.part(0)
         list = self.part(list[5])
         list1 = self.clearance_dist()
@@ -276,19 +211,19 @@ class AircraftTakeoff1:
         plt.grid
         plt.show ( )
 
-    def plot_forces (self):
 
+    def plot_forces (self):
         list = self.part(0)
         list = self.part(list[5])
         list1 = self.clearance_dist()
         Vi = self.p["Vi"]
         Vip1 = list[0]
         V = np.linspace(Vi, Vip1, 100)
-        S = np.array([   self.distance_integral_partial(v)    for v in V     ])
-        L = np.array([   self.lift(v)    for v in V     ])
-        D= np.array([   self.drag(v)    for v in V     ])
-        T= np.array([   self.thrust(v)    for v in V     ])
-        F= np.array([   self.friction(v)    for v in V     ])
+        S = np.array([self.distance_integral_partial(v) for v in V])
+        L = np.array([self.lift(v) for v in V ])
+        D = np.array([self.drag(v) for v in V ])
+        T = np.array([self.thrust(v) for v in V ])
+        F = np.array([self.friction(v) for v in V ])
         plt.figure()
         plt.plot(S, L, 'b-', linewidth=2, label='Lift (L)')
         plt.plot(S, D, 'r--', linewidth=2, label='Drag (D)')
@@ -302,7 +237,10 @@ class AircraftTakeoff1:
 
 
     def distance_integral_partial(self, v):
-        f = lambda x: (  (-self.p["Vhw"] + x)  / (self.K0() + self.K1()*x + self.K2()*x**2)    )
+        """
+        Use to calcule the distance from zero to any point (P_i with speed v_i)
+        """
+        f = lambda x: ((-self.p["Vhw"] + x)  / (self.K0() + self.K1()*x + self.K2()*x**2))
         I, _ = quad(f, self.p["Vi"], v)
         return I / self.p["g"]
 
@@ -312,11 +250,43 @@ class AircraftTakeoff1:
 
 
     def set_result(self):
-        return { "Cd" : self.C_D_function()  , "K0": self.K0() ,  "K1" :  self.K1() , 
-                    "K2" : self.K2() ,  "Kr": self.Kr(), "Vlo" :  self.Vlo() , 
-                    "Kw" : self.Kw(), "Kt": self.Kt(), "Runaway distance is": self.distance_integral() ,
-                     "The Rotation distance is":self.clearance_dist()[1] ,
-                        "The Climb distance is": self.clearance_dist()[2] }
+        Sg = self.distance_integral()
+        Sr = self.clearance_dist()[1]
+        Sc = self.clearance_dist()[2]
+        S = Sg + Sr + Sc
+        return {
+            
+            "Runaway distance Sa is": round(Sg , 2) ,
+            "The Rotation distance Sr is": round(Sr, 2) ,
+            "The Climb distance Sc is": round(Sc,2),
+            "The total distance S for takeoff is ": round(S,2 ),
+            "Lift-off speed Vlo is": round(self.Vlo(), 2 ),
+             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 """
     def summary(self):
@@ -407,7 +377,81 @@ T2    # Thrust coefficient determined experimentally
 
 
 
+"""
 
+
+    def Kr(self):
+        
+        return 4 * self.K0() * self.K2() - self.K1()**2
+
+
+    
+
+
+    def fi(self, V):
+       
+        return self.K0() + self.K1() * V + self.K2() * V**2
+
+
+    def dfi(self, V):
+      
+        return self.K1() + 2 * self.K2() * V
+
+
+    def Kw(self):
+       
+        Vi = self.p["Vi"]
+        Vip1 = self.Vlo()
+        k0 = self.K0()
+        k1 = self.K1()
+        k2 = self.K2()
+        kr = self.Kr()
+        fi = self.fi(Vi)
+        fip1 = self.fi(Vip1)
+        dfi = self.dfi(Vi)
+        dfip1 = self.dfi(Vip1)
+        if k2 == 0 and k1 == 0:
+            return (Vip1 - Vi) / k0
+        elif k1 != 0 and k2 == 0:
+            return (1 / k1) * np.log(fip1 / fi)
+        elif kr < 0:
+            return (1 / np.sqrt( - kr)) * np.log( ((dfip1 - np.sqrt( - kr)) * (dfi + np.sqrt(-kr)))
+                    / ((dfip1 + np.sqrt( - kr)) * (dfi - np.sqrt( - kr))))
+        elif kr == 0:
+            return (2 / dfi) - (2 / dfip1)
+        else:
+            return (2 / np.sqrt(kr)) * ( 1 / np.tan(dfip1 / np.sqrt(kr)) - 1 / np.tan(dfi / np.sqrt(kr)))
+
+
+    def Kt(self):
+       
+        Vi = self.p["Vi"]
+        Vip1 = self.Vlo()
+        k0 = self.K0()
+        k1 = self.K1()
+        k2 = self.K2()
+        fi = self.fi(Vi)
+        fip1 = self.fi(Vip1)
+        kw = self.Kw()
+        if k2 == 0 and k1 == 0:
+            return (Vip1**2 - Vi**2) / (2 * k0)
+        elif k2 == 0 and k1 != 0:
+            return (k0 / k1**2) * np.log(fi / fip1) + (Vip1 - Vi) / k1
+        else:
+            return (1 / (2 * k2)) * np.log(fip1 / fi) - (k1 * kw) / (2 * k2)
+
+
+
+
+    def distance(self):
+        
+      
+        return (self.Kt() - self.p["Vhw"] * self.Kw()) / self.p["g"]
+
+
+
+
+"""
 
 
 
