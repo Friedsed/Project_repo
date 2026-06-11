@@ -201,13 +201,14 @@ class AircraftTakeoff1:
         list = self.part(list[5])
         list1 = self.clearance_dist()
         Vi = self.p["Vi"]
-        Vip1 = list[0]
-        v = np.linspace(Vi, Vip1, 100)
-        a= ((self.K0() + self.K1() *v + self .K2() *v**2 ) /self.p["g"] )
+        V = np.linspace(Vi, list[0], 100)
+        S = np.array([self.distance_integral_partial(v) for v in V])
+        a= ((self.K0() + self.K1() *V + self .K2() *V**2 ) /self.p["g"] )
         plt.figure()
-        plt.plot(v,a)
-        plt.xlabel("la vitesse ")
-        plt.ylabel("l'acceleration ")
+        plt.plot(S,a)
+        plt.xlabel("Distance")
+        plt.ylabel("Accélération ")
+        plt.title("Distance vs Accélération")
         plt.grid
         plt.show ( )
 

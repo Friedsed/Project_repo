@@ -31,6 +31,7 @@ Example 18.7 ;          Notice:     the ground run distance after running the co
 
 """
 
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -47,115 +48,131 @@ class AircraftTakeoff4:
     """
 
     def __init__(self, params):
-        """
-        Initialize all parameters from the dictionary.
-        """
         self.p = params
-        
+        self.p["Ra"] = self.p["bw"]**2 / self.p["Sw"]
 
-    def lift(self, V):
-        return 0.5 * self.p["rho"] * V**2 * self.p["Sw"] * self.p["Cl"]
+    def get_lift(self, V):
+        q = 0.5 * self.p["rho"] * V**2
+        return q * self.p["Sw"] * self.p["Cl"]
 
-    def drag(self, V):
-        return 0.5 * self.p["rho"] * V**2 * self.p["Sw"] * self.p["Cd"]
+    def get_drag(self, V):
+        q = 0.5 * self.p["rho"] * V**2
+        h_w = self.p["hw"]
+        b_w = self.p["bw"]
+        phi = ((16 * h_w / b_w)**2) / (1 + (16 * h_w / b_w)**2)
+        CL = self.p["Cl"]
+        CD = self.p["Cdo"] + self.p["Cdol"] * CL + phi * (CL**2 / (np.pi * self.p["e"] * self.p["Ra"]))
+        return q * self.p["Sw"] * CD
 
-    def thrust_piston(self, V):
+    def get_v_stall(self):
+        W = self.p["W"]
+        S = self.p["Sw"]
+        CL_max = self.p["Clmax"]
+        return np.sqrt((2 * W) / (self.p["rho"] * S * CL_max))
+
+    def get_thrust(self, V):
         if V == 0 or self.p["A1"] == self.p["A2"] == self.p["A3"] == self.p["A4"] == 0:
             return self.p["T"]
-        cste = self.p["A1"] * V + self.p["A2"] * V**2 + self.p["A3"] * V**3 + self.p["A4"] * V**4
-        return 550 * self.p["P"] * cste / (1.688 * V)
-
-    def ground_run(self):
-        """
-        Ground run distance.
-        """
-        t = np.linspace(0, 17, self.p["n"])
-        S, dS = np.zeros(self.p["n"]), np.zeros(self.p["n"])
-        A, V = np.zeros(self.p["n"]), np.zeros(self.p["n"])
-        D, L, T = np.zeros(self.p["n"]), np.zeros(self.p["n"]), np.zeros(self.p["n"])
-
-        D[0], L[0] = 0, 0
-        A[0] = 9.78
-
-        for i in range(1, self.p["n"]):
-            D[i] = self.drag(V[i - 1])
-            L[i] = self.lift(V[i - 1])
-            T[i] = self.thrust_piston(V[i - 1])
-
-            A[i] = (self.p["g"] / self.p["W"]) * (
-                T[i] - D[i] - self.p["mu"] * (self.p["W"] - L[i])
-            )
-
-            V[i] = V[i - 1] + A[i] * (t[i] - t[i - 1])
-
-            dS[i] = (
-                V[i - 1] * (t[i] - t[i - 1])
-                + 0.5 * A[i] * (t[i] - t[i - 1]) ** 2
-            )
-
-            S[i] = S[i - 1] + dS[i]
-
-        return {
-            "times": t,
-            "drag": D,
-            "lift": L,
-            "thrust": T,
-            "acceleration": A,
-            "speed": V,
-            "distance": S,
-        }
-
-    def part2(self):
-        """
-        Rotation distance, climb distance, or transition distance.
-        """
-        W = self.p["W"]
-        hoc = self.p["hoc"]
-
-        dict_run = self.ground_run()
-        V = dict_run["speed"]
-
-        Vlo = V[len(V) - 1] * 1.15 / 1.1
-
-        T = self.thrust_piston(Vlo)
-        D = self.drag(Vlo)
-        L = self.lift(Vlo)
-
-        gamma_climb = np.arcsin(np.clip((T - D) / W, -1, 1))
-
-        n = L / W
-        R = Vlo**2 / ((n - 1) * self.p["g"])
-
-        Sr = R * np.sin(gamma_climb)
-        hr = R * (1 - np.cos(gamma_climb))
-
-        if hr < hoc:
-            S_C = (hoc - hr) / np.tan(gamma_climb)
-            Sobs = Sr + S_C
         else:
-            Sobs = np.sqrt(R**2 - (R - hoc) ** 2)
+            cste = (self.p["A1"] * V + self.p["A2"] * V**2 + self.p["A3"] * V**3 + self.p["A4"] * V**4 ) * 4.4482
+            return 550 * self.p["P"] * cste / (1.688 * V)
+
+    def get_v_lof(self):
+        return 1.1 * self.get_v_stall()
+
+    def ground_run(self, dt=0.25):
+        W = self.p["W"]
+        g = self.p["g"]
+        mu = self.p["mu"]
+        V_lof = self.get_v_lof()
+
+        A, V, S, T, D, L = [], [], [], [], [], []
+        v_i = a_i = t = 0
+        s_i = 0  # FIX: initialize distance
+
+        while v_i < V_lof:
+            T_i = self.get_thrust(v_i)
+            D_i = self.get_drag(v_i)
+            L_i = self.get_lift(v_i)
+
+            a_i = (g / W) * (T_i - D_i - mu * (W - L_i))
+            s_i += v_i * dt + 0.5 * a_i * (dt**2)
+            v_i += a_i * dt
+            t += dt
+
+            T.append(T_i)
+            D.append(D_i)   # FIX: was L_i
+            L.append(L_i)
+            A.append(a_i)
+            S.append(s_i)
+            V.append(v_i)
+
+            if t > 1000:
+                break
+
+        return {"s_i": s_i, "v_i": v_i, "t": t, "T": T, "D": D, "L": L, "A": A, "S": S, "V": V}
+
+    def rotation_dist(self):
+        V_lo = self.get_v_lof()
+        V_hw = self.p.get("Vhw", 0.0)
+        return (V_lo - V_hw) * self.p["tr"]
+
+    def climb_dist(self):
+        W = self.p["W"]
+        h_obst = self.p["hoc"]
+        Vs1 = self.get_v_stall()
+        V_tr = 1.15 * Vs1
+
+        T_tr = self.get_thrust(V_tr)
+        D_tr = self.get_drag(V_tr)
+
+        sin_gamma = (T_tr - D_tr) / W
+        gamma = np.arcsin(np.clip(sin_gamma, -1, 1))
+
+        q_tr = 0.5 * self.p["rho"] * V_tr**2
+        L_s = q_tr * self.p["Sw"] * (0.9 * self.p["Clmax"])
+        n = L_s / W
+
+        R = V_tr**2 / (self.p["g"] * (n - 1))  # FIX: self.g → self.p["g"]
+
+        S_R = R * np.sin(gamma)
+        h_R = R * (1 - np.cos(gamma))
+
+        if h_R < h_obst:
+            S_C = (h_obst - h_R) / np.tan(gamma)
+            S_obs = S_R + S_C
+        else:
+            S_obs = np.sqrt(R**2 - (R - h_obst)**2)
             S_C = 0
 
-        dico = {
-            "V_st * 1.15 is: ": Vlo,
-            "T: ": T,
-            "D: ": D,
-            "L: ": L,
-            "gamma_climb: ": gamma_climb,
-            "n = L/W: ": n,
-            "Radius: ": R,
+        return S_R, S_C, S_obs
+
+    def set_result(self):
+        data = self.ground_run()
+        Sa = data["s_i"]
+        Vlo = data["v_i"]
+        Sr = self.rotation_dist()
+        Sc = self.climb_dist()[2]
+        S = Sa + Sc + Sr
+
+        return {
+            "Ground run distance Sa is": round(Sa, 2),
+            "The climb distance Sc is": round(Sc, 2),
+            "The rotation speed in m/s is :": round(Sr, 2),
+            "The total distance S for takeoff is ": round(S, 2),
+            "Lift-off speed Vlo is": Vlo
         }
 
-        return S_C, Sobs, dico
+
+
+
 
     def plot_forces(self):
         data = self.ground_run()
-
-        L = data["lift"]
-        D = data["drag"]
-        T = data["thrust"]
-        S = data["distance"]
-
+        L = data["L"]
+        D = data["D"]
+        T = data["T"]
+        S = data["S"]
         plt.figure()
         plt.plot(S, L, "b-", linewidth=2, label="Lift (L)")
         plt.plot(S, D, "r--", linewidth=2, label="Drag (D)")
@@ -168,10 +185,8 @@ class AircraftTakeoff4:
 
     def plot_speed(self):
         data = self.ground_run()
-
-        V = data["speed"]
-        S = data["distance"]
-
+        V = data["V"]
+        S = data["S"]
         plt.figure()
         plt.plot(S, V, "b-", linewidth=2, label="Speed")
         plt.xlabel("Distance")
@@ -182,10 +197,8 @@ class AircraftTakeoff4:
 
     def plot_acceleration(self):
         data = self.ground_run()
-
-        A = data["acceleration"]
-        S = data["distance"]
-
+        A = data["A"]
+        S = data["S"]
         plt.figure()
         plt.plot(S, A, "r--", linewidth=2, label="Acceleration")
         plt.xlabel("Distance")
@@ -194,76 +207,9 @@ class AircraftTakeoff4:
         plt.grid()
         plt.show()
 
-    def set_result(self):
-        data = self.ground_run()
-        S = data["distance"]
-        V = data["speed"]
-        Sg = S[-1]
-        Sr = self.part2()[0]
-        Sc = self.part2()[1]
-        S =  Sg + Sr + Sc
-        return {
-            "Ground run distance Sa is": round (Sg, 2),
-            "The rotation distance Sr, also called the transition distance, is": round(Sr,2),
-            "The climb distance Sc is": round (Sc,2),
-            "The total distance S for takeoff is ": round(S,2 ),
-            "Lift-off speed Vlo is": round( V[-1])
-        }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-"""
-        print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
-        print("To confirm, the parameters are :", self.p)
-        print(" The name of the aicraft is :", self.p["name"])
-        print(" The type of the engine is :", self.p["engine"])
-        print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
-        print("The ground distance is :", S[-1])
-        print(" The lift at the lift off point is :" , L[-1])
-        print("The lift off speed is :",  V[-1])
-        print("The drag during the lift off is :",  D[-1])
-        print("The thrust during the lift off is :",  T[-1])
-        print("The acceleration during the lift off is :",  A[-1])
-        print("The rotating distance also called the transition is  :",  self.part2()[0])
-        print("The climbing distance is  :",  self.part2()[1])
-        print("Some values are ", self.part2()[2])
-
-        self.plot_forces()
-        self.plot_speed()
-        self.plot_acceleration()
-"""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
 
 
 

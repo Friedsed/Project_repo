@@ -29,7 +29,7 @@ from scipy.integrate import quad
 CONV = {
         "Sw": 0.3048**2, "bw": 0.3048, "hw": 0.3048, "W": 4.44822,  "T0": 4.44822, 
         "T1": 4.44822 / 0.3048,  "T2": 4.44822 / (0.3048**2),  "rho": 515.3788,  "Vhw": 0.3048, 
-        "Vi": 0.3048,  "g": 0.3048 , "P": 745.7, "hoc": 0.3048 , "T": 4.44822
+        "Vi": 0.3048,  "g": 0.3048 , "hoc": 0.3048 , "T": 4.44822 ,
         }
 
 # =====================================================
@@ -69,7 +69,7 @@ def get_model_params(model, data):
     # ---------------- MODELE 1 ----------------
     if model == "Model1":
         keys = [ 
-            "Unit", "name" , "engine", "Sw", "bw", "hw", "W", "Ra", "Cdo",
+            "Unit", "name" , "engine", "Sw", "bw", "hw", "W", "Cdo",
                 "Cdol", "e", "Clmax", "Cl", "mu", "T0", "T1", "T2", "rho", "alpha", 
                 "alpha_0", "Vhw", "g", "Vi" , "tr", "hoc" 
                 ]
@@ -82,8 +82,8 @@ def get_model_params(model, data):
 # ---------------- MODELE 4 ----------------
     elif model == "Model4":
         keys = [ 
-            "Unit", "name" , "engine", "W", "Sw", "Clmax", "Cl", "Cd", "g", "mu",
-                 "P", "rho", "T", "n", "A1", "A2", "A3", "A4" , "hoc" , "efficiency"
+            "Unit", "name" , "engine", "W", "Sw", "Clmax", "Cl", "Cd", "g", "mu", "hw", "bw", "Cdo",
+                 "Cdol", "e" , "P", "rho", "T", "n", "A1", "A2", "A3", "A4" , "hoc" , "efficiency", "tr"
                 ]
 # ---------------- MODELE 5 ----------------
     elif model == "Model5":

@@ -138,7 +138,7 @@ def launch(root, r):
             root, r,
             "Ground run estimation using the numerical integration method",
             "B1: Book used: Mechanics of Flight by Warren",
-            "Internationnal system units :  << meter ==> length >>   << Newton ==> forces >>   << Watts ==> Power >>",
+            "SI, << meter ==> length >>   << Newton ==> forces >>   << Watts ==> Power >>",
             labels,
             results
         )
@@ -157,7 +157,7 @@ def launch(root, r):
             root, r,
             "General ground run estimation using average acceleration",
             "B2: General Aviation Aircraft Design - Snorri Gudmundsson",
-            "Internationnal system units :  << meter ==> length >>  << Newton ==> forces >>   << Watts ==> Power >>",
+            "SI, << meter ==> length >>  << Newton ==> forces >>   << Watts ==> Power >>",
             labels,
             results
         )
@@ -172,7 +172,7 @@ def launch(root, r):
 
         labels = [
             "Ground run distance Sa is",
-            "The rotation distance Sr, also called the transition distance, is",
+            "The rotation speed in m/s is :" ,
             "The climb distance Sc is",
             "The total distance S for takeoff is ",
             "Lift-off speed Vlo is"
@@ -182,7 +182,7 @@ def launch(root, r):
             root, r,
             "Ground run estimation using the numerical integration method",
             "B2: General Aviation Aircraft Design - Snorri Gudmundsson",
-            "Internationnal system units :  << meter ==> length >>  << Newton ==> forces >>   << Watts ==> Power >>",
+            "SI, << meter ==> length >>  << Newton ==> forces >>  << Watts ==> Power >>",
             labels,
             results
         )
@@ -205,7 +205,7 @@ def launch(root, r):
             root, r,
             "Ground run estimation using the numerical integration method",
             "B2: General Aviation Aircraft Design - Snorri Gudmundsson",
-            "Internationnal system units :  << meter ==> length >>  << Newton ==> forces >>   << Watts ==> Power >>",
+            "SI, << meter ==> length >>  << Newton ==> forces >>   << Watts ==> Power >>",
             labels,
             results
         )

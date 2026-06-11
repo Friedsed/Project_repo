@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.5.21)  9 JUN 2026 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.5.21)  11 JUN 2026 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -928,17 +928,32 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box74
 \@float@everytoks=\toks47
 \@floatcapt=\box75
-) (./commandes.tex)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2025/01/17 v1.50 Support for acronyms (Tobias Oetiker)
+
+(/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count354
+\xs_countb=\count355
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+)
+\AC@clearlist=\toks48
+)
+(./commandes.tex)
 Package french3.ldf Info: Setting StandardItemizeEnv=true for
 (french3.ldf)             compatibility with enumitem package,
-(french3.ldf)             reported on input line 27.
+(french3.ldf)             reported on input line 28.
 Package french3.ldf Info: Setting StandardEnumerateEnv=true for
 (french3.ldf)             compatibility with enumitem package,
-(french3.ldf)             reported on input line 27.
-
-(./Projet.aux
+(french3.ldf)             reported on input line 28.
+ (./Projet.aux
 Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 11.
+(babel)             Reported on input line 12.
 
 
 LaTeX Warning: Label `ch:structure' multiply defined.
@@ -946,26 +961,26 @@ LaTeX Warning: Label `ch:structure' multiply defined.
 )
 \openout1 = `Projet.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Info: Redefining \degres on input line 27.
-Package hyperref Info: Link coloring ON on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Info: Redefining \degres on input line 28.
+Package hyperref Info: Link coloring ON on input line 28.
  (./Projet.out) (./Projet.out)
 \@outlinefile=\write4
 \openout4 = `Projet.out'.
@@ -973,21 +988,29 @@ Package hyperref Info: Link coloring ON on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count354
+\scratchcounter=\count356
 \scratchdimen=\dimen326
 \scratchbox=\box76
-\nofMPsegments=\count355
-\nofMParguments=\count356
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count357
+\nofMPsegments=\count357
+\nofMParguments=\count358
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count359
 \MPscratchDim=\dimen327
-\MPnumerator=\count358
-\makeMPintoPDFobject=\count359
-\everyMPtoPDFconversion=\toks49
+\MPnumerator=\count360
+\makeMPintoPDFobject=\count361
+\everyMPtoPDFconversion=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -1030,10 +1053,23 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-(./firstpage.tex) [1
+(./firstpage.tex
+<../Images/UnivTlse2025.png, id=154, 1284.8pt x 412.54124pt>
+File: ../Images/UnivTlse2025.png Graphic file (type png)
+<use ../Images/UnivTlse2025.png>
+Package pdftex.def Info: ../Images/UnivTlse2025.png  used on input line 3.
+(pdftex.def)             Requested size: 113.81102pt x 36.54169pt.
+<../Images/airbus-beluga-xl2.jpg, id=155, 3639.5975pt x 2730.2pt>
+File: ../Images/airbus-beluga-xl2.jpg Graphic file (type jpg)
+<use ../Images/airbus-beluga-xl2.jpg>
+Package pdftex.def Info: ../Images/airbus-beluga-xl2.jpg  used on input line 10
+.
+(pdftex.def)             Requested size: 443.57848pt x 332.73398pt.
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/cm-super/cm-super-t1.enc}] (./Projet.toc
+dvips/cm-super/cm-super-t1.enc} <../Images/UnivTlse2025.png> <../Images/airbus-
+beluga-xl2.jpg>]) (./Projet.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1047,14 +1083,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
 .
 
-(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.38 ...umberline {3} Comparaison }{25}{chapter.3}
+                                                  % [1
+
+])
 \tf@toc=\write5
 \openout5 = `Projet.toc'.
 
  (./content.tex
-[2
-
-]
+[8]
 Chapitre 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
@@ -1071,14 +1113,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-[3
+[9
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-[4]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
@@ -1103,115 +1145,198 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--114
 
  []
 
-[5]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-) (./content1.tex [6]
+) (./content1.tex [12]
 Chapitre 2.
-<../Images/billan_force.png, id=190, 624.3325pt x 348.30125pt>
-File: ../Images/billan_force.png Graphic file (type png)
-<use ../Images/billan_force.png>
-Package pdftex.def Info: ../Images/billan_force.png  used on input line 30.
-(pdftex.def)             Requested size: 310.50357pt x 173.22545pt.
-[7
+<../Images/billanforce.png, id=246, 630.355pt x 263.98625pt>
+File: ../Images/billanforce.png Graphic file (type png)
+<use ../Images/billanforce.png>
+Package pdftex.def Info: ../Images/billanforce.png  used on input line 30.
+(pdftex.def)             Requested size: 310.50357pt x 130.03514pt.
+[13
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-[8 <../Images/billan_force.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.75 			\begin{equation}
-                        
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.75 			\begin{equation}
-                        
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.75 			\begin{equation}
-                        
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.75 			\begin{equation}
-                         [9]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+ <../Images/billanforce.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-[10] [11] [12] [13]) (./content2.tex [14]
+[14] [15]
+<../Images/data1_acc_dist.png, id=284, 462.528pt x 346.896pt>
+File: ../Images/data1_acc_dist.png Graphic file (type png)
+<use ../Images/data1_acc_dist.png>
+Package pdftex.def Info: ../Images/data1_acc_dist.png  used on input line 161.
+(pdftex.def)             Requested size: 199.60895pt x 149.70757pt.
+<../Images/data1_dist_speed.png, id=285, 578.16pt x 361.35pt>
+File: ../Images/data1_dist_speed.png Graphic file (type png)
+<use ../Images/data1_dist_speed.png>
+Package pdftex.def Info: ../Images/data1_dist_speed.png  used on input line 167
+.
+(pdftex.def)             Requested size: 199.60895pt x 124.7541pt.
+<../Images/data1_forces_distance.png, id=286, 462.528pt x 346.896pt>
+File: ../Images/data1_forces_distance.png Graphic file (type png)
+<use ../Images/data1_forces_distance.png>
+Package pdftex.def Info: ../Images/data1_forces_distance.png  used on input lin
+e 175.
+(pdftex.def)             Requested size: 199.60895pt x 149.70757pt.
+ [16 <../Images/data1_acc_dist.png> <../Images/data1_dist_speed.png> <../Images
+/data1_forces_distance.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+
+ []
+
+[17] [18]
+<../Images/Cirrus_acc_dist.png, id=310, 462.528pt x 346.896pt>
+File: ../Images/Cirrus_acc_dist.png Graphic file (type png)
+<use ../Images/Cirrus_acc_dist.png>
+Package pdftex.def Info: ../Images/Cirrus_acc_dist.png  used on input line 328.
+
+(pdftex.def)             Requested size: 199.60895pt x 149.70757pt.
+<../Images/Cirrus_speed_dist.png, id=311, 462.528pt x 346.896pt>
+File: ../Images/Cirrus_speed_dist.png Graphic file (type png)
+<use ../Images/Cirrus_speed_dist.png>
+Package pdftex.def Info: ../Images/Cirrus_speed_dist.png  used on input line 33
+4.
+(pdftex.def)             Requested size: 199.60895pt x 149.70757pt.
+<../Images/Cirrus_forces_dist.png, id=312, 462.528pt x 346.896pt>
+File: ../Images/Cirrus_forces_dist.png Graphic file (type png)
+<use ../Images/Cirrus_forces_dist.png>
+Package pdftex.def Info: ../Images/Cirrus_forces_dist.png  used on input line 3
+42.
+(pdftex.def)             Requested size: 199.60895pt x 149.70757pt.
+ [19] [20 <../Images/Cirrus_acc_dist.png> <../Images/Cirrus_speed_dist.png> <..
+/Images/Cirrus_forces_dist.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 417.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 417.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 417.
+
+[21]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 459.
+
+[22]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 510.
+
+
+LaTeX Warning: Citation `265' on page 23 undefined on input line 525.
+
+[23]) (./content2.tex [24]
 Chapitre 3.
-<../Images/Cessna172.png, id=268, 711.65875pt x 399.4925pt>
+<../Images/Cessna172.png, id=363, 711.65875pt x 399.4925pt>
 File: ../Images/Cessna172.png Graphic file (type png)
 <use ../Images/Cessna172.png>
 Package pdftex.def Info: ../Images/Cessna172.png  used on input line 31.
 (pdftex.def)             Requested size: 199.60895pt x 112.0461pt.
-<../Images/A320.png, id=269, 259.97125pt x 194.7275pt>
+<../Images/A320.png, id=364, 259.97125pt x 194.7275pt>
 File: ../Images/A320.png Graphic file (type png)
 <use ../Images/A320.png>
 Package pdftex.def Info: ../Images/A320.png  used on input line 37.
 (pdftex.def)             Requested size: 199.60895pt x 149.51276pt.
-<../Images/begura.png, id=270, 328.22626pt x 154.5775pt>
+<../Images/begura.png, id=365, 328.22626pt x 154.5775pt>
 File: ../Images/begura.png Graphic file (type png)
 <use ../Images/begura.png>
 Package pdftex.def Info: ../Images/begura.png  used on input line 44.
 (pdftex.def)             Requested size: 199.60895pt x 94.00673pt.
-<../Images/C-130J_super_hercules.png, id=271, 276.03125pt x 183.68625pt>
+<../Images/C-130J_super_hercules.png, id=366, 276.03125pt x 183.68625pt>
 File: ../Images/C-130J_super_hercules.png Graphic file (type png)
 <use ../Images/C-130J_super_hercules.png>
 Package pdftex.def Info: ../Images/C-130J_super_hercules.png  used on input lin
 e 52.
 (pdftex.def)             Requested size: 199.60895pt x 132.83696pt.
-<../Images/Dassault_rafale.png, id=272, 1927.2pt x 1283.79625pt>
+<../Images/Dassault_rafale.png, id=367, 1927.2pt x 1283.79625pt>
 File: ../Images/Dassault_rafale.png Graphic file (type png)
 <use ../Images/Dassault_rafale.png>
 Package pdftex.def Info: ../Images/Dassault_rafale.png  used on input line 58.
 (pdftex.def)             Requested size: 199.60895pt x 132.9514pt.
-) [15
+[25
 
-] [16 <../Images/Cessna172.png> <../Images/A320.png> <../Images/begura.png> <..
-/Images/C-130J_super_hercules.png> <../Images/Dassault_rafale.png>]
-[17] (./Projet.bbl) [18
+]
+<../Images/Sa_cessna.png, id=372, 505.89pt x 289.08pt>
+File: ../Images/Sa_cessna.png Graphic file (type png)
+<use ../Images/Sa_cessna.png>
+Package pdftex.def Info: ../Images/Sa_cessna.png  used on input line 80.
+(pdftex.def)             Requested size: 199.60895pt x 114.06404pt.
+<../Images/Sr_cessna.png, id=373, 505.89pt x 289.08pt>
+File: ../Images/Sr_cessna.png Graphic file (type png)
+<use ../Images/Sr_cessna.png>
+Package pdftex.def Info: ../Images/Sr_cessna.png  used on input line 85.
+(pdftex.def)             Requested size: 199.60895pt x 114.06404pt.
+<../Images/Sc_cessna.png, id=374, 505.89pt x 289.08pt>
+File: ../Images/Sc_cessna.png Graphic file (type png)
+<use ../Images/Sc_cessna.png>
+Package pdftex.def Info: ../Images/Sc_cessna.png  used on input line 92.
+(pdftex.def)             Requested size: 199.60895pt x 114.06404pt.
+<../Images/S_cessna.png, id=375, 505.89pt x 289.08pt>
+File: ../Images/S_cessna.png Graphic file (type png)
+<use ../Images/S_cessna.png>
+Package pdftex.def Info: ../Images/S_cessna.png  used on input line 97.
+(pdftex.def)             Requested size: 199.60895pt x 114.06404pt.
+ [26 <../Images/Cessna172.png> <../Images/A320.png> <../Images/begura.png> <../
+Images/C-130J_super_hercules.png> <../Images/Dassault_rafale.png>]
+<../Images/Sa_belugar.png, id=386, 505.89pt x 289.08pt>
+File: ../Images/Sa_belugar.png Graphic file (type png)
+<use ../Images/Sa_belugar.png>
+Package pdftex.def Info: ../Images/Sa_belugar.png  used on input line 125.
+(pdftex.def)             Requested size: 199.60895pt x 114.06404pt.
+<../Images/Sr_belugar.png, id=387, 505.89pt x 289.08pt>
+File: ../Images/Sr_belugar.png Graphic file (type png)
+<use ../Images/Sr_belugar.png>
+Package pdftex.def Info: ../Images/Sr_belugar.png  used on input line 130.
+(pdftex.def)             Requested size: 199.60895pt x 114.06404pt.
+<../Images/Sc_belugar.png, id=388, 505.89pt x 289.08pt>
+File: ../Images/Sc_belugar.png Graphic file (type png)
+<use ../Images/Sc_belugar.png>
+Package pdftex.def Info: ../Images/Sc_belugar.png  used on input line 137.
+(pdftex.def)             Requested size: 199.60895pt x 114.06404pt.
+<../Images/S_belugar.png, id=389, 505.89pt x 289.08pt>
+File: ../Images/S_belugar.png Graphic file (type png)
+<use ../Images/S_belugar.png>
+Package pdftex.def Info: ../Images/S_belugar.png  used on input line 142.
+(pdftex.def)             Requested size: 199.60895pt x 114.06404pt.
+ [27 <../Images/Sa_cessna.png> <../Images/Sr_cessna.png> <../Images/Sc_cessna.p
+ng> <../Images/S_cessna.png>]) [28 <../Images/Sa_belugar.png> <../Images/Sr_bel
+ugar.png> <../Images/Sc_belugar.png> <../Images/S_belugar.png>] (./Projet.bbl) 
+[29
 
 
-] (./Projet.aux)
+]
+(./Projet.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Projet.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Projet.out':
-(rerunfilecheck)             Before: 3EAB51F80CF628680048E1B6E46EA1EF;4736
-(rerunfilecheck)             After:  93BB70896EA6C65B00AD28BCE5645F7E;5186.
+Package rerunfilecheck Info: File `Projet.out' has not changed.
+(rerunfilecheck)             Checksum: FFED0204D8ADEC8F32E938E72D180966;7309.
  ) 
 Here is how much of TeX's memory you used:
- 30599 strings out of 467533
- 605950 string characters out of 5422138
- 1001125 words of memory out of 5000000
- 58791 multiletter control sequences out of 15000+600000
+ 31413 strings out of 467533
+ 620206 string characters out of 5422138
+ 1009669 words of memory out of 5000000
+ 59568 multiletter control sequences out of 15000+600000
  647578 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,11n,120p,1170b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,11n,120p,1170b,795s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{cite.smi\\penalty\040\\@M\040\040:60} has been refe
 renced but does not exist, replaced by a fixed one
@@ -1236,11 +1361,12 @@ r/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfti1200.pfb>
-Output written on Projet.pdf (18 pages, 2757109 bytes).
+ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfti1200.pfb>
+Output written on Projet.pdf (24 pages, 3293733 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 331 compressed objects within 4 object streams
- 87 named destinations out of 1000 (max. 500000)
- 267 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 419 words of extra memory for PDF output out of 10000 (max. 10000000)
 

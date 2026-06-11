@@ -23,7 +23,7 @@
 	
 	Les résultats obtenus pour chaque avion seront ensuite comparés afin d'identifier les principaux paramètres influençant les performances au décollage.
 	
-	\begin{figure}
+	\begin{figure}[H]
 		\centering
 		
 		\begin{subfigure}{0.45\textwidth}
@@ -64,50 +64,114 @@
 	\end{figure}
 	
 	
+
+
 	
-	\section{Analyse des résultats de simulation}
+
 	
-	L'analyse des résultats de simulations nous conduire à ce tableau:
+	\subsection{Résultats du Cessna 172}
+		
+		L'analyse de la distance d'accélération $ Sa $, de la distance de rotation $ Sr $ et de la distance de monté $ Sc $ pour le cas du cessna nous conduire a ces graphes:
+		
+		\begin{figure}[H]
+				
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sa_cessna.png}
+				\end{subfigure}
+				\hfill
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sr_cessna.png}
+				\end{subfigure}
+				
+				\vspace{0.5cm}
+				
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sc_cessna.png}
+				\end{subfigure}
+				\hfill
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{S_cessna.png}
+				\end{subfigure}
+		\end{figure}
 	
-	\begin{table}
-		\centering
-		\caption{Comparaison des distances de décollage}
-		\label{tab:takeoff_distance}
-		\resizebox{\textwidth}{!}{%
-		\begin{tabular}{|c|c|c|c|c|}
-			\hline
-			\textbf{Avion} & \textbf{Modèle} & \textbf{Distance au sol (ft)} & \textbf{Distance jusqu'à l'obstacle (ft)} & \textbf{Distance réel au sol (ft))} \\
-			\hline
-			
-			\multirow{3}{*}{Cessna 172 SP}
-			& Modèle 1 & 1082.92		& 	     	&  			\\ \cline{3-3}
-			& Modèle 2 & 1046.50 			& 1630	 	& 920	 	\\ \cline{3-3}
-			& Modèle 3 & 155			& 		 	&  			\\ \cline{3-3}
-			& Modèle 4 & 920 			& 		 	&  			\\ \hline
-			
-			\multirow{3}{*}{Airbus A320}
-			& Modèle 1 & 4153.78 			& 	 		&  			\\ \cline{3-3}
-			& Modèle 2 & 4044.11 			& 	 		&	1312 	\\ \cline{3-3}
-			& Modèle 3 & 12.. 			&  		& 			\\ \cline{3-3}
-			& Modèle 4 & 8401.95 			&   		& 			\\ \hline
-			
-			\multirow{3}{*}{Belugar XL}
-			& Modèle 1 & 4153.78 			& 	 		&  			\\ \cline{3-3}
-			& Modèle 2 & 4044.11 			& 	 		&	1500 	\\ \cline{3-3}
-			& Modèle 3 & 155 			&  		& 			\\ \cline{3-3}
-			& Modèle 4 & 8401.95 			&   		& 			\\ \hline
-			
-			\multirow{3}{*}{C-130J Super Hercules}
-			& Modèle 1 & 2179.98 			& 	 		&  			\\ \cline{3-3}
-			& Modèle 2 & 2163.08 			& 2000	 	&	3300	 	\\ \cline{3-3}
-			& Modèle 3 & 155 			&  		& 			\\ \cline{3-3}
-			& Modèle 4 & 1497.95			&   		& 			\\ \hline
-			
-			\multirow{3}{*}{Dassault Rafale}
-			& Modèle 1 & 1626.21 			& 	 		&  			\\ \cline{3-3}
-			& Modèle 2 & 1616.19			& 	 		&	1312 	\\ \cline{3-3}
-			& Modèle 3 & 155 			&  		& 			\\ \cline{3-3}
-			& Modèle 4 & 2615.196			&   		& 			\\ \hline
-			
-		\end{tabular}   }
-	\end{table}
+	\begin{itemize}
+		\item Les méthodes 1, 3 et 4 donnent des distances d'accélération au sol ($S_a$) très proches ; la méthode 2 fournit des valeurs légèrement plus faibles.
+		
+		\item Les distances de rotation ($S_r$) sont identiques pour toutes les méthodes, celles-ci supposant une rotation de 1 s à la vitesse de décollage.
+		
+		\item La méthode 2 ne permet pas d'estimer la distance de montée ($S_c$).
+		
+		\item Les méthodes 3 et 4 produisent des résultats similaires pour $S_c$, tandis que la méthode 1 prédit des distances plus importantes.
+		
+		\item Les écarts observés résultent principalement des hypothèses retenues pour la modélisation des phases de transition et de montée.
+		
+		\item De même, les entrées pour la simulation méthode 1 étant différent de celle des autres peut être un cause .
+	\end{itemize}
+	
+	
+	
+	\subsection{Résultats du Belugar XL}
+	
+	L'analyse de la distance d'accélération $ Sa $, de la distance de rotation $ Sr $ et de la distance de monté $ Sc $ pour le cas du Belugar XL nous conduire a ces graphes:
+	
+	\begin{figure}[H]
+		
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sa_belugar.png}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sr_belugar.png}
+		\end{subfigure}
+		
+		\vspace{0.5cm}
+		
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sc_belugar.png}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{S_belugar.png}
+		\end{subfigure}
+	\end{figure}
+	
+	\begin{itemize}
+		\item Les quatre méthodes donnent des résultats très proches pour la distance
+		 d'accélération au sol ($S_a$), avec des valeurs comprises entre environ 1200 m
+		  et 1300 m. Cela montre une bonne cohérence entre les modèles pour cette phase du décollage.
+		
+		\item Les distances de rotation ($S_r$) sont identiques pour toutes les méthodes ayant fourni un résultat. 
+			Cette concordance est due à l'hypothèse commune d'une durée de rotation fixée à 1 seconde à la vitesse de décollage.
+		
+		\item La méthode 2 ne permet pas d'estimer les distances de montée ($S_c$) et de décollage total ($S$), 
+			ce qui limite la comparaison avec les autres modèles.
+		
+		\item Pour la distance de montée ($S_c$), les méthodes 3 et 4 donnent 
+			des résultats très proches, tandis que la méthode 1 prédit une distance
+		 	nettement plus élevée. Cette différence traduit une modélisation plus 
+		 	conservative de la phase de montée.
+		
+		\item La distance totale de décollage ($S$) est donc plus importante avec la méthode 1.
+		 Les méthodes 3 et 4 conduisent à des estimations plus faibles et très similaires.
+		
+		\item Globalement, les écarts observés entre les modèles proviennent principalement des
+		 hypothèses retenues pour la modélisation de la phase de montée après le décollage,
+		  tandis que la phase d'accélération au sol est décrite de manière relativement homogène par l'ensemble des méthodes.
+	\end{itemize}
+	
+	
+	\subsection{Commentaires générales }
+	
+	Les différentes méthodes permettent d'obtenir un ordre de grandeur des composantes de la distance de décollage.
+	Bien qu'elles ne fournissent pas une valeur exacte, la comparaison de plusieurs modèles reposant sur des hypothèses
+	 différentes permet d'obtenir une bonne estimation plus représentative de la distance réelle de décollage.
+	
+	

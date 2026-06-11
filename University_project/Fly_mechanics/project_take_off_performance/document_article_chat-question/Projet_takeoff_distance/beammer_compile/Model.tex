@@ -3,42 +3,52 @@
 \section{Différents modèles étudiés}
 
 \begin{frame}
-	\frametitle{Différents modèles}
-	...
+	\frametitle{Avantages des Méthodes}
+	
+	\begin{block}{Avantages Commun}
+		\begin{enumerate}
+			\item Applicable à tous les avions.
+			\item Les forces sont calculées en fonction de la vitesse à chaque instant.
+			\item Prend en compte les pannes moteurs
+			\item Utile pour les avions à train classique qui passent de trois à deux roues.
+			\item Prise en compte de la dégradation de la poussée ($k$).
+		\end{enumerate}
+	\end{block}
+	
+	
 \end{frame}
 
-%=====================================================================================================
+
 
 \subsection{Modèle 1}
 
-	\begin{frame}{Méthode analytique}
-		
-		
-		\begin{block}{Avantages}
-			\begin{enumerate}
-				\item Applicable à tous les avions.
-				\item Les forces sont calculées en fonction de la vitesse à chaque instant.
-				\item Peut être utilisé pour tout type d'avion.
-			\end{enumerate}
-		\end{block}
-		
+	\begin{frame}{Hypothèses}
 		\begin{block}{Hypothèses}
 			\begin{enumerate}
 				\item La vitesse de décollage $V_{LOF}$ est connue à l'avance.
 				\item Le moteur est supposé avoir développé toute sa poussée avant le départ.
-				\item La masse est supposée constante.
+				\item La masse est supposée constante pas de pente pour la piste
+				\item Le condition de vol sont suppose parfaites 
 			\end{enumerate}
 		\end{block}
 		
+		
+		
+		
+		
 	\end{frame}
+	
+	
+%=====================================================================================================
+	
 	
 	%----------------------------------------------------------------------------------------------------------------
 	
 	\begin{frame}
 		
-		\frametitle{Méthode}
+		\frametitle{Méthode analytique}
 		
-		En utilisant le PFD de l'équation \ref{PFD} et la relation de dérivation totale :
+		En utilisant l'équation \ref{PFD} et la relation de dérivation totale :
 		
 		\begin{equation}
 			\frac{ dV}{dt}=\frac{ds}{dt}\frac{dV}{ds}=(V-V_{hw})\frac{dV}{ds}
@@ -65,7 +75,7 @@
 	
 	%----------------------------------------------------------------------------------------------------------------
 	
-	\begin{frame}{Modélisation des forces}
+	\begin{frame}{Méthode analytique}
 		
 		Dans ce modèle, les forces sont de la forme :
 		
@@ -78,57 +88,38 @@
 		
 	\end{frame}
 	
+
+
+	
+
 	%=====================================================================================================
 	
 	%=====================================================================================================
 \subsection{Modèle de forces constantes}
 
+
+	%----------------------------------------------------------------------------------------------------------------
+	
 	\begin{frame}
+		
 		\frametitle{Modèle de forces constantes}
 		
-		\begin{block}{Avantages}
-			\begin{enumerate}
-				\item Applicable à tous les avions si les forces peuvent être approximées.
-				\item Applicable aux avions à hélice et aux turboréacteurs.
-			\end{enumerate}
-		\end{block}
+		Toujours avec l'équation \ref{PFD} du PFD, :
 		
-		\begin{block}{Hypothèses}
-			\begin{enumerate}
-				\item Les forces sont constantes pendant le roulage sur la piste.
-				\item Les forces sont estimées à la vitesse $\dfrac{V_R}{\sqrt{2}}$.
-				\item La masse est supposée constante.
-			\end{enumerate}
-		\end{block}
+		\begin{align*}
+			S_G &= \int_{0} ^ {V_R} \frac{W }{ g[T-D-\mu(W-L)]} V \, dV\\
+				&= \frac{V_R^2 W} {2g[T-D-\mu(W-L)]}
+		\end{align*}
+		
+		avec les forces qui sont estimées en $ \left(\frac{V_R}{\sqrt{2}}\right) $  et $ V_{R} $ est vitesse de rotation
 		
 	\end{frame}
 	
 	%----------------------------------------------------------------------------------------------------------------
 	
-	\begin{frame}
+	\begin{frame}{Modèle de forces constantes}
 		
-		\frametitle{Modèle de forces constantes: Méthode}
-		
-		En utilisant le PFD de l'équation \ref{PFD} :
-		
-		\begin{equation*}
-			S_G=
-			\frac{V_R^2 W}
-			{2g[T-D-\mu(W-L)]}
-			\quad
-			\text{évaluée en }
-			\left(\frac{V_R}{\sqrt{2}}\right) 
-		\end{equation*}
-		
-		avec $ V_{R}$ la vitesse de rotation
-		
-	\end{frame}
-	
-	%----------------------------------------------------------------------------------------------------------------
-	
-	\begin{frame}{Modélisation des forces}
-		
-		Dans ce modèle, seule la force de poussée est différente des autres forces.
+		Dans ce modèle, seule la force de poussée est différente des autres forces. \\
 		
 		\textbf{Moteur à piston}
 		\[
@@ -174,41 +165,21 @@
 	
 		\subsection{Modèle 3}
 		
-			\begin{frame}
-				\frametitle{Méthode numérique}
-				
-				\begin{block}{Avantages}
-					\begin{enumerate}
-						\item Applicable à tous les avions.
-						\item Prend en compte la distance de freinage.
-						\item Utile pour les avions à train classique (taildragger) qui passent de trois à deux roues.
-					\end{enumerate}
-				\end{block}
-				
-				\begin{block}{Hypothèses}
-					\begin{enumerate}
-						\item La vitesse de décollage est supposée égale à $V_{LOF} = 1.1 V_{s1}$.
-						\item Le moteur est supposé avoir développé toute sa poussée avant le départ.
-						\item La masse est supposée constante.
-						\item La piste est supposée horizontale et les conditions atmosphériques sont standard.
-					\end{enumerate}
-				\end{block}
-				
-			\end{frame}
+		
 			
 			%----------------------------------------------------------------------------------------------------------------
 			
 			\begin{frame}
 				
-				\frametitle{Méthode}
+				\frametitle{Méthode numérique}
 				
-				\textbf{Étape 2 : Calcul de l'accélération}
+				\textbf{Étape 1 : Calcul de l'accélération}
 				
 				\[
 				a_i=\frac{g}{W}\left[T_i-D_i-\mu(W-L_i)\right]
 				\]
 				
-				\textbf{Étape 3 : Mise à jour de la vitesse et de la distance}
+				\textbf{Étape 2 : Mise à jour de la vitesse et de la distance}
 				
 				\[
 				V_i=V_{i-1}+a_i\Delta t_i
@@ -224,7 +195,7 @@
 				\Delta t_i=t_i-t_{i-1}
 				\]
 				
-				\textbf{Étape 4 : Condition de décollage}
+				\textbf{Étape 3 : Condition de décollage}
 				
 				Le calcul est répété jusqu'à :
 				
@@ -244,49 +215,87 @@
 			
 			%----------------------------------------------------------------------------------------------------------------
 			
-			\begin{frame}{Modélisation des forces}
+			\begin{frame}{Méthode numérique}
 				
-				À chaque pas de temps $i$, on calcule :
+					À chaque pas de temps $i$, on calcule :
+					
+					\begin{itemize}
+						\item la poussée : $T_i$ ;
+						\item la traînée : $D_i$ ;
+						\item la portance : $L_i$ ;
+						\item la densité de l'air : $\rho$ ;
+						\item la vitesse au pas précédent : $V_{i-1}$.
+					\end{itemize}
+					
+			\end{frame}
 				
-				\begin{itemize}
-					\item la poussée : $T_i$ ;
-					\item la traînée : $D_i$ ;
-					\item la portance : $L_i$ ;
-					\item la densité de l'air : $\rho$ ;
-					\item la vitesse au pas précédent : $V_{i-1}$.
-				\end{itemize}
+			
+			\begin{frame}{Méthode numérique}
+				
+				Dans ce modèle, les forces sont de la forme :
+				
+			\[			T = A1  V + A2 V^2 + A3 V^3 +A4 V^4	\]
+			
+			Avec $A1, A2, A3, A4 $ qui sont des constantes déterminé par des calcules matricielle bien plus complexe 
+				
+			\end{frame}
+			
+			\begin{frame}{Vitesse en fonction de la distance}
+				
+				\begin{figure}
+					\centering
+					
+					% Courbe de la vitesse en fonction de la distance
+					\begin{subfigure}{0.45\textwidth}
+						\centering
+				%		\includegraphics[width=\textwidth]{Ciruss_dist_speed.png}
+						\caption{Distance vs Speed}
+					\end{subfigure}
+					
+				\end{figure}
 				
 			\end{frame}
 			
 			
+			\begin{frame}{Accélération en fonction de la distance}
+				
+				\begin{figure}
+					\centering
+					
+					% Courbe de l'accélération en fonction de la vitesse
+					\begin{subfigure}{0.45\textwidth}
+						\centering
+					%	\includegraphics[width=\textwidth]{Cirrus_acc_dist.png}
+						\caption{Accélération en fonction de la vitesse}
+					\end{subfigure}
+					
+				\end{figure}
+				
+			\end{frame}
 			
-		
-
-	
+			\begin{frame}{Forces en fonction de la distance}
+				
+				\begin{figure}
+					\centering
+					
+					% Courbe des forces en fonction de la distance
+					\begin{subfigure}{0.45\textwidth}
+						\centering
+					%	\includegraphics[width=\textwidth]{Cirrus_force_dist.png}
+						\caption{Forces en fonction de la distance}
+					\end{subfigure}
+					
+				\end{figure}
+				
+			\end{frame}
+				
+			
+			
+			
 	
 	%=====================================================================================================
 \subsection{Modèle 4}
 	
-	\begin{frame}
-		\frametitle{Modèle 4}
-		
-		\begin{block}{Avantages}
-			\begin{enumerate}
-				\item Prise en compte de la dégradation de la poussée ($k$).
-				\item Ne nécessite ni boucle de calcul ni pas de temps $\Delta t$.
-			\end{enumerate}
-		\end{block}
-		
-		\begin{block}{Hypothèses}
-			\begin{enumerate}
-				\item Les coefficients aérodynamiques ($C_L$ et $C_D$) sont moyennés.
-				\item La propulsion nette dépend directement de la vitesse aérodynamique instantanée ($V_\infty$).
-				\item La force de propulsion est maximale à l'arrêt.
-				\item La constante $k$, dépendant du moteur, est prise en compte.
-			\end{enumerate}
-		\end{block}
-		
-	\end{frame}
 	
 	%----------------------------------------------------------------------------------------------------------------
 	
@@ -320,44 +329,45 @@
 	
 	%----------------------------------------------------------------------------------------------------------------
 	
-	\begin{frame}
+		\begin{frame}
 		
-		\frametitle{Développement}
+			\frametitle{Développement}
+			
+			En utilisant la formule de la dérivation totale, on obtient :
+			
+			\begin{equation}
+				V_{\infty}\frac{dV_{\infty}}{ds}
+				=
+				A-BV_{\infty}^2
+			\end{equation}
+			
+			où les constantes scalaires $A$ et $B$ s'expriment de la façon suivante :
+			
+			\begin{equation}
+				A=
+				\left(
+				\frac{T_0}{W}-\mu_r
+				\right)g
+				\qquad
+				\text{et}
+				\qquad
+				B=
+				\frac{g}{W}
+				\left[
+				\frac{1}{2}\rho_{\infty}S(C_D-\mu_rC_L)+k
+				\right]
+			\end{equation}
+			
+			Séparons les variables en regroupant tout ce qui dépend de $V_{\infty}$ d'un côté et $ds$ de l'autre :
+			
+			\begin{equation}
+				ds=
+				\frac{V_{\infty}\,dV_{\infty}}
+				{A-BV_{\infty}^2}
+			\end{equation}
 		
-		En utilisant la formule de la dérivation totale, on obtient :
-		
-		\begin{equation}
-			V_{\infty}\frac{dV_{\infty}}{ds}
-			=
-			A-BV_{\infty}^2
-		\end{equation}
-		
-		où les constantes scalaires $A$ et $B$ s'expriment de la façon suivante :
-		
-		\begin{equation}
-			A=
-			\left(
-			\frac{T_0}{W}-\mu_r
-			\right)g
-			\qquad
-			\text{et}
-			\qquad
-			B=
-			\frac{g}{W}
-			\left[
-			\frac{1}{2}\rho_{\infty}S(C_D-\mu_rC_L)+k
-			\right]
-		\end{equation}
-		
-		Séparons les variables en regroupant tout ce qui dépend de $V_{\infty}$ d'un côté et $ds$ de l'autre :
-		
-		\begin{equation}
-			ds=
-			\frac{V_{\infty}\,dV_{\infty}}
-			{A-BV_{\infty}^2}
-		\end{equation}
-		
-	\end{frame}
+		\end{frame}
+
 	
 	%=====================================================================================================
 	\subsection{Modèle 5}
