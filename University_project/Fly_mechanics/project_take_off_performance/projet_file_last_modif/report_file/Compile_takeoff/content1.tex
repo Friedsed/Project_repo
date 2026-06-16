@@ -1,0 +1,565 @@
+%============================================================================================================
+%DISTANCE DE DECOLLAGE AVEC LES DIFFERENTES METHODE 
+%================================================================================================================
+%------------------------------------------------
+
+\chapter{ Distance de décollage   }\label{ch:structure}
+
+\section{Explication des différentes phases de décollage}
+	La distance de décollage est la distance horizontale parcourue par un avion
+	 entre le moment où le pilote libère les freins de l'avion et 
+	 celui où l'appareil franchit un obstacle de référence. Cet obstacle est 
+	 généralement situé à une hauteur de $ 35 ft $ pour les avions civils et 
+	 de $ 50 ft $ pour les avions militaires.\\
+	
+	Cette distance, notée $ (S) $, peut être décomposée en trois phases
+	 principales : la distance d'accélération ou de roulage sur la piste 
+	 $ (S_a) $, la distance de rotation $ (S_r) $ et la distance de montée 
+	 $ (S_c) $. La distance totale de décollage s'écrit alors:
+	
+	\[
+	S = S_a + S_r + S_c.  \]
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{takeoff_distance.png}
+		\label{fig:placeholder}
+		\caption{Différente phase de décollage d'un avion }
+	\end{figure}
+	
+
+%------------------------------------------------
+\vspace*{2cm}
+\section{Forces appliquées à l’avion}\label{sec:section1}
+
+	De manière générale, plusieurs forces s’appliquent sur avion: le poids, les forces aérodynamiques (portance et traînée), la poussée ainsi que la force de frottement.
+	
+	\begin{enumerate}
+		
+		\item \textbf{Le poids ($W$)} correspond au poids total de l’avion, c’est-à-dire la somme du poids à vide, du poids des passagers et du carburant.
+		
+		\item \textbf{La portance ($L$)} est une force aérodynamique générée par la différence de pression entre l’intrados et l’extrados de l’aile. Elle permet à l’avion de décoller.
+		
+		\item \textbf{La traînée ($D$)} est une force aérodynamique qui s’oppose au mouvement de l’avion.
+		
+		\item \textbf{La poussée ($T$)} est la force produite par les moteurs permettant à l’avion d’accélérer.
+		
+		\item \textbf{La force de frottement ($F_r$)} est due au contact entre les roues de l’avion et la piste. Elle diminue progressivement à mesure que la portance augmente et devient nulle au moment du décollage.
+		
+	\end{enumerate}
+	
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{billanforce.png}
+		\label{fig:placeholder}
+		\caption{Schéma technique d'un avion en piste }
+	\end{figure}
+	
+	En appliquant la seconde loi de Newton à l’avion pendant sa phase de roulage au sol, on obtient :
+	\begin{equation} \label{PFD}
+		W\,\frac{1}{g}\frac{d\vec{V}}{dt} = \vec{T} + \vec{D} + \vec{F_r} + \vec{L}
+	\end{equation}
+	
+	Le principe fondamental de la dynamique est ainsi utilisé, sous différentes formes, dans le calcul de la distance de décollage.
+		
+	
+	\vspace*{2cm}
+\section{Calcul de la distance de roulement par méthode analytique }
+	
+	
+	Cette approche repose sur le modèle de performance développé par Warren F. Phillips dans l'ouvrage \textit{Mechanics of Flight}. Elle consiste à résoudre analytiquement l'équation du mouvement en intégrant les forces instantanées s'exerçant sur l'appareil durant sa course au sol.
+
+	En appliquant la seconde loi de Newton et en utilisant la relation de dérivation totale $dV/dt = (V - V_{hw}) dV/ds$ pour inclure l'effet du vent de face ($V_{hw}$), la distance de roulement $S_a$ est définie par l'intégrale suivante :
+	\[ S_a = \frac{W}{g} \int_{V_i}^{V_{LOF}} \frac{V - V_{hw}}{T - D - F_r} \, dV \]
+	
+	\vspace*{1cm}
+	
+	\subsection{Modélisation des coefficients de performance}
+	Pour permettre une résolution analytique, le terme d'accélération normalisé est modélisé par un polynôme du second degré $A + BV + CV^2$  :
+	\[ \frac{T - D - F_r}{W} = A + BV + CV^2 \]
+	
+	Les coefficients sont extraits des paramètres physiques de l'appareil:
+	\begin{itemize}
+		\item \textbf{Terme statique ($A$):} $A = \frac{T_0}{W} - \mu_r$
+		\item \textbf{Terme linéaire ($B$):} $B = \frac{T'}{W}$
+		\item \textbf{Terme quadratique ($C$):} $C = \frac{T''}{W} + \frac{\rho}{2(W/S_w)}(\mu_r C_L - C_D)$
+	\end{itemize}
+	
+	\vspace*{1cm}
+	
+	\subsection{Résultat de l'intégration}
+	La solution de cette intégrale s'exprime sous la forme suivante:
+	\[ S_a = \frac{K_T - V_{hw} K_W}{g} \]
+	
+	Où :
+	\begin{itemize}
+		\item $K_T$ est le terme de distance principale lié à l'accélération propre de l'avion.
+		\item $K_W$ est le terme correctif tenant compte de l'aide apportée par le vent de face.
+		\item Ces constantes dépendent du discriminant $K_R = 4AC - B^2$. Pour la majorité des aéronefs ($K_R < 0$), elles font intervenir des fonctions logarithmiques basées sur l'accélération au départ et au décollage.
+	\end{itemize}
+	
+	\vspace*{1cm}
+
+	\subsection{Avantages de la méthode}
+	L'intérêt principal de ce modèle réside dans sa \textbf{précision et son universalité}. Contrairement aux méthodes simplifiées, elle prend en compte la variation continue des forces aérodynamiques et propulsives en fonction de la vitesse à chaque instant de la simulation. 
+	\begin{itemize}
+		\item \textbf{Polyvalence :} Elle s'applique à tous types d'aéronefs, qu'ils soient propulsés par turboréacteurs ou par moteurs à hélices. La seule variante réside dans la définition des coefficients de la poussée parabolique ($T_0, T', T''$) .
+		\item \textbf{Finesse de modélisation :} En intégrant directement les termes de traînée induite (avec effet de sol) et de frottement mécanique, elle offre une estimation de la distance de roulement ($S_a$) par rapport aux données des manuels de vol (POH) .
+	\end{itemize}
+	
+	\subsection{Limites et complexité de mise en œuvre}
+	Malgré sa robustesse, cette méthode impose une certaine complexité mathématique. L'intégration directe de l'équation du mouvement  :
+	\[ S_a = \frac{W}{g} \int_{V_i}^{V_{LOF}} \frac{V - V_{hw}}{A + BV + CV^2} \, dV \]
+	n'est pas triviale manuellement. Sa résolution dépend du signe du \textbf{discriminant} $K_R = 4AC - B^2$, ce qui génère plusieurs cas de figures (solutions logarithmiques, rationnelles ou en arc-tangente) .
+	
+	Sur le plan informatique, l'utilisation de bibliothèques \textit{SymPy} peut s'avérer complexe pour gérer ces conditions logiques. Il est donc souvent plus efficace d'implémenter directement les formes fermées des constantes d'intégration.
+	
+	
+	%------------------------------------------------
+	
+
+			
+			\vspace{1cm}
+		
+
+		
+		%------------------------------------------------
+		\subsection{Graphe et analyse}
+			
+			\begin{figure}[H]
+				
+				L'analyse du comportement en vol d'un avion privé dont les caractéristiques sont: 
+				$ ( \quad S_w=180 ft^{2}, b_w = 33 ft, h_w = 6.0 ft, W = 2700Ibf, Ra = 6.05,
+				\\
+				 C_{Do} = 0.036, C_{Do,L} = 0, e= 0.82, C_{Lmax} = 1.4, \mu = 0.04 \quad )
+				 $
+				nous permet d'avoir:
+				
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{data1_acc_dist.png}
+					\caption{Accélération en fonction de la distance}
+				\end{subfigure}
+				\hfill
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{data1_dist_speed.png}
+					\caption{Vitesse en fonction de la distance}
+				\end{subfigure}
+				
+				\vspace{0.5cm}
+				\centering
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{data1_forces_distance.png}
+					\caption{Forces en fonction de la distance}
+				\end{subfigure}
+				\
+			\end{figure}
+			
+		Les résultats de la simulation montrent que l’accélération diminue lorsque la distance parcourue augmente.
+		Cela s’explique par le fait qu’au début du décollage, l’avion dispose d’un excès de poussée important
+		par rapport aux forces résistantes, ce qui produit une accélération élevée. Puis à mesure que la vitesse
+		augmente, la traînée augmente également, tandis que la poussée effective peut rester constante ou
+		diminuer selon le modèle, ce qui réduit progressivement l’accélération. Cette diminution explique aussi
+		pourquoi la vitesse tend à augmenter de moins en moins vite au cours du trajet.
+		
+		Le graphe de vitesse montre, au contraire, une augmentation de la vitesse au cours du temps et de la
+		distance. Cela traduit l’effet de l’excès de poussée au début de la phase de roulage, qui permet à l’avion
+		d’atteindre la vitesse de décollage.
+		
+		L’analyse de l’évolution des forces montre une poussée maximale au début, puis une évolution qui dépend
+		du modèle utilisé. En revanche, la traînée et la portance augmentent généralement avec la vitesse. La
+		portance croît jusqu’à devenir suffisante pour alléger l’avion, puis atteindre la condition de décrochage
+		lorsque le poids est compensé par la portance, éventuellement avec l’aide de l’incidence et de la
+		rotation. L’avion quitte alors le sol et entre en phase de montée.
+			  
+			  
+			
+		
+			
+		
+		
+
+\vspace*{2cm}
+
+%============================================================================================================
+%
+%================================================================================================================
+		%------------------------------------------------
+	
+	\section{Méthode par accélération moyenne (Forces constantes)} 
+	
+		Cette approche, est une estimation rapide de la distance d'accélération au sol.
+		 Elle repose sur l'hypothèse simplificatrice que les forces agissant sur l'avion
+		  sont constantes durant toute la phase de roulage. 
+		
+		\vspace*{1cm}
+		
+		\subsection{Principe et Vitesse de Référence}
+			Puisque la traînée et la portance varient proportionnellement au carré de 
+			la vitesse ($V^2$), l'accélération ne peut être constante. Cependant, il a été
+			 démontré que l'accélération évaluée à la vitesse précise de :
+			\[ V_{ref} = \frac{V_R}{\sqrt{2}} \approx 0,707 \, V_R \]
+			fournit une valeur représentative de l'accélération moyenne sur l'ensemble
+			 de l'intervalle $[0, V_R]$. Ainsi, en évaluant la poussée ($T$), la traînée ($D$)
+			  et la portance ($L$) à cette vitesse de référence, la variation réelle des forces
+			   est remplacée par une valeur constante.
+			
+			Dans ce modèle, la vitesse de décollage est estimée à partir de la vitesse de décrochage selon la norme standard  :
+			\[ V_{LOF} \approx 1,1 \, V_s \]
+			
+		\vspace*{1cm}
+			
+			\subsection{Calcul de la distance d'accélération}
+				En projetant l’équation du (PFD) selon l'axe horizontale, nous avons:
+				\[ \frac{W}{g} \frac{dV}{dt} = T - D - \mu(W - L) \]
+				
+				En utilisant la relation cinématique $V \frac{dV}{ds} = \frac{dV}{dt}$, la distance de roulement
+				 au sol $S_G$ s'obtient par intégration directe entre la vitesse initiale nulle et la vitesse de rotation $V_R$  :
+				
+				\begin{align*}
+					S_G &= \int_{0}^{V_R} \frac{W}{g[T - D - \mu(W - L)]} V \, dV \\
+					S_G &= \frac{V_R^2 W}{2g [T - D - \mu(W - L)]}
+				\end{align*}
+				
+				\textbf Dans cette formule finale, les termes $T$, $D$ et $L$ sont impérativement évalués à la vitesse $V_{ref} = \frac{V_R}{\sqrt{2}}$ .
+	\vspace*{1cm}
+			\subsection{Avantages et Hypothèses}
+				\textbf{Avantages :}
+				\begin{itemize}
+					\item Fournit une première approximation rapide et fiable de la distance de décollage.
+					\item Permet une résolution manuelle simple sans recours à l'intégration numérique complexe.
+					\item Facilite les analyses paramétriques préliminaires pour comparer différents aéronefs.
+				\end{itemize}
+				
+				\textbf{Hypothèses de calcul :}
+				\begin{itemize}
+					\item Les forces aérodynamiques et propulsives sont considérées comme constantes.
+					\item La piste est supposée horizontale (pente nulle) et les conditions atmosphériques sont celles de l'atmosphère standard (ISA) .
+					\item Pour les avions à train tricycle, l'angle d'incidence est considéré comme fixe durant toute l'accélération.
+					\end{itemize}
+				
+				
+			
+		
+			
+			
+			
+			
+			
+			\vspace*{2cm}
+			
+		%============================================================================================================
+		%
+		%================================================================================================================
+	
+		
+		
+		
+		\section{Calcul de la distance de roulement par intégration numérique}
+		
+		\subsection{Étapes de résolutions}
+		
+		La méthode d'intégration numérique est une approche précise pour simuler le décollage, car elle permet de prendre en compte la variation instantanée des forces aérodynamiques et propulsives en fonction de la vitesse. Elle repose sur la discrétisation du Principe Fondamental de la Dynamique (PFD) appliqué à l'avion au sol:
+		
+		\[ \frac{W}{g} \frac{dV}{dt} = T(V) - D(V) - \mu \left[ W - L(V) \right]  \]
+		
+		Le calcul s'effectue de manière itérative avec un pas de temps fixe (généralement $\Delta t = 0{,}25$ s) selon les étapes suivantes  :
+		
+		\subsection*{Étape 1 : Calcul des forces instantanées}
+		À chaque instant $i$, la pression dynamique $q_i$ est calculée à partir de la vitesse du pas précédent $V_{i-1}$:
+		\[ q_i = \frac{1}{2} \rho V_{i-1}^2 \]
+		On en déduit ensuite la poussée $T_i$, la traînée $D_i$ (incluant l'effet de sol) et la portance $L_i$ pour cette vitesse spécifique.
+		
+		\subsection*{Étape 2 : Calcul de l'accélération ($a_i$)}
+		L'accélération instantanée est obtenue en isolant $a$ dans l'équation du mouvement:
+		\[ a_i = \frac{g}{W} \left[ T_i - D_i - \mu(W - L_i) \right]  \]
+		
+		\subsection*{Étape 3 : Mise à jour de la vitesse et de la distance}
+		On utilise les équations cinématiques pour déterminer l'état de l'avion au pas suivant:
+		\begin{itemize}
+			\item \textbf{Vitesse :} $V_i = V_{i-1} + a_i \Delta t$ 
+			\item \textbf{Distance parcourue :} $S_i = S_{i-1} + V_{i-1} \Delta t + \frac{1}{2} a_i \Delta t^2$
+		\end{itemize}
+		
+		\subsection*{Étape 4 : Condition d'arrêt}
+		Le processus est répété jusqu'à ce que la vitesse $V_i$ atteigne la vitesse de décollage cible (\textit{Lift-off speed}):
+		\[ V_i \geq V_{LOF} \quad \text{où} \quad V_{LOF} \approx 1{,}1 V_{stall} \]
+		La valeur finale de $S_i$ correspond alors à la distance de roulement au sol $S_g$.
+		
+		\subsection{Avantages du modèle numérique}
+			Cette approche permet :
+			\begin{itemize}
+				\item De modéliser des variations de poussée non linéaires (moteurs à pistons) .
+				\item De simuler des scénarios complexes comme une panne moteur ou un changement de configuration des volets durant le roulage .
+				\item D'intégrer précisément l'effet de sol sur la traînée induite.
+			\end{itemize}
+		
+				\vspace*{1cm}
+		
+		\subsection{Graphe et analyse}
+				
+	
+				\begin{table}[H]
+					\centering
+					\caption{Caractéristiques du Cirrus SR22 utilisées pour les simulations}
+					\begin{tabular}{|l|c|}
+						\hline
+						\textbf{Paramètre} & \textbf{Valeur} \\
+						\hline
+						Nom & Cirrus SR22 \\
+						Type de moteur & Piston \\
+						Poids $W$ & 3400 lb \\
+						Surface alaire $S_w$ & 144.9 ft$^2$ \\
+						Envergure $b_w$ & 33 ft \\
+						Hauteur $h_w$ & 6 ft \\
+						Allongement $R_a$ & 6.05 \\
+						Coefficient de portance maximal $C_{L,\max}$ & 1.69 \\
+						Coefficient de portance $C_L$ & 0.50 \\
+						Coefficient de traînée $C_D$ & 0.0417 \\
+						Facteur d'Oswald $e$ & 0.82 \\
+						Coefficient de frottement $\mu$ & 0.04 \\
+						Puissance moteur $P$ & 310 hp \\
+						Poussée $T$ & 1169 lb \\
+						Rendement de l'hélice $\eta$ & 0.50 \\
+						Hauteur de franchissement d'obstacle & 35 ft \\
+						Coefficient $A_1$ & $1.158\times10^{-2}$ \\
+						Coefficient $A_2$ & $-5.277\times10^{-5}$ \\
+						Coefficient $A_3$ & $9.273\times10^{-8}$ \\
+						Coefficient $A_4$ & $-6.21\times10^{-11}$ \\
+						Nombre de pas $n$ & 35 \\
+						\hline
+					\end{tabular}
+					\label{tab:cirrus}
+				\end{table}
+				
+		
+			
+				\begin{figure}[H]
+					
+					\begin{subfigure}{0.45\textwidth}
+						\centering
+						\includegraphics[width=\linewidth]{Cirrus_acc_dist.png}
+						\caption{Accélération en fonction de la distance}
+					\end{subfigure}
+					\hfill
+					\begin{subfigure}{0.45\textwidth}
+						\centering
+						\includegraphics[width=\linewidth]{Cirrus_speed_dist.png}
+						\caption{Vitesse en fonction de la distance}
+					\end{subfigure}
+					
+					\vspace{0.5cm}
+					\centering
+					\begin{subfigure}{0.45\textwidth}
+						\centering
+						\includegraphics[width=\linewidth]{Cirrus_forces_dist.png}
+						\caption{Forces en fonction de la distance}
+					\end{subfigure}
+					\
+				\end{figure}
+				
+				Tout comme les résultats de la méthode 1, on retrouve le même comportement pour
+				 les différents graphes. Cela permet de valider, dans un premier temps, la fonctionnalité du modèle. 
+			
+	
+			
+			
+			
+			
+			
+		
+		
+		
+		
+		
+		
+		%------------------------------------------------
+		\vspace*{2cm}
+		
+		
+		
+		
+		\section{Méthode basée sur la prise en compte de l’efficacité du moteur}
+		
+			\subsection{Hypothèses}
+				\begin{itemize}
+					
+					\item \textbf{Coefficients aérodynamiques constants :} le $C_L$ et le $C_D$ restent fixes tout au long du roulement au sol.
+					\item \textbf{Environnement homogène :} Le poids ($W$), la densité de l'air ($\rho_\infty$) et la friction ($\mu_r$) sont stationnaires et uniformes.
+					\item \textbf{Cinématique de référence :} La vitesse $V_\infty$ représente la vitesse instantanée de l'aéronef par rapport à la masse d'air.
+				\end{itemize}
+				
+				\subsection{Développement de la méthode}
+				L'expression de la poussée intègre un terme de dégradation  :
+				\begin{equation}
+					\vec{T} = (T_0 - kV_\infty^2)\vec{\imath} \quad 
+				\end{equation}
+				
+				Où $T_0$ est la poussée statique initiale et $k$ (en kg/m) quantifie la perte d'efficacité du système propulsif avec la vitesse. Ce facteur dépend de la motorisation :
+				\begin{itemize}
+					\item \textbf{Moteurs à hélices / Turbopropulseurs :} L'efficacité chute rapidement avec la vitesse ($k$ élevé).
+					\item \textbf{Turboréacteurs (Jets) :} La poussée est peu sensible à la vitesse lors du roulement ($k \approx 0$).
+				\end{itemize}
+				
+				Projetons la relation fondamentale de la dynamique sur l'axe horizontal :
+				\begin{equation}
+					\frac{dv}{dt} = \frac{(T - \mu_r(W - L) - D) g}{W} \quad 
+				\end{equation}
+				
+				En injectant les expressions des forces $T$, $L = \frac{1}{2}\rho_\infty S C_L V_\infty^2$ et $D = \frac{1}{2}\rho_\infty S C_D V_\infty^2$, la force nette au numérateur s'écrit :
+				\begin{equation*}
+					F_{\text{nette}} = (T_0 - \mu_rW) - \left[\frac{1}{2}\rho_\infty S(C_D - \mu_rC_L) + k\right]V_\infty^2
+				\end{equation*}
+				
+				Par identification avec l'équation différentielle linéarisée, on obtient :
+				\begin{equation}
+					\frac{d\vec{v}}{dt} = (A - BV_\infty^2)\vec{\imath} \quad 
+				\end{equation}
+				
+				Où les constantes scalaires $A$ et $B$ s'expriment par :
+				\begin{equation}
+					A = \left(\frac{T_0}{W} - \mu_r\right)g \quad \text{et} \quad B = \frac{g}{W}\left[\frac{1}{2}\rho_\infty S(C_D - \mu_rC_L) + k\right] \quad 
+				\end{equation}
+				
+		
+
+	
+		\vspace*{1cm}
+		
+		
+		\subsection{Distance de décollage ($s_{\text{LO}}$) : Intégration par changement de variable linéaire}
+		
+			Par dérivation en chaîne, l'accélération se reformule spatialement :
+			\begin{equation}
+				\frac{dV_\infty}{dt} = \frac{dV_\infty}{ds} \cdot \frac{ds}{dt} = V_\infty\frac{dV_\infty}{ds} \quad 
+			\end{equation}
+			
+			L'introduction de la relation  dans l'équation différentielle  permet de séparer les variables :
+			\begin{equation}
+				V_\infty\frac{dV_\infty}{ds} = A - BV_\infty^2 \implies ds = \frac{V_\infty dV_\infty}{A - BV_\infty^2} 
+			\end{equation}
+			
+			L'intégration depuis le départ ($s=0, V_\infty=0$) jusqu'au point de décollage ($s=s_{\text{LO}}, V_\infty=V_{\text{LO}}$) s'énonce :
+			\begin{equation}
+				\int_{0}^{s_{\text{LO}}} ds = \int_{0}^{V_{\text{LO}}} \frac{V_\infty}{A - BV_\infty^2} dV_\infty \quad 
+			\end{equation}
+			
+			En posant le changement de variable $x = A - BV_\infty^2 \implies dx = -2BV_\infty dV_\infty$, les bornes deviennent $x(0) = A$ et $x(V_{\text{LO}}) = A - BV_{\text{LO}}^2$. L'expression se réduit à :
+			\begin{equation}
+				s_{\text{LO}} = -\frac{1}{2B} \int_{A}^{A - BV_{\text{LO}}^2} \frac{1}{x} dx = -\frac{1}{2B} \left[\ln\left(A - BV_{\text{LO}}^2\right) - \ln(A)\right] \quad 
+			\end{equation}
+			
+			En appliquant les propriétés des logarithmes, on obtient la loi spatiale exacte :
+			\begin{equation}
+				s_{\text{LO}} = \frac{1}{2B}\ln\left(\frac{A}{A - BV_{\text{LO}}^2}\right)
+			\end{equation}
+			
+			Le temps nécessaire pour atteindre une vitesse donnée s'obtient par intégration directe de $\frac{dV}{A-BV^2} = dt$ :
+			\begin{equation}
+				t = \frac{1}{2\sqrt{AB}}\ln\left(\frac{1 + CV}{1 - CV}\right) \quad \text{avec} \quad C = \sqrt{\frac{B}{A}} 
+			\end{equation}
+			
+			
+ %=====================================================================================================================================================================
+ 
+ \vspace*{2cm}
+ 
+ 		\section{Calcul de la distance de montée et de franchissement d'obstacle}
+ 		
+ 		La phase de montée fait suite à la rotation et s'étend jusqu'au franchissement 
+ 		d'un obstacle théorique ($h_{oc}$), généralement fixé à \textbf{35 ft} pour les 
+ 		avions civils (norme FAR Part 25) ou \textbf{50 ft} pour les avions militaires.
+ 		
+ 		
+\vspace*{1cm}
+
+ 		\subsection{Explication de la distance de rotation }
+ 		
+ 		La phase de rotation débute lorsque l'avion atteint la vitesse de rotation $ V_R$,
+ 		qui est généralement considérée comme égale à la vitesse de décollage ($V_{LOF}$) 
+ 		pour simplifier les calculs. À cet instant, le pilote initie une \textbf{déflexion
+ 		de la gouverne de profondeur} afin de créer un moment de tangage. Ce moment fait 
+ 		pivoter l'appareil autour de son train d'atterrissage principal, augmentant ainsi son angle d'incidence.
+ 		
+ 		Durant cette manœuvre, l'augmentation rapide de l'angle d'incidence entraîne une 
+ 		croissance proportionnelle du coefficient de portance ($C_L$). 
+ 		
+ 		Bien que la distance de rotation ($S_r$) représente une faible portion 
+ 		de la distance totale de décollage, sa durée ($t_r$) dépend de l'inertie de l'appareil :
+ 		\begin{itemize}
+ 			\item Pour les \textbf{avions légers} et les avions de chasse, une durée de rotation de \textbf{1 s} est une approximation adéquate .
+ 			\item Pour les \textbf{avions de transport civils} (type A320) ou les bombardiers, cette durée est d'environ \textbf{3 s}.
+ 			\item Pour les \textbf{très gros porteurs} (type Beluga XL), elle peut atteindre \textbf{4 s}.
+ 		\end{itemize}
+ 		
+ 		En tenant compte de la vitesse du vent de face ($V_{hw}$), la distance de rotation est calculée par la formule suivante :
+ 		\[
+ 		S_r = (V_{\text{LOF}} - V_{\text{hw}}) \times t_r
+ 		\]
+ 	
+ 	\vspace*{1cm}
+ 		\subsection{Calcul de la distance de montée ($s_c$)}
+ 		Cette distance de montée est donc la distance horizontale parcourue après la distance de rotation jusqu'au franchissement de l'obstacle.
+ 		
+ 		\subsubsection{ Principes et vitesses de référence}
+ 		Durant cette phase, l'avion accélère d'une vitesse de décollage $V_{LO}$ vers une vitesse de sécurité à l'obstacle $V_{oc}$  :
+ 		\begin{itemize}
+ 			\item $V_{LO} \approx 1,1 \times V_{stall}$.
+ 			\item $V_{oc} = V_2 \approx 1,2 \times V_{stall}$.
+ 		\end{itemize}
+ 		
+ 		\subsubsection{Équation énergétique de la montée}
+ 		Le calcul s'appuie sur le principe selon lequel le travail produit par 
+ 		l'excès de poussée des moteurs est converti en gain d'altitude et en 
+ 		gain de vitesse . L'intégration de l'équation du mouvement mène à la relation suivante :
+ 		\[ \int_{s_{LO}}^{s_{OC}} \frac{T - D}{\cos \gamma} \, ds = W h_{oc} + \frac{W}{2g} (V_{oc}^2 - V_{LO}^2) \]
+ 		
+ 		Où :
+ 		\begin{itemize}
+ 			\item $T$ est la poussée et $D$ la traînée.
+ 			\item $W$ est le poids de l'avion.
+ 			\item $h_{oc}$ est la hauteur de l'obstacle.
+ 		\end{itemize}
+ 		
+ 		\subsubsection{ Force nette effective ($\bar{F}_c$)}
+ 		Pour résoudre l'intégrale, on définit une \textbf{force nette effective moyenne} durant la transition entre le sol et l'obstacle  :
+ 		\[ \bar{F}_c = \frac{(T - D)_{LO} + (T - D)_{OC} / \cos(\gamma_{OC})}{2}  \]
+ 		
+ 		\subsubsection{Formule finale de la distance de montée}
+ 		En isolant la distance $s_c$, aboutit à la formulation finale utilisée pour les calculs de performance :
+ 		\[ s_c = \frac{W}{\bar{F}_c} \left[ h_{oc} + \frac{V_{oc}^2 - V_{LO}^2}{2g} \right] \]
+
+ 	\vspace*{1cm}
+ 		
+
+ 		\subsection{ Autres méthodes }
+ 		
+ 		Cette méthode se base sur les relations trigonométrique pour avoir les distances de rotation et de montée.
+ 		
+ 		\subsubsection{Phase de rotation}
+ 		L'avion, lors de sa rotation suit un arc de cercle de rayon $R$ déterminé par le facteur de charge $n$ :
+ 		\[
+ 		R = \frac{V_{TR}^2}{g(n - 1)} \quad \text{avec} \quad n = \frac{L}{W} \approx 1,19 \text{ (si } C_{L,TR} = 0,9 C_{L,max}\text{)} 
+ 		\]
+ 		La distance horizontale ($S_R$) et la hauteur gagnée ($h_R$) à la fin de cet arc sont données par les formules:
+ 		\[
+ 		S_R = R \sin(\gamma_{climb}) \quad \text{et} \quad h_R = R(1 - \cos(\gamma_{climb})) 
+ 		\]
+ 		L'angle de montée établi $\gamma_{climb}$ est déduit de l'excès de poussée : $\sin(\gamma_{climb}) = \frac{T - D}{W}$.
+ 		
+ 		\subsubsection{Franchissement d'obstacle ($S_{obs}$)}
+ 		Deux cas de figure se présentent selon les performances de l'appareil  :
+ 		\begin{itemize}
+ 			\item \textbf{Cas 1} Si $h_R < h_{oc}$, l'avion termine sa transition sous l'obstacle et ajoute un segment de montée rectiligne $S_c$ :
+ 			\[ S_c = \frac{h_{oc} - h_R}{\tan(\gamma_{climb})} \implies S_{obs} = S_R + S_c \]
+ 			\item \textbf{Cas 2} Si $h_R \geq h_{oc}$, l'obstacle est franchi pendant la transition. La distance est calculée par Pythagore :
+ 			\[ S_{obs} = \sqrt{R^2 - (R - h_{oc})^2} \]
+ 		\end{itemize}
+ 		
+ 
+ 	
+ 		
+ 			

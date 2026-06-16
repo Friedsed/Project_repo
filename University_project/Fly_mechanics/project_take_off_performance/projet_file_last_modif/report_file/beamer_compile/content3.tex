@@ -1,0 +1,248 @@
+\section{Comparaison des résultats}
+
+	
+	\begin{frame}{Aéronefs étudiés}
+		\textbf{Objectif :} Analyser l'influence des caractéristiques aérodynamiques et propulsives sur la distance de décollage à travers des avions représentatif de l'aviation moderne 
+			
+		\begin{columns}[t]
+			\begin{column}{0.5\textwidth}
+				\begin{block}{Aviation Générale et Transport}
+					\begin{itemize}
+						\item \textbf{Cessna 172 :} Avions légers à pistons pour valider les modèles sur de faibles masses.
+						\item \textbf{Airbus A320 :} Modèle type du transport commercial moyen-courrier .
+						\item \textbf{Beluga XL :} Masse alaire élevée et d'une traînée de forme importante .
+					\end{itemize}
+				\end{block}
+			\end{column}
+			
+			\begin{column}{0.5\textwidth}
+				\begin{block}{Secteur Militaire}
+					\begin{itemize}
+						\item \textbf{Lockheed C-130J :} Performances en transport tactique à turbopropulseurs .
+						\item \textbf{Dassault Rafale :} Cas d'un rapport poussée/poids exceptionnel permettant des décollages sur distances très courtes .
+					\end{itemize}
+				\end{block}
+			\end{column}
+		\end{columns}
+		
+	
+	\end{frame}
+	
+	
+	
+	%-------------------------***********************************************------------------------------------------------------
+	
+	\begin{frame}{Résultats et analyse : Cessna 172}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.45\textwidth]{Cessna172.png}
+			\caption{Cessna 172}
+		\end{figure}
+		
+		
+		\textbf{Performances simulées (Valeurs en mètres)  :}
+		\begin{table}
+			\centering
+			\begin{tabular}{|l|c|c|c|c|}
+				\hline
+				\textbf{Phase} & \textbf{Mod. 1} & \textbf{Mod. 2} & \textbf{Mod. 3} & \textbf{Mod. 4} \\ \hline
+				Roulage ($S_a$) & 330,7 & 270,4 & 336,1 & 336,1 \\ \hline
+				Montée ($S_c$) & 227,9 & 0,0 & 113,5 & 113,5 \\ \hline
+				\textbf{Total ($S$)} & \textbf{558,3} & \textbf{...} & \textbf{498,0} & \textbf{479,7} \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+			
+			\begin{figure}[H]
+				
+				\centering
+				\begin{subfigure}{0.35\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sa_cessna.png}
+					\caption{Distance d'accélération du Cessna 172 pour les différentes méthodes}
+				\end{subfigure}
+				
+				\vspace{0.5cm}
+				
+				\begin{subfigure}{0.35\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sc_cessna.png}
+					\caption{Distance de montée du Cessna 172 pour les différentes méthodes}
+				\end{subfigure}
+				\hfill
+				\begin{subfigure}{0.35\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{S_cessna.png}
+					\caption{Distance totale de décollage du Cessna 172 pour les différentes méthodes}
+				\end{subfigure}
+			\end{figure}
+			
+			
+			
+	\end{frame}
+	
+
+	%---------------------------------------------------------------***********************************************************------------------------------------------------------------------------------------------------------
+	
+	\begin{frame}{Résultats et analyse : Beluga XL}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.45\textwidth]{begura.png}
+				\caption{Beluga XL}
+			\end{figure}
+		
+		\textbf{Performances simulées (Valeurs en mètres)  :}
+		\begin{table}
+			\centering
+			\begin{tabular}{|l|c|c|c|c|}
+				\hline
+				\textbf{Phase} & \textbf{Mod. 1} & \textbf{Mod. 2} & \textbf{Mod. 3} & \textbf{Mod. 4} \\ \hline
+				Roulage ($S_a$) & 1266,1 & 1233,6 & 1272,2 & 1277,2 \\ \hline
+				Montée ($S_c$) & 430,2 & 0,0 & 170,9 & 170,9 \\ \hline
+				\textbf{Total ($S$)} & \textbf{1722,8} & \textbf{...} & \textbf{1469,9} & \textbf{1474,7} \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		
+	\end{frame}
+	
+	
+	\begin{frame}{Résultats et analyse : Beluga XL}
+			
+				\begin{figure}[H]
+				
+				\centering
+				\begin{subfigure}{0.35\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sa_belugar.png}
+					\caption{Distance d'accélération du Beluga XL pour les différentes méthodes}
+				\end{subfigure}
+				
+				\begin{subfigure}{0.35\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sc_belugar.png}
+					\caption{Distance de montée du Beluga XL pour les différentes méthodes}
+				\end{subfigure}
+				\hfill
+				\begin{subfigure}{0.35\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{S_belugar.png}
+					\caption{Distance totale de décollage du Beluga XL pour les différentes méthodes}
+				\end{subfigure}
+			\end{figure}
+			
+			
+			
+			
+	\end{frame}
+	
+
+	%-------------------------------------------************************************************************-------------------------------------------------------------------------
+	\begin{frame}{Résultats et analyse : Dassault Rafale}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.45\textwidth]{Dassault_rafale.png}
+			\caption{Dassault Rafale}
+		\end{figure}
+		
+		
+		\textbf{Performances simulées (Valeurs en mètres)  :}
+		\begin{table}
+			\centering
+			\begin{tabular}{|l|c|c|c|c|}
+				\hline
+				\textbf{Phase} & \textbf{Mod. 1} & \textbf{Mod. 2} & \textbf{Mod. 3} & \textbf{Mod. 4} \\ \hline
+				Roulage ($S_a$) & 496.7 & 492.6 & 498 & 495 \\ \hline
+				Montée ($S_c$) & 142.4 & 0,0 & 268.2 & 142.2 \\ \hline
+				\textbf{Total ($S$)} & \textbf{714.5} & \textbf{...} & \textbf{842.2} & \textbf{713.2} \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		
+	\end{frame}
+	
+	
+	\begin{frame}{Résultats et analyse : Dassault Rafale}
+		
+		\begin{figure}[H]
+		
+		\centering
+		\begin{subfigure}{0.35\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sa_dasault.png}
+			\caption{Distance d'accélération du Dassault Rafale pour les différentes méthodes}
+		\end{subfigure}
+		
+		\begin{subfigure}{0.35\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sc_dasault.png}
+			\caption{Distance de montée du Dassault Rafale pour les différentes méthodes}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.35\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{S_dasault.png}
+			\caption{Distance totale de décollage du Dassault Rafale pour les différentes méthodes}
+		\end{subfigure}
+	\end{figure}
+		
+		
+		
+	\end{frame}
+	
+
+	
+	%-------------------------------------------------------------------*****************************************************-----------------------------------------------------------
+	
+	
+	
+	
+	
+	\section{Perspectives et axes d'amélioration}
+	
+	\begin{frame}{Perspectives et axes d'amélioration}
+		\begin{itemize}
+			\item \textbf{Optimisation des méthodes de calcul:}
+			\begin{itemize}
+				\item Développement d'une méthode numérique couplée à une \textbf{optimisation sous contraintes}.
+			\end{itemize}
+			\item \textbf{Enrichissement des paramètres physiques:}
+			\begin{itemize}
+				\item Intégration dynamique des \textbf{effets thermodynamiques} (pression, densité, température variables).
+				\item Prise en compte fine de l'état et de la \textbf{pente de la piste}.
+			\end{itemize}
+			\item \textbf{Intégration de l'Intelligence Artificielle:}
+			\begin{itemize}
+				\item Création d'un modèle d'apprentissage capable de prédire les distances selon les contraintes environnementales.
+				\item Développement d'un \textbf{agent spécialisé} pour l'estimation automatique des performances.
+			\end{itemize}
+			\item \textbf{Approche Multi-modèles:}
+			\begin{itemize}
+				\item Utilisation d'une moyenne pondérée des modèles actuels pour obtenir une prédiction plus fidèle à la réalité opérationnelle.
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	
+	
+	
+	\section{Conclusion}
+	
+	\begin{frame}{Conclusion}
+		\begin{itemize}
+			\item \textbf{Objectif atteint :} Modélisation complète de la phase de décollage, du lâcher des freins au franchissement de l'obstacle, via la confrontation de quatre approches mathématiques.
+			\item \textbf{Validation numérique :} Développement d'un programme Python testé sur une flotte variée (Cessna 172, A320, Beluga XL, Rafale), confirmant une excellente cohérence des modèles pour le roulage au sol ($S_a$) .
+			\item \textbf{Esprit critique :} Identification des limites des modèles simplifiés pour la phase de montée ($S_c$) et analyse de l'influence prépondérante du rapport poussée/poids.
+			\item \textbf{Synthèse :} Ce travail a permis de renforcer les compétences en physique du vol et en informatique, posant une base solide pour de futurs outils de simulation plus complexes .
+		\end{itemize}
+		
+	\end{frame}

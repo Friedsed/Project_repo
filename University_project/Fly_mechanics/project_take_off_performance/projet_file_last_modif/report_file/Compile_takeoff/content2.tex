@@ -1,0 +1,345 @@
+%============================================================================================================
+%PARTIE COMPARAISON AVEC DES MODELES AVEC LES DIFFERENT AVION UTILISE 
+%================================================================================================================
+
+
+\chapter{ Comparaison    }\label{ch:structure}
+
+\section{Avions étudiés}
+
+	La distance de décollage dépend fortement des caractéristiques aérodynamiques, de la masse, de la motorisation et des performances globales de l'appareil. Afin d'évaluer l'influence de ces paramètres, plusieurs catégories d'avions ont été sélectionnées pour cette étude.
+	
+	Le choix des aéronefs s'est porté sur des appareils représentatifs de différents domaines de l'aviation :
+	
+	\begin{itemize}
+		\item le \textbf{Cessna 172}, représentant les avions légers de l'aviation générale ;
+		\item l'\textbf{Airbus A320}, représentant les avions commerciaux moyen-courriers ;
+		\item le \textbf{Beluga XL}, représentant les avions de grandes capacités
+		\item le \textbf{Lockheed Martin C-130J Super Hercules}, représentant les avions militaires de transport ;
+		\item le \textbf{Dassault Rafale}, représentant les avions de combat modernes.
+	\end{itemize}
+	
+	Ces appareils présentent des caractéristiques et des performances très différentes, permettant ainsi d'étudier l'influence du poids, de la poussée disponible, de la surface alaire et de la configuration aérodynamique sur la distance de décollage.
+	
+	Les résultats obtenus pour chaque avion seront ensuite comparés afin d'identifier les principaux paramètres influençant les performances au décollage.
+	
+		\vspace*{2cm}
+	
+	
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{A320.png}
+			\caption{Airbus A320}
+		\end{subfigure}
+		\vspace{0.5cm}
+		
+		
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{C-130J_super_hercules.png}
+			\caption{C-130J Super Hercules}
+		\end{subfigure}
+		\hfill
+		
+		
+		\caption{Voici quelques avions qui ont été cités mais qui n'ont pas fait l'objet d'une analyse détaillée dans la suite.}
+		\label{fig:aircraft_comparison}
+	\end{figure}
+	
+	
+	
+	
+	
+	\vspace*{2cm}
+	
+	
+
+	\begin{landscape}
+		
+		\begin{table}[htbp]
+			\centering
+			\caption{Comparaison des résultats obtenus en unité SI avec les différents modèles de calcul de la distance de décollage}
+			\small
+			\begin{tabular}{lcccccccccccccccc}
+				\toprule
+				& \multicolumn{4}{c}{Modèle 1} &
+				\multicolumn{4}{c}{Modèle 2} &
+				\multicolumn{4}{c}{Modèle 3} &
+				\multicolumn{4}{c}{Modèle 4} \\
+				
+				\cmidrule(lr){2-5}
+				\cmidrule(lr){6-9}
+				\cmidrule(lr){10-13}
+				\cmidrule(lr){14-17}
+				
+				Avion &
+				$S_a$ & $S_r$ & $S_c$ & $S$ &
+				$S_a$ & $S_r$ & $S_c$ & $S$ &
+				$S_a$ & $S_r$ & $S_c$ & $S$ &
+				$S_a$ & $S_r$ & $S_c$ & $S$ \\
+				\midrule
+				
+				Cessna 172      & 330.7 & 30.4 & 227.9 & 558.3 & 270.4 & 0 & 0 & ... & 336.1 & 30.4 & 113.5 & 498.0 & 336.1 & 30.1 & 113.5 & 479.7 \\
+				
+				Beluga XL       & 1266.1 & 26.6 & 430.2 & 1722.8 & 1233.6 & 0 & 0 & ... & 1272.2 & 26.6 & 170.9 & 1469.9 & 1277.2 & 26.6 & 170.9 & 1474.7 \\
+				
+				Dassault Rafale & 496.7 & 76.0 & 142.4 & 714.1 & 492.6 & 0 & 0 & ... & 498.0 & 75.9 & 268.2 & 842.2 & 495.0 & 76.0 & 142.2 & 713.2 \\
+				
+				Airbus A320     & 969.2 & 76.3 & 254.7 & 1300.2 & 968.2 & 0 & 0 & ... & 971.7 & 76.3 & 269.4 & 1317.4 & 970.5 & 76.3 & 254.7 & 1301.5 \\
+				
+				C--130          & 664.5 & 63.3 & 186.1 & 913.8 & 659.3 & 0 & 0 & ... & 676.4 & 63.3 & 223.3 & 962.9 & 652.9 & 63.3 & 186.1 & 902.3 \\
+				
+				Executive Jet   & 681.2 & 60.8 & 183.3 & 925.3 & 673.0 & 0 & 0 & ... & 685.4 & 60.8 & 214.6 & 960.9 & 681.2 & 90.8 & 183.4 & 955.4 \\
+				
+				Cirrus          & 333.4 & 36.3 & 88.4 & 458.0 & 388.2 & 0 & 0 & ... & 269.5 & 36.2 & 127.6 & 433.3 & 222.3 & 36.2 & 88.4 & 346.9 \\
+				
+				\bottomrule
+			\end{tabular}
+		\end{table}
+
+	\end{landscape}
+
+	
+	\subsection{Commentaires}
+	
+	Les résultats présentés dans le tableau précédent montrent que les modèles $1$ et $ 4$
+	 fournissent des estimations très proches pour la majorité des avions étudiés.
+	  Le modèle $3$ conduit généralement à des distances de décollage plus importantes
+	   en raison d'une estimation plus élevée de la distance de montée. Le modèle $2 $
+	   ne permet pas d'obtenir directement une distance totale de décollage puisqu'il
+	    ne prend en compte que la phase d'accélération au sol.
+	
+	On observe également que les avions de transport lourd, tels que le Beluga XL 
+	et l'Airbus $A320$, nécessitent les plus grandes distances de décollage, tandis 
+	que les avions légers comme le Cirrus et le Cessna $172$ présentent des distances
+	 nettement plus faibles. Le Dassault Rafale se distingue par une distance de 
+	 décollage relativement réduite malgré sa masse, grâce à son rapport poussée/poids élevé.
+	
+	
+
+
+
+	\vspace*{2cm}
+
+	
+	\subsection{Résultats du Cessna 172}
+	
+			Le \textbf{Cessna 172}, représentant les avions légers de l'aviation civile. 
+		\vspace{1cm}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.45\textwidth]{Cessna172.png}
+			\caption{Cessna 172}
+		\end{figure}
+		
+		\vspace{1cm}
+		
+		L'analyse de la distance d'accélération $S_a$, de la distance de rotation $S_r$ et de la distance de montée $S_c$ pour le cas du Cessna nous conduit aux graphes suivants :
+		
+				\vspace*{1cm}
+		
+		\begin{figure}[H]
+			
+				\centering
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sa_cessna.png}
+					\caption{Distance d'accélération du Cessna 172 pour les différentes méthodes}
+				\end{subfigure}
+				
+				\vspace{0.5cm}
+				
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{Sc_cessna.png}
+					\caption{Distance de montée du Cessna 172 pour les différentes méthodes}
+				\end{subfigure}
+				\hfill
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{S_cessna.png}
+					\caption{Distance totale de décollage du Cessna 172 pour les différentes méthodes}
+				\end{subfigure}
+		\end{figure}
+		
+	\vspace*{1cm}
+			
+	\begin{itemize}
+		\item Les méthodes 1, 3 et 4 donnent des distances d'accélération au sol ($S_a$) très proches ; la méthode 2 fournit des valeurs légèrement plus faibles.
+		
+		\item Les distances de rotation ($S_r$) qui ne figure pas sont identiques pour toutes les méthodes, celles-ci supposant une rotation de 1 s à la vitesse de décollage.
+		
+		\item La méthode 2 ne permet pas d'estimer la distance de montée ($S_c$).
+		
+		\item Les méthodes 3 et 4 produisent des résultats similaires pour $S_c$, tandis que la méthode 1 prédit des distances plus importantes.
+		
+		\item Les écarts observés résultent principalement des hypothèses retenues pour la modélisation des phases de transition et de montée.
+		
+		\item De même, les entrées pour la simulation méthode 1 étant différent de celle des autres peut être un cause .
+	\end{itemize}
+	
+	
+	\vspace*{2cm}
+		
+	
+	\subsection{Résultats du Beluga XL}
+	
+
+	Le \textbf{Beluga XL}, représentant les avions de grande capacité. L’objectif est d'étudier l'influence du poids sur la distance de décollages ce qui se manifeste par la masse alaire de l'avion.
+	
+	\vspace*{1cm}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\textwidth]{begura.png}
+		\caption{Beluga XL}
+	\end{figure}
+	
+	\vspace*{1cm}
+	
+	L'analyse de la distance d'accélération $ Sa $, de la distance de rotation $ Sr $ et de la distance de monté $ Sc $ pour le cas du Beluga XL nous conduit à ces graphes:
+	
+	\vspace*{1cm}
+	
+	\begin{figure}[H]
+		
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sa_belugar.png}
+			\caption{Distance d'accélération du Beluga XL pour les différentes méthodes}
+		\end{subfigure}
+		
+		\vspace{0.5cm}
+		
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sc_belugar.png}
+			\caption{Distance de montée du Beluga XL pour les différentes méthodes}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{S_belugar.png}
+			\caption{Distance totale de décollage du Beluga XL pour les différentes méthodes}
+		\end{subfigure}
+	\end{figure}
+	
+	\vspace*{1cm}
+	
+	
+	\begin{itemize}
+		\item Les quatre méthodes donnent des résultats très proches pour la distance
+		 d'accélération au sol ($S_a$), avec des valeurs comprises entre environ 1200 m
+		  et 1300 m. Cela montre une bonne cohérence entre les modèles pour cette phase d'accélération.
+		
+		\item Les distances de rotation ($S_r$) qui ne figure pas sont identiques pour toutes les méthodes. 
+			Cette concordance est due à l'hypothèse commune d'une durée de rotation fixée à environ $3 s $.
+		
+		
+		\item Pour la distance de montée ($S_c$), les méthodes 3 et 4 donnent 
+			des résultats très proches, tandis que la méthode 1 prédit une distance
+		 	nettement plus élevée.
+		
+		\item La distance totale de décollage ($S$) est donc plus importante avec la méthode 1.
+		 Les méthodes 3 et 4 conduisent à des estimations plus faibles et très similaires.
+		
+		
+	\end{itemize}
+	
+	
+	\vspace*{2cm}
+	
+	
+	
+	\subsection{Résultats du Dassault Rafale }
+	
+	Le \textbf{Dassault Rafale}, représentant les avions de combat modernes.  Il est analysé surtout à cause de sa rapidité à décoller dans des distances très courtes. 
+	
+	\vspace*{1cm}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\textwidth]{Dassault_rafale.png}
+		\caption{Dassault Rafale}
+	\end{figure}
+
+	
+	\vspace*{1cm}
+			
+	\begin{figure}[H]
+		
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sa_dasault.png}
+			\caption{Distance d'accélération du Dassault Rafale pour les différentes méthodes}
+		\end{subfigure}
+		
+		\vspace{0.5cm}
+		
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Sc_dasault.png}
+			\caption{Distance de montée du Dassault Rafale pour les différentes méthodes}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{S_dasault.png}
+			\caption{Distance totale de décollages du Dassault Rafale pour les différentes méthodes}
+		\end{subfigure}
+	\end{figure}
+	
+			\vspace*{1cm}
+	
+	\begin{itemize}
+
+		
+	
+	\item La distance d'accélération $S_a$ est pratiquement identique pour les quatre modèles, avec une valeur voisine de $490\,m$. Cette faible variation montre que la phase d'accélération au sol est principalement gouvernée par les caractéristiques propres de l'avion.
+	
+	\item En revanche, des écarts plus importants apparaissent au niveau de la distance de montée $S_c$. Les modèles 1 et 4 conduisent à une distance de montée d'environ $140\,m$, tandis que le modèle 3 prédit une valeur proche de $265\,m$.
+	
+	\item Les modèles 1 et 4 donnent des résultats très proches, avec une distance totale d'environ $710\,m$. Le modèle 3 conduit à la distance la plus élevée, proche de $840\,m$, en raison de sa distance de montée plus importante.
+	
+	\item Dans l'ensemble, les modèles 1 et 4 apparaissent cohérents entre eux et fournissent des estimations réalistes pour le Dassault Rafale.
+	\end{itemize}
+	
+	\vspace*{1cm}
+	
+	\subsection{Comentaires généraux  }
+	
+	Les différentes méthodes permettent d'obtenir un ordre de grandeur des composantes de la distance de décollage.
+	Bien qu'elles ne fournissent pas une valeur exacte, la comparaison de plusieurs modèles reposant sur des hypothèses
+	différentes permet d'obtenir une bonne estimation plus représentative de la distance réelle de décollage.
+	
+	
+	\vspace*{4cm}
+	
+	 
+	 \section{Perspectives}
+	 
+	 Les modèles étudiés sont différents, car ils requièrent des données d'entrée différentes pour la simulation et utilisent des méthodes de calcul distinctes pour déterminer la distance de décollage. Ils permettent néanmoins d'obtenir des estimations cohérentes de cette distance. Ainsi, une moyenne des résultats obtenus par ces différentes méthodes peut nous permettre de prédire une distance de décollage relativement proche de la réalité.
+	 
+	 Dans la continuité de ces travaux, nous proposons le développement d'une nouvelle méthode de calcul basée sur l'utilisation de méthodes numériques couplées à une optimisation sous contraintes. La méthode numérique permettra d'obtenir des résultats plus précis en réduisant fortement le pas de temps, ce qui contribuera à diminuer les erreurs de calcul.
+	 
+	 L'optimisation sous contraintes permettra quant à elle de prendre en compte davantage de paramètres influençant les performances au décollage, notamment les effets thermodynamiques (pression, densité et température de l'air), les effets liés à l'état et à la pente de la piste, ainsi que d'autres contraintes agissant sur l'avion.
+	 
+	 Avec les avancées récentes de l'intelligence artificielle, il serait également envisageable de développer un modèle capable d'apprendre l'influence de ces différentes contraintes et de générer automatiquement des estimations de distances de décollage. Le développement d'un agent spécialisé dans cette tâche constituerait ainsi une perspective intéressante pour la poursuite de ce projet.
+	 
+	 
+
+	\vspace*{4cm}
+	
+	\section{Conclusion}
+	
+		Ce projet de fin d'études consistait à calculer et modéliser la distance nécessaire pour qu’un avion décolle. En combinant des calculs théoriques et différents modèles, nous avons pu créer un programme Python capable de reproduire toute la phase de décollage, du départ à l'arrêt jusqu'à la montée à une certaine altitude.
+		
+		Nous avons testé notre programme sur des avions très différents : un petit avion de tourisme (Cessna 172), des avions de ligne (Airbus A320, Beluga XL) et un avion de chasse (Rafale). Cela nous a permis de comprendre comment la poussée du moteur et la résistance de l'air évoluent pendant que l'avion accélère au sol. Si notre méthode de calcul s'est révélée correcte, cet exercice nous a surtout appris à repérer les limites des calculs trop simples et à développer notre regard critique.
+		
+		En conclusion, ce travail nous a permis de progresser à la fois en informatique et en physique du vol. Il pose des bases solides pour créer des outils de simulation encore plus performants pour l'avenir.

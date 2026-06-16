@@ -1,0 +1,67 @@
+\documentclass{beamer}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{subcaption} % to run multiple picture 
+\usepackage{graphicx}
+
+
+
+
+% Theme choice
+\usetheme{Madrid}  % You can change the theme to other options like "Berlin", "Darmstadt", etc.
+
+
+
+
+
+
+% Title page details
+\title{Mécanique du vol}
+\subtitle{Modélisation de la distance de décollage d'un avion}
+\author{ \\
+	Friedly WOLI\\
+	Kevin Laborde
+}
+
+\date{\today}
+
+
+
+
+\input{commande_propre.sty}
+\graphicspath{{../Images/}}	%Affichage des images
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+	
+	{
+		\usebackgroundtemplate{
+			\includegraphics[width=\paperwidth,height=\paperheight]{airbus-beluga-xl2.jpg}
+		}
+		
+		\begin{frame}[plain]
+			\titlepage
+		\end{frame}
+	} % <-- fermeture du groupe ici
+	
+	\begin{frame}
+		\frametitle{Table des matières}
+		\tableofcontents
+	\end{frame}
+	
+	\input{content0}
+	\input{content1}
+	\input{content2}
+	\input{content3}
+	\input{conclusion}
+	
+\end{document}

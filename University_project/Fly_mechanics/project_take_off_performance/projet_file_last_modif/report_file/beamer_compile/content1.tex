@@ -1,0 +1,390 @@
+
+
+
+
+%========================================================================================================================================
+\section{Modélisation de la distance de roulement}
+	
+	\begin{frame}{Phases du décollage}
+		
+		\[
+		S = S_a + S_r + S_c
+		\]
+		
+		\begin{itemize}
+			\item $S_a$ : distance d'accélération
+			\item $S_r$ : distance de rotation
+			\item $S_c$ : distance de montée
+		\end{itemize}
+		
+		\vspace{0.5cm}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{takeoff_distance.png}
+			\caption{Différentes phases de décollage d'un avion }	
+			\label{fig:placeholder}
+			
+		\end{figure}
+		
+	\end{frame}
+	
+	
+	
+	%==========================================================================================================================
+	
+	\begin{frame}
+		
+		\textbf{Bilan des forces appliquées à l'avion lors du décollage}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{billanforce.png}
+			\label{fig: bilanforce}
+			\caption{Schéma technique d'un avion en piste }
+		\end{figure}
+		
+		En appliquant la seconde loi de Newton à l’avion pendant sa phase de roulage au sol, on obtient:
+		\begin{equation} \label{PFD}
+			W\,\frac{1}{g}\frac{d\vec{V}}{dt} = \vec{T} + \vec{D} + \vec{F_r} +\vec{L}
+		\end{equation}
+		
+		
+		
+	\end{frame}
+	
+	\begin{frame}{Modélisation des forces au sol ($T, D, L, F_r$)}
+		
+		
+		\begin{itemize}
+			\item \textbf{Poussée ($T$)} : Modélisée par une fonction parabolique de la vitesse:
+			\[ T = T_0 + T'V + T''V^2 \]
+			\item \textbf{Traînée aérodynamique ($D$)} :
+			\[ D = \frac{1}{2} \rho S_w C_D V^2 \]
+			\item \textbf{Portance ($L$)} :
+			\[ L = \frac{1}{2} \rho S_w C_L V^2 \]
+			\item \textbf{Frottement mécanique ($F_r$)} : Dépend du poids apparent sur les roues :
+			\[ F_r = \mu (W - L) = \mu \left( W - \frac{1}{2} \rho S_w C_L V^2 \right) \]
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}{Détail des coefficients $C_L$ et $C_D$}
+		\begin{block}{Coefficient de portance ($C_L$)}
+			Durant la phase d'accélération au sol, le coefficient de portance est considéré comme \textbf{quasiment constant} à sa valeur de conception jusqu'à ce que l'avion atteigne la vitesse de rotation.
+		\end{block}
+		
+		\begin{block}{Coefficient de Traînée ($C_D$) avec effet de sol}
+			L'expression approchée pour un avion proche du sol intègre la traînée parasite et la réduction de la traînée induite:
+			\[ C_D \cong C_{D_0} + C_{D_{0,L}} C_L + \phi \frac{C_L^2}{\pi e R_A} \]
+			\textbf{Facteur d'influence du sol ($\phi$) :}
+			\[ \phi = \frac{(16 h_w / b_w)^2}{1 + (16 h_w / b_w)^2} \]
+		\end{block}
+		
+		\textit{\small \textbf{Variables :} $h_w$ est la hauteur de l'aile, $b_w$ l'envergure, et $R_A$ l'allongement .}
+	\end{frame}
+	
+	
+	%=====================================================================================================================
+	
+
+	
+		\begin{frame}{Modèle 1 : Méthode analytique }
+			\textbf{Principe :} Résolution de l'équation du mouvement par intégration des forces instantanées durant la course au sol.
+			\vspace*{0.5cm}
+			\begin{block}{Équation de la distance de roulement ($S_a$)}
+				Prise en compte du vent de face ($V_{hw}$) et de la vitesse de décollage ($V_{LOF}$):
+				\[ S_a = \frac{W}{g} \int_{V_i}^{V_{LOF}} \frac{V - V_{hw}}{T - D - F_r} \, dV = \frac{K_T - V_{hw} K_W}{g}  \]
+				
+				\textbf{Modélisation de l'accélération normalisée :}
+				On pose \[  \frac{T - D - F_r}{W} = A + BV + CV^2    \]
+				
+			\end{block}
+			\textbf{Note: } $ V $ est la vitesse du vent et $ V_g = (V - V_{hw}) $ est la vitesse par rapport au sol
+		
+		\end{frame}
+		
+		\begin{frame}{Prise en compte de l'efficacité propulsive}
+			\textbf{Principe :} Cette méthode affine le calcul en intégrant la perte d'efficacité du système propulsif à mesure que la vitesse augmente .
+			
+			\vspace*{0.5cm}
+			
+			\begin{block}{Modélisation de la poussée ($T$)}
+				L'expression de la poussée est définie par la loi parabolique suivante :
+				\[ T = T_0 - k V_{\infty}^{2} \]
+				\textbf{Où :}
+				\begin{itemize}
+					\item $T_0$ est la poussée statique initiale (vitesse nulle).
+					\item $k$ (en $kg/m$) est le paramètre qui quantifie la perte d'efficacité du système selon la motorisation.
+				\end{itemize}
+			\end{block}
+			
+			\textit{Note : Ce facteur $k$ est particulièrement élevé pour les moteurs à hélices, contrairement aux turboréacteurs où il est proche de zéro }
+		\end{frame}
+		
+	
+		
+		
+		%--------------------------------------------------------------------------------------------------
+		
+		\begin{frame}{Analyse de graphe}
+			
+			
+			\begin{figure}[H]
+				
+				L'analyse du comportement en vol d'un avion privé nous permet d'avoir:
+				
+				\begin{subfigure}{0.25\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{data1_acc_dist.png}
+					\caption{Accélération VS distance}
+				\end{subfigure}
+				\hfill
+				\begin{subfigure}{0.35\textwidth}
+					\centering
+					\includegraphics[width=\linewidth]{data1_dist_speed.png}
+					\caption{Vitesse VS distance}
+				\end{subfigure}
+				\centering
+				\begin{subfigure}{0.35\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{data1_forces_distance.png}
+					\caption{Forces en fonction de la distance}
+				\end{subfigure}
+				
+			\end{figure}
+			
+		
+			
+		\end{frame}
+		
+		
+
+		
+		
+		
+		
+		%----------------------------------------------------------
+		
+		
+		\begin{frame}{Modèle 1 : Méthode analytique}
+			\begin{block}{Avantages }
+				\begin{itemize}
+					\item \textbf{Polyvalence :} Applicable à tous les types d'aéronefs (réacteurs ou hélices), la seule différence résidant dans le calcul de la poussée .
+					\item \textbf{Haute précision :} Elle intègre la variation continue des forces (portance, traînée, poussée) à chaque instant.
+					
+				\end{itemize}
+			\end{block}
+			
+			\begin{alertblock}{Inconvénients}
+				\begin{itemize}
+					\item \textbf{Complexité mathématique :} L'intégration de l'équation du mouvement n'est pas triviale et s'avère difficile à réaliser manuellement.
+					
+					
+				\end{itemize}
+			\end{alertblock}
+		\end{frame}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		%==================================================================================================================
+		%
+		%==================================================================================================================
+		
+		
+		
+		
+		%==================================================================================================================
+		
+		%=================================================================================================================
+		
+
+		
+	
+		
+		\begin{frame}{Modèle 2 : Méthode par accélération moyenne (Forces constantes)}
+			\textbf{Principe :} Estimation rapide de la distance de roulement en supposant que les forces agissant sur l'avion sont constantes durant toute la phase de roulage .
+			\vspace*{0.5cm}
+			\begin{block}{Distance de roulement au sol ($S_G$)}
+						
+				
+					\begin{align*}
+				S_G &= \int_{0}^{V_R} \frac{W}{g[T - D - F_r]} V \, dV \\
+				S_G &= \frac{V_R^2 W}{2g [T - D - F_r]}
+			\end{align*}
+			
+			
+				
+			\end{block}
+			
+			\vspace*{0.5cm}
+			
+		
+			
+			
+		
+		\end{frame}
+			
+		\begin{frame}{Modélisation des forces }
+			\begin{block}{Modélisation de la poussée ($T$)}
+			
+		
+			\begin{itemize}
+				\item 	\textbf Dans cette formule finale, les termes $T$, $D$ et $F_r$ sont impérativement évalués à la vitesse $V_{ref} = \frac{V_R}{\sqrt{2}}$ .
+				\item \textbf{Moteur à pistons :} $T = \frac{\eta_p (550 P_{BHP})}{V_R / \sqrt{2}}$ avec $ P_{BHP}$ la puissance moteur en Horsepower
+				\item \textbf{Turbopropulseur / Réaction :} $T = T(V_{ref})$
+			\end{itemize}
+			
+			\end{block}
+			
+			
+			
+			
+		\end{frame}
+		
+			
+			
+			
+			%==================================================================================================================
+			
+		
+			\begin{frame}{Modèle 2 : Méthode par accélération moyenne (Forces constantes)}
+
+				
+				\begin{block}{Avantages : Simplicité et Rapidité}
+					\begin{itemize}
+						\item \textbf{Approximation efficace :} Fournit une première estimation de la distance de décollage .
+						\item \textbf{Résolution manuelle :} Permet d'obtenir un résultat sans recours à l'intégration numérique ou à des outils informatiques complexes.
+						\item \textbf{Polyvalence :} Applicable à tout type d'appareil si les forces peuvent être moyennées.
+					\end{itemize}
+				\end{block}
+				
+				\begin{alertblock}{Inconvénients et limites théoriques}
+					\begin{itemize}
+						\item \textbf{Champ d'application restreint :} Modèle limité exclusivement à la phase d'accélération au sol ($S_a$).
+						\item \textbf{Hypothèse simplificatrice :} Néglige la variation quadratique réelle de la portance et de la traînée durant le roulage.
+					\end{itemize}
+				\end{alertblock}
+			\end{frame}
+			
+			
+			%==========================================================================================================
+			%
+			
+			
+			
+			%=========================================================================================================
+
+			
+			\begin{frame}{Calcul de la distance basé sur la méthode numérique}
+				
+				\begin{enumerate}
+					\item \textbf{Calcul des forces}
+					\begin{itemize}
+						\item Pression dynamique :
+						\[
+						q_i=\frac{1}{2}\rho V_{i-1}^2
+						\]
+						
+						\item Calcul de la poussée $T_i$, de la traînée $D_i$ et de la portance $L_i$.
+					\end{itemize}
+					
+					\item \textbf{Calcul de l'accélération}
+					\[
+					a_i=\frac{g}{W}\left[T_i-D_i-\mu\left(W-L_i\right)\right]
+					\]
+					
+					\item \textbf{Mise à jour de l'état de l'avion}
+					\begin{itemize}
+						\item $V_i = V_{i-1}+a_i\Delta t$
+						\item $S_i = S_{i-1}+V_{i-1}\Delta t+\frac{1}{2}a_i\Delta t^2$
+					\end{itemize}
+					
+					\item \textbf{Critère d'arrêt}
+					\[
+					V_i \geq V_{LOF}\approx 1.1\,V_{stall}
+					\]
+					
+					\item \textbf{Résultat}
+					\begin{itemize}
+						\item La distance finale obtenue correspond à la distance de roulement $S_g$.
+					\end{itemize}
+					
+				\end{enumerate}
+				
+			\end{frame}
+			
+				
+		
+			
+			
+			
+			\begin{frame}{Calcul de la distance basé sur la méthode numérique}
+				\begin{figure}[H]
+					
+					L'analyse des résultats la méthode numérique nous permet d'avoir:
+					
+					\begin{subfigure}{0.25\textwidth}
+						\centering
+						\includegraphics[width=\linewidth]{Cirrus_acc_dist.png}
+						\caption{Accélération en fonction de la distance}
+					\end{subfigure}
+					\hfill
+					\begin{subfigure}{0.35\textwidth}
+						\centering
+						\includegraphics[width=\linewidth]{Cirrus_speed_dist.png}
+						\caption{Vitesse en fonction de la distance}
+					\end{subfigure}
+						\centering
+					\begin{subfigure}{0.35\textwidth}
+						\centering
+						\includegraphics[width=\textwidth]{Cirrus_forces_dist.png}
+						\caption{Forces en fonction de la distance}
+					\end{subfigure}
+				
+					
+				\end{figure}
+				
+			
+				\end{frame}
+		
+		
+		
+			
+			\begin{frame}{Modèle 3 : Méthode par intégration numérique }
+
+				
+				\begin{block}{Avantages : Précision }
+					\begin{itemize}
+						\item \textbf{Précision  :} Elle intègre la variation réelle des forces à chaque instant.
+						\item \textbf{Gestion des non-linéarités :} Particulièrement efficace pour modéliser la chute de poussée complexe des moteurs à pistons.
+						\item \textbf{Complexité :} Permet de simuler des conditions critiques comme l'effet de sol variable, des pannes moteurs ou des changements de configuration des volets durant le roulage.
+					\end{itemize}
+				\end{block}
+				
+				\begin{alertblock}{Inconvénients et Contraintes Techniques}
+					\begin{itemize}
+						\item \textbf{Dépendance aux données :} La précision du modèle dépend de la qualité des fonctions d'entrée et du choix du pas de temps $\Delta t$.
+					\end{itemize}
+				\end{alertblock}
+			\end{frame}
+			
+			
+			%==========================================================================================================
+			%	
+			%=========================================================================================================
+			
+			
+		

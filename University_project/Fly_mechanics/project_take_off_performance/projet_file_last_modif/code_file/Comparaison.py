@@ -1,3 +1,14 @@
+"""
+author : Friedly WOLI
+
+Here is the code to compare the data from the simulation of the different model.
+We collect the data and put them in the excel file: sim_data.csv
+
+"""
+
+
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -22,6 +33,8 @@ data = {
     "S":  {"Model1": [], "Model2": [], "Model3": [], "Model4": []},
     "Vlo":{"Model1": [], "Model2": [], "Model3": [], "Model4": []},
 }
+
+# Code AI Chatgpt (amélioration de mon code)
 
 for row in Lp:
     avions.append(row["Avions"])
@@ -51,6 +64,7 @@ for row in Lp:
     data["Vlo"]["Model3"].append(float(row["Vlo3"]))
     data["Vlo"]["Model4"].append(float(row["Vlo4"]))
 
+# Fin code AI
 
 
 i=3
@@ -94,109 +108,3 @@ for var in variables:
 
 
 
-
-
-
-
-
-"""
-print ( Lp[4])     =====    {'Avions': 'C – 130', '': '', 'Sa1': '664.46', 'Sr1': '186.09',
- 'S1': '913.8', 'Vlo1': '63.25', 'Sa2': '659.31', 'Sr2': '', 'Sc2': '', 'S2': '', 'Vlo2': '63.2', 
- 'Sa3': '676.39', 'Sr3': '63.25', 'Sc3': '223.28', 'S3': '962.92', 'Vlo3': '63.81', 'Sa4': '652.91',
-  'Sr4': '63.25', 'Sc4': '186.09', 'S4': '', 'Vlo4': ''}
-
-
-avions.append( dict['Avions'])
-print (avions )  =====   ['', 'Cessna 172', 'Belugar XL', 'Dassault Rafale', 'Airbus A30', 'C – 130', 'Executive Jet ', 'Ciruss ', 'Data1', 'Data2']
-
-"""
-
-
-"""
-
-Lecture = csv.DictReader( open("sim_data.csv"))
-Lp =list(Lecture) 
-
-avions = []
-Sa1, Sr1, Sc1, S1, Vlo1 = [], [], [], [], []
-Sa2, Sr2, Sc2, S2, Vlo2 = [], [], [], [], []
-Sa3, Sr3, Sc3, S3, Vlo3 = [], [], [], [], []
-Sa4, Sr4, Sc4, S4, Vlo4 = [], [], [], [], []
-
-
-
-
-
-
-
-for i in range (0, len(Lp) ) :
-    dict = Lp[i]   # des element comme la ligne 12 ou 14 du code
-    avions.append( dict['Avions'])
-
-    Sa1.append(dict['Sa1'])
-    Sa2.append(dict['Sa2'])
-    Sa3.append(dict['Sa3'])
-    Sa4.append(dict['Sa4'])
-
-    Sr1.append(dict['Sr1'])
-    Sr2.append(dict['Sr2'])
-    Sr3.append(dict['Sr3'])
-    Sr4.append(dict['Sr4'])
-
-    Sc1.append(dict['Sc1'])
-    Sc2.append(dict['Sc2'])
-    Sc3.append(dict['Sc3'])
-    Sc4.append(dict['Sc4'])
-
-    S1.append(dict['S1'])
-    S2.append(dict['S2'])
-    S3.append(dict['S3'])
-    S4.append(dict['S4'])
-
-    Vlo1.append(dict['Vlo1'])
-    Vlo2.append(dict['Vlo2'])
-    Vlo3.append(dict['Vlo3'])
-    Vlo4.append(dict['Vlo4'])
-
-
-M1, M2, M3, M4 = {}, {}, {}, {}
-Var = { "Sa", "Sr", "Sc", "S", "Vlo"}
-
-for var in Var :
-    if var == "Sa":
-        M1[var] = Sa1
-        M2[var] = Sa2
-        M3[var] = Sa3
-        M4[var] = Sa4
-    if var == "Sr":
-        M1[var] = Sr1
-        M2[var] = Sr2
-        M3[var] = Sr3
-        M4[var] = Sr4
-    if var == "Sc":
-        M1[var] = Sc1
-        M2[var] = Sc2
-        M3[var] = Sc3
-        M4[var] = Sc4
-    if var == "S":
-        M1[var] = S1
-        M2[var] = S2
-        M3[var] = S3
-        M4[var] = S4
-    if var == "Vlo":
-        M1[var] = Vlo1
-        M2[var] = Vlo2
-        M3[var] = Vlo3
-        M4[var] = Vlo4
-
-
-    
-    
-
-    
-modeles = {"Model1": M1 , "Model2": M2 , "Model3": M3 , "Model4": M4  }
-    
-    
-
-
-"""

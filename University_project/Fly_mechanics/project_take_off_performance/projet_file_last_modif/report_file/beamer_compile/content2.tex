@@ -1,0 +1,109 @@
+	
+\section{Modélisation de la distance de rotation et de montée}
+
+
+
+	
+	\begin{frame}{La distance de rotation ($S_r$)}
+		\textbf{Principe :} Cette phase débute à la vitesse de rotation $V_R$ (souvent simplifiée par $V_{LOF}$ dans les calculs) lorsque le pilote initie un moment de tangage pour augmenter l'incidence $\alpha$ .
+		
+		\begin{block}{Calcul de la distance ($S_r$)}
+			La distance parcourue dépend directement du temps de rotation $t_r$ et de la vitesse sol effective :
+			\[ S_r = (V_{LOF} - V_{hw}) \times t_r \]
+		\end{block}
+		
+		\textbf{Estimation de la durée $t_r$ selon l'inertie }
+		\begin{itemize}
+			\item \textbf{1 s :} Avions légers (Cessna 172) et avions de chasse (Rafale).
+			\item \textbf{3 s :} Avions de transport civils standards (Airbus A320).
+			\item \textbf{4 s :} Très gros porteurs (Beluga XL).
+		\end{itemize}
+	
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}{La distance de montée ($S_c$)}
+		\textbf{Définition :} Distance horizontale parcourue après le décollage jusqu'au franchissement d'un obstacle théorique $h_{oc}$ (35 ft civil / 50 ft militaire) .
+		
+		\begin{block}{Approche énergétique }
+			Le travail de l'excès de poussée est converti en gains d'altitude et de vitesse :
+			
+			\[ \frac{W}{g} \frac{dV}{dt} = T - D - W \sin \gamma \implies S_c = \frac{W}{\bar{F}_c} \left[ h_{oc} + \frac{V_2^2 - V_{LO}^2}{2g} \right] \]
+			\textbf{avec }
+			
+			\[ F_c = \frac{(T - D)_{LO} + (T - D)_{OC} / \cos(\gamma_{OC})}{2} \]
+		\end{block}
+		
+		
+	\end{frame}
+	
+	
+	\begin{frame}{La distance de montée ($S_c$)}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.45\linewidth]{force_on_aipl_during_clim.png}
+			\label{fig:placeholder}
+			\caption{Forces exercées sur un avion durant la montée }
+		\end{figure}
+	
+		
+		\textbf{Paramètres clés :}
+		\begin{itemize}
+			\item \textbf{Vitesses :} Passage de $V_{LO} \approx 1,1 V_{stall}$ à $V_2 \approx 1,2 V_{stall}$ .
+			\item \textbf{Gamma :} Il représente l'angle de monté
+			\item \textbf{Force nette moyenne ($\bar{F}_c$) :} Moyenne de l'excès de poussée ($T-D$) entre le point de décollage et le franchissement de l'obstacle.
+		\end{itemize}
+		\textit{L'utilisation de cette méthode énergétique permet de modéliser précisément l'accélération durant la montée initiale.}
+		
+		
+		
+	\end{frame}
+	
+	
+	
+	
+		\begin{frame}{Calcul de la distance de montée et franchissement ($s_c$)}
+			\textbf{Principe :} La distance horizontale nécessaire pour franchir l'obstacle dépend de la hauteur atteinte à la fin de la transition ($h_{TR}$) par rapport à la hauteur réglementaire $h_{obst}$ (35 ou 50 ft).
+			
+			\begin{block}{Cas 1 : Montée rectiligne ($h_{TR} < h_{obst}$)}
+				Si l'avion n'a pas encore franchi l'obstacle à la fin de sa rotation circulaire, on ajoute un segment de montée rectiligne :
+				\[ s_c = \frac{h_{obst} - h_{TR}}{\tan \gamma_{climb}} \]
+			\end{block}
+			
+			\begin{block}{Cas 2 : Franchissement pendant la transition ($h_{TR} \ge h_{obst}$)}
+				L'obstacle est franchi sur l'arc de cercle. La distance horizontale ($s_{obst}$) est calculée par Pythagore :
+				\[ s_{obst} = \sqrt{R^2 - (R - h_{obst})^2} \]
+			\end{block}
+			
+			\textbf{Paramètres de courbure et transition:}
+			\begin{itemize}
+				\item \textbf{Vitesse de transition :} $V_{TR} = 1,15 \times V_{s1}$ (moyenne entre $1,1V_{s1}$ et $1,2V_{s1}$).
+				\item \textbf{Facteur de charge moyen :} $n = \frac{L}{W} \approx 1,19$ (pour $C_L \approx 0,9 C_{L,max}$).
+				\item \textbf{Rayon de l'arc :} $R = \frac{V_{TR}^2}{g(n-1)} \approx 0,2156 \times V_{s1}^2$.
+			\end{itemize}
+		\end{frame}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
