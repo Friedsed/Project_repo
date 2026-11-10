@@ -1,0 +1,29 @@
+# encoding: utf-8
+# 2026 R1
+SetScriptVersion(Version="26.1.174")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+geometry1.Exit()
+Save(Overwrite=True)
+template2 = GetTemplate(TemplateName="Fluid Flow")
+system2 = template2.CreateSystem()
+geometryComponent1 = system2.GetComponent(Name="Geometry")
+geometryComponent2 = system1.GetComponent(Name="Geometry")
+geometryComponent1.ReplaceWithShare(
+    TargetSystem=system2,
+    ComponentToShare=geometryComponent2,
+    SourceSystem=system1)
+meshComponent1 = system2.GetComponent(Name="Mesh")
+meshComponent1.Refresh()
+mesh1 = system2.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+mesh1.Exit()
+geometry1.Edit()
+geometry1.Exit()
+system1.Delete()
+system2.Delete()
+Save(Overwrite=True)
