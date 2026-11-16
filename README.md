@@ -38,13 +38,15 @@ The purpose of this repository is to share my **learning journey**, my **working
 
 * **Code & Tkinter Interface:** `Project_repo/University_project/Fly_mechanics/project_file/code_file`
 * **Project Report:** `Project_repo/University_project/Fly_mechanics/project_file/report_file/Project.pdf`
-
 ---
+
+
+
 
 ## 👨‍💻 Author
 
 **Friedly WOLI**  
-Mechanical and Energetics Engineering Student  
+First year of mater degree in mathematical methode for mechanics at Paris Saclay university  
 
 Thank you for visiting this repository. Feedback, suggestions, and comments are always welcome!
 
