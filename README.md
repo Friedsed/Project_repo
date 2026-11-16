@@ -7,7 +7,6 @@
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Friedsed)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:friedlysedjro@gmail.com)
 
-> 📄 **[Download my full CV (PDF)](./CV_Friedly_WOLI.pdf)**
 
 ---
 
